@@ -5,14 +5,24 @@ import modulesData from './data/modules.json';
 import './App.css';
 
 function App() {
-  const [activeModule, setActiveModule] = useState(null);
+  const [activeModuleIndex, setActiveModuleIndex] = useState(null);
 
   const handleSelectModule = (module) => {
-    setActiveModule(module);
+    const idx = modulesData.findIndex(m => m.id === module.id);
+    setActiveModuleIndex(idx >= 0 ? idx : 0);
   };
 
   const handleBackToModules = () => {
-    setActiveModule(null);
+    setActiveModuleIndex(null);
+  };
+
+  const handleNextModule = () => {
+    const nextIdx = activeModuleIndex + 1;
+    if (nextIdx < modulesData.length) {
+      setActiveModuleIndex(nextIdx);
+    } else {
+      setActiveModuleIndex(null); // all modules done – go back to selector
+    }
   };
 
   return (
@@ -24,10 +34,16 @@ function App() {
       </header>
       
       <main className="main-content">
-        {!activeModule ? (
+        {activeModuleIndex === null ? (
           <ModuleSelector modules={modulesData} onSelect={handleSelectModule} />
         ) : (
-          <LessonPlayer module={activeModule} onBack={handleBackToModules} />
+          <LessonPlayer
+            module={modulesData[activeModuleIndex]}
+            modules={modulesData}
+            moduleIndex={activeModuleIndex}
+            onBack={handleBackToModules}
+            onNextModule={handleNextModule}
+          />
         )}
       </main>
     </div>

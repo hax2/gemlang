@@ -54,14 +54,15 @@
 }
 
 .lesson-finished {
-  padding: 3rem;
+  padding: 3rem 2rem;
   text-align: center;
-  max-width: 500px;
-  margin: 4rem auto 0;
+  max-width: 680px;
+  width: 100%;
+  margin: 3rem auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 .finished-icon {
@@ -76,6 +77,116 @@
 .finished-subtitle {
   color: var(--text-muted);
   font-size: 1.125rem;
+}
+
+/* ── finished action buttons ──────────────────────────── */
+.finished-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+/* ── vocabulary recap table ───────────────────────────── */
+.vocab-section {
+  width: 100%;
+  text-align: left;
+}
+
+.vocab-heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.vocab-table-wrapper {
+  max-height: 360px;
+  overflow-y: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+  scrollbar-width: thin;
+  scrollbar-color: var(--glass-highlight) transparent;
+}
+
+.vocab-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.vocab-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--surface-2);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.6rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.vocab-table thead th:last-child {
+  text-align: center;
+  width: 60px;
+}
+
+.vocab-table tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: background var(--transition-fast);
+}
+
+.vocab-table tbody tr:nth-child(even) {
+  background: rgba(255,255,255,0.02);
+}
+
+.vocab-table tbody tr:hover {
+  background: rgba(168, 85, 247, 0.08);
+}
+
+.vocab-table td {
+  padding: 0.65rem 1rem;
+  vertical-align: middle;
+}
+
+.vocab-word {
+  font-weight: 600;
+  color: var(--accent-glow);
+  font-size: 1.05rem;
+}
+
+.vocab-meaning {
+  color: var(--text-main);
+}
+
+.vocab-audio {
+  text-align: center;
+}
+
+.btn-word-audio {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: var(--accent-glow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.btn-word-audio:hover {
+  background: rgba(168, 85, 247, 0.35);
+  border-color: var(--accent-glow);
+  transform: scale(1.1);
 }
 
 .audio-section {
@@ -179,14 +290,17 @@
   margin-top: 0.5rem;
   background: var(--surface-2);
   border: 1px solid var(--glass-highlight);
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   border-radius: var(--radius-sm);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: #fff;
   white-space: nowrap;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
   z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .word-tooltip::before {
@@ -198,6 +312,26 @@
   border-width: 6px;
   border-style: solid;
   border-color: transparent transparent var(--surface-2) transparent;
+}
+
+.tooltip-audio-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(168, 85, 247, 0.25);
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  color: var(--accent-glow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  padding: 0;
+}
+
+.tooltip-audio-btn:hover {
+  background: rgba(168, 85, 247, 0.5);
 }
 
 .actions-area {
