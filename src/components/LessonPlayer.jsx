@@ -15,7 +15,16 @@ const LessonPlayer = ({ module, onBack }) => {
     setSpanishRevealed(false);
     setEnglishRevealed(false);
     setActiveWordIndex(null);
-  }, [currentIndex]);
+
+    // Auto-play the audio when sentence changes
+    if (sentence && sentence.spanish) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(sentence.spanish);
+      utterance.lang = 'es-ES';
+      utterance.rate = 0.85;
+      window.speechSynthesis.speak(utterance);
+    }
+  }, [currentIndex, sentence]);
 
   const playAudio = () => {
     if (!sentence) return;
