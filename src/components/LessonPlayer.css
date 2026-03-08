@@ -132,10 +132,7 @@
   border-bottom: 1px solid var(--glass-border);
 }
 
-.vocab-table thead th:last-child {
-  text-align: center;
-  width: 60px;
-}
+
 
 .vocab-table tbody tr {
   border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -159,35 +156,20 @@
   font-weight: 600;
   color: var(--accent-glow);
   font-size: 1.05rem;
+  cursor: pointer;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.vocab-word:hover {
+  color: var(--accent-base);
+  text-decoration: underline;
 }
 
 .vocab-meaning {
   color: var(--text-main);
 }
 
-.vocab-audio {
-  text-align: center;
-}
 
-.btn-word-audio {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: rgba(168, 85, 247, 0.15);
-  border: 1px solid rgba(168, 85, 247, 0.3);
-  color: var(--accent-glow);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all var(--transition-fast);
-  cursor: pointer;
-}
-
-.btn-word-audio:hover {
-  background: rgba(168, 85, 247, 0.35);
-  border-color: var(--accent-glow);
-  transform: scale(1.1);
-}
 
 .audio-section {
   display: flex;

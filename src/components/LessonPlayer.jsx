@@ -151,25 +151,19 @@ const LessonPlayer = ({ module, modules, moduleIndex, onBack, onNextModule }) =>
                 <tr>
                   <th>Spanish</th>
                   <th>Meaning</th>
-                  <th>Audio</th>
                 </tr>
               </thead>
               <tbody>
                 {vocabTable.map(({ word, meaning }) => (
                   <tr key={word}>
-                    <td className="vocab-word">{word}</td>
-                    <td className="vocab-meaning">{meaning}</td>
-                    <td className="vocab-audio">
-                      <button
-                        className="btn-word-audio"
-                        onClick={() => speakSpanish(word)}
-                        title={`Play "${word}"`}
-                      >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </button>
+                    <td 
+                      className="vocab-word" 
+                      onClick={() => speakSpanish(word)}
+                      title={`Play "${word}"`}
+                    >
+                      {word}
                     </td>
+                    <td className="vocab-meaning">{meaning}</td>
                   </tr>
                 ))}
               </tbody>
@@ -330,21 +324,17 @@ const LessonPlayer = ({ module, modules, moduleIndex, onBack, onNextModule }) =>
                   <div key={idx} className="word-container">
                     <span
                       className={`spanish-word ${meaning ? 'has-meaning' : ''} ${isActive ? 'active' : ''}`}
-                      onClick={() => meaning && setActiveWordIndex(isActive ? null : idx)}
+                      onClick={() => {
+                        if (meaning) {
+                          setActiveWordIndex(isActive ? null : idx);
+                          speakSpanish(cleanWord(word));
+                        }
+                      }}
                     >
                       {word}
                     </span>
                     {isActive && meaning && (
                       <div className="word-tooltip animate-fade-in">
-                        <button
-                          className="tooltip-audio-btn"
-                          onClick={(e) => { e.stopPropagation(); speakSpanish(cleanWord(word)); }}
-                          title="Play word"
-                        >
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
-                        </button>
                         {meaning}
                       </div>
                     )}
