@@ -1,12 +1,35 @@
 import React from 'react';
 import './ModuleSelector.css';
 
-const ModuleSelector = ({ modules, onSelect }) => {
+const ModuleSelector = ({ modules, onSelect, practiceMode, onPracticeModeChange }) => {
+  const isPureTesting = practiceMode === 'testing';
+
   return (
     <div className="module-selector">
       <div className="module-header">
         <h1 className="module-main-title">Select a Lesson</h1>
-        <p className="module-subtitle">Choose a module to start practicing your listening skills.</p>
+        <p className="module-subtitle">
+          {isPureTesting
+            ? 'Choose a module to run pure translation testing (English to Spanish only).'
+            : 'Choose a module to start guided listening and translation practice.'}
+        </p>
+        <div className="practice-mode-panel glass-panel">
+          <p className="practice-mode-title">Practice Mode</p>
+          <div className="practice-mode-toggle">
+            <button
+              className={`practice-mode-btn ${practiceMode === 'guided' ? 'active' : ''}`}
+              onClick={() => onPracticeModeChange('guided')}
+            >
+              Guided Learning
+            </button>
+            <button
+              className={`practice-mode-btn ${isPureTesting ? 'active' : ''}`}
+              onClick={() => onPracticeModeChange('testing')}
+            >
+              Pure Testing
+            </button>
+          </div>
+        </div>
       </div>
 
       <div className="module-grid">
@@ -24,13 +47,13 @@ const ModuleSelector = ({ modules, onSelect }) => {
               
               <div className="module-meta">
                 <span className="sentence-count">
-                  {mod.sentences.length} Sentences
+                  {mod.sentences.length} {isPureTesting ? 'Prompts' : 'Sentences'}
                 </span>
                 <button className="btn-primary btn-sm" onClick={(e) => {
                   e.stopPropagation();
                   onSelect(mod);
                 }}>
-                  Start Learning
+                  {isPureTesting ? 'Start Testing' : 'Start Learning'}
                 </button>
               </div>
             </div>

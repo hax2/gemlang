@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import './LessonPlayer.css';
 
 /* ── helpers ─────────────────────────────────────────────── */
@@ -60,6 +60,15 @@ const buildMergedItems = (sentences, moduleId) => {
   return items;
 };
 
+/** Build challenge-only items for pure testing mode */
+const buildTestingItems = (sentences) =>
+  sentences.map((sentence, index) => ({
+    type: 'challenge',
+    data: sentence,
+    batchStart: index,
+    batchEnd: index,
+  }));
+
 /** Speak a Spanish word/phrase */
 const speakSpanish = (text) => {
   if (!text) return;
@@ -71,19 +80,29 @@ const speakSpanish = (text) => {
 };
 
 /* ── component ───────────────────────────────────────────── */
-const LessonPlayer = ({ module, modules, moduleIndex, onBack, onNextModule }) => {
+const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNextModule }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [spanishRevealed, setSpanishRevealed] = useState(false);
   const [englishRevealed, setEnglishRevealed] = useState(false);
   const [activeWordIndex, setActiveWordIndex] = useState(null);
   const [challengeAnswerRevealed, setChallengeAnswerRevealed] = useState(false);
   const [extraItems, setExtraItems] = useState([]);
+  const isPureTestingMode = practiceMode === 'testing';
+  const resetRevealState = () => {
+    setSpanishRevealed(false);
+    setEnglishRevealed(false);
+    setActiveWordIndex(null);
+    setChallengeAnswerRevealed(false);
+  };
 
   /* Build merged items list (sentences + challenges + extras) */
   const mergedItems = useMemo(() => {
+    if (isPureTestingMode) {
+      return buildTestingItems(module.sentences);
+    }
     const base = buildMergedItems(module.sentences, module.id);
     return [...base, ...extraItems];
-  }, [module, extraItems]);
+  }, [module, extraItems, isPureTestingMode]);
 
   const currentItem = mergedItems[currentIndex];
   const isChallenge = currentItem?.type === 'challenge';
@@ -92,31 +111,30 @@ const LessonPlayer = ({ module, modules, moduleIndex, onBack, onNextModule }) =>
   const hasNextModule = moduleIndex < modules.length - 1;
   const vocabTable = isFinished ? buildVocabTable(module.sentences) : [];
 
-  /* Count only sentence items for progress display */
+  /* Count sentence items for guided mode, challenge items for pure testing mode */
   const totalSentences = module.sentences.length;
-  const sentencesSoFar = isFinished
+  const progressItemsSoFar = isFinished
     ? totalSentences
-    : mergedItems.slice(0, currentIndex + 1).filter((it) => it.type === 'sentence').length;
+    : mergedItems.slice(0, currentIndex + 1).filter((it) => {
+      if (isPureTestingMode) return it.type === 'challenge';
+      return it.type === 'sentence';
+    }).length;
 
-  /* reset + auto-play on item change */
+  /* auto-play Spanish audio for guided sentence cards */
   useEffect(() => {
-    setSpanishRevealed(false);
-    setEnglishRevealed(false);
-    setActiveWordIndex(null);
-    setChallengeAnswerRevealed(false);
     if (!isChallenge && sentence?.spanish) speakSpanish(sentence.spanish);
-  }, [currentIndex, module]);
-
-  /* reset to item 0 and clear extras when module changes */
-  useEffect(() => {
-    setCurrentIndex(0);
-    setExtraItems([]);
-  }, [module]);
+  }, [isChallenge, sentence]);
 
   const playAudio = () => sentence && speakSpanish(sentence.spanish);
 
-  const handleNext = () => setCurrentIndex((p) => p + 1);
-  const handlePrev = () => setCurrentIndex((p) => Math.max(0, p - 1));
+  const handleNext = () => {
+    resetRevealState();
+    setCurrentIndex((p) => p + 1);
+  };
+  const handlePrev = () => {
+    resetRevealState();
+    setCurrentIndex((p) => Math.max(0, p - 1));
+  };
 
   const handleMarkForLater = () => {
     if (!sentence) return;
@@ -139,37 +157,41 @@ const LessonPlayer = ({ module, modules, moduleIndex, onBack, onNextModule }) =>
         <div className="finished-icon">🎉</div>
         <h2 className="finished-title">Module Completed!</h2>
         <p className="finished-subtitle">
-          You've successfully finished all sentences in <strong>{module.title}</strong>.
+          {isPureTestingMode
+            ? <>You've completed all translation prompts in <strong>{module.title}</strong>.</>
+            : <>You've successfully finished all sentences in <strong>{module.title}</strong>.</>}
         </p>
 
         {/* Vocabulary recap table */}
-        <div className="vocab-section">
-          <h3 className="vocab-heading">Words You've Learned</h3>
-          <div className="vocab-table-wrapper">
-            <table className="vocab-table">
-              <thead>
-                <tr>
-                  <th>Spanish</th>
-                  <th>Meaning</th>
-                </tr>
-              </thead>
-              <tbody>
-                {vocabTable.map(({ word, meaning }) => (
-                  <tr key={word}>
-                    <td 
-                      className="vocab-word" 
-                      onClick={() => speakSpanish(word)}
-                      title={`Play "${word}"`}
-                    >
-                      {word}
-                    </td>
-                    <td className="vocab-meaning">{meaning}</td>
+        {!isPureTestingMode && (
+          <div className="vocab-section">
+            <h3 className="vocab-heading">Words You've Learned</h3>
+            <div className="vocab-table-wrapper">
+              <table className="vocab-table">
+                <thead>
+                  <tr>
+                    <th>Spanish</th>
+                    <th>Meaning</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {vocabTable.map(({ word, meaning }) => (
+                    <tr key={word}>
+                      <td
+                        className="vocab-word"
+                        onClick={() => speakSpanish(word)}
+                        title={`Play "${word}"`}
+                      >
+                        {word}
+                      </td>
+                      <td className="vocab-meaning">{meaning}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Navigation buttons */}
         <div className="finished-actions">
@@ -189,7 +211,7 @@ const LessonPlayer = ({ module, modules, moduleIndex, onBack, onNextModule }) =>
   /* ── TRANSLATION CHALLENGE SCREEN ─────────────────────── */
   if (isChallenge) {
     const challengeSentence = currentItem.data;
-    const progressPercentage = (sentencesSoFar / totalSentences) * 100;
+    const progressPercentage = (progressItemsSoFar / totalSentences) * 100;
 
     return (
       <div className="lesson-player animate-fade-in">
@@ -202,15 +224,15 @@ const LessonPlayer = ({ module, modules, moduleIndex, onBack, onNextModule }) =>
             </div>
           </div>
           <span className="progress-text">
-            {sentencesSoFar} / {totalSentences}
+            {progressItemsSoFar} / {totalSentences}
           </span>
         </div>
 
         <div className="lesson-content glass-panel challenge-panel">
           {/* Challenge badge */}
-          <div className="challenge-badge">
+          <div className={`challenge-badge ${isPureTestingMode ? 'pure-testing' : ''}`}>
             <span className="challenge-icon">🗣️</span>
-            <span>Translation Challenge</span>
+            <span>{isPureTestingMode ? 'Pure Testing Mode' : 'Translation Challenge'}</span>
           </div>
 
           {/* Prompt */}
@@ -259,7 +281,7 @@ const LessonPlayer = ({ module, modules, moduleIndex, onBack, onNextModule }) =>
             ← Previous
           </button>
           <button className="btn-primary btn-nav-next" onClick={handleNext}>
-            Continue →
+            {isPureTestingMode ? 'Next Prompt →' : 'Continue →'}
           </button>
         </div>
       </div>
@@ -268,7 +290,7 @@ const LessonPlayer = ({ module, modules, moduleIndex, onBack, onNextModule }) =>
 
   /* ── NORMAL LESSON SCREEN ───────────────────────────────── */
   const words = sentence.spanish.split(' ');
-  const progressPercentage = (sentencesSoFar / totalSentences) * 100;
+  const progressPercentage = (progressItemsSoFar / totalSentences) * 100;
 
   return (
     <div className="lesson-player animate-fade-in">
@@ -282,7 +304,7 @@ const LessonPlayer = ({ module, modules, moduleIndex, onBack, onNextModule }) =>
           </div>
         </div>
         <span className="progress-text">
-          {sentencesSoFar} / {totalSentences}
+          {progressItemsSoFar} / {totalSentences}
         </span>
       </div>
 

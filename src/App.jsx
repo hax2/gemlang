@@ -6,6 +6,7 @@ import './App.css';
 
 function App() {
   const [activeModuleIndex, setActiveModuleIndex] = useState(null);
+  const [practiceMode, setPracticeMode] = useState('guided');
 
   const handleSelectModule = (module) => {
     const idx = modulesData.findIndex(m => m.id === module.id);
@@ -35,12 +36,19 @@ function App() {
       
       <main className="main-content">
         {activeModuleIndex === null ? (
-          <ModuleSelector modules={modulesData} onSelect={handleSelectModule} />
+          <ModuleSelector
+            modules={modulesData}
+            onSelect={handleSelectModule}
+            practiceMode={practiceMode}
+            onPracticeModeChange={setPracticeMode}
+          />
         ) : (
           <LessonPlayer
+            key={`${modulesData[activeModuleIndex].id}-${practiceMode}`}
             module={modulesData[activeModuleIndex]}
             modules={modulesData}
             moduleIndex={activeModuleIndex}
+            practiceMode={practiceMode}
             onBack={handleBackToModules}
             onNextModule={handleNextModule}
           />

@@ -24,6 +24,50 @@
   font-size: 1.125rem;
 }
 
+.practice-mode-panel {
+  margin: 1.5rem auto 0;
+  width: min(560px, 100%);
+  padding: 1rem;
+}
+
+.practice-mode-title {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.practice-mode-toggle {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.practice-mode-btn {
+  border-radius: var(--radius-full);
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.65rem 1rem;
+  transition: all var(--transition-fast);
+}
+
+.practice-mode-btn:hover {
+  border-color: var(--glass-highlight);
+  color: var(--text-main);
+}
+
+.practice-mode-btn.active {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.9), rgba(139, 92, 246, 0.9));
+  color: #fff;
+  border-color: rgba(216, 180, 254, 0.65);
+  box-shadow: 0 6px 18px rgba(168, 85, 247, 0.35);
+}
+
 .module-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -103,4 +147,10 @@
   font-size: 0.875rem;
   color: var(--text-muted);
   font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .practice-mode-toggle {
+    grid-template-columns: 1fr;
+  }
 }
