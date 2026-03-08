@@ -247,22 +247,20 @@ const LessonPlayer = ({ module, modules, moduleIndex, onBack, onNextModule }) =>
               </div>
             )}
           </div>
+        </div>
 
-          {/* Navigation */}
-          <div className="actions-area">
-            <div className="actions-row">
-              <button
-                className="btn-secondary"
-                onClick={handlePrev}
-                disabled={currentIndex === 0}
-              >
-                ← Previous
-              </button>
-              <button className="btn-primary" onClick={handleNext}>
-                Continue →
-              </button>
-            </div>
-          </div>
+        {/* Navigation — outside glass-panel so it can be sticky on mobile */}
+        <div className="lesson-nav-bar">
+          <button
+            className="btn-secondary btn-nav-secondary"
+            onClick={handlePrev}
+            disabled={currentIndex === 0}
+          >
+            ← Previous
+          </button>
+          <button className="btn-primary btn-nav-next" onClick={handleNext}>
+            Continue →
+          </button>
         </div>
       </div>
     );
@@ -345,41 +343,40 @@ const LessonPlayer = ({ module, modules, moduleIndex, onBack, onNextModule }) =>
           )}
         </div>
 
-        {/* Actions Area */}
-        <div className="actions-area">
-          <div className="actions-row">
-            <button
-              className="btn-secondary"
-              onClick={handlePrev}
-              disabled={currentIndex === 0}
-            >
-              ← Previous
+        {/* Translation reveal — stays inside content */}
+        <div className="translation-area">
+          {!englishRevealed ? (
+            <button className="btn-text-reveal" onClick={() => setEnglishRevealed(true)}>
+              Reveal Full Translation
             </button>
-            <button
-              className="btn-mark-later"
-              onClick={handleMarkForLater}
-              title="See this sentence again at the end"
-            >
-              Mark for later
-            </button>
-            <button className="btn-primary" onClick={handleNext}>
-              Next →
-            </button>
-          </div>
-
-          <div className="translation-area">
-            {!englishRevealed ? (
-              <button className="btn-text-reveal" onClick={() => setEnglishRevealed(true)}>
-                Reveal Full Translation
-              </button>
-            ) : (
-              <div className="english-translation animate-fade-in">
-                {sentence.english}
-              </div>
-            )}
-          </div>
+          ) : (
+            <div className="english-translation animate-fade-in">
+              {sentence.english}
+            </div>
+          )}
         </div>
 
+      </div>
+
+      {/* Navigation — outside glass-panel so it can be sticky on mobile */}
+      <div className="lesson-nav-bar">
+        <button
+          className="btn-secondary btn-nav-secondary"
+          onClick={handlePrev}
+          disabled={currentIndex === 0}
+        >
+          ← Previous
+        </button>
+        <button
+          className="btn-mark-later btn-nav-mark"
+          onClick={handleMarkForLater}
+          title="See this sentence again at the end"
+        >
+          🔖 Later
+        </button>
+        <button className="btn-primary btn-nav-next" onClick={handleNext}>
+          Next →
+        </button>
       </div>
     </div>
   );

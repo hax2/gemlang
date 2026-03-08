@@ -316,22 +316,7 @@
   background: rgba(168, 85, 247, 0.5);
 }
 
-.actions-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  width: 100%;
-}
-
-.actions-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
+/* ── Translation area ─────────────────────────────── */
 .translation-area {
   width: 100%;
   text-align: center;
@@ -359,6 +344,28 @@
   border-radius: var(--radius-md);
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: inline-block;
+}
+
+/* ── Lesson Nav Bar (shared for normal + challenge) ─ */
+.lesson-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.btn-nav-next {
+  flex-shrink: 0;
+}
+
+.btn-nav-secondary {
+  flex-shrink: 0;
+}
+
+.btn-nav-mark {
+  flex-shrink: 0;
 }
 
 /* ── Translation Challenge ───────────────────────────── */
@@ -509,4 +516,105 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: -1rem;
+}
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE RESPONSIVE  (≤ 600px)
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 600px) {
+  /* Tighter padding on mobile */
+  .lesson-content {
+    padding: 1.75rem 1rem;
+    gap: 1.75rem;
+  }
+
+  .lesson-header {
+    margin-bottom: 1rem;
+  }
+
+  /* Smaller play button */
+  .btn-play {
+    width: 72px;
+    height: 72px;
+  }
+  .btn-play svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Smaller spanish text */
+  .spanish-sentence {
+    font-size: 1.5rem;
+    gap: 0.35rem;
+  }
+
+  /* Challenge screen adjustments */
+  .challenge-english {
+    font-size: 1.35rem;
+    padding: 0.35rem 0.5rem;
+  }
+  .challenge-spanish {
+    font-size: 1.5rem;
+    padding: 0.75rem 1rem;
+  }
+
+  /* ── Sticky bottom nav bar on mobile ── */
+  .lesson-nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+    background: rgba(9, 9, 11, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--glass-border);
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  /* Next / Continue button → full width, top row */
+  .btn-nav-next {
+    order: -1;
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    font-size: 1.05rem;
+  }
+
+  /* Previous & Mark for Later → compact, second row */
+  .btn-nav-secondary,
+  .btn-nav-mark {
+    flex: 1 1 0;
+    text-align: center;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  /* Add bottom padding to the page so content isn't hidden behind the bar */
+  .lesson-player {
+    padding-bottom: 120px;
+  }
+
+  /* Module finished screen: also needs bottom space */
+  .lesson-finished {
+    padding-bottom: 2rem;
+    margin-top: 1.5rem;
+  }
+  .finished-icon {
+    font-size: 3rem;
+  }
+  .finished-title {
+    font-size: 1.5rem;
+  }
+
+  /* English translation */
+  .english-translation {
+    font-size: 1.05rem;
+    padding: 0.75rem 1rem;
+  }
 }
