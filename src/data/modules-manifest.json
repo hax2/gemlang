@@ -1,0 +1,194 @@
+[
+  {
+    "id": "module-1",
+    "title": "Chapter 1: Greetings & Basics",
+    "description": "Learn to say hello, goodbye, and basic introductions.",
+    "level": "Beginner",
+    "sentenceCount": 48,
+    "file": "module-1.json"
+  },
+  {
+    "id": "module-2",
+    "title": "Chapter 2: Locations",
+    "description": "Express where things and people are using 'estar'.",
+    "level": "Beginner",
+    "sentenceCount": 47,
+    "file": "module-2.json"
+  },
+  {
+    "id": "module-3",
+    "title": "Chapter 3: Descriptions",
+    "description": "Describe objects and people using 'ser' and adjectives.",
+    "level": "Beginner",
+    "sentenceCount": 52,
+    "file": "module-3.json"
+  },
+  {
+    "id": "module-4",
+    "title": "Chapter 4: Possession",
+    "description": "Talk about what you have using 'tener'.",
+    "level": "Beginner",
+    "sentenceCount": 47,
+    "file": "module-4.json"
+  },
+  {
+    "id": "module-5",
+    "title": "Chapter 5: Regular -AR Verbs",
+    "description": "Learn basic actions like speaking, working, and studying.",
+    "level": "Beginner",
+    "sentenceCount": 44,
+    "file": "module-5.json"
+  },
+  {
+    "id": "module-6",
+    "title": "Chapter 6: Regular -ER/-IR Verbs",
+    "description": "Action verbs like eating, drinking, living, and opening.",
+    "level": "Beginner",
+    "sentenceCount": 42,
+    "file": "module-6.json"
+  },
+  {
+    "id": "module-7",
+    "title": "Chapter 7: Reflexive Verbs",
+    "description": "Daily routines and actions done to oneself.",
+    "level": "Beginner",
+    "sentenceCount": 46,
+    "file": "module-7.json"
+  },
+  {
+    "id": "module-8",
+    "title": "Chapter 8: Expressing Likes",
+    "description": "Use 'gustar' to express what you like.",
+    "level": "Beginner",
+    "sentenceCount": 45,
+    "file": "module-8.json"
+  },
+  {
+    "id": "module-9",
+    "title": "Chapter 9: The Near Future",
+    "description": "Express what you are going to do using 'ir + a'.",
+    "level": "Beginner",
+    "sentenceCount": 37,
+    "file": "module-9.json"
+  },
+  {
+    "id": "module-10",
+    "title": "Chapter 10: The Preterite Tense",
+    "description": "Talk about completed past actions.",
+    "level": "Beginner",
+    "sentenceCount": 39,
+    "file": "module-10.json"
+  },
+  {
+    "id": "module-11",
+    "title": "Chapter 11: The Imperfect Tense",
+    "description": "Describe ongoing past actions and habits.",
+    "level": "Beginner",
+    "sentenceCount": 38,
+    "file": "module-11.json"
+  },
+  {
+    "id": "module-12",
+    "title": "Chapter 12: The Present Perfect",
+    "description": "Talk about what you 'have done'.",
+    "level": "Beginner",
+    "sentenceCount": 48,
+    "file": "module-12.json"
+  },
+  {
+    "id": "module-13",
+    "title": "Chapter 13: Direct Object Pronouns",
+    "description": "Replace nouns with 'lo, la, los, las'.",
+    "level": "Beginner",
+    "sentenceCount": 40,
+    "file": "module-13.json"
+  },
+  {
+    "id": "module-14",
+    "title": "Chapter 14: Indirect Object Pronouns",
+    "description": "Express 'to whom' or 'for whom' using 'le' and 'les'.",
+    "level": "Beginner",
+    "sentenceCount": 30,
+    "file": "module-14.json"
+  },
+  {
+    "id": "module-15",
+    "title": "Chapter 15: Double Object Pronouns",
+    "description": "Use both direct and indirect object pronouns together.",
+    "level": "Beginner",
+    "sentenceCount": 27,
+    "file": "module-15.json"
+  },
+  {
+    "id": "module-16",
+    "title": "Chapter 16: Affirmative / Negative Words",
+    "description": "Learn to use always, never, something, nothing, etc.",
+    "level": "Beginner",
+    "sentenceCount": 36,
+    "file": "module-16.json"
+  },
+  {
+    "id": "module-17",
+    "title": "Chapter 17: Por vs. Para",
+    "description": "Understand the differences between por and para.",
+    "level": "Beginner",
+    "sentenceCount": 30,
+    "file": "module-17.json"
+  },
+  {
+    "id": "module-18",
+    "title": "Chapter 18: Telling Time & Weather",
+    "description": "Learn to express hours and weather.",
+    "level": "Beginner",
+    "sentenceCount": 30,
+    "file": "module-18.json"
+  },
+  {
+    "id": "module-19",
+    "title": "Chapter 19: Imperative Mood",
+    "description": "Give commands and instructions.",
+    "level": "Beginner",
+    "sentenceCount": 30,
+    "file": "module-19.json"
+  },
+  {
+    "id": "module-20",
+    "title": "Chapter 20: Comparisons",
+    "description": "Compare things using 'más que', 'menos que', and 'tan como'.",
+    "level": "Beginner",
+    "sentenceCount": 29,
+    "file": "module-20.json"
+  },
+  {
+    "id": "module-21",
+    "title": "Chapter 21: The Conditional Tense",
+    "description": "Talk about what 'would' happen.",
+    "level": "Beginner",
+    "sentenceCount": 30,
+    "file": "module-21.json"
+  },
+  {
+    "id": "module-22",
+    "title": "Chapter 22: The Future Tense",
+    "description": "Talk about what 'will' happen.",
+    "level": "Beginner",
+    "sentenceCount": 30,
+    "file": "module-22.json"
+  },
+  {
+    "id": "module-23",
+    "title": "Chapter 23: The Present Subjunctive",
+    "description": "Express desires, doubts, and hypotheticals.",
+    "level": "Beginner",
+    "sentenceCount": 30,
+    "file": "module-23.json"
+  },
+  {
+    "id": "module-24",
+    "title": "Chapter 24: Subjunctive vs. Indicative",
+    "description": "Practice choosing the correct mood.",
+    "level": "Beginner",
+    "sentenceCount": 31,
+    "file": "module-24.json"
+  }
+]

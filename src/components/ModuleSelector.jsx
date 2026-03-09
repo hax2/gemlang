@@ -47,7 +47,7 @@ const ModuleSelector = ({ modules, onSelect, practiceMode, onPracticeModeChange 
               
               <div className="module-meta">
                 <span className="sentence-count">
-                  {mod.sentences.length} {isPureTesting ? 'Prompts' : 'Sentences'}
+                  {mod.sentenceCount} {isPureTesting ? 'Prompts' : 'Sentences'}
                 </span>
                 <button className="btn-primary btn-sm" onClick={(e) => {
                   e.stopPropagation();
