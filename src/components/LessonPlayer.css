@@ -178,6 +178,7 @@
 }
 
 .btn-play {
+  position: relative;
   width: 96px;
   height: 96px;
   border-radius: 50%;
@@ -524,10 +525,57 @@
   margin-bottom: -1rem;
 }
 
+.kbd-hint {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom-width: 3px;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+  min-width: 1.5rem;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover .kbd-hint,
+.btn-secondary:hover .kbd-hint,
+.btn-mark-later:hover .kbd-hint,
+.btn-play-answer:hover .kbd-hint {
+  color: var(--text-main);
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-play .kbd-hint {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 0;
+  background: var(--surface-2);
+  border-color: var(--glass-border);
+  color: var(--accent-glow);
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-bottom-width: 2px;
+}
+
 /* ═══════════════════════════════════════════════════════
    MOBILE RESPONSIVE  (≤ 600px)
    ═══════════════════════════════════════════════════════ */
 @media (max-width: 600px) {
+  .kbd-hint {
+    display: none !important;
+  }
+
   /* Tighter padding on mobile */
   .lesson-content {
     padding: 1.75rem 1rem;

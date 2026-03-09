@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import './LessonPlayer.css';
 
-/* ── helpers ─────────────────────────────────────────────── */
+/* helpers */
 const cleanWord = (w) => w.replace(/[.,¿?¡!]/g, '');
 
-/** Collect every unique word→meaning pair from all sentences in a module */
+/** Collect every unique word->meaning pair from all sentences in a module */
 const buildVocabTable = (sentences) => {
   const map = new Map();
   sentences.forEach((s) => {
@@ -42,7 +42,6 @@ const buildMergedItems = (sentences, moduleId) => {
     sentenceCount++;
 
     if (sentenceCount === CHALLENGE_INTERVAL && i < sentences.length - 1) {
-      // Pick one sentence from this batch to quiz on
       const batchStart = i - (CHALLENGE_INTERVAL - 1);
       const seed = `${moduleId}-challenge-${items.length}`;
       const pick = seededRandom(seed) % CHALLENGE_INTERVAL;
@@ -79,7 +78,11 @@ const speakSpanish = (text) => {
   window.speechSynthesis.speak(u);
 };
 
-/* ── component ───────────────────────────────────────────── */
+const KbdHint = ({ show, children }) => {
+  if (!show) return null;
+  return <kbd className="kbd-hint">{children}</kbd>;
+};
+
 const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNextModule }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [spanishRevealed, setSpanishRevealed] = useState(false);
@@ -87,15 +90,27 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
   const [activeWordIndex, setActiveWordIndex] = useState(null);
   const [challengeAnswerRevealed, setChallengeAnswerRevealed] = useState(false);
   const [extraItems, setExtraItems] = useState([]);
+  const [isDesktop, setIsDesktop] = useState(false);
+
   const isPureTestingMode = practiceMode === 'testing';
-  const resetRevealState = () => {
+
+  const resetRevealState = useCallback(() => {
     setSpanishRevealed(false);
     setEnglishRevealed(false);
     setActiveWordIndex(null);
     setChallengeAnswerRevealed(false);
-  };
+  }, []);
 
-  /* Build merged items list (sentences + challenges + extras) */
+  useEffect(() => {
+    const checkDesktop = () => {
+      setIsDesktop(window.matchMedia('(min-width: 1024px)').matches);
+    };
+
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop);
+    return () => window.removeEventListener('resize', checkDesktop);
+  }, []);
+
   const mergedItems = useMemo(() => {
     if (isPureTestingMode) {
       return buildTestingItems(module.sentences);
@@ -105,44 +120,107 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
   }, [module, extraItems, isPureTestingMode]);
 
   const currentItem = mergedItems[currentIndex];
+  const currentOriginalIndex = currentItem?.originalIndex;
   const isChallenge = currentItem?.type === 'challenge';
   const sentence = isChallenge ? null : currentItem?.data;
   const isFinished = currentIndex >= mergedItems.length;
   const hasNextModule = moduleIndex < modules.length - 1;
   const vocabTable = isFinished ? buildVocabTable(module.sentences) : [];
 
-  /* Count sentence items for guided mode, challenge items for pure testing mode */
   const totalSentences = module.sentences.length;
   const progressItemsSoFar = isFinished
     ? totalSentences
-    : mergedItems.slice(0, currentIndex + 1).filter((it) => {
-      if (isPureTestingMode) return it.type === 'challenge';
-      return it.type === 'sentence';
+    : mergedItems.slice(0, currentIndex + 1).filter((item) => {
+      if (isPureTestingMode) return item.type === 'challenge';
+      return item.type === 'sentence';
     }).length;
 
-  /* auto-play Spanish audio for guided sentence cards */
   useEffect(() => {
     if (!isChallenge && sentence?.spanish) speakSpanish(sentence.spanish);
   }, [isChallenge, sentence]);
 
-  const playAudio = () => sentence && speakSpanish(sentence.spanish);
+  const playAudio = useCallback(() => {
+    if (isChallenge) {
+      if (currentItem?.data?.spanish) speakSpanish(currentItem.data.spanish);
+      return;
+    }
+    if (sentence?.spanish) speakSpanish(sentence.spanish);
+  }, [currentItem, isChallenge, sentence]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     resetRevealState();
     setCurrentIndex((p) => p + 1);
-  };
-  const handlePrev = () => {
+  }, [resetRevealState]);
+
+  const handlePrev = useCallback(() => {
     resetRevealState();
     setCurrentIndex((p) => Math.max(0, p - 1));
-  };
+  }, [resetRevealState]);
 
-  const handleMarkForLater = () => {
+  const handleMarkForLater = useCallback(() => {
     if (!sentence) return;
     setExtraItems((prev) => [
       ...prev,
-      { type: 'sentence', data: sentence, originalIndex: currentItem.originalIndex, isRepeat: true }
+      { type: 'sentence', data: sentence, originalIndex: currentOriginalIndex, isRepeat: true },
     ]);
-  };
+  }, [currentOriginalIndex, sentence]);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      const targetTag = event.target?.tagName;
+      if (targetTag === 'INPUT' || targetTag === 'TEXTAREA') return;
+
+      const key = event.key.toLowerCase();
+
+      if (key === 'escape') {
+        onBack();
+        return;
+      }
+
+      if (isFinished) {
+        if (key === 'enter' && hasNextModule) onNextModule();
+        if (key === 'b') onBack();
+        return;
+      }
+
+      if (isChallenge) {
+        if (key === ' ' || key === 's') {
+          event.preventDefault();
+          if (!challengeAnswerRevealed) {
+            setChallengeAnswerRevealed(true);
+          }
+          playAudio();
+        }
+        if (key === 'enter' || key === 'arrowright') handleNext();
+        if (key === 'arrowleft') handlePrev();
+        return;
+      }
+
+      if (key === ' ') {
+        event.preventDefault();
+        playAudio();
+      }
+      if (key === 's') setSpanishRevealed(true);
+      if (key === 'e' || key === 't') setEnglishRevealed(true);
+      if (key === 'm' || key === 'l') handleMarkForLater();
+      if (key === 'enter' || key === 'arrowright') handleNext();
+      if (key === 'arrowleft') handlePrev();
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [
+    challengeAnswerRevealed,
+    handleMarkForLater,
+    handleNext,
+    handlePrev,
+    hasNextModule,
+    isChallenge,
+    isFinished,
+    onBack,
+    onNextModule,
+    playAudio,
+  ]);
 
   const getMeaning = (word) => {
     const cw = cleanWord(word);
@@ -150,7 +228,6 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
     return meanings[cw] ?? meanings[cw.toLowerCase()] ?? meanings[cw.replace(/s$/, '')] ?? null;
   };
 
-  /* ── MODULE COMPLETE SCREEN ─────────────────────────────── */
   if (isFinished) {
     return (
       <div className="lesson-finished animate-fade-in glass-panel">
@@ -158,14 +235,13 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
         <h2 className="finished-title">Module Completed!</h2>
         <p className="finished-subtitle">
           {isPureTestingMode
-            ? <>You've completed all translation prompts in <strong>{module.title}</strong>.</>
-            : <>You've successfully finished all sentences in <strong>{module.title}</strong>.</>}
+            ? <>You&apos;ve completed all translation prompts in <strong>{module.title}</strong>.</>
+            : <>You&apos;ve successfully finished all sentences in <strong>{module.title}</strong>.</>}
         </p>
 
-        {/* Vocabulary recap table */}
         {!isPureTestingMode && (
           <div className="vocab-section">
-            <h3 className="vocab-heading">Words You've Learned</h3>
+            <h3 className="vocab-heading">Words You&apos;ve Learned</h3>
             <div className="vocab-table-wrapper">
               <table className="vocab-table">
                 <thead>
@@ -193,14 +269,13 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
           </div>
         )}
 
-        {/* Navigation buttons */}
         <div className="finished-actions">
           <button className="btn-secondary" onClick={onBack}>
-            ← All Modules
+            ← All Modules <KbdHint show={isDesktop}>B</KbdHint>
           </button>
           {hasNextModule && (
             <button className="btn-primary" onClick={onNextModule}>
-              Next Module →
+              Next Module → <KbdHint show={isDesktop}>Enter</KbdHint>
             </button>
           )}
         </div>
@@ -208,16 +283,16 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
     );
   }
 
-  /* ── TRANSLATION CHALLENGE SCREEN ─────────────────────── */
   if (isChallenge) {
     const challengeSentence = currentItem.data;
     const progressPercentage = (progressItemsSoFar / totalSentences) * 100;
 
     return (
       <div className="lesson-player animate-fade-in">
-        {/* Header / Progress */}
         <div className="lesson-header">
-          <button className="btn-secondary btn-sm" onClick={onBack}>← Back</button>
+          <button className="btn-secondary btn-sm" onClick={onBack}>
+            ← Back <KbdHint show={isDesktop}>Esc</KbdHint>
+          </button>
           <div className="progress-wrapper">
             <div className="progress-container">
               <div className="progress-bar-fill" style={{ width: `${progressPercentage}%` }} />
@@ -229,19 +304,16 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
         </div>
 
         <div className="lesson-content glass-panel challenge-panel">
-          {/* Challenge badge */}
           <div className={`challenge-badge ${isPureTestingMode ? 'pure-testing' : ''}`}>
             <span className="challenge-icon">🗣️</span>
             <span>{isPureTestingMode ? 'Pure Testing Mode' : 'Translation Challenge'}</span>
           </div>
 
-          {/* Prompt */}
           <div className="challenge-prompt">
             <p className="challenge-instruction">Translate this sentence into Spanish:</p>
             <p className="challenge-english">{challengeSentence.english}</p>
           </div>
 
-          {/* Answer area */}
           <div className="challenge-answer-area">
             {!challengeAnswerRevealed ? (
               <button
@@ -251,7 +323,7 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
                   speakSpanish(challengeSentence.spanish);
                 }}
               >
-                Reveal Answer
+                Reveal Answer <KbdHint show={isDesktop}>Space</KbdHint>
               </button>
             ) : (
               <div className="challenge-answer animate-fade-in">
@@ -264,40 +336,38 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M8 5v14l11-7z" />
                   </svg>
-                  <span>Listen</span>
+                  <span>Listen <KbdHint show={isDesktop}>Space</KbdHint></span>
                 </button>
               </div>
             )}
           </div>
         </div>
 
-        {/* Navigation — outside glass-panel so it can be sticky on mobile */}
         <div className="lesson-nav-bar">
           <button
             className="btn-secondary btn-nav-secondary"
             onClick={handlePrev}
             disabled={currentIndex === 0}
           >
-            ← Previous
+            ← Previous <KbdHint show={isDesktop}>←</KbdHint>
           </button>
           <button className="btn-primary btn-nav-next" onClick={handleNext}>
-            {isPureTestingMode ? 'Next Prompt →' : 'Continue →'}
+            {isPureTestingMode ? 'Next Prompt →' : 'Continue →'} <KbdHint show={isDesktop}>Enter</KbdHint>
           </button>
         </div>
       </div>
     );
   }
 
-  /* ── NORMAL LESSON SCREEN ───────────────────────────────── */
   const words = sentence.spanish.split(' ');
   const progressPercentage = (progressItemsSoFar / totalSentences) * 100;
 
   return (
     <div className="lesson-player animate-fade-in">
-
-      {/* Header / Progress */}
       <div className="lesson-header">
-        <button className="btn-secondary btn-sm" onClick={onBack}>← Back</button>
+        <button className="btn-secondary btn-sm" onClick={onBack}>
+          ← Back <KbdHint show={isDesktop}>Esc</KbdHint>
+        </button>
         <div className="progress-wrapper">
           <div className="progress-container">
             <div className="progress-bar-fill" style={{ width: `${progressPercentage}%` }} />
@@ -316,24 +386,19 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
           </div>
         )}
 
-        {/* Audio section */}
         <div className="audio-section">
-          <button
-            className="btn-play pulse-primary"
-            onClick={playAudio}
-            title="Listen to Spanish"
-          >
+          <button className="btn-play pulse-primary" onClick={playAudio} title="Listen to Spanish">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
               <path d="M8 5v14l11-7z" />
             </svg>
+            <KbdHint show={isDesktop}>Space</KbdHint>
           </button>
         </div>
 
-        {/* Spanish Text Area */}
         <div className="spanish-area">
           {!spanishRevealed ? (
             <button className="btn-reveal" onClick={() => setSpanishRevealed(true)}>
-              Reveal Spanish text
+              Reveal Spanish text <KbdHint show={isDesktop}>S</KbdHint>
             </button>
           ) : (
             <div className="spanish-sentence animate-fade-in">
@@ -365,39 +430,34 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
           )}
         </div>
 
-        {/* Translation reveal — stays inside content */}
         <div className="translation-area">
           {!englishRevealed ? (
             <button className="btn-text-reveal" onClick={() => setEnglishRevealed(true)}>
-              Reveal Full Translation
+              Reveal Full Translation <KbdHint show={isDesktop}>E</KbdHint>
             </button>
           ) : (
-            <div className="english-translation animate-fade-in">
-              {sentence.english}
-            </div>
+            <div className="english-translation animate-fade-in">{sentence.english}</div>
           )}
         </div>
-
       </div>
 
-      {/* Navigation — outside glass-panel so it can be sticky on mobile */}
       <div className="lesson-nav-bar">
         <button
           className="btn-secondary btn-nav-secondary"
           onClick={handlePrev}
           disabled={currentIndex === 0}
         >
-          ← Previous
+          ← Previous <KbdHint show={isDesktop}>←</KbdHint>
         </button>
         <button
           className="btn-mark-later btn-nav-mark"
           onClick={handleMarkForLater}
           title="See this sentence again at the end"
         >
-          🔖 Later
+          🔖 Later <KbdHint show={isDesktop}>M</KbdHint>
         </button>
         <button className="btn-primary btn-nav-next" onClick={handleNext}>
-          Next →
+          Next → <KbdHint show={isDesktop}>Enter</KbdHint>
         </button>
       </div>
     </div>
