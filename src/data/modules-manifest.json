@@ -190,5 +190,53 @@
     "level": "Beginner",
     "sentenceCount": 31,
     "file": "module-24.json"
+  },
+  {
+    "id": "module-25",
+    "title": "Caperucita Roja - Part 1",
+    "description": "A classic fairy tale told in Spanish.",
+    "level": "Intermediate",
+    "sentenceCount": 10,
+    "file": "module-25.json"
+  },
+  {
+    "id": "module-26",
+    "title": "Don Quijote de la Mancha - Excerpt",
+    "description": "A passage from the most famous work of Spanish literature.",
+    "level": "Advanced",
+    "sentenceCount": 10,
+    "file": "module-26.json"
+  },
+  {
+    "id": "module-27",
+    "title": "Poetry: Bécquer",
+    "description": "Rimas by Gustavo Adolfo Bécquer.",
+    "level": "Advanced",
+    "sentenceCount": 10,
+    "file": "module-27.json"
+  },
+  {
+    "id": "module-28",
+    "title": "Grammar: The Past Subjunctive",
+    "description": "Practice the imperfect subjunctive for hypothetical situations.",
+    "level": "Intermediate",
+    "sentenceCount": 10,
+    "file": "module-28.json"
+  },
+  {
+    "id": "module-29",
+    "title": "Theme: Travel and Airport",
+    "description": "Useful vocabulary and phrases for traveling by plane.",
+    "level": "Intermediate",
+    "sentenceCount": 10,
+    "file": "module-29.json"
+  },
+  {
+    "id": "module-30",
+    "title": "Theme: Business and Office",
+    "description": "Vocabulary for professional settings and meetings.",
+    "level": "Intermediate",
+    "sentenceCount": 10,
+    "file": "module-30.json"
   }
 ]
