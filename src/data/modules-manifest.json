@@ -238,5 +238,29 @@
     "level": "Intermediate",
     "sentenceCount": 10,
     "file": "module-30.json"
+  },
+  {
+    "id": "module-31",
+    "title": "Theme: Food and Dining",
+    "description": "Vocabulary for restaurants, cooking, and food.",
+    "level": "Intermediate",
+    "sentenceCount": 10,
+    "file": "module-31.json"
+  },
+  {
+    "id": "module-32",
+    "title": "Theme: Health and Medicine",
+    "description": "Vocabulary for doctor visits, symptoms, and pharmacy.",
+    "level": "Intermediate",
+    "sentenceCount": 10,
+    "file": "module-32.json"
+  },
+  {
+    "id": "module-33",
+    "title": "Theme: Nature and Environment",
+    "description": "Vocabulary for weather, landscapes, and conservation.",
+    "level": "Intermediate",
+    "sentenceCount": 10,
+    "file": "module-33.json"
   }
 ]
