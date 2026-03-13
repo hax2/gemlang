@@ -88,7 +88,6 @@
       "english": "No, I don't like tea.",
       "wordMeanings": {
         "No": "no / not",
-        "no": "no / not",
         "me": "me / to me",
         "gusta": "likes",
         "el": "the",
@@ -168,7 +167,6 @@
       "english": "No, I don't like books.",
       "wordMeanings": {
         "No": "no / not",
-        "no": "no / not",
         "me": "me / to me",
         "gustan": "like (pl)",
         "los": "the / them",
@@ -443,7 +441,6 @@
       "english": "No, I don't like working downtown.",
       "wordMeanings": {
         "No": "no / not",
-        "no": "no / not",
         "me": "me / to me",
         "gusta": "likes",
         "trabajar": "to work",

@@ -89,7 +89,6 @@
       "english": "No, I am not going to study tomorrow.",
       "wordMeanings": {
         "No": "no / not",
-        "no": "no / not",
         "voy": "I go",
         "a": "to",
         "estudiar": "to study",
@@ -295,7 +294,6 @@
       "english": "No, I'm not going to buy the car.",
       "wordMeanings": {
         "No": "no / not",
-        "no": "no / not",
         "voy": "I go",
         "a": "to",
         "comprar": "to buy",
@@ -390,7 +388,6 @@
       "english": "No, I am not going to come.",
       "wordMeanings": {
         "No": "no / not",
-        "no": "no / not",
         "voy": "I go",
         "a": "to",
         "venir": "to come"
