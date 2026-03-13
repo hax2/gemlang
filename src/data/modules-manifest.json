@@ -121,72 +121,72 @@
   },
   {
     "id": "module-16",
-    "title": "Chapter 16: Affirmative / Negative Words",
-    "description": "Learn to use always, never, something, nothing, etc.",
+    "title": "Chapter 16: Affirmative Commands",
+    "description": "Give direct orders like 'Speak' or 'Eat'.",
     "level": "Beginner",
     "sentenceCount": 36,
     "file": "module-16.json"
   },
   {
     "id": "module-17",
-    "title": "Chapter 17: Por vs. Para",
-    "description": "Understand the differences between por and para.",
+    "title": "Chapter 17: Negative Commands",
+    "description": "Learn to say 'Don't do' something.",
     "level": "Beginner",
     "sentenceCount": 30,
     "file": "module-17.json"
   },
   {
     "id": "module-18",
-    "title": "Chapter 18: Telling Time & Weather",
-    "description": "Learn to express hours and weather.",
+    "title": "Chapter 18: Subjunctive: Desires",
+    "description": "Express what you want others to do using 'Quiero que'.",
     "level": "Beginner",
     "sentenceCount": 30,
     "file": "module-18.json"
   },
   {
     "id": "module-19",
-    "title": "Chapter 19: Imperative Mood",
-    "description": "Give commands and instructions.",
+    "title": "Chapter 19: Subjunctive: Hope",
+    "description": "Express hope and uncertainty with 'Espero que'.",
     "level": "Beginner",
     "sentenceCount": 30,
     "file": "module-19.json"
   },
   {
     "id": "module-20",
-    "title": "Chapter 20: Comparisons",
-    "description": "Compare things using 'más que', 'menos que', and 'tan como'.",
+    "title": "Chapter 20: Subjunctive: Importance",
+    "description": "Use impersonal expressions like 'Es importante que'.",
     "level": "Beginner",
     "sentenceCount": 29,
     "file": "module-20.json"
   },
   {
     "id": "module-21",
-    "title": "Chapter 21: The Conditional Tense",
-    "description": "Talk about what 'would' happen.",
+    "title": "Chapter 21: Real Conditionals",
+    "description": "Talk about what happens if a condition is met.",
     "level": "Beginner",
     "sentenceCount": 30,
     "file": "module-21.json"
   },
   {
     "id": "module-22",
-    "title": "Chapter 22: The Future Tense",
-    "description": "Talk about what 'will' happen.",
+    "title": "Chapter 22: Hypothetical Conditionals",
+    "description": "Talk about what would happen in hypothetical situations.",
     "level": "Beginner",
     "sentenceCount": 30,
     "file": "module-22.json"
   },
   {
     "id": "module-23",
-    "title": "Chapter 23: The Present Subjunctive",
-    "description": "Express desires, doubts, and hypotheticals.",
+    "title": "Chapter 23: Done Actions (Acabar de)",
+    "description": "Say what you just finished doing.",
     "level": "Beginner",
     "sentenceCount": 30,
     "file": "module-23.json"
   },
   {
     "id": "module-24",
-    "title": "Chapter 24: Subjunctive vs. Indicative",
-    "description": "Practice choosing the correct mood.",
+    "title": "Chapter 24: Duration (Llevar + Gerund)",
+    "description": "Express how long you've been doing something.",
     "level": "Beginner",
     "sentenceCount": 31,
     "file": "module-24.json"
