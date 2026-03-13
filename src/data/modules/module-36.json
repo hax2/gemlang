@@ -12,7 +12,10 @@
         "Muchos": "many",
         "años": "years",
         "después": "later",
+        "frente": "facing/front",
+        "al": "to the",
         "pelotón": "squad/platoon",
+        "de": "of",
         "fusilamiento": "firing/execution"
       }
     },
@@ -21,9 +24,14 @@
       "spanish": "...el coronel Aureliano Buendía había de recordar aquella tarde remota...",
       "english": "...Colonel Aureliano Buendía was to remember that distant afternoon...",
       "wordMeanings": {
+        "el": "the",
         "coronel": "colonel",
+        "Aureliano": "Aureliano",
+        "Buendía": "Buendía",
         "había": "had",
+        "de": "of/to",
         "recordar": "to remember",
+        "aquella": "that",
         "tarde": "afternoon",
         "remota": "remote/distant"
       }
@@ -33,9 +41,15 @@
       "spanish": "...en que su padre lo llevó a conocer el hielo.",
       "english": "...in which his father took him to discover ice.",
       "wordMeanings": {
+        "en": "in",
+        "que": "which",
+        "su": "his",
         "padre": "father",
+        "lo": "him",
         "llevó": "took",
+        "a": "to",
         "conocer": "to know/discover",
+        "el": "the",
         "hielo": "ice"
       }
     },
@@ -44,9 +58,13 @@
       "spanish": "Macondo era entonces una aldea de veinte casas de barro...",
       "english": "Macondo was then a village of twenty houses of mud...",
       "wordMeanings": {
+        "Macondo": "Macondo",
         "era": "was",
         "entonces": "then",
+        "una": "a",
         "aldea": "village",
+        "de": "of",
+        "veinte": "twenty",
         "casas": "houses",
         "barro": "mud/clay"
       }
@@ -56,9 +74,14 @@
       "spanish": "...y cañabrava construidas a la orilla de un río de aguas diáfanas.",
       "english": "...and wild cane built on the bank of a river of clear waters.",
       "wordMeanings": {
+        "y": "and",
         "cañabrava": "wild cane",
         "construidas": "built",
+        "a": "at",
+        "la": "the",
         "orilla": "bank/shore",
+        "de": "of",
+        "un": "a",
         "río": "river",
         "aguas": "waters",
         "diáfanas": "diaphanous/clear"

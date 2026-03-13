@@ -10,7 +10,9 @@
       "english": "Butterfly of the air, how beautiful you are.",
       "wordMeanings": {
         "Mariposa": "butterfly",
+        "del": "of the",
         "aire": "air",
+        "qué": "how",
         "hermosa": "beautiful",
         "eres": "you are"
       }
@@ -20,7 +22,11 @@
       "spanish": "Mariposa del aire, dorada y verde.",
       "english": "Butterfly of the air, golden and green.",
       "wordMeanings": {
+        "Mariposa": "butterfly",
+        "del": "of the",
+        "aire": "air",
         "dorada": "golden",
+        "y": "and",
         "verde": "green"
       }
     },
@@ -30,7 +36,10 @@
       "english": "Light of the lamp, butterfly of the air.",
       "wordMeanings": {
         "Luz": "light",
-        "candil": "oil lamp"
+        "del": "of the",
+        "candil": "oil lamp",
+        "mariposa": "butterfly",
+        "aire": "air"
       }
     },
     {
@@ -47,8 +56,12 @@
       "spanish": "No te quieres parar, pararte no quieres.",
       "english": "You do not want to stop, to stop you do not want.",
       "wordMeanings": {
+        "No": "no",
+        "te": "yourself",
         "quieres": "you want",
-        "parar": "to stop"
+        "parar": "to stop",
+        "pararte": "to stop yourself",
+        "no": "no"
       }
     },
     {
@@ -56,7 +69,11 @@
       "spanish": "Mariposa del aire, dorada y verde.",
       "english": "Butterfly of the air, golden and green.",
       "wordMeanings": {
+        "Mariposa": "butterfly",
+        "del": "of the",
+        "aire": "air",
         "dorada": "golden",
+        "y": "and",
         "verde": "green"
       }
     },
@@ -66,7 +83,10 @@
       "english": "Light of the lamp, butterfly of the air.",
       "wordMeanings": {
         "Luz": "light",
-        "candil": "oil lamp"
+        "del": "of the",
+        "candil": "oil lamp",
+        "mariposa": "butterfly",
+        "aire": "air"
       }
     },
     {
@@ -83,6 +103,9 @@
       "spanish": "¡Quédate ahí! Mariposa, ¿estás ahí?",
       "english": "Stay there! Butterfly, are you there?",
       "wordMeanings": {
+        "Quédate": "stay",
+        "ahí": "there",
+        "Mariposa": "butterfly",
         "estás": "are you"
       }
     }
