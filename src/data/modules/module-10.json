@@ -438,5 +438,6 @@
         "casa": "house"
       }
     }
-  ]
+  ],
+  "grammarExplanation": "The preterite tense describes completed actions in the past.\n\nRegular -AR endings: -é, -aste, -ó, -amos, -aron\n• hablé, hablaste, habló, hablamos, hablaron\n\nRegular -ER/-IR endings: -í, -iste, -ió, -imos, -ieron\n• comí, comiste, comió, comimos, comieron\n\nIrregular: ir/ser → fui, fuiste, fue, fuimos, fueron\ntener → tuve, tuviste, tuvo, tuvimos, tuvieron"
 }

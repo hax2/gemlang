@@ -576,5 +576,6 @@
         "casa": "house"
       }
     }
-  ]
+  ],
+  "grammarExplanation": "Spanish has TWO verbs for 'to be': 'ser' and 'estar'.\n\n• SER describes permanent qualities (identity, traits, material): 'El libro es nuevo' (The book is new).\n• ESTAR describes location or temporary states: 'El café está frío' (The coffee is cold).\n\nAdjectives must match the noun in gender and number:\n• Masculine singular: nuevo, pequeño\n• Feminine singular: nueva, pequeña\n• Masculine plural: nuevos, pequeños\n• Feminine plural: nuevas, pequeñas"
 }

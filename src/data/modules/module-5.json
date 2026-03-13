@@ -477,5 +477,6 @@
         "trabajas": "you work"
       }
     }
-  ]
+  ],
+  "grammarExplanation": "Regular -AR verbs follow a predictable conjugation pattern. Remove '-ar' and add these endings:\n\n• -o (yo): hablo\n• -as (tú): hablas\n• -a (él/ella): habla\n• -amos (nosotros): hablamos\n• -an (ustedes/ellos): hablan\n\nThis same pattern works for hablar, trabajar, estudiar, comprar, buscar, esperar, escuchar, mirar, and many more."
 }

@@ -526,5 +526,6 @@
         "trabajo": "I work / job"
       }
     }
-  ]
+  ],
+  "grammarExplanation": "In Spanish, 'estar' is used to express locations and temporary states. Unlike 'ser' (identity/permanent traits), 'estar' tells WHERE someone is or HOW they feel right now.\n\n• Estoy = I am (location/state)\n• Estás = You are\n• Está = He/She is\n• Estamos = We are\n• Están = They are\n\nExample: 'Estoy en casa' = I am at home."
 }

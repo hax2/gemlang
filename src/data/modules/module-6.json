@@ -455,5 +455,6 @@
         "día": "day"
       }
     }
-  ]
+  ],
+  "grammarExplanation": "Regular -ER and -IR verbs follow similar patterns. Remove the ending and add:\n\n-ER verbs (comer):\n• -o, -es, -e, -emos, -en\n• como, comes, come, comemos, comen\n\n-IR verbs (vivir):\n• -o, -es, -e, -imos, -en\n• vivo, vives, vive, vivimos, viven\n\nNotice: -ER and -IR only differ in the 'nosotros' form (-emos vs -imos)."
 }

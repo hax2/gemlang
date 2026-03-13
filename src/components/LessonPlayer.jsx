@@ -91,6 +91,9 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
   const [challengeAnswerRevealed, setChallengeAnswerRevealed] = useState(false);
   const [extraItems, setExtraItems] = useState([]);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [showGrammarIntro, setShowGrammarIntro] = useState(
+    () => !!(module.grammarExplanation && practiceMode !== 'testing')
+  );
 
   const isPureTestingMode = practiceMode === 'testing';
 
@@ -136,8 +139,8 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
     }).length;
 
   useEffect(() => {
-    if (!isChallenge && sentence?.spanish) speakSpanish(sentence.spanish);
-  }, [isChallenge, sentence]);
+    if (!showGrammarIntro && !isChallenge && sentence?.spanish) speakSpanish(sentence.spanish);
+  }, [isChallenge, sentence, showGrammarIntro]);
 
   const playAudio = useCallback(() => {
     if (isChallenge) {
@@ -174,6 +177,14 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
 
       if (key === 'escape') {
         onBack();
+        return;
+      }
+
+      if (showGrammarIntro) {
+        if (key === 'enter' || key === ' ' || key === 'arrowright') {
+          event.preventDefault();
+          setShowGrammarIntro(false);
+        }
         return;
       }
 
@@ -220,6 +231,7 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
     onBack,
     onNextModule,
     playAudio,
+    showGrammarIntro,
   ]);
 
   const getMeaning = (word) => {
@@ -227,6 +239,51 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
     const meanings = sentence?.wordMeanings || {};
     return meanings[cw] ?? meanings[cw.toLowerCase()] ?? meanings[cw.replace(/s$/, '')] ?? null;
   };
+
+  if (showGrammarIntro) {
+    return (
+      <div className="lesson-player animate-fade-in">
+        <div className="lesson-header">
+          <button className="btn-secondary btn-sm" onClick={onBack}>
+            ← Back <KbdHint show={isDesktop}>Esc</KbdHint>
+          </button>
+          <div className="progress-wrapper">
+            <div className="progress-container">
+              <div className="progress-bar-fill" style={{ width: '0%' }} />
+            </div>
+          </div>
+          <span className="progress-text">0 / {totalSentences}</span>
+        </div>
+
+        <div className="lesson-content glass-panel grammar-intro-panel">
+          <div className="grammar-intro-badge">
+            <span className="grammar-intro-icon">📖</span>
+            <span>Grammar</span>
+          </div>
+          <h2 className="grammar-intro-title">{module.title}</h2>
+          <div className="grammar-intro-body">
+            {module.grammarExplanation.split('\n').map((line, i) => {
+              if (line.trim() === '') return <br key={i} />;
+              if (line.startsWith('•')) {
+                return <p key={i} className="grammar-bullet">{line}</p>;
+              }
+              return <p key={i}>{line}</p>;
+            })}
+          </div>
+        </div>
+
+        <div className="lesson-nav-bar">
+          <div />
+          <button
+            className="btn-primary btn-nav-next pulse-primary"
+            onClick={() => setShowGrammarIntro(false)}
+          >
+            Begin Lesson → <KbdHint show={isDesktop}>Enter</KbdHint>
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   if (isFinished) {
     return (

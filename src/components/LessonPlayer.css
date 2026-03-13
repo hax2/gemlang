@@ -369,6 +369,74 @@
   flex-shrink: 0;
 }
 
+/* ── Grammar Intro ───────────────────────────────────── */
+.grammar-intro-panel {
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(56, 189, 248, 0.05) 0%,
+    rgba(168, 85, 247, 0.06) 100%
+  ) !important;
+  align-items: flex-start !important;
+  gap: 1.25rem !important;
+  max-height: 65vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--glass-highlight) transparent;
+}
+
+.grammar-intro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.2rem;
+  border-radius: var(--radius-full, 50px);
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(168, 85, 247, 0.2));
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7dd3fc;
+}
+
+.grammar-intro-icon {
+  font-size: 1.15rem;
+}
+
+.grammar-intro-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.grammar-intro-body {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-main);
+  width: 100%;
+}
+
+.grammar-intro-body p {
+  margin: 0.2em 0;
+}
+
+.grammar-intro-body br {
+  display: block;
+  content: "";
+  margin: 0.35em 0;
+}
+
+.grammar-intro-body .grammar-bullet {
+  padding-left: 0.5rem;
+  color: #e0e7ff;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0.15em 0;
+}
+
 /* ── Translation Challenge ───────────────────────────── */
 .challenge-panel {
   border: 1px solid rgba(234, 179, 8, 0.25) !important;
@@ -670,5 +738,21 @@
   .english-translation {
     font-size: 1.05rem;
     padding: 0.75rem 1rem;
+  }
+
+  /* Grammar intro mobile */
+  .grammar-intro-panel {
+    max-height: 55vh;
+    gap: 1rem !important;
+  }
+  .grammar-intro-title {
+    font-size: 1.2rem;
+  }
+  .grammar-intro-body {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+  .grammar-intro-body .grammar-bullet {
+    font-size: 0.88rem;
   }
 }
