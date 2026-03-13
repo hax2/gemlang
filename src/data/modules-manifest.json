@@ -262,5 +262,29 @@
     "level": "Intermediate",
     "sentenceCount": 10,
     "file": "module-33.json"
+  },
+  {
+    "id": "module-34",
+    "title": "Poetry: Mariposa del Aire",
+    "description": "A lovely poem by Federico García Lorca.",
+    "level": "Advanced",
+    "sentenceCount": 9,
+    "file": "module-34.json"
+  },
+  {
+    "id": "module-35",
+    "title": "Dialogue: At the Café",
+    "description": "A conversation between two friends ordering coffee.",
+    "level": "Intermediate",
+    "sentenceCount": 9,
+    "file": "module-35.json"
+  },
+  {
+    "id": "module-36",
+    "title": "Literature: Cien Años de Soledad",
+    "description": "The iconic opening of Gabriel García Márquez's masterpiece.",
+    "level": "Advanced",
+    "sentenceCount": 5,
+    "file": "module-36.json"
   }
 ]

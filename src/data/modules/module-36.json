@@ -1,0 +1,68 @@
+{
+  "id": "module-36",
+  "title": "Literature: Cien Años de Soledad",
+  "description": "The iconic opening of Gabriel García Márquez's masterpiece.",
+  "level": "Advanced",
+  "sentences": [
+    {
+      "id": "m36-s1",
+      "spanish": "Muchos años después, frente al pelotón de fusilamiento...",
+      "english": "Many years later, facing the firing squad...",
+      "wordMeanings": {
+        "Muchos": "many",
+        "años": "years",
+        "después": "later",
+        "pelotón": "squad/platoon",
+        "fusilamiento": "firing/execution"
+      }
+    },
+    {
+      "id": "m36-s2",
+      "spanish": "...el coronel Aureliano Buendía había de recordar aquella tarde remota...",
+      "english": "...Colonel Aureliano Buendía was to remember that distant afternoon...",
+      "wordMeanings": {
+        "coronel": "colonel",
+        "había": "had",
+        "recordar": "to remember",
+        "tarde": "afternoon",
+        "remota": "remote/distant"
+      }
+    },
+    {
+      "id": "m36-s3",
+      "spanish": "...en que su padre lo llevó a conocer el hielo.",
+      "english": "...in which his father took him to discover ice.",
+      "wordMeanings": {
+        "padre": "father",
+        "llevó": "took",
+        "conocer": "to know/discover",
+        "hielo": "ice"
+      }
+    },
+    {
+      "id": "m36-s4",
+      "spanish": "Macondo era entonces una aldea de veinte casas de barro...",
+      "english": "Macondo was then a village of twenty houses of mud...",
+      "wordMeanings": {
+        "era": "was",
+        "entonces": "then",
+        "aldea": "village",
+        "casas": "houses",
+        "barro": "mud/clay"
+      }
+    },
+    {
+      "id": "m36-s5",
+      "spanish": "...y cañabrava construidas a la orilla de un río de aguas diáfanas.",
+      "english": "...and wild cane built on the bank of a river of clear waters.",
+      "wordMeanings": {
+        "cañabrava": "wild cane",
+        "construidas": "built",
+        "orilla": "bank/shore",
+        "río": "river",
+        "aguas": "waters",
+        "diáfanas": "diaphanous/clear"
+      }
+    }
+  ]
+}
