@@ -169,6 +169,14 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
   }, [currentOriginalIndex, sentence]);
 
   useEffect(() => {
+    const handleGlobalClick = () => setActiveWordIndex(null);
+    if (activeWordIndex !== null) {
+      window.addEventListener('click', handleGlobalClick);
+    }
+    return () => window.removeEventListener('click', handleGlobalClick);
+  }, [activeWordIndex]);
+
+  useEffect(() => {
     const handleKeyDown = (event) => {
       const targetTag = event.target?.tagName;
       if (targetTag === 'INPUT' || targetTag === 'TEXTAREA') return;
@@ -466,8 +474,9 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
                   <div key={idx} className="word-container">
                     <span
                       className={`spanish-word ${meaning ? 'has-meaning' : ''} ${isActive ? 'active' : ''}`}
-                      onClick={() => {
+                      onClick={(e) => {
                         if (meaning) {
+                          e.stopPropagation();
                           setActiveWordIndex(isActive ? null : idx);
                           speakSpanish(cleanWord(word));
                         }
@@ -476,7 +485,10 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
                       {word}
                     </span>
                     {isActive && meaning && (
-                      <div className="word-tooltip animate-fade-in">
+                      <div 
+                        className="word-tooltip animate-fade-in"
+                        onClick={(e) => e.stopPropagation()}
+                      >
                         {meaning}
                       </div>
                     )}
