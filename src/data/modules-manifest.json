@@ -286,5 +286,21 @@
     "level": "Advanced",
     "sentenceCount": 5,
     "file": "module-36.json"
+  },
+  {
+    "id": "module-37",
+    "title": "Theme: Technology and Internet",
+    "description": "Vocabulary for computers, internet, and modern technology.",
+    "level": "Intermediate",
+    "sentenceCount": 5,
+    "file": "module-37.json"
+  },
+  {
+    "id": "module-38",
+    "title": "Theme: Family and Relationships",
+    "description": "Vocabulary for describing family members and relationships.",
+    "level": "Intermediate",
+    "sentenceCount": 5,
+    "file": "module-38.json"
   }
 ]

@@ -1,0 +1,72 @@
+{
+  "id": "module-37",
+  "title": "Theme: Technology and Internet",
+  "description": "Vocabulary for computers, internet, and modern technology.",
+  "level": "Intermediate",
+  "sentences": [
+    {
+      "id": "m37-s1",
+      "spanish": "Tengo que descargar una aplicación para mi teléfono nuevo.",
+      "english": "I have to download an app for my new phone.",
+      "wordMeanings": {
+        "descargar": "to download",
+        "aplicación": "app",
+        "teléfono": "phone"
+      }
+    },
+    {
+      "id": "m37-s2",
+      "spanish": "La conexión a internet es muy rápida aquí.",
+      "english": "The internet connection is very fast here.",
+      "wordMeanings": {
+        "conexión": "connection",
+        "rápida": "fast",
+        "aquí": "here"
+      }
+    },
+    {
+      "id": "m37-s3",
+      "spanish": "Por favor, escribe tu contraseña con cuidado.",
+      "english": "Please, type your password carefully.",
+      "wordMeanings": {
+        "escribe": "type/write",
+        "contraseña": "password",
+        "cuidado": "care"
+      }
+    },
+    {
+      "id": "m37-s4",
+      "spanish": "Mi computadora portátil se quedó sin batería.",
+      "english": "My laptop ran out of battery.",
+      "wordMeanings": {
+        "computadora portátil": "laptop",
+        "quedó": "stayed/ran out",
+        "batería": "battery"
+      }
+    },
+    {
+      "id": "m37-s5",
+      "spanish": "Guarda el documento en la nube de almacenamiento.",
+      "english": "Save the document in the cloud storage.",
+      "wordMeanings": {
+        "guarda": "save",
+        "documento": "document",
+        "nube": "cloud"
+      }
+    }
+  ],
+  "vocabulary": {
+    "descargar": {
+      "mnemonic": "De-charge (discharge) the internet into your phone to 'download'.",
+      "explanation": "Means 'to download'."
+    },
+    "contraseña": {
+      "mnemonic": "Contra (against) + seña (sign). A sign against hacking = 'password'.",
+      "explanation": "Means 'password'."
+    },
+    "pantalla": {
+      "mnemonic": "Pan (bread) + talla (size). The size of bread fits on the 'screen'.",
+      "explanation": "Means 'screen'."
+    }
+  }
+}
