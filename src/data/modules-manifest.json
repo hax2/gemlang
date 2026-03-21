@@ -302,5 +302,45 @@
     "level": "Intermediate",
     "sentenceCount": 5,
     "file": "module-38.json"
+  },
+  {
+    "id": "module-39",
+    "title": "Theme: Work and Professions",
+    "description": "Vocabulary for jobs, the workplace, and careers.",
+    "level": "Intermediate",
+    "sentenceCount": 5,
+    "file": "module-39.json"
+  },
+  {
+    "id": "module-40",
+    "title": "Theme: Shopping and Clothing",
+    "description": "Vocabulary for going shopping and describing clothes.",
+    "level": "Intermediate",
+    "sentenceCount": 5,
+    "file": "module-40.json"
+  },
+  {
+    "id": "module-41",
+    "title": "Theme: House and Furniture",
+    "description": "Vocabulary for describing parts of the house and daily living objects.",
+    "level": "Intermediate",
+    "sentenceCount": 5,
+    "file": "module-41.json"
+  },
+  {
+    "id": "module-42",
+    "title": "Theme: Hobbies and Free Time",
+    "description": "Vocabulary for describing what you do in your leisure hours.",
+    "level": "Intermediate",
+    "sentenceCount": 5,
+    "file": "module-42.json"
+  },
+  {
+    "id": "module-43",
+    "title": "Theme: Emotions and Feelings",
+    "description": "Vocabulary for expressing how you feel internally.",
+    "level": "Intermediate",
+    "sentenceCount": 5,
+    "file": "module-43.json"
   }
 ]

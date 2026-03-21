@@ -1,0 +1,70 @@
+{
+  "id": "module-43",
+  "title": "Theme: Emotions and Feelings",
+  "description": "Vocabulary for expressing how you feel internally.",
+  "level": "Intermediate",
+  "sentences": [
+    {
+      "id": "m43-s1",
+      "spanish": "Estoy muy alegre porque aprobé mi examen de matemáticas.",
+      "english": "I am very happy because I passed my math exam.",
+      "wordMeanings": {
+        "alegre": "happy/joyful",
+        "aprobé": "passed",
+        "examen": "exam"
+      }
+    },
+    {
+      "id": "m43-s2",
+      "spanish": "Se siente triste después de ver esa película emotiva.",
+      "english": "He feels sad after watching that emotional movie.",
+      "wordMeanings": {
+        "siente": "feels",
+        "triste": "sad",
+        "película": "movie"
+      }
+    },
+    {
+      "id": "m43-s3",
+      "spanish": "El niño tiene miedo de la oscuridad.",
+      "english": "The boy is afraid of the dark.",
+      "wordMeanings": {
+        "miedo": "fear",
+        "oscuridad": "darkness"
+      }
+    },
+    {
+      "id": "m43-s4",
+      "spanish": "Estábamos nerviosos antes de la presentación importante.",
+      "english": "We were nervous before the important presentation.",
+      "wordMeanings": {
+        "nerviosos": "nervous",
+        "presentación": "presentation"
+      }
+    },
+    {
+      "id": "m43-s5",
+      "spanish": "Me sorprendió enterarme de la buena noticia.",
+      "english": "It surprised me to find out about the good news.",
+      "wordMeanings": {
+        "sorprendió": "surprised",
+        "enterarme": "to find out",
+        "noticia": "news"
+      }
+    }
+  ],
+  "vocabulary": {
+    "alegre": {
+      "mnemonic": "Allegro (music) means cheerful or fast - 'alegre' is joyful.",
+      "explanation": "Means 'happy' or 'joyful'."
+    },
+    "miedo": {
+      "mnemonic": "Me-ed-o... I say 'Oh me' when I have 'fear'.",
+      "explanation": "Means 'fear' or 'afraid' usually paired with 'tener' (to have fear)."
+    },
+    "triste": {
+      "mnemonic": "Triste sounds like a wistful sigh...",
+      "explanation": "Means 'sad'."
+    }
+  }
+}
