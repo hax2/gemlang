@@ -436,5 +436,155 @@
       }
     }
   ],
-  "grammarExplanation": "The imperfect tense describes ongoing or habitual past actions — things you 'used to do' or 'were doing.'\n\n-AR verbs: -aba, -abas, -aba, -ábamos, -aban\n• hablaba, hablabas, hablaba, hablábamos, hablaban\n\n-ER/-IR verbs: -ía, -ías, -ía, -íamos, -ían\n• comía, comías, comía, comíamos, comían\n\nKey words: siempre, a menudo, a veces, todos los días, antes, cuando era.\n\nPreterite ≠ Imperfect: 'Ayer trabajé' (completed) vs 'Ayer trabajaba' (ongoing/background)."
+  "grammarExplanation": "The imperfect tense describes ongoing or habitual past actions — things you 'used to do' or 'were doing.'\n\n-AR verbs: -aba, -abas, -aba, -ábamos, -aban\n• hablaba, hablabas, hablaba, hablábamos, hablaban\n\n-ER/-IR verbs: -ía, -ías, -ía, -íamos, -ían\n• comía, comías, comía, comíamos, comían\n\nKey words: siempre, a menudo, a veces, todos los días, antes, cuando era.\n\nPreterite ≠ Imperfect: 'Ayer trabajé' (completed) vs 'Ayer trabajaba' (ongoing/background).",
+  "vocabulary": {
+    "antes": {
+      "mnemonic": "Think 'ante' (before in poker).",
+      "explanation": "Means 'before'."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "centro": {
+      "mnemonic": "Same as English 'center' — downtown!",
+      "explanation": "Also means 'center'. 'Centro' = downtown area."
+    },
+    "vivía": {
+      "mnemonic": "'Vivid-ee-a, I used to live.'",
+      "explanation": "Imperfect first person of 'vivir'."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "cuando": {
+      "mnemonic": "Think 'when-do' — when.",
+      "explanation": "Question form: ¿cuándo?"
+    },
+    "era": {
+      "mnemonic": "Think 'era' — in that era, I was...",
+      "explanation": "Imperfect of 'ser'."
+    },
+    "estudiante": {
+      "mnemonic": "Nearly identical to 'student' — easy cognate!",
+      "explanation": "Works for both male and female students."
+    },
+    "mucho": {
+      "mnemonic": "Think 'much-o' — much/a lot!",
+      "explanation": "Means 'much/a lot'. Fem: mucha."
+    },
+    "siempre": {
+      "mnemonic": "'Simple + always' — always.",
+      "explanation": "Means 'always'."
+    },
+    "comía": {
+      "mnemonic": "'Come-ee-a, I used to eat.'",
+      "explanation": "Imperfect first person of 'comer'."
+    },
+    "pan": {
+      "mnemonic": "Bread baked in a pan!",
+      "explanation": "Means 'bread'. Masculine noun."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "mañana": {
+      "mnemonic": "'Mañana, mañana' — putting off till tomorrow.",
+      "explanation": "Means 'tomorrow' or 'morning'."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    },
+    "música": {
+      "mnemonic": "Nearly identical to 'music' — cognate!",
+      "explanation": "Feminine noun."
+    },
+    "hablaba": {
+      "mnemonic": "'Used to hobble-aba along speaking.'",
+      "explanation": "Imperfect of 'hablar'. Ongoing past."
+    },
+    "español": {
+      "mnemonic": "'Espagne/Spain' + '-ol' — the Spanish language.",
+      "explanation": "Both the language and nationality."
+    },
+    "todos": {
+      "mnemonic": "Think 'total' — all/everyone.",
+      "explanation": "Fem: todas."
+    },
+    "los": {
+      "mnemonic": "'Los' = them (masculine plural).",
+      "explanation": "Direct object pronoun."
+    },
+    "días": {
+      "mnemonic": "Think 'diaries' — you write in your diary each day.",
+      "explanation": "Plural of 'día' (day)."
+    },
+    "temprano": {
+      "mnemonic": "'Temporary morning' — early!",
+      "explanation": "Means 'early'."
+    },
+    "las": {
+      "mnemonic": "'Las ladies' — them (feminine).",
+      "explanation": "Direct object pronoun."
+    },
+    "noches": {
+      "mnemonic": "Sounds like 'notches' — notch each night off.",
+      "explanation": "Plural of 'noche' (night)."
+    },
+    "tarde": {
+      "mnemonic": "Think 'tardy' — late!",
+      "explanation": "Means 'late' or 'afternoon'."
+    },
+    "tiempo": {
+      "mnemonic": "Think 'tempo' — time and rhythm.",
+      "explanation": "Means 'time' or 'weather'."
+    },
+    "hambre": {
+      "mnemonic": "Think 'hamburger' — so hungry for one!",
+      "explanation": "'Tener hambre' = to be hungry."
+    },
+    "sed": {
+      "mnemonic": "Think 'said I'm thirsty!'",
+      "explanation": "'Tener sed' = to be thirsty."
+    },
+    "ayer": {
+      "mnemonic": "'A year ago? No, just yesterday!'",
+      "explanation": "Means 'yesterday'."
+    },
+    "trabajo": {
+      "mnemonic": "Think 'travel to work'.",
+      "explanation": "Means 'work/job'. Also 'I work'."
+    },
+    "él": {
+      "mnemonic": "Like 'el' in 'elevator' — he goes up!",
+      "explanation": "Subject pronoun 'he'. Accent distinguishes from 'el' (the)."
+    },
+    "puerta": {
+      "mnemonic": "Think 'port/portal' — a door.",
+      "explanation": "Feminine noun meaning door/gate."
+    },
+    "comí": {
+      "mnemonic": "'Come eat, I did!' — I ate.",
+      "explanation": "Preterite first person of 'comer'."
+    },
+    "hablo": {
+      "mnemonic": "Think 'hobble along while speaking'.",
+      "explanation": "First person of 'hablar' (to speak)."
+    },
+    "lejos": {
+      "mnemonic": "Think 'legs' — you need legs to walk far away.",
+      "explanation": "'Lejos de' = far from."
+    },
+    "vivo": {
+      "mnemonic": "Think 'vivid life' — I live vividly!",
+      "explanation": "First person of 'vivir' (to live)."
+    },
+    "cerca": {
+      "mnemonic": "Think 'circa' — approximately near.",
+      "explanation": "'Cerca de' = near/close to."
+    }
+  }
 }

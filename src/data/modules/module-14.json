@@ -349,5 +349,95 @@
       }
     }
   ],
-  "grammarExplanation": "Indirect object pronouns tell TO WHOM or FOR WHOM an action is done:\n\n• me = to me\n• te = to you\n• le = to him/her/you (formal)\n• nos = to us\n• les = to them/you (plural)\n\nThey go BEFORE the verb:\n• 'Doy el libro a Ana' → 'Le doy el libro' (I give her the book)\n\n'A + person' can clarify who 'le/les' refers to:\n• 'Le doy el libro a Ana.'"
+  "grammarExplanation": "Indirect object pronouns tell TO WHOM or FOR WHOM an action is done:\n\n• me = to me\n• te = to you\n• le = to him/her/you (formal)\n• nos = to us\n• les = to them/you (plural)\n\nThey go BEFORE the verb:\n• 'Doy el libro a Ana' → 'Le doy el libro' (I give her the book)\n\n'A + person' can clarify who 'le/les' refers to:\n• 'Le doy el libro a Ana.'",
+  "vocabulary": {
+    "libro": {
+      "mnemonic": "Think 'library' — full of libros (books)!",
+      "explanation": "Means 'book'. Masculine noun."
+    },
+    "le": {
+      "mnemonic": "'Lend to him/her' — indirect pronoun.",
+      "explanation": "Indirect object: to him/her."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "carta": {
+      "mnemonic": "Think 'card/letter'.",
+      "explanation": "Means 'letter' or 'menu'."
+    },
+    "escribo": {
+      "mnemonic": "Think 'scribe' — I write.",
+      "explanation": "First person of 'escribir' (to write)."
+    },
+    "dinero": {
+      "mnemonic": "'Diner-o' — you need dinero at the diner.",
+      "explanation": "Means 'money'."
+    },
+    "tu": {
+      "mnemonic": "Sounds like 'to' — what belongs to you.",
+      "explanation": "Possessive 'your'. No accent (unlike 'tú' = you)."
+    },
+    "hermano": {
+      "mnemonic": "'Her man, oh!' — her brother.",
+      "explanation": "Means 'brother'. Fem: hermana."
+    },
+    "tiempo": {
+      "mnemonic": "Think 'tempo' — time and rhythm.",
+      "explanation": "Means 'time' or 'weather'."
+    },
+    "amiga": {
+      "mnemonic": "Feminine version of 'amigo' — your gal pal.",
+      "explanation": "Female friend. Note the -a ending."
+    },
+    "pan": {
+      "mnemonic": "Bread baked in a pan!",
+      "explanation": "Means 'bread'. Masculine noun."
+    },
+    "les": {
+      "mnemonic": "'Lend to them' — indirect pronoun.",
+      "explanation": "Indirect object: to them."
+    },
+    "ustedes": {
+      "mnemonic": "Think 'you-sted-es' — all of you!",
+      "explanation": "Formal/neutral 'you all' in Latin American Spanish."
+    },
+    "ayer": {
+      "mnemonic": "'A year ago? No, just yesterday!'",
+      "explanation": "Means 'yesterday'."
+    },
+    "hoy": {
+      "mnemonic": "'Hoy! today!' — an exclamation for today.",
+      "explanation": "Means 'today'."
+    },
+    "he": {
+      "mnemonic": "'He' is the 'have' helper verb.",
+      "explanation": "Auxiliary for present perfect."
+    },
+    "escrito": {
+      "mnemonic": "Think 'script' — written!",
+      "explanation": "Past participle of 'escribir'. Irregular."
+    },
+    "gusta": {
+      "mnemonic": "Think 'gusto' — 'with gusto, I like it!'",
+      "explanation": "'Me gusta' = it pleases me."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    },
+    "hablas": {
+      "mnemonic": "'Ha-blas' — you blast out words.",
+      "explanation": "Second person of 'hablar'."
+    },
+    "amigo": {
+      "mnemonic": "Already used in English — a friendly buddy.",
+      "explanation": "Male friend. 'Amiga' for female."
+    },
+    "hablo": {
+      "mnemonic": "Think 'hobble along while speaking'.",
+      "explanation": "First person of 'hablar' (to speak)."
+    }
+  }
 }

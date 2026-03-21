@@ -551,5 +551,95 @@
       }
     }
   ],
-  "grammarExplanation": "The verb 'gustar' works differently from English. It literally means 'to please,' so the thing you like is the SUBJECT:\n\n• Me gusta el café = Coffee pleases me (I like coffee)\n• Me gustan los libros = Books please me (I like books)\n\nUse 'gusta' with singular nouns or infinitives, 'gustan' with plural nouns.\n\nIndirect object pronouns: me, te, le, nos, les\n• 'A + name/pronoun' can clarify who: 'A Ana le gusta la música.'"
+  "grammarExplanation": "The verb 'gustar' works differently from English. It literally means 'to please,' so the thing you like is the SUBJECT:\n\n• Me gusta el café = Coffee pleases me (I like coffee)\n• Me gustan los libros = Books please me (I like books)\n\nUse 'gusta' with singular nouns or infinitives, 'gustan' with plural nouns.\n\nIndirect object pronouns: me, te, le, nos, les\n• 'A + name/pronoun' can clarify who: 'A Ana le gusta la música.'",
+  "vocabulary": {
+    "gusta": {
+      "mnemonic": "Think 'gusto' — 'with gusto, I like it!'",
+      "explanation": "'Me gusta' = it pleases me."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    },
+    "le": {
+      "mnemonic": "'Lend to him/her' — indirect pronoun.",
+      "explanation": "Indirect object: to him/her."
+    },
+    "les": {
+      "mnemonic": "'Lend to them' — indirect pronoun.",
+      "explanation": "Indirect object: to them."
+    },
+    "pan": {
+      "mnemonic": "Bread baked in a pan!",
+      "explanation": "Means 'bread'. Masculine noun."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "gustan": {
+      "mnemonic": "'Gustos' — plural things please me.",
+      "explanation": "'Me gustan' = I like them."
+    },
+    "los": {
+      "mnemonic": "'Los' = them (masculine plural).",
+      "explanation": "Direct object pronoun."
+    },
+    "las": {
+      "mnemonic": "'Las ladies' — them (feminine).",
+      "explanation": "Direct object pronoun."
+    },
+    "música": {
+      "mnemonic": "Nearly identical to 'music' — cognate!",
+      "explanation": "Feminine noun."
+    },
+    "estudiar": {
+      "mnemonic": "'Study-ar' — to study.",
+      "explanation": "Infinitive. -AR verb."
+    },
+    "trabajar": {
+      "mnemonic": "'Travel to work' — to work.",
+      "explanation": "Infinitive. -AR verb."
+    },
+    "español": {
+      "mnemonic": "'Espagne/Spain' + '-ol' — the Spanish language.",
+      "explanation": "Both the language and nationality."
+    },
+    "hablar": {
+      "mnemonic": "'Hobble-ar' — to speak.",
+      "explanation": "Infinitive. -AR verb."
+    },
+    "y": {
+      "mnemonic": "The letter 'Y' connects — like 'and' connects words.",
+      "explanation": "Pronounced like 'ee'. The simplest conjunction."
+    },
+    "pero": {
+      "mnemonic": "Think 'pair-o' — 'but' connects a pair of ideas.",
+      "explanation": "Conjunction meaning 'but'."
+    },
+    "quién": {
+      "mnemonic": "Sounds like 'key-en' — 'Who has the key?'",
+      "explanation": "Question word meaning 'who'."
+    },
+    "libro": {
+      "mnemonic": "Think 'library' — full of libros (books)!",
+      "explanation": "Means 'book'. Masculine noun."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "centro": {
+      "mnemonic": "Same as English 'center' — downtown!",
+      "explanation": "Also means 'center'. 'Centro' = downtown area."
+    },
+    "mañana": {
+      "mnemonic": "'Mañana, mañana' — putting off till tomorrow.",
+      "explanation": "Means 'tomorrow' or 'morning'."
+    }
+  }
 }

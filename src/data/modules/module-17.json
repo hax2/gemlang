@@ -316,5 +316,43 @@
       }
     }
   ],
-  "grammarExplanation": "Negative commands tell someone NOT TO DO something. ALL negative commands use the subjunctive form:\n\n• Tú: No + subjunctive → No hables (Don't speak)\n• Usted: No + subjunctive → No hable\n• Ustedes: No + subjunctive plural → No hablen\n\nWith pronouns, place them BEFORE the verb (not attached):\n• No lo compres (Don't buy it)\n• No me lo digas (Don't tell it to me)\n• No se lo des (Don't give it to him/her)"
+  "grammarExplanation": "Negative commands tell someone NOT TO DO something. ALL negative commands use the subjunctive form:\n\n• Tú: No + subjunctive → No hables (Don't speak)\n• Usted: No + subjunctive → No hable\n• Ustedes: No + subjunctive plural → No hablen\n\nWith pronouns, place them BEFORE the verb (not attached):\n• No lo compres (Don't buy it)\n• No me lo digas (Don't tell it to me)\n• No se lo des (Don't give it to him/her)",
+  "vocabulary": {
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "puerta": {
+      "mnemonic": "Think 'port/portal' — a door.",
+      "explanation": "Feminine noun meaning door/gate."
+    },
+    "lo": {
+      "mnemonic": "'Low him' — direct object him/it.",
+      "explanation": "Masculine direct object pronoun."
+    },
+    "se": {
+      "mnemonic": "Think 'self' — reflexive pronoun.",
+      "explanation": "Replaces le/les before lo/la/los/las."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "los": {
+      "mnemonic": "'Los' = them (masculine plural).",
+      "explanation": "Direct object pronoun."
+    },
+    "las": {
+      "mnemonic": "'Las ladies' — them (feminine).",
+      "explanation": "Direct object pronoun."
+    },
+    "tarde": {
+      "mnemonic": "Think 'tardy' — late!",
+      "explanation": "Means 'late' or 'afternoon'."
+    }
+  }
 }

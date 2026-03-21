@@ -303,5 +303,75 @@
       }
     }
   ],
-  "grammarExplanation": "When both an indirect AND direct object pronoun appear together, the indirect one comes FIRST:\n\n• le/les + lo/la/los/las → 'se' replaces le/les\n• 'Le doy el libro' + 'lo' → 'Se lo doy' (I give it to her)\n\nWith infinitives, pronouns can attach to the end:\n• 'Se lo quiero dar' or 'Quiero dárselo'\n\nOrder: se → te/me/nos → lo/la/los/las → verb."
+  "grammarExplanation": "When both an indirect AND direct object pronoun appear together, the indirect one comes FIRST:\n\n• le/les + lo/la/los/las → 'se' replaces le/les\n• 'Le doy el libro' + 'lo' → 'Se lo doy' (I give it to her)\n\nWith infinitives, pronouns can attach to the end:\n• 'Se lo quiero dar' or 'Quiero dárselo'\n\nOrder: se → te/me/nos → lo/la/los/las → verb.",
+  "vocabulary": {
+    "le": {
+      "mnemonic": "'Lend to him/her' — indirect pronoun.",
+      "explanation": "Indirect object: to him/her."
+    },
+    "libro": {
+      "mnemonic": "Think 'library' — full of libros (books)!",
+      "explanation": "Means 'book'. Masculine noun."
+    },
+    "se": {
+      "mnemonic": "Think 'self' — reflexive pronoun.",
+      "explanation": "Replaces le/les before lo/la/los/las."
+    },
+    "lo": {
+      "mnemonic": "'Low him' — direct object him/it.",
+      "explanation": "Masculine direct object pronoun."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "carta": {
+      "mnemonic": "Think 'card/letter'.",
+      "explanation": "Means 'letter' or 'menu'."
+    },
+    "les": {
+      "mnemonic": "'Lend to them' — indirect pronoun.",
+      "explanation": "Indirect object: to them."
+    },
+    "los": {
+      "mnemonic": "'Los' = them (masculine plural).",
+      "explanation": "Direct object pronoun."
+    },
+    "las": {
+      "mnemonic": "'Las ladies' — them (feminine).",
+      "explanation": "Direct object pronoun."
+    },
+    "ustedes": {
+      "mnemonic": "Think 'you-sted-es' — all of you!",
+      "explanation": "Formal/neutral 'you all' in Latin American Spanish."
+    },
+    "hoy": {
+      "mnemonic": "'Hoy! today!' — an exclamation for today.",
+      "explanation": "Means 'today'."
+    },
+    "ayer": {
+      "mnemonic": "'A year ago? No, just yesterday!'",
+      "explanation": "Means 'yesterday'."
+    },
+    "di": {
+      "mnemonic": "Think 'dictate' — Say/Tell!",
+      "explanation": "Irregular tú command of 'decir'."
+    },
+    "he": {
+      "mnemonic": "'He' is the 'have' helper verb.",
+      "explanation": "Auxiliary for present perfect."
+    },
+    "quiero": {
+      "mnemonic": "'I query what I want' — I want.",
+      "explanation": "First person of 'querer' (to want)."
+    },
+    "voy": {
+      "mnemonic": "Think 'voyage' — I go!",
+      "explanation": "First person of 'ir' (to go). Irregular."
+    },
+    "estamos": {
+      "mnemonic": "'We establish ourselves' — we are.",
+      "explanation": "First person plural of 'estar'."
+    }
+  }
 }

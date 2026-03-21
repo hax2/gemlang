@@ -169,6 +169,26 @@
   color: var(--text-main);
 }
 
+.vocab-mnemonic {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.mnemonic-text {
+  color: #fbbf24;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.explanation-text {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
 
 
 .audio-section {
@@ -284,6 +304,40 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.word-tooltip.has-mnemonic {
+  flex-direction: column;
+  align-items: flex-start;
+  white-space: normal;
+  min-width: 220px;
+  max-width: 320px;
+  padding: 0.6rem 0.9rem;
+  gap: 0.35rem;
+}
+
+.tooltip-meaning {
+  font-weight: 700;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.tooltip-mnemonic {
+  font-weight: 500;
+  font-size: 0.82rem;
+  color: #fbbf24;
+  line-height: 1.4;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 0.3rem;
+  width: 100%;
+}
+
+.tooltip-explanation {
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+  font-style: italic;
+  line-height: 1.4;
 }
 
 .word-tooltip::before {
@@ -754,5 +808,14 @@
   }
   .grammar-intro-body .grammar-bullet {
     font-size: 0.88rem;
+  }
+
+  .word-tooltip.has-mnemonic {
+    min-width: 180px;
+    max-width: 260px;
+  }
+
+  .vocab-mnemonic {
+    font-size: 0.82rem;
   }
 }

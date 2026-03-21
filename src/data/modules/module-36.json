@@ -87,5 +87,47 @@
         "diáfanas": "diaphanous/clear"
       }
     }
-  ]
+  ],
+  "vocabulary": {
+    "años": {
+      "mnemonic": "Think 'annual' → años = years.",
+      "explanation": "'Tener X años' = to be X years old."
+    },
+    "después": {
+      "mnemonic": "'Dispatch after' — afterwards.",
+      "explanation": "Means 'after/afterwards'."
+    },
+    "había": {
+      "mnemonic": "'Have-ee-a' — there was.",
+      "explanation": "Imperfect of 'haber'."
+    },
+    "tarde": {
+      "mnemonic": "Think 'tardy' — late!",
+      "explanation": "Means 'late' or 'afternoon'."
+    },
+    "lo": {
+      "mnemonic": "'Low him' — direct object him/it.",
+      "explanation": "Masculine direct object pronoun."
+    },
+    "hielo": {
+      "mnemonic": "'He-lo, it's icy!' — ice.",
+      "explanation": "Means 'ice'."
+    },
+    "era": {
+      "mnemonic": "Think 'era' — in that era, I was...",
+      "explanation": "Imperfect of 'ser'."
+    },
+    "y": {
+      "mnemonic": "The letter 'Y' connects — like 'and' connects words.",
+      "explanation": "Pronounced like 'ee'. The simplest conjunction."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "río": {
+      "mnemonic": "'Rio Grande' — río = river!",
+      "explanation": "Means 'river'."
+    }
+  }
 }

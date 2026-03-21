@@ -8,61 +8,143 @@
       "id": "m28-s1",
       "spanish": "Si yo fuera rico, viajaría por todo el mundo.",
       "english": "If I were rich, I would travel all over the world.",
-      "wordMeanings": { "fuera": "were (subjunctive)", "rico": "rich", "viajaría": "would travel", "mundo": "world" }
+      "wordMeanings": {
+        "fuera": "were (subjunctive)",
+        "rico": "rich",
+        "viajaría": "would travel",
+        "mundo": "world"
+      }
     },
     {
       "id": "m28-s2",
       "spanish": "Me gustaría que ellos vinieran a la fiesta.",
       "english": "I would like them to come to the party.",
-      "wordMeanings": { "gustaría": "would like", "vinieran": "came (subjunctive)", "fiesta": "party" }
+      "wordMeanings": {
+        "gustaría": "would like",
+        "vinieran": "came (subjunctive)",
+        "fiesta": "party"
+      }
     },
     {
       "id": "m28-s3",
       "spanish": "El profesor pidió que hiciéramos la tarea.",
       "english": "The teacher asked us to do the homework.",
-      "wordMeanings": { "profesor": "teacher", "pidió": "asked", "hiciéramos": "we did (subjunctive)", "tarea": "homework" }
+      "wordMeanings": {
+        "profesor": "teacher",
+        "pidió": "asked",
+        "hiciéramos": "we did (subjunctive)",
+        "tarea": "homework"
+      }
     },
     {
       "id": "m28-s4",
       "spanish": "Si tuviera más tiempo, aprendería otro idioma.",
       "english": "If I had more time, I would learn another language.",
-      "wordMeanings": { "tuviera": "had (subjunctive)", "tiempo": "time", "aprendería": "would learn", "idioma": "language" }
+      "wordMeanings": {
+        "tuviera": "had (subjunctive)",
+        "tiempo": "time",
+        "aprendería": "would learn",
+        "idioma": "language"
+      }
     },
     {
       "id": "m28-s5",
       "spanish": "Fue una lástima que no pudieras asistir a la boda.",
       "english": "It was a shame that you couldn't attend the wedding.",
-      "wordMeanings": { "lástima": "shame", "pudieras": "could (subjunctive)", "asistir": "attend", "boda": "wedding" }
+      "wordMeanings": {
+        "lástima": "shame",
+        "pudieras": "could (subjunctive)",
+        "asistir": "attend",
+        "boda": "wedding"
+      }
     },
     {
       "id": "m28-s6",
       "spanish": "Buscaba un coche que no costara tanto dinero.",
       "english": "I was looking for a car that didn't cost so much money.",
-      "wordMeanings": { "buscaba": "was looking for", "coche": "car", "costara": "cost (subjunctive)", "dinero": "money" }
+      "wordMeanings": {
+        "buscaba": "was looking for",
+        "coche": "car",
+        "costara": "cost (subjunctive)",
+        "dinero": "money"
+      }
     },
     {
       "id": "m28-s7",
       "spanish": "Si supieras la verdad, no estarías tan tranquilo.",
       "english": "If you knew the truth, you wouldn't be so calm.",
-      "wordMeanings": { "supieras": "knew (subjunctive)", "verdad": "truth", "tranquilo": "calm" }
+      "wordMeanings": {
+        "supieras": "knew (subjunctive)",
+        "verdad": "truth",
+        "tranquilo": "calm"
+      }
     },
     {
       "id": "m28-s8",
       "spanish": "Dudaba que ella hablara en serio sobre mudarse.",
       "english": "I doubted that she was serious about moving.",
-      "wordMeanings": { "dudaba": "doubted", "hablara": "spoke (subjunctive)", "serio": "serious", "mudarse": "moving" }
+      "wordMeanings": {
+        "dudaba": "doubted",
+        "hablara": "spoke (subjunctive)",
+        "serio": "serious",
+        "mudarse": "moving"
+      }
     },
     {
       "id": "m28-s9",
       "spanish": "Sugerí que saliéramos a caminar por el parque.",
       "english": "I suggested that we go out for a walk in the park.",
-      "wordMeanings": { "sugerí": "suggested", "saliéramos": "we left/went out (subjunctive)", "caminar": "walk", "parque": "park" }
+      "wordMeanings": {
+        "sugerí": "suggested",
+        "saliéramos": "we left/went out (subjunctive)",
+        "caminar": "walk",
+        "parque": "park"
+      }
     },
     {
       "id": "m28-s10",
       "spanish": "Ojalá lloviera café en el campo.",
       "english": "I wish it would rain coffee in the countryside.",
-      "wordMeanings": { "ojalá": "I wish/hope", "lloviera": "rained (subjunctive)", "café": "coffee", "campo": "countryside" }
+      "wordMeanings": {
+        "ojalá": "I wish/hope",
+        "lloviera": "rained (subjunctive)",
+        "café": "coffee",
+        "campo": "countryside"
+      }
     }
-  ]
+  ],
+  "vocabulary": {
+    "fuera": {
+      "mnemonic": "Think 'fury' — the fury is outside!",
+      "explanation": "'Fuera de' = outside of."
+    },
+    "mundo": {
+      "mnemonic": "Think 'mundane world'.",
+      "explanation": "Means 'world'."
+    },
+    "fiesta": {
+      "mnemonic": "Already English for party!",
+      "explanation": "Means 'party/celebration'."
+    },
+    "tiempo": {
+      "mnemonic": "Think 'tempo' — time and rhythm.",
+      "explanation": "Means 'time' or 'weather'."
+    },
+    "coche": {
+      "mnemonic": "Think 'coach' — a horse-drawn coach = car.",
+      "explanation": "Means 'car'. Mainly used in Spain."
+    },
+    "dinero": {
+      "mnemonic": "'Diner-o' — you need dinero at the diner.",
+      "explanation": "Means 'money'."
+    },
+    "parque": {
+      "mnemonic": "Almost 'park' with an 'e' — easy cognate!",
+      "explanation": "Masculine noun meaning park."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    }
+  }
 }

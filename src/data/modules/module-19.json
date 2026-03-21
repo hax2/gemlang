@@ -346,5 +346,75 @@
       }
     }
   ],
-  "grammarExplanation": "The subjunctive is also triggered by expressions of hope and emotion:\n\n'Espero que + subjunctive'\n\n• Espero que hables = I hope you speak\n• Espero que vengas = I hope you come\n• Espero que estés bien = I hope you're well\n\nOther triggers: 'Ojalá que' (I wish that), 'Me alegra que' (I'm glad that), 'Temo que' (I fear that).\n\nRemember: same subject → infinitive. Different subjects → subjunctive."
+  "grammarExplanation": "The subjunctive is also triggered by expressions of hope and emotion:\n\n'Espero que + subjunctive'\n\n• Espero que hables = I hope you speak\n• Espero que vengas = I hope you come\n• Espero que estés bien = I hope you're well\n\nOther triggers: 'Ojalá que' (I wish that), 'Me alegra que' (I'm glad that), 'Temo que' (I fear that).\n\nRemember: same subject → infinitive. Different subjects → subjunctive.",
+  "vocabulary": {
+    "espero": {
+      "mnemonic": "Think 'aspire and wait' — I wait/hope.",
+      "explanation": "First person of 'esperar'."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "hoy": {
+      "mnemonic": "'Hoy! today!' — an exclamation for today.",
+      "explanation": "Means 'today'."
+    },
+    "mañana": {
+      "mnemonic": "'Mañana, mañana' — putting off till tomorrow.",
+      "explanation": "Means 'tomorrow' or 'morning'."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "puerta": {
+      "mnemonic": "Think 'port/portal' — a door.",
+      "explanation": "Feminine noun meaning door/gate."
+    },
+    "ventana": {
+      "mnemonic": "'Vent-ana' — air vents in a window.",
+      "explanation": "From Latin 'ventus' (wind)."
+    },
+    "lo": {
+      "mnemonic": "'Low him' — direct object him/it.",
+      "explanation": "Masculine direct object pronoun."
+    },
+    "tiempo": {
+      "mnemonic": "Think 'tempo' — time and rhythm.",
+      "explanation": "Means 'time' or 'weather'."
+    },
+    "dinero": {
+      "mnemonic": "'Diner-o' — you need dinero at the diner.",
+      "explanation": "Means 'money'."
+    },
+    "feliz": {
+      "mnemonic": "Think 'felicity' — happy!",
+      "explanation": "Same for masc/fem."
+    },
+    "esperas": {
+      "mnemonic": "'You aspire' — you wait with hope.",
+      "explanation": "Second person of 'esperar'."
+    },
+    "temprano": {
+      "mnemonic": "'Temporary morning' — early!",
+      "explanation": "Means 'early'."
+    },
+    "tarde": {
+      "mnemonic": "Think 'tardy' — late!",
+      "explanation": "Means 'late' or 'afternoon'."
+    },
+    "pan": {
+      "mnemonic": "Bread baked in a pan!",
+      "explanation": "Means 'bread'. Masculine noun."
+    },
+    "los": {
+      "mnemonic": "'Los' = them (masculine plural).",
+      "explanation": "Direct object pronoun."
+    },
+    "las": {
+      "mnemonic": "'Las ladies' — them (feminine).",
+      "explanation": "Direct object pronoun."
+    }
+  }
 }

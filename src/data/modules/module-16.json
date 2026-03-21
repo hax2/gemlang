@@ -323,5 +323,67 @@
       }
     }
   ],
-  "grammarExplanation": "Affirmative commands tell someone TO DO something.\n\nInformal 'tú' commands (use the él/ella present form):\n• Habla (Speak), Come (Eat), Abre (Open)\n\nFormal 'usted' commands (use subjunctive):\n• Hable, Coma, Abra\n\nPlural 'ustedes' commands (subjunctive plural):\n• Hablen, Coman, Abran\n\nWith reflexive/object pronouns, ATTACH them to the end:\n• Siéntate (Sit down), Dime (Tell me), Dáselo (Give it to him/her)"
+  "grammarExplanation": "Affirmative commands tell someone TO DO something.\n\nInformal 'tú' commands (use the él/ella present form):\n• Habla (Speak), Come (Eat), Abre (Open)\n\nFormal 'usted' commands (use subjunctive):\n• Hable, Coma, Abra\n\nPlural 'ustedes' commands (subjunctive plural):\n• Hablen, Coman, Abran\n\nWith reflexive/object pronouns, ATTACH them to the end:\n• Siéntate (Sit down), Dime (Tell me), Dáselo (Give it to him/her)",
+  "vocabulary": {
+    "habla": {
+      "mnemonic": "'Ha-bla' — he/she speaks.",
+      "explanation": "Third person of 'hablar'."
+    },
+    "come": {
+      "mnemonic": "'Come eat!' — he/she eats.",
+      "explanation": "Third person of 'comer'."
+    },
+    "vive": {
+      "mnemonic": "Think 'viva!' — he/she lives.",
+      "explanation": "Third person of 'vivir'."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "espera": {
+      "mnemonic": "'Aspire-a' — he/she waits.",
+      "explanation": "Third person of 'esperar'."
+    },
+    "favor": {
+      "mnemonic": "Same as English 'favor' — do me a favor, please!",
+      "explanation": "'Por favor' literally means 'for favor'."
+    },
+    "vamos": {
+      "mnemonic": "'¡Vamos!' — Let's go! Already English.",
+      "explanation": "First person plural of 'ir'."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "comer": {
+      "mnemonic": "'Consume-er' — to eat.",
+      "explanation": "Infinitive. -ER verb."
+    },
+    "abre": {
+      "mnemonic": "'Abbreviate by opening' — he/she opens.",
+      "explanation": "Third person of 'abrir'."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "puerta": {
+      "mnemonic": "Think 'port/portal' — a door.",
+      "explanation": "Feminine noun meaning door/gate."
+    },
+    "mira": {
+      "mnemonic": "Think 'mirror-a' — he/she looks.",
+      "explanation": "Third person of 'mirar'. Also used as 'Look!'."
+    },
+    "escucha": {
+      "mnemonic": "'Sketch-a sound' — he/she listens.",
+      "explanation": "Third person of 'escuchar'."
+    },
+    "ven": {
+      "mnemonic": "'Venture here!' — Come!",
+      "explanation": "Irregular tú command of 'venir'."
+    }
+  }
 }

@@ -456,5 +456,167 @@
       }
     }
   ],
-  "grammarExplanation": "Regular -ER and -IR verbs follow similar patterns. Remove the ending and add:\n\n-ER verbs (comer):\n• -o, -es, -e, -emos, -en\n• como, comes, come, comemos, comen\n\n-IR verbs (vivir):\n• -o, -es, -e, -imos, -en\n• vivo, vives, vive, vivimos, viven\n\nNotice: -ER and -IR only differ in the 'nosotros' form (-emos vs -imos)."
+  "grammarExplanation": "Regular -ER and -IR verbs follow similar patterns. Remove the ending and add:\n\n-ER verbs (comer):\n• -o, -es, -e, -emos, -en\n• como, comes, come, comemos, comen\n\n-IR verbs (vivir):\n• -o, -es, -e, -imos, -en\n• vivo, vives, vive, vivimos, viven\n\nNotice: -ER and -IR only differ in the 'nosotros' form (-emos vs -imos).",
+  "vocabulary": {
+    "como": {
+      "mnemonic": "Think 'consume' — I eat.",
+      "explanation": "First person of 'comer' (to eat)."
+    },
+    "pan": {
+      "mnemonic": "Bread baked in a pan!",
+      "explanation": "Means 'bread'. Masculine noun."
+    },
+    "comes": {
+      "mnemonic": "'Comes to eat' — you eat.",
+      "explanation": "Second person of 'comer'."
+    },
+    "él": {
+      "mnemonic": "Like 'el' in 'elevator' — he goes up!",
+      "explanation": "Subject pronoun 'he'. Accent distinguishes from 'el' (the)."
+    },
+    "come": {
+      "mnemonic": "'Come eat!' — he/she eats.",
+      "explanation": "Third person of 'comer'."
+    },
+    "ella": {
+      "mnemonic": "Think 'Cinderella' ends with '-ella' — she!",
+      "explanation": "Subject pronoun 'she/her'."
+    },
+    "nosotros": {
+      "mnemonic": "'nos' (us) + 'otros' (others) = we.",
+      "explanation": "Literally 'us others'. Fun compound word."
+    },
+    "comemos": {
+      "mnemonic": "'Come-emos' — we eat together.",
+      "explanation": "First person plural of 'comer'."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "bebo": {
+      "mnemonic": "Think 'beverage' — I drink.",
+      "explanation": "First person of 'beber' (to drink)."
+    },
+    "agua": {
+      "mnemonic": "Think 'aqua' — water!",
+      "explanation": "Fem but uses 'el agua'."
+    },
+    "bebes": {
+      "mnemonic": "Think 'babies drink'.",
+      "explanation": "Second person of 'beber'."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    },
+    "bebe": {
+      "mnemonic": "'Babe drinks' — he/she drinks.",
+      "explanation": "Third person of 'beber'."
+    },
+    "bebemos": {
+      "mnemonic": "'Beverage-mos' — we drink.",
+      "explanation": "First person plural of 'beber'."
+    },
+    "vivo": {
+      "mnemonic": "Think 'vivid life' — I live vividly!",
+      "explanation": "First person of 'vivir' (to live)."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "vives": {
+      "mnemonic": "'Viva! you live!'",
+      "explanation": "Second person of 'vivir'."
+    },
+    "allí": {
+      "mnemonic": "Sounds like 'a lee' — over there.",
+      "explanation": "Means 'there'. Points to a specific spot."
+    },
+    "vive": {
+      "mnemonic": "Think 'viva!' — he/she lives.",
+      "explanation": "Third person of 'vivir'."
+    },
+    "centro": {
+      "mnemonic": "Same as English 'center' — downtown!",
+      "explanation": "Also means 'center'. 'Centro' = downtown area."
+    },
+    "cerca": {
+      "mnemonic": "Think 'circa' — approximately near.",
+      "explanation": "'Cerca de' = near/close to."
+    },
+    "vivimos": {
+      "mnemonic": "'Vivid-mos' — we live vividly.",
+      "explanation": "First person plural of 'vivir'."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "ciudad": {
+      "mnemonic": "Think 'city' — ciudad = city.",
+      "explanation": "Feminine noun."
+    },
+    "abro": {
+      "mnemonic": "Think 'abrogate/open' — I open.",
+      "explanation": "First person of 'abrir' (to open)."
+    },
+    "puerta": {
+      "mnemonic": "Think 'port/portal' — a door.",
+      "explanation": "Feminine noun meaning door/gate."
+    },
+    "libro": {
+      "mnemonic": "Think 'library' — full of libros (books)!",
+      "explanation": "Means 'book'. Masculine noun."
+    },
+    "abre": {
+      "mnemonic": "'Abbreviate by opening' — he/she opens.",
+      "explanation": "Third person of 'abrir'."
+    },
+    "ventana": {
+      "mnemonic": "'Vent-ana' — air vents in a window.",
+      "explanation": "From Latin 'ventus' (wind)."
+    },
+    "escribo": {
+      "mnemonic": "Think 'scribe' — I write.",
+      "explanation": "First person of 'escribir' (to write)."
+    },
+    "carta": {
+      "mnemonic": "Think 'card/letter'.",
+      "explanation": "Means 'letter' or 'menu'."
+    },
+    "escribe": {
+      "mnemonic": "'A scribe writes' — he/she writes.",
+      "explanation": "Third person of 'escribir'."
+    },
+    "español": {
+      "mnemonic": "'Espagne/Spain' + '-ol' — the Spanish language.",
+      "explanation": "Both the language and nationality."
+    },
+    "coche": {
+      "mnemonic": "Think 'coach' — a horse-drawn coach = car.",
+      "explanation": "Means 'car'. Mainly used in Spain."
+    },
+    "hoy": {
+      "mnemonic": "'Hoy! today!' — an exclamation for today.",
+      "explanation": "Means 'today'."
+    },
+    "y": {
+      "mnemonic": "The letter 'Y' connects — like 'and' connects words.",
+      "explanation": "Pronounced like 'ee'. The simplest conjunction."
+    },
+    "trabajo": {
+      "mnemonic": "Think 'travel to work'.",
+      "explanation": "Means 'work/job'. Also 'I work'."
+    },
+    "cada": {
+      "mnemonic": "Think 'cadence' — each beat.",
+      "explanation": "Means 'each/every'."
+    },
+    "día": {
+      "mnemonic": "Think 'diary' — each day.",
+      "explanation": "Masculine despite ending in -a."
+    }
+  }
 }

@@ -406,5 +406,95 @@
       }
     }
   ],
-  "grammarExplanation": "Direct object pronouns replace the noun receiving the action:\n\n• lo = it/him (masculine)\n• la = it/her (feminine)\n• los = them (masculine)\n• las = them (feminine)\n\nThey go BEFORE the conjugated verb:\n• 'Veo el libro' → 'Lo veo' (I see it)\n• 'Compro la sopa' → 'La compro' (I buy it)\n\nWith infinitives/gerunds, they can attach to the end:\n• 'Lo estoy leyendo' or 'Estoy leyéndolo'"
+  "grammarExplanation": "Direct object pronouns replace the noun receiving the action:\n\n• lo = it/him (masculine)\n• la = it/her (feminine)\n• los = them (masculine)\n• las = them (feminine)\n\nThey go BEFORE the conjugated verb:\n• 'Veo el libro' → 'Lo veo' (I see it)\n• 'Compro la sopa' → 'La compro' (I buy it)\n\nWith infinitives/gerunds, they can attach to the end:\n• 'Lo estoy leyendo' or 'Estoy leyéndolo'",
+  "vocabulary": {
+    "libro": {
+      "mnemonic": "Think 'library' — full of libros (books)!",
+      "explanation": "Means 'book'. Masculine noun."
+    },
+    "lo": {
+      "mnemonic": "'Low him' — direct object him/it.",
+      "explanation": "Masculine direct object pronoun."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "compro": {
+      "mnemonic": "'Compare-o' — I compare before I buy.",
+      "explanation": "First person of 'comprar' (to buy)."
+    },
+    "pan": {
+      "mnemonic": "Bread baked in a pan!",
+      "explanation": "Means 'bread'. Masculine noun."
+    },
+    "tienes": {
+      "mnemonic": "'Tea-en-es' — you have tea.",
+      "explanation": "Informal 'you have'. From 'tener'."
+    },
+    "carta": {
+      "mnemonic": "Think 'card/letter'.",
+      "explanation": "Means 'letter' or 'menu'."
+    },
+    "busco": {
+      "mnemonic": "'Bus-go' — I go looking for it.",
+      "explanation": "First person of 'buscar' (to look for)."
+    },
+    "los": {
+      "mnemonic": "'Los' = them (masculine plural).",
+      "explanation": "Direct object pronoun."
+    },
+    "las": {
+      "mnemonic": "'Las ladies' — them (feminine).",
+      "explanation": "Direct object pronoun."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    },
+    "mesa": {
+      "mnemonic": "A 'mesa' (flat-topped hill) — flat like a table.",
+      "explanation": "Means 'table'. Feminine noun."
+    },
+    "coche": {
+      "mnemonic": "Think 'coach' — a horse-drawn coach = car.",
+      "explanation": "Means 'car'. Mainly used in Spain."
+    },
+    "ayer": {
+      "mnemonic": "'A year ago? No, just yesterday!'",
+      "explanation": "Means 'yesterday'."
+    },
+    "puerta": {
+      "mnemonic": "Think 'port/portal' — a door.",
+      "explanation": "Feminine noun meaning door/gate."
+    },
+    "estoy": {
+      "mnemonic": "'I estoy here!' — I am (located/feeling).",
+      "explanation": "First person of 'estar'. For location and feelings."
+    },
+    "dónde": {
+      "mnemonic": "Think 'done-day' — where?",
+      "explanation": "Question word for location."
+    },
+    "está": {
+      "mnemonic": "Think 'establish' where something is.",
+      "explanation": "Third person of 'estar' (to be, location/state)."
+    },
+    "quiero": {
+      "mnemonic": "'I query what I want' — I want.",
+      "explanation": "First person of 'querer' (to want)."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "tengo": {
+      "mnemonic": "Think 'tango' — I have a tango partner!",
+      "explanation": "First person of 'tener' (to have). Irregular."
+    }
+  }
 }

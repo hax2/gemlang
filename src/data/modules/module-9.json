@@ -446,5 +446,135 @@
       }
     }
   ],
-  "grammarExplanation": "The near future is formed with 'ir + a + infinitive.' It translates to 'going to do something.'\n\nConjugate 'ir' (to go):\n• Voy = I go\n• Vas = You go\n• Va = He/She goes\n• Vamos = We go\n• Van = They go\n\nThen add 'a + infinitive':\n• Voy a estudiar = I'm going to study\n• Vas a comer = You're going to eat"
+  "grammarExplanation": "The near future is formed with 'ir + a + infinitive.' It translates to 'going to do something.'\n\nConjugate 'ir' (to go):\n• Voy = I go\n• Vas = You go\n• Va = He/She goes\n• Vamos = We go\n• Van = They go\n\nThen add 'a + infinitive':\n• Voy a estudiar = I'm going to study\n• Vas a comer = You're going to eat",
+  "vocabulary": {
+    "voy": {
+      "mnemonic": "Think 'voyage' — I go!",
+      "explanation": "First person of 'ir' (to go). Irregular."
+    },
+    "estudiar": {
+      "mnemonic": "'Study-ar' — to study.",
+      "explanation": "Infinitive. -AR verb."
+    },
+    "hoy": {
+      "mnemonic": "'Hoy! today!' — an exclamation for today.",
+      "explanation": "Means 'today'."
+    },
+    "vas": {
+      "mnemonic": "'Vast journey' — you go.",
+      "explanation": "Second person of 'ir'."
+    },
+    "trabajar": {
+      "mnemonic": "'Travel to work' — to work.",
+      "explanation": "Infinitive. -AR verb."
+    },
+    "va": {
+      "mnemonic": "'Va-room!' — he/she goes fast!",
+      "explanation": "Third person of 'ir'."
+    },
+    "comprar": {
+      "mnemonic": "'Compare & purchase' — to buy.",
+      "explanation": "Infinitive. -AR verb."
+    },
+    "pan": {
+      "mnemonic": "Bread baked in a pan!",
+      "explanation": "Means 'bread'. Masculine noun."
+    },
+    "vamos": {
+      "mnemonic": "'¡Vamos!' — Let's go! Already English.",
+      "explanation": "First person plural of 'ir'."
+    },
+    "comer": {
+      "mnemonic": "'Consume-er' — to eat.",
+      "explanation": "Infinitive. -ER verb."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "van": {
+      "mnemonic": "Think 'van' — they go in a van.",
+      "explanation": "Third person plural of 'ir'."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    },
+    "mañana": {
+      "mnemonic": "'Mañana, mañana' — putting off till tomorrow.",
+      "explanation": "Means 'tomorrow' or 'morning'."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "escuela": {
+      "mnemonic": "Sounds like 'school-a' — it IS school!",
+      "explanation": "Feminine noun meaning school."
+    },
+    "trabajo": {
+      "mnemonic": "Think 'travel to work'.",
+      "explanation": "Means 'work/job'. Also 'I work'."
+    },
+    "centro": {
+      "mnemonic": "Same as English 'center' — downtown!",
+      "explanation": "Also means 'center'. 'Centro' = downtown area."
+    },
+    "dónde": {
+      "mnemonic": "Think 'done-day' — where?",
+      "explanation": "Question word for location."
+    },
+    "libro": {
+      "mnemonic": "Think 'library' — full of libros (books)!",
+      "explanation": "Means 'book'. Masculine noun."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "música": {
+      "mnemonic": "Nearly identical to 'music' — cognate!",
+      "explanation": "Feminine noun."
+    },
+    "hablar": {
+      "mnemonic": "'Hobble-ar' — to speak.",
+      "explanation": "Infinitive. -AR verb."
+    },
+    "español": {
+      "mnemonic": "'Espagne/Spain' + '-ol' — the Spanish language.",
+      "explanation": "Both the language and nationality."
+    },
+    "puerta": {
+      "mnemonic": "Think 'port/portal' — a door.",
+      "explanation": "Feminine noun meaning door/gate."
+    },
+    "carta": {
+      "mnemonic": "Think 'card/letter'.",
+      "explanation": "Means 'letter' or 'menu'."
+    },
+    "coche": {
+      "mnemonic": "Think 'coach' — a horse-drawn coach = car.",
+      "explanation": "Means 'car'. Mainly used in Spain."
+    },
+    "y": {
+      "mnemonic": "The letter 'Y' connects — like 'and' connects words.",
+      "explanation": "Pronounced like 'ee'. The simplest conjunction."
+    },
+    "después": {
+      "mnemonic": "'Dispatch after' — afterwards.",
+      "explanation": "Means 'after/afterwards'."
+    },
+    "gusta": {
+      "mnemonic": "Think 'gusto' — 'with gusto, I like it!'",
+      "explanation": "'Me gusta' = it pleases me."
+    },
+    "pero": {
+      "mnemonic": "Think 'pair-o' — 'but' connects a pair of ideas.",
+      "explanation": "Conjunction meaning 'but'."
+    },
+    "estudio": {
+      "mnemonic": "Think 'studio' — I study in my studio.",
+      "explanation": "First person of 'estudiar'."
+    }
+  }
 }

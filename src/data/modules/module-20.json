@@ -364,5 +364,75 @@
       }
     }
   ],
-  "grammarExplanation": "Impersonal expressions of judgment or importance also trigger the subjunctive:\n\n'Es importante que + subjunctive'\n'Es necesario que + subjunctive'\n\n• Es importante que estudies = It's important that you study\n• Es importante que seas paciente = It's important that you be patient\n\nOther triggers: 'Es bueno que', 'Es malo que', 'Es mejor que', 'Es necesario que.'"
+  "grammarExplanation": "Impersonal expressions of judgment or importance also trigger the subjunctive:\n\n'Es importante que + subjunctive'\n'Es necesario que + subjunctive'\n\n• Es importante que estudies = It's important that you study\n• Es importante que seas paciente = It's important that you be patient\n\nOther triggers: 'Es bueno que', 'Es malo que', 'Es mejor que', 'Es necesario que.'",
+  "vocabulary": {
+    "es": {
+      "mnemonic": "Sounds like letter 'S' — 'He/She is S-uper.'",
+      "explanation": "Third person singular of 'ser'."
+    },
+    "importante": {
+      "mnemonic": "Nearly identical to 'important' — cognate!",
+      "explanation": "Same for masc/fem."
+    },
+    "agua": {
+      "mnemonic": "Think 'aqua' — water!",
+      "explanation": "Fem but uses 'el agua'."
+    },
+    "temprano": {
+      "mnemonic": "'Temporary morning' — early!",
+      "explanation": "Means 'early'."
+    },
+    "tarde": {
+      "mnemonic": "Think 'tardy' — late!",
+      "explanation": "Means 'late' or 'afternoon'."
+    },
+    "mañana": {
+      "mnemonic": "'Mañana, mañana' — putting off till tomorrow.",
+      "explanation": "Means 'tomorrow' or 'morning'."
+    },
+    "hoy": {
+      "mnemonic": "'Hoy! today!' — an exclamation for today.",
+      "explanation": "Means 'today'."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "puerta": {
+      "mnemonic": "Think 'port/portal' — a door.",
+      "explanation": "Feminine noun meaning door/gate."
+    },
+    "ventana": {
+      "mnemonic": "'Vent-ana' — air vents in a window.",
+      "explanation": "From Latin 'ventus' (wind)."
+    },
+    "lo": {
+      "mnemonic": "'Low him' — direct object him/it.",
+      "explanation": "Masculine direct object pronoun."
+    },
+    "se": {
+      "mnemonic": "Think 'self' — reflexive pronoun.",
+      "explanation": "Replaces le/les before lo/la/los/las."
+    },
+    "tiempo": {
+      "mnemonic": "Think 'tempo' — time and rhythm.",
+      "explanation": "Means 'time' or 'weather'."
+    },
+    "dinero": {
+      "mnemonic": "'Diner-o' — you need dinero at the diner.",
+      "explanation": "Means 'money'."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "los": {
+      "mnemonic": "'Los' = them (masculine plural).",
+      "explanation": "Direct object pronoun."
+    },
+    "las": {
+      "mnemonic": "'Las ladies' — them (feminine).",
+      "explanation": "Direct object pronoun."
+    }
+  }
 }

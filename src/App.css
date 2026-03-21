@@ -24,6 +24,26 @@
   letter-spacing: -0.5px;
 }
 
+.btn-settings {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.btn-settings:hover {
+  background: rgba(168, 85, 247, 0.12);
+  border-color: var(--accent-base);
+  color: var(--accent-glow);
+  transform: rotate(45deg);
+}
+
 .main-content {
   flex: 1;
   display: flex;

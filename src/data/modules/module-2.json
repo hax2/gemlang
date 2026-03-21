@@ -527,5 +527,95 @@
       }
     }
   ],
-  "grammarExplanation": "In Spanish, 'estar' is used to express locations and states. Unlike 'ser' (characteristics/identity), 'estar' tells WHERE someone is or HOW they feel right now.\n\n• Estoy = I am (location/state)\n• Estás = You are\n• Está = He/She is\n• Estamos = We are\n• Están = They are\n\nExample: 'Estoy en casa' = I am at home, 'Estoy feliz' = I am happy.\n\nYou'll naturally figure out the difference between 'ser' and 'estar' over time as you pay attention to it!"
+  "grammarExplanation": "In Spanish, 'estar' is used to express locations and states. Unlike 'ser' (characteristics/identity), 'estar' tells WHERE someone is or HOW they feel right now.\n\n• Estoy = I am (location/state)\n• Estás = You are\n• Está = He/She is\n• Estamos = We are\n• Están = They are\n\nExample: 'Estoy en casa' = I am at home, 'Estoy feliz' = I am happy.\n\nYou'll naturally figure out the difference between 'ser' and 'estar' over time as you pay attention to it!",
+  "vocabulary": {
+    "dónde": {
+      "mnemonic": "Think 'done-day' — where?",
+      "explanation": "Question word for location."
+    },
+    "estás": {
+      "mnemonic": "Think 'you establish your position'.",
+      "explanation": "Informal 'you are' (estar)."
+    },
+    "estoy": {
+      "mnemonic": "'I estoy here!' — I am (located/feeling).",
+      "explanation": "First person of 'estar'. For location and feelings."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "allí": {
+      "mnemonic": "Sounds like 'a lee' — over there.",
+      "explanation": "Means 'there'. Points to a specific spot."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "escuela": {
+      "mnemonic": "Sounds like 'school-a' — it IS school!",
+      "explanation": "Feminine noun meaning school."
+    },
+    "trabajo": {
+      "mnemonic": "Think 'travel to work'.",
+      "explanation": "Means 'work/job'. Also 'I work'."
+    },
+    "centro": {
+      "mnemonic": "Same as English 'center' — downtown!",
+      "explanation": "Also means 'center'. 'Centro' = downtown area."
+    },
+    "calle": {
+      "mnemonic": "Think 'call-ay' — you call from down the street.",
+      "explanation": "Feminine noun meaning street."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    },
+    "está": {
+      "mnemonic": "Think 'establish' where something is.",
+      "explanation": "Third person of 'estar' (to be, location/state)."
+    },
+    "hoy": {
+      "mnemonic": "'Hoy! today!' — an exclamation for today.",
+      "explanation": "Means 'today'."
+    },
+    "cerca": {
+      "mnemonic": "Think 'circa' — approximately near.",
+      "explanation": "'Cerca de' = near/close to."
+    },
+    "lejos": {
+      "mnemonic": "Think 'legs' — you need legs to walk far away.",
+      "explanation": "'Lejos de' = far from."
+    },
+    "somos": {
+      "mnemonic": "'So most awesome' — we are!",
+      "explanation": "First person plural of 'ser'."
+    },
+    "y": {
+      "mnemonic": "The letter 'Y' connects — like 'and' connects words.",
+      "explanation": "Pronounced like 'ee'. The simplest conjunction."
+    },
+    "estamos": {
+      "mnemonic": "'We establish ourselves' — we are.",
+      "explanation": "First person plural of 'estar'."
+    },
+    "soy": {
+      "mnemonic": "Think 'soy sauce' — silly but memorable 'I am'!",
+      "explanation": "First person of 'ser' (to be, permanent)."
+    },
+    "están": {
+      "mnemonic": "'They establish their locations.'",
+      "explanation": "Third person plural of 'estar'."
+    },
+    "ustedes": {
+      "mnemonic": "Think 'you-sted-es' — all of you!",
+      "explanation": "Formal/neutral 'you all' in Latin American Spanish."
+    }
+  }
 }

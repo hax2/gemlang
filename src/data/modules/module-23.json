@@ -342,5 +342,63 @@
       }
     }
   ],
-  "grammarExplanation": "'Acabar de + infinitive' expresses what you have JUST done.\n\nConjugate 'acabar' in the present:\n• Acabo de = I just...\n• Acabas de = You just...\n• Acaba de = He/She just...\n• Acabamos de = We just...\n\n• Acabo de llegar = I just arrived\n• Acabo de comer = I just ate\n\nObject pronouns can go before 'acabar' or attached to the infinitive:\n• 'Lo acabo de comprar' or 'Acabo de comprarlo'"
+  "grammarExplanation": "'Acabar de + infinitive' expresses what you have JUST done.\n\nConjugate 'acabar' in the present:\n• Acabo de = I just...\n• Acabas de = You just...\n• Acaba de = He/She just...\n• Acabamos de = We just...\n\n• Acabo de llegar = I just arrived\n• Acabo de comer = I just ate\n\nObject pronouns can go before 'acabar' or attached to the infinitive:\n• 'Lo acabo de comprar' or 'Acabo de comprarlo'",
+  "vocabulary": {
+    "acabo": {
+      "mnemonic": "'A cab, oh!' — I just finished.",
+      "explanation": "'Acabo de + inf' = I have just..."
+    },
+    "acabamos": {
+      "mnemonic": "'A cab-amos' — we just finished.",
+      "explanation": "'Acabamos de + inf' = we have just..."
+    },
+    "comer": {
+      "mnemonic": "'Consume-er' — to eat.",
+      "explanation": "Infinitive. -ER verb."
+    },
+    "agua": {
+      "mnemonic": "Think 'aqua' — water!",
+      "explanation": "Fem but uses 'el agua'."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "puerta": {
+      "mnemonic": "Think 'port/portal' — a door.",
+      "explanation": "Feminine noun meaning door/gate."
+    },
+    "ventana": {
+      "mnemonic": "'Vent-ana' — air vents in a window.",
+      "explanation": "From Latin 'ventus' (wind)."
+    },
+    "comprar": {
+      "mnemonic": "'Compare & purchase' — to buy.",
+      "explanation": "Infinitive. -AR verb."
+    },
+    "pan": {
+      "mnemonic": "Bread baked in a pan!",
+      "explanation": "Means 'bread'. Masculine noun."
+    },
+    "libro": {
+      "mnemonic": "Think 'library' — full of libros (books)!",
+      "explanation": "Means 'book'. Masculine noun."
+    },
+    "lo": {
+      "mnemonic": "'Low him' — direct object him/it.",
+      "explanation": "Masculine direct object pronoun."
+    },
+    "carta": {
+      "mnemonic": "Think 'card/letter'.",
+      "explanation": "Means 'letter' or 'menu'."
+    },
+    "se": {
+      "mnemonic": "Think 'self' — reflexive pronoun.",
+      "explanation": "Replaces le/les before lo/la/los/las."
+    },
+    "hablar": {
+      "mnemonic": "'Hobble-ar' — to speak.",
+      "explanation": "Infinitive. -AR verb."
+    }
+  }
 }

@@ -439,5 +439,127 @@
       }
     }
   ],
-  "grammarExplanation": "The preterite tense describes completed actions in the past.\n\nRegular -AR endings: -é, -aste, -ó, -amos, -aron\n• hablé, hablaste, habló, hablamos, hablaron\n\nRegular -ER/-IR endings: -í, -iste, -ió, -imos, -ieron\n• comí, comiste, comió, comimos, comieron\n\nIrregular: ir/ser → fui, fuiste, fue, fuimos, fueron\ntener → tuve, tuviste, tuvo, tuvimos, tuvieron"
+  "grammarExplanation": "The preterite tense describes completed actions in the past.\n\nRegular -AR endings: -é, -aste, -ó, -amos, -aron\n• hablé, hablaste, habló, hablamos, hablaron\n\nRegular -ER/-IR endings: -í, -iste, -ió, -imos, -ieron\n• comí, comiste, comió, comimos, comieron\n\nIrregular: ir/ser → fui, fuiste, fue, fuimos, fueron\ntener → tuve, tuviste, tuvo, tuvimos, tuvieron",
+  "vocabulary": {
+    "ayer": {
+      "mnemonic": "'A year ago? No, just yesterday!'",
+      "explanation": "Means 'yesterday'."
+    },
+    "hablé": {
+      "mnemonic": "'I hobbled and spoke' — I spoke.",
+      "explanation": "Preterite first person of 'hablar'."
+    },
+    "español": {
+      "mnemonic": "'Espagne/Spain' + '-ol' — the Spanish language.",
+      "explanation": "Both the language and nationality."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    },
+    "pan": {
+      "mnemonic": "Bread baked in a pan!",
+      "explanation": "Means 'bread'. Masculine noun."
+    },
+    "libro": {
+      "mnemonic": "Think 'library' — full of libros (books)!",
+      "explanation": "Means 'book'. Masculine noun."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "calle": {
+      "mnemonic": "Think 'call-ay' — you call from down the street.",
+      "explanation": "Feminine noun meaning street."
+    },
+    "música": {
+      "mnemonic": "Nearly identical to 'music' — cognate!",
+      "explanation": "Feminine noun."
+    },
+    "foto": {
+      "mnemonic": "Same as English 'photo'!",
+      "explanation": "Short for 'fotografía'. Feminine."
+    },
+    "anoche": {
+      "mnemonic": "'A + noche' = last night.",
+      "explanation": "Means 'last night'."
+    },
+    "comí": {
+      "mnemonic": "'Come eat, I did!' — I ate.",
+      "explanation": "Preterite first person of 'comer'."
+    },
+    "viví": {
+      "mnemonic": "'Vivid life I lived.'",
+      "explanation": "Preterite first person of 'vivir'."
+    },
+    "centro": {
+      "mnemonic": "Same as English 'center' — downtown!",
+      "explanation": "Also means 'center'. 'Centro' = downtown area."
+    },
+    "puerta": {
+      "mnemonic": "Think 'port/portal' — a door.",
+      "explanation": "Feminine noun meaning door/gate."
+    },
+    "carta": {
+      "mnemonic": "Think 'card/letter'.",
+      "explanation": "Means 'letter' or 'menu'."
+    },
+    "escuela": {
+      "mnemonic": "Sounds like 'school-a' — it IS school!",
+      "explanation": "Feminine noun meaning school."
+    },
+    "trabajo": {
+      "mnemonic": "Think 'travel to work'.",
+      "explanation": "Means 'work/job'. Also 'I work'."
+    },
+    "tiempo": {
+      "mnemonic": "Think 'tempo' — time and rhythm.",
+      "explanation": "Means 'time' or 'weather'."
+    },
+    "problema": {
+      "mnemonic": "Nearly identical to 'problem' — cognate!",
+      "explanation": "Masculine despite -a ending!"
+    },
+    "hambre": {
+      "mnemonic": "Think 'hamburger' — so hungry for one!",
+      "explanation": "'Tener hambre' = to be hungry."
+    },
+    "sed": {
+      "mnemonic": "Think 'said I'm thirsty!'",
+      "explanation": "'Tener sed' = to be thirsty."
+    },
+    "temprano": {
+      "mnemonic": "'Temporary morning' — early!",
+      "explanation": "Means 'early'."
+    },
+    "tarde": {
+      "mnemonic": "Think 'tardy' — late!",
+      "explanation": "Means 'late' or 'afternoon'."
+    },
+    "coche": {
+      "mnemonic": "Think 'coach' — a horse-drawn coach = car.",
+      "explanation": "Means 'car'. Mainly used in Spain."
+    },
+    "hablamos": {
+      "mnemonic": "'Hobble-amos' — we talk.",
+      "explanation": "First person plural of 'hablar'."
+    },
+    "y": {
+      "mnemonic": "The letter 'Y' connects — like 'and' connects words.",
+      "explanation": "Pronounced like 'ee'. The simplest conjunction."
+    },
+    "después": {
+      "mnemonic": "'Dispatch after' — afterwards.",
+      "explanation": "Means 'after/afterwards'."
+    },
+    "lo": {
+      "mnemonic": "'Low him' — direct object him/it.",
+      "explanation": "Masculine direct object pronoun."
+    }
+  }
 }

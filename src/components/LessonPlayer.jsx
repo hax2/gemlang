@@ -4,14 +4,23 @@ import './LessonPlayer.css';
 /* helpers */
 const cleanWord = (w) => w.replace(/[.,¿?¡!]/g, '');
 
-/** Collect every unique word->meaning pair from all sentences in a module */
-const buildVocabTable = (sentences) => {
+/** Collect every unique word->meaning pair from all sentences in a module,
+ *  and merge in any mnemonic / explanation from the module-level vocabulary. */
+const buildVocabTable = (sentences, vocabulary = {}) => {
   const map = new Map();
   sentences.forEach((s) => {
     const meanings = s.wordMeanings || {};
     Object.entries(meanings).forEach(([word, meaning]) => {
       const key = word.toLowerCase();
-      if (!map.has(key)) map.set(key, { word, meaning });
+      if (!map.has(key)) {
+        const vocabEntry = vocabulary[key] || {};
+        map.set(key, {
+          word,
+          meaning,
+          mnemonic: vocabEntry.mnemonic || null,
+          explanation: vocabEntry.explanation || null,
+        });
+      }
     });
   });
   return Array.from(map.values());
@@ -28,12 +37,10 @@ const seededRandom = (seed) => {
 
 /**
  * Build a merged list of regular sentence items + translation-challenge items.
- * A challenge is inserted after every CHALLENGE_INTERVAL sentences.
+ * A challenge is inserted after every `interval` sentences.
  * Each challenge picks one sentence from the preceding batch.
  */
-const CHALLENGE_INTERVAL = 5;
-
-const buildMergedItems = (sentences, moduleId) => {
+const buildMergedItems = (sentences, moduleId, interval) => {
   const items = [];
   let sentenceCount = 0;
 
@@ -41,10 +48,10 @@ const buildMergedItems = (sentences, moduleId) => {
     items.push({ type: 'sentence', data: sentences[i], originalIndex: i });
     sentenceCount++;
 
-    if (sentenceCount === CHALLENGE_INTERVAL && i < sentences.length - 1) {
-      const batchStart = i - (CHALLENGE_INTERVAL - 1);
+    if (interval > 0 && sentenceCount === interval && i < sentences.length - 1) {
+      const batchStart = i - (interval - 1);
       const seed = `${moduleId}-challenge-${items.length}`;
-      const pick = seededRandom(seed) % CHALLENGE_INTERVAL;
+      const pick = seededRandom(seed) % interval;
       const chosenSentence = sentences[batchStart + pick];
 
       items.push({
@@ -69,12 +76,12 @@ const buildTestingItems = (sentences) =>
   }));
 
 /** Speak a Spanish word/phrase */
-const speakSpanish = (text) => {
+const speakSpanish = (text, rate = 0.85) => {
   if (!text) return;
   window.speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
   u.lang = 'es-ES';
-  u.rate = 0.85;
+  u.rate = rate;
   window.speechSynthesis.speak(u);
 };
 
@@ -83,9 +90,9 @@ const KbdHint = ({ show, children }) => {
   return <kbd className="kbd-hint">{children}</kbd>;
 };
 
-const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNextModule }) => {
+const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, settings, onBack, onNextModule }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [spanishRevealed, setSpanishRevealed] = useState(false);
+  const [spanishRevealed, setSpanishRevealed] = useState(() => !!settings?.autoRevealSpanish);
   const [englishRevealed, setEnglishRevealed] = useState(false);
   const [activeWordIndex, setActiveWordIndex] = useState(null);
   const [challengeAnswerRevealed, setChallengeAnswerRevealed] = useState(false);
@@ -98,11 +105,11 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
   const isPureTestingMode = practiceMode === 'testing';
 
   const resetRevealState = useCallback(() => {
-    setSpanishRevealed(false);
+    setSpanishRevealed(!!settings?.autoRevealSpanish);
     setEnglishRevealed(false);
     setActiveWordIndex(null);
     setChallengeAnswerRevealed(false);
-  }, []);
+  }, [settings?.autoRevealSpanish]);
 
   useEffect(() => {
     const checkDesktop = () => {
@@ -114,13 +121,15 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
     return () => window.removeEventListener('resize', checkDesktop);
   }, []);
 
+  const challengeInterval = settings?.challengeInterval ?? 5;
+
   const mergedItems = useMemo(() => {
     if (isPureTestingMode) {
       return buildTestingItems(module.sentences);
     }
-    const base = buildMergedItems(module.sentences, module.id);
+    const base = buildMergedItems(module.sentences, module.id, challengeInterval);
     return [...base, ...extraItems];
-  }, [module, extraItems, isPureTestingMode]);
+  }, [module, extraItems, isPureTestingMode, challengeInterval]);
 
   const currentItem = mergedItems[currentIndex];
   const currentOriginalIndex = currentItem?.originalIndex;
@@ -128,7 +137,8 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
   const sentence = isChallenge ? null : currentItem?.data;
   const isFinished = currentIndex >= mergedItems.length;
   const hasNextModule = moduleIndex < modules.length - 1;
-  const vocabTable = isFinished ? buildVocabTable(module.sentences) : [];
+  const vocabulary = module.vocabulary || {};
+  const vocabTable = isFinished ? buildVocabTable(module.sentences, vocabulary) : [];
 
   const totalSentences = module.sentences.length;
   const progressItemsSoFar = isFinished
@@ -138,17 +148,22 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
       return item.type === 'sentence';
     }).length;
 
+  const speechRate = settings?.speechRate ?? 0.85;
+  const autoPlay = settings?.autoPlayAudio ?? true;
+
   useEffect(() => {
-    if (!showGrammarIntro && !isChallenge && sentence?.spanish) speakSpanish(sentence.spanish);
-  }, [isChallenge, sentence, showGrammarIntro]);
+    if (autoPlay && !showGrammarIntro && !isChallenge && sentence?.spanish) {
+      speakSpanish(sentence.spanish, speechRate);
+    }
+  }, [autoPlay, isChallenge, sentence, showGrammarIntro, speechRate]);
 
   const playAudio = useCallback(() => {
     if (isChallenge) {
-      if (currentItem?.data?.spanish) speakSpanish(currentItem.data.spanish);
+      if (currentItem?.data?.spanish) speakSpanish(currentItem.data.spanish, speechRate);
       return;
     }
-    if (sentence?.spanish) speakSpanish(sentence.spanish);
-  }, [currentItem, isChallenge, sentence]);
+    if (sentence?.spanish) speakSpanish(sentence.spanish, speechRate);
+  }, [currentItem, isChallenge, sentence, speechRate]);
 
   const handleNext = useCallback(() => {
     resetRevealState();
@@ -248,6 +263,11 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
     return meanings[cw] ?? meanings[cw.toLowerCase()] ?? meanings[cw.replace(/s$/, '')] ?? null;
   };
 
+  const getVocabExtra = (word) => {
+    const cw = cleanWord(word).toLowerCase();
+    return vocabulary[cw] || null;
+  };
+
   if (showGrammarIntro) {
     return (
       <div className="lesson-player animate-fade-in">
@@ -313,19 +333,24 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
                   <tr>
                     <th>Spanish</th>
                     <th>Meaning</th>
+                    <th>Memory Aid</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {vocabTable.map(({ word, meaning }) => (
+                  {vocabTable.map(({ word, meaning, mnemonic, explanation }) => (
                     <tr key={word}>
                       <td
                         className="vocab-word"
-                        onClick={() => speakSpanish(word)}
+                        onClick={() => speakSpanish(word, speechRate)}
                         title={`Play "${word}"`}
                       >
                         {word}
                       </td>
                       <td className="vocab-meaning">{meaning}</td>
+                      <td className="vocab-mnemonic">
+                        {mnemonic && <span className="mnemonic-text">💡 {mnemonic}</span>}
+                        {explanation && <span className="explanation-text">{explanation}</span>}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -385,7 +410,7 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
                 className="btn-primary btn-reveal-answer pulse-primary"
                 onClick={() => {
                   setChallengeAnswerRevealed(true);
-                  speakSpanish(challengeSentence.spanish);
+                  speakSpanish(challengeSentence.spanish, speechRate);
                 }}
               >
                 Reveal Answer <KbdHint show={isDesktop}>Space</KbdHint>
@@ -395,7 +420,7 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
                 <p className="challenge-spanish">{challengeSentence.spanish}</p>
                 <button
                   className="btn-play-answer"
-                  onClick={() => speakSpanish(challengeSentence.spanish)}
+                  onClick={() => speakSpanish(challengeSentence.spanish, speechRate)}
                   title="Listen to the answer"
                 >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -478,20 +503,29 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, onBack, onNe
                         if (meaning) {
                           e.stopPropagation();
                           setActiveWordIndex(isActive ? null : idx);
-                          speakSpanish(cleanWord(word));
+                          speakSpanish(cleanWord(word), speechRate);
                         }
                       }}
                     >
                       {word}
                     </span>
-                    {isActive && meaning && (
-                      <div 
-                        className="word-tooltip animate-fade-in"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        {meaning}
-                      </div>
-                    )}
+                    {isActive && meaning && (() => {
+                      const vocabExtra = getVocabExtra(word);
+                      return (
+                        <div 
+                          className={`word-tooltip animate-fade-in ${vocabExtra ? 'has-mnemonic' : ''}`}
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <span className="tooltip-meaning">{meaning}</span>
+                          {vocabExtra?.mnemonic && (
+                            <span className="tooltip-mnemonic">💡 {vocabExtra.mnemonic}</span>
+                          )}
+                          {vocabExtra?.explanation && (
+                            <span className="tooltip-explanation">{vocabExtra.explanation}</span>
+                          )}
+                        </div>
+                      );
+                    })()}
                   </div>
                 );
               })}

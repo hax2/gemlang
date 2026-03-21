@@ -365,5 +365,67 @@
       }
     }
   ],
-  "grammarExplanation": "'Llevar + time expression + gerund' expresses how long an action has been going on:\n\n• Llevo una hora estudiando = I've been studying for one hour\n• Llevas dos horas trabajando = You've been working for two hours\n\nConjugate 'llevar':\n• Llevo, Llevas, Lleva, Llevamos, Llevan\n\nGerund (-ando/-iendo): estudiando, trabajando, esperando, viviendo, hablando.\n\nThis structure has no direct English equivalent — it combines 'have been' + duration elegantly."
+  "grammarExplanation": "'Llevar + time expression + gerund' expresses how long an action has been going on:\n\n• Llevo una hora estudiando = I've been studying for one hour\n• Llevas dos horas trabajando = You've been working for two hours\n\nConjugate 'llevar':\n• Llevo, Llevas, Lleva, Llevamos, Llevan\n\nGerund (-ando/-iendo): estudiando, trabajando, esperando, viviendo, hablando.\n\nThis structure has no direct English equivalent — it combines 'have been' + duration elegantly.",
+  "vocabulary": {
+    "llevo": {
+      "mnemonic": "'I lever time' — I have been...",
+      "explanation": "First person of 'llevar'."
+    },
+    "lleva": {
+      "mnemonic": "'Lever-a' — he/she has been...",
+      "explanation": "Third person of 'llevar'."
+    },
+    "llevamos": {
+      "mnemonic": "'Lever-amos' — we have been...",
+      "explanation": "First person plural of 'llevar'."
+    },
+    "mucho": {
+      "mnemonic": "Think 'much-o' — much/a lot!",
+      "explanation": "Means 'much/a lot'. Fem: mucha."
+    },
+    "tiempo": {
+      "mnemonic": "Think 'tempo' — time and rhythm.",
+      "explanation": "Means 'time' or 'weather'."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "día": {
+      "mnemonic": "Think 'diary' — each day.",
+      "explanation": "Masculine despite ending in -a."
+    },
+    "teléfono": {
+      "mnemonic": "Nearly identical to 'telephone' — cognate!",
+      "explanation": "Masculine noun."
+    },
+    "música": {
+      "mnemonic": "Nearly identical to 'music' — cognate!",
+      "explanation": "Feminine noun."
+    },
+    "semana": {
+      "mnemonic": "Think 'semester has weeks'.",
+      "explanation": "Means 'week'. Feminine noun."
+    },
+    "trabajo": {
+      "mnemonic": "Think 'travel to work'.",
+      "explanation": "Means 'work/job'. Also 'I work'."
+    },
+    "libro": {
+      "mnemonic": "Think 'library' — full of libros (books)!",
+      "explanation": "Means 'book'. Masculine noun."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "años": {
+      "mnemonic": "Think 'annual' → años = years.",
+      "explanation": "'Tener X años' = to be X years old."
+    },
+    "español": {
+      "mnemonic": "'Espagne/Spain' + '-ol' — the Spanish language.",
+      "explanation": "Both the language and nationality."
+    }
+  }
 }

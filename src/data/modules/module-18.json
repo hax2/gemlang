@@ -354,5 +354,67 @@
       }
     }
   ],
-  "grammarExplanation": "The subjunctive mood is used after expressions of desire when the subjects differ. The pattern is:\n\n'Quiero que + subjunctive'\n\nPresent subjunctive endings:\n• -AR verbs: -e, -es, -e, -emos, -en\n• -ER/-IR verbs: -a, -as, -a, -amos, -an\n\n• Quiero que hables = I want you to speak\n• Quiero que comas = I want you to eat\n\nNote: If the subject is the same, use infinitive instead: 'Quiero hablar' (I want to speak)."
+  "grammarExplanation": "The subjunctive mood is used after expressions of desire when the subjects differ. The pattern is:\n\n'Quiero que + subjunctive'\n\nPresent subjunctive endings:\n• -AR verbs: -e, -es, -e, -emos, -en\n• -ER/-IR verbs: -a, -as, -a, -amos, -an\n\n• Quiero que hables = I want you to speak\n• Quiero que comas = I want you to eat\n\nNote: If the subject is the same, use infinitive instead: 'Quiero hablar' (I want to speak).",
+  "vocabulary": {
+    "quiero": {
+      "mnemonic": "'I query what I want' — I want.",
+      "explanation": "First person of 'querer' (to want)."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "hoy": {
+      "mnemonic": "'Hoy! today!' — an exclamation for today.",
+      "explanation": "Means 'today'."
+    },
+    "mañana": {
+      "mnemonic": "'Mañana, mañana' — putting off till tomorrow.",
+      "explanation": "Means 'tomorrow' or 'morning'."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "puerta": {
+      "mnemonic": "Think 'port/portal' — a door.",
+      "explanation": "Feminine noun meaning door/gate."
+    },
+    "ventana": {
+      "mnemonic": "'Vent-ana' — air vents in a window.",
+      "explanation": "From Latin 'ventus' (wind)."
+    },
+    "lo": {
+      "mnemonic": "'Low him' — direct object him/it.",
+      "explanation": "Masculine direct object pronoun."
+    },
+    "se": {
+      "mnemonic": "Think 'self' — reflexive pronoun.",
+      "explanation": "Replaces le/les before lo/la/los/las."
+    },
+    "temprano": {
+      "mnemonic": "'Temporary morning' — early!",
+      "explanation": "Means 'early'."
+    },
+    "tarde": {
+      "mnemonic": "Think 'tardy' — late!",
+      "explanation": "Means 'late' or 'afternoon'."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "pan": {
+      "mnemonic": "Bread baked in a pan!",
+      "explanation": "Means 'bread'. Masculine noun."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    },
+    "los": {
+      "mnemonic": "'Los' = them (masculine plural).",
+      "explanation": "Direct object pronoun."
+    }
+  }
 }

@@ -532,5 +532,135 @@
       }
     }
   ],
-  "grammarExplanation": "The present perfect describes what has happened, formed with 'haber + past participle.'\n\nConjugate 'haber':\n• He, Has, Ha, Hemos, Han\n\nPast participles:\n• -AR → -ado: hablado, comprado, estudiado\n• -ER/-IR → -ido: comido, bebido, vivido\n\nIrregulars: abierto (abrir), escrito (escribir), dicho (decir), hecho (hacer), visto (ver)\n\nExample: 'He comido pan' = I have eaten bread."
+  "grammarExplanation": "The present perfect describes what has happened, formed with 'haber + past participle.'\n\nConjugate 'haber':\n• He, Has, Ha, Hemos, Han\n\nPast participles:\n• -AR → -ado: hablado, comprado, estudiado\n• -ER/-IR → -ido: comido, bebido, vivido\n\nIrregulars: abierto (abrir), escrito (escribir), dicho (decir), hecho (hacer), visto (ver)\n\nExample: 'He comido pan' = I have eaten bread.",
+  "vocabulary": {
+    "he": {
+      "mnemonic": "'He' is the 'have' helper verb.",
+      "explanation": "Auxiliary for present perfect."
+    },
+    "pan": {
+      "mnemonic": "Bread baked in a pan!",
+      "explanation": "Means 'bread'. Masculine noun."
+    },
+    "has": {
+      "mnemonic": "Same as English 'has' — you have (done).",
+      "explanation": "Second person auxiliary."
+    },
+    "ha": {
+      "mnemonic": "'Ha! he has done it!'",
+      "explanation": "Third person auxiliary."
+    },
+    "agua": {
+      "mnemonic": "Think 'aqua' — water!",
+      "explanation": "Fem but uses 'el agua'."
+    },
+    "hemos": {
+      "mnemonic": "'Hemos = we have (hem-os).'",
+      "explanation": "First person plural auxiliary."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    },
+    "han": {
+      "mnemonic": "'They han-d it in' — they have done.",
+      "explanation": "Third person plural auxiliary."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "hoy": {
+      "mnemonic": "'Hoy! today!' — an exclamation for today.",
+      "explanation": "Means 'today'."
+    },
+    "mucho": {
+      "mnemonic": "Think 'much-o' — much/a lot!",
+      "explanation": "Means 'much/a lot'. Fem: mucha."
+    },
+    "centro": {
+      "mnemonic": "Same as English 'center' — downtown!",
+      "explanation": "Also means 'center'. 'Centro' = downtown area."
+    },
+    "español": {
+      "mnemonic": "'Espagne/Spain' + '-ol' — the Spanish language.",
+      "explanation": "Both the language and nationality."
+    },
+    "libro": {
+      "mnemonic": "Think 'library' — full of libros (books)!",
+      "explanation": "Means 'book'. Masculine noun."
+    },
+    "comida": {
+      "mnemonic": "'Come eat-a' — comida is food!",
+      "explanation": "From 'comer' (to eat)."
+    },
+    "trabajo": {
+      "mnemonic": "Think 'travel to work'.",
+      "explanation": "Means 'work/job'. Also 'I work'."
+    },
+    "abierto": {
+      "mnemonic": "'Open air-to' — opened.",
+      "explanation": "Past participle of 'abrir'. Irregular."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "puerta": {
+      "mnemonic": "Think 'port/portal' — a door.",
+      "explanation": "Feminine noun meaning door/gate."
+    },
+    "ventana": {
+      "mnemonic": "'Vent-ana' — air vents in a window.",
+      "explanation": "From Latin 'ventus' (wind)."
+    },
+    "escrito": {
+      "mnemonic": "Think 'script' — written!",
+      "explanation": "Past participle of 'escribir'. Irregular."
+    },
+    "carta": {
+      "mnemonic": "Think 'card/letter'.",
+      "explanation": "Means 'letter' or 'menu'."
+    },
+    "tiempo": {
+      "mnemonic": "Think 'tempo' — time and rhythm.",
+      "explanation": "Means 'time' or 'weather'."
+    },
+    "hambre": {
+      "mnemonic": "Think 'hamburger' — so hungry for one!",
+      "explanation": "'Tener hambre' = to be hungry."
+    },
+    "sed": {
+      "mnemonic": "Think 'said I'm thirsty!'",
+      "explanation": "'Tener sed' = to be thirsty."
+    },
+    "semana": {
+      "mnemonic": "Think 'semester has weeks'.",
+      "explanation": "Means 'week'. Feminine noun."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "allí": {
+      "mnemonic": "Sounds like 'a lee' — over there.",
+      "explanation": "Means 'there'. Points to a specific spot."
+    },
+    "cada": {
+      "mnemonic": "Think 'cadence' — each beat.",
+      "explanation": "Means 'each/every'."
+    },
+    "día": {
+      "mnemonic": "Think 'diary' — each day.",
+      "explanation": "Masculine despite ending in -a."
+    },
+    "ayer": {
+      "mnemonic": "'A year ago? No, just yesterday!'",
+      "explanation": "Means 'yesterday'."
+    },
+    "antes": {
+      "mnemonic": "Think 'ante' (before in poker).",
+      "explanation": "Means 'before'."
+    }
+  }
 }

@@ -518,5 +518,107 @@
       }
     }
   ],
-  "grammarExplanation": "Reflexive verbs describe actions done to oneself. They use a reflexive pronoun BEFORE the verb:\n\n• me (myself) → me levanto = I get up\n• te (yourself) → te levantas = you get up\n• se (him/herself) → se levanta = he/she gets up\n• nos (ourselves) → nos levantamos = we get up\n• se (themselves) → se levantan = they get up\n\nCommon reflexive verbs: llamarse, levantarse, acostarse, ducharse, lavarse, vestirse, sentarse, quedarse."
+  "grammarExplanation": "Reflexive verbs describe actions done to oneself. They use a reflexive pronoun BEFORE the verb:\n\n• me (myself) → me levanto = I get up\n• te (yourself) → te levantas = you get up\n• se (him/herself) → se levanta = he/she gets up\n• nos (ourselves) → nos levantamos = we get up\n• se (themselves) → se levantan = they get up\n\nCommon reflexive verbs: llamarse, levantarse, acostarse, ducharse, lavarse, vestirse, sentarse, quedarse.",
+  "vocabulary": {
+    "se": {
+      "mnemonic": "Think 'self' — reflexive pronoun.",
+      "explanation": "Replaces le/les before lo/la/los/las."
+    },
+    "levanto": {
+      "mnemonic": "Think 'elevate' — I get up.",
+      "explanation": "From 'levantarse' (to get up)."
+    },
+    "temprano": {
+      "mnemonic": "'Temporary morning' — early!",
+      "explanation": "Means 'early'."
+    },
+    "levanta": {
+      "mnemonic": "'Elevate-a' — he/she gets up.",
+      "explanation": "Third person of 'levantarse'."
+    },
+    "tarde": {
+      "mnemonic": "Think 'tardy' — late!",
+      "explanation": "Means 'late' or 'afternoon'."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "ducha": {
+      "mnemonic": "Think 'douche' (French: shower).",
+      "explanation": "Third person of 'ducharse'."
+    },
+    "lavo": {
+      "mnemonic": "Think 'lavatory' — I wash.",
+      "explanation": "From 'lavarse' (to wash oneself)."
+    },
+    "las": {
+      "mnemonic": "'Las ladies' — them (feminine).",
+      "explanation": "Direct object pronoun."
+    },
+    "lava": {
+      "mnemonic": "'Lava washes over' — he/she washes.",
+      "explanation": "Third person of 'lavarse'."
+    },
+    "viste": {
+      "mnemonic": "Think 'vest' — he/she gets dressed.",
+      "explanation": "Third person of 'vestirse'."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "allí": {
+      "mnemonic": "Sounds like 'a lee' — over there.",
+      "explanation": "Means 'there'. Points to a specific spot."
+    },
+    "trabajo": {
+      "mnemonic": "Think 'travel to work'.",
+      "explanation": "Means 'work/job'. Also 'I work'."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "mañana": {
+      "mnemonic": "'Mañana, mañana' — putting off till tomorrow.",
+      "explanation": "Means 'tomorrow' or 'morning'."
+    },
+    "y": {
+      "mnemonic": "The letter 'Y' connects — like 'and' connects words.",
+      "explanation": "Pronounced like 'ee'. The simplest conjunction."
+    },
+    "hoy": {
+      "mnemonic": "'Hoy! today!' — an exclamation for today.",
+      "explanation": "Means 'today'."
+    },
+    "vivo": {
+      "mnemonic": "Think 'vivid life' — I live vividly!",
+      "explanation": "First person of 'vivir' (to live)."
+    },
+    "trabajas": {
+      "mnemonic": "'Travel-has' — you work.",
+      "explanation": "Second person of 'trabajar'."
+    },
+    "centro": {
+      "mnemonic": "Same as English 'center' — downtown!",
+      "explanation": "Also means 'center'. 'Centro' = downtown area."
+    },
+    "estudia": {
+      "mnemonic": "'Study-a' — he/she studies.",
+      "explanation": "Third person of 'estudiar'."
+    },
+    "español": {
+      "mnemonic": "'Espagne/Spain' + '-ol' — the Spanish language.",
+      "explanation": "Both the language and nationality."
+    },
+    "compra": {
+      "mnemonic": "'Comp-ra' — he/she buys.",
+      "explanation": "Third person of 'comprar'."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    }
+  }
 }

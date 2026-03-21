@@ -504,5 +504,119 @@
       }
     }
   ],
-  "grammarExplanation": "The verb 'tener' means 'to have,' but in Spanish it also expresses age, hunger, thirst, and more.\n\n• Tengo = I have\n• Tienes = You have\n• Tiene = He/She has\n• Tenemos = We have\n• Tienen = They have\n\nSpecial expressions:\n• Tengo hambre = I am hungry (lit. 'I have hunger')\n• Tengo sed = I am thirsty\n• Tengo 20 años = I am 20 years old"
+  "grammarExplanation": "The verb 'tener' means 'to have,' but in Spanish it also expresses age, hunger, thirst, and more.\n\n• Tengo = I have\n• Tienes = You have\n• Tiene = He/She has\n• Tenemos = We have\n• Tienen = They have\n\nSpecial expressions:\n• Tengo hambre = I am hungry (lit. 'I have hunger')\n• Tengo sed = I am thirsty\n• Tengo 20 años = I am 20 years old",
+  "vocabulary": {
+    "tengo": {
+      "mnemonic": "Think 'tango' — I have a tango partner!",
+      "explanation": "First person of 'tener' (to have). Irregular."
+    },
+    "libro": {
+      "mnemonic": "Think 'library' — full of libros (books)!",
+      "explanation": "Means 'book'. Masculine noun."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "coche": {
+      "mnemonic": "Think 'coach' — a horse-drawn coach = car.",
+      "explanation": "Means 'car'. Mainly used in Spain."
+    },
+    "tienes": {
+      "mnemonic": "'Tea-en-es' — you have tea.",
+      "explanation": "Informal 'you have'. From 'tener'."
+    },
+    "tiene": {
+      "mnemonic": "'Tea-en-ay' — he/she has tea.",
+      "explanation": "Third person of 'tener'."
+    },
+    "mesa": {
+      "mnemonic": "A 'mesa' (flat-topped hill) — flat like a table.",
+      "explanation": "Means 'table'. Feminine noun."
+    },
+    "tenemos": {
+      "mnemonic": "'Ten-ay-mos' — we have ten of them!",
+      "explanation": "First person plural of 'tener'."
+    },
+    "problema": {
+      "mnemonic": "Nearly identical to 'problem' — cognate!",
+      "explanation": "Masculine despite -a ending!"
+    },
+    "tienen": {
+      "mnemonic": "'Tea-en-en' — they all have tea.",
+      "explanation": "Third person plural of 'tener'."
+    },
+    "ustedes": {
+      "mnemonic": "Think 'you-sted-es' — all of you!",
+      "explanation": "Formal/neutral 'you all' in Latin American Spanish."
+    },
+    "tiempo": {
+      "mnemonic": "Think 'tempo' — time and rhythm.",
+      "explanation": "Means 'time' or 'weather'."
+    },
+    "dinero": {
+      "mnemonic": "'Diner-o' — you need dinero at the diner.",
+      "explanation": "Means 'money'."
+    },
+    "hambre": {
+      "mnemonic": "Think 'hamburger' — so hungry for one!",
+      "explanation": "'Tener hambre' = to be hungry."
+    },
+    "sed": {
+      "mnemonic": "Think 'said I'm thirsty!'",
+      "explanation": "'Tener sed' = to be thirsty."
+    },
+    "años": {
+      "mnemonic": "Think 'annual' → años = years.",
+      "explanation": "'Tener X años' = to be X years old."
+    },
+    "hermano": {
+      "mnemonic": "'Her man, oh!' — her brother.",
+      "explanation": "Means 'brother'. Fem: hermana."
+    },
+    "hermana": {
+      "mnemonic": "'Her mana' — mana from her sister.",
+      "explanation": "Means 'sister'."
+    },
+    "amigo": {
+      "mnemonic": "Already used in English — a friendly buddy.",
+      "explanation": "Male friend. 'Amiga' for female."
+    },
+    "centro": {
+      "mnemonic": "Same as English 'center' — downtown!",
+      "explanation": "Also means 'center'. 'Centro' = downtown area."
+    },
+    "amiga": {
+      "mnemonic": "Feminine version of 'amigo' — your gal pal.",
+      "explanation": "Female friend. Note the -a ending."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "escuela": {
+      "mnemonic": "Sounds like 'school-a' — it IS school!",
+      "explanation": "Feminine noun meaning school."
+    },
+    "está": {
+      "mnemonic": "Think 'establish' where something is.",
+      "explanation": "Third person of 'estar' (to be, location/state)."
+    },
+    "y": {
+      "mnemonic": "The letter 'Y' connects — like 'and' connects words.",
+      "explanation": "Pronounced like 'ee'. The simplest conjunction."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    },
+    "nuevo": {
+      "mnemonic": "Think 'new-vo' — brand new!",
+      "explanation": "Means 'new'. Fem: nueva."
+    },
+    "grande": {
+      "mnemonic": "Think 'grand' — something grand is big!",
+      "explanation": "Means 'big/large'. Same for masc/fem."
+    }
+  }
 }

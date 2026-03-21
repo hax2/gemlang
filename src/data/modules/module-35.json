@@ -123,5 +123,79 @@
         "Carlos": "Carlos"
       }
     }
-  ]
+  ],
+  "vocabulary": {
+    "hola": {
+      "mnemonic": "Sounds like 'holler' — you holler 'Hello!'",
+      "explanation": "Universal greeting, any time of day."
+    },
+    "estás": {
+      "mnemonic": "Think 'you establish your position'.",
+      "explanation": "Informal 'you are' (estar)."
+    },
+    "muy": {
+      "mnemonic": "Think 'mooy' like a cow — very loud moo!",
+      "explanation": "Means 'very'. Short and common."
+    },
+    "gracias": {
+      "mnemonic": "Think 'gracious' — a gracious person says thank you.",
+      "explanation": "From Latin 'gratia' (grace/thanks)."
+    },
+    "y": {
+      "mnemonic": "The letter 'Y' connects — like 'and' connects words.",
+      "explanation": "Pronounced like 'ee'. The simplest conjunction."
+    },
+    "pero": {
+      "mnemonic": "Think 'pair-o' — 'but' connects a pair of ideas.",
+      "explanation": "Conjunction meaning 'but'."
+    },
+    "vas": {
+      "mnemonic": "'Vast journey' — you go.",
+      "explanation": "Second person of 'ir'."
+    },
+    "quiero": {
+      "mnemonic": "'I query what I want' — I want.",
+      "explanation": "First person of 'querer' (to want)."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    },
+    "leche": {
+      "mnemonic": "Think 'latte has milk' — leche = milk.",
+      "explanation": "Feminine noun."
+    },
+    "verde": {
+      "mnemonic": "Think 'verdant' — lush green vegetation.",
+      "explanation": "Means 'green'. Same for masc/fem."
+    },
+    "frío": {
+      "mnemonic": "'Free-oh, it's freezing!'",
+      "explanation": "'Tener frío' = to be cold."
+    },
+    "hoy": {
+      "mnemonic": "'Hoy! today!' — an exclamation for today.",
+      "explanation": "Means 'today'."
+    },
+    "está": {
+      "mnemonic": "Think 'establish' where something is.",
+      "explanation": "Third person of 'estar' (to be, location/state)."
+    },
+    "favor": {
+      "mnemonic": "Same as English 'favor' — do me a favor, please!",
+      "explanation": "'Por favor' literally means 'for favor'."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "cuenta": {
+      "mnemonic": "Think 'count' — bill/account.",
+      "explanation": "From 'contar' (to count)."
+    },
+    "cuando": {
+      "mnemonic": "Think 'when-do' — when.",
+      "explanation": "Question form: ¿cuándo?"
+    }
+  }
 }

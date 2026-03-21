@@ -577,5 +577,131 @@
       }
     }
   ],
-  "grammarExplanation": "Spanish has TWO verbs for 'to be': 'ser' and 'estar'.\n\n• SER describes characteristics (identity, traits, origin, material): 'El libro es nuevo' (The book is new), 'Soy de México' (I am from Mexico).\n• ESTAR describes states and locations: 'El café está frío' (The coffee is cold), 'Estoy cansado' (I am tired).\n\nDon't worry too much about memorizing the rules strictly—you'll naturally figure this out over time and internalize the difference as you pay attention to how they are used.\n\nAdjectives must match the noun in gender and number:\n• Masculine singular: nuevo, pequeño\n• Feminine singular: nueva, pequeña\n• Masculine plural: nuevos, pequeños\n• Feminine plural: nuevas, pequeñas"
+  "grammarExplanation": "Spanish has TWO verbs for 'to be': 'ser' and 'estar'.\n\n• SER describes characteristics (identity, traits, origin, material): 'El libro es nuevo' (The book is new), 'Soy de México' (I am from Mexico).\n• ESTAR describes states and locations: 'El café está frío' (The coffee is cold), 'Estoy cansado' (I am tired).\n\nDon't worry too much about memorizing the rules strictly—you'll naturally figure this out over time and internalize the difference as you pay attention to how they are used.\n\nAdjectives must match the noun in gender and number:\n• Masculine singular: nuevo, pequeño\n• Feminine singular: nueva, pequeña\n• Masculine plural: nuevos, pequeños\n• Feminine plural: nuevas, pequeñas",
+  "vocabulary": {
+    "libro": {
+      "mnemonic": "Think 'library' — full of libros (books)!",
+      "explanation": "Means 'book'. Masculine noun."
+    },
+    "es": {
+      "mnemonic": "Sounds like letter 'S' — 'He/She is S-uper.'",
+      "explanation": "Third person singular of 'ser'."
+    },
+    "nuevo": {
+      "mnemonic": "Think 'new-vo' — brand new!",
+      "explanation": "Means 'new'. Fem: nueva."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "los": {
+      "mnemonic": "'Los' = them (masculine plural).",
+      "explanation": "Direct object pronoun."
+    },
+    "son": {
+      "mnemonic": "Like English 'son' — 'They are my sons.'",
+      "explanation": "Third person plural of 'ser'."
+    },
+    "las": {
+      "mnemonic": "'Las ladies' — them (feminine).",
+      "explanation": "Direct object pronoun."
+    },
+    "pequeño": {
+      "mnemonic": "'Peek-en-yo' — peek at the tiny thing.",
+      "explanation": "Means 'small'. Fem: pequeña."
+    },
+    "grande": {
+      "mnemonic": "Think 'grand' — something grand is big!",
+      "explanation": "Means 'big/large'. Same for masc/fem."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    },
+    "escuela": {
+      "mnemonic": "Sounds like 'school-a' — it IS school!",
+      "explanation": "Feminine noun meaning school."
+    },
+    "coche": {
+      "mnemonic": "Think 'coach' — a horse-drawn coach = car.",
+      "explanation": "Means 'car'. Mainly used in Spain."
+    },
+    "viejo": {
+      "mnemonic": "'Vee-ay-ho' — an old sage saying 'hey ho'.",
+      "explanation": "Means 'old'. Fem: vieja."
+    },
+    "mesa": {
+      "mnemonic": "A 'mesa' (flat-topped hill) — flat like a table.",
+      "explanation": "Means 'table'. Feminine noun."
+    },
+    "problema": {
+      "mnemonic": "Nearly identical to 'problem' — cognate!",
+      "explanation": "Masculine despite -a ending!"
+    },
+    "está": {
+      "mnemonic": "Think 'establish' where something is.",
+      "explanation": "Third person of 'estar' (to be, location/state)."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "allí": {
+      "mnemonic": "Sounds like 'a lee' — over there.",
+      "explanation": "Means 'there'. Points to a specific spot."
+    },
+    "están": {
+      "mnemonic": "'They establish their locations.'",
+      "explanation": "Third person plural of 'estar'."
+    },
+    "estoy": {
+      "mnemonic": "'I estoy here!' — I am (located/feeling).",
+      "explanation": "First person of 'estar'. For location and feelings."
+    },
+    "estamos": {
+      "mnemonic": "'We establish ourselves' — we are.",
+      "explanation": "First person plural of 'estar'."
+    },
+    "centro": {
+      "mnemonic": "Same as English 'center' — downtown!",
+      "explanation": "Also means 'center'. 'Centro' = downtown area."
+    },
+    "dónde": {
+      "mnemonic": "Think 'done-day' — where?",
+      "explanation": "Question word for location."
+    },
+    "cerca": {
+      "mnemonic": "Think 'circa' — approximately near.",
+      "explanation": "'Cerca de' = near/close to."
+    },
+    "estudiante": {
+      "mnemonic": "Nearly identical to 'student' — easy cognate!",
+      "explanation": "Works for both male and female students."
+    },
+    "y": {
+      "mnemonic": "The letter 'Y' connects — like 'and' connects words.",
+      "explanation": "Pronounced like 'ee'. The simplest conjunction."
+    },
+    "lejos": {
+      "mnemonic": "Think 'legs' — you need legs to walk far away.",
+      "explanation": "'Lejos de' = far from."
+    },
+    "difícil": {
+      "mnemonic": "Think 'difficult' — nearly the same word!",
+      "explanation": "Means 'difficult'. Same for masc/fem."
+    },
+    "importante": {
+      "mnemonic": "Nearly identical to 'important' — cognate!",
+      "explanation": "Same for masc/fem."
+    },
+    "frío": {
+      "mnemonic": "'Free-oh, it's freezing!'",
+      "explanation": "'Tener frío' = to be cold."
+    }
+  }
 }

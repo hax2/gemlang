@@ -478,5 +478,251 @@
       }
     }
   ],
-  "grammarExplanation": "Regular -AR verbs follow a predictable conjugation pattern. Remove '-ar' and add these endings:\n\n• -o (yo): hablo\n• -as (tú): hablas\n• -a (él/ella): habla\n• -amos (nosotros): hablamos\n• -an (ustedes/ellos): hablan\n\nThis same pattern works for hablar, trabajar, estudiar, comprar, buscar, esperar, escuchar, mirar, and many more."
+  "grammarExplanation": "Regular -AR verbs follow a predictable conjugation pattern. Remove '-ar' and add these endings:\n\n• -o (yo): hablo\n• -as (tú): hablas\n• -a (él/ella): habla\n• -amos (nosotros): hablamos\n• -an (ustedes/ellos): hablan\n\nThis same pattern works for hablar, trabajar, estudiar, comprar, buscar, esperar, escuchar, mirar, and many more.",
+  "vocabulary": {
+    "hablo": {
+      "mnemonic": "Think 'hobble along while speaking'.",
+      "explanation": "First person of 'hablar' (to speak)."
+    },
+    "español": {
+      "mnemonic": "'Espagne/Spain' + '-ol' — the Spanish language.",
+      "explanation": "Both the language and nationality."
+    },
+    "hablas": {
+      "mnemonic": "'Ha-blas' — you blast out words.",
+      "explanation": "Second person of 'hablar'."
+    },
+    "él": {
+      "mnemonic": "Like 'el' in 'elevator' — he goes up!",
+      "explanation": "Subject pronoun 'he'. Accent distinguishes from 'el' (the)."
+    },
+    "habla": {
+      "mnemonic": "'Ha-bla' — he/she speaks.",
+      "explanation": "Third person of 'hablar'."
+    },
+    "ella": {
+      "mnemonic": "Think 'Cinderella' ends with '-ella' — she!",
+      "explanation": "Subject pronoun 'she/her'."
+    },
+    "nosotros": {
+      "mnemonic": "'nos' (us) + 'otros' (others) = we.",
+      "explanation": "Literally 'us others'. Fun compound word."
+    },
+    "hablamos": {
+      "mnemonic": "'Hobble-amos' — we talk.",
+      "explanation": "First person plural of 'hablar'."
+    },
+    "ustedes": {
+      "mnemonic": "Think 'you-sted-es' — all of you!",
+      "explanation": "Formal/neutral 'you all' in Latin American Spanish."
+    },
+    "hablan": {
+      "mnemonic": "'Ha-blan' — they all speak.",
+      "explanation": "Third person plural of 'hablar'."
+    },
+    "trabajo": {
+      "mnemonic": "Think 'travel to work'.",
+      "explanation": "Means 'work/job'. Also 'I work'."
+    },
+    "hoy": {
+      "mnemonic": "'Hoy! today!' — an exclamation for today.",
+      "explanation": "Means 'today'."
+    },
+    "trabajas": {
+      "mnemonic": "'Travel-has' — you work.",
+      "explanation": "Second person of 'trabajar'."
+    },
+    "trabaja": {
+      "mnemonic": "'Travel-ha' — he/she works.",
+      "explanation": "Third person of 'trabajar'."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "centro": {
+      "mnemonic": "Same as English 'center' — downtown!",
+      "explanation": "Also means 'center'. 'Centro' = downtown area."
+    },
+    "trabajamos": {
+      "mnemonic": "We all travel to work every day.",
+      "explanation": "First person plural of 'trabajar'."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "estudio": {
+      "mnemonic": "Think 'studio' — I study in my studio.",
+      "explanation": "First person of 'estudiar'."
+    },
+    "estudias": {
+      "mnemonic": "'You study-as' — you study.",
+      "explanation": "Second person of 'estudiar'."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "escuela": {
+      "mnemonic": "Sounds like 'school-a' — it IS school!",
+      "explanation": "Feminine noun meaning school."
+    },
+    "estudia": {
+      "mnemonic": "'Study-a' — he/she studies.",
+      "explanation": "Third person of 'estudiar'."
+    },
+    "mucho": {
+      "mnemonic": "Think 'much-o' — much/a lot!",
+      "explanation": "Means 'much/a lot'. Fem: mucha."
+    },
+    "estudiamos": {
+      "mnemonic": "'Study-amos' — we study!",
+      "explanation": "First person plural of 'estudiar'."
+    },
+    "cada": {
+      "mnemonic": "Think 'cadence' — each beat.",
+      "explanation": "Means 'each/every'."
+    },
+    "día": {
+      "mnemonic": "Think 'diary' — each day.",
+      "explanation": "Masculine despite ending in -a."
+    },
+    "compro": {
+      "mnemonic": "'Compare-o' — I compare before I buy.",
+      "explanation": "First person of 'comprar' (to buy)."
+    },
+    "pan": {
+      "mnemonic": "Bread baked in a pan!",
+      "explanation": "Means 'bread'. Masculine noun."
+    },
+    "compras": {
+      "mnemonic": "'Compare and purchase' — you buy.",
+      "explanation": "Second person of 'comprar'."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    },
+    "compra": {
+      "mnemonic": "'Comp-ra' — he/she buys.",
+      "explanation": "Third person of 'comprar'."
+    },
+    "libro": {
+      "mnemonic": "Think 'library' — full of libros (books)!",
+      "explanation": "Means 'book'. Masculine noun."
+    },
+    "nuevo": {
+      "mnemonic": "Think 'new-vo' — brand new!",
+      "explanation": "Means 'new'. Fem: nueva."
+    },
+    "mesa": {
+      "mnemonic": "A 'mesa' (flat-topped hill) — flat like a table.",
+      "explanation": "Means 'table'. Feminine noun."
+    },
+    "grande": {
+      "mnemonic": "Think 'grand' — something grand is big!",
+      "explanation": "Means 'big/large'. Same for masc/fem."
+    },
+    "compramos": {
+      "mnemonic": "'Comp-ramos' — we buy in bulk.",
+      "explanation": "First person plural of 'comprar'."
+    },
+    "comida": {
+      "mnemonic": "'Come eat-a' — comida is food!",
+      "explanation": "From 'comer' (to eat)."
+    },
+    "busco": {
+      "mnemonic": "'Bus-go' — I go looking for it.",
+      "explanation": "First person of 'buscar' (to look for)."
+    },
+    "buscas": {
+      "mnemonic": "'Bus-case' — you look for your bus case.",
+      "explanation": "Second person of 'buscar'."
+    },
+    "busca": {
+      "mnemonic": "'Bus-ka' — he/she looks for the bus.",
+      "explanation": "Third person of 'buscar'."
+    },
+    "buscamos": {
+      "mnemonic": "'Bus-camos' — we all look for the bus.",
+      "explanation": "First person plural of 'buscar'."
+    },
+    "espero": {
+      "mnemonic": "Think 'aspire and wait' — I wait/hope.",
+      "explanation": "First person of 'esperar'."
+    },
+    "esperas": {
+      "mnemonic": "'You aspire' — you wait with hope.",
+      "explanation": "Second person of 'esperar'."
+    },
+    "allí": {
+      "mnemonic": "Sounds like 'a lee' — over there.",
+      "explanation": "Means 'there'. Points to a specific spot."
+    },
+    "espera": {
+      "mnemonic": "'Aspire-a' — he/she waits.",
+      "explanation": "Third person of 'esperar'."
+    },
+    "esperamos": {
+      "mnemonic": "We aspire together — we wait.",
+      "explanation": "First person plural of 'esperar'."
+    },
+    "calle": {
+      "mnemonic": "Think 'call-ay' — you call from down the street.",
+      "explanation": "Feminine noun meaning street."
+    },
+    "escucho": {
+      "mnemonic": "'Sketch what I hear' — I listen.",
+      "explanation": "First person of 'escuchar'."
+    },
+    "música": {
+      "mnemonic": "Nearly identical to 'music' — cognate!",
+      "explanation": "Feminine noun."
+    },
+    "escuchas": {
+      "mnemonic": "'Sketches of sounds' — you listen.",
+      "explanation": "Second person of 'escuchar'."
+    },
+    "escucha": {
+      "mnemonic": "'Sketch-a sound' — he/she listens.",
+      "explanation": "Third person of 'escuchar'."
+    },
+    "silencio": {
+      "mnemonic": "Nearly identical to 'silence' — cognate!",
+      "explanation": "Means 'silence'."
+    },
+    "miro": {
+      "mnemonic": "Think 'mirror' — I look in the mirror.",
+      "explanation": "First person of 'mirar' (to look at)."
+    },
+    "teléfono": {
+      "mnemonic": "Nearly identical to 'telephone' — cognate!",
+      "explanation": "Masculine noun."
+    },
+    "miras": {
+      "mnemonic": "Think 'mirrors' — you look at things.",
+      "explanation": "Second person of 'mirar'."
+    },
+    "foto": {
+      "mnemonic": "Same as English 'photo'!",
+      "explanation": "Short for 'fotografía'. Feminine."
+    },
+    "mira": {
+      "mnemonic": "Think 'mirror-a' — he/she looks.",
+      "explanation": "Third person of 'mirar'. Also used as 'Look!'."
+    },
+    "y": {
+      "mnemonic": "The letter 'Y' connects — like 'and' connects words.",
+      "explanation": "Pronounced like 'ee'. The simplest conjunction."
+    },
+    "mañana": {
+      "mnemonic": "'Mañana, mañana' — putting off till tomorrow.",
+      "explanation": "Means 'tomorrow' or 'morning'."
+    },
+    "dónde": {
+      "mnemonic": "Think 'done-day' — where?",
+      "explanation": "Question word for location."
+    }
+  }
 }

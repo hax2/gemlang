@@ -370,5 +370,179 @@
       }
     }
   ],
-  "grammarExplanation": "Real (open) conditionals describe things that CAN or DO happen when a condition is met. Both clauses use the PRESENT INDICATIVE:\n\n'Si + present tense, present tense'\n\n• Si tienes tiempo, vienes = If you have time, you come.\n• Si estudias, aprendes = If you study, you learn.\n• Si llueve, me quedo en casa = If it rains, I stay home.\n\nThe 'si' clause can go first or second: 'Vienes si tienes tiempo.'"
+  "grammarExplanation": "Real (open) conditionals describe things that CAN or DO happen when a condition is met. Both clauses use the PRESENT INDICATIVE:\n\n'Si + present tense, present tense'\n\n• Si tienes tiempo, vienes = If you have time, you come.\n• Si estudias, aprendes = If you study, you learn.\n• Si llueve, me quedo en casa = If it rains, I stay home.\n\nThe 'si' clause can go first or second: 'Vienes si tienes tiempo.'",
+  "vocabulary": {
+    "si": {
+      "mnemonic": "'See if' — si = if.",
+      "explanation": "No accent = if. 'Sí' with accent = yes."
+    },
+    "tienes": {
+      "mnemonic": "'Tea-en-es' — you have tea.",
+      "explanation": "Informal 'you have'. From 'tener'."
+    },
+    "tiempo": {
+      "mnemonic": "Think 'tempo' — time and rhythm.",
+      "explanation": "Means 'time' or 'weather'."
+    },
+    "dinero": {
+      "mnemonic": "'Diner-o' — you need dinero at the diner.",
+      "explanation": "Means 'money'."
+    },
+    "compras": {
+      "mnemonic": "'Compare and purchase' — you buy.",
+      "explanation": "Second person of 'comprar'."
+    },
+    "pan": {
+      "mnemonic": "Bread baked in a pan!",
+      "explanation": "Means 'bread'. Masculine noun."
+    },
+    "estudias": {
+      "mnemonic": "'You study-as' — you study.",
+      "explanation": "Second person of 'estudiar'."
+    },
+    "trabajas": {
+      "mnemonic": "'Travel-has' — you work.",
+      "explanation": "Second person of 'trabajar'."
+    },
+    "mucho": {
+      "mnemonic": "Think 'much-o' — much/a lot!",
+      "explanation": "Means 'much/a lot'. Fem: mucha."
+    },
+    "comes": {
+      "mnemonic": "'Comes to eat' — you eat.",
+      "explanation": "Second person of 'comer'."
+    },
+    "bebes": {
+      "mnemonic": "Think 'babies drink'.",
+      "explanation": "Second person of 'beber'."
+    },
+    "agua": {
+      "mnemonic": "Think 'aqua' — water!",
+      "explanation": "Fem but uses 'el agua'."
+    },
+    "estás": {
+      "mnemonic": "Think 'you establish your position'.",
+      "explanation": "Informal 'you are' (estar)."
+    },
+    "mejor": {
+      "mnemonic": "'Major improvement' — better/best.",
+      "explanation": "Means 'better' or 'best'."
+    },
+    "temprano": {
+      "mnemonic": "'Temporary morning' — early!",
+      "explanation": "Means 'early'."
+    },
+    "hablamos": {
+      "mnemonic": "'Hobble-amos' — we talk.",
+      "explanation": "First person plural of 'hablar'."
+    },
+    "tarde": {
+      "mnemonic": "Think 'tardy' — late!",
+      "explanation": "Means 'late' or 'afternoon'."
+    },
+    "comemos": {
+      "mnemonic": "'Come-emos' — we eat together.",
+      "explanation": "First person plural of 'comer'."
+    },
+    "mañana": {
+      "mnemonic": "'Mañana, mañana' — putting off till tomorrow.",
+      "explanation": "Means 'tomorrow' or 'morning'."
+    },
+    "vamos": {
+      "mnemonic": "'¡Vamos!' — Let's go! Already English.",
+      "explanation": "First person plural of 'ir'."
+    },
+    "café": {
+      "mnemonic": "Same as English 'café' — coffee!",
+      "explanation": "Means 'coffee' or 'café'."
+    },
+    "vas": {
+      "mnemonic": "'Vast journey' — you go.",
+      "explanation": "Second person of 'ir'."
+    },
+    "hoy": {
+      "mnemonic": "'Hoy! today!' — an exclamation for today.",
+      "explanation": "Means 'today'."
+    },
+    "libro": {
+      "mnemonic": "Think 'library' — full of libros (books)!",
+      "explanation": "Means 'book'. Masculine noun."
+    },
+    "la": {
+      "mnemonic": "'La lady' — her/it (feminine).",
+      "explanation": "Also 'the' (feminine)."
+    },
+    "puerta": {
+      "mnemonic": "Think 'port/portal' — a door.",
+      "explanation": "Feminine noun meaning door/gate."
+    },
+    "ventana": {
+      "mnemonic": "'Vent-ana' — air vents in a window.",
+      "explanation": "From Latin 'ventus' (wind)."
+    },
+    "está": {
+      "mnemonic": "Think 'establish' where something is.",
+      "explanation": "Third person of 'estar' (to be, location/state)."
+    },
+    "escuchas": {
+      "mnemonic": "'Sketches of sounds' — you listen.",
+      "explanation": "Second person of 'escuchar'."
+    },
+    "lo": {
+      "mnemonic": "'Low him' — direct object him/it.",
+      "explanation": "Masculine direct object pronoun."
+    },
+    "es": {
+      "mnemonic": "Sounds like letter 'S' — 'He/She is S-uper.'",
+      "explanation": "Third person singular of 'ser'."
+    },
+    "los": {
+      "mnemonic": "'Los' = them (masculine plural).",
+      "explanation": "Direct object pronoun."
+    },
+    "las": {
+      "mnemonic": "'Las ladies' — them (feminine).",
+      "explanation": "Direct object pronoun."
+    },
+    "hambre": {
+      "mnemonic": "Think 'hamburger' — so hungry for one!",
+      "explanation": "'Tener hambre' = to be hungry."
+    },
+    "sed": {
+      "mnemonic": "Think 'said I'm thirsty!'",
+      "explanation": "'Tener sed' = to be thirsty."
+    },
+    "aquí": {
+      "mnemonic": "Sounds like 'a key' — 'The key is right here!'",
+      "explanation": "Means 'here'. More precise than 'acá'."
+    },
+    "hablo": {
+      "mnemonic": "Think 'hobble along while speaking'.",
+      "explanation": "First person of 'hablar' (to speak)."
+    },
+    "abro": {
+      "mnemonic": "Think 'abrogate/open' — I open.",
+      "explanation": "First person of 'abrir' (to open)."
+    },
+    "espero": {
+      "mnemonic": "Think 'aspire and wait' — I wait/hope.",
+      "explanation": "First person of 'esperar'."
+    },
+    "llueve": {
+      "mnemonic": "'It leaves rain' — it rains.",
+      "explanation": "Third person of 'llover' (to rain)."
+    },
+    "casa": {
+      "mnemonic": "Think 'casino' — a big house of games.",
+      "explanation": "Feminine noun. 'En casa' = at home."
+    },
+    "sol": {
+      "mnemonic": "Think 'solar' — sun!",
+      "explanation": "Means 'sun'."
+    },
+    "centro": {
+      "mnemonic": "Same as English 'center' — downtown!",
+      "explanation": "Also means 'center'. 'Centro' = downtown area."
+    }
+  }
 }
