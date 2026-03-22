@@ -5,53 +5,498 @@
   "level": "Intermediate",
   "sentences": [
     {
-      "id": "m40-s1",
-      "spanish": "Necesito comprar una camisa nueva para la fiesta.",
-      "english": "I need to buy a new shirt for the party.",
+      "id": "40-s1",
+      "spanish": "Mi hermana cambia una camisa de color negro.",
+      "english": "My sister exchanges a shirt of black color.",
       "wordMeanings": {
-        "comprar": "to buy",
+        "hermana": "sister",
+        "cambia": "exchanges",
         "camisa": "shirt",
-        "nueva": "new"
+        "negro": "black"
       }
     },
     {
-      "id": "m40-s2",
-      "spanish": "Estos zapatos son demasiado pequeños, me aprietan.",
-      "english": "These shoes are too small, they squeeze me.",
+      "id": "40-s2",
+      "spanish": "El joven necesita una chaqueta con descuento.",
+      "english": "The young man needs a jacket with a discount.",
       "wordMeanings": {
-        "zapatos": "shoes",
-        "pequeños": "small",
-        "aprietan": "squeeze/tighten"
-      }
-    },
-    {
-      "id": "m40-s3",
-      "spanish": "La tienda de ropa tiene un gran descuento hoy.",
-      "english": "The clothing store has a huge discount today.",
-      "wordMeanings": {
-        "tienda": "store",
-        "ropa": "clothes",
+        "joven": "young man",
+        "necesita": "needs",
+        "chaqueta": "jacket",
         "descuento": "discount"
       }
     },
     {
-      "id": "m40-s4",
-      "spanish": "¿Cuánto cuesta esta chaqueta negra?",
-      "english": "How much does this black jacket cost?",
+      "id": "40-s3",
+      "spanish": "El cliente necesita los pantalones para la fiesta.",
+      "english": "The customer needs the pants for the party.",
       "wordMeanings": {
-        "cuánto": "how much",
-        "cuesta": "does it cost",
-        "chaqueta": "jacket"
+        "cliente": "customer",
+        "necesita": "needs",
+        "pantalones": "pants",
+        "fiesta": "party"
       }
     },
     {
-      "id": "m40-s5",
-      "spanish": "Los pantalones cortos son perfectos para el verano.",
-      "english": "Shortpants (shorts) are perfect for summer.",
+      "id": "40-s4",
+      "spanish": "El señor cambia una chaqueta de color negro.",
+      "english": "The gentleman exchanges a jacket of black color.",
       "wordMeanings": {
+        "señor": "gentleman",
+        "cambia": "exchanges",
+        "chaqueta": "jacket",
+        "negro": "black"
+      }
+    },
+    {
+      "id": "40-s5",
+      "spanish": "El señor cambia una chaqueta en la tienda.",
+      "english": "The gentleman exchanges a jacket in the store.",
+      "wordMeanings": {
+        "señor": "gentleman",
+        "cambia": "exchanges",
+        "chaqueta": "jacket",
+        "tienda": "store"
+      }
+    },
+    {
+      "id": "40-s6",
+      "spanish": "La mujer busca unos zapatos en el centro comercial.",
+      "english": "The woman looks for some shoes in the mall.",
+      "wordMeanings": {
+        "mujer": "woman",
+        "busca": "looks for",
+        "zapatos": "shoes",
+        "centro comercial": "mall"
+      }
+    },
+    {
+      "id": "40-s7",
+      "spanish": "El joven busca los pantalones para la fiesta.",
+      "english": "The young man looks for the pants for the party.",
+      "wordMeanings": {
+        "joven": "young man",
+        "busca": "looks for",
         "pantalones": "pants",
-        "cortos": "short",
-        "verano": "summer"
+        "fiesta": "party"
+      }
+    },
+    {
+      "id": "40-s8",
+      "spanish": "El joven se prueba unos zapatos para la fiesta.",
+      "english": "The young man tries on some shoes for the party.",
+      "wordMeanings": {
+        "joven": "young man",
+        "prueba": "tries on",
+        "zapatos": "shoes",
+        "fiesta": "party"
+      }
+    },
+    {
+      "id": "40-s9",
+      "spanish": "El señor compra una camisa en la tienda.",
+      "english": "The gentleman buys a shirt in the store.",
+      "wordMeanings": {
+        "señor": "gentleman",
+        "compra": "buys",
+        "camisa": "shirt",
+        "tienda": "store"
+      }
+    },
+    {
+      "id": "40-s10",
+      "spanish": "El cliente busca los pantalones para la fiesta.",
+      "english": "The customer looks for the pants for the party.",
+      "wordMeanings": {
+        "cliente": "customer",
+        "busca": "looks for",
+        "pantalones": "pants",
+        "fiesta": "party"
+      }
+    },
+    {
+      "id": "40-s11",
+      "spanish": "El señor necesita unos zapatos de color negro.",
+      "english": "The gentleman needs some shoes of black color.",
+      "wordMeanings": {
+        "señor": "gentleman",
+        "necesita": "needs",
+        "zapatos": "shoes",
+        "negro": "black"
+      }
+    },
+    {
+      "id": "40-s12",
+      "spanish": "El señor se prueba unos zapatos con descuento.",
+      "english": "The gentleman tries on some shoes with a discount.",
+      "wordMeanings": {
+        "señor": "gentleman",
+        "prueba": "tries on",
+        "zapatos": "shoes",
+        "descuento": "discount"
+      }
+    },
+    {
+      "id": "40-s13",
+      "spanish": "El señor cambia una chaqueta en el centro comercial.",
+      "english": "The gentleman exchanges a jacket in the mall.",
+      "wordMeanings": {
+        "señor": "gentleman",
+        "cambia": "exchanges",
+        "chaqueta": "jacket",
+        "centro comercial": "mall"
+      }
+    },
+    {
+      "id": "40-s14",
+      "spanish": "El señor compra los pantalones en el centro comercial.",
+      "english": "The gentleman buys the pants in the mall.",
+      "wordMeanings": {
+        "señor": "gentleman",
+        "compra": "buys",
+        "pantalones": "pants",
+        "centro comercial": "mall"
+      }
+    },
+    {
+      "id": "40-s15",
+      "spanish": "El señor compra unos zapatos de color negro.",
+      "english": "The gentleman buys some shoes of black color.",
+      "wordMeanings": {
+        "señor": "gentleman",
+        "compra": "buys",
+        "zapatos": "shoes",
+        "negro": "black"
+      }
+    },
+    {
+      "id": "40-s16",
+      "spanish": "El cliente necesita los pantalones con descuento.",
+      "english": "The customer needs the pants with a discount.",
+      "wordMeanings": {
+        "cliente": "customer",
+        "necesita": "needs",
+        "pantalones": "pants",
+        "descuento": "discount"
+      }
+    },
+    {
+      "id": "40-s17",
+      "spanish": "La mujer necesita los pantalones con descuento.",
+      "english": "The woman needs the pants with a discount.",
+      "wordMeanings": {
+        "mujer": "woman",
+        "necesita": "needs",
+        "pantalones": "pants",
+        "descuento": "discount"
+      }
+    },
+    {
+      "id": "40-s18",
+      "spanish": "El joven necesita unos zapatos de color negro.",
+      "english": "The young man needs some shoes of black color.",
+      "wordMeanings": {
+        "joven": "young man",
+        "necesita": "needs",
+        "zapatos": "shoes",
+        "negro": "black"
+      }
+    },
+    {
+      "id": "40-s19",
+      "spanish": "El señor busca una chaqueta para la fiesta.",
+      "english": "The gentleman looks for a jacket for the party.",
+      "wordMeanings": {
+        "señor": "gentleman",
+        "busca": "looks for",
+        "chaqueta": "jacket",
+        "fiesta": "party"
+      }
+    },
+    {
+      "id": "40-s20",
+      "spanish": "El joven compra un vestido para la fiesta.",
+      "english": "The young man buys a dress for the party.",
+      "wordMeanings": {
+        "joven": "young man",
+        "compra": "buys",
+        "vestido": "dress",
+        "fiesta": "party"
+      }
+    },
+    {
+      "id": "40-s21",
+      "spanish": "Mi hermana necesita los pantalones de color negro.",
+      "english": "My sister needs the pants of black color.",
+      "wordMeanings": {
+        "hermana": "sister",
+        "necesita": "needs",
+        "pantalones": "pants",
+        "negro": "black"
+      }
+    },
+    {
+      "id": "40-s22",
+      "spanish": "La mujer se prueba unos zapatos con descuento.",
+      "english": "The woman tries on some shoes with a discount.",
+      "wordMeanings": {
+        "mujer": "woman",
+        "prueba": "tries on",
+        "zapatos": "shoes",
+        "descuento": "discount"
+      }
+    },
+    {
+      "id": "40-s23",
+      "spanish": "La mujer compra un vestido de color negro.",
+      "english": "The woman buys a dress of black color.",
+      "wordMeanings": {
+        "mujer": "woman",
+        "compra": "buys",
+        "vestido": "dress",
+        "negro": "black"
+      }
+    },
+    {
+      "id": "40-s24",
+      "spanish": "La mujer necesita un vestido para la fiesta.",
+      "english": "The woman needs a dress for the party.",
+      "wordMeanings": {
+        "mujer": "woman",
+        "necesita": "needs",
+        "vestido": "dress",
+        "fiesta": "party"
+      }
+    },
+    {
+      "id": "40-s25",
+      "spanish": "El joven cambia una chaqueta en el centro comercial.",
+      "english": "The young man exchanges a jacket in the mall.",
+      "wordMeanings": {
+        "joven": "young man",
+        "cambia": "exchanges",
+        "chaqueta": "jacket",
+        "centro comercial": "mall"
+      }
+    },
+    {
+      "id": "40-s26",
+      "spanish": "La mujer cambia una camisa en el centro comercial.",
+      "english": "The woman exchanges a shirt in the mall.",
+      "wordMeanings": {
+        "mujer": "woman",
+        "cambia": "exchanges",
+        "camisa": "shirt",
+        "centro comercial": "mall"
+      }
+    },
+    {
+      "id": "40-s27",
+      "spanish": "La mujer necesita los pantalones en la tienda.",
+      "english": "The woman needs the pants in the store.",
+      "wordMeanings": {
+        "mujer": "woman",
+        "necesita": "needs",
+        "pantalones": "pants",
+        "tienda": "store"
+      }
+    },
+    {
+      "id": "40-s28",
+      "spanish": "El cliente cambia una camisa en la tienda.",
+      "english": "The customer exchanges a shirt in the store.",
+      "wordMeanings": {
+        "cliente": "customer",
+        "cambia": "exchanges",
+        "camisa": "shirt",
+        "tienda": "store"
+      }
+    },
+    {
+      "id": "40-s29",
+      "spanish": "El joven se prueba un vestido de color negro.",
+      "english": "The young man tries on a dress of black color.",
+      "wordMeanings": {
+        "joven": "young man",
+        "prueba": "tries on",
+        "vestido": "dress",
+        "negro": "black"
+      }
+    },
+    {
+      "id": "40-s30",
+      "spanish": "El cliente busca una chaqueta con descuento.",
+      "english": "The customer looks for a jacket with a discount.",
+      "wordMeanings": {
+        "cliente": "customer",
+        "busca": "looks for",
+        "chaqueta": "jacket",
+        "descuento": "discount"
+      }
+    },
+    {
+      "id": "40-s31",
+      "spanish": "El señor se prueba un vestido de color negro.",
+      "english": "The gentleman tries on a dress of black color.",
+      "wordMeanings": {
+        "señor": "gentleman",
+        "prueba": "tries on",
+        "vestido": "dress",
+        "negro": "black"
+      }
+    },
+    {
+      "id": "40-s32",
+      "spanish": "El cliente busca un vestido con descuento.",
+      "english": "The customer looks for a dress with a discount.",
+      "wordMeanings": {
+        "cliente": "customer",
+        "busca": "looks for",
+        "vestido": "dress",
+        "descuento": "discount"
+      }
+    },
+    {
+      "id": "40-s33",
+      "spanish": "El joven compra unos zapatos en el centro comercial.",
+      "english": "The young man buys some shoes in the mall.",
+      "wordMeanings": {
+        "joven": "young man",
+        "compra": "buys",
+        "zapatos": "shoes",
+        "centro comercial": "mall"
+      }
+    },
+    {
+      "id": "40-s34",
+      "spanish": "El joven cambia una chaqueta para la fiesta.",
+      "english": "The young man exchanges a jacket for the party.",
+      "wordMeanings": {
+        "joven": "young man",
+        "cambia": "exchanges",
+        "chaqueta": "jacket",
+        "fiesta": "party"
+      }
+    },
+    {
+      "id": "40-s35",
+      "spanish": "El señor busca una camisa de color negro.",
+      "english": "The gentleman looks for a shirt of black color.",
+      "wordMeanings": {
+        "señor": "gentleman",
+        "busca": "looks for",
+        "camisa": "shirt",
+        "negro": "black"
+      }
+    },
+    {
+      "id": "40-s36",
+      "spanish": "El cliente necesita unos zapatos para la fiesta.",
+      "english": "The customer needs some shoes for the party.",
+      "wordMeanings": {
+        "cliente": "customer",
+        "necesita": "needs",
+        "zapatos": "shoes",
+        "fiesta": "party"
+      }
+    },
+    {
+      "id": "40-s37",
+      "spanish": "El señor necesita un vestido de color negro.",
+      "english": "The gentleman needs a dress of black color.",
+      "wordMeanings": {
+        "señor": "gentleman",
+        "necesita": "needs",
+        "vestido": "dress",
+        "negro": "black"
+      }
+    },
+    {
+      "id": "40-s38",
+      "spanish": "Mi hermana cambia una camisa para la fiesta.",
+      "english": "My sister exchanges a shirt for the party.",
+      "wordMeanings": {
+        "hermana": "sister",
+        "cambia": "exchanges",
+        "camisa": "shirt",
+        "fiesta": "party"
+      }
+    },
+    {
+      "id": "40-s39",
+      "spanish": "El cliente cambia los pantalones de color negro.",
+      "english": "The customer exchanges the pants of black color.",
+      "wordMeanings": {
+        "cliente": "customer",
+        "cambia": "exchanges",
+        "pantalones": "pants",
+        "negro": "black"
+      }
+    },
+    {
+      "id": "40-s40",
+      "spanish": "Mi hermana cambia unos zapatos en la tienda.",
+      "english": "My sister exchanges some shoes in the store.",
+      "wordMeanings": {
+        "hermana": "sister",
+        "cambia": "exchanges",
+        "zapatos": "shoes",
+        "tienda": "store"
+      }
+    },
+    {
+      "id": "40-s41",
+      "spanish": "El señor busca una chaqueta en la tienda.",
+      "english": "The gentleman looks for a jacket in the store.",
+      "wordMeanings": {
+        "señor": "gentleman",
+        "busca": "looks for",
+        "chaqueta": "jacket",
+        "tienda": "store"
+      }
+    },
+    {
+      "id": "40-s42",
+      "spanish": "El joven se prueba un vestido con descuento.",
+      "english": "The young man tries on a dress with a discount.",
+      "wordMeanings": {
+        "joven": "young man",
+        "prueba": "tries on",
+        "vestido": "dress",
+        "descuento": "discount"
+      }
+    },
+    {
+      "id": "40-s43",
+      "spanish": "El señor necesita una camisa de color negro.",
+      "english": "The gentleman needs a shirt of black color.",
+      "wordMeanings": {
+        "señor": "gentleman",
+        "necesita": "needs",
+        "camisa": "shirt",
+        "negro": "black"
+      }
+    },
+    {
+      "id": "40-s44",
+      "spanish": "El señor necesita una camisa en la tienda.",
+      "english": "The gentleman needs a shirt in the store.",
+      "wordMeanings": {
+        "señor": "gentleman",
+        "necesita": "needs",
+        "camisa": "shirt",
+        "tienda": "store"
+      }
+    },
+    {
+      "id": "40-s45",
+      "spanish": "El cliente compra los pantalones en la tienda.",
+      "english": "The customer buys the pants in the store.",
+      "wordMeanings": {
+        "cliente": "customer",
+        "compra": "buys",
+        "pantalones": "pants",
+        "tienda": "store"
       }
     }
   ],
@@ -63,10 +508,6 @@
     "ropa": {
       "mnemonic": "Put on your rope (ropa) — your clothes!",
       "explanation": "Means 'clothes' or 'clothing'."
-    },
-    "zapatos": {
-      "mnemonic": "Zap your toes (zapatos) if you aren't wearing shoes.",
-      "explanation": "Means 'shoes'."
     }
   }
 }
