@@ -1,0 +1,228 @@
+import React from 'react';
+import './Dashboard.css';
+
+const Dashboard = ({
+  modules,
+  stats,
+  progress,
+  getModuleStatus,
+  getModuleProgress,
+  getNextSuggestedModule,
+  getRefreshModules,
+  onSelectModule,
+  onBrowseAll,
+  practiceMode,
+}) => {
+  const suggestedModule = getNextSuggestedModule();
+  const refreshModules = getRefreshModules();
+  const lastModuleId = progress.lastModuleId;
+  const lastModule = lastModuleId ? modules.find((m) => m.id === lastModuleId) : null;
+  const lastStatus = lastModule ? getModuleStatus(lastModule.id) : null;
+  const isResuming = lastStatus === 'in-progress';
+
+  // Find recently completed modules (last 3)
+  const recentlyCompleted = modules
+    .filter((m) => {
+      const status = getModuleStatus(m.id);
+      return status === 'completed';
+    })
+    .sort((a, b) => {
+      const aTime = progress.modules[a.id]?.completedAt || '';
+      const bTime = progress.modules[b.id]?.completedAt || '';
+      return bTime.localeCompare(aTime); // newest first
+    })
+    .slice(0, 3);
+
+  const heroAction = isResuming ? lastModule : suggestedModule;
+  const heroLabel = isResuming
+    ? 'Continue Learning'
+    : suggestedModule
+      ? (getModuleStatus(suggestedModule.id) === 'needs-refresh' ? 'Refresh Module' : 'Start Next Module')
+      : null;
+
+  return (
+    <div className="dashboard animate-fade-in">
+      {/* Hero Section */}
+      <div className="dashboard-hero">
+        <h1 className="dashboard-title">Welcome back</h1>
+        <div className="dashboard-stats">
+          <div className="stat-item">
+            <span className="stat-value">{stats.completed}</span>
+            <span className="stat-label">Completed</span>
+          </div>
+          <div className="stat-divider" />
+          <div className="stat-item">
+            <span className="stat-value">{stats.inProgress}</span>
+            <span className="stat-label">In Progress</span>
+          </div>
+          <div className="stat-divider" />
+          <div className="stat-item">
+            <span className="stat-value">{stats.total}</span>
+            <span className="stat-label">Total</span>
+          </div>
+          <div className="stat-divider" />
+          <div className="stat-item">
+            <span className="stat-value">{stats.totalSentencesPracticed}</span>
+            <span className="stat-label">Sentences</span>
+          </div>
+        </div>
+        {/* Overall progress bar */}
+        <div className="dashboard-overall-progress">
+          <div className="overall-progress-bar">
+            <div
+              className="overall-progress-fill"
+              style={{ width: `${stats.total > 0 ? Math.round((stats.completed / stats.total) * 100) : 0}%` }}
+            />
+          </div>
+          <span className="overall-progress-label">
+            {stats.total > 0 ? Math.round((stats.completed / stats.total) * 100) : 0}% complete
+          </span>
+        </div>
+      </div>
+
+      {/* Main CTA */}
+      {heroAction && (
+        <div className="dashboard-cta glass-panel" onClick={() => onSelectModule(heroAction)}>
+          <div className="cta-content">
+            {isResuming && (() => {
+              const prog = getModuleProgress(heroAction.id);
+              return (
+                <div className="cta-progress-ring">
+                  <svg viewBox="0 0 36 36" className="cta-ring-svg">
+                    <path
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                      fill="none"
+                      stroke="rgba(255,255,255,0.08)"
+                      strokeWidth="3"
+                    />
+                    <path
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                      fill="none"
+                      stroke="url(#cta-gradient)"
+                      strokeWidth="3"
+                      strokeDasharray={`${prog.percentage}, 100`}
+                      strokeLinecap="round"
+                    />
+                    <defs>
+                      <linearGradient id="cta-gradient">
+                        <stop offset="0%" stopColor="#a855f7" />
+                        <stop offset="100%" stopColor="#6366f1" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <span className="cta-ring-text">{prog.percentage}%</span>
+                </div>
+              );
+            })()}
+            <div className="cta-text">
+              <span className="cta-module-level">{heroAction.level}</span>
+              <h2 className="cta-module-title">{heroAction.title}</h2>
+              <p className="cta-module-desc">{heroAction.description}</p>
+              {isResuming && (() => {
+                const prog = getModuleProgress(heroAction.id);
+                return (
+                  <span className="cta-resume-hint">
+                    Sentence {prog.current} of {prog.total}
+                  </span>
+                );
+              })()}
+            </div>
+          </div>
+          <button className="btn-primary cta-button pulse-primary">
+            {heroLabel} →
+          </button>
+        </div>
+      )}
+
+      {/* All done state */}
+      {!heroAction && stats.completed === stats.total && stats.total > 0 && (
+        <div className="dashboard-cta glass-panel dashboard-all-done">
+          <div className="all-done-icon">🏆</div>
+          <h2 className="cta-module-title">All modules completed!</h2>
+          <p className="cta-module-desc">You've finished every module. Browse to review any lesson.</p>
+        </div>
+      )}
+
+      {/* Needs Refresh Section */}
+      {refreshModules.length > 0 && (
+        <div className="dashboard-section">
+          <h3 className="section-title">
+            <span className="section-icon">🔄</span>
+            Time to Refresh
+          </h3>
+          <div className="refresh-grid">
+            {refreshModules.map((mod) => (
+              <div
+                key={mod.id}
+                className="refresh-card glass-panel"
+                onClick={() => onSelectModule(mod)}
+              >
+                <div className="refresh-card-info">
+                  <span className="refresh-level">{mod.level}</span>
+                  <h4 className="refresh-title">{mod.title}</h4>
+                  <span className="refresh-confidence">
+                    {progress.modules[mod.id]?.confidence === 'needsRefresh'
+                      ? '😬 Needs practice'
+                      : '🤔 Getting there'}
+                  </span>
+                </div>
+                <button
+                  className="btn-secondary btn-sm refresh-btn"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onSelectModule(mod);
+                  }}
+                >
+                  ↻ Refresh
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Recently Completed */}
+      {recentlyCompleted.length > 0 && (
+        <div className="dashboard-section">
+          <h3 className="section-title">
+            <span className="section-icon">✅</span>
+            Recently Completed
+          </h3>
+          <div className="refresh-grid">
+            {recentlyCompleted.map((mod) => (
+              <div
+                key={mod.id}
+                className="refresh-card glass-panel completed-card"
+                onClick={() => onSelectModule(mod)}
+              >
+                <div className="refresh-card-info">
+                  <span className="refresh-level">{mod.level}</span>
+                  <h4 className="refresh-title">{mod.title}</h4>
+                  <span className="completed-badge">✓ Mastered</span>
+                </div>
+                <button
+                  className="btn-secondary btn-sm refresh-btn"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onSelectModule(mod);
+                  }}
+                >
+                  Review
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Browse All */}
+      <div className="dashboard-browse">
+        <button className="btn-secondary browse-all-btn" onClick={onBrowseAll}>
+          Browse All Modules ({stats.total})
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;

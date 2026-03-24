@@ -90,8 +90,45 @@ const KbdHint = ({ show, children }) => {
   return <kbd className="kbd-hint">{children}</kbd>;
 };
 
-const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, settings, onBack, onNextModule }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const LessonPlayer = ({
+  module,
+  modules,
+  moduleIndex,
+  practiceMode,
+  settings,
+  onBack,
+  onNextModule,
+  saveModuleProgress,
+  completeModule,
+  getSavedIndex,
+}) => {
+  const isPureTestingMode = practiceMode === 'testing';
+  const challengeInterval = settings?.challengeInterval ?? 5;
+
+  // Build merged items once for initial index calculation
+  const initialMergedItems = useMemo(() => {
+    if (isPureTestingMode) return buildTestingItems(module.sentences);
+    return buildMergedItems(module.sentences, module.id, challengeInterval);
+  }, [module, isPureTestingMode, challengeInterval]);
+
+  // Convert sentence-level progress to merged-items index
+  const savedSentenceCount = getSavedIndex ? getSavedIndex(module.id, practiceMode) : 0;
+  const resumeIndex = useMemo(() => {
+    if (savedSentenceCount <= 0) return 0;
+    let sentencesSeen = 0;
+    for (let i = 0; i < initialMergedItems.length; i++) {
+      const item = initialMergedItems[i];
+      if (isPureTestingMode ? item.type === 'challenge' : item.type === 'sentence') {
+        sentencesSeen++;
+      }
+      if (sentencesSeen >= savedSentenceCount) {
+        return Math.min(i + 1, initialMergedItems.length - 1);
+      }
+    }
+    return 0;
+  }, [savedSentenceCount, initialMergedItems, isPureTestingMode]);
+
+  const [currentIndex, setCurrentIndex] = useState(resumeIndex);
   const [spanishRevealed, setSpanishRevealed] = useState(() => !!settings?.autoRevealSpanish);
   const [englishRevealed, setEnglishRevealed] = useState(false);
   const [activeWordIndex, setActiveWordIndex] = useState(null);
@@ -101,8 +138,17 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, settings, on
   const [showGrammarIntro, setShowGrammarIntro] = useState(
     () => !!(module.grammarExplanation && practiceMode !== 'testing')
   );
+  const [showSelfAssessment, setShowSelfAssessment] = useState(false);
+  const [hasAssessed, setHasAssessed] = useState(false);
+  const [showResumeToast, setShowResumeToast] = useState(() => resumeIndex > 0);
 
-  const isPureTestingMode = practiceMode === 'testing';
+  // Dismiss resume toast after a moment
+  useEffect(() => {
+    if (showResumeToast) {
+      const timer = setTimeout(() => setShowResumeToast(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showResumeToast]);
 
   const resetRevealState = useCallback(() => {
     setSpanishRevealed(!!settings?.autoRevealSpanish);
@@ -120,8 +166,6 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, settings, on
     window.addEventListener('resize', checkDesktop);
     return () => window.removeEventListener('resize', checkDesktop);
   }, []);
-
-  const challengeInterval = settings?.challengeInterval ?? 5;
 
   const mergedItems = useMemo(() => {
     if (isPureTestingMode) {
@@ -151,6 +195,13 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, settings, on
   const speechRate = settings?.speechRate ?? 0.85;
   const autoPlay = settings?.autoPlayAudio ?? true;
 
+  // Show self-assessment when finished (if not already assessed)
+  useEffect(() => {
+    if (isFinished && !hasAssessed) {
+      setShowSelfAssessment(true);
+    }
+  }, [isFinished, hasAssessed]);
+
   useEffect(() => {
     if (autoPlay && !showGrammarIntro && !isChallenge && sentence?.spanish) {
       speakSpanish(sentence.spanish, speechRate);
@@ -167,8 +218,19 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, settings, on
 
   const handleNext = useCallback(() => {
     resetRevealState();
-    setCurrentIndex((p) => p + 1);
-  }, [resetRevealState]);
+    const newIndex = currentIndex + 1;
+    setCurrentIndex(newIndex);
+
+    // Save progress
+    if (saveModuleProgress) {
+      // Calculate the sentence-level progress for the new index
+      const sentenceProgress = mergedItems.slice(0, newIndex).filter((item) => {
+        if (isPureTestingMode) return item.type === 'challenge';
+        return item.type === 'sentence';
+      }).length;
+      saveModuleProgress(module.id, sentenceProgress, practiceMode, totalSentences);
+    }
+  }, [currentIndex, isPureTestingMode, mergedItems, module.id, practiceMode, resetRevealState, saveModuleProgress, totalSentences]);
 
   const handlePrev = useCallback(() => {
     resetRevealState();
@@ -182,6 +244,14 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, settings, on
       { type: 'sentence', data: sentence, originalIndex: currentOriginalIndex, isRepeat: true },
     ]);
   }, [currentOriginalIndex, sentence]);
+
+  const handleSelfAssessment = useCallback((confidence) => {
+    if (completeModule) {
+      completeModule(module.id, confidence, totalSentences);
+    }
+    setShowSelfAssessment(false);
+    setHasAssessed(true);
+  }, [completeModule, module.id, totalSentences]);
 
   useEffect(() => {
     const handleGlobalClick = () => setActiveWordIndex(null);
@@ -212,6 +282,12 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, settings, on
       }
 
       if (isFinished) {
+        if (showSelfAssessment) {
+          if (key === '1') handleSelfAssessment('confident');
+          if (key === '2') handleSelfAssessment('somewhat');
+          if (key === '3') handleSelfAssessment('needsRefresh');
+          return;
+        }
         if (key === 'enter' && hasNextModule) onNextModule();
         if (key === 'b') onBack();
         return;
@@ -248,6 +324,7 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, settings, on
     handleMarkForLater,
     handleNext,
     handlePrev,
+    handleSelfAssessment,
     hasNextModule,
     isChallenge,
     isFinished,
@@ -255,6 +332,7 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, settings, on
     onNextModule,
     playAudio,
     showGrammarIntro,
+    showSelfAssessment,
   ]);
 
   const getMeaning = (word) => {
@@ -316,6 +394,8 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, settings, on
   if (isFinished) {
     return (
       <div className="lesson-finished animate-fade-in glass-panel">
+        {/* Resume toast (shouldn't show here but just in case) */}
+
         <div className="finished-icon">🎉</div>
         <h2 className="finished-title">Module Completed!</h2>
         <p className="finished-subtitle">
@@ -324,7 +404,41 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, settings, on
             : <>You&apos;ve successfully finished all sentences in <strong>{module.title}</strong>.</>}
         </p>
 
-        {!isPureTestingMode && (
+        {/* Self-Assessment Prompt */}
+        {showSelfAssessment && (
+          <div className="self-assessment animate-fade-in">
+            <h3 className="assessment-title">How did that feel?</h3>
+            <p className="assessment-subtitle">Be honest — this helps us suggest what to review later.</p>
+            <div className="assessment-options">
+              <button
+                className="assessment-btn assessment-confident"
+                onClick={() => handleSelfAssessment('confident')}
+              >
+                <span className="assessment-emoji">😎</span>
+                <span className="assessment-label">Nailed it</span>
+                <KbdHint show={isDesktop}>1</KbdHint>
+              </button>
+              <button
+                className="assessment-btn assessment-somewhat"
+                onClick={() => handleSelfAssessment('somewhat')}
+              >
+                <span className="assessment-emoji">🤔</span>
+                <span className="assessment-label">Getting there</span>
+                <KbdHint show={isDesktop}>2</KbdHint>
+              </button>
+              <button
+                className="assessment-btn assessment-needs-refresh"
+                onClick={() => handleSelfAssessment('needsRefresh')}
+              >
+                <span className="assessment-emoji">😬</span>
+                <span className="assessment-label">Need more practice</span>
+                <KbdHint show={isDesktop}>3</KbdHint>
+              </button>
+            </div>
+          </div>
+        )}
+
+        {!isPureTestingMode && !showSelfAssessment && (
           <div className="vocab-section">
             <h3 className="vocab-heading">Words You&apos;ve Learned</h3>
             <div className="vocab-table-wrapper">
@@ -359,16 +473,18 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, settings, on
           </div>
         )}
 
-        <div className="finished-actions">
-          <button className="btn-secondary" onClick={onBack}>
-            ← All Modules <KbdHint show={isDesktop}>B</KbdHint>
-          </button>
-          {hasNextModule && (
-            <button className="btn-primary" onClick={onNextModule}>
-              Next Module → <KbdHint show={isDesktop}>Enter</KbdHint>
+        {!showSelfAssessment && (
+          <div className="finished-actions">
+            <button className="btn-secondary" onClick={onBack}>
+              ← All Modules <KbdHint show={isDesktop}>B</KbdHint>
             </button>
-          )}
-        </div>
+            {hasNextModule && (
+              <button className="btn-primary" onClick={onNextModule}>
+                Next Module → <KbdHint show={isDesktop}>Enter</KbdHint>
+              </button>
+            )}
+          </div>
+        )}
       </div>
     );
   }
@@ -379,6 +495,12 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, settings, on
 
     return (
       <div className="lesson-player animate-fade-in">
+        {showResumeToast && (
+          <div className="resume-toast animate-fade-in">
+            ▶ Resuming from where you left off
+          </div>
+        )}
+
         <div className="lesson-header">
           <button className="btn-secondary btn-sm" onClick={onBack}>
             ← Back <KbdHint show={isDesktop}>Esc</KbdHint>
@@ -454,6 +576,12 @@ const LessonPlayer = ({ module, modules, moduleIndex, practiceMode, settings, on
 
   return (
     <div className="lesson-player animate-fade-in">
+      {showResumeToast && (
+        <div className="resume-toast animate-fade-in">
+          ▶ Resuming from where you left off
+        </div>
+      )}
+
       <div className="lesson-header">
         <button className="btn-secondary btn-sm" onClick={onBack}>
           ← Back <KbdHint show={isDesktop}>Esc</KbdHint>

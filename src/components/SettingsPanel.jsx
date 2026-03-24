@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { DEFAULT_SETTINGS } from '../hooks/useSettings';
 import './SettingsPanel.css';
 
@@ -16,7 +16,9 @@ const SPEECH_RATE_OPTIONS = [
   { value: 1.0, label: 'Fast' },
 ];
 
-const SettingsPanel = ({ settings, onUpdate, onReset, onBack }) => {
+const SettingsPanel = ({ settings, onUpdate, onReset, onResetProgress, onBack }) => {
+  const [showResetConfirm, setShowResetConfirm] = useState(false);
+
   return (
     <div className="settings-panel animate-fade-in">
       <div className="settings-header">
@@ -135,6 +137,52 @@ const SettingsPanel = ({ settings, onUpdate, onReset, onBack }) => {
             </button>
           </div>
         </div>
+
+        {/* Reset Progress */}
+        {onResetProgress && (
+          <div className="setting-card glass-panel reset-progress-card">
+            <div className="setting-info">
+              <div className="setting-icon">🗑️</div>
+              <div>
+                <h3 className="setting-name">Reset All Progress</h3>
+                <p className="setting-desc">
+                  Clear all module progress, completion data, and resume positions. This cannot be undone.
+                </p>
+              </div>
+            </div>
+            {!showResetConfirm ? (
+              <div className="setting-options">
+                <button
+                  className="setting-option-btn reset-progress-btn"
+                  onClick={() => setShowResetConfirm(true)}
+                >
+                  Reset Progress
+                </button>
+              </div>
+            ) : (
+              <div className="reset-confirm">
+                <p className="reset-confirm-text">Are you sure? This will erase all your progress.</p>
+                <div className="reset-confirm-actions">
+                  <button
+                    className="setting-option-btn reset-confirm-yes"
+                    onClick={() => {
+                      onResetProgress();
+                      setShowResetConfirm(false);
+                    }}
+                  >
+                    Yes, Reset Everything
+                  </button>
+                  <button
+                    className="setting-option-btn"
+                    onClick={() => setShowResetConfirm(false)}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

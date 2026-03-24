@@ -818,4 +818,129 @@
   .vocab-mnemonic {
     font-size: 0.82rem;
   }
+
+  .self-assessment {
+    padding: 1rem;
+  }
+
+  .assessment-options {
+    flex-direction: column;
+  }
+
+  .assessment-btn {
+    padding: 0.75rem 1rem;
+  }
+
+  .resume-toast {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   SELF-ASSESSMENT PROMPT
+   ═══════════════════════════════════════════════════════ */
+.self-assessment {
+  width: 100%;
+  max-width: 500px;
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+}
+
+.assessment-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  text-align: center;
+}
+
+.assessment-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.assessment-options {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.assessment-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex: 1;
+}
+
+.assessment-emoji {
+  font-size: 1.75rem;
+}
+
+.assessment-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.assessment-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--glass-highlight);
+}
+
+.assessment-confident:hover {
+  background: rgba(52, 211, 153, 0.1);
+  border-color: rgba(52, 211, 153, 0.4);
+}
+
+.assessment-confident:hover .assessment-label {
+  color: var(--success);
+}
+
+.assessment-somewhat:hover {
+  background: rgba(251, 191, 36, 0.1);
+  border-color: rgba(251, 191, 36, 0.4);
+}
+
+.assessment-somewhat:hover .assessment-label {
+  color: #fbbf24;
+}
+
+.assessment-needs-refresh:hover {
+  background: rgba(248, 113, 113, 0.1);
+  border-color: rgba(248, 113, 113, 0.4);
+}
+
+.assessment-needs-refresh:hover .assessment-label {
+  color: var(--failure);
+}
+
+/* ═══════════════════════════════════════════════════════
+   RESUME TOAST
+   ═══════════════════════════════════════════════════════ */
+.resume-toast {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(168, 85, 247, 0.9);
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(168, 85, 247, 0.4);
+  backdrop-filter: blur(8px);
 }

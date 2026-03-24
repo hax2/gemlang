@@ -1,21 +1,40 @@
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useRef, useState, useMemo } from 'react';
+import Dashboard from './components/Dashboard';
 import ModuleSelector from './components/ModuleSelector';
 import LessonPlayer from './components/LessonPlayer';
 import SettingsPanel from './components/SettingsPanel';
 import useSettings from './hooks/useSettings';
+import useProgress from './hooks/useProgress';
 import modulesManifest from './data/modules-manifest.json';
 import './App.css';
 
 const moduleLoaders = import.meta.glob('./data/modules/*.json');
 
 function App() {
-  const [view, setView] = useState('modules'); // 'modules' | 'settings' | 'lesson'
+  const [view, setView] = useState('dashboard'); // 'dashboard' | 'modules' | 'settings' | 'lesson'
   const [activeModuleIndex, setActiveModuleIndex] = useState(null);
   const [activeModule, setActiveModule] = useState(null);
   const [isModuleLoading, setIsModuleLoading] = useState(false);
-  const [practiceMode, setPracticeMode] = useState('guided');
+  const [practiceMode, setPracticeMode] = useState(() => {
+    try {
+      const prog = JSON.parse(localStorage.getItem('gemlang-progress') || '{}');
+      return prog.lastPracticeMode || 'guided';
+    } catch { return 'guided'; }
+  });
   const loadRequestRef = useRef(0);
   const { settings, updateSetting, resetSettings } = useSettings();
+
+  const {
+    progress,
+    saveModuleProgress,
+    completeModule,
+    getModuleStatus,
+    getModuleProgress,
+    getNextSuggestedModule,
+    getRefreshModules,
+    stats,
+    resetProgress,
+  } = useProgress(modulesManifest);
 
   const loadModuleAtIndex = useCallback(async (index) => {
     const manifestModule = modulesManifest[index];
@@ -51,6 +70,14 @@ function App() {
     }
   }, [loadModuleAtIndex]);
 
+  const handleBackToDashboard = useCallback(() => {
+    loadRequestRef.current += 1;
+    setActiveModuleIndex(null);
+    setActiveModule(null);
+    setIsModuleLoading(false);
+    setView('dashboard');
+  }, []);
+
   const handleBackToModules = useCallback(() => {
     loadRequestRef.current += 1;
     setActiveModuleIndex(null);
@@ -60,23 +87,55 @@ function App() {
   }, []);
 
   const handleNextModule = useCallback(() => {
+    // Use suggested next module instead of just index+1
+    const suggested = getNextSuggestedModule();
+    if (suggested) {
+      const idx = modulesManifest.findIndex((item) => item.id === suggested.id);
+      if (idx >= 0) {
+        void loadModuleAtIndex(idx);
+        return;
+      }
+    }
+    // Fallback: next in order
     const nextIdx = activeModuleIndex + 1;
     if (nextIdx < modulesManifest.length) {
       void loadModuleAtIndex(nextIdx);
     } else {
-      handleBackToModules();
+      handleBackToDashboard();
     }
-  }, [activeModuleIndex, handleBackToModules, loadModuleAtIndex]);
+  }, [activeModuleIndex, getNextSuggestedModule, handleBackToDashboard, loadModuleAtIndex]);
+
+  /** Get the saved merged-items index for a module to support resume */
+  const getSavedIndex = useCallback((moduleId, mode) => {
+    const mod = progress.modules[moduleId];
+    if (!mod || !mod.currentIndex) return 0;
+    // If the module was completed, start from the beginning (reviewing)
+    if (mod.completedAt) return 0;
+    // Return saved sentence-level progress — the LessonPlayer will convert this
+    // to a merged-items index by counting sentence items
+    return mod.currentIndex || 0;
+  }, [progress]);
+
+  /** Convert a sentence-level index to a merged-items index.
+   *  This is passed to the LessonPlayer to calculate resume position. */
+  const getSavedMergedIndex = useCallback((moduleId, mode) => {
+    const sentenceIndex = getSavedIndex(moduleId, mode);
+    if (sentenceIndex <= 0) return 0;
+    // We can't easily pre-compute the merged index here since we don't have
+    // the module data loaded yet. Instead, we just pass the sentence index
+    // and let the LessonPlayer handle it.
+    return sentenceIndex;
+  }, [getSavedIndex]);
 
   return (
     <div className="app-container animate-fade-in">
       <header className="app-header">
-        <div className="app-logo" onClick={handleBackToModules} style={{ cursor: 'pointer' }}>
+        <div className="app-logo" onClick={handleBackToDashboard} style={{ cursor: 'pointer' }}>
           GemLang
         </div>
         <button
           className="btn-settings"
-          onClick={() => setView(view === 'settings' ? 'modules' : 'settings')}
+          onClick={() => setView(view === 'settings' ? 'dashboard' : 'settings')}
           title="Settings"
           aria-label="Settings"
         >
@@ -93,7 +152,21 @@ function App() {
             settings={settings}
             onUpdate={updateSetting}
             onReset={resetSettings}
-            onBack={handleBackToModules}
+            onResetProgress={resetProgress}
+            onBack={handleBackToDashboard}
+          />
+        ) : view === 'dashboard' ? (
+          <Dashboard
+            modules={modulesManifest}
+            stats={stats}
+            progress={progress}
+            getModuleStatus={getModuleStatus}
+            getModuleProgress={getModuleProgress}
+            getNextSuggestedModule={getNextSuggestedModule}
+            getRefreshModules={getRefreshModules}
+            onSelectModule={handleSelectModule}
+            onBrowseAll={() => setView('modules')}
+            practiceMode={practiceMode}
           />
         ) : view === 'modules' ? (
           <ModuleSelector
@@ -101,6 +174,9 @@ function App() {
             onSelect={handleSelectModule}
             practiceMode={practiceMode}
             onPracticeModeChange={setPracticeMode}
+            getModuleStatus={getModuleStatus}
+            getModuleProgress={getModuleProgress}
+            onBack={() => setView('dashboard')}
           />
         ) : isModuleLoading || !activeModule ? (
           <div className="lesson-finished glass-panel">
@@ -117,8 +193,11 @@ function App() {
             moduleIndex={activeModuleIndex}
             practiceMode={practiceMode}
             settings={settings}
-            onBack={handleBackToModules}
+            onBack={handleBackToDashboard}
             onNextModule={handleNextModule}
+            saveModuleProgress={saveModuleProgress}
+            completeModule={completeModule}
+            getSavedIndex={getSavedMergedIndex}
           />
         )}
       </main>
