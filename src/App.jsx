@@ -3,6 +3,7 @@ import Dashboard from './components/Dashboard';
 import ModuleSelector from './components/ModuleSelector';
 import LessonPlayer from './components/LessonPlayer';
 import SettingsPanel from './components/SettingsPanel';
+import Onboarding from './components/Onboarding';
 import useSettings from './hooks/useSettings';
 import useProgress from './hooks/useProgress';
 import modulesManifest from './data/modules-manifest.json';
@@ -34,6 +35,7 @@ function App() {
     getRefreshModules,
     stats,
     resetProgress,
+    setStartingLevel,
   } = useProgress(modulesManifest);
 
   const loadModuleAtIndex = useCallback(async (index) => {
@@ -147,7 +149,14 @@ function App() {
       </header>
 
       <main className="main-content">
-        {view === 'settings' ? (
+        {!progress.hasChosenLevel ? (
+          <Onboarding 
+            modules={modulesManifest} 
+            onComplete={(levelType, moduleId) => {
+              setStartingLevel(levelType, moduleId);
+            }} 
+          />
+        ) : view === 'settings' ? (
           <SettingsPanel
             settings={settings}
             onUpdate={updateSetting}

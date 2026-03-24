@@ -6,13 +6,18 @@ const EMPTY_PROGRESS = {
   modules: {},
   lastModuleId: null,
   lastPracticeMode: 'guided',
+  hasChosenLevel: false,
 };
 
 const loadProgress = () => {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) {
-      return { ...EMPTY_PROGRESS, ...JSON.parse(raw) };
+      const parsed = JSON.parse(raw);
+      if (parsed.modules && Object.keys(parsed.modules).length > 0 && parsed.hasChosenLevel === undefined) {
+         parsed.hasChosenLevel = true;
+      }
+      return { ...EMPTY_PROGRESS, ...parsed };
     }
   } catch {
     /* corrupted data – fall back to empty */
@@ -184,6 +189,44 @@ export default function useProgress(modulesManifest) {
     persistProgress(empty);
   }, []);
 
+  /** Set starting level for new users */
+  const setStartingLevel = useCallback((levelType, specificModuleId = null) => {
+    update((prev) => {
+      const updatedModules = { ...prev.modules };
+      let targetIndex = 0;
+      
+      if (levelType === 'granular' && specificModuleId) {
+        targetIndex = modulesManifest.findIndex(m => m.id === specificModuleId);
+      } else if (levelType === 'Intermediate') {
+        targetIndex = modulesManifest.findIndex(m => m.level === 'Intermediate');
+      } else if (levelType === 'Advanced') {
+        targetIndex = modulesManifest.findIndex(m => m.level === 'Advanced');
+      }
+      
+      if (targetIndex > 0) {
+        for (let i = 0; i < targetIndex; i++) {
+          const m = modulesManifest[i];
+          if (!updatedModules[m.id]) {
+            updatedModules[m.id] = {
+              currentIndex: m.sentenceCount || 10,
+              totalSentences: m.sentenceCount || 10,
+              completedAt: new Date().toISOString(),
+              confidence: 'confident',
+              lastAccessedAt: new Date().toISOString(),
+              timesCompleted: 1,
+            };
+          }
+        }
+      }
+
+      return {
+        ...prev,
+        hasChosenLevel: true,
+        modules: updatedModules,
+      };
+    });
+  }, [update, modulesManifest]);
+
   return {
     progress,
     saveModuleProgress,
@@ -194,5 +237,6 @@ export default function useProgress(modulesManifest) {
     getRefreshModules,
     stats,
     resetProgress,
+    setStartingLevel,
   };
 }
