@@ -68,3 +68,19 @@
   gap: var(--spacing-sm);
   margin-top: var(--spacing-sm);
 }
+
+.btn-guest {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  transition: color var(--transition-fast);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.btn-guest:hover {
+  color: var(--text-main);
+}

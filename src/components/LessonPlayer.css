@@ -491,6 +491,22 @@
   margin: 0.15em 0;
 }
 
+/* ── Story Intro (variation of grammar intro) ──────────── */
+.story-intro-panel {
+  border-color: rgba(251, 191, 36, 0.25) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(251, 191, 36, 0.06) 0%,
+    rgba(168, 85, 247, 0.04) 100%
+  ) !important;
+}
+
+.story-intro-badge {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(234, 179, 8, 0.2)) !important;
+  border-color: rgba(251, 191, 36, 0.35) !important;
+  color: #fbbf24 !important;
+}
+
 /* ── Translation Challenge ───────────────────────────── */
 .challenge-panel {
   border: 1px solid rgba(234, 179, 8, 0.25) !important;

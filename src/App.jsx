@@ -15,6 +15,7 @@ const moduleLoaders = import.meta.glob('./data/modules/*.json');
 
 function App() {
   const [session, setSession] = useState(null);
+  const [guestMode, setGuestMode] = useState(false);
   const [isInitializing, setIsInitializing] = useState(true);
   const [view, setView] = useState('dashboard'); // 'dashboard' | 'modules' | 'settings' | 'lesson'
   const [activeModuleIndex, setActiveModuleIndex] = useState(null);
@@ -159,18 +160,32 @@ function App() {
           GemLang
         </div>
         <div style={{ display: 'flex', gap: 'var(--spacing-sm)' }}>
-          {session && (
+          {(session || guestMode) && (
             <button
               className="btn-settings"
-              onClick={handleLogout}
-              title="Sign Out"
-              aria-label="Sign Out"
+              onClick={() => {
+                if (session) {
+                  handleLogout();
+                } else {
+                  setGuestMode(false);
+                }
+              }}
+              title={session ? "Sign Out" : "Sign In"}
+              aria-label={session ? "Sign Out" : "Sign In"}
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
-                <polyline points="16 17 21 12 16 7" />
-                <line x1="21" y1="12" x2="9" y2="12" />
-              </svg>
+              {session ? (
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                  <polyline points="16 17 21 12 16 7" />
+                  <line x1="21" y1="12" x2="9" y2="12" />
+                </svg>
+              ) : (
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                  <polyline points="10 17 15 12 10 7" />
+                  <line x1="15" y1="12" x2="3" y2="12" />
+                </svg>
+              )}
             </button>
           )}
           <button
@@ -192,8 +207,8 @@ function App() {
           <div className="glass-panel" style={{ padding: '2rem', textAlign: 'center' }}>
             <p>Loading...</p>
           </div>
-        ) : !session ? (
-          <Auth />
+        ) : (!session && !guestMode) ? (
+          <Auth onGuestMode={() => setGuestMode(true)} />
         ) : !progress.hasChosenLevel ? (
           <Onboarding 
             modules={modulesManifest} 

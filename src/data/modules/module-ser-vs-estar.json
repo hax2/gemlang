@@ -1,0 +1,356 @@
+{
+  "id": "module-ser-vs-estar",
+  "title": "Grammar: Ser vs. Estar",
+  "description": "Understand the two verbs for 'to be' and when to use them.",
+  "level": "Beginner",
+  "sentences": [
+    {
+      "id": "msers-s1",
+      "spanish": "Yo soy de España.",
+      "english": "I am from Spain.",
+      "wordMeanings": {
+        "Yo": "I",
+        "soy": "am",
+        "de": "from",
+        "España": "Spain"
+      }
+    },
+    {
+      "id": "msers-s2",
+      "spanish": "Yo estoy en España.",
+      "english": "I am in Spain.",
+      "wordMeanings": {
+        "Yo": "I",
+        "estoy": "am",
+        "en": "in",
+        "España": "Spain"
+      }
+    },
+    {
+      "id": "msers-s3",
+      "spanish": "La sopa está fría.",
+      "english": "The soup is cold.",
+      "wordMeanings": {
+        "La": "the",
+        "sopa": "soup",
+        "está": "is",
+        "fría": "cold"
+      }
+    },
+    {
+      "id": "msers-s4",
+      "spanish": "El hielo es frío.",
+      "english": "Ice is cold.",
+      "wordMeanings": {
+        "El": "the",
+        "hielo": "ice",
+        "es": "is",
+        "frío": "cold"
+      }
+    },
+    {
+      "id": "msers-s5",
+      "spanish": "Ella es doctora.",
+      "english": "She is a doctor.",
+      "wordMeanings": {
+        "Ella": "she",
+        "es": "is",
+        "doctora": "doctor"
+      }
+    },
+    {
+      "id": "msers-s6",
+      "spanish": "Ella está triste hoy.",
+      "english": "She is sad today.",
+      "wordMeanings": {
+        "Ella": "she",
+        "está": "is",
+        "triste": "sad",
+        "hoy": "today"
+      }
+    },
+    {
+      "id": "msers-s7",
+      "spanish": "Nosotros somos altos.",
+      "english": "We are tall.",
+      "wordMeanings": {
+        "Nosotros": "we",
+        "somos": "are",
+        "altos": "tall"
+      }
+    },
+    {
+      "id": "msers-s8",
+      "spanish": "Nosotros estamos cansados.",
+      "english": "We are tired.",
+      "wordMeanings": {
+        "Nosotros": "we",
+        "estamos": "are",
+        "cansados": "tired"
+      }
+    },
+    {
+      "id": "msers-s9",
+      "spanish": "La fiesta es en mi casa.",
+      "english": "The party is at my house.",
+      "wordMeanings": {
+        "La": "the",
+        "fiesta": "party",
+        "es": "is",
+        "en": "in/at",
+        "mi": "my",
+        "casa": "house"
+      }
+    },
+    {
+      "id": "msers-s10",
+      "spanish": "La casa está aquí.",
+      "english": "The house is here.",
+      "wordMeanings": {
+        "La": "the",
+        "casa": "house",
+        "está": "is",
+        "aquí": "here"
+      }
+    },
+    {
+      "id": "msers-s11",
+      "spanish": "¿Dónde es la clase de español?",
+      "english": "Where is the Spanish class?",
+      "wordMeanings": {
+        "Dónde": "where",
+        "es": "is (event)",
+        "la": "the",
+        "clase": "class",
+        "de": "of",
+        "español": "Spanish"
+      }
+    },
+    {
+      "id": "msers-s12",
+      "spanish": "La clase es en la sala diez.",
+      "english": "The class is in room ten.",
+      "wordMeanings": {
+        "La": "the",
+        "clase": "class",
+        "es": "is",
+        "en": "in",
+        "la": "the",
+        "sala": "room",
+        "diez": "ten"
+      }
+    },
+    {
+      "id": "msers-s13",
+      "spanish": "¿Dónde está el profesor?",
+      "english": "Where is the teacher?",
+      "wordMeanings": {
+        "Dónde": "where",
+        "está": "is (location)",
+        "el": "the",
+        "profesor": "teacher"
+      }
+    },
+    {
+      "id": "msers-s14",
+      "spanish": "El profesor está en su oficina.",
+      "english": "The teacher is in his office.",
+      "wordMeanings": {
+        "El": "the",
+        "profesor": "teacher",
+        "está": "is",
+        "en": "in",
+        "su": "his",
+        "oficina": "office"
+      }
+    },
+    {
+      "id": "msers-s15",
+      "spanish": "Mis hermanos son muy graciosos.",
+      "english": "My brothers are very funny.",
+      "wordMeanings": {
+        "Mis": "my (plural)",
+        "hermanos": "brothers",
+        "son": "are (characteristic)",
+        "muy": "very",
+        "graciosos": "funny"
+      }
+    },
+    {
+      "id": "msers-s16",
+      "spanish": "Yo estoy muy aburrido hoy.",
+      "english": "I am very bored today.",
+      "wordMeanings": {
+        "Yo": "I",
+        "estoy": "am (state)",
+        "muy": "very",
+        "aburrido": "bored",
+        "hoy": "today"
+      }
+    },
+    {
+      "id": "msers-s17",
+      "spanish": "La película es muy aburrida.",
+      "english": "The movie is very boring.",
+      "wordMeanings": {
+        "La": "the",
+        "película": "movie",
+        "es": "is (characteristic)",
+        "muy": "very",
+        "aburrida": "boring"
+      }
+    },
+    {
+      "id": "msers-s18",
+      "spanish": "Este pastel es de chocolate.",
+      "english": "This cake is made of chocolate.",
+      "wordMeanings": {
+        "Este": "this",
+        "pastel": "cake",
+        "es": "is",
+        "de": "of/from",
+        "chocolate": "chocolate"
+      }
+    },
+    {
+      "id": "msers-s19",
+      "spanish": "Este pastel está muy rico.",
+      "english": "This cake is very tasty.",
+      "wordMeanings": {
+        "Este": "this",
+        "pastel": "cake",
+        "está": "is (condition/taste)",
+        "muy": "very",
+        "rico": "tasty/rich"
+      }
+    },
+    {
+      "id": "msers-s20",
+      "spanish": "Somos amigos desde hace mucho.",
+      "english": "We are friends since a long time ago.",
+      "wordMeanings": {
+        "Somos": "we are (identity)",
+        "amigos": "friends",
+        "desde": "since",
+        "hace": "ago",
+        "mucho": "a lot"
+      }
+    },
+    {
+      "id": "msers-s21",
+      "spanish": "Estamos listos para salir.",
+      "english": "We are ready to leave.",
+      "wordMeanings": {
+        "Estamos": "we are",
+        "listos": "ready",
+        "para": "for",
+        "salir": "to leave"
+      }
+    },
+    {
+      "id": "msers-s22",
+      "spanish": "Él es listo y saca buenas notas.",
+      "english": "He is clever and gets good grades.",
+      "wordMeanings": {
+        "Él": "he",
+        "es": "is",
+        "listo": "clever/smart",
+        "y": "and",
+        "saca": "gets/takes out",
+        "buenas": "good",
+        "notas": "grades"
+      }
+    },
+    {
+      "id": "msers-s23",
+      "spanish": "Estos zapatos son míos.",
+      "english": "These shoes are mine.",
+      "wordMeanings": {
+        "Estos": "these",
+        "zapatos": "shoes",
+        "son": "are",
+        "míos": "mine"
+      }
+    },
+    {
+      "id": "msers-s24",
+      "spanish": "Los zapatos están limpios.",
+      "english": "The shoes are clean.",
+      "wordMeanings": {
+        "Los": "the",
+        "zapatos": "shoes",
+        "están": "are (state)",
+        "limpios": "clean"
+      }
+    },
+    {
+      "id": "msers-s25",
+      "spanish": "Es de noche y estamos en casa.",
+      "english": "It is night and we are at home.",
+      "wordMeanings": {
+        "Es": "it is",
+        "de": "of",
+        "noche": "night",
+        "y": "and",
+        "estamos": "we are",
+        "en": "in/at",
+        "casa": "home"
+      }
+    }
+  ],
+  "grammarExplanation": "Both 'ser' and 'estar' mean 'to be'. Use 'ser' for DOCTOR cases: Definitions, Origins, Characteristics, Time/Dates, Occupations, and Relationships. Use 'estar' for PLACE cases: Position, Location, Action (present progressive), Condition, and Emotion. Notice that events (la fiesta es...) use 'ser' despite being locations, because they take place.",
+  "vocabulary": {
+    "soy": {
+      "mnemonic": "I am soy.",
+      "explanation": "First-person present of ser."
+    },
+    "estoy": {
+      "mnemonic": "I am standing here.",
+      "explanation": "First-person present of estar."
+    },
+    "sopa": {
+      "mnemonic": "Soup is sopa.",
+      "explanation": "Means 'soup'."
+    },
+    "fría": {
+      "mnemonic": "Freezing cold.",
+      "explanation": "Means 'cold'. Also feminine to match sopa."
+    },
+    "hielo": {
+      "mnemonic": "Yellow ice.",
+      "explanation": "Means 'ice'."
+    },
+    "doctora": {
+      "mnemonic": "Doctor.",
+      "explanation": "Means 'doctor (female)'."
+    },
+    "triste": {
+      "mnemonic": "Tragic and sad.",
+      "explanation": "Means 'sad'."
+    },
+    "somos": {
+      "mnemonic": "We are so much more.",
+      "explanation": "First-person plural of ser."
+    },
+    "altos": {
+      "mnemonic": "Altitude.",
+      "explanation": "Means 'tall'."
+    },
+    "estamos": {
+      "mnemonic": "We stand together.",
+      "explanation": "First-person plural of estar."
+    },
+    "cansados": {
+      "mnemonic": "Can’t do it because I’m tired.",
+      "explanation": "Means 'tired'."
+    },
+    "fiesta": {
+      "mnemonic": "Festive party.",
+      "explanation": "Means 'party' or 'festival'."
+    },
+    "aquí": {
+      "mnemonic": "A key is here.",
+      "explanation": "Means 'here'."
+    }
+  }
+}

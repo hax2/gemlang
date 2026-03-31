@@ -24,6 +24,23 @@
     "file": "module-3.json"
   },
   {
+    "id": "module-ser-vs-estar",
+    "title": "Grammar: Ser vs. Estar",
+    "description": "Understand the two verbs for 'to be' and when to use them.",
+    "level": "Beginner",
+    "sentenceCount": 25,
+    "file": "module-ser-vs-estar.json"
+  },
+  {
+    "id": "story-1",
+    "title": "📖 Story: Ana's New Friend",
+    "description": "A short story using what you've learned about greetings, locations, and descriptions.",
+    "type": "story",
+    "level": "Beginner",
+    "sentenceCount": 12,
+    "file": "story-1.json"
+  },
+  {
     "id": "module-4",
     "title": "Chapter 4: Possession",
     "description": "Talk about what you have using 'tener'.",
@@ -64,6 +81,23 @@
     "file": "module-8.json"
   },
   {
+    "id": "module-saber-vs-conocer",
+    "title": "Grammar: Saber vs. Conocer",
+    "description": "Learn the difference between the two verbs for 'to know'.",
+    "level": "Beginner",
+    "sentenceCount": 25,
+    "file": "module-saber-vs-conocer.json"
+  },
+  {
+    "id": "story-2",
+    "title": "📖 Story: A Day with Marta",
+    "description": "Follow Marta through her daily routine using verbs, possession, and likes.",
+    "type": "story",
+    "level": "Beginner",
+    "sentenceCount": 14,
+    "file": "story-2.json"
+  },
+  {
     "id": "module-9",
     "title": "Chapter 9: The Near Future",
     "description": "Express what you are going to do using 'ir + a'.",
@@ -88,12 +122,37 @@
     "file": "module-11.json"
   },
   {
+    "id": "module-past-comparison",
+    "title": "Grammar: Preterite vs. Imperfect",
+    "description": "Understand when to use completed actions versus ongoing background actions.",
+    "level": "Beginner",
+    "sentenceCount": 25,
+    "file": "module-preterite-vs-imperfect.json"
+  },
+  {
+    "id": "story-3",
+    "title": "📖 Story: Carlos's Weekend Trip",
+    "description": "A story about a weekend trip, told using the near future, preterite, and imperfect tenses.",
+    "type": "story",
+    "level": "Beginner",
+    "sentenceCount": 12,
+    "file": "story-3.json"
+  },
+  {
     "id": "module-12",
     "title": "Chapter 12: The Present Perfect",
     "description": "Talk about what you 'have done'.",
     "level": "Beginner",
     "sentenceCount": 48,
     "file": "module-12.json"
+  },
+  {
+    "id": "module-preterite-vs-present-perfect",
+    "title": "Grammar: Preterite vs. Present Perfect",
+    "description": "Learn when to use the simple past versus the 'have done' past.",
+    "level": "Beginner",
+    "sentenceCount": 25,
+    "file": "module-preterite-vs-present-perfect.json"
   },
   {
     "id": "module-13",
@@ -118,6 +177,23 @@
     "level": "Beginner",
     "sentenceCount": 27,
     "file": "module-15.json"
+  },
+  {
+    "id": "module-por-vs-para",
+    "title": "Grammar: Por vs. Para",
+    "description": "Learn the difference between 'por' and 'para', one of the trickiest concepts in Spanish.",
+    "level": "Intermediate",
+    "sentenceCount": 25,
+    "file": "module-por-vs-para.json"
+  },
+  {
+    "id": "story-4",
+    "title": "📖 Story: The Missing Phone",
+    "description": "A mystery story using object pronouns, the present perfect, and por vs para.",
+    "type": "story",
+    "level": "Intermediate",
+    "sentenceCount": 12,
+    "file": "story-4.json"
   },
   {
     "id": "module-16",
@@ -160,6 +236,15 @@
     "file": "module-20.json"
   },
   {
+    "id": "story-5",
+    "title": "📖 Story: Advice for a Friend",
+    "description": "A story about giving advice, using commands and the subjunctive mood.",
+    "type": "story",
+    "level": "Beginner",
+    "sentenceCount": 12,
+    "file": "story-5.json"
+  },
+  {
     "id": "module-21",
     "title": "Chapter 21: Real Conditionals",
     "description": "Talk about what happens if a condition is met.",
@@ -190,6 +275,15 @@
     "level": "Beginner",
     "sentenceCount": 31,
     "file": "module-24.json"
+  },
+  {
+    "id": "story-6",
+    "title": "📖 Story: What Would You Do?",
+    "description": "A story using conditionals, acabar de, and llevar + gerund.",
+    "type": "story",
+    "level": "Beginner",
+    "sentenceCount": 12,
+    "file": "story-6.json"
   },
   {
     "id": "module-25",

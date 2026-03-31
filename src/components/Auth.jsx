@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { supabase } from '../supabaseClient'
 import './Auth.css'
 
-export default function Auth() {
+export default function Auth({ onGuestMode }) {
   const [loading, setLoading] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -78,6 +78,18 @@ export default function Auth() {
             Sign Up
           </button>
         </div>
+
+        {onGuestMode && (
+          <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+            <button
+              className="btn-guest"
+              onClick={onGuestMode}
+              type="button"
+            >
+              Continue as Guest
+            </button>
+          </div>
+        )}
       </div>
     </div>
   )

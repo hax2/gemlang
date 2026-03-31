@@ -226,6 +226,31 @@
   font-weight: 500;
 }
 
+/* Story cards */
+.story-card {
+  border-left: 3px solid rgba(251, 191, 36, 0.6);
+}
+
+.story-card::before {
+  background: radial-gradient(circle at top right, rgba(251, 191, 36, 0.12), transparent 70%) !important;
+}
+
+.story-card:hover {
+  border-left-color: rgba(251, 191, 36, 0.9);
+}
+
+.status-story {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+}
+
+.module-badges-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 700px) {
   .practice-mode-toggle {
     grid-template-columns: 1fr;

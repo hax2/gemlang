@@ -68,22 +68,30 @@ const ModuleSelector = ({
           const status = getModuleStatus ? getModuleStatus(mod.id) : 'not-started';
           const prog = getModuleProgress ? getModuleProgress(mod.id) : null;
           const badge = STATUS_BADGES[status];
+          const isStory = mod.type === 'story';
 
           return (
             <div 
               key={mod.id} 
-              className={`module-card glass-panel ${status !== 'not-started' ? 'has-progress' : ''}`}
+              className={`module-card glass-panel ${status !== 'not-started' ? 'has-progress' : ''} ${isStory ? 'story-card' : ''}`}
               onClick={() => onSelect(mod)}
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <div className="module-card-content">
                 <div className="module-card-top-row">
                   <span className="module-level">{mod.level}</span>
-                  {badge && (
-                    <span className={`module-status-badge ${badge.className}`}>
-                      {badge.icon} {badge.label}
-                    </span>
-                  )}
+                  <div className="module-badges-row">
+                    {isStory && (
+                      <span className="module-status-badge status-story">
+                        📖 Story
+                      </span>
+                    )}
+                    {badge && (
+                      <span className={`module-status-badge ${badge.className}`}>
+                        {badge.icon} {badge.label}
+                      </span>
+                    )}
+                  </div>
                 </div>
                 <h2 className="module-title">{mod.title}</h2>
                 <p className="module-description">{mod.description}</p>
