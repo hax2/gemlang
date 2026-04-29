@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef, useLayoutEffect } from 'react';
+import { createPortal } from 'react-dom';
 import './Tutorial.css';
 
 const TUTORIAL_SEEN_KEY = 'gemlang-tutorial-seen';
@@ -236,7 +237,7 @@ const Tutorial = ({ onClose }) => {
 
   const isCentered = !spotlightRect;
 
-  return (
+  return createPortal(
     <div className={`tutorial-overlay ${spotlightRect ? 'has-spotlight' : ''}`} onClick={handleSkip}>
       {/* SVG spotlight mask */}
       {spotlightRect && (
@@ -358,7 +359,8 @@ const Tutorial = ({ onClose }) => {
         {/* Step counter */}
         <span className="tutorial-counter">{step + 1} of {STEPS.length}</span>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 
