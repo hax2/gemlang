@@ -535,7 +535,7 @@
   "grammarExplanation": "The present perfect describes what has happened, formed with 'haber + past participle.'\n\nConjugate 'haber':\n• He, Has, Ha, Hemos, Han\n\nPast participles:\n• -AR → -ado: hablado, comprado, estudiado\n• -ER/-IR → -ido: comido, bebido, vivido\n\nIrregulars: abierto (abrir), escrito (escribir), dicho (decir), hecho (hacer), visto (ver)\n\nExample: 'He comido pan' = I have eaten bread.",
   "vocabulary": {
     "he": {
-      "mnemonic": "'He' is the 'have' helper verb.",
+      "mnemonic": "The root verb Haber has 2 vowel sounds 'a' and 'e'. 'ha' means 'he has' and 'he' means 'I have'.",
       "explanation": "Auxiliary for present perfect."
     },
     "pan": {
@@ -543,11 +543,11 @@
       "explanation": "Means 'bread'. Masculine noun."
     },
     "has": {
-      "mnemonic": "Same as English 'has' — you have (done).",
+      "mnemonic": "The root verb Haber has 2 vowel sounds. The first sound 'a' gives us 'he has' and adding an s gives us 'has' 'you have'.",
       "explanation": "Second person auxiliary."
     },
     "ha": {
-      "mnemonic": "'Ha! he has done it!'",
+      "mnemonic": "The root verb Haber has 2 vowel sounds. The first sound 'a' gives us 'he has'.",
       "explanation": "Third person auxiliary."
     },
     "agua": {
@@ -555,7 +555,7 @@
       "explanation": "Fem but uses 'el agua'."
     },
     "hemos": {
-      "mnemonic": "'Hemos = we have (hem-os).'",
+      "mnemonic": "'he' is 'I have' and 'we' is the plural of 'I' so we make 'he' plural and get 'hemos'.",
       "explanation": "First person plural auxiliary."
     },
     "café": {
@@ -563,7 +563,7 @@
       "explanation": "Means 'coffee' or 'café'."
     },
     "han": {
-      "mnemonic": "'They han-d it in' — they have done.",
+      "mnemonic": "'ha' is 'he has' and 'han' is 'they have'.",
       "explanation": "Third person plural auxiliary."
     },
     "casa": {
