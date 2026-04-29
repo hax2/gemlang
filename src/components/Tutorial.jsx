@@ -7,13 +7,13 @@ const STEPS = [
   {
     icon: '🔊',
     title: 'Listen to the Sentence',
-    body: 'Tap the play button to hear the sentence in Spanish. Focus on the sounds, rhythm, and intonation — just listen.',
+    body: 'Tap the play button to hear the sentence in Spanish. You can listen as many times as you want. See if you can understand the sentence.',
     accent: 'listen',
   },
   {
     icon: '🗣️',
     title: 'Repeat It Out Loud',
-    body: 'Say the sentence out loud yourself. This is the most important step — producing the sounds helps your brain internalize the language much faster than just reading.',
+    body: "Say the sentence out loud yourself. Don't skip this step. Producing the sounds of the language comfortably takes practice.",
     accent: 'speak',
   },
   {
