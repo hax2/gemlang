@@ -50,3 +50,17 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .app-header {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .app-logo {
+    font-size: 1.4rem;
+  }
+}
