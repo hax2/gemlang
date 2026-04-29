@@ -255,4 +255,40 @@
   .practice-mode-toggle {
     grid-template-columns: 1fr;
   }
+
+  .module-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .module-card {
+    padding: 1.25rem;
+  }
+
+  .module-level {
+    display: none;
+  }
+
+  .module-card-top-row {
+    justify-content: flex-end;
+    margin-bottom: 0.5rem;
+  }
+
+  .module-title {
+    font-size: 1.25rem;
+  }
+
+  .module-main-title {
+    font-size: 2.25rem;
+  }
+
+  .module-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .module-meta button {
+    width: 100%;
+  }
 }

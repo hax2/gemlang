@@ -305,7 +305,6 @@
   font-size: 1rem;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
   .dashboard-title {
     font-size: 2rem;
@@ -331,5 +330,10 @@
 
   .cta-module-title {
     white-space: normal;
+  }
+
+  .cta-module-level,
+  .refresh-level {
+    display: none;
   }
 }
