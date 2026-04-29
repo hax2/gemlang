@@ -187,6 +187,11 @@ export default function useProgress(modulesManifest) {
     const empty = { ...EMPTY_PROGRESS };
     setProgress(empty);
     persistProgress(empty);
+    try {
+      localStorage.removeItem('gemlang-tutorial-seen');
+    } catch {
+      // ignore
+    }
   }, []);
 
   /** Set starting level for new users */
