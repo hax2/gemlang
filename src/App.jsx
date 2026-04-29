@@ -214,6 +214,20 @@ function App() {
             modules={modulesManifest} 
             onComplete={(levelType, moduleId) => {
               setStartingLevel(levelType, moduleId);
+              
+              let targetIndex = 0;
+              if (levelType === 'granular' && moduleId) {
+                targetIndex = modulesManifest.findIndex(m => m.id === moduleId);
+              } else if (levelType === 'Intermediate') {
+                targetIndex = modulesManifest.findIndex(m => m.level === 'Intermediate');
+              } else if (levelType === 'Advanced') {
+                targetIndex = modulesManifest.findIndex(m => m.level === 'Advanced');
+              }
+              
+              const targetModule = targetIndex >= 0 ? modulesManifest[targetIndex] : modulesManifest[0];
+              if (targetModule) {
+                handleSelectModule(targetModule);
+              }
             }} 
           />
         ) : view === 'settings' ? (
