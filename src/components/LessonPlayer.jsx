@@ -142,11 +142,16 @@ const LessonPlayer = ({
   );
   const [showSelfAssessment, setShowSelfAssessment] = useState(false);
   const [hasAssessed, setHasAssessed] = useState(false);
-  const [showTutorial, setShowTutorial] = useState(() => {
-    const hasGrammar = !!((module.grammarExplanation || module.storyIntro) && practiceMode !== 'testing');
-    return !hasGrammar && !hasSeenTutorial();
-  });
+  const needsTutorial = !hasSeenTutorial();
+  const [showTutorial, setShowTutorial] = useState(() => needsTutorial && !showGrammarIntro);
   const [showResumeToast, setShowResumeToast] = useState(() => resumeIndex > 0);
+
+  // Show tutorial after grammar intro is dismissed (first time only)
+  useEffect(() => {
+    if (!showGrammarIntro && needsTutorial && !hasSeenTutorial()) {
+      setShowTutorial(true);
+    }
+  }, [showGrammarIntro, needsTutorial]);
 
   // Dismiss resume toast after a moment
   useEffect(() => {
@@ -172,8 +177,6 @@ const LessonPlayer = ({
     window.addEventListener('resize', checkDesktop);
     return () => window.removeEventListener('resize', checkDesktop);
   }, []);
-
-
 
   const mergedItems = useMemo(() => {
     if (isPureTestingMode) {
@@ -209,13 +212,6 @@ const LessonPlayer = ({
       setShowSelfAssessment(true);
     }
   }, [isFinished, hasAssessed]);
-
-  // Show tutorial when grammar intro is dismissed
-  useEffect(() => {
-    if (!showGrammarIntro && !isFinished && !isChallenge && !hasSeenTutorial()) {
-      setShowTutorial(true);
-    }
-  }, [showGrammarIntro, isFinished, isChallenge]);
 
   useEffect(() => {
     if (autoPlay && !showGrammarIntro && !isChallenge && sentence?.spanish) {
@@ -291,16 +287,16 @@ const LessonPlayer = ({
 
       if (showTutorial) return;
 
+      if (key === '?') {
+        setShowTutorial(true);
+        return;
+      }
+
       if (showGrammarIntro) {
         if (key === 'enter' || key === ' ' || key === 'arrowright') {
           event.preventDefault();
           setShowGrammarIntro(false);
         }
-        return;
-      }
-
-      if (key === '?') {
-        setShowTutorial(true);
         return;
       }
 
