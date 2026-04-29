@@ -173,11 +173,7 @@ const LessonPlayer = ({
     return () => window.removeEventListener('resize', checkDesktop);
   }, []);
 
-  useEffect(() => {
-    if (!showGrammarIntro && !isFinished && !isChallenge && !hasSeenTutorial()) {
-      setShowTutorial(true);
-    }
-  }, [showGrammarIntro, isFinished, isChallenge]);
+
 
   const mergedItems = useMemo(() => {
     if (isPureTestingMode) {
@@ -213,6 +209,13 @@ const LessonPlayer = ({
       setShowSelfAssessment(true);
     }
   }, [isFinished, hasAssessed]);
+
+  // Show tutorial when grammar intro is dismissed
+  useEffect(() => {
+    if (!showGrammarIntro && !isFinished && !isChallenge && !hasSeenTutorial()) {
+      setShowTutorial(true);
+    }
+  }, [showGrammarIntro, isFinished, isChallenge]);
 
   useEffect(() => {
     if (autoPlay && !showGrammarIntro && !isChallenge && sentence?.spanish) {
