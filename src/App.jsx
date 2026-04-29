@@ -18,6 +18,7 @@ function App() {
   const [guestMode, setGuestMode] = useState(false);
   const [isInitializing, setIsInitializing] = useState(true);
   const [view, setView] = useState('dashboard'); // 'dashboard' | 'modules' | 'settings' | 'lesson'
+  const [previousView, setPreviousView] = useState('dashboard');
   const [activeModuleIndex, setActiveModuleIndex] = useState(null);
   const [activeModule, setActiveModule] = useState(null);
   const [isModuleLoading, setIsModuleLoading] = useState(false);
@@ -165,7 +166,9 @@ function App() {
               className="btn-settings"
               onClick={() => {
                 if (session) {
-                  handleLogout();
+                  if (window.confirm("Are you sure you want to sign out?")) {
+                    handleLogout();
+                  }
                 } else {
                   setGuestMode(false);
                 }
@@ -190,7 +193,14 @@ function App() {
           )}
           <button
             className="btn-settings"
-            onClick={() => setView(view === 'settings' ? 'dashboard' : 'settings')}
+            onClick={() => {
+              if (view === 'settings') {
+                setView(previousView);
+              } else {
+                setPreviousView(view);
+                setView('settings');
+              }
+            }}
             title="Settings"
             aria-label="Settings"
           >
@@ -236,7 +246,7 @@ function App() {
             onUpdate={updateSetting}
             onReset={resetSettings}
             onResetProgress={resetProgress}
-            onBack={handleBackToDashboard}
+            onBack={() => setView(previousView)}
           />
         ) : view === 'dashboard' ? (
           <Dashboard
