@@ -1,0 +1,313 @@
+/* ═══════════════════════════════════════════════════════
+   TUTORIAL OVERLAY
+   ═══════════════════════════════════════════════════════ */
+
+/* Backdrop */
+.tutorial-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: tutorialFadeIn 0.35s ease-out;
+  padding: 1rem;
+}
+
+@keyframes tutorialFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Card */
+.tutorial-card {
+  position: relative;
+  max-width: 440px;
+  width: 100%;
+  padding: 2.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  border: 1px solid rgba(168, 85, 247, 0.25) !important;
+  background: linear-gradient(
+    160deg,
+    rgba(30, 20, 60, 0.95) 0%,
+    rgba(15, 15, 25, 0.97) 100%
+  ) !important;
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(168, 85, 247, 0.08);
+  animation: tutorialCardIn 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes tutorialCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Close / Skip X */
+.tutorial-skip {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.tutorial-skip:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+}
+
+/* ── Progress Dots ──────────────────────────── */
+.tutorial-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.tutorial-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tutorial-dot.active {
+  width: 24px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--accent-base), var(--accent-glow));
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.tutorial-dot.done {
+  background: rgba(168, 85, 247, 0.45);
+}
+
+.tutorial-dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ── Step content ───────────────────────────── */
+.tutorial-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  min-height: 180px;
+  justify-content: center;
+}
+
+.tutorial-step-enter {
+  animation: tutorialStepIn 0.3s ease-out;
+}
+
+.tutorial-step-exit {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.2s ease-in;
+}
+
+@keyframes tutorialStepIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Icon circle – changes tint per step */
+.tutorial-icon-wrapper {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.tutorial-icon {
+  font-size: 2rem;
+}
+
+/* Accent colors per step */
+.tutorial-accent-listen {
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.tutorial-accent-speak {
+  background: rgba(234, 179, 8, 0.12);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+.tutorial-accent-text {
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.tutorial-accent-word {
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.tutorial-accent-translate {
+  background: rgba(251, 146, 60, 0.12);
+  border: 1px solid rgba(251, 146, 60, 0.3);
+}
+
+.tutorial-accent-flow {
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.15),
+    rgba(56, 189, 248, 0.12)
+  );
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.tutorial-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+.tutorial-body {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 360px;
+}
+
+/* Step counter */
+.tutorial-counter {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.25);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+/* ── Navigation ─────────────────────────────── */
+.tutorial-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.75rem;
+}
+
+.tutorial-btn-prev {
+  padding: 0.6rem 1.2rem !important;
+  font-size: 0.9rem !important;
+}
+
+.tutorial-btn-next {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+.tutorial-btn-skip-text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.tutorial-btn-skip-text:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ═══════════════════════════════════════════════════════
+   HELP BUTTON (? icon) — always visible in lesson
+   ═══════════════════════════════════════════════════════ */
+.btn-help {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.btn-help:hover {
+  background: rgba(168, 85, 247, 0.15);
+  border-color: rgba(168, 85, 247, 0.4);
+  color: var(--accent-glow);
+  transform: scale(1.08);
+}
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 600px) {
+  .tutorial-card {
+    padding: 2rem 1.25rem 1.5rem;
+    gap: 1rem;
+    max-width: 100%;
+  }
+
+  .tutorial-step {
+    min-height: 160px;
+  }
+
+  .tutorial-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .tutorial-icon {
+    font-size: 1.6rem;
+  }
+
+  .tutorial-title {
+    font-size: 1.15rem;
+  }
+
+  .tutorial-body {
+    font-size: 0.88rem;
+  }
+
+  .tutorial-btn-next {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.25rem;
+  }
+}

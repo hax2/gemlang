@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import Tutorial, { hasSeenTutorial, markTutorialSeen } from './Tutorial';
 import './LessonPlayer.css';
 
 /* helpers */
@@ -141,6 +142,10 @@ const LessonPlayer = ({
   );
   const [showSelfAssessment, setShowSelfAssessment] = useState(false);
   const [hasAssessed, setHasAssessed] = useState(false);
+  const [showTutorial, setShowTutorial] = useState(() => {
+    const hasGrammar = !!((module.grammarExplanation || module.storyIntro) && practiceMode !== 'testing');
+    return !hasGrammar && !hasSeenTutorial();
+  });
   const [showResumeToast, setShowResumeToast] = useState(() => resumeIndex > 0);
 
   // Dismiss resume toast after a moment
@@ -167,6 +172,12 @@ const LessonPlayer = ({
     window.addEventListener('resize', checkDesktop);
     return () => window.removeEventListener('resize', checkDesktop);
   }, []);
+
+  useEffect(() => {
+    if (!showGrammarIntro && !isFinished && !isChallenge && !hasSeenTutorial()) {
+      setShowTutorial(true);
+    }
+  }, [showGrammarIntro, isFinished, isChallenge]);
 
   const mergedItems = useMemo(() => {
     if (isPureTestingMode) {
@@ -270,15 +281,23 @@ const LessonPlayer = ({
       const key = event.key.toLowerCase();
 
       if (key === 'escape') {
+        if (showTutorial) { setShowTutorial(false); markTutorialSeen(); return; }
         onBack();
         return;
       }
+
+      if (showTutorial) return;
 
       if (showGrammarIntro) {
         if (key === 'enter' || key === ' ' || key === 'arrowright') {
           event.preventDefault();
           setShowGrammarIntro(false);
         }
+        return;
+      }
+
+      if (key === '?') {
+        setShowTutorial(true);
         return;
       }
 
@@ -334,6 +353,7 @@ const LessonPlayer = ({
     playAudio,
     showGrammarIntro,
     showSelfAssessment,
+    showTutorial,
   ]);
 
   const getMeaning = (word) => {
@@ -497,6 +517,8 @@ const LessonPlayer = ({
 
     return (
       <div className="lesson-player animate-fade-in">
+        {showTutorial && <Tutorial onClose={() => setShowTutorial(false)} />}
+
         {showResumeToast && (
           <div className="resume-toast animate-fade-in">
             ▶ Resuming from where you left off
@@ -506,6 +528,9 @@ const LessonPlayer = ({
         <div className="lesson-header">
           <button className="btn-secondary btn-sm" onClick={onBack}>
             ← Back <KbdHint show={isDesktop}>Esc</KbdHint>
+          </button>
+          <button className="btn-help" onClick={() => setShowTutorial(true)} title="How to use">
+            ?
           </button>
           <div className="progress-wrapper">
             <div className="progress-container">
@@ -578,6 +603,8 @@ const LessonPlayer = ({
 
   return (
     <div className="lesson-player animate-fade-in">
+      {showTutorial && <Tutorial onClose={() => setShowTutorial(false)} />}
+
       {showResumeToast && (
         <div className="resume-toast animate-fade-in">
           ▶ Resuming from where you left off
@@ -587,6 +614,9 @@ const LessonPlayer = ({
       <div className="lesson-header">
         <button className="btn-secondary btn-sm" onClick={onBack}>
           ← Back <KbdHint show={isDesktop}>Esc</KbdHint>
+        </button>
+        <button className="btn-help" onClick={() => setShowTutorial(true)} title="How to use">
+          ?
         </button>
         <div className="progress-wrapper">
           <div className="progress-container">
