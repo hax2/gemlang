@@ -53,18 +53,17 @@ const Onboarding = ({ modules, onComplete }) => {
             ) : (
               <div className="module-selection">
                 <h2>Select starting point</h2>
-                <select 
-                  className="module-dropdown" 
-                  value={selectedModule} 
-                  onChange={(e) => setSelectedModule(e.target.value)}
-                  size={8}
-                >
+                <div className="module-list">
                   {modules.map((m) => (
-                    <option key={m.id} value={m.id}>
-                      {m.level} - {m.title}
-                    </option>
+                    <button
+                      key={m.id}
+                      className={`module-list-btn ${selectedModule === m.id ? 'active' : ''}`}
+                      onClick={() => setSelectedModule(m.id)}
+                    >
+                      {m.title}
+                    </button>
                   ))}
-                </select>
+                </div>
               </div>
             )}
 

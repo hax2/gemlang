@@ -112,22 +112,54 @@
   border-color: #a855f7;
 }
 
-.module-dropdown {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  color: var(--text-color);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 0.5rem;
-  font-family: inherit;
-  font-size: 1rem;
+.module-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 300px;
+  overflow-y: auto;
   margin-top: 1rem;
-  outline: none;
+  padding-right: 0.5rem;
 }
 
-.module-dropdown option {
-  padding: 8px;
-  background: #111;
+.module-list-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.module-list-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.module-list-btn.active {
+  background: rgba(168, 85, 247, 0.2);
+  border-color: #a855f7;
+}
+
+/* Custom scrollbar for module list */
+.module-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.module-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.module-list::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.5);
+  border-radius: 4px;
+}
+
+.module-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.8);
 }
 
 .start-journey-btn {
