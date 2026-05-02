@@ -17,15 +17,15 @@
     },
     {
       "id": "m22-s2",
-      "spanish": "Si tuviera dinero, compraría el libro.",
-      "english": "If I had money, I would buy the book.",
+      "spanish": "Si tuviera dinero, compraría las entradas.",
+      "english": "If I had money, I would buy the tickets.",
       "wordMeanings": {
         "Si": "if",
         "tuviera": "had (imp subj)",
         "dinero": "money",
         "compraría": "would buy",
-        "el": "the",
-        "libro": "book"
+        "las": "the",
+        "entradas": "tickets"
       }
     },
     {
@@ -64,11 +64,12 @@
     },
     {
       "id": "m22-s6",
-      "spanish": "Si bebieras agua, estarías mejor.",
-      "english": "If you drank water, you would feel better.",
+      "spanish": "Si bebieras más agua, estarías mejor.",
+      "english": "If you drank more water, you would feel better.",
       "wordMeanings": {
         "Si": "if",
         "bebieras": "drank (imp subj)",
+        "más": "more",
         "agua": "water",
         "estarías": "would be",
         "mejor": "better"
@@ -76,12 +77,12 @@
     },
     {
       "id": "m22-s7",
-      "spanish": "Si llegaras temprano, hablaríamos más.",
-      "english": "If you arrived early, we would talk more.",
+      "spanish": "Si llegaras pronto, hablaríamos más.",
+      "english": "If you arrived soon, we would talk more.",
       "wordMeanings": {
         "Si": "if",
         "llegaras": "arrived (imp subj)",
-        "temprano": "early",
+        "pronto": "soon / early",
         "hablaríamos": "we would speak",
         "más": "more"
       }
@@ -101,26 +102,29 @@
     },
     {
       "id": "m22-s9",
-      "spanish": "Si vinieras mañana, iríamos al café.",
-      "english": "If you came tomorrow, we would go to the café.",
+      "spanish": "Si vinieras mañana, iríamos a tomar un café.",
+      "english": "If you came tomorrow, we would go for a coffee.",
       "wordMeanings": {
         "Si": "if",
         "vinieras": "came (imp subj)",
         "mañana": "tomorrow / morning",
         "iríamos": "would go",
-        "al": "to the",
+        "a": "to",
+        "tomar": "to have / take",
+        "un": "a",
         "café": "coffee"
       }
     },
     {
       "id": "m22-s10",
-      "spanish": "Si fueras hoy, comprarías el pan.",
-      "english": "If you went today, you would buy the bread.",
+      "spanish": "Si fueras hoy, podrías comprar el pan.",
+      "english": "If you went today, you could buy the bread.",
       "wordMeanings": {
         "Si": "if",
         "fueras": "went / were (imp subj)",
         "hoy": "today",
-        "comprarías": "would buy",
+        "podrías": "could",
+        "comprar": "to buy",
         "el": "the",
         "pan": "bread"
       }
@@ -139,25 +143,27 @@
     },
     {
       "id": "m22-s12",
-      "spanish": "Si cerraras la ventana, estaría mejor.",
-      "english": "If you closed the window, it would be better.",
+      "spanish": "Si cerraras la ventana, se estaría mejor.",
+      "english": "If you closed the window, it would be more comfortable.",
       "wordMeanings": {
         "Si": "if",
         "cerraras": "closed (imp subj)",
         "la": "the / it (fem)",
         "ventana": "window",
+        "se": "one / people",
         "estaría": "would be",
         "mejor": "better"
       }
     },
     {
       "id": "m22-s13",
-      "spanish": "Si me escucharas, entenderías.",
-      "english": "If you listened to me, you would understand.",
+      "spanish": "Si me escucharas, lo entenderías.",
+      "english": "If you listened to me, you would understand it.",
       "wordMeanings": {
         "Si": "if",
         "me": "me / to me",
         "escucharas": "listened (imp subj)",
+        "lo": "it",
         "entenderías": "would understand"
       }
     },
@@ -282,26 +288,26 @@
     },
     {
       "id": "m22-s23",
-      "spanish": "Si fueras amable, él hablaría contigo.",
-      "english": "If you were kind, he would speak with you.",
+      "spanish": "Si fueras amable, hablaría contigo.",
+      "english": "If you were kind, he/she would speak with you.",
       "wordMeanings": {
         "Si": "if",
         "fueras": "went / were (imp subj)",
         "amable": "kind",
-        "él": "he",
         "hablaría": "would speak",
         "contigo": "with you"
       }
     },
     {
       "id": "m22-s24",
-      "spanish": "Si pudiera, iría ahora.",
-      "english": "If I could, I would go now.",
+      "spanish": "Si pudiera, iría ahora mismo.",
+      "english": "If I could, I would go right now.",
       "wordMeanings": {
         "Si": "if",
         "pudiera": "could (imp subj)",
         "iría": "would go",
-        "ahora": "now"
+        "ahora": "now",
+        "mismo": "same / right"
       }
     },
     {
@@ -318,21 +324,23 @@
     },
     {
       "id": "m22-s26",
-      "spanish": "Si quisiera, hablaría.",
-      "english": "If I wanted, I would speak.",
+      "spanish": "Si quisiera, lo diría.",
+      "english": "If I wanted to, I would say it.",
       "wordMeanings": {
         "Si": "if",
         "quisiera": "I would like",
-        "hablaría": "would speak"
+        "lo": "it",
+        "diría": "would say"
       }
     },
     {
       "id": "m22-s27",
-      "spanish": "Si quisieras, abriría la puerta.",
-      "english": "If you wanted, I would open the door.",
+      "spanish": "Si quisieras, te abriría la puerta.",
+      "english": "If you wanted, I would open the door for you.",
       "wordMeanings": {
         "Si": "if",
         "quisieras": "you would like",
+        "te": "you / for you",
         "abriría": "would open",
         "la": "the / it (fem)",
         "puerta": "door"

@@ -16,12 +16,12 @@
     },
     {
       "id": "m30-s2",
-      "spanish": "Por favor, envíame el informe por correo electrónico antes del mediodía.",
+      "spanish": "Por favor, mándame el informe por email antes del mediodía.",
       "english": "Please send me the report by email before noon.",
       "wordMeanings": {
-        "envíame": "send me",
+        "mándame": "send me",
         "informe": "report",
-        "correo electrónico": "email",
+        "email": "email",
         "mediodía": "noon"
       }
     },
@@ -38,78 +38,80 @@
     },
     {
       "id": "m30-s4",
-      "spanish": "Necesitamos contratar a un nuevo asistente para el departamento de ventas.",
-      "english": "We need to hire a new assistant for the sales department.",
+      "spanish": "Necesitamos contratar a una persona más para el departamento de ventas.",
+      "english": "We need to hire one more person for the sales department.",
       "wordMeanings": {
         "contratar": "hire",
-        "asistente": "assistant",
+        "persona": "person",
+        "más": "more",
         "departamento": "department",
         "ventas": "sales"
       }
     },
     {
       "id": "m30-s5",
-      "spanish": "La empresa está buscando expandirse al mercado latinoamericano.",
-      "english": "The company is looking to expand into the Latin American market.",
+      "spanish": "La empresa quiere entrar en el mercado europeo.",
+      "english": "The company wants to enter the European market.",
       "wordMeanings": {
         "empresa": "company",
-        "buscando": "looking",
-        "expandirse": "to expand",
-        "mercado": "market"
+        "quiere": "wants",
+        "entrar": "to enter",
+        "mercado": "market",
+        "europeo": "European"
       }
     },
     {
       "id": "m30-s6",
-      "spanish": "El gerente de proyectos está fuera de la oficina esta semana.",
-      "english": "The project manager is out of the office this week.",
+      "spanish": "El responsable del proyecto está fuera de la oficina esta semana.",
+      "english": "The project lead is out of the office this week.",
       "wordMeanings": {
-        "gerente": "manager",
-        "proyectos": "projects",
+        "responsable": "person in charge",
+        "proyecto": "project",
         "fuera": "out",
         "oficina": "office"
       }
     },
     {
       "id": "m30-s7",
-      "spanish": "¿Podemos programar una videollamada para discutir los detalles?",
-      "english": "Can we schedule a video call to discuss the details?",
+      "spanish": "¿Podemos organizar una videollamada para comentar los detalles?",
+      "english": "Can we schedule a video call to go over the details?",
       "wordMeanings": {
-        "programar": "schedule",
+        "organizar": "organize / schedule",
         "videollamada": "video call",
-        "discutir": "discuss",
+        "comentar": "discuss / go over",
         "detalles": "details"
       }
     },
     {
       "id": "m30-s8",
-      "spanish": "He adjuntado el contrato firmado a este mensaje.",
-      "english": "I have attached the signed contract to this message.",
+      "spanish": "Te adjunto el contrato firmado en este email.",
+      "english": "I'm attaching the signed contract in this email.",
       "wordMeanings": {
-        "adjuntado": "attached",
+        "te": "you / to you",
+        "adjunto": "I attach",
         "contrato": "contract",
         "firmado": "signed",
-        "mensaje": "message"
+        "email": "email"
       }
     },
     {
       "id": "m30-s9",
-      "spanish": "Estamos trabajando duro para cumplir con la fecha límite.",
+      "spanish": "Estamos trabajando mucho para llegar a tiempo.",
       "english": "We are working hard to meet the deadline.",
       "wordMeanings": {
         "trabajando": "working",
-        "duro": "hard",
-        "cumplir": "to meet/fulfill",
-        "fecha límite": "deadline"
+        "mucho": "a lot",
+        "llegar": "to arrive / make it",
+        "a tiempo": "on time"
       }
     },
     {
       "id": "m30-s10",
-      "spanish": "Gracias por su colaboración en este proyecto tan exitoso.",
-      "english": "Thank you for your collaboration on this very successful project.",
+      "spanish": "Gracias por tu ayuda con este proyecto.",
+      "english": "Thank you for your help with this project.",
       "wordMeanings": {
-        "colaboración": "collaboration",
-        "proyecto": "project",
-        "exitoso": "successful"
+        "ayuda": "help",
+        "proyecto": "project"
       }
     }
   ],

@@ -6,34 +6,39 @@
   "sentences": [
     {
       "id": "m21-s1",
-      "spanish": "Si tienes tiempo, vienes.",
-      "english": "If you have time, you come.",
+      "spanish": "Si tienes tiempo, te vienes.",
+      "english": "If you have time, come along.",
       "wordMeanings": {
         "Si": "if",
         "tienes": "you have",
         "tiempo": "time",
+        "te": "yourself",
         "vienes": "you come"
       }
     },
     {
       "id": "m21-s2",
-      "spanish": "Si tienes dinero, compras pan.",
-      "english": "If you have money, you buy bread.",
+      "spanish": "Si tienes dinero, compra pan.",
+      "english": "If you have money, buy bread.",
       "wordMeanings": {
         "Si": "if",
         "tienes": "you have",
         "dinero": "money",
-        "compras": "you buy",
+        "compra": "buy (command)",
         "pan": "bread"
       }
     },
     {
       "id": "m21-s3",
-      "spanish": "Si estudias, aprendes.",
-      "english": "If you study, you learn.",
+      "spanish": "Si estudias un poco cada día, aprendes.",
+      "english": "If you study a little every day, you learn.",
       "wordMeanings": {
         "Si": "if",
         "estudias": "you study",
+        "un": "a",
+        "poco": "little / bit",
+        "cada": "each / every",
+        "día": "day",
         "aprendes": "you learn"
       }
     },
@@ -74,12 +79,12 @@
     },
     {
       "id": "m21-s7",
-      "spanish": "Si llegas temprano, hablamos.",
-      "english": "If you arrive early, we talk.",
+      "spanish": "Si llegas pronto, hablamos.",
+      "english": "If you arrive soon, we'll talk.",
       "wordMeanings": {
         "Si": "if",
         "llegas": "you arrive",
-        "temprano": "early",
+        "pronto": "soon / early",
         "hablamos": "we speak"
       }
     },
@@ -98,26 +103,28 @@
     },
     {
       "id": "m21-s9",
-      "spanish": "Si vienes mañana, vamos al café.",
-      "english": "If you come tomorrow, we go to the café.",
+      "spanish": "Si vienes mañana, vamos a tomar un café.",
+      "english": "If you come tomorrow, we'll go for a coffee.",
       "wordMeanings": {
         "Si": "if",
         "vienes": "you come",
         "mañana": "tomorrow / morning",
         "vamos": "we go",
-        "al": "to the",
+        "a": "to",
+        "tomar": "to have / take",
+        "un": "a",
         "café": "coffee"
       }
     },
     {
       "id": "m21-s10",
-      "spanish": "Si vas hoy, compras el libro.",
-      "english": "If you go today, you buy the book.",
+      "spanish": "Si vas hoy, compra el libro.",
+      "english": "If you go today, buy the book.",
       "wordMeanings": {
         "Si": "if",
         "vas": "you go",
         "hoy": "today",
-        "compras": "you buy",
+        "compra": "buy (command)",
         "el": "the",
         "libro": "book"
       }
@@ -136,25 +143,27 @@
     },
     {
       "id": "m21-s12",
-      "spanish": "Si cierras la ventana, está mejor.",
-      "english": "If you close the window, it's better.",
+      "spanish": "Si cierras la ventana, se está mejor.",
+      "english": "If you close the window, it's more comfortable.",
       "wordMeanings": {
         "Si": "if",
         "cierras": "you close",
         "la": "the / it (fem)",
         "ventana": "window",
+        "se": "one / people",
         "está": "is",
         "mejor": "better"
       }
     },
     {
       "id": "m21-s13",
-      "spanish": "Si me escuchas, entiendes.",
-      "english": "If you listen to me, you understand.",
+      "spanish": "Si me escuchas, lo entiendes.",
+      "english": "If you listen to me, you'll understand it.",
       "wordMeanings": {
         "Si": "if",
         "me": "me / to me",
         "escuchas": "you listen",
+        "lo": "it / him",
         "entiendes": "you understand"
       }
     },
@@ -240,25 +249,25 @@
     },
     {
       "id": "m21-s20",
-      "spanish": "Si tienes hambre, comes ahora.",
-      "english": "If you're hungry, you eat now.",
+      "spanish": "Si tienes hambre, come ahora.",
+      "english": "If you're hungry, eat now.",
       "wordMeanings": {
         "Si": "if",
         "tienes": "you have",
         "hambre": "hunger",
-        "comes": "you eat",
+        "come": "eat (command)",
         "ahora": "now"
       }
     },
     {
       "id": "m21-s21",
-      "spanish": "Si tienes sed, bebes agua.",
-      "english": "If you're thirsty, you drink water.",
+      "spanish": "Si tienes sed, bebe agua.",
+      "english": "If you're thirsty, drink water.",
       "wordMeanings": {
         "Si": "if",
         "tienes": "you have",
         "sed": "thirst",
-        "bebes": "you drink",
+        "bebe": "drink (command)",
         "agua": "water"
       }
     },
@@ -289,12 +298,13 @@
     },
     {
       "id": "m21-s24",
-      "spanish": "Si quieres, hablo.",
-      "english": "If you want, I speak.",
+      "spanish": "Si quieres, lo hablamos.",
+      "english": "If you want, we'll talk about it.",
       "wordMeanings": {
         "Si": "if",
         "quieres": "you want",
-        "hablo": "I speak"
+        "lo": "it",
+        "hablamos": "we speak / discuss"
       }
     },
     {
@@ -322,24 +332,24 @@
     },
     {
       "id": "m21-s27",
-      "spanish": "Si puedes, vienes ahora.",
-      "english": "If you can, you come now.",
+      "spanish": "Si puedes, ven ahora.",
+      "english": "If you can, come now.",
       "wordMeanings": {
         "Si": "if",
         "puedes": "you can",
-        "vienes": "you come",
+        "ven": "come (command)",
         "ahora": "now"
       }
     },
     {
       "id": "m21-s28",
-      "spanish": "Si no puedes, vienes mañana.",
-      "english": "If you can't, you come tomorrow.",
+      "spanish": "Si no puedes, ven mañana.",
+      "english": "If you can't, come tomorrow.",
       "wordMeanings": {
         "Si": "if",
         "no": "no / not",
         "puedes": "you can",
-        "vienes": "you come",
+        "ven": "come (command)",
         "mañana": "tomorrow / morning"
       }
     },
@@ -370,7 +380,7 @@
       }
     }
   ],
-  "grammarExplanation": "Real (open) conditionals describe things that CAN or DO happen when a condition is met. Both clauses use the PRESENT INDICATIVE:\n\n'Si + present tense, present tense'\n\n• Si tienes tiempo, vienes = If you have time, you come.\n• Si estudias, aprendes = If you study, you learn.\n• Si llueve, me quedo en casa = If it rains, I stay home.\n\nThe 'si' clause can go first or second: 'Vienes si tienes tiempo.'",
+  "grammarExplanation": "Real (open) conditionals describe things that CAN or DO happen when a condition is met. The 'si' clause uses the PRESENT INDICATIVE:\n\n'Si + present tense, present tense / command'\n\n• Si tienes tiempo, te vienes = If you have time, come along.\n• Si estudias, aprendes = If you study, you learn.\n• Si llueve, me quedo en casa = If it rains, I stay home.\n\nThe 'si' clause can go first or second: 'Te vienes si tienes tiempo.'",
   "vocabulary": {
     "si": {
       "mnemonic": "'See if' — si = if.",

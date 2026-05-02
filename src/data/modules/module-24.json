@@ -210,15 +210,15 @@
     },
     {
       "id": "m24-s19",
-      "spanish": "Llevas todo el día mirando el teléfono.",
-      "english": "You’ve been looking at the phone all day.",
+      "spanish": "Llevas todo el día mirando el móvil.",
+      "english": "You’ve been looking at your phone all day.",
       "wordMeanings": {
         "Llevas": "you carry / take",
         "todo": "all",
         "el": "the",
         "día": "day",
         "mirando": "looking",
-        "teléfono": "telephone"
+        "móvil": "mobile phone"
       }
     },
     {
@@ -248,27 +248,27 @@
     },
     {
       "id": "m24-s22",
-      "spanish": "Llevas una semana buscando el libro.",
-      "english": "You’ve been looking for the book for one week.",
+      "spanish": "Llevas una semana buscando las llaves.",
+      "english": "You’ve been looking for the keys for one week.",
       "wordMeanings": {
         "Llevas": "you carry / take",
         "una": "a (fem)",
         "semana": "week",
         "buscando": "looking for",
-        "el": "the",
-        "libro": "book"
+        "las": "the",
+        "llaves": "keys"
       }
     },
     {
       "id": "m24-s23",
-      "spanish": "Lleva una semana buscando casa.",
-      "english": "He/She has been looking for a house for one week.",
+      "spanish": "Lleva una semana buscando piso.",
+      "english": "He/She has been looking for a flat for one week.",
       "wordMeanings": {
         "Lleva": "carries / takes",
         "una": "a (fem)",
         "semana": "week",
         "buscando": "looking for",
-        "casa": "house"
+        "piso": "flat / apartment"
       }
     },
     {
@@ -284,24 +284,24 @@
     },
     {
       "id": "m24-s25",
-      "spanish": "Llevo una hora escribiéndola.",
-      "english": "I’ve been writing it for one hour.",
+      "spanish": "Llevo una hora escribiéndole.",
+      "english": "I’ve been writing to him/her for one hour.",
       "wordMeanings": {
         "Llevo": "I carry / take",
         "una": "a (fem)",
         "hora": "hour",
-        "escribiéndola": "writing it"
+        "escribiéndole": "writing to him/her"
       }
     },
     {
       "id": "m24-s26",
-      "spanish": "Lleva una hora dándoselo.",
-      "english": "He/She has been giving it to him/her for one hour.",
+      "spanish": "Lleva una hora explicándoselo.",
+      "english": "He/She has been explaining it to him/her for one hour.",
       "wordMeanings": {
         "Lleva": "carries / takes",
         "una": "a (fem)",
         "hora": "hour",
-        "dándoselo": "giving it to him/her"
+        "explicándoselo": "explaining it to him/her"
       }
     },
     {

@@ -17,11 +17,13 @@
     },
     {
       "id": "m29-s2",
-      "spanish": "Necesito facturar mis maletas antes de ir a la puerta de embarque.",
-      "english": "I need to check my bags before going to the boarding gate.",
+      "spanish": "Tengo que facturar la maleta antes de ir a la puerta de embarque.",
+      "english": "I have to check my suitcase before going to the boarding gate.",
       "wordMeanings": {
+        "tengo": "I have",
+        "que": "that / to",
         "facturar": "to check in",
-        "maletas": "suitcases",
+        "maleta": "suitcase",
         "antes": "before",
         "puerta": "gate/door",
         "embarque": "boarding"
@@ -29,8 +31,8 @@
     },
     {
       "id": "m29-s3",
-      "spanish": "¿Me puede dar un asiento de pasillo, por favor?",
-      "english": "Can you give me an aisle seat, please?",
+      "spanish": "¿Me puede poner un asiento de pasillo, por favor?",
+      "english": "Can you assign me an aisle seat, please?",
       "wordMeanings": {
         "asiento": "seat",
         "pasillo": "aisle"
@@ -38,20 +40,21 @@
     },
     {
       "id": "m29-s4",
-      "spanish": "El vuelo tiene un retraso de dos horas debido al mal tiempo.",
-      "english": "The flight has a two-hour delay due to bad weather.",
+      "spanish": "El vuelo lleva dos horas de retraso por el mal tiempo.",
+      "english": "The flight is two hours delayed because of the bad weather.",
       "wordMeanings": {
+        "lleva": "has / carries",
         "retraso": "delay",
-        "debido": "due to",
+        "por": "because of / for",
         "tiempo": "weather"
       }
     },
     {
       "id": "m29-s5",
-      "spanish": "Por favor, muestre su pasaporte y su tarjeta de embarque.",
-      "english": "Please show your passport and your boarding pass.",
+      "spanish": "Por favor, enseñe el pasaporte y la tarjeta de embarque.",
+      "english": "Please show your passport and boarding pass.",
       "wordMeanings": {
-        "muestre": "show (imperative)",
+        "enseñe": "show (imperative)",
         "pasaporte": "passport",
         "tarjeta": "card/pass"
       }
@@ -67,12 +70,15 @@
     },
     {
       "id": "m29-s7",
-      "spanish": "El control de seguridad está muy lleno esta mañana.",
-      "english": "The security check is very full this morning.",
+      "spanish": "Hay mucha cola en el control de seguridad esta mañana.",
+      "english": "There is a long queue at security this morning.",
       "wordMeanings": {
+        "hay": "there is / are",
+        "mucha": "a lot of",
+        "cola": "queue",
         "control": "control/check",
         "seguridad": "security",
-        "lleno": "full"
+        "mañana": "morning"
       }
     },
     {
@@ -86,23 +92,23 @@
     },
     {
       "id": "m29-s9",
-      "spanish": "El avión está a punto de aterrizar en el aeropuerto internacional.",
-      "english": "The plane is about to land at the international airport.",
+      "spanish": "El avión está a punto de aterrizar en Madrid.",
+      "english": "The plane is about to land in Madrid.",
       "wordMeanings": {
         "avión": "plane",
         "aterrizar": "land",
-        "aeropuerto": "airport"
+        "Madrid": "Madrid"
       }
     },
     {
       "id": "m29-s10",
-      "spanish": "Prefiero viajar en clase ejecutiva para tener más espacio.",
+      "spanish": "Prefiero viajar en clase business para tener más espacio.",
       "english": "I prefer to travel in business class to have more space.",
       "wordMeanings": {
         "prefiero": "I prefer",
         "viajar": "travel",
         "clase": "class",
-        "ejecutiva": "business",
+        "business": "business",
         "espacio": "space"
       }
     }

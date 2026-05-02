@@ -17,7 +17,7 @@
     },
     {
       "id": "m28-s2",
-      "spanish": "Me gustaría que ellos vinieran a la fiesta.",
+      "spanish": "Me gustaría que vinieran a la fiesta.",
       "english": "I would like them to come to the party.",
       "wordMeanings": {
         "gustaría": "would like",
@@ -27,13 +27,13 @@
     },
     {
       "id": "m28-s3",
-      "spanish": "El profesor pidió que hiciéramos la tarea.",
+      "spanish": "El profesor pidió que hiciéramos los deberes.",
       "english": "The teacher asked us to do the homework.",
       "wordMeanings": {
         "profesor": "teacher",
         "pidió": "asked",
         "hiciéramos": "we did (subjunctive)",
-        "tarea": "homework"
+        "deberes": "homework"
       }
     },
     {
@@ -49,12 +49,12 @@
     },
     {
       "id": "m28-s5",
-      "spanish": "Fue una lástima que no pudieras asistir a la boda.",
-      "english": "It was a shame that you couldn't attend the wedding.",
+      "spanish": "Fue una pena que no pudieras venir a la boda.",
+      "english": "It was a shame that you couldn't come to the wedding.",
       "wordMeanings": {
-        "lástima": "shame",
+        "pena": "shame / pity",
         "pudieras": "could (subjunctive)",
-        "asistir": "attend",
+        "venir": "to come",
         "boda": "wedding"
       }
     },
@@ -81,8 +81,8 @@
     },
     {
       "id": "m28-s8",
-      "spanish": "Dudaba que ella hablara en serio sobre mudarse.",
-      "english": "I doubted that she was serious about moving.",
+      "spanish": "Dudaba que hablara en serio sobre mudarse.",
+      "english": "I doubted that he/she was serious about moving.",
       "wordMeanings": {
         "dudaba": "doubted",
         "hablara": "spoke (subjunctive)",
@@ -92,24 +92,25 @@
     },
     {
       "id": "m28-s9",
-      "spanish": "Sugerí que saliéramos a caminar por el parque.",
+      "spanish": "Sugerí que saliéramos a dar un paseo por el parque.",
       "english": "I suggested that we go out for a walk in the park.",
       "wordMeanings": {
         "sugerí": "suggested",
         "saliéramos": "we left/went out (subjunctive)",
-        "caminar": "walk",
+        "dar": "to give / take",
+        "paseo": "walk",
         "parque": "park"
       }
     },
     {
       "id": "m28-s10",
-      "spanish": "Ojalá lloviera café en el campo.",
-      "english": "I wish it would rain coffee in the countryside.",
+      "spanish": "Ojalá hiciera sol este fin de semana.",
+      "english": "I wish it were sunny this weekend.",
       "wordMeanings": {
         "ojalá": "I wish/hope",
-        "lloviera": "rained (subjunctive)",
-        "café": "coffee",
-        "campo": "countryside"
+        "hiciera": "made / did (subjunctive)",
+        "sol": "sun",
+        "fin de semana": "weekend"
       }
     }
   ],

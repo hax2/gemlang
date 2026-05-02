@@ -155,14 +155,14 @@
     },
     {
       "id": "m23-s15",
-      "spanish": "Acabo de comprar la carta.",
-      "english": "I just bought the letter.",
+      "spanish": "Acabo de comprar la entrada.",
+      "english": "I just bought the ticket.",
       "wordMeanings": {
         "Acabo": "I just finished",
         "de": "of / from",
         "comprar": "to buy",
         "la": "the / it (fem)",
-        "carta": "letter"
+        "entrada": "ticket"
       }
     },
     {
@@ -213,10 +213,10 @@
     },
     {
       "id": "m23-s20",
-      "spanish": "Lo acabo de llamar.",
+      "spanish": "Le acabo de llamar.",
       "english": "I just called him.",
       "wordMeanings": {
-        "Lo": "it / him",
+        "Le": "him / to him",
         "acabo": "I just finished",
         "de": "of / from",
         "llamar": "to call"
@@ -307,14 +307,14 @@
     },
     {
       "id": "m23-s28",
-      "spanish": "No, no acabo de comer.",
-      "english": "No, I didn't just eat.",
+      "spanish": "No, todavía no he comido.",
+      "english": "No, I haven't eaten yet.",
       "wordMeanings": {
         "No": "no / not",
         "no": "no / not",
-        "acabo": "I just finished",
-        "de": "of / from",
-        "comer": "to eat"
+        "todavía": "still / yet",
+        "he": "I have",
+        "comido": "eaten"
       }
     },
     {
