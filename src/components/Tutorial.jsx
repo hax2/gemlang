@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef, useLayoutEffect } from 'react';
 import { createPortal } from 'react-dom';
+import { markTutorialSeen } from '../utils/tutorialStorage';
 import './Tutorial.css';
-
-const TUTORIAL_SEEN_KEY = 'gemlang-tutorial-seen';
 
 const STEPS = [
   {
@@ -55,24 +54,6 @@ const STEPS = [
   },
 ];
 
-/** Check if user has already seen the tutorial */
-export const hasSeenTutorial = () => {
-  try {
-    return localStorage.getItem(TUTORIAL_SEEN_KEY) === 'true';
-  } catch {
-    return false;
-  }
-};
-
-/** Mark the tutorial as seen */
-export const markTutorialSeen = () => {
-  try {
-    localStorage.setItem(TUTORIAL_SEEN_KEY, 'true');
-  } catch {
-    // localStorage unavailable
-  }
-};
-
 /* ── Sparkle particles ──────────────────── */
 const Sparkles = () => (
   <div className="tutorial-sparkles" aria-hidden="true">
@@ -115,7 +96,8 @@ const Tutorial = ({ onClose }) => {
   }, [current.targetSelector]);
 
   useLayoutEffect(() => {
-    measureTarget();
+    const id = requestAnimationFrame(measureTarget);
+    return () => cancelAnimationFrame(id);
   }, [measureTarget, step]);
 
   useEffect(() => {

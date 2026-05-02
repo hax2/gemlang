@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import Tutorial, { hasSeenTutorial, markTutorialSeen } from './Tutorial';
+import Tutorial from './Tutorial';
+import { hasSeenTutorial, markTutorialSeen } from '../utils/tutorialStorage';
 import './LessonPlayer.css';
 
 /* helpers */
@@ -141,18 +142,10 @@ const LessonPlayer = ({
   const [showGrammarIntro, setShowGrammarIntro] = useState(
     () => !!((module.grammarExplanation || module.storyIntro) && practiceMode !== 'testing')
   );
-  const [showSelfAssessment, setShowSelfAssessment] = useState(false);
   const [hasAssessed, setHasAssessed] = useState(false);
   const needsTutorial = !hasSeenTutorial();
   const [showTutorial, setShowTutorial] = useState(() => needsTutorial && !showGrammarIntro);
   const [showResumeToast, setShowResumeToast] = useState(() => resumeIndex > 0);
-
-  // Show tutorial after grammar intro is dismissed (first time only)
-  useEffect(() => {
-    if (!showGrammarIntro && needsTutorial && !hasSeenTutorial()) {
-      setShowTutorial(true);
-    }
-  }, [showGrammarIntro, needsTutorial]);
 
   // Dismiss resume toast after a moment
   useEffect(() => {
@@ -192,6 +185,7 @@ const LessonPlayer = ({
   const isChallenge = currentItem?.type === 'challenge';
   const sentence = isChallenge ? null : currentItem?.data;
   const isFinished = currentIndex >= mergedItems.length;
+  const showSelfAssessment = isFinished && !hasAssessed;
   const hasNextModule = moduleIndex < modules.length - 1;
   const vocabulary = module.vocabulary || {};
   const vocabTable = isFinished ? buildVocabTable(module.sentences, vocabulary) : [];
@@ -206,13 +200,6 @@ const LessonPlayer = ({
 
   const speechRate = settings?.speechRate ?? 0.85;
   const autoPlay = settings?.autoPlayAudio ?? true;
-
-  // Show self-assessment when finished (if not already assessed)
-  useEffect(() => {
-    if (isFinished && !hasAssessed) {
-      setShowSelfAssessment(true);
-    }
-  }, [isFinished, hasAssessed]);
 
   useEffect(() => {
     if (autoPlay && !showGrammarIntro && !isChallenge && sentence?.spanish) {
@@ -257,11 +244,17 @@ const LessonPlayer = ({
     ]);
   }, [currentOriginalIndex, sentence]);
 
+  const handleDismissIntro = useCallback(() => {
+    setShowGrammarIntro(false);
+    if (needsTutorial && !hasSeenTutorial()) {
+      setShowTutorial(true);
+    }
+  }, [needsTutorial]);
+
   const handleSelfAssessment = useCallback((confidence) => {
     if (completeModule) {
       completeModule(module.id, confidence, totalSentences);
     }
-    setShowSelfAssessment(false);
     setHasAssessed(true);
   }, [completeModule, module.id, totalSentences]);
 
@@ -296,7 +289,7 @@ const LessonPlayer = ({
       if (showGrammarIntro) {
         if (key === 'enter' || key === ' ' || key === 'arrowright') {
           event.preventDefault();
-          setShowGrammarIntro(false);
+          handleDismissIntro();
         }
         return;
       }
@@ -342,6 +335,7 @@ const LessonPlayer = ({
   }, [
     challengeAnswerRevealed,
     handleMarkForLater,
+    handleDismissIntro,
     handleNext,
     handlePrev,
     handleSelfAssessment,
@@ -404,7 +398,7 @@ const LessonPlayer = ({
           <div />
           <button
             className="btn-primary btn-nav-next pulse-primary"
-            onClick={() => setShowGrammarIntro(false)}
+            onClick={handleDismissIntro}
           >
             {isReviewModule ? 'Begin Review →' : isStoryModule ? 'Begin Story →' : 'Begin Lesson →'} <KbdHint show={isDesktop}>Enter</KbdHint>
           </button>

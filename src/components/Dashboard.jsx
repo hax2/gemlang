@@ -11,7 +11,6 @@ const Dashboard = ({
   getRefreshModules,
   onSelectModule,
   onBrowseAll,
-  practiceMode,
 }) => {
   const suggestedModule = getNextSuggestedModule();
   const refreshModules = getRefreshModules();

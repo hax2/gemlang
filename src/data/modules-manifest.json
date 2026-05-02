@@ -137,7 +137,7 @@
     "title": "Chapter 10: The Preterite Tense",
     "description": "Talk about completed past actions.",
     "level": "Beginner",
-    "sentenceCount": 39,
+    "sentenceCount": 41,
     "file": "module-10.json"
   },
   {
@@ -145,7 +145,7 @@
     "title": "Chapter 11: The Imperfect Tense",
     "description": "Describe ongoing past actions and habits.",
     "level": "Beginner",
-    "sentenceCount": 38,
+    "sentenceCount": 40,
     "file": "module-11.json"
   },
   {
@@ -170,7 +170,7 @@
     "title": "Chapter 12: The Present Perfect",
     "description": "Talk about what you 'have done'.",
     "level": "Beginner",
-    "sentenceCount": 48,
+    "sentenceCount": 50,
     "file": "module-12.json"
   },
   {
@@ -195,7 +195,7 @@
     "title": "Chapter 13: Direct Object Pronouns",
     "description": "Replace nouns with 'lo, la, los, las'.",
     "level": "Beginner",
-    "sentenceCount": 40,
+    "sentenceCount": 42,
     "file": "module-13.json"
   },
   {
@@ -203,7 +203,7 @@
     "title": "Chapter 14: Indirect Object Pronouns",
     "description": "Express 'to whom' or 'for whom' using 'le' and 'les'.",
     "level": "Beginner",
-    "sentenceCount": 30,
+    "sentenceCount": 32,
     "file": "module-14.json"
   },
   {
@@ -211,7 +211,7 @@
     "title": "Chapter 15: Double Object Pronouns",
     "description": "Use both direct and indirect object pronouns together.",
     "level": "Beginner",
-    "sentenceCount": 27,
+    "sentenceCount": 29,
     "file": "module-15.json"
   },
   {
@@ -458,7 +458,7 @@
     "title": "Theme: Technology and Internet",
     "description": "Vocabulary for computers, internet, and modern technology.",
     "level": "Intermediate",
-    "sentenceCount": 45,
+    "sentenceCount": 47,
     "file": "module-37.json"
   },
   {
@@ -466,7 +466,7 @@
     "title": "Theme: Family and Relationships",
     "description": "Vocabulary for describing family members and relationships.",
     "level": "Intermediate",
-    "sentenceCount": 45,
+    "sentenceCount": 47,
     "file": "module-38.json"
   },
   {
@@ -474,7 +474,7 @@
     "title": "Theme: Work and Professions",
     "description": "Vocabulary for jobs, the workplace, and careers.",
     "level": "Intermediate",
-    "sentenceCount": 45,
+    "sentenceCount": 47,
     "file": "module-39.json"
   },
   {

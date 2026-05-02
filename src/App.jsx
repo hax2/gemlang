@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState, useMemo, useEffect } from 'react';
+import { useCallback, useRef, useState, useEffect } from 'react';
 import Dashboard from './components/Dashboard';
 import ModuleSelector from './components/ModuleSelector';
 import LessonPlayer from './components/LessonPlayer';
@@ -17,11 +17,13 @@ function App() {
   const [session, setSession] = useState(null);
   const [guestMode, setGuestMode] = useState(false);
   const [isInitializing, setIsInitializing] = useState(true);
+  const [showSignOutConfirm, setShowSignOutConfirm] = useState(false);
   const [view, setView] = useState('dashboard'); // 'dashboard' | 'modules' | 'settings' | 'lesson'
   const [previousView, setPreviousView] = useState('dashboard');
   const [activeModuleIndex, setActiveModuleIndex] = useState(null);
   const [activeModule, setActiveModule] = useState(null);
   const [isModuleLoading, setIsModuleLoading] = useState(false);
+  const [moduleLoadError, setModuleLoadError] = useState(null);
   const [practiceMode, setPracticeMode] = useState(() => {
     try {
       const prog = JSON.parse(localStorage.getItem('gemlang-progress') || '{}');
@@ -64,21 +66,25 @@ function App() {
     if (!manifestModule) return;
 
     const loader = moduleLoaders[`./data/modules/${manifestModule.file}`];
-    if (!loader) {
-      throw new Error(`Missing module loader for ${manifestModule.file}`);
-    }
 
     const requestId = loadRequestRef.current + 1;
     loadRequestRef.current = requestId;
     setActiveModuleIndex(index);
     setActiveModule(null);
+    setModuleLoadError(null);
     setIsModuleLoading(true);
     setView('lesson');
 
     try {
+      if (!loader) {
+        throw new Error(`Missing module loader for ${manifestModule.file}`);
+      }
       const loadedModule = await loader();
       if (loadRequestRef.current !== requestId) return;
       setActiveModule(loadedModule.default);
+    } catch (error) {
+      if (loadRequestRef.current !== requestId) return;
+      setModuleLoadError(error instanceof Error ? error.message : 'Unable to load this module.');
     } finally {
       if (loadRequestRef.current === requestId) {
         setIsModuleLoading(false);
@@ -97,39 +103,22 @@ function App() {
     loadRequestRef.current += 1;
     setActiveModuleIndex(null);
     setActiveModule(null);
+    setModuleLoadError(null);
     setIsModuleLoading(false);
     setView('dashboard');
   }, []);
 
-  const handleBackToModules = useCallback(() => {
-    loadRequestRef.current += 1;
-    setActiveModuleIndex(null);
-    setActiveModule(null);
-    setIsModuleLoading(false);
-    setView('modules');
-  }, []);
-
   const handleNextModule = useCallback(() => {
-    // Use suggested next module instead of just index+1
-    const suggested = getNextSuggestedModule();
-    if (suggested) {
-      const idx = modulesManifest.findIndex((item) => item.id === suggested.id);
-      if (idx >= 0) {
-        void loadModuleAtIndex(idx);
-        return;
-      }
-    }
-    // Fallback: next in order
     const nextIdx = activeModuleIndex + 1;
     if (nextIdx < modulesManifest.length) {
       void loadModuleAtIndex(nextIdx);
     } else {
       handleBackToDashboard();
     }
-  }, [activeModuleIndex, getNextSuggestedModule, handleBackToDashboard, loadModuleAtIndex]);
+  }, [activeModuleIndex, handleBackToDashboard, loadModuleAtIndex]);
 
   /** Get the saved merged-items index for a module to support resume */
-  const getSavedIndex = useCallback((moduleId, mode) => {
+  const getSavedIndex = useCallback((moduleId) => {
     const mod = progress.modules[moduleId];
     if (!mod || !mod.currentIndex) return 0;
     // If the module was completed, start from the beginning (reviewing)
@@ -141,8 +130,8 @@ function App() {
 
   /** Convert a sentence-level index to a merged-items index.
    *  This is passed to the LessonPlayer to calculate resume position. */
-  const getSavedMergedIndex = useCallback((moduleId, mode) => {
-    const sentenceIndex = getSavedIndex(moduleId, mode);
+  const getSavedMergedIndex = useCallback((moduleId) => {
+    const sentenceIndex = getSavedIndex(moduleId);
     if (sentenceIndex <= 0) return 0;
     // We can't easily pre-compute the merged index here since we don't have
     // the module data loaded yet. Instead, we just pass the sentence index
@@ -164,17 +153,7 @@ function App() {
           {(session || guestMode) && (
             <button
               className="btn-settings"
-              onClick={() => {
-                if (session) {
-                  if (window.confirm("Are you sure you want to sign out?")) {
-                    handleLogout();
-                  }
-                } else {
-                  if (window.confirm("Are you sure you want to exit guest mode?")) {
-                    setGuestMode(false);
-                  }
-                }
-              }}
+              onClick={() => setShowSignOutConfirm(true)}
               title={session ? "Sign Out" : "Sign In"}
               aria-label={session ? "Sign Out" : "Sign In"}
             >
@@ -263,7 +242,6 @@ function App() {
             getRefreshModules={getRefreshModules}
             onSelectModule={handleSelectModule}
             onBrowseAll={() => setView('modules')}
-            practiceMode={practiceMode}
           />
         ) : view === 'modules' ? (
           <ModuleSelector
@@ -275,12 +253,41 @@ function App() {
             getModuleProgress={getModuleProgress}
             onBack={() => setView('dashboard')}
           />
-        ) : isModuleLoading || !activeModule ? (
+        ) : isModuleLoading ? (
           <div className="lesson-finished glass-panel">
             <h2 className="finished-title">Loading lesson...</h2>
             <p className="finished-subtitle">
               Preparing {modulesManifest[activeModuleIndex]?.title}.
             </p>
+          </div>
+        ) : moduleLoadError ? (
+          <div className="lesson-finished glass-panel">
+            <h2 className="finished-title">Lesson unavailable</h2>
+            <p className="finished-subtitle">
+              {moduleLoadError}
+            </p>
+            <div className="finished-actions">
+              <button className="btn-secondary" onClick={handleBackToDashboard}>
+                ← Dashboard
+              </button>
+              {activeModuleIndex !== null && (
+                <button className="btn-primary" onClick={() => loadModuleAtIndex(activeModuleIndex)}>
+                  Retry
+                </button>
+              )}
+            </div>
+          </div>
+        ) : !activeModule ? (
+          <div className="lesson-finished glass-panel">
+            <h2 className="finished-title">Lesson unavailable</h2>
+            <p className="finished-subtitle">
+              No lesson data was loaded.
+            </p>
+            <div className="finished-actions">
+              <button className="btn-secondary" onClick={handleBackToDashboard}>
+                ← Dashboard
+              </button>
+            </div>
           </div>
         ) : (
           <LessonPlayer
@@ -298,6 +305,40 @@ function App() {
           />
         )}
       </main>
+
+      {showSignOutConfirm && (
+        <div className="modal-overlay" onClick={() => setShowSignOutConfirm(false)}>
+          <div className="modal-content glass-panel animate-fade-in" onClick={(e) => e.stopPropagation()}>
+            <h2 style={{ marginBottom: 'var(--spacing-md)' }}>
+              {session ? "Sign Out" : "Exit Guest Mode"}
+            </h2>
+            <p style={{ color: 'var(--text-muted)' }}>
+              {session ? "Are you sure you want to sign out?" : "Are you sure you want to exit guest mode?"}
+            </p>
+            <div className="modal-actions">
+              <button
+                className="btn-primary"
+                onClick={() => {
+                  setShowSignOutConfirm(false);
+                  if (session) {
+                    handleLogout();
+                  } else {
+                    setGuestMode(false);
+                  }
+                }}
+              >
+                Yes, Sign Out
+              </button>
+              <button
+                className="btn-secondary"
+                onClick={() => setShowSignOutConfirm(false)}
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
