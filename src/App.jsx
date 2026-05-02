@@ -170,7 +170,9 @@ function App() {
                     handleLogout();
                   }
                 } else {
-                  setGuestMode(false);
+                  if (window.confirm("Are you sure you want to exit guest mode?")) {
+                    setGuestMode(false);
+                  }
                 }
               }}
               title={session ? "Sign Out" : "Sign In"}
