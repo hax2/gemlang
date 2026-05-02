@@ -458,7 +458,7 @@
     "title": "Theme: Technology and Internet",
     "description": "Vocabulary for computers, internet, and modern technology.",
     "level": "Intermediate",
-    "sentenceCount": 47,
+    "sentenceCount": 45,
     "file": "module-37.json"
   },
   {
@@ -474,7 +474,7 @@
     "title": "Theme: Work and Professions",
     "description": "Vocabulary for jobs, the workplace, and careers.",
     "level": "Intermediate",
-    "sentenceCount": 47,
+    "sentenceCount": 45,
     "file": "module-39.json"
   },
   {
@@ -490,7 +490,7 @@
     "title": "Theme: House and Furniture",
     "description": "Vocabulary for describing parts of the house and daily living objects.",
     "level": "Intermediate",
-    "sentenceCount": 45,
+    "sentenceCount": 47,
     "file": "module-41.json"
   },
   {
@@ -506,7 +506,7 @@
     "title": "Theme: Emotions and Feelings",
     "description": "Vocabulary for expressing how you feel internally.",
     "level": "Intermediate",
-    "sentenceCount": 45,
+    "sentenceCount": 47,
     "file": "module-43.json"
   }
 ]

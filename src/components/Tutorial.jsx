@@ -220,7 +220,7 @@ const Tutorial = ({ onClose }) => {
   const isCentered = !spotlightRect;
 
   return createPortal(
-    <div className={`tutorial-overlay ${spotlightRect ? 'has-spotlight' : ''}`} onClick={handleSkip}>
+    <div className={`tutorial-overlay ${spotlightRect ? 'has-spotlight' : ''}`}>
       {/* SVG spotlight mask */}
       {spotlightRect && (
         <svg className="tutorial-spotlight-svg" width="100%" height="100%">

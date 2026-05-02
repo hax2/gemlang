@@ -88,6 +88,7 @@
 
 /* CTA Card */
 .dashboard-cta {
+  width: 100%;
   padding: 2rem;
   margin-bottom: 2.5rem;
   cursor: pointer;
@@ -95,6 +96,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
+  text-align: left;
   transition: border-color var(--transition-normal), transform var(--transition-fast);
   position: relative;
   overflow: hidden;
@@ -116,6 +118,12 @@
 .dashboard-cta:hover {
   border-color: rgba(168, 85, 247, 0.4);
   transform: translateY(-2px);
+}
+
+.dashboard-cta:focus-visible,
+.refresh-card:focus-visible {
+  outline: 2px solid var(--accent-glow);
+  outline-offset: 3px;
 }
 
 .dashboard-all-done {
@@ -235,12 +243,14 @@
 }
 
 .refresh-card {
+  width: 100%;
   padding: 1rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   cursor: pointer;
+  text-align: left;
   transition: border-color var(--transition-fast), transform var(--transition-fast);
 }
 

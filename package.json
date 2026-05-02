@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "validate:data": "node validate-data.cjs",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "npm run deploy:prod",

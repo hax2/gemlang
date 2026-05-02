@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
   animation: tutorialFadeIn 0.4s ease-out;
 }
 
@@ -85,6 +86,7 @@
 .tutorial-card {
   position: relative;
   z-index: 10002;
+  pointer-events: auto;
   max-width: 380px;
   width: 100%;
   padding: 1.75rem 1.5rem 1.25rem;
