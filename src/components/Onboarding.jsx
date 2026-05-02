@@ -17,8 +17,9 @@ const Onboarding = ({ modules, onComplete }) => {
   return (
     <div className="onboarding-container animate-fade-in">
       <div className="onboarding-content glass-panel">
-        <h1 className="onboarding-title">Welcome to GemLang!</h1>
-        <p className="onboarding-subtitle">Choose your level of Spanish to get started.</p>
+        <div className="onboarding-intro">
+          <h1 className="onboarding-title">Choose your level</h1>
+        </div>
 
         {!showModuleList ? (
           <div className="onboarding-selection">
