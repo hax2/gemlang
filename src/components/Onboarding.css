@@ -29,38 +29,36 @@
   font-size: 1.1rem;
 }
 
-.onboarding-choices {
+.divider {
   display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.choice-card {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.choice-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(168, 85, 247, 0.4);
-}
-
-.choice-card h3 {
-  margin: 0 0 1rem 0;
+  align-items: center;
+  text-align: center;
   color: var(--text-color);
+  opacity: 0.5;
+  margin: 0.5rem 0;
 }
 
-.choice-card p {
-  margin: 0;
-  font-size: 0.95rem;
-  opacity: 0.7;
-  line-height: 1.4;
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.divider span {
+  padding: 0 10px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.choose-module-btn {
+  background: rgba(255, 255, 255, 0.02);
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.choose-module-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .onboarding-selection {

@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import './Onboarding.css';
 
 const Onboarding = ({ modules, onComplete }) => {
-  const [mode, setMode] = useState(null); // 'broad' | 'granular'
   const [selectedLevel, setSelectedLevel] = useState('Beginner');
+  const [showModuleList, setShowModuleList] = useState(false);
   const [selectedModule, setSelectedModule] = useState(modules[0]?.id);
 
   const handleStart = () => {
-    if (mode === 'broad') {
-      onComplete(selectedLevel);
-    } else if (mode === 'granular') {
+    if (showModuleList) {
       onComplete('granular', selectedModule);
+    } else {
+      onComplete(selectedLevel);
     }
   };
 
@@ -18,55 +18,49 @@ const Onboarding = ({ modules, onComplete }) => {
     <div className="onboarding-container animate-fade-in">
       <div className="onboarding-content glass-panel">
         <h1 className="onboarding-title">Welcome to GemLang!</h1>
-        <p className="onboarding-subtitle">How would you like to start your journey?</p>
+        <p className="onboarding-subtitle">Choose your level of Spanish to get started.</p>
 
-        {!mode ? (
-          <div className="onboarding-choices">
-            <div className="choice-card" onClick={() => setMode('broad')}>
-              <h3>Choose Broadly</h3>
-              <p>Select a general skill level (Beginner, Intermediate, Advanced).</p>
+        {!showModuleList ? (
+          <div className="onboarding-selection">
+            <div className="level-options">
+              {['Beginner', 'Intermediate', 'Advanced'].map((lvl) => (
+                <button
+                  key={lvl}
+                  className={`level-btn ${selectedLevel === lvl ? 'active' : ''}`}
+                  onClick={() => setSelectedLevel(lvl)}
+                >
+                  {lvl}
+                </button>
+              ))}
+              <div className="divider"><span>OR</span></div>
+              <button
+                className="level-btn choose-module-btn"
+                onClick={() => setShowModuleList(true)}
+              >
+                Choose specific module...
+              </button>
             </div>
-            <div className="choice-card" onClick={() => setMode('granular')}>
-              <h3>High Granularity</h3>
-              <p>Pick the exact module or chapter you want to start from.</p>
-            </div>
+            <button className="btn-primary start-journey-btn" onClick={handleStart}>
+              Start Learning
+            </button>
           </div>
         ) : (
           <div className="onboarding-selection">
-            <button className="btn-back" onClick={() => setMode(null)}>← Back</button>
-            
-            {mode === 'broad' ? (
-              <div className="level-selection">
-                <h2>Select your level</h2>
-                <div className="level-options">
-                  {['Beginner', 'Intermediate', 'Advanced'].map((lvl) => (
-                    <button
-                      key={lvl}
-                      className={`level-btn ${selectedLevel === lvl ? 'active' : ''}`}
-                      onClick={() => setSelectedLevel(lvl)}
-                    >
-                      {lvl}
-                    </button>
-                  ))}
-                </div>
+            <button className="btn-back" onClick={() => setShowModuleList(false)}>← Back</button>
+            <div className="module-selection">
+              <h2>Select starting point</h2>
+              <div className="module-list">
+                {modules.map((m) => (
+                  <button
+                    key={m.id}
+                    className={`module-list-btn ${selectedModule === m.id ? 'active' : ''}`}
+                    onClick={() => setSelectedModule(m.id)}
+                  >
+                    {m.title}
+                  </button>
+                ))}
               </div>
-            ) : (
-              <div className="module-selection">
-                <h2>Select starting point</h2>
-                <div className="module-list">
-                  {modules.map((m) => (
-                    <button
-                      key={m.id}
-                      className={`module-list-btn ${selectedModule === m.id ? 'active' : ''}`}
-                      onClick={() => setSelectedModule(m.id)}
-                    >
-                      {m.title}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-
+            </div>
             <button className="btn-primary start-journey-btn" onClick={handleStart}>
               Start Learning
             </button>
