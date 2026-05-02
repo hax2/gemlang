@@ -72,7 +72,8 @@ const ModuleSelector = ({
           const isReview = mod.type === 'review';
 
           return (
-            <div 
+            <button
+              type="button"
               key={mod.id} 
               className={`module-card glass-panel ${status !== 'not-started' ? 'has-progress' : ''} ${isStory ? 'story-card' : ''} ${isReview ? 'review-card' : ''}`}
               onClick={() => onSelect(mod)}
@@ -119,15 +120,12 @@ const ModuleSelector = ({
                   <span className="sentence-count">
                     {mod.sentenceCount} {isPureTesting ? 'Prompts' : 'Sentences'}
                   </span>
-                  <button className="btn-primary btn-sm" onClick={(e) => {
-                    e.stopPropagation();
-                    onSelect(mod);
-                  }}>
+                  <span className="btn-primary btn-sm module-card-action">
                     {getButtonLabel(status)}
-                  </button>
+                  </span>
                 </div>
               </div>
-            </div>
+            </button>
           );
         })}
       </div>

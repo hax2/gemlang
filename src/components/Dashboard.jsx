@@ -81,7 +81,11 @@ const Dashboard = ({
 
       {/* Main CTA */}
       {heroAction && (
-        <div className="dashboard-cta glass-panel" onClick={() => onSelectModule(heroAction)}>
+        <button
+          type="button"
+          className="dashboard-cta glass-panel"
+          onClick={() => onSelectModule(heroAction)}
+        >
           <div className="cta-content">
             {isResuming && (() => {
               const prog = getModuleProgress(heroAction.id);
@@ -127,10 +131,10 @@ const Dashboard = ({
               })()}
             </div>
           </div>
-          <button className="btn-primary cta-button pulse-primary">
+          <span className="btn-primary cta-button pulse-primary">
             {heroLabel} →
-          </button>
-        </div>
+          </span>
+        </button>
       )}
 
       {/* All done state */}
@@ -151,7 +155,8 @@ const Dashboard = ({
           </h3>
           <div className="refresh-grid">
             {refreshModules.map((mod) => (
-              <div
+              <button
+                type="button"
                 key={mod.id}
                 className="refresh-card glass-panel"
                 onClick={() => onSelectModule(mod)}
@@ -165,16 +170,12 @@ const Dashboard = ({
                       : '🤔 Getting there'}
                   </span>
                 </div>
-                <button
+                <span
                   className="btn-secondary btn-sm refresh-btn"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onSelectModule(mod);
-                  }}
                 >
                   ↻ Refresh
-                </button>
-              </div>
+                </span>
+              </button>
             ))}
           </div>
         </div>
@@ -189,7 +190,8 @@ const Dashboard = ({
           </h3>
           <div className="refresh-grid">
             {recentlyCompleted.map((mod) => (
-              <div
+              <button
+                type="button"
                 key={mod.id}
                 className="refresh-card glass-panel completed-card"
                 onClick={() => onSelectModule(mod)}
@@ -199,16 +201,12 @@ const Dashboard = ({
                   <h4 className="refresh-title">{mod.title}</h4>
                   <span className="completed-badge">✓ Mastered</span>
                 </div>
-                <button
+                <span
                   className="btn-secondary btn-sm refresh-btn"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onSelectModule(mod);
-                  }}
                 >
                   Review
-                </button>
-              </div>
+                </span>
+              </button>
             ))}
           </div>
         </div>
