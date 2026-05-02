@@ -453,19 +453,6 @@
       }
     },
     {
-      "id": "m7-s42",
-      "spanish": "Se llama Carlos y compra café.",
-      "english": "His name is Carlos and he buys coffee.",
-      "wordMeanings": {
-        "Se": "himself / herself / themselves",
-        "llama": "calls",
-        "Carlos": "Carlos",
-        "y": "and",
-        "compra": "buys",
-        "café": "coffee"
-      }
-    },
-    {
       "id": "m7-s43",
       "spanish": "¿Te duchas por la mañana?",
       "english": "Do you shower in the morning?",
@@ -505,17 +492,24 @@
       }
     },
     {
-      "id": "m7-s46",
-      "spanish": "Nos levantamos, nos vestimos y salimos.",
-      "english": "We get up, get dressed, and leave.",
+      "spanish": "Me muero de sueño.",
+      "english": "I am dying of tiredness.",
       "wordMeanings": {
-        "Nos": "us / to us",
-        "levantamos": "we get up",
-        "nos": "us / to us",
-        "vestimos": "we dress",
-        "y": "and",
-        "salimos": "we leave"
-      }
+        "Me": "myself",
+        "muero": "I die",
+        "de": "of",
+        "sueño": "sleep/tiredness"
+      },
+      "id": "m7-s-colloq1"
+    },
+    {
+      "spanish": "¡Vámonos ya!",
+      "english": "Let's go already!",
+      "wordMeanings": {
+        "Vámonos": "let's go (us)",
+        "ya": "already/now"
+      },
+      "id": "m7-s-colloq2"
     }
   ],
   "grammarExplanation": "Reflexive verbs describe actions done to oneself. They use a reflexive pronoun BEFORE the verb:\n\n• me (myself) → me levanto = I get up\n• te (yourself) → te levantas = you get up\n• se (him/herself) → se levanta = he/she gets up\n• nos (ourselves) → nos levantamos = we get up\n• se (themselves) → se levantan = they get up\n\nCommon reflexive verbs: llamarse, levantarse, acostarse, ducharse, lavarse, vestirse, sentarse, quedarse.",

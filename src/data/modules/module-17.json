@@ -255,32 +255,35 @@
     },
     {
       "id": "m17-s25",
-      "spanish": "No la compres.",
-      "english": "Don't buy it.",
+      "spanish": "No habléis todos a la vez.",
+      "english": "Don't all speak at once. (you plural, Spain)",
       "wordMeanings": {
         "No": "no / not",
+        "habléis": "speak (subj pl)",
+        "todos": "all",
+        "a": "to / at",
         "la": "the / it (fem)",
-        "compres": "buy (subj)"
+        "vez": "time"
       }
     },
     {
       "id": "m17-s26",
-      "spanish": "No los compres.",
-      "english": "Don't buy them.",
+      "spanish": "¡No me digas!",
+      "english": "You don't say! / No way!",
       "wordMeanings": {
         "No": "no / not",
-        "los": "the / them",
-        "compres": "buy (subj)"
+        "me": "me / to me",
+        "digas": "say (subj)"
       }
     },
     {
       "id": "m17-s27",
-      "spanish": "No las compres.",
-      "english": "Don't buy them.",
+      "spanish": "No te preocupes.",
+      "english": "Don't worry.",
       "wordMeanings": {
         "No": "no / not",
-        "las": "the / them (fem)",
-        "compres": "buy (subj)"
+        "te": "you / to you",
+        "preocupes": "worry (subj)"
       }
     },
     {

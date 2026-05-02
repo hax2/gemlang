@@ -404,6 +404,25 @@
         "tengo": "I have",
         "aquí": "here"
       }
+    },
+    {
+      "spanish": "¡Ya lo tengo!",
+      "english": "I've got it!",
+      "wordMeanings": {
+        "Ya": "already/now",
+        "lo": "it",
+        "tengo": "I have"
+      },
+      "id": "m13-s-colloq1"
+    },
+    {
+      "spanish": "¿Lo pillas?",
+      "english": "Do you get it? (slang)",
+      "wordMeanings": {
+        "Lo": "it",
+        "pillas": "you catch/get"
+      },
+      "id": "m13-s-colloq2"
     }
   ],
   "grammarExplanation": "Direct object pronouns replace the noun receiving the action:\n\n• lo = it/him (masculine)\n• la = it/her (feminine)\n• los = them (masculine)\n• las = them (feminine)\n\nThey go BEFORE the conjugated verb:\n• 'Veo el libro' → 'Lo veo' (I see it)\n• 'Compro la sopa' → 'La compro' (I buy it)\n\nWith infinitives/gerunds, they can attach to the end:\n• 'Lo estoy leyendo' or 'Estoy leyéndolo'",

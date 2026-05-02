@@ -244,6 +244,24 @@
   color: #fbbf24;
 }
 
+/* Review cards */
+.review-card {
+  border-left: 3px solid rgba(45, 212, 191, 0.6);
+}
+
+.review-card::before {
+  background: radial-gradient(circle at top right, rgba(45, 212, 191, 0.12), transparent 70%) !important;
+}
+
+.review-card:hover {
+  border-left-color: rgba(45, 212, 191, 0.9);
+}
+
+.status-review {
+  background: rgba(45, 212, 191, 0.15);
+  color: #2dd4bf;
+}
+
 .module-badges-row {
   display: flex;
   align-items: center;

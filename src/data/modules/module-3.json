@@ -426,88 +426,89 @@
     },
     {
       "id": "m3-s39",
-      "spanish": "¿Es un libro o una mesa?",
-      "english": "Is it a book or a table?",
+      "spanish": "¿Es grande o es pequeño?",
+      "english": "Is it big or is it small?",
       "wordMeanings": {
         "Es": "is",
-        "un": "a",
-        "libro": "book",
+        "grande": "big",
         "o": "or",
-        "una": "a (fem)",
-        "mesa": "table"
+        "pequeño": "small"
       }
     },
     {
       "id": "m3-s40",
-      "spanish": "Es un libro.",
-      "english": "It is a book.",
+      "spanish": "Es un lugar muy bonito.",
+      "english": "It is a very pretty place.",
       "wordMeanings": {
         "Es": "is",
         "un": "a",
-        "libro": "book"
+        "lugar": "place",
+        "muy": "very",
+        "bonito": "pretty"
       }
     },
     {
       "id": "m3-s41",
-      "spanish": "¿Es una casa o un café?",
-      "english": "Is it a house or a café?",
+      "spanish": "¿Es un buen coche?",
+      "english": "Is it a good car?",
       "wordMeanings": {
         "Es": "is",
-        "una": "a (fem)",
-        "casa": "house",
-        "o": "or",
         "un": "a",
-        "café": "coffee"
+        "buen": "good",
+        "coche": "car"
       }
     },
     {
       "id": "m3-s42",
-      "spanish": "Es un café.",
-      "english": "It is a café.",
+      "spanish": "Sí, ¡está genial!",
+      "english": "Yes, it's great!",
       "wordMeanings": {
-        "Es": "is",
-        "un": "a",
-        "café": "coffee"
+        "Sí": "yes",
+        "está": "is",
+        "genial": "great"
       }
     },
     {
       "id": "m3-s43",
-      "spanish": "¿Son libros o coches?",
-      "english": "Are they books or cars?",
+      "spanish": "¡Qué casa tan chula!",
+      "english": "What a cool house!",
       "wordMeanings": {
-        "Son": "are",
-        "libros": "books",
-        "o": "or",
-        "coches": "cars"
+        "Qué": "what",
+        "casa": "house",
+        "tan": "so",
+        "chula": "cool"
       }
     },
     {
       "id": "m3-s44",
-      "spanish": "Son libros.",
-      "english": "They are books.",
+      "spanish": "Es verdad, es preciosa.",
+      "english": "It's true, it's beautiful.",
       "wordMeanings": {
-        "Son": "are",
-        "libros": "books"
+        "Es": "is",
+        "verdad": "true",
+        "preciosa": "beautiful"
       }
     },
     {
       "id": "m3-s45",
-      "spanish": "¿Son casas o escuelas?",
-      "english": "Are they houses or schools?",
+      "spanish": "¿Son nuevos estos libros?",
+      "english": "Are these books new?",
       "wordMeanings": {
         "Son": "are",
-        "casas": "houses",
-        "o": "or",
-        "escuelas": "schools"
+        "nuevos": "new",
+        "estos": "these",
+        "libros": "books"
       }
     },
     {
       "id": "m3-s46",
-      "spanish": "Son escuelas.",
-      "english": "They are schools.",
+      "spanish": "No, son muy viejos.",
+      "english": "No, they are very old.",
       "wordMeanings": {
-        "Son": "are",
-        "escuelas": "schools"
+        "No": "no",
+        "son": "are",
+        "muy": "very",
+        "viejos": "old"
       }
     },
     {

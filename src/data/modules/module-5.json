@@ -205,14 +205,13 @@
     },
     {
       "id": "m5-s20",
-      "spanish": "Ella compra una mesa grande.",
-      "english": "She buys a big table.",
+      "spanish": "Ella busca algo nuevo.",
+      "english": "She looks for something new.",
       "wordMeanings": {
         "Ella": "she / her",
-        "compra": "buys",
-        "una": "a (fem)",
-        "mesa": "table",
-        "grande": "big"
+        "busca": "looks for",
+        "algo": "something",
+        "nuevo": "new"
       }
     },
     {
@@ -238,13 +237,11 @@
     },
     {
       "id": "m5-s23",
-      "spanish": "Tú buscas la escuela.",
-      "english": "You look for the school.",
+      "spanish": "¿Buscas algo?",
+      "english": "Are you looking for something?",
       "wordMeanings": {
-        "Tú": "you",
-        "buscas": "you look for",
-        "la": "the / it (fem)",
-        "escuela": "school"
+        "Buscas": "you look for",
+        "algo": "something"
       }
     },
     {
@@ -458,14 +455,11 @@
     },
     {
       "id": "m5-s43",
-      "spanish": "Nosotros estudiamos en el café.",
-      "english": "We study in the café.",
+      "spanish": "¡Me encanta!",
+      "english": "I love it!",
       "wordMeanings": {
-        "Nosotros": "we",
-        "estudiamos": "we study",
-        "en": "in / on",
-        "el": "the",
-        "café": "coffee"
+        "Me": "to me",
+        "encanta": "it enchants"
       }
     },
     {

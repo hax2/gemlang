@@ -301,6 +301,26 @@
         "la": "the / it (fem)",
         "explico": "I explain"
       }
+    },
+    {
+      "spanish": "¡Te lo dije!",
+      "english": "I told you so!",
+      "wordMeanings": {
+        "Te": "to you",
+        "lo": "it",
+        "dije": "I said"
+      },
+      "id": "m15-s-colloq1"
+    },
+    {
+      "spanish": "Me lo llevo.",
+      "english": "I'll take it.",
+      "wordMeanings": {
+        "Me": "myself",
+        "lo": "it",
+        "llevo": "I carry/take"
+      },
+      "id": "m15-s-colloq2"
     }
   ],
   "grammarExplanation": "When both an indirect AND direct object pronoun appear together, the indirect one comes FIRST:\n\n• le/les + lo/la/los/las → 'se' replaces le/les\n• 'Le doy el libro' + 'lo' → 'Se lo doy' (I give it to her)\n\nWith infinitives, pronouns can attach to the end:\n• 'Se lo quiero dar' or 'Quiero dárselo'\n\nOrder: se → te/me/nos → lo/la/los/las → verb.",

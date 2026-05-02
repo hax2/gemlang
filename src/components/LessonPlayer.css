@@ -507,6 +507,22 @@
   color: #fbbf24 !important;
 }
 
+/* ── Review Intro (variation of grammar intro) ──────────── */
+.review-intro-panel {
+  border-color: rgba(45, 212, 191, 0.25) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(45, 212, 191, 0.06) 0%,
+    rgba(168, 85, 247, 0.04) 100%
+  ) !important;
+}
+
+.review-intro-badge {
+  background: linear-gradient(135deg, rgba(45, 212, 191, 0.2), rgba(20, 184, 166, 0.2)) !important;
+  border-color: rgba(45, 212, 191, 0.35) !important;
+  color: #2dd4bf !important;
+}
+
 /* ── Translation Challenge ───────────────────────────── */
 .challenge-panel {
   border: 1px solid rgba(234, 179, 8, 0.25) !important;

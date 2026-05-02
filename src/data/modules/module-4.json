@@ -406,28 +406,24 @@
     },
     {
       "id": "m4-s40",
-      "spanish": "Tengo un amigo en el centro.",
-      "english": "I have a friend downtown.",
+      "spanish": "Tengo que irme ahora.",
+      "english": "I have to go now.",
       "wordMeanings": {
         "Tengo": "I have",
-        "un": "a",
-        "amigo": "friend (male)",
-        "en": "in / on",
-        "el": "the",
-        "centro": "downtown"
+        "que": "to",
+        "irme": "go myself",
+        "ahora": "now"
       }
     },
     {
       "id": "m4-s41",
-      "spanish": "Tengo una amiga en la escuela.",
-      "english": "I have a friend (female) at school.",
+      "spanish": "No tengo ni idea.",
+      "english": "I have no idea.",
       "wordMeanings": {
-        "Tengo": "I have",
-        "una": "a (fem)",
-        "amiga": "friend (female)",
-        "en": "in / on",
-        "la": "the / it (fem)",
-        "escuela": "school"
+        "No": "not",
+        "tengo": "I have",
+        "ni": "nor / even",
+        "idea": "idea"
       }
     },
     {

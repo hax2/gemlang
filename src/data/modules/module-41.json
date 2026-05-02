@@ -28,8 +28,8 @@
     },
     {
       "id": "41-s3",
-      "spanish": "Yo ordena la cocina todos los sábados.",
-      "english": "I organizes the kitchen every Saturday.",
+      "spanish": "Yo ordeno la cocina todos los sábados.",
+      "english": "I organize the kitchen every Saturday.",
       "wordMeanings": {
         "Yo": "I",
         "ordena": "organizes",
@@ -94,8 +94,8 @@
     },
     {
       "id": "41-s9",
-      "spanish": "Yo limpia el dormitorio todos los sábados.",
-      "english": "I cleans the bedroom every Saturday.",
+      "spanish": "Yo limpio el dormitorio todos los sábados.",
+      "english": "I clean the bedroom every Saturday.",
       "wordMeanings": {
         "Yo": "I",
         "limpia": "cleans",
@@ -116,8 +116,8 @@
     },
     {
       "id": "41-s11",
-      "spanish": "Yo limpia el sofá con cuidado.",
-      "english": "I cleans the sofa with care.",
+      "spanish": "Yo limpio el sofá con cuidado.",
+      "english": "I clean the sofa with care.",
       "wordMeanings": {
         "Yo": "I",
         "limpia": "cleans",
@@ -138,8 +138,8 @@
     },
     {
       "id": "41-s13",
-      "spanish": "Yo lava el sofá por la mañana.",
-      "english": "I washes the sofa in the morning.",
+      "spanish": "Yo lavo el sofá por la mañana.",
+      "english": "I wash the sofa in the morning.",
       "wordMeanings": {
         "Yo": "I",
         "lava": "washes",
@@ -226,8 +226,8 @@
     },
     {
       "id": "41-s21",
-      "spanish": "Yo repara el baño con cuidado.",
-      "english": "I fixes the bathroom with care.",
+      "spanish": "Yo reparo el baño con cuidado.",
+      "english": "I fix the bathroom with care.",
       "wordMeanings": {
         "Yo": "I",
         "repara": "fixes",
@@ -303,8 +303,8 @@
     },
     {
       "id": "41-s28",
-      "spanish": "Yo lava la cocina todos los sábados.",
-      "english": "I washes the kitchen every Saturday.",
+      "spanish": "Yo lavo la cocina todos los sábados.",
+      "english": "I wash the kitchen every Saturday.",
       "wordMeanings": {
         "Yo": "I",
         "lava": "washes",
@@ -347,8 +347,8 @@
     },
     {
       "id": "41-s32",
-      "spanish": "Yo limpia el sofá con mucho esfuerzo.",
-      "english": "I cleans the sofa with a lot of effort.",
+      "spanish": "Yo limpio el sofá con mucho esfuerzo.",
+      "english": "I clean the sofa with a lot of effort.",
       "wordMeanings": {
         "Yo": "I",
         "limpia": "cleans",
@@ -391,8 +391,8 @@
     },
     {
       "id": "41-s36",
-      "spanish": "Yo pinta la ventana con mucho esfuerzo.",
-      "english": "I paints the window with a lot of effort.",
+      "spanish": "Yo pinto la ventana con mucho esfuerzo.",
+      "english": "I paint the window with a lot of effort.",
       "wordMeanings": {
         "Yo": "I",
         "pinta": "paints",
@@ -435,8 +435,8 @@
     },
     {
       "id": "41-s40",
-      "spanish": "Yo repara el baño por la mañana.",
-      "english": "I fixes the bathroom in the morning.",
+      "spanish": "Yo reparo el baño por la mañana.",
+      "english": "I fix the bathroom in the morning.",
       "wordMeanings": {
         "Yo": "I",
         "repara": "fixes",
@@ -468,8 +468,8 @@
     },
     {
       "id": "41-s43",
-      "spanish": "Yo lava la ventana con mucho esfuerzo.",
-      "english": "I washes the window with a lot of effort.",
+      "spanish": "Yo lavo la ventana con mucho esfuerzo.",
+      "english": "I wash the window with a lot of effort.",
       "wordMeanings": {
         "Yo": "I",
         "lava": "washes",
@@ -497,6 +497,34 @@
         "repara": "fixes",
         "dormitorio": "bedroom",
         "mañana": "morning"
+      }
+    },
+    {
+      "id": "41-s-colloq1",
+      "spanish": "Voy a darle un repaso a la casa.",
+      "english": "I'm going to give the house a quick clean.",
+      "wordMeanings": {
+        "Voy": "I am going",
+        "a": "to",
+        "darle": "give it",
+        "un": "a",
+        "repaso": "quick clean / review",
+        "a la": "to the",
+        "casa": "house"
+      }
+    },
+    {
+      "id": "41-s-colloq2",
+      "spanish": "¿Me echas una mano con la limpieza?",
+      "english": "Can you lend me a hand with the cleaning?",
+      "wordMeanings": {
+        "Me": "to me",
+        "echas": "you throw (lend)",
+        "una": "a",
+        "mano": "hand",
+        "con": "with",
+        "la": "the",
+        "limpieza": "cleaning"
       }
     }
   ],

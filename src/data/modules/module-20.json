@@ -313,54 +313,50 @@
     },
     {
       "id": "m20-s26",
-      "spanish": "Es importante que lo compres hoy.",
-      "english": "It's important that you buy it today.",
+      "spanish": "Lo importante es que estés bien.",
+      "english": "The important thing is that you're okay.",
       "wordMeanings": {
-        "Es": "is",
+        "Lo": "the (neutral)",
         "importante": "important",
+        "es": "is",
         "que": "that / than",
-        "lo": "it / him",
-        "compres": "buy (subj)",
-        "hoy": "today"
+        "estés": "are (subj)",
+        "bien": "well/good"
       }
     },
     {
       "id": "m20-s27",
-      "spanish": "Es importante que la compres hoy.",
-      "english": "It's important that you buy it today.",
+      "spanish": "Es importante que te cuides.",
+      "english": "It's important that you take care of yourself.",
       "wordMeanings": {
         "Es": "is",
         "importante": "important",
         "que": "that / than",
-        "la": "the / it (fem)",
-        "compres": "buy (subj)",
-        "hoy": "today"
+        "te": "yourself",
+        "cuides": "take care (subj)"
       }
     },
     {
       "id": "m20-s28",
-      "spanish": "Es importante que los compres hoy.",
-      "english": "It's important that you buy them today.",
+      "spanish": "Es necesario que lo sepas.",
+      "english": "It's necessary that you know it.",
       "wordMeanings": {
         "Es": "is",
-        "importante": "important",
+        "necesario": "necessary",
         "que": "that / than",
-        "los": "the / them",
-        "compres": "buy (subj)",
-        "hoy": "today"
+        "lo": "it",
+        "sepas": "know (subj)"
       }
     },
     {
       "id": "m20-s29",
-      "spanish": "Es importante que las compres hoy.",
-      "english": "It's important that you buy them today.",
+      "spanish": "Es importante que estudiéis.",
+      "english": "It's important that you study. (you plural, Spain)",
       "wordMeanings": {
         "Es": "is",
         "importante": "important",
         "que": "that / than",
-        "las": "the / them (fem)",
-        "compres": "buy (subj)",
-        "hoy": "today"
+        "estudiéis": "study (subj pl)"
       }
     }
   ],

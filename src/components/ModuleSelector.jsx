@@ -69,11 +69,12 @@ const ModuleSelector = ({
           const prog = getModuleProgress ? getModuleProgress(mod.id) : null;
           const badge = STATUS_BADGES[status];
           const isStory = mod.type === 'story';
+          const isReview = mod.type === 'review';
 
           return (
             <div 
               key={mod.id} 
-              className={`module-card glass-panel ${status !== 'not-started' ? 'has-progress' : ''} ${isStory ? 'story-card' : ''}`}
+              className={`module-card glass-panel ${status !== 'not-started' ? 'has-progress' : ''} ${isStory ? 'story-card' : ''} ${isReview ? 'review-card' : ''}`}
               onClick={() => onSelect(mod)}
               style={{ animationDelay: `${index * 0.05}s` }}
             >
@@ -84,6 +85,11 @@ const ModuleSelector = ({
                     {isStory && (
                       <span className="module-status-badge status-story">
                         📖 Story
+                      </span>
+                    )}
+                    {isReview && (
+                      <span className="module-status-badge status-review">
+                        🔄 Review
                       </span>
                     )}
                     {badge && (

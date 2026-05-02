@@ -137,6 +137,7 @@ const LessonPlayer = ({
   const [extraItems, setExtraItems] = useState([]);
   const [isDesktop, setIsDesktop] = useState(false);
   const isStoryModule = !!module.type && module.type === 'story';
+  const isReviewModule = !!module.type && module.type === 'review';
   const [showGrammarIntro, setShowGrammarIntro] = useState(
     () => !!((module.grammarExplanation || module.storyIntro) && practiceMode !== 'testing')
   );
@@ -382,10 +383,10 @@ const LessonPlayer = ({
           <span className="progress-text">0 / {totalSentences}</span>
         </div>
 
-        <div className={`lesson-content glass-panel grammar-intro-panel ${isStoryModule ? 'story-intro-panel' : ''}`}>
-          <div className={`grammar-intro-badge ${isStoryModule ? 'story-intro-badge' : ''}`}>
-            <span className="grammar-intro-icon">{isStoryModule ? '📖' : '📖'}</span>
-            <span>{isStoryModule ? 'Story Time' : 'Grammar'}</span>
+        <div className={`lesson-content glass-panel grammar-intro-panel ${isStoryModule ? 'story-intro-panel' : ''} ${isReviewModule ? 'review-intro-panel' : ''}`}>
+          <div className={`grammar-intro-badge ${isStoryModule ? 'story-intro-badge' : ''} ${isReviewModule ? 'review-intro-badge' : ''}`}>
+            <span className="grammar-intro-icon">{isReviewModule ? '🔄' : isStoryModule ? '📖' : '📖'}</span>
+            <span>{isReviewModule ? 'Review' : isStoryModule ? 'Story Time' : 'Grammar'}</span>
           </div>
           <h2 className="grammar-intro-title">{module.title}</h2>
           <div className="grammar-intro-body">
@@ -405,7 +406,7 @@ const LessonPlayer = ({
             className="btn-primary btn-nav-next pulse-primary"
             onClick={() => setShowGrammarIntro(false)}
           >
-            {isStoryModule ? 'Begin Story →' : 'Begin Lesson →'} <KbdHint show={isDesktop}>Enter</KbdHint>
+            {isReviewModule ? 'Begin Review →' : isStoryModule ? 'Begin Story →' : 'Begin Lesson →'} <KbdHint show={isDesktop}>Enter</KbdHint>
           </button>
         </div>
       </div>

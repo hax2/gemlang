@@ -24,6 +24,15 @@
     "file": "module-3.json"
   },
   {
+    "id": "review-1-2-3",
+    "title": "🔄 Review: Chapters 1, 2, 3",
+    "description": "Mixed practice from Greetings & Basics, Locations, Descriptions.",
+    "type": "review",
+    "level": "Beginner",
+    "sentenceCount": 15,
+    "file": "review-1-2-3.json"
+  },
+  {
     "id": "module-ser-vs-estar",
     "title": "Grammar: Ser vs. Estar",
     "description": "Understand the two verbs for 'to be' and when to use them.",
@@ -63,6 +72,15 @@
     "level": "Beginner",
     "sentenceCount": 42,
     "file": "module-6.json"
+  },
+  {
+    "id": "review-4-5-6",
+    "title": "🔄 Review: Chapters 4, 5, 6",
+    "description": "Mixed practice from Possession, Regular -AR Verbs, Regular -ER/-IR Verbs.",
+    "type": "review",
+    "level": "Beginner",
+    "sentenceCount": 15,
+    "file": "review-4-5-6.json"
   },
   {
     "id": "module-7",
@@ -106,6 +124,15 @@
     "file": "module-9.json"
   },
   {
+    "id": "review-7-8-9",
+    "title": "🔄 Review: Chapters 7, 8, 9",
+    "description": "Mixed practice from Reflexive Verbs, Expressing Likes, The Near Future.",
+    "type": "review",
+    "level": "Beginner",
+    "sentenceCount": 15,
+    "file": "review-7-8-9.json"
+  },
+  {
     "id": "module-10",
     "title": "Chapter 10: The Preterite Tense",
     "description": "Talk about completed past actions.",
@@ -147,6 +174,15 @@
     "file": "module-12.json"
   },
   {
+    "id": "review-10-11-12",
+    "title": "🔄 Review: Chapters 10, 11, 12",
+    "description": "Mixed practice from The Preterite Tense, The Imperfect Tense, The Present Perfect.",
+    "type": "review",
+    "level": "Beginner",
+    "sentenceCount": 15,
+    "file": "review-10-11-12.json"
+  },
+  {
     "id": "module-preterite-vs-present-perfect",
     "title": "Grammar: Preterite vs. Present Perfect",
     "description": "Learn when to use the simple past versus the 'have done' past.",
@@ -177,6 +213,15 @@
     "level": "Beginner",
     "sentenceCount": 27,
     "file": "module-15.json"
+  },
+  {
+    "id": "review-13-14-15",
+    "title": "🔄 Review: Chapters 13, 14, 15",
+    "description": "Mixed practice from Direct Object Pronouns, Indirect Object Pronouns, Double Object Pronouns.",
+    "type": "review",
+    "level": "Beginner",
+    "sentenceCount": 15,
+    "file": "review-13-14-15.json"
   },
   {
     "id": "module-por-vs-para",
@@ -220,6 +265,15 @@
     "file": "module-18.json"
   },
   {
+    "id": "review-16-17-18",
+    "title": "🔄 Review: Chapters 16, 17, 18",
+    "description": "Mixed practice from Affirmative Commands, Negative Commands, Subjunctive: Desires.",
+    "type": "review",
+    "level": "Beginner",
+    "sentenceCount": 15,
+    "file": "review-16-17-18.json"
+  },
+  {
     "id": "module-19",
     "title": "Chapter 19: Subjunctive: Hope",
     "description": "Express hope and uncertainty with 'Espero que'.",
@@ -253,6 +307,15 @@
     "file": "module-21.json"
   },
   {
+    "id": "review-19-20-21",
+    "title": "🔄 Review: Chapters 19, 20, 21",
+    "description": "Mixed practice from Subjunctive: Hope, Subjunctive: Importance, Real Conditionals.",
+    "type": "review",
+    "level": "Beginner",
+    "sentenceCount": 15,
+    "file": "review-19-20-21.json"
+  },
+  {
     "id": "module-22",
     "title": "Chapter 22: Hypothetical Conditionals",
     "description": "Talk about what would happen in hypothetical situations.",
@@ -275,6 +338,15 @@
     "level": "Beginner",
     "sentenceCount": 31,
     "file": "module-24.json"
+  },
+  {
+    "id": "review-22-23-24",
+    "title": "🔄 Review: Chapters 22, 23, 24",
+    "description": "Mixed practice from Hypothetical Conditionals, Done Actions (Acabar de), Duration (Llevar + Gerund).",
+    "type": "review",
+    "level": "Beginner",
+    "sentenceCount": 15,
+    "file": "review-22-23-24.json"
   },
   {
     "id": "story-6",

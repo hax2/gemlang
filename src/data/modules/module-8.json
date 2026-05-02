@@ -295,22 +295,6 @@
       }
     },
     {
-      "id": "m8-s26",
-      "spanish": "Me gustan los libros, pero no me gustan las fotos.",
-      "english": "I like books, but I don't like photos.",
-      "wordMeanings": {
-        "Me": "me / to me",
-        "gustan": "like (pl)",
-        "los": "the / them",
-        "libros": "books",
-        "pero": "but",
-        "no": "no / not",
-        "me": "me / to me",
-        "las": "the / them (fem)",
-        "fotos": "photos"
-      }
-    },
-    {
       "id": "m8-s27",
       "spanish": "¿A quién le gusta el café?",
       "english": "Who likes coffee?",
@@ -513,19 +497,6 @@
       }
     },
     {
-      "id": "m8-s43",
-      "spanish": "A Carlos le gusta la sopa.",
-      "english": "Carlos likes soup.",
-      "wordMeanings": {
-        "A": "to",
-        "Carlos": "Carlos",
-        "le": "to him / her",
-        "gusta": "likes",
-        "la": "the / it (fem)",
-        "sopa": "soup"
-      }
-    },
-    {
       "id": "m8-s44",
       "spanish": "Me gusta estudiar por la mañana.",
       "english": "I like studying in the morning.",
@@ -549,6 +520,29 @@
         "y": "and",
         "repetir": "to repeat"
       }
+    },
+    {
+      "spanish": "¡Me flipa esta canción!",
+      "english": "I'm crazy about this song!",
+      "wordMeanings": {
+        "Me": "to me",
+        "flipa": "freaks/craze",
+        "esta": "this",
+        "canción": "song"
+      },
+      "id": "m8-s-colloq1"
+    },
+    {
+      "spanish": "A mí me da igual.",
+      "english": "I don't mind / I don't care.",
+      "wordMeanings": {
+        "A": "to",
+        "mí": "me",
+        "me": "to me",
+        "da": "gives",
+        "igual": "equal/same"
+      },
+      "id": "m8-s-colloq2"
     }
   ],
   "grammarExplanation": "The verb 'gustar' works differently from English. It literally means 'to please,' so the thing you like is the SUBJECT:\n\n• Me gusta el café = Coffee pleases me (I like coffee)\n• Me gustan los libros = Books please me (I like books)\n\nUse 'gusta' with singular nouns or infinitives, 'gustan' with plural nouns.\n\nIndirect object pronouns: me, te, le, nos, les\n• 'A + name/pronoun' can clarify who: 'A Ana le gusta la música.'",

@@ -346,27 +346,26 @@
     },
     {
       "id": "m2-s32",
-      "spanish": "Somos amigos y estamos aquí.",
-      "english": "We are friends and we are here.",
+      "spanish": "Estamos todos juntos aquí.",
+      "english": "We are all together here.",
       "wordMeanings": {
-        "Somos": "we are",
-        "amigos": "friends",
-        "y": "and",
-        "estamos": "we are",
+        "Estamos": "we are",
+        "todos": "all",
+        "juntos": "together",
         "aquí": "here"
       }
     },
     {
       "id": "m2-s33",
-      "spanish": "Soy Ana y estoy en casa.",
-      "english": "I am Ana and I am at home.",
+      "spanish": "Estoy por el centro, ¿y tú?",
+      "english": "I'm around downtown, and you?",
       "wordMeanings": {
-        "Soy": "I am",
-        "Ana": "Ana",
+        "Estoy": "I am",
+        "por": "around",
+        "el": "the",
+        "centro": "downtown",
         "y": "and",
-        "estoy": "I am",
-        "en": "in / on",
-        "casa": "house"
+        "tú": "you"
       }
     },
     {

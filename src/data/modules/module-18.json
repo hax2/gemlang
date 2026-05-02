@@ -308,49 +308,49 @@
     },
     {
       "id": "m18-s27",
-      "spanish": "Quiero que compres café.",
-      "english": "I want you to buy coffee.",
+      "spanish": "¡Ojalá que llueva!",
+      "english": "I hope it rains!",
       "wordMeanings": {
-        "Quiero": "I want",
+        "Ojalá": "hopefully",
         "que": "that / than",
-        "compres": "buy (subj)",
-        "café": "coffee"
+        "llueva": "rains (subj)"
       }
     },
     {
       "id": "m18-s28",
-      "spanish": "Quiero que lo compres hoy.",
-      "english": "I want you to buy it today.",
+      "spanish": "Quiero que te lo pases bien.",
+      "english": "I want you to have a good time.",
       "wordMeanings": {
         "Quiero": "I want",
         "que": "that / than",
-        "lo": "it / him",
-        "compres": "buy (subj)",
-        "hoy": "today"
+        "te": "yourself",
+        "lo": "it",
+        "pases": "spend / pass (subj)",
+        "bien": "well/good"
       }
     },
     {
       "id": "m18-s29",
-      "spanish": "Quiero que la compres hoy.",
-      "english": "I want you to buy it today.",
+      "spanish": "Quiero que vengáis a la fiesta.",
+      "english": "I want you to come to the party. (you plural, Spain)",
       "wordMeanings": {
         "Quiero": "I want",
         "que": "that / than",
+        "vengáis": "come (subj pl)",
+        "a": "to / at",
         "la": "the / it (fem)",
-        "compres": "buy (subj)",
-        "hoy": "today"
+        "fiesta": "party"
       }
     },
     {
       "id": "m18-s30",
-      "spanish": "Quiero que los compres hoy.",
-      "english": "I want you to buy them today.",
+      "spanish": "Espero que te guste.",
+      "english": "I hope you like it.",
       "wordMeanings": {
-        "Quiero": "I want",
+        "Espero": "I hope",
         "que": "that / than",
-        "los": "the / them",
-        "compres": "buy (subj)",
-        "hoy": "today"
+        "te": "you / to you",
+        "guste": "likes (subj)"
       }
     }
   ],

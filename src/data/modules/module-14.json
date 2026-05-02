@@ -114,12 +114,13 @@
     },
     {
       "id": "m14-s11",
-      "spanish": "¿Le das tiempo a tu amiga?",
-      "english": "Do you give time to your friend?",
+      "spanish": "¿Le das el regalo a tu amiga?",
+      "english": "Do you give the gift to your friend?",
       "wordMeanings": {
-        "Le": "to him / her",
+        "Le": "to her",
         "das": "you give",
-        "tiempo": "time",
+        "el": "the",
+        "regalo": "gift",
         "a": "to",
         "tu": "your",
         "amiga": "friend (female)"
@@ -127,14 +128,15 @@
     },
     {
       "id": "m14-s12",
-      "spanish": "No, no le doy tiempo.",
-      "english": "No, I don’t give her time.",
+      "spanish": "No, no le doy el regalo.",
+      "english": "No, I don’t give her the gift.",
       "wordMeanings": {
         "No": "no / not",
         "no": "no / not",
-        "le": "to him / her",
+        "le": "to her",
         "doy": "I give",
-        "tiempo": "time"
+        "el": "the",
+        "regalo": "gift"
       }
     },
     {
@@ -347,6 +349,27 @@
         "le": "to him / her",
         "hablo": "I speak"
       }
+    },
+    {
+      "spanish": "Le echo una mano.",
+      "english": "I lend him/her a hand.",
+      "wordMeanings": {
+        "Le": "to him/her",
+        "echo": "I throw (lend)",
+        "una": "a",
+        "mano": "hand"
+      },
+      "id": "m14-s-colloq1"
+    },
+    {
+      "spanish": "¿Qué le pasa?",
+      "english": "What's wrong with him/her?",
+      "wordMeanings": {
+        "Qué": "what",
+        "le": "to him/her",
+        "pasa": "happens"
+      },
+      "id": "m14-s-colloq2"
     }
   ],
   "grammarExplanation": "Indirect object pronouns tell TO WHOM or FOR WHOM an action is done:\n\n• me = to me\n• te = to you\n• le = to him/her/you (formal)\n• nos = to us\n• les = to them/you (plural)\n\nThey go BEFORE the verb:\n• 'Doy el libro a Ana' → 'Le doy el libro' (I give her the book)\n\n'A + person' can clarify who 'le/les' refers to:\n• 'Le doy el libro a Ana.'",

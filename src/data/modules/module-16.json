@@ -214,26 +214,28 @@
     },
     {
       "id": "m16-s24",
-      "spanish": "Dásela.",
-      "english": "Give it to him/her.",
+      "spanish": "Pásamelo.",
+      "english": "Pass it to me.",
       "wordMeanings": {
-        "Dásela": "give it to him/her"
+        "Pásamelo": "pass it to me"
       }
     },
     {
       "id": "m16-s25",
-      "spanish": "Dámelo.",
-      "english": "Give it to me.",
+      "spanish": "Date prisa.",
+      "english": "Hurry up.",
       "wordMeanings": {
-        "Dámelo": "give it to me"
+        "Date": "give yourself",
+        "prisa": "hurry"
       }
     },
     {
       "id": "m16-s26",
-      "spanish": "Dámela.",
-      "english": "Give it to me.",
+      "spanish": "Venga, vámonos.",
+      "english": "Come on, let's go.",
       "wordMeanings": {
-        "Dámela": "give it to me"
+        "Venga": "come on",
+        "vámonos": "let's go"
       }
     },
     {

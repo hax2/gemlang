@@ -72,7 +72,7 @@
     },
     {
       "id": "43-s7",
-      "spanish": "La abuela se muestra un poco asustado después de la noticia.",
+      "spanish": "La abuela se muestra un poco asustada después de la noticia.",
       "english": "The grandmother shows themselves as a little scared after the news.",
       "wordMeanings": {
         "abuela": "grandmother",
@@ -105,7 +105,7 @@
     },
     {
       "id": "43-s10",
-      "spanish": "La abuela parece muy sorprendido sin razón aparente.",
+      "spanish": "La abuela parece muy sorprendida sin razón aparente.",
       "english": "The grandmother seems very surprised for no apparent reason.",
       "wordMeanings": {
         "abuela": "grandmother",
@@ -160,7 +160,7 @@
     },
     {
       "id": "43-s15",
-      "spanish": "La abuela quedó algo nervioso todo el tiempo.",
+      "spanish": "La abuela quedó algo nerviosa todo el tiempo.",
       "english": "The grandmother ended up somewhat nervous all the time.",
       "wordMeanings": {
         "abuela": "grandmother",
@@ -193,7 +193,7 @@
     },
     {
       "id": "43-s18",
-      "spanish": "La abuela se muestra un poco asustado hoy.",
+      "spanish": "La abuela se muestra un poco asustada hoy.",
       "english": "The grandmother shows themselves as a little scared today.",
       "wordMeanings": {
         "abuela": "grandmother",
@@ -358,7 +358,7 @@
     },
     {
       "id": "43-s33",
-      "spanish": "La abuela se siente muy sorprendido después de la noticia.",
+      "spanish": "La abuela se siente muy sorprendida después de la noticia.",
       "english": "The grandmother feels very surprised after the news.",
       "wordMeanings": {
         "abuela": "grandmother",
@@ -391,7 +391,7 @@
     },
     {
       "id": "43-s36",
-      "spanish": "La abuela se muestra algo nervioso todo el tiempo.",
+      "spanish": "La abuela se muestra algo nerviosa todo el tiempo.",
       "english": "The grandmother shows themselves as somewhat nervous all the time.",
       "wordMeanings": {
         "abuela": "grandmother",
@@ -490,13 +490,36 @@
     },
     {
       "id": "43-s45",
-      "spanish": "La abuela se muestra algo nervioso después de la noticia.",
+      "spanish": "La abuela se muestra algo nerviosa después de la noticia.",
       "english": "The grandmother shows themselves as somewhat nervous after the news.",
       "wordMeanings": {
         "abuela": "grandmother",
         "muestra": "shows",
         "nervioso": "nervous",
         "noticia": "news"
+      }
+    },
+    {
+      "id": "43-s-colloq1",
+      "spanish": "Hoy estoy de bajón.",
+      "english": "Today I'm feeling down.",
+      "wordMeanings": {
+        "Hoy": "today",
+        "estoy": "I am",
+        "de": "of",
+        "bajón": "down / slump"
+      }
+    },
+    {
+      "id": "43-s-colloq2",
+      "spanish": "¡Qué buen rollo hay aquí!",
+      "english": "What good vibes there are here!",
+      "wordMeanings": {
+        "Qué": "what",
+        "buen": "good",
+        "rollo": "vibe / roll",
+        "hay": "there is / are",
+        "aquí": "here"
       }
     }
   ],

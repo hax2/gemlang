@@ -437,6 +437,29 @@
         "a": "to",
         "casa": "house"
       }
+    },
+    {
+      "spanish": "Ayer me lo pasé pipa.",
+      "english": "Yesterday I had a blast.",
+      "wordMeanings": {
+        "Ayer": "yesterday",
+        "me": "to me",
+        "lo": "it",
+        "pasé": "I passed",
+        "pipa": "blast (slang)"
+      },
+      "id": "m10-s-colloq1"
+    },
+    {
+      "spanish": "Ayer no hice nada.",
+      "english": "Yesterday I did nothing.",
+      "wordMeanings": {
+        "Ayer": "yesterday",
+        "no": "not",
+        "hice": "I did",
+        "nada": "nothing"
+      },
+      "id": "m10-s-colloq2"
     }
   ],
   "grammarExplanation": "The preterite tense describes completed actions in the past.\n\nRegular -AR endings: -é, -aste, -ó, -amos, -aron\n• hablé, hablaste, habló, hablamos, hablaron\n\nRegular -ER/-IR endings: -í, -iste, -ió, -imos, -ieron\n• comí, comiste, comió, comimos, comieron\n\nIrregular: ir/ser → fui, fuiste, fue, fuimos, fueron\ntener → tuve, tuviste, tuvo, tuvimos, tuvieron",

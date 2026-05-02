@@ -315,20 +315,6 @@
       }
     },
     {
-      "id": "m9-s27",
-      "spanish": "Vamos a estudiar y después vamos a comer.",
-      "english": "We are going to study and then we are going to eat.",
-      "wordMeanings": {
-        "Vamos": "we go",
-        "a": "to",
-        "estudiar": "to study",
-        "y": "and",
-        "después": "after",
-        "vamos": "we go",
-        "comer": "to eat"
-      }
-    },
-    {
       "id": "m9-s28",
       "spanish": "Voy a llamar a Ana.",
       "english": "I am going to call Ana.",
@@ -432,18 +418,27 @@
       }
     },
     {
-      "id": "m9-s37",
-      "spanish": "Voy a trabajar hoy, pero mañana estudio.",
-      "english": "I'm going to work today, but tomorrow I study.",
+      "spanish": "¡Vamos a pasarlo genial!",
+      "english": "We're going to have a great time!",
       "wordMeanings": {
-        "Voy": "I go",
+        "Vamos": "we go",
         "a": "to",
-        "trabajar": "to work",
-        "hoy": "today",
-        "pero": "but",
-        "mañana": "tomorrow / morning",
-        "estudio": "I study"
-      }
+        "pasarlo": "pass it / spend it",
+        "genial": "great"
+      },
+      "id": "m9-s-colloq1"
+    },
+    {
+      "spanish": "¿Qué vas a hacer hoy?",
+      "english": "What are you going to do today?",
+      "wordMeanings": {
+        "Qué": "what",
+        "vas": "you go",
+        "a": "to",
+        "hacer": "do/make",
+        "hoy": "today"
+      },
+      "id": "m9-s-colloq2"
     }
   ],
   "grammarExplanation": "The near future is formed with 'ir + a + infinitive.' It translates to 'going to do something.'\n\nConjugate 'ir' (to go):\n• Voy = I go\n• Vas = You go\n• Va = He/She goes\n• Vamos = We go\n• Van = They go\n\nThen add 'a + infinitive':\n• Voy a estudiar = I'm going to study\n• Vas a comer = You're going to eat",

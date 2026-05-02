@@ -50,7 +50,7 @@
     },
     {
       "id": "38-s5",
-      "spanish": "La suegra visita a el nieto todos los días.",
+      "spanish": "La suegra visita al nieto todos los días.",
       "english": "The mother-in-law visits the grandson every day.",
       "wordMeanings": {
         "suegra": "mother-in-law",
@@ -116,7 +116,7 @@
     },
     {
       "id": "38-s11",
-      "spanish": "Mi hermano visita a el nieto con cariño.",
+      "spanish": "Mi hermano visita al nieto con cariño.",
       "english": "My brother visits the grandson with affection.",
       "wordMeanings": {
         "hermano": "brother",
@@ -160,7 +160,7 @@
     },
     {
       "id": "38-s15",
-      "spanish": "La suegra visita a el nieto con cariño.",
+      "spanish": "La suegra visita al nieto con cariño.",
       "english": "The mother-in-law visits the grandson with affection.",
       "wordMeanings": {
         "suegra": "mother-in-law",
@@ -171,7 +171,7 @@
     },
     {
       "id": "38-s16",
-      "spanish": "Mi hermano ayuda a el nieto con cariño.",
+      "spanish": "Mi hermano ayuda al nieto con cariño.",
       "english": "My brother helps the grandson with affection.",
       "wordMeanings": {
         "hermano": "brother",
@@ -182,7 +182,7 @@
     },
     {
       "id": "38-s17",
-      "spanish": "Mi tía ayuda a el nieto con cariño.",
+      "spanish": "Mi tía ayuda al nieto con cariño.",
       "english": "My aunt helps the grandson with affection.",
       "wordMeanings": {
         "tía": "aunt",
@@ -237,7 +237,7 @@
     },
     {
       "id": "38-s22",
-      "spanish": "Mi hermano abraza a el nieto con cariño.",
+      "spanish": "Mi hermano abraza al nieto con cariño.",
       "english": "My brother hugs the grandson with affection.",
       "wordMeanings": {
         "hermano": "brother",
@@ -303,7 +303,7 @@
     },
     {
       "id": "38-s28",
-      "spanish": "Mi tía quiere a el nieto con cariño.",
+      "spanish": "Mi tía quiere al nieto con cariño.",
       "english": "My aunt loves the grandson with affection.",
       "wordMeanings": {
         "tía": "aunt",
@@ -497,6 +497,33 @@
         "habla": "talks",
         "nieto": "grandson",
         "fines de semana": "weekends"
+      }
+    },
+    {
+      "id": "38-s-colloq1",
+      "spanish": "Mis hermanos y yo somos uña y carne.",
+      "english": "My siblings and I are very close (like nail and flesh).",
+      "wordMeanings": {
+        "Mis": "my",
+        "hermanos": "siblings",
+        "y": "and",
+        "yo": "I",
+        "somos": "we are",
+        "uña": "nail",
+        "carne": "flesh / meat"
+      }
+    },
+    {
+      "id": "38-s-colloq2",
+      "spanish": "Me llevo genial con mi suegra.",
+      "english": "I get along great with my mother-in-law.",
+      "wordMeanings": {
+        "Me": "myself",
+        "llevo": "I carry (get along)",
+        "genial": "great",
+        "con": "with",
+        "mi": "my",
+        "suegra": "mother-in-law"
       }
     }
   ],

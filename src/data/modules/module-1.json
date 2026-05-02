@@ -145,21 +145,25 @@
     },
     {
       "id": "m1-s17",
-      "spanish": "¿Eres Ana?",
-      "english": "Are you Ana?",
+      "spanish": "¿Qué tal? Me llamo Ana.",
+      "english": "What's up? My name is Ana.",
       "wordMeanings": {
-        "Eres": "you are",
+        "Qué": "what",
+        "tal": "such / how",
+        "Me": "myself",
+        "llamo": "I call",
         "Ana": "Ana"
       }
     },
     {
       "id": "m1-s18",
-      "spanish": "Sí, soy Ana.",
-      "english": "Yes, I am Ana.",
+      "spanish": "Mucho gusto, soy Luis.",
+      "english": "Nice to meet you, I am Luis.",
       "wordMeanings": {
-        "Sí": "yes",
+        "Mucho": "much",
+        "gusto": "pleasure",
         "soy": "I am",
-        "Ana": "Ana"
+        "Luis": "Luis"
       }
     },
     {

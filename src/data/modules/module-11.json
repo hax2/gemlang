@@ -434,6 +434,31 @@
         "el": "the",
         "café": "coffee"
       }
+    },
+    {
+      "spanish": "En mis tiempos, todo era distinto.",
+      "english": "In my days, everything was different.",
+      "wordMeanings": {
+        "En": "in",
+        "mis": "my",
+        "tiempos": "times",
+        "todo": "everything",
+        "era": "was",
+        "distinto": "different"
+      },
+      "id": "m11-s-colloq1"
+    },
+    {
+      "spanish": "Antes salía de fiesta siempre.",
+      "english": "I used to go out partying all the time.",
+      "wordMeanings": {
+        "Antes": "before",
+        "salía": "I used to go out",
+        "de": "of",
+        "fiesta": "party",
+        "siempre": "always"
+      },
+      "id": "m11-s-colloq2"
     }
   ],
   "grammarExplanation": "The imperfect tense describes ongoing or habitual past actions — things you 'used to do' or 'were doing.'\n\n-AR verbs: -aba, -abas, -aba, -ábamos, -aban\n• hablaba, hablabas, hablaba, hablábamos, hablaban\n\n-ER/-IR verbs: -ía, -ías, -ía, -íamos, -ían\n• comía, comías, comía, comíamos, comían\n\nKey words: siempre, a menudo, a veces, todos los días, antes, cuando era.\n\nPreterite ≠ Imperfect: 'Ayer trabajé' (completed) vs 'Ayer trabajaba' (ongoing/background).",

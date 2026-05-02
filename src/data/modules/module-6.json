@@ -384,16 +384,6 @@
       }
     },
     {
-      "id": "m6-s37",
-      "spanish": "Ella vende café.",
-      "english": "She sells coffee.",
-      "wordMeanings": {
-        "Ella": "she / her",
-        "vende": "sells",
-        "café": "coffee"
-      }
-    },
-    {
       "id": "m6-s38",
       "spanish": "Hoy como y bebo.",
       "english": "Today I eat and drink.",
@@ -434,18 +424,6 @@
       }
     },
     {
-      "id": "m6-s41",
-      "spanish": "Recibo un mensaje y respondo.",
-      "english": "I receive a message and respond.",
-      "wordMeanings": {
-        "Recibo": "I receive",
-        "un": "a",
-        "mensaje": "message",
-        "y": "and",
-        "respondo": "I answer"
-      }
-    },
-    {
       "id": "m6-s42",
       "spanish": "Aprendo cada día.",
       "english": "I learn every day.",
@@ -454,6 +432,28 @@
         "cada": "each",
         "día": "day"
       }
+    },
+    {
+      "spanish": "¡Mira, he recibido un mensaje!",
+      "english": "Look, I received a message!",
+      "wordMeanings": {
+        "Mira": "look",
+        "he": "I have",
+        "recibido": "received",
+        "un": "a",
+        "mensaje": "message"
+      },
+      "id": "m6-s-colloq1"
+    },
+    {
+      "spanish": "¡Vendo de todo!",
+      "english": "I sell everything!",
+      "wordMeanings": {
+        "Vendo": "I sell",
+        "de": "of",
+        "todo": "everything"
+      },
+      "id": "m6-s-colloq2"
     }
   ],
   "grammarExplanation": "Regular -ER and -IR verbs follow similar patterns. Remove the ending and add:\n\n-ER verbs (comer):\n• -o, -es, -e, -emos, -en\n• como, comes, come, comemos, comen\n\n-IR verbs (vivir):\n• -o, -es, -e, -imos, -en\n• vivo, vives, vive, vivimos, viven\n\nNotice: -ER and -IR only differ in the 'nosotros' form (-emos vs -imos).",
