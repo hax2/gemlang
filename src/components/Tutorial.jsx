@@ -68,23 +68,42 @@ const Tutorial = ({ onClose }) => {
   const [animating, setAnimating] = useState(false);
   const [spotlightRect, setSpotlightRect] = useState(null);
   const cardRef = useRef(null);
+  const spotlightRectRef = useRef(null);
   const isLastStep = step === STEPS.length - 1;
   const current = STEPS[step];
 
   /* ── Measure target element ──────────── */
+  const updateSpotlightRect = useCallback((nextRect) => {
+    const prev = spotlightRectRef.current;
+    const isSame = (
+      prev === nextRect
+      || (
+        prev && nextRect
+        && Math.abs(prev.x - nextRect.x) < 0.5
+        && Math.abs(prev.y - nextRect.y) < 0.5
+        && Math.abs(prev.w - nextRect.w) < 0.5
+        && Math.abs(prev.h - nextRect.h) < 0.5
+      )
+    );
+
+    if (isSame) return;
+    spotlightRectRef.current = nextRect;
+    setSpotlightRect(nextRect);
+  }, []);
+
   const measureTarget = useCallback(() => {
     if (!current.targetSelector) {
-      setSpotlightRect(null);
+      updateSpotlightRect(null);
       return;
     }
     const el = document.querySelector(current.targetSelector);
     if (!el) {
-      setSpotlightRect(null);
+      updateSpotlightRect(null);
       return;
     }
     const rect = el.getBoundingClientRect();
     const padding = 12;
-    setSpotlightRect({
+    updateSpotlightRect({
       x: rect.left - padding,
       y: rect.top - padding,
       w: rect.width + padding * 2,
@@ -93,11 +112,28 @@ const Tutorial = ({ onClose }) => {
       cy: rect.top + rect.height / 2,
       elRect: rect,
     });
-  }, [current.targetSelector]);
+  }, [current.targetSelector, updateSpotlightRect]);
 
   useLayoutEffect(() => {
-    const id = requestAnimationFrame(measureTarget);
-    return () => cancelAnimationFrame(id);
+    const startedAt = performance.now();
+    const settleDuration = 650;
+    let rafId;
+    let timeoutId;
+
+    const measureWhileSettling = () => {
+      measureTarget();
+      if (performance.now() - startedAt < settleDuration) {
+        rafId = requestAnimationFrame(measureWhileSettling);
+      }
+    };
+
+    rafId = requestAnimationFrame(measureWhileSettling);
+    timeoutId = setTimeout(measureTarget, settleDuration + 50);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      clearTimeout(timeoutId);
+    };
   }, [measureTarget, step]);
 
   useEffect(() => {
