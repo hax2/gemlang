@@ -92,6 +92,46 @@ const KbdHint = ({ show, children }) => {
   return <kbd className="kbd-hint">{children}</kbd>;
 };
 
+const LessonProgress = ({ current, total, label = 'Sentence' }) => {
+  const safeTotal = Math.max(total || 0, 1);
+  const safeCurrent = Math.min(Math.max(current || 0, 0), safeTotal);
+  const percentage = Math.round((safeCurrent / safeTotal) * 100);
+  const pipCount = Math.min(safeTotal, 24);
+  const pips = Array.from({ length: pipCount }, (_, index) => {
+    const threshold = Math.ceil(((index + 1) / pipCount) * safeTotal);
+    return {
+      id: index,
+      isFilled: safeCurrent >= threshold,
+    };
+  });
+
+  return (
+    <div
+      className="lesson-progress"
+      style={{ '--lesson-progress': `${percentage}%` }}
+      aria-label={`${label} ${safeCurrent} of ${safeTotal}`}
+    >
+      <div className="lesson-progress-copy">
+        <span className="lesson-progress-step">{label}</span>
+        <span className="lesson-progress-count">{safeCurrent} / {safeTotal}</span>
+      </div>
+      <div className="lesson-progress-track" aria-hidden="true">
+        <div className="lesson-progress-fill" />
+        <div className="lesson-progress-marker" />
+        <div className="lesson-progress-pips">
+          {pips.map((pip) => (
+            <span
+              key={pip.id}
+              className={`lesson-progress-pip ${pip.isFilled ? 'is-filled' : ''}`}
+            />
+          ))}
+        </div>
+      </div>
+      <span className="lesson-progress-percent">{percentage}%</span>
+    </div>
+  );
+};
+
 const LessonPlayer = ({
   module,
   modules,
@@ -369,12 +409,7 @@ const LessonPlayer = ({
           <button className="btn-secondary btn-sm" onClick={onBack}>
             ← Back <KbdHint show={isDesktop}>Esc</KbdHint>
           </button>
-          <div className="progress-wrapper">
-            <div className="progress-container">
-              <div className="progress-bar-fill" style={{ width: '0%' }} />
-            </div>
-          </div>
-          <span className="progress-text">0 / {totalSentences}</span>
+          <LessonProgress current={0} total={totalSentences} label="Ready" />
         </div>
 
         <div className={`lesson-content glass-panel grammar-intro-panel ${isStoryModule ? 'story-intro-panel' : ''} ${isReviewModule ? 'review-intro-panel' : ''}`}>
@@ -507,8 +542,6 @@ const LessonPlayer = ({
 
   if (isChallenge) {
     const challengeSentence = currentItem.data;
-    const progressPercentage = (progressItemsSoFar / totalSentences) * 100;
-
     return (
       <div className="lesson-player animate-fade-in">
         {showTutorial && <Tutorial onClose={() => setShowTutorial(false)} />}
@@ -526,14 +559,7 @@ const LessonPlayer = ({
           <button className="btn-help" onClick={() => setShowTutorial(true)} title="How to use">
             ?
           </button>
-          <div className="progress-wrapper">
-            <div className="progress-container">
-              <div className="progress-bar-fill" style={{ width: `${progressPercentage}%` }} />
-            </div>
-          </div>
-          <span className="progress-text">
-            {progressItemsSoFar} / {totalSentences}
-          </span>
+          <LessonProgress current={progressItemsSoFar} total={totalSentences} label="Checkpoint" />
         </div>
 
         <div className="lesson-content glass-panel challenge-panel">
@@ -593,7 +619,6 @@ const LessonPlayer = ({
   }
 
   const words = sentence.spanish.split(' ');
-  const progressPercentage = (progressItemsSoFar / totalSentences) * 100;
 
   return (
     <div className="lesson-player animate-fade-in">
@@ -612,14 +637,7 @@ const LessonPlayer = ({
         <button className="btn-help" onClick={() => setShowTutorial(true)} title="How to use">
           ?
         </button>
-        <div className="progress-wrapper">
-          <div className="progress-container">
-            <div className="progress-bar-fill" style={{ width: `${progressPercentage}%` }} />
-          </div>
-        </div>
-        <span className="progress-text">
-          {progressItemsSoFar} / {totalSentences}
-        </span>
+        <LessonProgress current={progressItemsSoFar} total={totalSentences} label="Sentence" />
       </div>
 
       <div className="lesson-content glass-panel">
