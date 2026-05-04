@@ -14,119 +14,26 @@
     },
     {
       "id": "m1-s2",
-      "spanish": "Buenos días.",
-      "english": "Good morning.",
+      "spanish": "Hola, soy Ana.",
+      "english": "Hello, I am Ana.",
       "wordMeanings": {
-        "Buenos": "good (masc pl)",
-        "días": "days"
-      }
-    },
-    {
-      "id": "m1-s3",
-      "spanish": "Buenas tardes.",
-      "english": "Good afternoon.",
-      "wordMeanings": {
-        "Buenas": "good (fem pl)",
-        "tardes": "afternoons"
-      }
-    },
-    {
-      "id": "m1-s4",
-      "spanish": "Buenas noches.",
-      "english": "Good evening./Good night.",
-      "wordMeanings": {
-        "Buenas": "good (fem pl)",
-        "noches": "nights"
-      }
-    },
-    {
-      "id": "m1-s5",
-      "spanish": "Adiós.",
-      "english": "Goodbye.",
-      "wordMeanings": {
-        "Adiós": "goodbye"
-      }
-    },
-    {
-      "id": "m1-s6",
-      "spanish": "Hasta luego.",
-      "english": "See you later.",
-      "wordMeanings": {
-        "Hasta": "until",
-        "luego": "later"
-      }
-    },
-    {
-      "id": "m1-s7",
-      "spanish": "Por favor.",
-      "english": "Please.",
-      "wordMeanings": {
-        "Por": "for / by",
-        "favor": "favor"
-      }
-    },
-    {
-      "id": "m1-s8",
-      "spanish": "Gracias.",
-      "english": "Thank you.",
-      "wordMeanings": {
-        "Gracias": "thank you"
-      }
-    },
-    {
-      "id": "m1-s9",
-      "spanish": "Muchas gracias.",
-      "english": "Thank you very much.",
-      "wordMeanings": {
-        "Muchas": "many (fem)",
-        "gracias": "thank you"
-      }
-    },
-    {
-      "id": "m1-s10",
-      "spanish": "De nada.",
-      "english": "You're welcome.",
-      "wordMeanings": {
-        "De": "of / from",
-        "nada": "nothing"
-      }
-    },
-    {
-      "id": "m1-s11",
-      "spanish": "Sí.",
-      "english": "Yes.",
-      "wordMeanings": {
-        "Sí": "yes"
-      }
-    },
-    {
-      "id": "m1-s12",
-      "spanish": "No.",
-      "english": "No.",
-      "wordMeanings": {
-        "No": "no / not"
-      }
-    },
-    {
-      "id": "m1-s13",
-      "spanish": "Soy Ana.",
-      "english": "I am Ana.",
-      "wordMeanings": {
-        "Soy": "I am",
+        "Hola": "hello",
+        "soy": "I am",
         "Ana": "Ana"
       }
     },
     {
-      "id": "m1-s14",
-      "spanish": "Soy Luis.",
-      "english": "I am Luis.",
+      "id": "m1-s3",
+      "spanish": "Hola, soy Luis.",
+      "english": "Hello, I am Luis.",
       "wordMeanings": {
-        "Soy": "I am",
+        "Hola": "hello",
+        "soy": "I am",
         "Luis": "Luis"
       }
     },
     {
-      "id": "m1-s15",
+      "id": "m1-s4",
       "spanish": "Soy Marta.",
       "english": "I am Marta.",
       "wordMeanings": {
@@ -135,12 +42,123 @@
       }
     },
     {
-      "id": "m1-s16",
+      "id": "m1-s5",
       "spanish": "Soy Carlos.",
       "english": "I am Carlos.",
       "wordMeanings": {
         "Soy": "I am",
         "Carlos": "Carlos"
+      }
+    },
+    {
+      "id": "m1-s6",
+      "spanish": "Soy estudiante.",
+      "english": "I am a student.",
+      "wordMeanings": {
+        "Soy": "I am",
+        "estudiante": "student"
+      }
+    },
+    {
+      "id": "m1-s7",
+      "spanish": "No, no soy Ana.",
+      "english": "No, I am not Ana.",
+      "wordMeanings": {
+        "No": "no / not",
+        "no": "no / not",
+        "soy": "I am",
+        "Ana": "Ana"
+      }
+    },
+    {
+      "id": "m1-s8",
+      "spanish": "Sí, soy Luis.",
+      "english": "Yes, I am Luis.",
+      "wordMeanings": {
+        "Sí": "yes",
+        "soy": "I am",
+        "Luis": "Luis"
+      }
+    },
+    {
+      "id": "m1-s9",
+      "spanish": "¿Eres Luis?",
+      "english": "Are you Luis?",
+      "wordMeanings": {
+        "Eres": "you are",
+        "Luis": "Luis"
+      }
+    },
+    {
+      "id": "m1-s10",
+      "spanish": "¿Quién eres?",
+      "english": "Who are you?",
+      "wordMeanings": {
+        "Quién": "who",
+        "eres": "you are"
+      }
+    },
+    {
+      "id": "m1-s11",
+      "spanish": "Buenos días, soy Ana.",
+      "english": "Good morning, I am Ana.",
+      "wordMeanings": {
+        "Buenos": "good (masc pl)",
+        "días": "days",
+        "soy": "I am",
+        "Ana": "Ana"
+      }
+    },
+    {
+      "id": "m1-s12",
+      "spanish": "Buenas tardes, soy Luis.",
+      "english": "Good afternoon, I am Luis.",
+      "wordMeanings": {
+        "Buenas": "good (fem pl)",
+        "tardes": "afternoons",
+        "soy": "I am",
+        "Luis": "Luis"
+      }
+    },
+    {
+      "id": "m1-s13",
+      "spanish": "Buenas noches, soy Marta.",
+      "english": "Good evening, I am Marta.",
+      "wordMeanings": {
+        "Buenas": "good (fem pl)",
+        "noches": "nights",
+        "soy": "I am",
+        "Marta": "Marta"
+      }
+    },
+    {
+      "id": "m1-s14",
+      "spanish": "Adiós, Carlos.",
+      "english": "Goodbye, Carlos.",
+      "wordMeanings": {
+        "Adiós": "goodbye",
+        "Carlos": "Carlos"
+      }
+    },
+    {
+      "id": "m1-s15",
+      "spanish": "Hasta luego, Marta.",
+      "english": "See you later, Marta.",
+      "wordMeanings": {
+        "Hasta": "until",
+        "luego": "later",
+        "Marta": "Marta"
+      }
+    },
+    {
+      "id": "m1-s16",
+      "spanish": "Por favor, ¿eres Ana?",
+      "english": "Please, are you Ana?",
+      "wordMeanings": {
+        "Por": "for / by",
+        "favor": "favor",
+        "eres": "you are",
+        "Ana": "Ana"
       }
     },
     {
@@ -168,31 +186,30 @@
     },
     {
       "id": "m1-s19",
-      "spanish": "No, no soy Ana.",
-      "english": "No, I am not Ana.",
+      "spanish": "Muchas gracias, Luis.",
+      "english": "Thank you very much, Luis.",
       "wordMeanings": {
-        "No": "no / not",
-        "no": "no / not",
-        "soy": "I am",
-        "Ana": "Ana"
-      }
-    },
-    {
-      "id": "m1-s20",
-      "spanish": "¿Eres Luis?",
-      "english": "Are you Luis?",
-      "wordMeanings": {
-        "Eres": "you are",
+        "Muchas": "many (fem)",
+        "gracias": "thank you",
         "Luis": "Luis"
       }
     },
     {
-      "id": "m1-s21",
-      "spanish": "Sí, soy Luis.",
-      "english": "Yes, I am Luis.",
+      "id": "m1-s20",
+      "spanish": "Gracias, Ana.",
+      "english": "Thank you, Ana.",
       "wordMeanings": {
-        "Sí": "yes",
-        "soy": "I am",
+        "Gracias": "thank you",
+        "Ana": "Ana"
+      }
+    },
+    {
+      "id": "m1-s21",
+      "spanish": "De nada, Luis.",
+      "english": "You're welcome, Luis.",
+      "wordMeanings": {
+        "De": "of / from",
+        "nada": "nothing",
         "Luis": "Luis"
       }
     },
