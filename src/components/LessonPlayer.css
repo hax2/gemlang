@@ -379,11 +379,10 @@
 }
 
 .word-tooltip {
-  position: absolute;
-  top: 100%;
-  left: 50%;
+  position: fixed;
+  top: var(--tooltip-top, 0);
+  left: var(--tooltip-left, 50%);
   transform: translateX(-50%);
-  margin-top: 0.5rem;
   background: var(--surface-2);
   border: 1px solid var(--glass-highlight);
   padding: 0.4rem 0.8rem;
@@ -397,6 +396,13 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 24px);
+  overflow-y: auto;
+}
+
+.word-tooltip:not(.is-positioned) {
+  visibility: hidden;
 }
 
 .word-tooltip.has-mnemonic {
@@ -436,12 +442,20 @@
 .word-tooltip::before {
   content: '';
   position: absolute;
-  bottom: 100%;
-  left: 50%;
+  left: var(--tooltip-arrow-left, 50%);
   transform: translateX(-50%);
   border-width: 6px;
   border-style: solid;
+}
+
+.word-tooltip.is-below::before {
+  bottom: 100%;
   border-color: transparent transparent var(--surface-2) transparent;
+}
+
+.word-tooltip.is-above::before {
+  top: 100%;
+  border-color: var(--surface-2) transparent transparent transparent;
 }
 
 .tooltip-audio-btn {
@@ -986,27 +1000,18 @@
     font-size: 0.88rem;
   }
 
-  /* ── Tooltip: anchor to bottom of viewport on mobile ── */
+  /* Tooltip stays viewport-positioned and clear of the fixed nav. */
   .word-tooltip {
-    position: fixed;
-    top: auto;
-    bottom: calc(130px + env(safe-area-inset-bottom, 0px));
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%);
     max-width: calc(100vw - 2rem);
+    max-height: calc(100dvh - 150px);
     white-space: normal;
     z-index: 200;
-  }
-
-  .word-tooltip::before {
-    display: none;
   }
 
   .word-tooltip.has-mnemonic {
     min-width: 0;
     max-width: calc(100vw - 2rem);
-    width: max-content;
+    width: min(320px, calc(100vw - 2rem));
   }
 
   /* ── Vocab table: scrollable + tighter on mobile ── */
