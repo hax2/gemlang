@@ -379,10 +379,11 @@
 }
 
 .word-tooltip {
-  position: fixed;
-  top: var(--tooltip-top, 0);
-  left: var(--tooltip-left, 50%);
+  position: absolute;
+  top: 100%;
+  left: 50%;
   transform: translateX(-50%);
+  margin-top: 0.5rem;
   background: var(--surface-2);
   border: 1px solid var(--glass-highlight);
   padding: 0.4rem 0.8rem;
@@ -399,10 +400,6 @@
   max-width: calc(100vw - 24px);
   max-height: calc(100dvh - 24px);
   overflow-y: auto;
-}
-
-.word-tooltip:not(.is-positioned) {
-  visibility: hidden;
 }
 
 .word-tooltip.has-mnemonic {
@@ -442,20 +439,12 @@
 .word-tooltip::before {
   content: '';
   position: absolute;
-  left: var(--tooltip-arrow-left, 50%);
+  left: 50%;
   transform: translateX(-50%);
   border-width: 6px;
   border-style: solid;
-}
-
-.word-tooltip.is-below::before {
   bottom: 100%;
   border-color: transparent transparent var(--surface-2) transparent;
-}
-
-.word-tooltip.is-above::before {
-  top: 100%;
-  border-color: var(--surface-2) transparent transparent transparent;
 }
 
 .tooltip-audio-btn {
@@ -1000,8 +989,13 @@
     font-size: 0.88rem;
   }
 
-  /* Tooltip stays viewport-positioned and clear of the fixed nav. */
+  /* Tooltip stays visible and clear of the fixed nav on narrow screens. */
   .word-tooltip {
+    position: fixed;
+    top: auto;
+    bottom: calc(118px + env(safe-area-inset-bottom, 0px));
+    left: 50%;
+    margin-top: 0;
     max-width: calc(100vw - 2rem);
     max-height: calc(100dvh - 150px);
     white-space: normal;
@@ -1012,6 +1006,10 @@
     min-width: 0;
     max-width: calc(100vw - 2rem);
     width: min(320px, calc(100vw - 2rem));
+  }
+
+  .word-tooltip::before {
+    display: none;
   }
 
   /* ── Vocab table: scrollable + tighter on mobile ── */

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useLayoutEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import Tutorial from './Tutorial';
 import { hasSeenTutorial, markTutorialSeen } from '../utils/tutorialStorage';
 import './LessonPlayer.css';
@@ -174,12 +174,9 @@ const LessonPlayer = ({
   const [spanishRevealed, setSpanishRevealed] = useState(() => !!settings?.autoRevealSpanish);
   const [englishRevealed, setEnglishRevealed] = useState(false);
   const [activeWordIndex, setActiveWordIndex] = useState(null);
-  const [tooltipPosition, setTooltipPosition] = useState(null);
   const [challengeAnswerRevealed, setChallengeAnswerRevealed] = useState(false);
   const [extraItems, setExtraItems] = useState([]);
   const [isDesktop, setIsDesktop] = useState(false);
-  const activeWordRef = useRef(null);
-  const tooltipRef = useRef(null);
   const isStoryModule = !!module.type && module.type === 'story';
   const isReviewModule = !!module.type && module.type === 'review';
   const [showGrammarIntro, setShowGrammarIntro] = useState(
@@ -202,72 +199,8 @@ const LessonPlayer = ({
     setSpanishRevealed(!!settings?.autoRevealSpanish);
     setEnglishRevealed(false);
     setActiveWordIndex(null);
-    setTooltipPosition(null);
     setChallengeAnswerRevealed(false);
   }, [settings?.autoRevealSpanish]);
-
-  const positionActiveTooltip = useCallback(() => {
-    if (activeWordIndex === null || !activeWordRef.current || !tooltipRef.current) return;
-
-    const viewport = window.visualViewport;
-    const viewportWidth = viewport?.width ?? window.innerWidth;
-    const viewportHeight = viewport?.height ?? window.innerHeight;
-    const viewportLeft = viewport?.offsetLeft ?? 0;
-    const viewportTop = viewport?.offsetTop ?? 0;
-    const isMobileViewport = viewportWidth <= 600;
-    const margin = 12;
-    const arrowSize = 6;
-    const mobileNavClearance = isMobileViewport ? 118 : margin;
-    const wordRect = activeWordRef.current.getBoundingClientRect();
-    const tooltipRect = tooltipRef.current.getBoundingClientRect();
-    const desiredCenterX = viewportLeft + wordRect.left + (wordRect.width / 2);
-    const halfTooltipWidth = tooltipRect.width / 2;
-    const minCenterX = viewportLeft + margin + halfTooltipWidth;
-    const maxCenterX = viewportLeft + viewportWidth - margin - halfTooltipWidth;
-    const left = Math.min(Math.max(desiredCenterX, minCenterX), maxCenterX);
-    const arrowLeft = Math.min(
-      Math.max(desiredCenterX - left + halfTooltipWidth, arrowSize + margin),
-      tooltipRect.width - arrowSize - margin
-    );
-    const bottomLimit = viewportTop + viewportHeight - mobileNavClearance;
-    const topLimit = viewportTop + margin;
-    const topBelow = viewportTop + wordRect.bottom + arrowSize + margin;
-    const topAbove = viewportTop + wordRect.top - tooltipRect.height - arrowSize - margin;
-    const fitsBelow = topBelow + tooltipRect.height <= bottomLimit;
-    const fitsAbove = topAbove >= topLimit;
-    const placement = fitsBelow || !fitsAbove ? 'bottom' : 'top';
-    const unclampedTop = placement === 'bottom' ? topBelow : topAbove;
-    const maxTop = Math.max(topLimit, bottomLimit - tooltipRect.height);
-    const top = Math.min(Math.max(unclampedTop, topLimit), maxTop);
-
-    setTooltipPosition({
-      left: `${left}px`,
-      top: `${top}px`,
-      arrowLeft: `${arrowLeft}px`,
-      placement,
-    });
-  }, [activeWordIndex]);
-
-  useLayoutEffect(() => {
-    positionActiveTooltip();
-  }, [positionActiveTooltip]);
-
-  useEffect(() => {
-    if (activeWordIndex === null) return undefined;
-
-    const viewport = window.visualViewport;
-    window.addEventListener('resize', positionActiveTooltip);
-    window.addEventListener('scroll', positionActiveTooltip, true);
-    viewport?.addEventListener('resize', positionActiveTooltip);
-    viewport?.addEventListener('scroll', positionActiveTooltip);
-
-    return () => {
-      window.removeEventListener('resize', positionActiveTooltip);
-      window.removeEventListener('scroll', positionActiveTooltip, true);
-      viewport?.removeEventListener('resize', positionActiveTooltip);
-      viewport?.removeEventListener('scroll', positionActiveTooltip);
-    };
-  }, [activeWordIndex, positionActiveTooltip]);
 
   useEffect(() => {
     const checkDesktop = () => {
@@ -738,11 +671,9 @@ const LessonPlayer = ({
                   <div key={idx} className="word-container">
                     <span
                       className={`spanish-word ${meaning ? 'has-meaning' : ''} ${isActive ? 'active' : ''}`}
-                      ref={isActive ? activeWordRef : null}
                       onClick={(e) => {
                         if (meaning) {
                           e.stopPropagation();
-                          setTooltipPosition(null);
                           setActiveWordIndex(isActive ? null : idx);
                           speakSpanish(cleanWord(word), speechRate);
                         }
@@ -754,13 +685,7 @@ const LessonPlayer = ({
                       const vocabExtra = getVocabExtra(word);
                       return (
                         <div 
-                          ref={tooltipRef}
-                          className={`word-tooltip animate-fade-in ${vocabExtra ? 'has-mnemonic' : ''} ${tooltipPosition ? 'is-positioned' : ''} ${tooltipPosition?.placement === 'top' ? 'is-above' : 'is-below'}`}
-                          style={{
-                            '--tooltip-left': tooltipPosition?.left,
-                            '--tooltip-top': tooltipPosition?.top,
-                            '--tooltip-arrow-left': tooltipPosition?.arrowLeft,
-                          }}
+                          className={`word-tooltip animate-fade-in ${vocabExtra ? 'has-mnemonic' : ''}`}
                           onClick={(e) => e.stopPropagation()}
                         >
                           <span className="tooltip-meaning">{meaning}</span>
