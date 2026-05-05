@@ -52,9 +52,23 @@ const buildMergedItems = (sentences, moduleId, interval) => {
 
     if (interval > 0 && sentenceCount === interval && i < sentences.length - 1) {
       const batchStart = i - (interval - 1);
+      let candidateIndexes = [];
+      for (let idx = batchStart; idx < i; idx++) {
+        candidateIndexes.push(idx);
+      }
+
+      if (candidateIndexes.length === 0 && i > 0) {
+        candidateIndexes = Array.from({ length: i }, (_, idx) => idx);
+      }
+
+      if (candidateIndexes.length === 0) {
+        sentenceCount = 0;
+        continue;
+      }
+
       const seed = `${moduleId}-challenge-${items.length}`;
-      const pick = seededRandom(seed) % interval;
-      const chosenSentence = sentences[batchStart + pick];
+      const pick = seededRandom(seed) % candidateIndexes.length;
+      const chosenSentence = sentences[candidateIndexes[pick]];
 
       items.push({
         type: 'challenge',
