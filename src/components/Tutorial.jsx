@@ -27,6 +27,7 @@ const STEPS = [
     accent: 'text',
     targetSelector: '.btn-reveal',
     pointerPosition: 'top',
+    advanceOnTargetClick: true,
   },
   {
     icon: '👆',
@@ -98,6 +99,7 @@ const Tutorial = ({ onClose }) => {
     }
     const el = document.querySelector(current.targetSelector);
     if (!el) {
+      if (current.advanceOnTargetClick && spotlightRectRef.current) return;
       updateSpotlightRect(null);
       return;
     }
@@ -112,7 +114,7 @@ const Tutorial = ({ onClose }) => {
       cy: rect.top + rect.height / 2,
       elRect: rect,
     });
-  }, [current.targetSelector, updateSpotlightRect]);
+  }, [current.advanceOnTargetClick, current.targetSelector, updateSpotlightRect]);
 
   useLayoutEffect(() => {
     const startedAt = performance.now();
@@ -188,6 +190,20 @@ const Tutorial = ({ onClose }) => {
       setAnimating(false);
     }, 250);
   }, [step]);
+
+  useEffect(() => {
+    if (!current.advanceOnTargetClick || !current.targetSelector) return undefined;
+
+    const handleTargetClick = (event) => {
+      const target = event.target;
+      if (!(target instanceof Element) || !target.closest(current.targetSelector)) return;
+
+      setTimeout(goNext, 0);
+    };
+
+    window.addEventListener('click', handleTargetClick, true);
+    return () => window.removeEventListener('click', handleTargetClick, true);
+  }, [current.advanceOnTargetClick, current.targetSelector, goNext]);
 
   const handleSkip = useCallback(() => {
     markTutorialSeen();
