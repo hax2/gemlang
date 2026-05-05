@@ -249,9 +249,8 @@ const LessonPlayer = ({
   }, [activeWordIndex]);
 
   useLayoutEffect(() => {
-    setTooltipPosition(null);
     positionActiveTooltip();
-  }, [positionActiveTooltip, sentence?.spanish]);
+  }, [positionActiveTooltip]);
 
   useEffect(() => {
     if (activeWordIndex === null) return undefined;
