@@ -379,11 +379,11 @@
 }
 
 .word-tooltip {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 0.5rem;
+  position: fixed;
+  top: var(--tooltip-top, -9999px);
+  left: var(--tooltip-left, -9999px);
+  transform: none;
+  margin-top: 0;
   box-sizing: border-box;
   background: var(--surface-2);
   border: 1px solid var(--glass-highlight);
@@ -392,13 +392,14 @@
   font-size: 0.95rem;
   font-weight: 600;
   color: #fff;
-  white-space: nowrap;
+  white-space: normal;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-  z-index: 10;
+  z-index: 200;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  max-width: calc(100vw - 24px);
+  width: fit-content;
+  max-width: min(320px, calc(100vw - 24px));
   max-height: calc(100dvh - 24px);
   overflow-x: hidden;
   overflow-y: auto;
@@ -410,8 +411,7 @@
   align-items: flex-start;
   white-space: normal;
   min-width: min(220px, calc(100vw - 24px));
-  width: min(320px, calc(100vw - 24px));
-  max-width: calc(100vw - 24px);
+  max-width: min(320px, calc(100vw - 24px));
   padding: 0.6rem 0.9rem;
   gap: 0.35rem;
 }
@@ -453,12 +453,20 @@
 .word-tooltip::before {
   content: '';
   position: absolute;
-  left: 50%;
+  left: var(--tooltip-arrow-left, 50%);
   transform: translateX(-50%);
   border-width: 6px;
   border-style: solid;
+}
+
+.word-tooltip.is-below::before {
   bottom: 100%;
   border-color: transparent transparent var(--surface-2) transparent;
+}
+
+.word-tooltip.is-above::before {
+  top: 100%;
+  border-color: var(--surface-2) transparent transparent transparent;
 }
 
 .tooltip-audio-btn {
@@ -1003,29 +1011,16 @@
     font-size: 0.88rem;
   }
 
-  /* Tooltip stays visible and clear of the fixed nav on narrow screens. */
+  /* Tooltip remains anchored to the tapped word while clamping to the viewport. */
   .word-tooltip {
-    position: fixed;
-    top: auto;
-    bottom: calc(118px + env(safe-area-inset-bottom, 0px));
-    left: 50%;
-    margin-top: 0;
-    width: min(320px, calc(100vw - 2rem));
     min-width: 0;
     max-width: calc(100vw - 2rem);
     max-height: calc(100dvh - 150px);
-    white-space: normal;
-    z-index: 200;
   }
 
   .word-tooltip.has-mnemonic {
     min-width: 0;
-    width: min(320px, calc(100vw - 2rem));
     max-width: calc(100vw - 2rem);
-  }
-
-  .word-tooltip::before {
-    display: none;
   }
 
   /* ── Vocab table: scrollable + tighter on mobile ── */

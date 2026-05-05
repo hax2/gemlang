@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useLayoutEffect, useMemo, useRef } from 'react';
 import Tutorial from './Tutorial';
 import { hasSeenTutorial, markTutorialSeen } from '../utils/tutorialStorage';
 import './LessonPlayer.css';
@@ -188,9 +188,12 @@ const LessonPlayer = ({
   const [spanishRevealed, setSpanishRevealed] = useState(() => !!settings?.autoRevealSpanish);
   const [englishRevealed, setEnglishRevealed] = useState(false);
   const [activeWordIndex, setActiveWordIndex] = useState(null);
+  const [tooltipPosition, setTooltipPosition] = useState(null);
   const [challengeAnswerRevealed, setChallengeAnswerRevealed] = useState(false);
   const [extraItems, setExtraItems] = useState([]);
   const [isDesktop, setIsDesktop] = useState(false);
+  const activeWordRef = useRef(null);
+  const tooltipRef = useRef(null);
   const isStoryModule = !!module.type && module.type === 'story';
   const isReviewModule = !!module.type && module.type === 'review';
   const [showGrammarIntro, setShowGrammarIntro] = useState(
@@ -213,8 +216,70 @@ const LessonPlayer = ({
     setSpanishRevealed(!!settings?.autoRevealSpanish);
     setEnglishRevealed(false);
     setActiveWordIndex(null);
+    setTooltipPosition(null);
     setChallengeAnswerRevealed(false);
   }, [settings?.autoRevealSpanish]);
+
+  const positionWordTooltip = useCallback(() => {
+    if (activeWordIndex === null || !activeWordRef.current || !tooltipRef.current) return;
+
+    const viewport = window.visualViewport;
+    const viewportLeft = viewport?.offsetLeft ?? 0;
+    const viewportTop = viewport?.offsetTop ?? 0;
+    const viewportWidth = viewport?.width ?? window.innerWidth;
+    const viewportHeight = viewport?.height ?? window.innerHeight;
+    const margin = 12;
+    const gap = 10;
+    const mobileNavClearance = viewportWidth <= 600 ? 104 : margin;
+    const wordRect = activeWordRef.current.getBoundingClientRect();
+    const tooltipRect = tooltipRef.current.getBoundingClientRect();
+    const desiredCenterX = viewportLeft + wordRect.left + (wordRect.width / 2);
+    const minLeft = viewportLeft + margin;
+    const maxLeft = viewportLeft + viewportWidth - margin - tooltipRect.width;
+    const left = Math.min(Math.max(desiredCenterX - (tooltipRect.width / 2), minLeft), Math.max(minLeft, maxLeft));
+    const bottomLimit = viewportTop + viewportHeight - mobileNavClearance;
+    const topLimit = viewportTop + margin;
+    const belowTop = viewportTop + wordRect.bottom + gap;
+    const aboveTop = viewportTop + wordRect.top - tooltipRect.height - gap;
+    const fitsBelow = belowTop + tooltipRect.height <= bottomLimit;
+    const fitsAbove = aboveTop >= topLimit;
+    const placement = fitsBelow || !fitsAbove ? 'below' : 'above';
+    const preferredTop = placement === 'below' ? belowTop : aboveTop;
+    const maxTop = Math.max(topLimit, bottomLimit - tooltipRect.height);
+    const top = Math.min(Math.max(preferredTop, topLimit), maxTop);
+    const arrowLeft = Math.min(
+      Math.max(desiredCenterX - left, margin),
+      Math.max(margin, tooltipRect.width - margin)
+    );
+
+    setTooltipPosition({
+      left: `${left}px`,
+      top: `${top}px`,
+      arrowLeft: `${arrowLeft}px`,
+      placement,
+    });
+  }, [activeWordIndex]);
+
+  useLayoutEffect(() => {
+    positionWordTooltip();
+  }, [positionWordTooltip]);
+
+  useEffect(() => {
+    if (activeWordIndex === null) return undefined;
+
+    const viewport = window.visualViewport;
+    window.addEventListener('resize', positionWordTooltip);
+    window.addEventListener('scroll', positionWordTooltip, true);
+    viewport?.addEventListener('resize', positionWordTooltip);
+    viewport?.addEventListener('scroll', positionWordTooltip);
+
+    return () => {
+      window.removeEventListener('resize', positionWordTooltip);
+      window.removeEventListener('scroll', positionWordTooltip, true);
+      viewport?.removeEventListener('resize', positionWordTooltip);
+      viewport?.removeEventListener('scroll', positionWordTooltip);
+    };
+  }, [activeWordIndex, positionWordTooltip]);
 
   useEffect(() => {
     const checkDesktop = () => {
@@ -685,9 +750,17 @@ const LessonPlayer = ({
                   <div key={idx} className="word-container">
                     <span
                       className={`spanish-word ${meaning ? 'has-meaning' : ''} ${isActive ? 'active' : ''}`}
+                      ref={isActive ? activeWordRef : null}
                       onClick={(e) => {
                         if (meaning) {
                           e.stopPropagation();
+                          const rect = e.currentTarget.getBoundingClientRect();
+                          setTooltipPosition({
+                            left: `${rect.left + (rect.width / 2)}px`,
+                            top: `${rect.bottom + 10}px`,
+                            arrowLeft: '50%',
+                            placement: 'below',
+                          });
                           setActiveWordIndex(isActive ? null : idx);
                           speakSpanish(cleanWord(word), speechRate);
                         }
@@ -699,7 +772,13 @@ const LessonPlayer = ({
                       const vocabExtra = getVocabExtra(word);
                       return (
                         <div 
-                          className={`word-tooltip ${vocabExtra ? 'has-mnemonic' : ''}`}
+                          ref={tooltipRef}
+                          className={`word-tooltip ${vocabExtra ? 'has-mnemonic' : ''} ${tooltipPosition?.placement === 'above' ? 'is-above' : 'is-below'}`}
+                          style={{
+                            '--tooltip-left': tooltipPosition?.left,
+                            '--tooltip-top': tooltipPosition?.top,
+                            '--tooltip-arrow-left': tooltipPosition?.arrowLeft,
+                          }}
                           onClick={(e) => e.stopPropagation()}
                         >
                           <span className="tooltip-meaning">{meaning}</span>
