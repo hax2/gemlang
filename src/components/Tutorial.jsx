@@ -41,7 +41,7 @@ const STEPS = [
     title: 'Reveal the Full Translation',
     body: 'Need more context? Reveal the full English translation of the sentence.',
     accent: 'translate',
-    targetSelector: '.btn-text-reveal',
+    targetSelector: '.english-translation, .btn-text-reveal',
     pointerPosition: 'top',
   },
   {
@@ -145,6 +145,27 @@ const Tutorial = ({ onClose }) => {
       window.removeEventListener('scroll', handle, true);
     };
   }, [measureTarget]);
+
+  useEffect(() => {
+    if (!current.targetSelector) return undefined;
+
+    let rafId;
+    const measureAfterInteraction = () => {
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(measureTarget);
+    };
+
+    window.addEventListener('click', measureAfterInteraction, true);
+    window.addEventListener('transitionend', measureAfterInteraction, true);
+    window.addEventListener('animationend', measureAfterInteraction, true);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener('click', measureAfterInteraction, true);
+      window.removeEventListener('transitionend', measureAfterInteraction, true);
+      window.removeEventListener('animationend', measureAfterInteraction, true);
+    };
+  }, [current.targetSelector, measureTarget]);
 
   const goNext = useCallback(() => {
     if (isLastStep) {
