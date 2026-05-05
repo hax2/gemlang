@@ -2,13 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
+  width: 100%;
   min-height: 100%;
   padding: 0.75rem;
 }
 
 .onboarding-content {
   max-width: 520px;
-  width: 100%;
+  width: min(100%, 520px);
   padding: clamp(1rem, 4vw, 1.75rem);
   text-align: center;
   overflow: hidden;
@@ -174,27 +176,27 @@
 
 @media (max-width: 520px) {
   .onboarding-container {
-    align-items: flex-start;
-    padding: 0.5rem;
+    align-items: stretch;
+    padding: 0.25rem 0;
   }
 
   .onboarding-content {
-    margin-top: 0;
-    padding: 0.9rem;
+    width: 100%;
+    padding: 1.25rem 1rem;
   }
 
   .onboarding-intro {
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .level-options {
-    gap: 0.5rem;
+    gap: 0.65rem;
   }
 
   .level-btn,
   .start-journey-btn {
-    min-height: 44px;
-    padding: 0.65rem 0.85rem;
+    min-height: 52px;
+    padding: 0.8rem 1rem;
   }
 
   .module-selection h2 {
