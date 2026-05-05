@@ -699,7 +699,7 @@ const LessonPlayer = ({
                       const vocabExtra = getVocabExtra(word);
                       return (
                         <div 
-                          className={`word-tooltip animate-fade-in ${vocabExtra ? 'has-mnemonic' : ''}`}
+                          className={`word-tooltip ${vocabExtra ? 'has-mnemonic' : ''}`}
                           onClick={(e) => e.stopPropagation()}
                         >
                           <span className="tooltip-meaning">{meaning}</span>
