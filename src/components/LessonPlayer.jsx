@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import Tutorial from './Tutorial';
 import { hasSeenTutorial, markTutorialSeen } from '../utils/tutorialStorage';
 import './LessonPlayer.css';
@@ -404,6 +404,28 @@ const LessonPlayer = ({
     showTutorial,
   ]);
 
+  // Clamp tooltip so it doesn't overflow viewport edges
+  const clampTooltip = useCallback((el) => {
+    if (!el) return;
+    // Reset any previous adjustment
+    el.style.left = '50%';
+    el.style.transform = 'translateX(-50%)';
+    el.style.right = 'auto';
+
+    const rect = el.getBoundingClientRect();
+    const margin = 8;
+
+    if (rect.left < margin) {
+      // Overflowing left
+      const shift = margin - rect.left;
+      el.style.left = `calc(50% + ${shift}px)`;
+    } else if (rect.right > window.innerWidth - margin) {
+      // Overflowing right
+      const shift = rect.right - (window.innerWidth - margin);
+      el.style.left = `calc(50% - ${shift}px)`;
+    }
+  }, []);
+
   const getMeaning = (word) => {
     const cw = cleanWord(word);
     const meanings = sentence?.wordMeanings || {};
@@ -700,6 +722,7 @@ const LessonPlayer = ({
                       return (
                         <div 
                           className={`word-tooltip animate-fade-in ${vocabExtra ? 'has-mnemonic' : ''}`}
+                          ref={clampTooltip}
                           onClick={(e) => e.stopPropagation()}
                         >
                           <span className="tooltip-meaning">{meaning}</span>

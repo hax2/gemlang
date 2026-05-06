@@ -492,6 +492,10 @@
   border-radius: var(--radius-md);
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: inline-block;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
 }
 
 /* ── Lesson Nav Bar (shared for normal + challenge) ─ */
@@ -968,6 +972,8 @@
   .english-translation {
     font-size: 1.05rem;
     padding: 0.75rem 1rem;
+    display: block;
+    max-width: 100%;
   }
 
   /* Grammar intro mobile */
@@ -986,27 +992,25 @@
     font-size: 0.88rem;
   }
 
-  /* ── Tooltip: anchor to bottom of viewport on mobile ── */
+  /* ── Tooltip: stay near the word, clamp to viewport ── */
   .word-tooltip {
-    position: fixed;
-    top: auto;
-    bottom: calc(130px + env(safe-area-inset-bottom, 0px));
-    left: 50% !important;
-    right: auto !important;
+    position: absolute;
+    top: 100%;
+    left: 50%;
     transform: translateX(-50%);
+    margin-top: 0.35rem;
+    width: fit-content;
     max-width: calc(100vw - 2rem);
     white-space: normal;
     z-index: 200;
-  }
-
-  .word-tooltip::before {
-    display: none;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .word-tooltip.has-mnemonic {
-    min-width: 0;
+    min-width: 180px;
     max-width: calc(100vw - 2rem);
-    width: max-content;
+    width: fit-content;
   }
 
   /* ── Vocab table: scrollable + tighter on mobile ── */
