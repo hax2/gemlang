@@ -1216,130 +1216,53 @@
   }
 }
 
-@keyframes swipe-hint-pulse {
-  0%, 100% {
-    opacity: 0.5;
-    transform: translateX(0);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translateX(-3px);
-  }
-}
-
-@keyframes swipe-hint-pulse-right {
-  0%, 100% {
-    opacity: 0.5;
-    transform: translateX(0);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translateX(3px);
-  }
-}
-
-@keyframes swipe-hint-pulse-down {
-  0%, 100% {
-    opacity: 0.5;
-    transform: translateY(0);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translateY(3px);
-  }
-}
-
-@keyframes swipe-hint-fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* ═══════════════════════════════════════════════════════
    MOBILE SWIPE OVERRIDES (≤ 600px)
    ═══════════════════════════════════════════════════════ */
 @media (max-width: 600px) {
-  /* Show swipe hint on mobile */
+  /* Swipe hint — just subtle muted text */
   .swipe-hint {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    padding: 0.5rem 0;
-    margin-top: auto;
-    flex-wrap: wrap;
-    animation: swipe-hint-fade-in 600ms ease-out 1s both;
-  }
-
-  .swipe-hint-text {
-    font-size: 0.68rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    display: block;
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 500;
     color: var(--text-muted);
-    opacity: 0.6;
+    opacity: 0.35;
+    padding-top: 0.75rem;
+    letter-spacing: 0.04em;
   }
 
-  .swipe-hint-arrow {
-    font-size: 1.1rem;
-    color: var(--accent-glow);
-    font-weight: 700;
-    opacity: 0.5;
-  }
-
-  .swipe-hint-arrow:first-child {
-    animation: swipe-hint-pulse 2s ease-in-out infinite;
-  }
-
-  .swipe-hint-arrow:nth-child(3) {
-    animation: swipe-hint-pulse-right 2s ease-in-out infinite;
-  }
-
-  .swipe-hint-sep {
-    color: var(--text-muted);
-    opacity: 0.3;
-    font-size: 0.8rem;
-    margin: 0 0.15rem;
-  }
-
-  .swipe-hint-down {
-    font-size: 1.3rem;
-    line-height: 0.7;
-    animation: swipe-hint-pulse-down 2s ease-in-out infinite;
-  }
-
-  /* Floating bookmark indicator during swipe-down */
+  /* Bookmark indicator during swipe-down */
   .swipe-bookmark-indicator {
     display: block;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(168, 85, 247, 0.92);
+    background: rgba(168, 85, 247, 0.88);
     color: #fff;
-    padding: 0.75rem 1.5rem;
+    padding: 0.6rem 1.25rem;
     border-radius: var(--radius-full);
-    font-size: 0.95rem;
-    font-weight: 700;
+    font-size: 0.85rem;
+    font-weight: 600;
     z-index: 300;
-    box-shadow: 0 8px 32px rgba(168, 85, 247, 0.5);
-    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 24px rgba(168, 85, 247, 0.4);
     pointer-events: none;
   }
 
-  /* Swipe mode: hide the entire nav bar — everything is gesture-driven */
+  /* Swipe mode: hide the nav bar — everything is gesture-driven */
   .lesson-nav-bar.swipe-mode {
     display: none;
   }
 
-  /* Reduce bottom padding when nav bar is fully hidden */
+  /* When nav bar is hidden, don't stretch the card into empty space */
   .lesson-player:has(.lesson-nav-bar.swipe-mode) {
-    padding-bottom: 24px;
+    min-height: 0;
+    padding-bottom: 1.5rem;
+  }
+
+  .lesson-player:has(.lesson-nav-bar.swipe-mode) .lesson-content {
+    flex: 0 1 auto;
   }
 
   /* Touch-action: pan-y to allow vertical scrolling while we handle horizontal */

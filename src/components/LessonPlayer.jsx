@@ -855,11 +855,7 @@ const LessonPlayer = ({
           </div>
 
           {canSwipe && (
-            <div className="swipe-hint" aria-hidden="true">
-              <span className="swipe-hint-arrow">‹</span>
-              <span className="swipe-hint-text">Swipe to navigate</span>
-              <span className="swipe-hint-arrow">›</span>
-            </div>
+            <div className="swipe-hint" aria-hidden="true">← swipe →</div>
           )}
         </div>
 
@@ -945,7 +941,7 @@ const LessonPlayer = ({
                     {isActive && meaning && (() => {
                       const vocabExtra = getVocabExtra(word);
                       return (
-                        <div 
+                        <div
                           className={`word-tooltip animate-fade-in ${vocabExtra ? 'has-mnemonic' : ''}`}
                           ref={clampTooltip}
                           onClick={(e) => e.stopPropagation()}
@@ -978,20 +974,11 @@ const LessonPlayer = ({
         </div>
 
         {canSwipe && (
-          <div className="swipe-hint" aria-hidden="true">
-            <span className="swipe-hint-arrow">‹</span>
-            <span className="swipe-hint-text">Swipe to navigate</span>
-            <span className="swipe-hint-arrow">›</span>
-            <span className="swipe-hint-sep">·</span>
-            <span className="swipe-hint-arrow swipe-hint-down">⌄</span>
-            <span className="swipe-hint-text">Pull down to bookmark</span>
-          </div>
+          <div className="swipe-hint" aria-hidden="true">← swipe →</div>
         )}
 
         {canSwipe && swipeOffsetY > SWIPE_DOWN_THRESHOLD && (
-          <div className="swipe-bookmark-indicator animate-fade-in">
-            🔖 Bookmarked for later
-          </div>
+          <div className="swipe-bookmark-indicator">🔖 Saved for later</div>
         )}
       </div>
 
