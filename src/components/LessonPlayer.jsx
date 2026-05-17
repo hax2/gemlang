@@ -853,11 +853,11 @@ const LessonPlayer = ({
               </div>
             )}
           </div>
-
-          {canSwipe && (
-            <div className="swipe-hint" aria-hidden="true">← swipe →</div>
-          )}
         </div>
+
+        {canSwipe && (
+          <div className="swipe-hint" aria-hidden="true">← swipe →</div>
+        )}
 
         <div className={`lesson-nav-bar ${canSwipe ? 'swipe-mode' : ''}`}>
           <button
@@ -972,15 +972,15 @@ const LessonPlayer = ({
             <div className="english-translation animate-fade-in">{sentence.english}</div>
           )}
         </div>
-
-        {canSwipe && (
-          <div className="swipe-hint" aria-hidden="true">← swipe →</div>
-        )}
-
-        {canSwipe && swipeOffsetY > SWIPE_DOWN_THRESHOLD && (
-          <div className="swipe-bookmark-indicator">🔖 Saved for later</div>
-        )}
       </div>
+
+      {canSwipe && (
+        <div className="swipe-hint" aria-hidden="true">← swipe →</div>
+      )}
+
+      {canSwipe && swipeOffsetY > SWIPE_DOWN_THRESHOLD && (
+        <div className="swipe-bookmark-indicator">🔖 Saved for later</div>
+      )}
 
       <div className={`lesson-nav-bar ${canSwipe ? 'swipe-mode' : ''}`}>
         <button

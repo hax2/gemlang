@@ -1215,21 +1215,21 @@
     opacity: 1;
   }
 }
-
 /* ═══════════════════════════════════════════════════════
    MOBILE SWIPE OVERRIDES (≤ 600px)
    ═══════════════════════════════════════════════════════ */
 @media (max-width: 600px) {
-  /* Swipe hint — just subtle muted text */
+  /* Swipe hint — subtle muted text, outside the card */
   .swipe-hint {
     display: block;
     text-align: center;
     font-size: 0.7rem;
     font-weight: 500;
     color: var(--text-muted);
-    opacity: 0.35;
-    padding-top: 0.75rem;
+    opacity: 0.3;
+    padding: 0.5rem 0;
     letter-spacing: 0.04em;
+    flex-shrink: 0;
   }
 
   /* Bookmark indicator during swipe-down */
@@ -1255,14 +1255,12 @@
     display: none;
   }
 
-  /* When nav bar is hidden, don't stretch the card into empty space */
+  /* Fixed envelope: keep the card filling available space but reduce
+     padding-bottom since there's no sticky nav bar.
+     The card stays the same height whether content is revealed or not —
+     no CLS, content just fills/centers within the fixed region. */
   .lesson-player:has(.lesson-nav-bar.swipe-mode) {
-    min-height: 0;
-    padding-bottom: 1.5rem;
-  }
-
-  .lesson-player:has(.lesson-nav-bar.swipe-mode) .lesson-content {
-    flex: 0 1 auto;
+    padding-bottom: 1rem;
   }
 
   /* Touch-action: pan-y to allow vertical scrolling while we handle horizontal */
