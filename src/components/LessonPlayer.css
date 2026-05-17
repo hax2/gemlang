@@ -1177,6 +1177,11 @@
   display: none;
 }
 
+/* Bookmark indicator during swipe-down */
+.swipe-bookmark-indicator {
+  display: none;
+}
+
 /* Slide-in keyframes */
 @keyframes swipe-slide-in-right {
   0% {
@@ -1196,6 +1201,17 @@
   }
   100% {
     transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes swipe-slide-in-below {
+  0% {
+    transform: translateY(40%) scale(0.92);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
     opacity: 1;
   }
 }
@@ -1222,6 +1238,17 @@
   }
 }
 
+@keyframes swipe-hint-pulse-down {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(3px);
+  }
+}
+
 @keyframes swipe-hint-fade-in {
   0% {
     opacity: 0;
@@ -1242,14 +1269,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem;
+    gap: 0.4rem;
     padding: 0.5rem 0;
     margin-top: auto;
+    flex-wrap: wrap;
     animation: swipe-hint-fade-in 600ms ease-out 1s both;
   }
 
   .swipe-hint-text {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -1268,44 +1296,50 @@
     animation: swipe-hint-pulse 2s ease-in-out infinite;
   }
 
-  .swipe-hint-arrow:last-child {
+  .swipe-hint-arrow:nth-child(3) {
     animation: swipe-hint-pulse-right 2s ease-in-out infinite;
   }
 
-  /* Swipe mode: simplify the bottom nav bar */
+  .swipe-hint-sep {
+    color: var(--text-muted);
+    opacity: 0.3;
+    font-size: 0.8rem;
+    margin: 0 0.15rem;
+  }
+
+  .swipe-hint-down {
+    font-size: 1.3rem;
+    line-height: 0.7;
+    animation: swipe-hint-pulse-down 2s ease-in-out infinite;
+  }
+
+  /* Floating bookmark indicator during swipe-down */
+  .swipe-bookmark-indicator {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(168, 85, 247, 0.92);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
+    font-size: 0.95rem;
+    font-weight: 700;
+    z-index: 300;
+    box-shadow: 0 8px 32px rgba(168, 85, 247, 0.5);
+    backdrop-filter: blur(8px);
+    pointer-events: none;
+  }
+
+  /* Swipe mode: hide the entire nav bar — everything is gesture-driven */
   .lesson-nav-bar.swipe-mode {
-    padding: 0.4rem 0.75rem;
-    padding-bottom: calc(0.4rem + env(safe-area-inset-bottom, 0px));
-    gap: 0.35rem;
-  }
-
-  /* Hide Next and Previous buttons in swipe mode — swipe replaces them */
-  .lesson-nav-bar.swipe-mode .btn-nav-next,
-  .lesson-nav-bar.swipe-mode .btn-nav-secondary {
     display: none;
   }
 
-  /* Mark for Later gets full width in swipe mode */
-  .lesson-nav-bar.swipe-mode .btn-nav-mark {
-    flex: 1 1 100%;
-    text-align: center;
-    padding: 0.65rem 1rem;
-    font-size: 0.88rem;
-    order: 0;
-  }
-
-  /* If swipe-mode nav has no .btn-nav-mark (challenge screens), hide it entirely */
-  .lesson-nav-bar.swipe-mode:not(:has(.btn-nav-mark)) {
-    display: none;
-  }
-
-  /* Reduce bottom padding when nav bar is hidden/compact in swipe mode */
-  .lesson-player:has(.lesson-nav-bar.swipe-mode:not(:has(.btn-nav-mark))) {
+  /* Reduce bottom padding when nav bar is fully hidden */
+  .lesson-player:has(.lesson-nav-bar.swipe-mode) {
     padding-bottom: 24px;
-  }
-
-  .lesson-player:has(.lesson-nav-bar.swipe-mode:has(.btn-nav-mark)) {
-    padding-bottom: 80px;
   }
 
   /* Touch-action: pan-y to allow vertical scrolling while we handle horizontal */

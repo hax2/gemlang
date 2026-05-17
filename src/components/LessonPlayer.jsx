@@ -205,10 +205,12 @@ const LessonPlayer = ({
   // ── Swipe gesture state ──
   const swipeRef = useRef(null);
   const [swipeOffset, setSwipeOffset] = useState(0);
-  const [swipeAnimating, setSwipeAnimating] = useState(false); // 'left' | 'right' | false
-  const [slideInDir, setSlideInDir] = useState(null); // 'from-left' | 'from-right' | null
-  const swipeStartRef = useRef({ x: 0, y: 0, time: 0, swiping: false, scrollLocked: false });
+  const [swipeOffsetY, setSwipeOffsetY] = useState(0);
+  const [swipeAnimating, setSwipeAnimating] = useState(false); // 'left' | 'right' | 'down' | false
+  const [slideInDir, setSlideInDir] = useState(null); // 'from-left' | 'from-right' | 'from-below' | null
+  const swipeStartRef = useRef({ x: 0, y: 0, time: 0, swiping: false, swipeDir: null, scrollLocked: false });
   const SWIPE_THRESHOLD = 60; // px to trigger navigation
+  const SWIPE_DOWN_THRESHOLD = 80; // px to trigger mark-for-later
   const SWIPE_VELOCITY_THRESHOLD = 0.3; // px/ms for fast flick
 
   // Dismiss resume toast after a moment
@@ -364,9 +366,11 @@ const LessonPlayer = ({
       y: touch.clientY,
       time: Date.now(),
       swiping: false,
+      swipeDir: null, // 'horizontal' | 'down' | null
       scrollLocked: false,
     };
     setSwipeOffset(0);
+    setSwipeOffsetY(0);
   }, [canSwipe]);
 
   const onTouchMove = useCallback((e) => {
@@ -376,52 +380,75 @@ const LessonPlayer = ({
     const dx = touch.clientX - s.x;
     const dy = touch.clientY - s.y;
 
-    // Determine scroll direction lock on first significant movement
+    // Determine direction lock on first significant movement
     if (!s.scrollLocked && (Math.abs(dx) > 8 || Math.abs(dy) > 8)) {
-      if (Math.abs(dy) > Math.abs(dx)) {
-        // Vertical scroll – bail out
-        swipeStartRef.current.scrollLocked = true;
-        swipeStartRef.current.swiping = false;
+      s.scrollLocked = true;
+      if (Math.abs(dx) > Math.abs(dy)) {
+        // Horizontal swipe
+        s.swiping = true;
+        s.swipeDir = 'horizontal';
+      } else if (dy > 0 && !isChallenge) {
+        // Swipe down (only on sentence cards, not challenges)
+        s.swiping = true;
+        s.swipeDir = 'down';
+      } else {
+        // Vertical scroll up – bail out
+        s.swiping = false;
         return;
       }
-      swipeStartRef.current.scrollLocked = true;
-      swipeStartRef.current.swiping = true;
     }
 
-    if (!swipeStartRef.current.swiping) return;
-
-    // Prevent vertical scroll while swiping horizontally
+    if (!s.swiping) return;
     e.preventDefault();
 
-    // Apply rubber-band resistance at edges
-    let offset = dx;
-    if ((currentIndex === 0 && dx > 0) || (currentIndex >= mergedItems.length - 1 && dx < 0)) {
-      offset = dx * 0.25; // strong resistance at edges
+    if (s.swipeDir === 'horizontal') {
+      let offset = dx;
+      if ((currentIndex === 0 && dx > 0) || (currentIndex >= mergedItems.length - 1 && dx < 0)) {
+        offset = dx * 0.25;
+      }
+      setSwipeOffset(offset);
+    } else if (s.swipeDir === 'down') {
+      // Only allow downward — clamp to >= 0
+      setSwipeOffsetY(Math.max(0, dy));
     }
-
-    setSwipeOffset(offset);
-  }, [canSwipe, currentIndex, mergedItems.length]);
+  }, [canSwipe, currentIndex, mergedItems.length, isChallenge]);
 
   const onTouchEnd = useCallback(() => {
     if (!canSwipe) return;
     const s = swipeStartRef.current;
     if (!s.swiping) {
       setSwipeOffset(0);
+      setSwipeOffsetY(0);
       return;
     }
 
     const elapsed = Date.now() - s.time;
+
+    if (s.swipeDir === 'down') {
+      // Swipe down → mark for later
+      if (swipeOffsetY > SWIPE_DOWN_THRESHOLD && sentence) {
+        handleMarkForLater();
+        setSwipeAnimating('down');
+        setTimeout(() => {
+          handleNext('swipe-silent');
+          setSwipeAnimating(false);
+          setSwipeOffsetY(0);
+          setSlideInDir('from-below');
+          setTimeout(() => setSlideInDir(null), 350);
+        }, 250);
+      } else {
+        setSwipeOffsetY(0);
+      }
+      s.swiping = false;
+      return;
+    }
+
+    // Horizontal swipe
     const velocity = Math.abs(swipeOffset) / elapsed;
     const isFlick = velocity > SWIPE_VELOCITY_THRESHOLD;
 
     if (swipeOffset < -SWIPE_THRESHOLD || (swipeOffset < -20 && isFlick)) {
       // Swipe left → next
-      // On challenge screens, block swipe-next if answer not revealed (unless in testing mode where it's ok)
-      if (isChallenge && !challengeAnswerRevealed && !isPureTestingMode) {
-        // Snap back with a little bounce
-        setSwipeOffset(0);
-        return;
-      }
       handleNext('swipe');
     } else if (swipeOffset > SWIPE_THRESHOLD || (swipeOffset > 20 && isFlick)) {
       // Swipe right → prev
@@ -431,14 +458,12 @@ const LessonPlayer = ({
         setSwipeOffset(0);
       }
     } else {
-      // Below threshold – snap back
       setSwipeOffset(0);
     }
 
-    swipeStartRef.current.swiping = false;
-  }, [canSwipe, swipeOffset, isChallenge, challengeAnswerRevealed, isPureTestingMode, handleNext, handlePrev, currentIndex]);
+    s.swiping = false;
+  }, [canSwipe, swipeOffset, swipeOffsetY, sentence, handleNext, handlePrev, handleMarkForLater, currentIndex]);
 
-  // Compute swipe transform styles for the content card
   const swipeStyle = useMemo(() => {
     if (swipeAnimating === 'left') {
       return {
@@ -454,6 +479,13 @@ const LessonPlayer = ({
         transition: 'transform 200ms ease-in, opacity 150ms ease-in',
       };
     }
+    if (swipeAnimating === 'down') {
+      return {
+        transform: 'translateY(120%) scale(0.85)',
+        opacity: 0,
+        transition: 'transform 250ms ease-in, opacity 200ms ease-in',
+      };
+    }
     if (slideInDir === 'from-right') {
       return {
         animation: 'swipe-slide-in-right 350ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
@@ -464,6 +496,23 @@ const LessonPlayer = ({
         animation: 'swipe-slide-in-left 350ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
       };
     }
+    if (slideInDir === 'from-below') {
+      return {
+        animation: 'swipe-slide-in-below 350ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
+      };
+    }
+    // Vertical swipe-down drag
+    if (swipeOffsetY > 0) {
+      const scale = 1 - Math.min(swipeOffsetY / 600, 0.1);
+      const opacity = 1 - Math.min(swipeOffsetY / 300, 0.5);
+      return {
+        transform: `translateY(${swipeOffsetY}px) scale(${scale})`,
+        opacity,
+        transition: 'none',
+        willChange: 'transform, opacity',
+      };
+    }
+    // Horizontal drag
     if (swipeOffset === 0) {
       return {
         transform: 'translateX(0) rotate(0)',
@@ -471,7 +520,7 @@ const LessonPlayer = ({
         transition: 'transform 350ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms ease',
       };
     }
-    const rotation = (swipeOffset / 300) * 4; // max ~4deg tilt
+    const rotation = (swipeOffset / 300) * 4;
     const opacity = 1 - Math.min(Math.abs(swipeOffset) / 400, 0.4);
     return {
       transform: `translateX(${swipeOffset}px) rotate(${rotation}deg)`,
@@ -479,7 +528,7 @@ const LessonPlayer = ({
       transition: 'none',
       willChange: 'transform, opacity',
     };
-  }, [swipeOffset, swipeAnimating, slideInDir]);
+  }, [swipeOffset, swipeOffsetY, swipeAnimating, slideInDir]);
 
   const swipeTouchProps = canSwipe ? {
     onTouchStart,
@@ -808,7 +857,7 @@ const LessonPlayer = ({
           {canSwipe && (
             <div className="swipe-hint" aria-hidden="true">
               <span className="swipe-hint-arrow">‹</span>
-              <span className="swipe-hint-text">Swipe to continue</span>
+              <span className="swipe-hint-text">Swipe to navigate</span>
               <span className="swipe-hint-arrow">›</span>
             </div>
           )}
@@ -931,8 +980,17 @@ const LessonPlayer = ({
         {canSwipe && (
           <div className="swipe-hint" aria-hidden="true">
             <span className="swipe-hint-arrow">‹</span>
-            <span className="swipe-hint-text">Swipe to continue</span>
+            <span className="swipe-hint-text">Swipe to navigate</span>
             <span className="swipe-hint-arrow">›</span>
+            <span className="swipe-hint-sep">·</span>
+            <span className="swipe-hint-arrow swipe-hint-down">⌄</span>
+            <span className="swipe-hint-text">Pull down to bookmark</span>
+          </div>
+        )}
+
+        {canSwipe && swipeOffsetY > SWIPE_DOWN_THRESHOLD && (
+          <div className="swipe-bookmark-indicator animate-fade-in">
+            🔖 Bookmarked for later
           </div>
         )}
       </div>
