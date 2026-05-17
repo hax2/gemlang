@@ -878,12 +878,13 @@
     height: 16px;
   }
 
-  /* Content card fills remaining space */
+  /* Content card fills remaining space — anchored from top so reveals
+     only push things downward, never shifting what's already visible. */
   .lesson-content {
-    padding: 1.5rem 1rem;
+    padding: 2.5rem 1rem 1.5rem;
     gap: 1.5rem;
     flex: 1;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   /* Smaller play button */
