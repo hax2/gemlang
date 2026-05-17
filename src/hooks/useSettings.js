@@ -7,6 +7,7 @@ export const DEFAULT_SETTINGS = {
   speechRate: 0.85,        // TTS speed
   autoPlayAudio: true,     // auto-play on new sentence
   autoRevealSpanish: false, // skip the reveal step
+  swipeToNext: true,       // swipe left/right to navigate on mobile
 };
 
 const loadSettings = () => {

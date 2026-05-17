@@ -160,6 +160,7 @@ const LessonPlayer = ({
 }) => {
   const isPureTestingMode = practiceMode === 'testing';
   const challengeInterval = settings?.challengeInterval ?? 5;
+  const swipeEnabled = settings?.swipeToNext ?? true;
 
   // Build merged items once for initial index calculation
   const initialMergedItems = useMemo(() => {
@@ -200,6 +201,15 @@ const LessonPlayer = ({
   const needsTutorial = !hasSeenTutorial();
   const [showTutorial, setShowTutorial] = useState(() => needsTutorial && !showGrammarIntro);
   const [showResumeToast, setShowResumeToast] = useState(() => resumeIndex > 0);
+
+  // ── Swipe gesture state ──
+  const swipeRef = useRef(null);
+  const [swipeOffset, setSwipeOffset] = useState(0);
+  const [swipeAnimating, setSwipeAnimating] = useState(false); // 'left' | 'right' | false
+  const [slideInDir, setSlideInDir] = useState(null); // 'from-left' | 'from-right' | null
+  const swipeStartRef = useRef({ x: 0, y: 0, time: 0, swiping: false, scrollLocked: false });
+  const SWIPE_THRESHOLD = 60; // px to trigger navigation
+  const SWIPE_VELOCITY_THRESHOLD = 0.3; // px/ms for fast flick
 
   // Dismiss resume toast after a moment
   useEffect(() => {
@@ -269,10 +279,21 @@ const LessonPlayer = ({
     if (sentence?.spanish) speakSpanish(sentence.spanish, speechRate);
   }, [currentItem, isChallenge, sentence, speechRate]);
 
-  const handleNext = useCallback(() => {
+  const handleNext = useCallback((swipeDir) => {
     resetRevealState();
     const newIndex = currentIndex + 1;
-    setCurrentIndex(newIndex);
+    if (swipeDir) {
+      setSwipeAnimating('left');
+      setTimeout(() => {
+        setCurrentIndex(newIndex);
+        setSwipeAnimating(false);
+        setSwipeOffset(0);
+        setSlideInDir('from-right');
+        setTimeout(() => setSlideInDir(null), 350);
+      }, 200);
+    } else {
+      setCurrentIndex(newIndex);
+    }
 
     // Save progress
     if (saveModuleProgress) {
@@ -285,10 +306,22 @@ const LessonPlayer = ({
     }
   }, [currentIndex, isPureTestingMode, mergedItems, module.id, practiceMode, resetRevealState, saveModuleProgress, totalSentences]);
 
-  const handlePrev = useCallback(() => {
+  const handlePrev = useCallback((swipeDir) => {
+    if (currentIndex === 0) return;
     resetRevealState();
-    setCurrentIndex((p) => Math.max(0, p - 1));
-  }, [resetRevealState]);
+    if (swipeDir) {
+      setSwipeAnimating('right');
+      setTimeout(() => {
+        setCurrentIndex((p) => Math.max(0, p - 1));
+        setSwipeAnimating(false);
+        setSwipeOffset(0);
+        setSlideInDir('from-left');
+        setTimeout(() => setSlideInDir(null), 350);
+      }, 200);
+    } else {
+      setCurrentIndex((p) => Math.max(0, p - 1));
+    }
+  }, [currentIndex, resetRevealState]);
 
   const handleMarkForLater = useCallback(() => {
     if (!sentence) return;
@@ -319,6 +352,141 @@ const LessonPlayer = ({
     }
     return () => window.removeEventListener('click', handleGlobalClick);
   }, [activeWordIndex]);
+
+  // ── Swipe touch handlers ──
+  const canSwipe = swipeEnabled && !isDesktop && !showGrammarIntro && !showTutorial && !isFinished;
+
+  const onTouchStart = useCallback((e) => {
+    if (!canSwipe) return;
+    const touch = e.touches[0];
+    swipeStartRef.current = {
+      x: touch.clientX,
+      y: touch.clientY,
+      time: Date.now(),
+      swiping: false,
+      scrollLocked: false,
+    };
+    setSwipeOffset(0);
+  }, [canSwipe]);
+
+  const onTouchMove = useCallback((e) => {
+    if (!canSwipe) return;
+    const s = swipeStartRef.current;
+    const touch = e.touches[0];
+    const dx = touch.clientX - s.x;
+    const dy = touch.clientY - s.y;
+
+    // Determine scroll direction lock on first significant movement
+    if (!s.scrollLocked && (Math.abs(dx) > 8 || Math.abs(dy) > 8)) {
+      if (Math.abs(dy) > Math.abs(dx)) {
+        // Vertical scroll – bail out
+        swipeStartRef.current.scrollLocked = true;
+        swipeStartRef.current.swiping = false;
+        return;
+      }
+      swipeStartRef.current.scrollLocked = true;
+      swipeStartRef.current.swiping = true;
+    }
+
+    if (!swipeStartRef.current.swiping) return;
+
+    // Prevent vertical scroll while swiping horizontally
+    e.preventDefault();
+
+    // Apply rubber-band resistance at edges
+    let offset = dx;
+    if ((currentIndex === 0 && dx > 0) || (currentIndex >= mergedItems.length - 1 && dx < 0)) {
+      offset = dx * 0.25; // strong resistance at edges
+    }
+
+    setSwipeOffset(offset);
+  }, [canSwipe, currentIndex, mergedItems.length]);
+
+  const onTouchEnd = useCallback(() => {
+    if (!canSwipe) return;
+    const s = swipeStartRef.current;
+    if (!s.swiping) {
+      setSwipeOffset(0);
+      return;
+    }
+
+    const elapsed = Date.now() - s.time;
+    const velocity = Math.abs(swipeOffset) / elapsed;
+    const isFlick = velocity > SWIPE_VELOCITY_THRESHOLD;
+
+    if (swipeOffset < -SWIPE_THRESHOLD || (swipeOffset < -20 && isFlick)) {
+      // Swipe left → next
+      // On challenge screens, block swipe-next if answer not revealed (unless in testing mode where it's ok)
+      if (isChallenge && !challengeAnswerRevealed && !isPureTestingMode) {
+        // Snap back with a little bounce
+        setSwipeOffset(0);
+        return;
+      }
+      handleNext('swipe');
+    } else if (swipeOffset > SWIPE_THRESHOLD || (swipeOffset > 20 && isFlick)) {
+      // Swipe right → prev
+      if (currentIndex > 0) {
+        handlePrev('swipe');
+      } else {
+        setSwipeOffset(0);
+      }
+    } else {
+      // Below threshold – snap back
+      setSwipeOffset(0);
+    }
+
+    swipeStartRef.current.swiping = false;
+  }, [canSwipe, swipeOffset, isChallenge, challengeAnswerRevealed, isPureTestingMode, handleNext, handlePrev, currentIndex]);
+
+  // Compute swipe transform styles for the content card
+  const swipeStyle = useMemo(() => {
+    if (swipeAnimating === 'left') {
+      return {
+        transform: 'translateX(-120%) rotate(-6deg)',
+        opacity: 0,
+        transition: 'transform 200ms ease-in, opacity 150ms ease-in',
+      };
+    }
+    if (swipeAnimating === 'right') {
+      return {
+        transform: 'translateX(120%) rotate(6deg)',
+        opacity: 0,
+        transition: 'transform 200ms ease-in, opacity 150ms ease-in',
+      };
+    }
+    if (slideInDir === 'from-right') {
+      return {
+        animation: 'swipe-slide-in-right 350ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
+      };
+    }
+    if (slideInDir === 'from-left') {
+      return {
+        animation: 'swipe-slide-in-left 350ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
+      };
+    }
+    if (swipeOffset === 0) {
+      return {
+        transform: 'translateX(0) rotate(0)',
+        opacity: 1,
+        transition: 'transform 350ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms ease',
+      };
+    }
+    const rotation = (swipeOffset / 300) * 4; // max ~4deg tilt
+    const opacity = 1 - Math.min(Math.abs(swipeOffset) / 400, 0.4);
+    return {
+      transform: `translateX(${swipeOffset}px) rotate(${rotation}deg)`,
+      opacity,
+      transition: 'none',
+      willChange: 'transform, opacity',
+    };
+  }, [swipeOffset, swipeAnimating, slideInDir]);
+
+  const swipeTouchProps = canSwipe ? {
+    onTouchStart,
+    onTouchMove,
+    onTouchEnd,
+    ref: swipeRef,
+  } : {};
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -598,7 +766,7 @@ const LessonPlayer = ({
           <LessonProgress current={progressItemsSoFar} total={totalSentences} label="Checkpoint" />
         </div>
 
-        <div className="lesson-content glass-panel challenge-panel">
+        <div className="lesson-content glass-panel challenge-panel" style={swipeStyle} {...swipeTouchProps}>
           <div className={`challenge-badge ${isPureTestingMode ? 'pure-testing' : ''}`}>
             <span className="challenge-icon">🗣️</span>
             <span>{isPureTestingMode ? 'Pure Testing Mode' : 'Translation Challenge'}</span>
@@ -636,9 +804,17 @@ const LessonPlayer = ({
               </div>
             )}
           </div>
+
+          {canSwipe && (
+            <div className="swipe-hint" aria-hidden="true">
+              <span className="swipe-hint-arrow">‹</span>
+              <span className="swipe-hint-text">Swipe to continue</span>
+              <span className="swipe-hint-arrow">›</span>
+            </div>
+          )}
         </div>
 
-        <div className="lesson-nav-bar">
+        <div className={`lesson-nav-bar ${canSwipe ? 'swipe-mode' : ''}`}>
           <button
             className="btn-secondary btn-nav-secondary"
             onClick={handlePrev}
@@ -676,7 +852,7 @@ const LessonPlayer = ({
         <LessonProgress current={progressItemsSoFar} total={totalSentences} label="Sentence" />
       </div>
 
-      <div className="lesson-content glass-panel">
+      <div className="lesson-content glass-panel" style={swipeStyle} {...swipeTouchProps}>
         {currentItem.isRepeat && (
           <div className="review-badge animate-fade-in">
             <span>🔄</span>
@@ -751,9 +927,17 @@ const LessonPlayer = ({
             <div className="english-translation animate-fade-in">{sentence.english}</div>
           )}
         </div>
+
+        {canSwipe && (
+          <div className="swipe-hint" aria-hidden="true">
+            <span className="swipe-hint-arrow">‹</span>
+            <span className="swipe-hint-text">Swipe to continue</span>
+            <span className="swipe-hint-arrow">›</span>
+          </div>
+        )}
       </div>
 
-      <div className="lesson-nav-bar">
+      <div className={`lesson-nav-bar ${canSwipe ? 'swipe-mode' : ''}`}>
         <button
           className="btn-secondary btn-nav-secondary"
           onClick={handlePrev}

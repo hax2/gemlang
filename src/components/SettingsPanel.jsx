@@ -138,6 +138,33 @@ const SettingsPanel = ({ settings, onUpdate, onReset, onResetProgress, onBack })
           </div>
         </div>
 
+        {/* Swipe to Navigate */}
+        <div className="setting-card glass-panel">
+          <div className="setting-info">
+            <div className="setting-icon">👆</div>
+            <div>
+              <h3 className="setting-name">Swipe to Navigate</h3>
+              <p className="setting-desc">
+                Swipe left/right to go to the next/previous sentence. When off, use buttons instead.
+              </p>
+            </div>
+          </div>
+          <div className="setting-options">
+            <button
+              className={`setting-option-btn ${settings.swipeToNext ? 'active' : ''}`}
+              onClick={() => onUpdate('swipeToNext', true)}
+            >
+              On
+            </button>
+            <button
+              className={`setting-option-btn ${!settings.swipeToNext ? 'active' : ''}`}
+              onClick={() => onUpdate('swipeToNext', false)}
+            >
+              Off
+            </button>
+          </div>
+        </div>
+
         {/* Reset Progress */}
         {onResetProgress && (
           <div className="setting-card glass-panel reset-progress-card">

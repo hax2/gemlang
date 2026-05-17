@@ -1157,3 +1157,159 @@
   box-shadow: 0 8px 24px rgba(168, 85, 247, 0.4);
   backdrop-filter: blur(8px);
 }
+
+/* ═══════════════════════════════════════════════════════
+   SWIPE GESTURE SYSTEM
+   ═══════════════════════════════════════════════════════ */
+
+/* Prevent content overflow during swipe */
+.lesson-player {
+  overflow-x: hidden;
+}
+
+/* Card needs transform-origin for tilt effect */
+.lesson-content {
+  transform-origin: center center;
+}
+
+/* Swipe hint indicator inside the card */
+.swipe-hint {
+  display: none;
+}
+
+/* Slide-in keyframes */
+@keyframes swipe-slide-in-right {
+  0% {
+    transform: translateX(50%) rotate(3deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes swipe-slide-in-left {
+  0% {
+    transform: translateX(-50%) rotate(-3deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes swipe-hint-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateX(-3px);
+  }
+}
+
+@keyframes swipe-hint-pulse-right {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateX(3px);
+  }
+}
+
+@keyframes swipe-hint-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE SWIPE OVERRIDES (≤ 600px)
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 600px) {
+  /* Show swipe hint on mobile */
+  .swipe-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0;
+    margin-top: auto;
+    animation: swipe-hint-fade-in 600ms ease-out 1s both;
+  }
+
+  .swipe-hint-text {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    opacity: 0.6;
+  }
+
+  .swipe-hint-arrow {
+    font-size: 1.1rem;
+    color: var(--accent-glow);
+    font-weight: 700;
+    opacity: 0.5;
+  }
+
+  .swipe-hint-arrow:first-child {
+    animation: swipe-hint-pulse 2s ease-in-out infinite;
+  }
+
+  .swipe-hint-arrow:last-child {
+    animation: swipe-hint-pulse-right 2s ease-in-out infinite;
+  }
+
+  /* Swipe mode: simplify the bottom nav bar */
+  .lesson-nav-bar.swipe-mode {
+    padding: 0.4rem 0.75rem;
+    padding-bottom: calc(0.4rem + env(safe-area-inset-bottom, 0px));
+    gap: 0.35rem;
+  }
+
+  /* Hide Next and Previous buttons in swipe mode — swipe replaces them */
+  .lesson-nav-bar.swipe-mode .btn-nav-next,
+  .lesson-nav-bar.swipe-mode .btn-nav-secondary {
+    display: none;
+  }
+
+  /* Mark for Later gets full width in swipe mode */
+  .lesson-nav-bar.swipe-mode .btn-nav-mark {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 0.65rem 1rem;
+    font-size: 0.88rem;
+    order: 0;
+  }
+
+  /* If swipe-mode nav has no .btn-nav-mark (challenge screens), hide it entirely */
+  .lesson-nav-bar.swipe-mode:not(:has(.btn-nav-mark)) {
+    display: none;
+  }
+
+  /* Reduce bottom padding when nav bar is hidden/compact in swipe mode */
+  .lesson-player:has(.lesson-nav-bar.swipe-mode:not(:has(.btn-nav-mark))) {
+    padding-bottom: 24px;
+  }
+
+  .lesson-player:has(.lesson-nav-bar.swipe-mode:has(.btn-nav-mark)) {
+    padding-bottom: 80px;
+  }
+
+  /* Touch-action: pan-y to allow vertical scrolling while we handle horizontal */
+  .lesson-content {
+    touch-action: pan-y;
+  }
+}
