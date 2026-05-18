@@ -34,11 +34,27 @@
   },
   {
     "id": "module-ser-vs-estar",
-    "title": "Grammar: Ser vs. Estar",
-    "description": "Understand the two verbs for 'to be' and when to use them.",
+    "title": "Grammar: Ser vs. Estar I",
+    "description": "Core ser/estar practice: identity, location, origin, and conditions.",
     "level": "Beginner",
-    "sentenceCount": 25,
+    "sentenceCount": 60,
     "file": "module-ser-vs-estar.json"
+  },
+  {
+    "id": "module-ser-vs-estar-2",
+    "title": "Grammar: Ser vs. Estar II",
+    "description": "More ser/estar practice: characteristics, emotions, jobs, and actions in progress.",
+    "level": "Beginner",
+    "sentenceCount": 60,
+    "file": "module-ser-vs-estar-2.json"
+  },
+  {
+    "id": "module-ser-vs-estar-3",
+    "title": "Grammar: Ser vs. Estar III",
+    "description": "Ser/estar practice for time, events, and mixed review.",
+    "level": "Beginner",
+    "sentenceCount": 30,
+    "file": "module-ser-vs-estar-3.json"
   },
   {
     "id": "story-1",

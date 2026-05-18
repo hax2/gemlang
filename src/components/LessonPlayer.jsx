@@ -91,6 +91,288 @@ const buildTestingItems = (sentences) =>
     batchEnd: index,
   }));
 
+const SER_ESTAR_RULE_ORDER = [
+  'identity-definition',
+  'location-position',
+  'origin-material',
+  'conditions',
+  'characteristics',
+  'emotions',
+  'occupation-relationship',
+  'progressive',
+  'time-events',
+  'mixed-review',
+];
+
+const SER_FORMS = new Set(['soy', 'eres', 'es', 'somos', 'son']);
+const ESTAR_FORMS = new Set(['estoy', 'estás', 'está', 'estamos', 'están']);
+
+const SER_ESTAR_WORD_MEANINGS = {
+  a: 'to / at',
+  abierta: 'open',
+  abogado: 'lawyer',
+  abogada: 'lawyer',
+  abuelos: 'grandparents',
+  al: 'to the / at the',
+  alto: 'tall',
+  altos: 'tall',
+  amable: 'kind',
+  amiga: 'friend',
+  amigo: 'friend',
+  amigos: 'friends',
+  Ana: 'Ana',
+  animal: 'animal',
+  anillos: 'rings',
+  aprendiendo: 'learning',
+  Argentina: 'Argentina',
+  asustado: 'scared',
+  aquí: 'here',
+  banco: 'bank',
+  casa: 'house / home',
+  capital: 'capital',
+  cerca: 'near',
+  centro: 'center',
+  chaqueta: 'jacket',
+  Chile: 'Chile',
+  ciudad: 'city',
+  clase: 'class',
+  clases: 'classes',
+  coche: 'car',
+  comiendo: 'eating',
+  concierto: 'concert',
+  contentos: 'happy',
+  contigo: 'with you',
+  correcta: 'correct',
+  cumpleaños: 'birthday',
+  cuaderno: 'notebook',
+  cuero: 'leather',
+  de: 'of / from',
+  debajo: 'under',
+  del: 'of the / from the',
+  delante: 'in front',
+  diccionarios: 'dictionaries',
+  difíciles: 'difficult',
+  diez: 'ten',
+  director: 'director',
+  doctora: 'doctor',
+  domingo: 'Sunday',
+  el: 'the',
+  El: 'the',
+  Ella: 'she',
+  Ellas: 'they',
+  Ellos: 'they',
+  en: 'in / at',
+  enfermo: 'sick',
+  enseñando: 'teaching',
+  es: 'is',
+  escuela: 'school',
+  España: 'Spain',
+  español: 'Spanish',
+  está: 'is',
+  estamos: 'are',
+  están: 'are',
+  estás: 'are',
+  estoy: 'am',
+  estudiante: 'student',
+  estudiantes: 'students',
+  estudiando: 'studying',
+  Este: 'this',
+  este: 'this',
+  examen: 'exam',
+  explicando: 'explaining',
+  feliz: 'happy',
+  felices: 'happy',
+  fiesta: 'party',
+  fría: 'cold',
+  frías: 'cold',
+  gato: 'cat',
+  grande: 'big',
+  gramática: 'grammar',
+  hermano: 'brother',
+  hermana: 'sister',
+  hermanas: 'sisters',
+  hoy: 'today',
+  ingeniero: 'engineer',
+  jardín: 'garden',
+  jueves: 'Thursday',
+  jugando: 'playing',
+  la: 'the',
+  La: 'the',
+  las: 'the',
+  Las: 'the',
+  leyendo: 'reading',
+  libro: 'book',
+  libros: 'books',
+  lado: 'side',
+  limpios: 'clean',
+  lunes: 'Monday',
+  llaves: 'keys',
+  madera: 'wood',
+  Madrid: 'Madrid',
+  mañana: 'tomorrow / morning',
+  Marta: 'Marta',
+  mesa: 'table',
+  México: 'Mexico',
+  mi: 'my',
+  Mi: 'my',
+  misma: 'same',
+  mejor: 'best',
+  manos: 'hands',
+  mis: 'my',
+  Mis: 'my',
+  música: 'music',
+  entrevista: 'interview',
+  nervioso: 'nervous',
+  niño: 'boy',
+  niños: 'children',
+  noche: 'night',
+  nosotros: 'we',
+  Nosotros: 'we',
+  nuestros: 'our',
+  Nuestros: 'our',
+  ocho: 'eight',
+  oficina: 'office',
+  orgullosa: 'proud',
+  padres: 'parents',
+  pacientes: 'patient',
+  parque: 'park',
+  padre: 'father',
+  persona: 'person',
+  platos: 'plates',
+  película: 'movie',
+  plata: 'silver',
+  por: 'by / in',
+  preocupados: 'worried',
+  pregunta: 'question',
+  profesor: 'teacher',
+  profesora: 'teacher',
+  profesores: 'teachers',
+  problema: 'problem',
+  puerta: 'door',
+  perro: 'dog',
+  resultado: 'result',
+  regla: 'rule',
+  reunión: 'meeting',
+  rojo: 'red',
+  sala: 'room',
+  salir: 'to leave',
+  simpáticos: 'nice',
+  son: 'are',
+  somos: 'are',
+  soy: 'am',
+  su: 'his / her',
+  sillas: 'chairs',
+  sopa: 'soup',
+  sucio: 'dirty',
+  teléfono: 'phone',
+  tienda: 'store',
+  triste: 'sad',
+  trabajando: 'working',
+  tú: 'you',
+  Tú: 'you',
+  útiles: 'useful',
+  viernes: 'Friday',
+  vidrio: 'glass',
+  un: 'a / an',
+  Yo: 'I',
+};
+
+const getSerEstarFamily = (example) => {
+  const answer = example?.correct?.toLowerCase();
+  if (SER_FORMS.has(answer)) return 'ser';
+  if (ESTAR_FORMS.has(answer)) return 'estar';
+  return null;
+};
+
+const pickCycled = (items, index) => items[index % items.length];
+
+const buildSerEstarItems = (module) => {
+  if (module.specialPractice !== 'ser-estar-rules' || !Array.isArray(module.rules)) {
+    return null;
+  }
+
+  const items = [];
+  const orderedRules = [...module.rules].sort((a, b) => {
+    const aIndex = SER_ESTAR_RULE_ORDER.indexOf(a.id);
+    const bIndex = SER_ESTAR_RULE_ORDER.indexOf(b.id);
+    if (aIndex === -1 && bIndex === -1) return 0;
+    if (aIndex === -1) return 1;
+    if (bIndex === -1) return -1;
+    return aIndex - bIndex;
+  });
+
+  const examplePool = orderedRules.flatMap((rule) =>
+    rule.examples.map((example) => ({
+      rule,
+      example,
+      family: getSerEstarFamily(example),
+    }))
+  );
+
+  orderedRules.forEach((rule, ruleIndex) => {
+    const ruleFamily = getSerEstarFamily(rule.examples[0]);
+    const currentRuleExamples = rule.examples.map((example) => ({
+      rule,
+      example,
+      family: getSerEstarFamily(example),
+    }));
+    const oppositeExamples = examplePool.filter((entry) => entry.family && entry.family !== ruleFamily);
+    const mixedExamples = [
+      ...currentRuleExamples.slice(0, 2),
+      ...Array.from({ length: 8 }, (_, offset) => {
+        const useOpposite = offset % 2 === 0;
+        if (useOpposite && oppositeExamples.length > 0) {
+          return pickCycled(oppositeExamples, ruleIndex * 4 + offset);
+        }
+        return pickCycled(currentRuleExamples.slice(2), offset);
+      }),
+    ];
+
+    mixedExamples.forEach(({ rule: sourceRule, example }, exampleIndex) => {
+      items.push({
+        type: 'ser-estar-choice',
+        id: `${rule.id}-choice-${exampleIndex + 1}`,
+        rule: sourceRule,
+        phaseRule: rule,
+        data: example,
+        exampleIndex,
+        ruleIndex,
+        baseIndex: items.length,
+      });
+    });
+    rule.translations.forEach((translation, translationIndex) => {
+      items.push({
+        type: 'ser-estar-translation',
+        id: `${rule.id}-translation-${translationIndex + 1}`,
+        rule,
+        data: translation,
+        ruleIndex,
+        baseIndex: items.length,
+      });
+    });
+  });
+
+  return items;
+};
+
+const mergeInsertedPracticeItems = (baseItems, insertedItems) => {
+  if (!insertedItems.length) return baseItems;
+  const byAfterIndex = new Map();
+  insertedItems.forEach((inserted) => {
+    const current = byAfterIndex.get(inserted.afterBaseIndex) || [];
+    current.push(inserted.item);
+    byAfterIndex.set(inserted.afterBaseIndex, current);
+  });
+
+  const merged = [];
+  baseItems.forEach((item) => {
+    merged.push(item);
+    const inserts = byAfterIndex.get(item.baseIndex);
+    if (inserts) merged.push(...inserts);
+  });
+  return merged;
+};
+
 /** Speak a Spanish word/phrase */
 const speakSpanish = (text, rate = 0.85) => {
   if (!text) return;
@@ -159,14 +441,16 @@ const LessonPlayer = ({
   getSavedIndex,
 }) => {
   const isPureTestingMode = practiceMode === 'testing';
+  const isSerEstarSpecial = module.specialPractice === 'ser-estar-rules' && !isPureTestingMode;
   const challengeInterval = settings?.challengeInterval ?? 5;
   const swipeEnabled = settings?.swipeToNext ?? true;
 
   // Build merged items once for initial index calculation
   const initialMergedItems = useMemo(() => {
+    if (isSerEstarSpecial) return buildSerEstarItems(module) || [];
     if (isPureTestingMode) return buildTestingItems(module.sentences);
     return buildMergedItems(module.sentences, module.id, challengeInterval);
-  }, [module, isPureTestingMode, challengeInterval]);
+  }, [module, isPureTestingMode, isSerEstarSpecial, challengeInterval]);
 
   // Convert sentence-level progress to merged-items index
   const savedSentenceCount = getSavedIndex ? getSavedIndex(module.id, practiceMode) : 0;
@@ -191,6 +475,9 @@ const LessonPlayer = ({
   const [activeWordIndex, setActiveWordIndex] = useState(null);
   const [challengeAnswerRevealed, setChallengeAnswerRevealed] = useState(false);
   const [extraItems, setExtraItems] = useState([]);
+  const [insertedPracticeItems, setInsertedPracticeItems] = useState([]);
+  const [choiceSelection, setChoiceSelection] = useState(null);
+  const [answeredChoiceIds, setAnsweredChoiceIds] = useState(() => new Set());
   const [isDesktop, setIsDesktop] = useState(false);
   const isStoryModule = !!module.type && module.type === 'story';
   const isReviewModule = !!module.type && module.type === 'review';
@@ -226,6 +513,7 @@ const LessonPlayer = ({
     setEnglishRevealed(false);
     setActiveWordIndex(null);
     setChallengeAnswerRevealed(false);
+    setChoiceSelection(null);
   }, [settings?.autoRevealSpanish]);
 
   useEffect(() => {
@@ -239,27 +527,33 @@ const LessonPlayer = ({
   }, []);
 
   const mergedItems = useMemo(() => {
+    if (isSerEstarSpecial) {
+      return mergeInsertedPracticeItems(buildSerEstarItems(module) || [], insertedPracticeItems);
+    }
     if (isPureTestingMode) {
       return buildTestingItems(module.sentences);
     }
     const base = buildMergedItems(module.sentences, module.id, challengeInterval);
     return [...base, ...extraItems];
-  }, [module, extraItems, isPureTestingMode, challengeInterval]);
+  }, [module, insertedPracticeItems, extraItems, isPureTestingMode, isSerEstarSpecial, challengeInterval]);
 
   const currentItem = mergedItems[currentIndex];
   const currentOriginalIndex = currentItem?.originalIndex;
   const isChallenge = currentItem?.type === 'challenge';
-  const sentence = isChallenge ? null : currentItem?.data;
+  const isSerEstarChoice = currentItem?.type === 'ser-estar-choice';
+  const isSerEstarTranslation = currentItem?.type === 'ser-estar-translation';
+  const sentence = (isChallenge || isSerEstarChoice || isSerEstarTranslation) ? null : currentItem?.data;
   const isFinished = currentIndex >= mergedItems.length;
   const showSelfAssessment = isFinished && !hasAssessed;
   const hasNextModule = moduleIndex < modules.length - 1;
   const vocabulary = module.vocabulary || {};
   const vocabTable = isFinished ? buildVocabTable(module.sentences, vocabulary) : [];
 
-  const totalSentences = module.sentences.length;
+  const totalSentences = isSerEstarSpecial ? mergedItems.length : module.sentences.length;
   const progressItemsSoFar = isFinished
     ? totalSentences
     : mergedItems.slice(0, currentIndex + 1).filter((item) => {
+      if (isSerEstarSpecial) return item.type === 'ser-estar-choice' || item.type === 'ser-estar-translation';
       if (isPureTestingMode) return item.type === 'challenge';
       return item.type === 'sentence';
     }).length;
@@ -268,18 +562,32 @@ const LessonPlayer = ({
   const autoPlay = settings?.autoPlayAudio ?? true;
 
   useEffect(() => {
-    if (autoPlay && !showGrammarIntro && !isChallenge && sentence?.spanish) {
+    if (autoPlay && !showGrammarIntro && isSerEstarChoice && currentItem?.data?.prompt && !choiceSelection) {
+      speakSpanish(currentItem.data.prompt, speechRate);
+      return;
+    }
+    if (autoPlay && !showGrammarIntro && !isChallenge && !isSerEstarTranslation && sentence?.spanish) {
       speakSpanish(sentence.spanish, speechRate);
     }
-  }, [autoPlay, isChallenge, sentence, showGrammarIntro, speechRate]);
+  }, [autoPlay, choiceSelection, currentItem, isChallenge, isSerEstarChoice, isSerEstarTranslation, sentence, showGrammarIntro, speechRate]);
 
   const playAudio = useCallback(() => {
+    if (isSerEstarChoice) {
+      const example = currentItem?.data;
+      if (!example) return;
+      speakSpanish(choiceSelection ? `${example.correct} ${example.continuation}` : example.prompt, speechRate);
+      return;
+    }
+    if (isSerEstarTranslation) {
+      if (currentItem?.data?.spanish) speakSpanish(currentItem.data.spanish, speechRate);
+      return;
+    }
     if (isChallenge) {
       if (currentItem?.data?.spanish) speakSpanish(currentItem.data.spanish, speechRate);
       return;
     }
     if (sentence?.spanish) speakSpanish(sentence.spanish, speechRate);
-  }, [currentItem, isChallenge, sentence, speechRate]);
+  }, [choiceSelection, currentItem, isChallenge, isSerEstarChoice, isSerEstarTranslation, sentence, speechRate]);
 
   const handleNext = useCallback((swipeDir) => {
     resetRevealState();
@@ -301,12 +609,13 @@ const LessonPlayer = ({
     if (saveModuleProgress) {
       // Calculate the sentence-level progress for the new index
       const sentenceProgress = mergedItems.slice(0, newIndex).filter((item) => {
+        if (isSerEstarSpecial) return item.type === 'ser-estar-choice' || item.type === 'ser-estar-translation';
         if (isPureTestingMode) return item.type === 'challenge';
         return item.type === 'sentence';
       }).length;
       saveModuleProgress(module.id, sentenceProgress, practiceMode, totalSentences);
     }
-  }, [currentIndex, isPureTestingMode, mergedItems, module.id, practiceMode, resetRevealState, saveModuleProgress, totalSentences]);
+  }, [currentIndex, isPureTestingMode, isSerEstarSpecial, mergedItems, module.id, practiceMode, resetRevealState, saveModuleProgress, totalSentences]);
 
   const handlePrev = useCallback((swipeDir) => {
     if (currentIndex === 0) return;
@@ -332,6 +641,33 @@ const LessonPlayer = ({
       { type: 'sentence', data: sentence, originalIndex: currentOriginalIndex, isRepeat: true },
     ]);
   }, [currentOriginalIndex, sentence]);
+
+  const handleSerEstarChoice = useCallback((option) => {
+    if (!isSerEstarChoice || !currentItem?.data) return;
+    const isCorrect = option === currentItem.data.correct;
+    setChoiceSelection({ option, isCorrect });
+    speakSpanish(`${currentItem.data.correct} ${currentItem.data.continuation}`, speechRate);
+
+    setAnsweredChoiceIds((prev) => {
+      const next = new Set(prev);
+      next.add(currentItem.id);
+      return next;
+    });
+
+    if (!isCorrect && !currentItem.isRepeat && !answeredChoiceIds.has(currentItem.id)) {
+      setInsertedPracticeItems((prev) => [
+        ...prev,
+        {
+          afterBaseIndex: Math.min(currentItem.baseIndex + 2, mergedItems.length - 1),
+          item: {
+            ...currentItem,
+            id: `${currentItem.id}-retry`,
+            isRepeat: true,
+          },
+        },
+      ]);
+    }
+  }, [answeredChoiceIds, currentItem, isSerEstarChoice, mergedItems.length, speechRate]);
 
   const handleDismissIntro = useCallback(() => {
     setShowGrammarIntro(false);
@@ -577,6 +913,33 @@ const LessonPlayer = ({
         return;
       }
 
+      if (isSerEstarChoice) {
+        const options = currentItem?.data?.options || [];
+        if ((key === '1' || key === '2') && options[Number(key) - 1]) {
+          handleSerEstarChoice(options[Number(key) - 1]);
+        }
+        if (key === ' ' || key === 's') {
+          event.preventDefault();
+          playAudio();
+        }
+        if ((key === 'enter' || key === 'arrowright') && choiceSelection) handleNext();
+        if (key === 'arrowleft') handlePrev();
+        return;
+      }
+
+      if (isSerEstarTranslation) {
+        if (key === ' ' || key === 's') {
+          event.preventDefault();
+          if (!challengeAnswerRevealed) {
+            setChallengeAnswerRevealed(true);
+          }
+          playAudio();
+        }
+        if (key === 'enter' || key === 'arrowright') handleNext();
+        if (key === 'arrowleft') handlePrev();
+        return;
+      }
+
       if (isChallenge) {
         if (key === ' ' || key === 's') {
           event.preventDefault();
@@ -605,13 +968,18 @@ const LessonPlayer = ({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [
     challengeAnswerRevealed,
+    choiceSelection,
+    currentItem,
     handleMarkForLater,
     handleDismissIntro,
     handleNext,
     handlePrev,
     handleSelfAssessment,
+    handleSerEstarChoice,
     hasNextModule,
     isChallenge,
+    isSerEstarChoice,
+    isSerEstarTranslation,
     isFinished,
     onBack,
     onNextModule,
@@ -643,15 +1011,55 @@ const LessonPlayer = ({
     }
   }, []);
 
-  const getMeaning = (word) => {
+  const getMeaningFromMap = (word, meanings = {}) => {
     const cw = cleanWord(word);
-    const meanings = sentence?.wordMeanings || {};
     return meanings[cw] ?? meanings[cw.toLowerCase()] ?? meanings[cw.replace(/s$/, '')] ?? null;
+  };
+
+  const getMeaning = (word) => getMeaningFromMap(word, sentence?.wordMeanings || {});
+
+  const getSerEstarMeaning = (word) => {
+    const cw = cleanWord(word);
+    return SER_ESTAR_WORD_MEANINGS[cw] ?? SER_ESTAR_WORD_MEANINGS[cw.toLowerCase()] ?? null;
   };
 
   const getVocabExtra = (word) => {
     const cw = cleanWord(word).toLowerCase();
     return vocabulary[cw] || null;
+  };
+
+  const renderClickableWords = (text, meaningGetter, keyPrefix, extraClassName = '') => {
+    if (!text) return null;
+    return text.split(' ').map((word, idx) => {
+      const key = `${keyPrefix}-${idx}`;
+      const meaning = meaningGetter(word);
+      const isActive = activeWordIndex === key;
+      return (
+        <div key={key} className="word-container">
+          <span
+            className={`spanish-word ${extraClassName} ${meaning ? 'has-meaning' : ''} ${isActive ? 'active' : ''}`}
+            onClick={(e) => {
+              if (meaning) {
+                e.stopPropagation();
+                setActiveWordIndex(isActive ? null : key);
+                speakSpanish(cleanWord(word), speechRate);
+              }
+            }}
+          >
+            {word}
+          </span>
+          {isActive && meaning && (
+            <div
+              className="word-tooltip animate-fade-in"
+              ref={clampTooltip}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <span className="tooltip-meaning">{meaning}</span>
+            </div>
+          )}
+        </div>
+      );
+    });
   };
 
   if (showGrammarIntro) {
@@ -789,6 +1197,154 @@ const LessonPlayer = ({
             )}
           </div>
         )}
+      </div>
+    );
+  }
+
+  if (isSerEstarChoice) {
+    const example = currentItem.data;
+    const selectedOption = choiceSelection?.option;
+    const hasAnswered = !!choiceSelection;
+    const showRuleHint = !currentItem.isRepeat && currentItem.exampleIndex < 2;
+    return (
+      <div className="lesson-player ser-estar-choice-player animate-fade-in">
+        <div className="lesson-header">
+          <button className="btn-secondary btn-sm" onClick={onBack}>
+            ← Back <KbdHint show={isDesktop}>Esc</KbdHint>
+          </button>
+          <LessonProgress current={progressItemsSoFar} total={totalSentences} label="Rule Practice" />
+        </div>
+
+        <div className="lesson-content glass-panel ser-estar-panel" style={swipeStyle} {...swipeTouchProps}>
+          {showRuleHint && (
+            <>
+              <div className="ser-estar-rule-badge">
+                <span>Rule {currentItem.ruleIndex + 1}</span>
+              </div>
+              <div className="ser-estar-rule">
+                <h3>{currentItem.phaseRule.name}</h3>
+                <p>{currentItem.phaseRule.explanation}</p>
+              </div>
+            </>
+          )}
+
+          <button className="btn-play ser-estar-audio" onClick={playAudio} title="Listen">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            <KbdHint show={isDesktop}>Space</KbdHint>
+          </button>
+
+          <div className="ser-estar-sentence" aria-live="polite">
+            {renderClickableWords(example.prompt, getSerEstarMeaning, `${currentItem.id}-prompt`)}
+            <div className={`ser-estar-blank ${hasAnswered ? 'filled' : ''}`}>
+              {hasAnswered
+                ? renderClickableWords(example.correct, getSerEstarMeaning, `${currentItem.id}-answer`, 'ser-estar-answer-word')
+                : '_____'}
+            </div>
+            {renderClickableWords(example.continuation, getSerEstarMeaning, `${currentItem.id}-continuation`)}
+          </div>
+
+          <div className="ser-estar-options">
+            {example.options.map((option, index) => (
+              <button
+                key={option}
+                className={`ser-estar-option ${selectedOption === option ? (choiceSelection.isCorrect ? 'correct' : 'incorrect') : ''}`}
+                onClick={() => handleSerEstarChoice(option)}
+                disabled={hasAnswered}
+              >
+                <span>{option}</span>
+                <KbdHint show={isDesktop}>{index + 1}</KbdHint>
+              </button>
+            ))}
+          </div>
+
+          <div className={`ser-estar-feedback-slot ${hasAnswered ? 'is-visible' : ''}`}>
+            <div className={`ser-estar-feedback ${choiceSelection?.isCorrect ? 'correct' : 'incorrect'} ${hasAnswered ? 'animate-fade-in' : ''}`}>
+              {hasAnswered && (
+                <>
+                  <strong>{choiceSelection.isCorrect ? 'Correct.' : 'Not this time.'}</strong>
+                  <span>{example.reason}</span>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className="lesson-nav-bar">
+          <button className="btn-secondary btn-nav-secondary" onClick={handlePrev} disabled={currentIndex === 0}>
+            ← Previous <KbdHint show={isDesktop}>←</KbdHint>
+          </button>
+          <button className="btn-primary btn-nav-next" onClick={handleNext} disabled={!hasAnswered}>
+            Continue → <KbdHint show={isDesktop}>Enter</KbdHint>
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (isSerEstarTranslation) {
+    const translation = currentItem.data;
+    return (
+      <div className="lesson-player animate-fade-in">
+        <div className="lesson-header">
+          <button className="btn-secondary btn-sm" onClick={onBack}>
+            ← Back <KbdHint show={isDesktop}>Esc</KbdHint>
+          </button>
+          <LessonProgress current={progressItemsSoFar} total={totalSentences} label="Translation" />
+        </div>
+
+        <div className="lesson-content glass-panel challenge-panel ser-estar-panel" style={swipeStyle} {...swipeTouchProps}>
+          <div className="challenge-badge">
+            <span className="challenge-icon">🗣️</span>
+            <span>{currentItem.rule.name}</span>
+          </div>
+
+          <div className="challenge-prompt">
+            <p className="challenge-instruction">Translate this mixed-up practice sentence into Spanish:</p>
+            <p className="challenge-english">{translation.english}</p>
+          </div>
+
+          <div className="challenge-answer-area">
+            {!challengeAnswerRevealed ? (
+              <button
+                className="btn-primary btn-reveal-answer pulse-primary"
+                onClick={() => {
+                  setChallengeAnswerRevealed(true);
+                  speakSpanish(translation.spanish, speechRate);
+                }}
+              >
+                Reveal Answer <KbdHint show={isDesktop}>Space</KbdHint>
+              </button>
+            ) : (
+              <div className="challenge-answer animate-fade-in">
+                <div className="challenge-spanish ser-estar-clickable-answer">
+                  {renderClickableWords(translation.spanish, getSerEstarMeaning, `${currentItem.id}-translation`)}
+                </div>
+                <p className="ser-estar-translation-reason">{translation.reason}</p>
+                <button
+                  className="btn-play-answer"
+                  onClick={() => speakSpanish(translation.spanish, speechRate)}
+                  title="Listen to the answer"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                  <span>Listen <KbdHint show={isDesktop}>Space</KbdHint></span>
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className="lesson-nav-bar">
+          <button className="btn-secondary btn-nav-secondary" onClick={handlePrev} disabled={currentIndex === 0}>
+            ← Previous <KbdHint show={isDesktop}>←</KbdHint>
+          </button>
+          <button className="btn-primary btn-nav-next" onClick={handleNext}>
+            Continue → <KbdHint show={isDesktop}>Enter</KbdHint>
+          </button>
+        </div>
       </div>
     );
   }

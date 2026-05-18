@@ -17,7 +17,14 @@ for (const manifestModule of manifest) {
   }
 
   const moduleData = JSON.parse(fs.readFileSync(modulePath, 'utf-8'));
-  const sentenceCount = Array.isArray(moduleData.sentences) ? moduleData.sentences.length : 0;
+  let sentenceCount = Array.isArray(moduleData.sentences) ? moduleData.sentences.length : 0;
+  if (moduleData.specialPractice === 'ser-estar-rules' && Array.isArray(moduleData.rules)) {
+    sentenceCount = moduleData.rules.reduce((total, rule) => {
+      const examples = Array.isArray(rule.examples) ? rule.examples.length : 0;
+      const translations = Array.isArray(rule.translations) ? rule.translations.length : 0;
+      return total + examples + translations;
+    }, 0);
+  }
 
   if (moduleData.id !== manifestModule.id) {
     console.error(
