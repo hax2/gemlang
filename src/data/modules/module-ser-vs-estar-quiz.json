@@ -7,183 +7,183 @@
   "sentences": [
     {
       "id": "q-sve-1",
-      "spanish": "Yo estoy en España.",
+      "spanish": "Estoy en España.",
       "english": "Choose ser or estar (Location): I am in Spain.",
-      "wordMeanings": { "Yo": "I", "estoy": "am", "en": "in", "España": "Spain" }
+      "wordMeanings": { "Estoy": "am (estar)", "en": "in", "España": "Spain" }
     },
     {
       "id": "q-sve-2",
-      "spanish": "Tú estás en la casa.",
+      "spanish": "Estás en la casa.",
       "english": "Choose ser or estar (Location): You are in the house.",
-      "wordMeanings": { "Tú": "You", "estás": "are", "en": "in", "la": "the", "casa": "house" }
+      "wordMeanings": { "Estás": "are (estar)", "en": "in", "la": "the", "casa": "house" }
     },
     {
       "id": "q-sve-3",
-      "spanish": "Él está en la oficina.",
+      "spanish": "Está en la oficina.",
       "english": "Choose ser or estar (Location): He is in the office.",
-      "wordMeanings": { "Él": "He", "está": "is", "en": "in", "la": "the", "oficina": "office" }
+      "wordMeanings": { "Está": "is (estar)", "en": "in", "la": "the", "oficina": "office" }
     },
     {
       "id": "q-sve-4",
-      "spanish": "Ella está en la escuela.",
+      "spanish": "Está en la escuela.",
       "english": "Choose ser or estar (Location): She is in the school.",
-      "wordMeanings": { "Ella": "She", "está": "is", "en": "in", "la": "the", "escuela": "school" }
+      "wordMeanings": { "Está": "is (estar)", "en": "in", "la": "the", "escuela": "school" }
     },
     {
       "id": "q-sve-5",
-      "spanish": "Nosotros estamos en la fiesta.",
+      "spanish": "Estamos en la fiesta.",
       "english": "Choose ser or estar (Location): We are at the party.",
-      "wordMeanings": { "Nosotros": "We", "estamos": "are", "en": "at/in", "la": "the", "fiesta": "party" }
+      "wordMeanings": { "Estamos": "are (estar)", "en": "at/in", "la": "the", "fiesta": "party" }
     },
     {
       "id": "q-sve-6",
-      "spanish": "Ellos están en el parque.",
+      "spanish": "Están en el parque.",
       "english": "Choose ser or estar (Location): They are in the park.",
-      "wordMeanings": { "Ellos": "They", "están": "are", "en": "in", "el": "the", "parque": "park" }
+      "wordMeanings": { "Están": "are (estar)", "en": "in", "el": "the", "parque": "park" }
     },
     {
       "id": "q-sve-7",
       "spanish": "El libro está en la mesa.",
       "english": "Choose ser or estar (Location): The book is on the table.",
-      "wordMeanings": { "El": "The", "libro": "book", "está": "is", "en": "on/in", "la": "the", "mesa": "table" }
+      "wordMeanings": { "El": "The", "libro": "book", "está": "is (estar)", "en": "on/in", "la": "the", "mesa": "table" }
     },
     {
       "id": "q-sve-8",
       "spanish": "Los perros están en el jardín.",
       "english": "Choose ser or estar (Location): The dogs are in the garden.",
-      "wordMeanings": { "Los": "The", "perros": "dogs", "están": "are", "en": "in", "el": "the", "jardín": "garden" }
+      "wordMeanings": { "Los": "The", "perros": "dogs", "están": "are (estar)", "en": "in", "el": "the", "jardín": "garden" }
     },
     {
       "id": "q-sve-9",
       "spanish": "El profesor está aquí.",
       "english": "Choose ser or estar (Location): The teacher is here.",
-      "wordMeanings": { "El": "The", "profesor": "teacher", "está": "is", "aquí": "here" }
+      "wordMeanings": { "El": "The", "profesor": "teacher", "está": "is (estar)", "aquí": "here" }
     },
     {
       "id": "q-sve-10",
       "spanish": "Madrid está en España.",
       "english": "Choose ser or estar (Location): Madrid is in Spain.",
-      "wordMeanings": { "Madrid": "Madrid", "está": "is", "en": "in", "España": "Spain" }
+      "wordMeanings": { "Madrid": "Madrid", "está": "is (estar)", "en": "in", "España": "Spain" }
     },
     {
       "id": "q-sve-11",
-      "spanish": "Tú estás en la casa.",
+      "spanish": "Estás en la casa.",
       "english": "Translate to Spanish: You are in the house.",
-      "wordMeanings": { "Tú": "You", "estás": "are", "en": "in", "la": "the", "casa": "house" }
+      "wordMeanings": { "Estás": "are (estar)", "en": "in", "la": "the", "casa": "house" }
     },
     {
       "id": "q-sve-12",
-      "spanish": "Nosotros estamos en la fiesta.",
+      "spanish": "Estamos en la fiesta.",
       "english": "Translate to Spanish: We are at the party.",
-      "wordMeanings": { "Nosotros": "We", "estamos": "are", "en": "at/in", "la": "the", "fiesta": "party" }
+      "wordMeanings": { "Estamos": "are (estar)", "en": "at/in", "la": "the", "fiesta": "party" }
     },
     {
       "id": "q-sve-13",
       "spanish": "El libro está en la mesa.",
       "english": "Translate to Spanish: The book is on the table.",
-      "wordMeanings": { "El": "The", "libro": "book", "está": "is", "en": "on/in", "la": "the", "mesa": "table" }
+      "wordMeanings": { "El": "The", "libro": "book", "está": "is (estar)", "en": "on/in", "la": "the", "mesa": "table" }
     },
     {
       "id": "q-sve-14",
-      "spanish": "Ella está en la escuela.",
+      "spanish": "Está en la escuela.",
       "english": "Translate to Spanish: She is in the school.",
-      "wordMeanings": { "Ella": "She", "está": "is", "en": "in", "la": "the", "escuela": "school" }
+      "wordMeanings": { "Está": "is (estar)", "en": "in", "la": "the", "escuela": "school" }
     },
     {
       "id": "q-sve-15",
       "spanish": "El profesor está aquí.",
       "english": "Translate to Spanish: The teacher is here.",
-      "wordMeanings": { "El": "The", "profesor": "teacher", "está": "is", "aquí": "here" }
+      "wordMeanings": { "El": "The", "profesor": "teacher", "está": "is (estar)", "aquí": "here" }
     },
     {
       "id": "q-sve-16",
-      "spanish": "Yo soy alto.",
+      "spanish": "Soy alto.",
       "english": "Choose ser or estar (Characteristic): I am tall.",
-      "wordMeanings": { "Yo": "I", "soy": "am", "alto": "tall" }
+      "wordMeanings": { "Soy": "am (ser)", "alto": "tall" }
     },
     {
       "id": "q-sve-17",
-      "spanish": "Tú eres inteligente.",
+      "spanish": "Eres inteligente.",
       "english": "Choose ser or estar (Characteristic): You are intelligent.",
-      "wordMeanings": { "Tú": "You", "eres": "are", "inteligente": "intelligent" }
+      "wordMeanings": { "Eres": "are (ser)", "inteligente": "intelligent" }
     },
     {
       "id": "q-sve-18",
-      "spanish": "Él es de México.",
+      "spanish": "Es de México.",
       "english": "Choose ser or estar (Origin): He is from Mexico.",
-      "wordMeanings": { "Él": "He", "es": "is", "de": "from", "México": "Mexico" }
+      "wordMeanings": { "Es": "is (ser)", "de": "from", "México": "Mexico" }
     },
     {
       "id": "q-sve-19",
-      "spanish": "Ella es doctora.",
+      "spanish": "Es doctora.",
       "english": "Choose ser or estar (Identity/Profession): She is a doctor.",
-      "wordMeanings": { "Ella": "She", "es": "is", "doctora": "doctor" }
+      "wordMeanings": { "Es": "is (ser)", "doctora": "doctor" }
     },
     {
       "id": "q-sve-20",
-      "spanish": "Nosotros somos amigos.",
+      "spanish": "Somos amigos.",
       "english": "Choose ser or estar (Identity/Relationship): We are friends.",
-      "wordMeanings": { "Nosotros": "We", "somos": "are", "amigos": "friends" }
+      "wordMeanings": { "Somos": "are (ser)", "amigos": "friends" }
     },
     {
       "id": "q-sve-21",
-      "spanish": "Ellos son jóvenes.",
+      "spanish": "Son jóvenes.",
       "english": "Choose ser or estar (Characteristic): They are young.",
-      "wordMeanings": { "Ellos": "They", "son": "are", "jóvenes": "young" }
+      "wordMeanings": { "Son": "are (ser)", "jóvenes": "young" }
     },
     {
       "id": "q-sve-22",
       "spanish": "El libro es rojo.",
       "english": "Choose ser or estar (Characteristic): The book is red.",
-      "wordMeanings": { "El": "The", "libro": "book", "es": "is", "rojo": "red" }
+      "wordMeanings": { "El": "The", "libro": "book", "es": "is (ser)", "rojo": "red" }
     },
     {
       "id": "q-sve-23",
       "spanish": "Los perros son rápidos.",
       "english": "Choose ser or estar (Characteristic): The dogs are fast.",
-      "wordMeanings": { "Los": "The", "perros": "dogs", "son": "are", "rápidos": "fast" }
+      "wordMeanings": { "Los": "The", "perros": "dogs", "son": "are (ser)", "rápidos": "fast" }
     },
     {
       "id": "q-sve-24",
       "spanish": "El profesor es estricto.",
       "english": "Choose ser or estar (Characteristic): The teacher is strict.",
-      "wordMeanings": { "El": "The", "profesor": "teacher", "es": "is", "estricto": "strict" }
+      "wordMeanings": { "El": "The", "profesor": "teacher", "es": "is (ser)", "estricto": "strict" }
     },
     {
       "id": "q-sve-25",
       "spanish": "La clase es aburrida.",
       "english": "Choose ser or estar (Characteristic): The class is boring.",
-      "wordMeanings": { "La": "The", "clase": "class", "es": "is", "aburrida": "boring" }
+      "wordMeanings": { "La": "The", "clase": "class", "es": "is (ser)", "aburrida": "boring" }
     },
     {
       "id": "q-sve-26",
       "spanish": "El profesor es alto.",
       "english": "Translate to Spanish (Mixed words): The teacher is tall.",
-      "wordMeanings": { "El": "The", "profesor": "teacher", "es": "is", "alto": "tall" }
+      "wordMeanings": { "El": "The", "profesor": "teacher", "es": "is (ser)", "alto": "tall" }
     },
     {
       "id": "q-sve-27",
-      "spanish": "Nosotros estamos en el parque.",
+      "spanish": "Estamos en el parque.",
       "english": "Translate to Spanish (Mixed words): We are in the park.",
-      "wordMeanings": { "Nosotros": "We", "estamos": "are", "en": "in", "el": "the", "parque": "park" }
+      "wordMeanings": { "Estamos": "are (estar)", "en": "in", "el": "the", "parque": "park" }
     },
     {
       "id": "q-sve-28",
       "spanish": "El libro rojo está en la mesa.",
       "english": "Translate to Spanish (Mixed words): The red book is on the table.",
-      "wordMeanings": { "El": "The", "libro": "book", "rojo": "red", "está": "is", "en": "on", "la": "the", "mesa": "table" }
+      "wordMeanings": { "El": "The", "libro": "book", "rojo": "red", "está": "is (estar)", "en": "on", "la": "the", "mesa": "table" }
     },
     {
       "id": "q-sve-29",
       "spanish": "Los amigos jóvenes están en la fiesta.",
       "english": "Translate to Spanish (Mixed words): The young friends are at the party.",
-      "wordMeanings": { "Los": "The", "amigos": "friends", "jóvenes": "young", "están": "are", "en": "at/in", "la": "the", "fiesta": "party" }
+      "wordMeanings": { "Los": "The", "amigos": "friends", "jóvenes": "young", "están": "are (estar)", "en": "at/in", "la": "the", "fiesta": "party" }
     },
     {
       "id": "q-sve-30",
-      "spanish": "Ella es de España y está aquí.",
+      "spanish": "Es de España y está aquí.",
       "english": "Translate to Spanish (Mixed words): She is from Spain and is here.",
-      "wordMeanings": { "Ella": "She", "es": "is", "de": "from", "España": "Spain", "y": "and", "está": "is", "aquí": "here" }
+      "wordMeanings": { "Es": "is (ser)", "de": "from", "España": "Spain", "y": "and", "está": "is (estar)", "aquí": "here" }
     }
   ],
   "grammarExplanation": "This is a special testing module to master Ser vs. Estar. \n\n• For the first 10 prompts, you will be given a sentence in English and a rule. Translate it using 'estar' (Locations).\n• Then you'll translate 5 sentences from scratch.\n• Next, 10 prompts using 'ser' (Characteristics).\n• Finally, a mix of translations combining everything you've learned!",
