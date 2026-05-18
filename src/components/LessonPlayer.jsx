@@ -729,9 +729,10 @@ const LessonPlayer = ({
 
   // ── Swipe touch handlers ──
   const canSwipe = swipeEnabled && !isDesktop && !showGrammarIntro && !showTutorial && !isFinished;
+  const canNavigateBySwipe = canSwipe && (!isSerEstarChoice || !!choiceSelection);
 
   const onTouchStart = useCallback((e) => {
-    if (!canSwipe) return;
+    if (!canNavigateBySwipe) return;
     const touch = e.touches[0];
     swipeStartRef.current = {
       x: touch.clientX,
@@ -743,10 +744,10 @@ const LessonPlayer = ({
     };
     setSwipeOffset(0);
     setSwipeOffsetY(0);
-  }, [canSwipe]);
+  }, [canNavigateBySwipe]);
 
   const onTouchMove = useCallback((e) => {
-    if (!canSwipe) return;
+    if (!canNavigateBySwipe) return;
     const s = swipeStartRef.current;
     const touch = e.touches[0];
     const dx = touch.clientX - s.x;
@@ -783,10 +784,10 @@ const LessonPlayer = ({
       // Only allow downward — clamp to >= 0
       setSwipeOffsetY(Math.max(0, dy));
     }
-  }, [canSwipe, currentIndex, mergedItems.length, isChallenge]);
+  }, [canNavigateBySwipe, currentIndex, mergedItems.length, isChallenge]);
 
   const onTouchEnd = useCallback(() => {
-    if (!canSwipe) return;
+    if (!canNavigateBySwipe) return;
     const s = swipeStartRef.current;
     if (!s.swiping) {
       setSwipeOffset(0);
@@ -834,7 +835,7 @@ const LessonPlayer = ({
     }
 
     s.swiping = false;
-  }, [canSwipe, swipeOffset, swipeOffsetY, sentence, handleNext, handlePrev, handleMarkForLater, currentIndex]);
+  }, [canNavigateBySwipe, swipeOffset, swipeOffsetY, sentence, handleNext, handlePrev, handleMarkForLater, currentIndex]);
 
   const swipeStyle = useMemo(() => {
     if (swipeAnimating === 'left') {
@@ -1307,7 +1308,13 @@ const LessonPlayer = ({
           </div>
         </div>
 
-        <div className="lesson-nav-bar">
+        {canSwipe && (
+          <div className={`swipe-hint ${hasAnswered ? '' : 'is-disabled'}`} aria-hidden="true">
+            {hasAnswered ? '← swipe →' : 'choose an answer'}
+          </div>
+        )}
+
+        <div className={`lesson-nav-bar ${canSwipe ? 'swipe-mode' : ''}`}>
           <button className="btn-secondary btn-nav-secondary" onClick={handlePrev} disabled={currentIndex === 0}>
             ← Previous <KbdHint show={isDesktop}>←</KbdHint>
           </button>

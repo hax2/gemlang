@@ -1582,15 +1582,34 @@
     touch-action: pan-y;
   }
 
+  .ser-estar-choice-player {
+    min-height: calc(100dvh - 112px);
+    padding-bottom: 1rem;
+  }
+
+  .ser-estar-choice-player .lesson-header {
+    margin-bottom: 0.6rem;
+  }
+
   .ser-estar-panel {
     min-height: auto;
-    padding: 1rem;
-    gap: 0.75rem;
+    flex: 1;
+    padding: 0.85rem;
+    gap: 0.65rem;
+    justify-content: center;
+  }
+
+  .ser-estar-choice-player.has-rule-hint .ser-estar-panel {
+    justify-content: flex-start;
+  }
+
+  .ser-estar-audio {
+    display: none;
   }
 
   .ser-estar-rule {
-    min-height: 86px;
-    padding: 0.7rem 0.8rem;
+    min-height: auto;
+    padding: 0.65rem 0.75rem;
   }
 
   .ser-estar-rule h3 {
@@ -1602,13 +1621,49 @@
   }
 
   .ser-estar-sentence {
-    min-height: 76px;
-    font-size: 1.35rem;
-    gap: 0.3rem;
+    min-height: 92px;
+    padding: 0.35rem 0;
+    font-size: clamp(1.25rem, 5.6vw, 1.75rem);
+    gap: 0.25rem 0.35rem;
+    line-height: 1.45;
+  }
+
+  .ser-estar-sentence .spanish-word {
+    padding: 0.05rem 0.12rem;
+    border-radius: 6px;
+  }
+
+  .ser-estar-sentence .word-container {
+    display: inline-flex;
+  }
+
+  .ser-estar-blank {
+    min-width: 4.4rem;
+    padding-inline: 0.35rem;
+  }
+
+  .ser-estar-options {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ser-estar-option {
+    min-height: 52px;
+    padding: 0.65rem 0.75rem;
+    font-size: 1.1rem;
   }
 
   .ser-estar-feedback,
   .ser-estar-feedback-slot {
-    min-height: 104px;
+    min-height: 112px;
+  }
+
+  .ser-estar-feedback {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .swipe-hint.is-disabled {
+    opacity: 0.55;
   }
 }
