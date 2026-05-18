@@ -158,7 +158,7 @@ const LessonPlayer = ({
   completeModule,
   getSavedIndex,
 }) => {
-  const isPureTestingMode = practiceMode === 'testing';
+  const isPureTestingMode = practiceMode === 'testing' || module.type === 'quiz';
   const challengeInterval = settings?.challengeInterval ?? 5;
   const swipeEnabled = settings?.swipeToNext ?? true;
 

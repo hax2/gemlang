@@ -41,6 +41,15 @@
     "file": "module-ser-vs-estar.json"
   },
   {
+    "id": "module-ser-vs-estar-quiz",
+    "title": "Quiz: Ser vs. Estar Masterclass",
+    "description": "A special module where you first choose the correct verb, then translate, then mix them up!",
+    "type": "quiz",
+    "level": "Intermediate",
+    "sentenceCount": 30,
+    "file": "module-ser-vs-estar-quiz.json"
+  },
+  {
     "id": "story-1",
     "title": "📖 Story: Ana's New Friend",
     "description": "A short story using what you've learned about greetings, locations, and descriptions.",

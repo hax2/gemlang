@@ -70,6 +70,7 @@ const ModuleSelector = ({
           const badge = STATUS_BADGES[status];
           const isStory = mod.type === 'story';
           const isReview = mod.type === 'review';
+          const isQuiz = mod.type === 'quiz';
 
           return (
             <button
@@ -91,6 +92,11 @@ const ModuleSelector = ({
                     {isReview && (
                       <span className="module-status-badge status-review">
                         🔄 Review
+                      </span>
+                    )}
+                    {isQuiz && (
+                      <span className="module-status-badge status-quiz" style={{ background: 'var(--primary-color)', color: 'white' }}>
+                        ❓ Quiz
                       </span>
                     )}
                     {badge && (
