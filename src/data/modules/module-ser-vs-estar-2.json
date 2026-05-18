@@ -227,14 +227,14 @@
           "reason": "Proud is an emotional state here, so use estar."
         },
         {
-          "prompt": "Ellos",
+          "prompt": "Mis amigos",
           "correct": "están",
-          "continuation": "felices hoy.",
+          "continuation": "orgullosos.",
           "options": [
             "son",
             "están"
           ],
-          "reason": "Happy today is a current emotion, so use estar."
+          "reason": "Proud is an emotional state here, so use estar."
         },
         {
           "prompt": "Yo",
@@ -264,9 +264,9 @@
           "reason": "Excited is an emotion."
         },
         {
-          "english": "She is sad.",
-          "spanish": "Ella está triste.",
-          "reason": "Sad is an emotion."
+          "english": "My mother is proud.",
+          "spanish": "Mi madre está orgullosa.",
+          "reason": "Proud is an emotional state, so use estar."
         },
         {
           "english": "You are calm today.",

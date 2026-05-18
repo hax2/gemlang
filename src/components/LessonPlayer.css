@@ -519,6 +519,19 @@
   overflow: visible;
 }
 
+.ser-estar-choice-player.is-compact .ser-estar-panel {
+  min-height: 390px;
+  justify-content: center;
+}
+
+.ser-estar-choice-player.is-compact .ser-estar-audio {
+  margin-bottom: 0.25rem;
+}
+
+.ser-estar-choice-player.is-compact .ser-estar-sentence {
+  min-height: 78px;
+}
+
 .ser-estar-rule-badge {
   align-self: flex-start;
   padding: 0.4rem 0.85rem;
@@ -1147,14 +1160,43 @@
 
   /* Module finished screen: also needs bottom space */
   .lesson-finished {
-    padding-bottom: 2rem;
-    margin-top: 1.5rem;
+    max-height: calc(100dvh - 5.75rem);
+    min-height: 0;
+    margin-top: 0;
+    padding: 1rem 0.8rem;
+    gap: 0.6rem;
+    overflow: hidden;
   }
+
   .finished-icon {
-    font-size: 3rem;
+    font-size: 2.2rem;
+    line-height: 1;
   }
+
   .finished-title {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
+    line-height: 1.15;
+  }
+
+  .finished-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  .finished-actions {
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+  }
+
+  .finished-actions .btn-secondary,
+  .finished-actions .btn-primary {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0.7rem 0.65rem;
+    font-size: 0.9rem;
   }
 
   /* English translation */
@@ -1202,35 +1244,118 @@
     width: fit-content;
   }
 
-  /* ── Vocab table: scrollable + tighter on mobile ── */
+  /* ── Vocab recap: compact rows with local scrolling ── */
+  .vocab-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .vocab-heading {
+    margin-bottom: 0.45rem;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+  }
+
   .vocab-table-wrapper {
-    overflow-x: auto;
+    max-height: min(32dvh, 210px);
+    overflow-y: auto;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
+  }
+
+  .vocab-table,
+  .vocab-table thead,
+  .vocab-table tbody,
+  .vocab-table tr,
+  .vocab-table td {
+    display: block;
+  }
+
+  .vocab-table thead {
+    display: none;
+  }
+
+  .vocab-table tbody {
+    display: grid;
+    gap: 0.4rem;
+    padding: 0.45rem;
+  }
+
+  .vocab-table tbody tr {
+    display: grid;
+    grid-template-columns: minmax(5rem, 0.8fr) minmax(0, 1.2fr);
+    gap: 0.2rem 0.65rem;
+    padding: 0.55rem 0.6rem;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-sm);
+    background: rgba(255,255,255,0.03);
+  }
+
+  .vocab-table tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.045);
   }
 
   .vocab-table thead th,
   .vocab-table td {
-    padding: 0.5rem 0.6rem;
-    font-size: 0.88rem;
+    padding: 0;
+    font-size: 0.84rem;
+    line-height: 1.3;
+  }
+
+  .vocab-word {
+    font-size: 0.92rem;
+    overflow-wrap: anywhere;
+  }
+
+  .vocab-meaning {
+    overflow-wrap: anywhere;
   }
 
   .vocab-mnemonic {
+    grid-column: 1 / -1;
     font-size: 0.78rem;
-    min-width: 110px;
-    max-width: 160px;
-    word-break: break-word;
+    min-width: 0;
+    max-width: none;
+    overflow-wrap: anywhere;
+  }
+
+  .mnemonic-text,
+  .explanation-text {
+    font-size: 0.76rem;
+    line-height: 1.3;
   }
 
   .self-assessment {
-    padding: 1rem;
+    padding: 0.85rem;
+    max-width: 100%;
+  }
+
+  .assessment-title {
+    font-size: 1.05rem;
+  }
+
+  .assessment-subtitle {
+    margin-bottom: 0.75rem;
+    line-height: 1.35;
   }
 
   .assessment-options {
     flex-direction: column;
+    gap: 0.45rem;
   }
 
   .assessment-btn {
-    padding: 0.75rem 1rem;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .assessment-emoji {
+    font-size: 1.25rem;
   }
 
   .resume-toast {
