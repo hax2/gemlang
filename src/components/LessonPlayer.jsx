@@ -606,7 +606,67 @@ const LessonPlayer = ({
   const showSelfAssessment = isFinished && !hasAssessed;
   const hasNextModule = moduleIndex < modules.length - 1;
   const vocabulary = module.vocabulary || {};
-  const vocabTable = isFinished ? buildVocabTable(module.sentences, vocabulary) : [];
+  const vocabTable = useMemo(() => {
+    if (!isFinished) return [];
+    if (module.specialPractice === 'ser-estar-rules') {
+      const serEstarSentences = [];
+      if (Array.isArray(module.rules)) {
+        module.rules.forEach(rule => {
+          if (Array.isArray(rule.examples)) {
+            rule.examples.forEach(ex => {
+              const fullSpan = `${ex.prompt || ''} ${ex.correct || ''} ${ex.continuation || ''}`.trim();
+              if (fullSpan) serEstarSentences.push(fullSpan);
+            });
+          }
+          if (Array.isArray(rule.translations)) {
+            rule.translations.forEach(tr => {
+              if (tr.spanish) serEstarSentences.push(tr.spanish);
+            });
+          }
+        });
+      }
+
+      const map = new Map();
+      serEstarSentences.forEach(sentenceText => {
+        sentenceText.split(/\s+/).forEach(rawWord => {
+          const word = cleanWord(rawWord);
+          if (!word) return;
+          const key = word.toLowerCase();
+          if (!map.has(key)) {
+            const meaning = SER_ESTAR_WORD_MEANINGS[key] || SER_ESTAR_WORD_MEANINGS[word] || null;
+            if (meaning) {
+              const vocabEntry = vocabulary[key] || {};
+              map.set(key, {
+                word,
+                meaning,
+                mnemonic: vocabEntry.mnemonic || null,
+                explanation: vocabEntry.explanation || null,
+              });
+            }
+          }
+        });
+      });
+
+      if (vocabulary) {
+        Object.entries(vocabulary).forEach(([key, entry]) => {
+          if (!map.has(key)) {
+            const word = entry.word || key;
+            const meaning = entry.meaning || SER_ESTAR_WORD_MEANINGS[key] || SER_ESTAR_WORD_MEANINGS[word] || (key === 'ser' ? 'to be (identity/origin/characteristic)' : key === 'estar' ? 'to be (location/state/action)' : '');
+            map.set(key, {
+              word,
+              meaning,
+              mnemonic: entry.mnemonic || null,
+              explanation: entry.explanation || null,
+            });
+          }
+        });
+      }
+
+      return Array.from(map.values());
+    }
+
+    return buildVocabTable(module.sentences, vocabulary);
+  }, [isFinished, module, vocabulary]);
 
   const totalSentences = isSerEstarSpecial ? mergedItems.length : module.sentences.length;
   const progressItemsSoFar = isFinished
