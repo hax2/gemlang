@@ -409,14 +409,26 @@ const mergeInsertedPracticeItems = (baseItems, insertedItems) => {
   return merged;
 };
 
+let speakTimeoutId = null;
+
 /** Speak a Spanish word/phrase */
 const speakSpanish = (text, rate = 0.85) => {
   if (!text) return;
+
+  if (speakTimeoutId) {
+    clearTimeout(speakTimeoutId);
+    speakTimeoutId = null;
+  }
+
   window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'es-ES';
-  u.rate = rate;
-  window.speechSynthesis.speak(u);
+
+  speakTimeoutId = setTimeout(() => {
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'es-ES';
+    u.rate = rate;
+    window.speechSynthesis.speak(u);
+    speakTimeoutId = null;
+  }, 150);
 };
 
 const KbdHint = ({ show, children }) => {
@@ -543,6 +555,17 @@ const LessonPlayer = ({
       return () => clearTimeout(timer);
     }
   }, [showResumeToast]);
+
+  // Clean up pending speech synthesis timeouts on unmount
+  useEffect(() => {
+    return () => {
+      if (speakTimeoutId) {
+        clearTimeout(speakTimeoutId);
+        speakTimeoutId = null;
+      }
+      window.speechSynthesis.cancel();
+    };
+  }, []);
 
   const resetRevealState = useCallback(() => {
     setSpanishRevealed(!!settings?.autoRevealSpanish);
