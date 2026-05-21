@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "validate:data": "node validate-data.cjs",
+    "audio:generate": "python3 scripts/generate-audio-kokoro.py",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "npm run deploy:prod",

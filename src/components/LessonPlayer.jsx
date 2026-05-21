@@ -410,18 +410,17 @@ const mergeInsertedPracticeItems = (baseItems, insertedItems) => {
 };
 
 let speakTimeoutId = null;
+let currentAudio = null;
 
-/** Speak a Spanish word/phrase */
-const speakSpanish = (text, rate = 0.85) => {
-  if (!text) return;
+const resolvePublicAsset = (assetPath) => {
+  if (!assetPath) return null;
+  if (/^https?:\/\//.test(assetPath)) return assetPath;
+  const base = import.meta.env.BASE_URL || '/';
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+  return `${normalizedBase}${assetPath.replace(/^\/+/, '')}`;
+};
 
-  if (speakTimeoutId) {
-    clearTimeout(speakTimeoutId);
-    speakTimeoutId = null;
-  }
-
-  window.speechSynthesis.cancel();
-
+const speakWithBrowserTts = (text, rate) => {
   speakTimeoutId = setTimeout(() => {
     const u = new SpeechSynthesisUtterance(text);
     u.lang = 'es-ES';
@@ -429,6 +428,52 @@ const speakSpanish = (text, rate = 0.85) => {
     window.speechSynthesis.speak(u);
     speakTimeoutId = null;
   }, 150);
+};
+
+/** Speak a Spanish word/phrase */
+const pickAudioSrc = (audioEntry) => {
+  if (Array.isArray(audioEntry)) {
+    const choices = audioEntry.filter(Boolean);
+    if (!choices.length) return null;
+    return choices[Math.floor(Math.random() * choices.length)];
+  }
+  return audioEntry || null;
+};
+
+const speakSpanish = (text, rate = 0.85, audioSrc = null) => {
+  if (!text) return;
+
+  if (speakTimeoutId) {
+    clearTimeout(speakTimeoutId);
+    speakTimeoutId = null;
+  }
+
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
+  }
+
+  window.speechSynthesis.cancel();
+
+  if (!audioSrc) {
+    speakWithBrowserTts(text, rate);
+    return;
+  }
+
+  const audio = new Audio(audioSrc);
+  currentAudio = audio;
+  audio.playbackRate = Math.min(Math.max(rate / 0.85, 0.75), 1.35);
+  audio.onended = () => {
+    if (currentAudio === audio) currentAudio = null;
+  };
+  audio.onerror = () => {
+    if (currentAudio === audio) currentAudio = null;
+    speakWithBrowserTts(text, rate);
+  };
+  audio.play().catch(() => {
+    if (currentAudio === audio) currentAudio = null;
+    speakWithBrowserTts(text, rate);
+  });
 };
 
 const KbdHint = ({ show, children }) => {
@@ -526,6 +571,7 @@ const LessonPlayer = ({
   const [insertedPracticeItems, setInsertedPracticeItems] = useState([]);
   const [choiceSelection, setChoiceSelection] = useState(null);
   const [answeredChoiceIds, setAnsweredChoiceIds] = useState(() => new Set());
+  const [audioManifest, setAudioManifest] = useState({});
   const [isDesktop, setIsDesktop] = useState(false);
   const isStoryModule = !!module.type && module.type === 'story';
   const isReviewModule = !!module.type && module.type === 'review';
@@ -583,6 +629,24 @@ const LessonPlayer = ({
     checkDesktop();
     window.addEventListener('resize', checkDesktop);
     return () => window.removeEventListener('resize', checkDesktop);
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(resolvePublicAsset('audio/manifest.json'), { cache: 'force-cache' })
+      .then((response) => (response.ok ? response.json() : {}))
+      .then((manifest) => {
+        if (!cancelled && manifest && typeof manifest === 'object') {
+          setAudioManifest(manifest);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setAudioManifest({});
+      });
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const mergedItems = useMemo(() => {
@@ -679,34 +743,41 @@ const LessonPlayer = ({
 
   const speechRate = settings?.speechRate ?? 0.85;
   const autoPlay = settings?.autoPlayAudio ?? true;
+  const getAudioSrc = useCallback((text) => {
+    const src = pickAudioSrc(audioManifest[text]);
+    return src ? resolvePublicAsset(src) : null;
+  }, [audioManifest]);
+  const playSpanish = useCallback((text) => {
+    speakSpanish(text, speechRate, getAudioSrc(text));
+  }, [getAudioSrc, speechRate]);
 
   useEffect(() => {
     if (autoPlay && !showGrammarIntro && isSerEstarChoice && currentItem?.data?.prompt && !choiceSelection) {
-      speakSpanish(currentItem.data.prompt, speechRate);
+      playSpanish(currentItem.data.prompt);
       return;
     }
     if (autoPlay && !showGrammarIntro && !isChallenge && !isSerEstarTranslation && sentence?.spanish) {
-      speakSpanish(sentence.spanish, speechRate);
+      playSpanish(sentence.spanish);
     }
-  }, [autoPlay, choiceSelection, currentItem, isChallenge, isSerEstarChoice, isSerEstarTranslation, sentence, showGrammarIntro, speechRate]);
+  }, [autoPlay, choiceSelection, currentItem, isChallenge, isSerEstarChoice, isSerEstarTranslation, playSpanish, sentence, showGrammarIntro]);
 
   const playAudio = useCallback(() => {
     if (isSerEstarChoice) {
       const example = currentItem?.data;
       if (!example) return;
-      speakSpanish(choiceSelection ? `${example.correct} ${example.continuation}` : example.prompt, speechRate);
+      playSpanish(choiceSelection ? `${example.correct} ${example.continuation}` : example.prompt);
       return;
     }
     if (isSerEstarTranslation) {
-      if (currentItem?.data?.spanish) speakSpanish(currentItem.data.spanish, speechRate);
+      if (currentItem?.data?.spanish) playSpanish(currentItem.data.spanish);
       return;
     }
     if (isChallenge) {
-      if (currentItem?.data?.spanish) speakSpanish(currentItem.data.spanish, speechRate);
+      if (currentItem?.data?.spanish) playSpanish(currentItem.data.spanish);
       return;
     }
-    if (sentence?.spanish) speakSpanish(sentence.spanish, speechRate);
-  }, [choiceSelection, currentItem, isChallenge, isSerEstarChoice, isSerEstarTranslation, sentence, speechRate]);
+    if (sentence?.spanish) playSpanish(sentence.spanish);
+  }, [choiceSelection, currentItem, isChallenge, isSerEstarChoice, isSerEstarTranslation, playSpanish, sentence]);
 
   const handleNext = useCallback((swipeDir) => {
     resetRevealState();
@@ -765,7 +836,7 @@ const LessonPlayer = ({
     if (!isSerEstarChoice || !currentItem?.data) return;
     const isCorrect = option === currentItem.data.correct;
     setChoiceSelection({ option, isCorrect });
-    speakSpanish(`${currentItem.data.correct} ${currentItem.data.continuation}`, speechRate);
+    playSpanish(`${currentItem.data.correct} ${currentItem.data.continuation}`);
 
     setAnsweredChoiceIds((prev) => {
       const next = new Set(prev);
@@ -786,7 +857,7 @@ const LessonPlayer = ({
         },
       ]);
     }
-  }, [answeredChoiceIds, currentItem, isSerEstarChoice, mergedItems.length, speechRate]);
+  }, [answeredChoiceIds, currentItem, isSerEstarChoice, mergedItems.length, playSpanish]);
 
   const handleDismissIntro = useCallback(() => {
     setShowGrammarIntro(false);
@@ -1162,7 +1233,7 @@ const LessonPlayer = ({
               if (meaning) {
                 e.stopPropagation();
                 setActiveWordIndex(isActive ? null : key);
-                speakSpanish(cleanWord(word), speechRate);
+                playSpanish(cleanWord(word));
               }
             }}
           >
@@ -1287,7 +1358,7 @@ const LessonPlayer = ({
                     <tr key={word}>
                       <td
                         className="vocab-word"
-                        onClick={() => speakSpanish(word, speechRate)}
+                        onClick={() => playSpanish(word)}
                         title={`Play "${word}"`}
                       >
                         {word}
@@ -1437,7 +1508,7 @@ const LessonPlayer = ({
                 className="btn-primary btn-reveal-answer pulse-primary"
                 onClick={() => {
                   setChallengeAnswerRevealed(true);
-                  speakSpanish(translation.spanish, speechRate);
+                  playSpanish(translation.spanish);
                 }}
               >
                 Reveal Answer <KbdHint show={isDesktop}>Space</KbdHint>
@@ -1450,7 +1521,7 @@ const LessonPlayer = ({
                 <p className="ser-estar-translation-reason">{translation.reason}</p>
                 <button
                   className="btn-play-answer"
-                  onClick={() => speakSpanish(translation.spanish, speechRate)}
+                  onClick={() => playSpanish(translation.spanish)}
                   title="Listen to the answer"
                 >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -1514,7 +1585,7 @@ const LessonPlayer = ({
                 className="btn-primary btn-reveal-answer pulse-primary"
                 onClick={() => {
                   setChallengeAnswerRevealed(true);
-                  speakSpanish(challengeSentence.spanish, speechRate);
+                  playSpanish(challengeSentence.spanish);
                 }}
               >
                 Reveal Answer <KbdHint show={isDesktop}>Space</KbdHint>
@@ -1524,7 +1595,7 @@ const LessonPlayer = ({
                 <p className="challenge-spanish">{challengeSentence.spanish}</p>
                 <button
                   className="btn-play-answer"
-                  onClick={() => speakSpanish(challengeSentence.spanish, speechRate)}
+                  onClick={() => playSpanish(challengeSentence.spanish)}
                   title="Listen to the answer"
                 >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -1614,7 +1685,7 @@ const LessonPlayer = ({
                         if (meaning) {
                           e.stopPropagation();
                           setActiveWordIndex(isActive ? null : idx);
-                          speakSpanish(cleanWord(word), speechRate);
+                          playSpanish(cleanWord(word));
                         }
                       }}
                     >
