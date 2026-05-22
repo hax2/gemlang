@@ -591,6 +591,7 @@ const LessonPlayer = ({
   const [swipeAnimating, setSwipeAnimating] = useState(false); // 'left' | 'right' | 'down' | false
   const [slideInDir, setSlideInDir] = useState(null); // 'from-left' | 'from-right' | 'from-below' | null
   const swipeStartRef = useRef({ x: 0, y: 0, time: 0, swiping: false, swipeDir: null, scrollLocked: false });
+  const suppressWordClickUntilRef = useRef(0);
   const SWIPE_THRESHOLD = 60; // px to trigger navigation
   const SWIPE_DOWN_THRESHOLD = 80; // px to trigger mark-for-later
   const SWIPE_VELOCITY_THRESHOLD = 0.3; // px/ms for fast flick
@@ -778,6 +779,8 @@ const LessonPlayer = ({
     const clean = cleanWord(word);
     speakSpanish(clean, speechRate, getWordAudioSrc(clean));
   }, [getWordAudioSrc, speechRate]);
+
+  const shouldSuppressWordClick = useCallback(() => Date.now() < suppressWordClickUntilRef.current, []);
 
   useEffect(() => {
     if (autoPlay && !showGrammarIntro && isSerEstarChoice && currentItem?.data?.prompt && !choiceSelection) {
@@ -977,11 +980,13 @@ const LessonPlayer = ({
       return;
     }
 
+    suppressWordClickUntilRef.current = Date.now() + 500;
     const elapsed = Date.now() - s.time;
 
     if (s.swipeDir === 'down') {
       // Swipe down → mark for later
       if (swipeOffsetY > SWIPE_DOWN_THRESHOLD && sentence) {
+        suppressWordClickUntilRef.current = Date.now() + 500;
         handleMarkForLater();
         setSwipeAnimating('down');
         setTimeout(() => {
@@ -1004,10 +1009,12 @@ const LessonPlayer = ({
 
     if (swipeOffset < -SWIPE_THRESHOLD || (swipeOffset < -20 && isFlick)) {
       // Swipe left → next
+      suppressWordClickUntilRef.current = Date.now() + 500;
       handleNext('swipe');
     } else if (swipeOffset > SWIPE_THRESHOLD || (swipeOffset > 20 && isFlick)) {
       // Swipe right → prev
       if (currentIndex > 0) {
+        suppressWordClickUntilRef.current = Date.now() + 500;
         handlePrev('swipe');
       } else {
         setSwipeOffset(0);
@@ -1258,6 +1265,10 @@ const LessonPlayer = ({
           <span
             className={`spanish-word ${extraClassName} ${meaning ? 'has-meaning' : ''} ${isActive ? 'active' : ''}`}
             onClick={(e) => {
+              if (shouldSuppressWordClick()) {
+                e.stopPropagation();
+                return;
+              }
               if (meaning) {
                 e.stopPropagation();
                 setActiveWordIndex(isActive ? null : key);
@@ -1710,6 +1721,10 @@ const LessonPlayer = ({
                     <span
                       className={`spanish-word ${meaning ? 'has-meaning' : ''} ${isActive ? 'active' : ''}`}
                       onClick={(e) => {
+                        if (shouldSuppressWordClick()) {
+                          e.stopPropagation();
+                          return;
+                        }
                         if (meaning) {
                           e.stopPropagation();
                           setActiveWordIndex(isActive ? null : idx);
