@@ -420,6 +420,20 @@ const resolvePublicAsset = (assetPath) => {
   return `${normalizedBase}${assetPath.replace(/^\/+/, '')}`;
 };
 
+const stopSpanishAudio = () => {
+  if (speakTimeoutId) {
+    clearTimeout(speakTimeoutId);
+    speakTimeoutId = null;
+  }
+
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
+  }
+
+  window.speechSynthesis.cancel();
+};
+
 const speakWithBrowserTts = (text, rate) => {
   speakTimeoutId = setTimeout(() => {
     const u = new SpeechSynthesisUtterance(text);
@@ -448,17 +462,7 @@ const shouldFallbackAfterAudioPlayError = (error) => {
 const speakSpanish = (text, rate = 0.85, audioSrc = null) => {
   if (!text) return;
 
-  if (speakTimeoutId) {
-    clearTimeout(speakTimeoutId);
-    speakTimeoutId = null;
-  }
-
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio = null;
-  }
-
-  window.speechSynthesis.cancel();
+  stopSpanishAudio();
 
   if (!audioSrc) {
     speakWithBrowserTts(text, rate);
@@ -619,11 +623,7 @@ const LessonPlayer = ({
   // Clean up pending speech synthesis timeouts on unmount
   useEffect(() => {
     return () => {
-      if (speakTimeoutId) {
-        clearTimeout(speakTimeoutId);
-        speakTimeoutId = null;
-      }
-      window.speechSynthesis.cancel();
+      stopSpanishAudio();
     };
   }, []);
 
@@ -799,7 +799,7 @@ const LessonPlayer = ({
   const shouldSuppressWordClick = useCallback(() => Date.now() < suppressWordClickUntilRef.current, []);
 
   useEffect(() => {
-    if (!audioManifestReady) return;
+    if (!audioManifestReady || swipeAnimating) return;
     if (autoPlay && !showGrammarIntro && isSerEstarChoice && currentItem?.data?.prompt && !choiceSelection) {
       playSpanish(currentItem.data.prompt);
       return;
@@ -807,7 +807,7 @@ const LessonPlayer = ({
     if (autoPlay && !showGrammarIntro && !isChallenge && !isSerEstarTranslation && sentence?.spanish) {
       playSpanish(sentence.spanish);
     }
-  }, [audioManifestReady, autoPlay, choiceSelection, currentItem, isChallenge, isSerEstarChoice, isSerEstarTranslation, playSpanish, sentence, showGrammarIntro]);
+  }, [audioManifestReady, autoPlay, choiceSelection, currentItem, isChallenge, isSerEstarChoice, isSerEstarTranslation, playSpanish, sentence, showGrammarIntro, swipeAnimating]);
 
   const playAudio = useCallback(() => {
     if (isSerEstarChoice) {
@@ -828,6 +828,7 @@ const LessonPlayer = ({
   }, [choiceSelection, currentItem, isChallenge, isSerEstarChoice, isSerEstarTranslation, playSpanish, sentence]);
 
   const handleNext = useCallback((swipeDir) => {
+    stopSpanishAudio();
     resetRevealState();
     const newIndex = currentIndex + 1;
     if (swipeDir) {
@@ -857,6 +858,7 @@ const LessonPlayer = ({
 
   const handlePrev = useCallback((swipeDir) => {
     if (currentIndex === 0) return;
+    stopSpanishAudio();
     resetRevealState();
     if (swipeDir) {
       setSwipeAnimating('right');
