@@ -8,7 +8,11 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+.env
+.google-tts-token.json
+client_secret*.json
 .venv*
+audio-archive/
 dist
 dist-ssr
 *.local

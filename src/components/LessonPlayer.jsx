@@ -572,6 +572,7 @@ const LessonPlayer = ({
   const [choiceSelection, setChoiceSelection] = useState(null);
   const [answeredChoiceIds, setAnsweredChoiceIds] = useState(() => new Set());
   const [audioManifest, setAudioManifest] = useState({});
+  const [wordAudioManifest, setWordAudioManifest] = useState({});
   const [isDesktop, setIsDesktop] = useState(false);
   const isStoryModule = !!module.type && module.type === 'story';
   const isReviewModule = !!module.type && module.type === 'review';
@@ -642,6 +643,24 @@ const LessonPlayer = ({
       })
       .catch(() => {
         if (!cancelled) setAudioManifest({});
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(resolvePublicAsset('word-audio/manifest.json'), { cache: 'force-cache' })
+      .then((response) => (response.ok ? response.json() : {}))
+      .then((manifest) => {
+        if (!cancelled && manifest && typeof manifest === 'object') {
+          setWordAudioManifest(manifest);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setWordAudioManifest({});
       });
 
     return () => {
@@ -747,9 +766,18 @@ const LessonPlayer = ({
     const src = pickAudioSrc(audioManifest[text]);
     return src ? resolvePublicAsset(src) : null;
   }, [audioManifest]);
+  const getWordAudioSrc = useCallback((word) => {
+    const clean = cleanWord(word);
+    const src = pickAudioSrc(wordAudioManifest[clean] || wordAudioManifest[clean.toLowerCase()]);
+    return src ? resolvePublicAsset(src) : null;
+  }, [wordAudioManifest]);
   const playSpanish = useCallback((text) => {
     speakSpanish(text, speechRate, getAudioSrc(text));
   }, [getAudioSrc, speechRate]);
+  const playSpanishWord = useCallback((word) => {
+    const clean = cleanWord(word);
+    speakSpanish(clean, speechRate, getWordAudioSrc(clean));
+  }, [getWordAudioSrc, speechRate]);
 
   useEffect(() => {
     if (autoPlay && !showGrammarIntro && isSerEstarChoice && currentItem?.data?.prompt && !choiceSelection) {
@@ -1233,7 +1261,7 @@ const LessonPlayer = ({
               if (meaning) {
                 e.stopPropagation();
                 setActiveWordIndex(isActive ? null : key);
-                playSpanish(cleanWord(word));
+                playSpanishWord(word);
               }
             }}
           >
@@ -1358,7 +1386,7 @@ const LessonPlayer = ({
                     <tr key={word}>
                       <td
                         className="vocab-word"
-                        onClick={() => playSpanish(word)}
+                        onClick={() => playSpanishWord(word)}
                         title={`Play "${word}"`}
                       >
                         {word}
@@ -1685,7 +1713,7 @@ const LessonPlayer = ({
                         if (meaning) {
                           e.stopPropagation();
                           setActiveWordIndex(isActive ? null : idx);
-                          playSpanish(cleanWord(word));
+                          playSpanishWord(word);
                         }
                       }}
                     >
