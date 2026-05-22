@@ -440,6 +440,11 @@ const pickAudioSrc = (audioEntry) => {
   return audioEntry || null;
 };
 
+const shouldFallbackAfterAudioPlayError = (error) => {
+  const name = error?.name || '';
+  return name !== 'NotAllowedError' && name !== 'AbortError';
+};
+
 const speakSpanish = (text, rate = 0.85, audioSrc = null) => {
   if (!text) return;
 
@@ -466,13 +471,19 @@ const speakSpanish = (text, rate = 0.85, audioSrc = null) => {
   audio.onended = () => {
     if (currentAudio === audio) currentAudio = null;
   };
-  audio.onerror = () => {
-    if (currentAudio === audio) currentAudio = null;
+  let usedFallback = false;
+  const fallbackOnce = () => {
+    if (usedFallback) return;
+    usedFallback = true;
     speakWithBrowserTts(text, rate);
   };
-  audio.play().catch(() => {
+  audio.onerror = () => {
     if (currentAudio === audio) currentAudio = null;
-    speakWithBrowserTts(text, rate);
+    fallbackOnce();
+  };
+  audio.play().catch((error) => {
+    if (currentAudio === audio) currentAudio = null;
+    if (shouldFallbackAfterAudioPlayError(error)) fallbackOnce();
   });
 };
 
@@ -572,6 +583,7 @@ const LessonPlayer = ({
   const [choiceSelection, setChoiceSelection] = useState(null);
   const [answeredChoiceIds, setAnsweredChoiceIds] = useState(() => new Set());
   const [audioManifest, setAudioManifest] = useState({});
+  const [audioManifestReady, setAudioManifestReady] = useState(false);
   const [wordAudioManifest, setWordAudioManifest] = useState({});
   const [isDesktop, setIsDesktop] = useState(false);
   const isStoryModule = !!module.type && module.type === 'story';
@@ -640,10 +652,14 @@ const LessonPlayer = ({
       .then((manifest) => {
         if (!cancelled && manifest && typeof manifest === 'object') {
           setAudioManifest(manifest);
+          setAudioManifestReady(true);
         }
       })
       .catch(() => {
-        if (!cancelled) setAudioManifest({});
+        if (!cancelled) {
+          setAudioManifest({});
+          setAudioManifestReady(true);
+        }
       });
 
     return () => {
@@ -783,6 +799,7 @@ const LessonPlayer = ({
   const shouldSuppressWordClick = useCallback(() => Date.now() < suppressWordClickUntilRef.current, []);
 
   useEffect(() => {
+    if (!audioManifestReady) return;
     if (autoPlay && !showGrammarIntro && isSerEstarChoice && currentItem?.data?.prompt && !choiceSelection) {
       playSpanish(currentItem.data.prompt);
       return;
@@ -790,7 +807,7 @@ const LessonPlayer = ({
     if (autoPlay && !showGrammarIntro && !isChallenge && !isSerEstarTranslation && sentence?.spanish) {
       playSpanish(sentence.spanish);
     }
-  }, [autoPlay, choiceSelection, currentItem, isChallenge, isSerEstarChoice, isSerEstarTranslation, playSpanish, sentence, showGrammarIntro]);
+  }, [audioManifestReady, autoPlay, choiceSelection, currentItem, isChallenge, isSerEstarChoice, isSerEstarTranslation, playSpanish, sentence, showGrammarIntro]);
 
   const playAudio = useCallback(() => {
     if (isSerEstarChoice) {
@@ -944,10 +961,12 @@ const LessonPlayer = ({
       if (Math.abs(dx) > Math.abs(dy)) {
         // Horizontal swipe
         s.swiping = true;
+        suppressWordClickUntilRef.current = Date.now() + 1200;
         s.swipeDir = 'horizontal';
       } else if (dy > 0 && !isChallenge) {
         // Swipe down (only on sentence cards, not challenges)
         s.swiping = true;
+        suppressWordClickUntilRef.current = Date.now() + 1200;
         s.swipeDir = 'down';
       } else {
         // Vertical scroll up – bail out
@@ -980,13 +999,13 @@ const LessonPlayer = ({
       return;
     }
 
-    suppressWordClickUntilRef.current = Date.now() + 500;
+    suppressWordClickUntilRef.current = Date.now() + 1200;
     const elapsed = Date.now() - s.time;
 
     if (s.swipeDir === 'down') {
       // Swipe down → mark for later
       if (swipeOffsetY > SWIPE_DOWN_THRESHOLD && sentence) {
-        suppressWordClickUntilRef.current = Date.now() + 500;
+        suppressWordClickUntilRef.current = Date.now() + 1200;
         handleMarkForLater();
         setSwipeAnimating('down');
         setTimeout(() => {
@@ -1009,12 +1028,12 @@ const LessonPlayer = ({
 
     if (swipeOffset < -SWIPE_THRESHOLD || (swipeOffset < -20 && isFlick)) {
       // Swipe left → next
-      suppressWordClickUntilRef.current = Date.now() + 500;
+      suppressWordClickUntilRef.current = Date.now() + 1200;
       handleNext('swipe');
     } else if (swipeOffset > SWIPE_THRESHOLD || (swipeOffset > 20 && isFlick)) {
       // Swipe right → prev
       if (currentIndex > 0) {
-        suppressWordClickUntilRef.current = Date.now() + 500;
+        suppressWordClickUntilRef.current = Date.now() + 1200;
         handlePrev('swipe');
       } else {
         setSwipeOffset(0);
@@ -1096,6 +1115,12 @@ const LessonPlayer = ({
     onTouchStart,
     onTouchMove,
     onTouchEnd,
+    onClickCapture: (e) => {
+      if (shouldSuppressWordClick()) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    },
     ref: swipeRef,
   } : {};
 
