@@ -471,21 +471,53 @@ const speakSpanish = (text, rate = 0.85, audioSrc = null) => {
 
   const audio = new Audio(audioSrc);
   currentAudio = audio;
-  audio.playbackRate = Math.min(Math.max(rate / 0.85, 0.75), 1.35);
+
+  const targetRate = Math.min(Math.max(rate / 0.85, 0.75), 1.35);
+
+  // Safely set the initial playback rate
+  try {
+    audio.defaultPlaybackRate = targetRate;
+    audio.playbackRate = targetRate;
+  } catch (err) {
+    console.warn('Failed to set initial playback rate:', err);
+  }
+
+  // Defer/reset setting playback rate to metadata load and play events
+  audio.onloadedmetadata = () => {
+    try {
+      audio.playbackRate = targetRate;
+    } catch (err) {
+      console.warn('Failed to set playback rate on loadedmetadata:', err);
+    }
+  };
+
+  audio.onplay = () => {
+    try {
+      audio.playbackRate = targetRate;
+    } catch (err) {
+      console.warn('Failed to set playback rate on play:', err);
+    }
+  };
+
   audio.onended = () => {
     if (currentAudio === audio) currentAudio = null;
   };
+
   let usedFallback = false;
   const fallbackOnce = () => {
     if (usedFallback) return;
     usedFallback = true;
     speakWithBrowserTts(text, rate);
   };
-  audio.onerror = () => {
+
+  audio.onerror = (e) => {
+    console.error('Audio element error, falling back to TTS:', e);
     if (currentAudio === audio) currentAudio = null;
     fallbackOnce();
   };
+
   audio.play().catch((error) => {
+    console.error('Audio play failed:', error);
     if (currentAudio === audio) currentAudio = null;
     if (shouldFallbackAfterAudioPlayError(error)) fallbackOnce();
   });
@@ -647,7 +679,7 @@ const LessonPlayer = ({
 
   useEffect(() => {
     let cancelled = false;
-    fetch(resolvePublicAsset('audio/manifest.json'), { cache: 'force-cache' })
+    fetch(resolvePublicAsset('audio/manifest.json'))
       .then((response) => (response.ok ? response.json() : {}))
       .then((manifest) => {
         if (!cancelled && manifest && typeof manifest === 'object') {
@@ -669,7 +701,7 @@ const LessonPlayer = ({
 
   useEffect(() => {
     let cancelled = false;
-    fetch(resolvePublicAsset('word-audio/manifest.json'), { cache: 'force-cache' })
+    fetch(resolvePublicAsset('word-audio/manifest.json'))
       .then((response) => (response.ok ? response.json() : {}))
       .then((manifest) => {
         if (!cancelled && manifest && typeof manifest === 'object') {
