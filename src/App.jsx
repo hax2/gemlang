@@ -84,6 +84,18 @@ function App() {
       setActiveModule(loadedModule.default);
     } catch (error) {
       if (loadRequestRef.current !== requestId) return;
+
+      const errorMsg = error instanceof Error ? error.message : '';
+      if (
+        errorMsg.includes('Failed to fetch dynamically imported module') ||
+        errorMsg.includes('Importing a module script failed') ||
+        errorMsg.includes('error loading dynamically imported module')
+      ) {
+        console.warn('Dynamic import chunk load failure. Reloading to get latest assets...', error);
+        window.location.reload();
+        return;
+      }
+
       setModuleLoadError(error instanceof Error ? error.message : 'Unable to load this module.');
     } finally {
       if (loadRequestRef.current === requestId) {
