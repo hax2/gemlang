@@ -411,6 +411,8 @@ const mergeInsertedPracticeItems = (baseItems, insertedItems) => {
 
 let speakTimeoutId = null;
 let currentAudio = null;
+const audioCache = new Map();
+const MAX_AUDIO_CACHE_SIZE = 40;
 
 const resolvePublicAsset = (assetPath) => {
   if (!assetPath) return null;
@@ -441,14 +443,55 @@ const speakWithBrowserTts = (text, rate) => {
     u.rate = rate;
     window.speechSynthesis.speak(u);
     speakTimeoutId = null;
-  }, 150);
+  }, 0);
+};
+
+const pruneAudioCache = () => {
+  while (audioCache.size > MAX_AUDIO_CACHE_SIZE) {
+    const oldestSrc = audioCache.keys().next().value;
+    const oldestAudio = audioCache.get(oldestSrc);
+    if (oldestAudio === currentAudio) {
+      audioCache.delete(oldestSrc);
+      audioCache.set(oldestSrc, oldestAudio);
+      continue;
+    }
+    audioCache.delete(oldestSrc);
+  }
+};
+
+const preloadAudio = (audioSrc) => {
+  if (!audioSrc) return null;
+
+  const cachedAudio = audioCache.get(audioSrc);
+  if (cachedAudio) {
+    audioCache.delete(audioSrc);
+    audioCache.set(audioSrc, cachedAudio);
+    return cachedAudio;
+  }
+
+  const audio = new Audio(audioSrc);
+  audio.preload = 'auto';
+  audioCache.set(audioSrc, audio);
+  pruneAudioCache();
+
+  try {
+    audio.load();
+  } catch (err) {
+    console.warn('Failed to preload audio:', err);
+  }
+
+  return audio;
 };
 
 /** Speak a Spanish word/phrase */
+const PREFERRED_AUDIO_VOICE = 'es-ES-Chirp3-HD-Umbriel';
+
 const pickAudioSrc = (audioEntry) => {
   if (Array.isArray(audioEntry)) {
     const choices = audioEntry.filter(Boolean);
     if (!choices.length) return null;
+    const preferredChoice = choices.find((choice) => choice.includes(PREFERRED_AUDIO_VOICE));
+    if (preferredChoice) return preferredChoice;
     return choices[Math.floor(Math.random() * choices.length)];
   }
   return audioEntry || null;
@@ -469,8 +512,14 @@ const speakSpanish = (text, rate = 0.85, audioSrc = null) => {
     return;
   }
 
-  const audio = new Audio(audioSrc);
+  const audio = preloadAudio(audioSrc);
   currentAudio = audio;
+
+  try {
+    audio.currentTime = 0;
+  } catch (err) {
+    console.warn('Failed to reset audio position:', err);
+  }
 
   const targetRate = Math.min(Math.max(rate / 0.85, 0.75), 1.35);
 
@@ -640,6 +689,7 @@ const LessonPlayer = ({
   const [slideInDir, setSlideInDir] = useState(null); // 'from-left' | 'from-right' | 'from-below' | null
   const swipeStartRef = useRef({ x: 0, y: 0, time: 0, swiping: false, swipeDir: null, scrollLocked: false });
   const suppressWordClickUntilRef = useRef(0);
+  const selectedAudioSrcRef = useRef(new Map());
   const SWIPE_THRESHOLD = 60; // px to trigger navigation
   const SWIPE_DOWN_THRESHOLD = 80; // px to trigger mark-for-later
   const SWIPE_VELOCITY_THRESHOLD = 0.3; // px/ms for fast flick
@@ -737,7 +787,7 @@ const LessonPlayer = ({
   const isFinished = currentIndex >= mergedItems.length;
   const showSelfAssessment = isFinished && !hasAssessed;
   const hasNextModule = moduleIndex < modules.length - 1;
-  const vocabulary = module.vocabulary || {};
+  const vocabulary = useMemo(() => module.vocabulary || {}, [module.vocabulary]);
   const vocabTable = useMemo(() => {
     if (!isFinished) return [];
     if (module.specialPractice === 'ser-estar-rules') {
@@ -812,14 +862,47 @@ const LessonPlayer = ({
   const speechRate = settings?.speechRate ?? 0.85;
   const autoPlay = settings?.autoPlayAudio ?? true;
   const getAudioSrc = useCallback((text) => {
-    const src = pickAudioSrc(audioManifest[text]);
-    return src ? resolvePublicAsset(src) : null;
+    if (!text) return null;
+    if (selectedAudioSrcRef.current.has(text)) {
+      return selectedAudioSrcRef.current.get(text);
+    }
+    const entry = audioManifest[text];
+    if (!entry) return null;
+    const src = pickAudioSrc(entry);
+    const resolvedSrc = src ? resolvePublicAsset(src) : null;
+    selectedAudioSrcRef.current.set(text, resolvedSrc);
+    return resolvedSrc;
   }, [audioManifest]);
   const getWordAudioSrc = useCallback((word) => {
     const clean = cleanWord(word);
-    const src = pickAudioSrc(wordAudioManifest[clean] || wordAudioManifest[clean.toLowerCase()]);
-    return src ? resolvePublicAsset(src) : null;
+    if (!clean) return null;
+    const cacheKey = `word:${clean.toLowerCase()}`;
+    if (selectedAudioSrcRef.current.has(cacheKey)) {
+      return selectedAudioSrcRef.current.get(cacheKey);
+    }
+    const entry = wordAudioManifest[clean] || wordAudioManifest[clean.toLowerCase()];
+    if (!entry) return null;
+    const src = pickAudioSrc(entry);
+    const resolvedSrc = src ? resolvePublicAsset(src) : null;
+    selectedAudioSrcRef.current.set(cacheKey, resolvedSrc);
+    return resolvedSrc;
   }, [wordAudioManifest]);
+  const getSpanishTextForItem = useCallback((item, choice = null) => {
+    if (!item) return null;
+    if (item.type === 'ser-estar-choice') {
+      const example = item.data;
+      if (!example) return null;
+      return choice ? `${example.correct} ${example.continuation}` : example.prompt;
+    }
+    if (item.type === 'ser-estar-translation' || item.type === 'challenge') {
+      return item.data?.spanish || null;
+    }
+    return item.data?.spanish || null;
+  }, []);
+  const preloadSpanishText = useCallback((text) => {
+    const src = getAudioSrc(text);
+    if (src) preloadAudio(src);
+  }, [getAudioSrc]);
   const playSpanish = useCallback((text) => {
     speakSpanish(text, speechRate, getAudioSrc(text));
   }, [getAudioSrc, speechRate]);
@@ -829,6 +912,18 @@ const LessonPlayer = ({
   }, [getWordAudioSrc, speechRate]);
 
   const shouldSuppressWordClick = useCallback(() => Date.now() < suppressWordClickUntilRef.current, []);
+
+  useEffect(() => {
+    if (!audioManifestReady) return;
+
+    [
+      getSpanishTextForItem(currentItem, choiceSelection),
+      getSpanishTextForItem(mergedItems[currentIndex + 1]),
+      getSpanishTextForItem(mergedItems[currentIndex + 2]),
+    ].forEach((text) => {
+      if (text) preloadSpanishText(text);
+    });
+  }, [audioManifestReady, choiceSelection, currentIndex, currentItem, getSpanishTextForItem, mergedItems, preloadSpanishText]);
 
   useEffect(() => {
     if (!audioManifestReady || swipeAnimating) return;
