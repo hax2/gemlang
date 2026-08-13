@@ -1,4 +1,4 @@
-import React from 'react';
+import { useMemo, useState } from 'react';
 import './ModuleSelector.css';
 
 const STATUS_BADGES = {
@@ -16,7 +16,53 @@ const ModuleSelector = ({
   getModuleProgress,
   onBack,
 }) => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [levelFilter, setLevelFilter] = useState('all');
+  const [typeFilter, setTypeFilter] = useState('all');
+  const [statusFilter, setStatusFilter] = useState('all');
   const isPureTesting = practiceMode === 'testing';
+
+  const levels = useMemo(
+    () => [...new Set(modules.map((module) => module.level).filter(Boolean))],
+    [modules]
+  );
+
+  const normalizeSearchText = (value) =>
+    value
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLocaleLowerCase();
+
+  const visibleModules = useMemo(() => {
+    const normalizedQuery = normalizeSearchText(searchQuery.trim());
+
+    return modules.filter((module) => {
+      const status = getModuleStatus ? getModuleStatus(module.id) : 'not-started';
+      const type = module.type || 'lesson';
+      const searchableText = normalizeSearchText(
+        `${module.title} ${module.description} ${module.level}`
+      );
+
+      return (
+        (!normalizedQuery || searchableText.includes(normalizedQuery)) &&
+        (levelFilter === 'all' || module.level === levelFilter) &&
+        (typeFilter === 'all' || type === typeFilter) &&
+        (statusFilter === 'all' || status === statusFilter)
+      );
+    });
+  }, [getModuleStatus, levelFilter, modules, searchQuery, statusFilter, typeFilter]);
+
+  const hasActiveFilters = Boolean(searchQuery) ||
+    levelFilter !== 'all' ||
+    typeFilter !== 'all' ||
+    statusFilter !== 'all';
+
+  const clearFilters = () => {
+    setSearchQuery('');
+    setLevelFilter('all');
+    setTypeFilter('all');
+    setStatusFilter('all');
+  };
 
   const getButtonLabel = (status) => {
     if (isPureTesting) return 'Start Testing';
@@ -63,8 +109,65 @@ const ModuleSelector = ({
         </div>
       </div>
 
+      <section className="module-discovery glass-panel" aria-label="Find a module">
+        <div className="module-search-wrapper">
+          <svg className="module-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <input
+            className="module-search"
+            type="search"
+            value={searchQuery}
+            onChange={(event) => setSearchQuery(event.target.value)}
+            placeholder="Search topics, grammar, or chapters"
+            aria-label="Search modules"
+          />
+        </div>
+
+        <div className="module-filter-row">
+          <label className="module-filter">
+            <span>Level</span>
+            <select value={levelFilter} onChange={(event) => setLevelFilter(event.target.value)}>
+              <option value="all">All levels</option>
+              {levels.map((level) => <option value={level} key={level}>{level}</option>)}
+            </select>
+          </label>
+          <label className="module-filter">
+            <span>Type</span>
+            <select value={typeFilter} onChange={(event) => setTypeFilter(event.target.value)}>
+              <option value="all">All types</option>
+              <option value="lesson">Lessons</option>
+              <option value="story">Stories</option>
+              <option value="review">Reviews</option>
+            </select>
+          </label>
+          <label className="module-filter">
+            <span>Progress</span>
+            <select value={statusFilter} onChange={(event) => setStatusFilter(event.target.value)}>
+              <option value="all">Any progress</option>
+              <option value="not-started">Not started</option>
+              <option value="in-progress">In progress</option>
+              <option value="completed">Completed</option>
+              <option value="needs-refresh">Needs refresh</option>
+            </select>
+          </label>
+        </div>
+
+        <div className="module-results-summary" aria-live="polite">
+          <span>
+            Showing <strong>{visibleModules.length}</strong> of {modules.length} modules
+          </span>
+          {hasActiveFilters && (
+            <button type="button" className="module-clear-filters" onClick={clearFilters}>
+              Clear filters
+            </button>
+          )}
+        </div>
+      </section>
+
       <div className="module-grid">
-        {modules.map((mod, index) => {
+        {visibleModules.map((mod, index) => {
           const status = getModuleStatus ? getModuleStatus(mod.id) : 'not-started';
           const prog = getModuleProgress ? getModuleProgress(mod.id) : null;
           const badge = STATUS_BADGES[status];
@@ -129,6 +232,17 @@ const ModuleSelector = ({
           );
         })}
       </div>
+
+      {visibleModules.length === 0 && (
+        <div className="module-empty-state glass-panel">
+          <span className="module-empty-icon" aria-hidden="true">⌕</span>
+          <h2>No matching modules</h2>
+          <p>Try a broader search or clear a filter to see more lessons.</p>
+          <button type="button" className="btn-secondary" onClick={clearFilters}>
+            Clear filters
+          </button>
+        </div>
+      )}
     </div>
   );
 };

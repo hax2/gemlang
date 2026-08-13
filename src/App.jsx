@@ -158,9 +158,14 @@ function App() {
   return (
     <div className="app-container animate-fade-in">
       <header className="app-header">
-        <div className="app-logo" onClick={handleBackToDashboard} style={{ cursor: 'pointer' }}>
+        <button
+          type="button"
+          className="app-logo"
+          onClick={handleBackToDashboard}
+          aria-label="Go to dashboard"
+        >
           GemLang
-        </div>
+        </button>
         <div style={{ display: 'flex', gap: 'var(--spacing-sm)' }}>
           {(session || guestMode) && (
             <button
