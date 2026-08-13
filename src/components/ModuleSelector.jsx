@@ -1,5 +1,15 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import './ModuleSelector.css';
+
+const DISCOVERY_STORAGE_KEY = 'gemlang-module-discovery';
+
+const loadDiscoveryState = () => {
+  try {
+    return JSON.parse(sessionStorage.getItem(DISCOVERY_STORAGE_KEY) || '{}');
+  } catch {
+    return {};
+  }
+};
 
 const STATUS_BADGES = {
   'completed': { icon: '✓', label: 'Completed', className: 'status-completed' },
@@ -16,11 +26,44 @@ const ModuleSelector = ({
   getModuleProgress,
   onBack,
 }) => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [levelFilter, setLevelFilter] = useState('all');
-  const [typeFilter, setTypeFilter] = useState('all');
-  const [statusFilter, setStatusFilter] = useState('all');
+  const [initialDiscovery] = useState(loadDiscoveryState);
+  const [searchQuery, setSearchQuery] = useState(initialDiscovery.searchQuery || '');
+  const [levelFilter, setLevelFilter] = useState(initialDiscovery.levelFilter || 'all');
+  const [typeFilter, setTypeFilter] = useState(initialDiscovery.typeFilter || 'all');
+  const [statusFilter, setStatusFilter] = useState(initialDiscovery.statusFilter || 'all');
+  const searchInputRef = useRef(null);
   const isPureTesting = practiceMode === 'testing';
+
+  useEffect(() => {
+    try {
+      sessionStorage.setItem(DISCOVERY_STORAGE_KEY, JSON.stringify({
+        searchQuery,
+        levelFilter,
+        typeFilter,
+        statusFilter,
+      }));
+    } catch {
+      // Discovery still works when session storage is unavailable.
+    }
+  }, [levelFilter, searchQuery, statusFilter, typeFilter]);
+
+  useEffect(() => {
+    const focusSearch = (event) => {
+      const target = event.target;
+      const isTyping = target instanceof HTMLInputElement ||
+        target instanceof HTMLTextAreaElement ||
+        target instanceof HTMLSelectElement ||
+        target?.isContentEditable;
+
+      if (event.key === '/' && !isTyping && !event.metaKey && !event.ctrlKey && !event.altKey) {
+        event.preventDefault();
+        searchInputRef.current?.focus();
+      }
+    };
+
+    window.addEventListener('keydown', focusSearch);
+    return () => window.removeEventListener('keydown', focusSearch);
+  }, []);
 
   const levels = useMemo(
     () => [...new Set(modules.map((module) => module.level).filter(Boolean))],
@@ -92,16 +135,20 @@ const ModuleSelector = ({
         </p>
         <div className="practice-mode-panel glass-panel">
           <p className="practice-mode-title">Practice Mode</p>
-          <div className="practice-mode-toggle">
+          <div className="practice-mode-toggle" role="group" aria-label="Practice mode">
             <button
+              type="button"
               className={`practice-mode-btn ${practiceMode === 'guided' ? 'active' : ''}`}
               onClick={() => onPracticeModeChange('guided')}
+              aria-pressed={practiceMode === 'guided'}
             >
               Guided Learning
             </button>
             <button
+              type="button"
               className={`practice-mode-btn ${isPureTesting ? 'active' : ''}`}
               onClick={() => onPracticeModeChange('testing')}
+              aria-pressed={isPureTesting}
             >
               Pure Testing
             </button>
@@ -116,6 +163,7 @@ const ModuleSelector = ({
             <path d="m21 21-4.35-4.35" />
           </svg>
           <input
+            ref={searchInputRef}
             className="module-search"
             type="search"
             value={searchQuery}
@@ -123,6 +171,7 @@ const ModuleSelector = ({
             placeholder="Search topics, grammar, or chapters"
             aria-label="Search modules"
           />
+          {!searchQuery && <kbd className="module-search-shortcut" aria-hidden="true">/</kbd>}
         </div>
 
         <div className="module-filter-row">
@@ -209,7 +258,14 @@ const ModuleSelector = ({
                 {/* Progress bar for modules with progress */}
                 {prog && prog.percentage > 0 && (
                   <div className="module-progress-bar-wrapper">
-                    <div className="module-progress-bar">
+                    <div
+                      className="module-progress-bar"
+                      role="progressbar"
+                      aria-label={`${mod.title} progress`}
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-valuenow={prog.percentage}
+                    >
                       <div
                         className={`module-progress-fill ${status === 'completed' ? 'fill-complete' : status === 'needs-refresh' ? 'fill-refresh' : ''}`}
                         style={{ width: `${prog.percentage}%` }}

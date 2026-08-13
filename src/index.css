@@ -59,6 +59,19 @@ button {
   color: inherit;
 }
 
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-guest:focus-visible {
+  outline: 2px solid var(--accent-glow);
+  outline-offset: 3px;
+}
+
 ul, ol {
   list-style: none;
 }

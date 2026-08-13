@@ -12,14 +12,24 @@ import modulesManifest from './data/modules-manifest.json';
 import './App.css';
 
 const moduleLoaders = import.meta.glob('./data/modules/*.json');
+const GUEST_MODE_KEY = 'gemlang-guest-mode';
+
+const loadGuestMode = () => {
+  try {
+    return localStorage.getItem(GUEST_MODE_KEY) === 'true';
+  } catch {
+    return false;
+  }
+};
 
 function App() {
   const [session, setSession] = useState(null);
-  const [guestMode, setGuestMode] = useState(false);
+  const [guestMode, setGuestMode] = useState(loadGuestMode);
   const [isInitializing, setIsInitializing] = useState(true);
   const [showSignOutConfirm, setShowSignOutConfirm] = useState(false);
   const [view, setView] = useState('dashboard'); // 'dashboard' | 'modules' | 'settings' | 'lesson'
   const [previousView, setPreviousView] = useState('dashboard');
+  const [lessonOriginView, setLessonOriginView] = useState('dashboard');
   const [activeModuleIndex, setActiveModuleIndex] = useState(null);
   const [activeModule, setActiveModule] = useState(null);
   const [isModuleLoading, setIsModuleLoading] = useState(false);
@@ -31,11 +41,20 @@ function App() {
     } catch { return 'guided'; }
   });
   const loadRequestRef = useRef(0);
+  const accountButtonRef = useRef(null);
+  const dialogRef = useRef(null);
+  const dialogCancelButtonRef = useRef(null);
   const { settings, updateSetting, resetSettings } = useSettings();
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
+      if (session) {
+        setGuestMode(false);
+        try { localStorage.removeItem(GUEST_MODE_KEY); } catch { /* storage unavailable */ }
+      }
+      setIsInitializing(false);
+    }).catch(() => {
       setIsInitializing(false);
     });
 
@@ -43,10 +62,43 @@ function App() {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
+      if (session) {
+        setGuestMode(false);
+        try { localStorage.removeItem(GUEST_MODE_KEY); } catch { /* storage unavailable */ }
+      }
     });
 
     return () => subscription.unsubscribe();
   }, []);
+
+  useEffect(() => {
+    if (!showSignOutConfirm) return undefined;
+
+    dialogCancelButtonRef.current?.focus();
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setShowSignOutConfirm(false);
+        requestAnimationFrame(() => accountButtonRef.current?.focus());
+        return;
+      }
+
+      if (event.key === 'Tab') {
+        const focusable = dialogRef.current?.querySelectorAll('button:not(:disabled)');
+        if (!focusable?.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [showSignOutConfirm]);
 
   const {
     progress,
@@ -107,9 +159,10 @@ function App() {
   const handleSelectModule = useCallback((module) => {
     const idx = modulesManifest.findIndex((item) => item.id === module.id);
     if (idx >= 0) {
+      setLessonOriginView(view === 'modules' ? 'modules' : 'dashboard');
       void loadModuleAtIndex(idx);
     }
-  }, [loadModuleAtIndex]);
+  }, [loadModuleAtIndex, view]);
 
   const handleBackToDashboard = useCallback(() => {
     loadRequestRef.current += 1;
@@ -119,6 +172,15 @@ function App() {
     setIsModuleLoading(false);
     setView('dashboard');
   }, []);
+
+  const handleBackFromLesson = useCallback(() => {
+    loadRequestRef.current += 1;
+    setActiveModuleIndex(null);
+    setActiveModule(null);
+    setModuleLoadError(null);
+    setIsModuleLoading(false);
+    setView(lessonOriginView);
+  }, [lessonOriginView]);
 
   const handleNextModule = useCallback(() => {
     const nextIdx = activeModuleIndex + 1;
@@ -155,6 +217,21 @@ function App() {
     await supabase.auth.signOut();
   }, []);
 
+  const handleEnterGuestMode = useCallback(() => {
+    setGuestMode(true);
+    try { localStorage.setItem(GUEST_MODE_KEY, 'true'); } catch { /* storage unavailable */ }
+  }, []);
+
+  const handleExitGuestMode = useCallback(() => {
+    setGuestMode(false);
+    try { localStorage.removeItem(GUEST_MODE_KEY); } catch { /* storage unavailable */ }
+  }, []);
+
+  const closeSignOutConfirm = useCallback(() => {
+    setShowSignOutConfirm(false);
+    requestAnimationFrame(() => accountButtonRef.current?.focus());
+  }, []);
+
   return (
     <div className="app-container animate-fade-in">
       <header className="app-header">
@@ -166,10 +243,12 @@ function App() {
         >
           GemLang
         </button>
-        <div style={{ display: 'flex', gap: 'var(--spacing-sm)' }}>
+        <div className="app-header-actions">
           {(session || guestMode) && (
             <button
-              className="btn-settings"
+              ref={accountButtonRef}
+              type="button"
+              className="header-action"
               onClick={() => setShowSignOutConfirm(true)}
               title={session ? "Sign Out" : "Sign In"}
               aria-label={session ? "Sign Out" : "Sign In"}
@@ -187,11 +266,13 @@ function App() {
                   <line x1="15" y1="12" x2="3" y2="12" />
                 </svg>
               )}
+              <span className="header-action-label">{session ? 'Sign out' : 'Sign in'}</span>
             </button>
           )}
           {progress.hasChosenLevel && (
             <button
-              className="btn-settings"
+              type="button"
+              className={`header-action ${view === 'settings' ? 'is-active' : ''}`}
               onClick={() => {
                 if (view === 'settings') {
                   setView(previousView);
@@ -202,11 +283,13 @@ function App() {
               }}
               title="Settings"
               aria-label="Settings"
+              aria-pressed={view === 'settings'}
             >
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="3" />
                 <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
               </svg>
+              <span className="header-action-label">Settings</span>
             </button>
           )}
         </div>
@@ -214,11 +297,12 @@ function App() {
 
       <main className="main-content">
         {isInitializing ? (
-          <div className="glass-panel" style={{ padding: '2rem', textAlign: 'center' }}>
-            <p>Loading...</p>
+          <div className="app-loading glass-panel" role="status" aria-live="polite">
+            <span className="loading-spinner" aria-hidden="true" />
+            <p>Loading GemLang…</p>
           </div>
         ) : (!session && !guestMode) ? (
-          <Auth onGuestMode={() => setGuestMode(true)} />
+          <Auth onGuestMode={handleEnterGuestMode} />
         ) : !progress.hasChosenLevel ? (
           <Onboarding 
             modules={modulesManifest} 
@@ -271,7 +355,8 @@ function App() {
             onBack={() => setView('dashboard')}
           />
         ) : isModuleLoading ? (
-          <div className="lesson-finished glass-panel">
+          <div className="lesson-finished glass-panel" role="status" aria-live="polite">
+            <span className="loading-spinner" aria-hidden="true" />
             <h2 className="finished-title">Loading lesson...</h2>
             <p className="finished-subtitle">
               Preparing {modulesManifest[activeModuleIndex]?.title}.
@@ -284,8 +369,8 @@ function App() {
               {moduleLoadError}
             </p>
             <div className="finished-actions">
-              <button className="btn-secondary" onClick={handleBackToDashboard}>
-                ← Dashboard
+              <button className="btn-secondary" onClick={handleBackFromLesson}>
+                ← {lessonOriginView === 'modules' ? 'All Modules' : 'Dashboard'}
               </button>
               {activeModuleIndex !== null && (
                 <button className="btn-primary" onClick={() => loadModuleAtIndex(activeModuleIndex)}>
@@ -301,8 +386,8 @@ function App() {
               No lesson data was loaded.
             </p>
             <div className="finished-actions">
-              <button className="btn-secondary" onClick={handleBackToDashboard}>
-                ← Dashboard
+              <button className="btn-secondary" onClick={handleBackFromLesson}>
+                ← {lessonOriginView === 'modules' ? 'All Modules' : 'Dashboard'}
               </button>
             </div>
           </div>
@@ -314,7 +399,8 @@ function App() {
             moduleIndex={activeModuleIndex}
             practiceMode={practiceMode}
             settings={settings}
-            onBack={handleBackToDashboard}
+            onBack={handleBackFromLesson}
+            backLabel={lessonOriginView === 'modules' ? 'All Modules' : 'Dashboard'}
             onNextModule={handleNextModule}
             saveModuleProgress={saveModuleProgress}
             completeModule={completeModule}
@@ -324,13 +410,23 @@ function App() {
       </main>
 
       {showSignOutConfirm && (
-        <div className="modal-overlay" onClick={() => setShowSignOutConfirm(false)}>
-          <div className="modal-content glass-panel animate-fade-in" onClick={(e) => e.stopPropagation()}>
-            <h2 style={{ marginBottom: 'var(--spacing-md)' }}>
-              {session ? "Sign Out" : "Exit Guest Mode"}
+        <div className="modal-overlay" onClick={closeSignOutConfirm}>
+          <div
+            ref={dialogRef}
+            className="modal-content glass-panel animate-fade-in"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="account-dialog-title"
+            aria-describedby="account-dialog-description"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <h2 id="account-dialog-title">
+              {session ? 'Sign out?' : 'Sign in to GemLang?'}
             </h2>
-            <p style={{ color: 'var(--text-muted)' }}>
-              {session ? "Are you sure you want to sign out?" : "Are you sure you want to exit guest mode?"}
+            <p id="account-dialog-description">
+              {session
+                ? 'You can sign back in at any time.'
+                : 'Your guest progress stays on this device. Sign in to access your account instead.'}
             </p>
             <div className="modal-actions">
               <button
@@ -340,15 +436,16 @@ function App() {
                   if (session) {
                     handleLogout();
                   } else {
-                    setGuestMode(false);
+                    handleExitGuestMode();
                   }
                 }}
               >
-                Yes, Sign Out
+                {session ? 'Sign out' : 'Go to sign in'}
               </button>
               <button
+                ref={dialogCancelButtonRef}
                 className="btn-secondary"
-                onClick={() => setShowSignOutConfirm(false)}
+                onClick={closeSignOutConfirm}
               >
                 Cancel
               </button>

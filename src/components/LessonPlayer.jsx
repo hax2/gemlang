@@ -594,7 +594,11 @@ const LessonProgress = ({ current, total, label = 'Sentence' }) => {
     <div
       className="lesson-progress"
       style={{ '--lesson-progress': `${percentage}%` }}
+      role="progressbar"
       aria-label={`${label} ${safeCurrent} of ${safeTotal}`}
+      aria-valuemin="0"
+      aria-valuemax={safeTotal}
+      aria-valuenow={safeCurrent}
     >
       <div className="lesson-progress-copy">
         <span className="lesson-progress-step">{label}</span>
@@ -624,6 +628,7 @@ const LessonPlayer = ({
   practiceMode,
   settings,
   onBack,
+  backLabel = 'Dashboard',
   onNextModule,
   saveModuleProgress,
   completeModule,
@@ -1572,7 +1577,7 @@ const LessonPlayer = ({
         {!showSelfAssessment && (
           <div className="finished-actions">
             <button className="btn-secondary" onClick={onBack}>
-              ← All Modules <KbdHint show={isDesktop}>B</KbdHint>
+              ← {backLabel} <KbdHint show={isDesktop}>B</KbdHint>
             </button>
             {hasNextModule && (
               <button className="btn-primary" onClick={onNextModule}>

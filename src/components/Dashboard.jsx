@@ -18,6 +18,9 @@ const Dashboard = ({
   const lastModule = lastModuleId ? modules.find((m) => m.id === lastModuleId) : null;
   const lastStatus = lastModule ? getModuleStatus(lastModule.id) : null;
   const isResuming = lastStatus === 'in-progress';
+  const completionPercentage = stats.total > 0
+    ? Math.round((stats.completed / stats.total) * 100)
+    : 0;
 
   // Find recently completed modules (last 3)
   const recentlyCompleted = modules
@@ -44,37 +47,44 @@ const Dashboard = ({
       {/* Hero Section */}
       <div className="dashboard-hero">
         <h1 className="dashboard-title">Welcome back</h1>
-        <div className="dashboard-stats">
+        <dl className="dashboard-stats" aria-label="Learning progress">
           <div className="stat-item">
-            <span className="stat-value">{stats.completed}</span>
-            <span className="stat-label">Completed</span>
+            <dt className="stat-label">Completed</dt>
+            <dd className="stat-value">{stats.completed}</dd>
           </div>
           <div className="stat-divider" />
           <div className="stat-item">
-            <span className="stat-value">{stats.inProgress}</span>
-            <span className="stat-label">In Progress</span>
+            <dt className="stat-label">In Progress</dt>
+            <dd className="stat-value">{stats.inProgress}</dd>
           </div>
           <div className="stat-divider" />
           <div className="stat-item">
-            <span className="stat-value">{stats.total}</span>
-            <span className="stat-label">Total</span>
+            <dt className="stat-label">Total</dt>
+            <dd className="stat-value">{stats.total}</dd>
           </div>
           <div className="stat-divider" />
           <div className="stat-item">
-            <span className="stat-value">{stats.totalSentencesPracticed}</span>
-            <span className="stat-label">Sentences</span>
+            <dt className="stat-label">Sentences</dt>
+            <dd className="stat-value">{stats.totalSentencesPracticed.toLocaleString()}</dd>
           </div>
-        </div>
+        </dl>
         {/* Overall progress bar */}
         <div className="dashboard-overall-progress">
-          <div className="overall-progress-bar">
+          <div
+            className="overall-progress-bar"
+            role="progressbar"
+            aria-label="Overall course completion"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow={completionPercentage}
+          >
             <div
               className="overall-progress-fill"
-              style={{ width: `${stats.total > 0 ? Math.round((stats.completed / stats.total) * 100) : 0}%` }}
+              style={{ width: `${completionPercentage}%` }}
             />
           </div>
           <span className="overall-progress-label">
-            {stats.total > 0 ? Math.round((stats.completed / stats.total) * 100) : 0}% complete
+            {completionPercentage}% complete
           </span>
         </div>
       </div>
