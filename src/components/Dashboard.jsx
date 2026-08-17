@@ -11,6 +11,9 @@ const Dashboard = ({
   getRefreshModules,
   onSelectModule,
   onBrowseAll,
+  hasPremiumAccess,
+  isModuleFree,
+  onUpgrade,
 }) => {
   const suggestedModule = getNextSuggestedModule();
   const refreshModules = getRefreshModules();
@@ -89,6 +92,17 @@ const Dashboard = ({
         </div>
       </div>
 
+      {!hasPremiumAccess && (
+        <button type="button" className="dashboard-pro-banner glass-panel" onClick={onUpgrade}>
+          <span className="dashboard-pro-icon" aria-hidden="true">✦</span>
+          <span className="dashboard-pro-copy">
+            <strong>Unlock the complete GemLang course</strong>
+            <span>60 more lessons, stories, and reviews from beginner to advanced.</span>
+          </span>
+          <span className="btn-primary btn-sm">See Pro</span>
+        </button>
+      )}
+
       {/* Main CTA */}
       {heroAction && (
         <button
@@ -129,6 +143,9 @@ const Dashboard = ({
             })()}
             <div className="cta-text">
               <span className="cta-module-level">{heroAction.level}</span>
+              {!hasPremiumAccess && !isModuleFree(heroAction.id) && (
+                <span className="cta-pro-label">✦ Pro</span>
+              )}
               <h2 className="cta-module-title">{heroAction.title}</h2>
               <p className="cta-module-desc">{heroAction.description}</p>
               {isResuming && (() => {

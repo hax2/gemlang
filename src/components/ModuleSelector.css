@@ -467,3 +467,16 @@
     width: 100%;
   }
 }
+.module-card.is-locked {
+  border-color: rgba(168, 85, 247, 0.14);
+}
+
+.module-card.is-locked:hover {
+  border-color: rgba(168, 85, 247, 0.42);
+}
+
+.status-pro {
+  background: rgba(168, 85, 247, 0.13);
+  border-color: rgba(168, 85, 247, 0.28);
+  color: var(--accent-glow);
+}

@@ -361,3 +361,66 @@
     display: none;
   }
 }
+.dashboard-pro-banner {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-align: left;
+  border-color: rgba(168, 85, 247, 0.24);
+  background: linear-gradient(120deg, rgba(168, 85, 247, 0.12), rgba(99, 102, 241, 0.05));
+}
+
+.dashboard-pro-banner:hover {
+  transform: translateY(-2px);
+  border-color: rgba(216, 180, 254, 0.42);
+}
+
+.dashboard-pro-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(168, 85, 247, 0.16);
+  color: var(--accent-glow);
+}
+
+.dashboard-pro-copy {
+  min-width: 0;
+  flex: 1;
+  display: grid;
+}
+
+.dashboard-pro-copy span {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.cta-pro-label {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.2rem 0.55rem;
+  margin-bottom: 0.3rem;
+  border-radius: var(--radius-full);
+  background: rgba(168, 85, 247, 0.14);
+  color: var(--accent-glow);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .dashboard-pro-banner {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-pro-banner .btn-primary {
+    margin-left: 3.4rem;
+  }
+}

@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 .env
+.env.monetization
 .google-tts-token.json
 client_secret*.json
 .venv*

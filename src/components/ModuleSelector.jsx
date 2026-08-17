@@ -25,6 +25,8 @@ const ModuleSelector = ({
   getModuleStatus,
   getModuleProgress,
   onBack,
+  hasPremiumAccess,
+  isModuleFree,
 }) => {
   const [initialDiscovery] = useState(loadDiscoveryState);
   const [searchQuery, setSearchQuery] = useState(initialDiscovery.searchQuery || '');
@@ -222,12 +224,13 @@ const ModuleSelector = ({
           const badge = STATUS_BADGES[status];
           const isStory = mod.type === 'story';
           const isReview = mod.type === 'review';
+          const isLocked = !hasPremiumAccess && !isModuleFree(mod.id);
 
           return (
             <button
               type="button"
               key={mod.id} 
-              className={`module-card glass-panel ${status !== 'not-started' ? 'has-progress' : ''} ${isStory ? 'story-card' : ''} ${isReview ? 'review-card' : ''}`}
+              className={`module-card glass-panel ${status !== 'not-started' ? 'has-progress' : ''} ${isStory ? 'story-card' : ''} ${isReview ? 'review-card' : ''} ${isLocked ? 'is-locked' : ''}`}
               onClick={() => onSelect(mod)}
               style={{ animationDelay: `${index * 0.05}s` }}
             >
@@ -235,6 +238,11 @@ const ModuleSelector = ({
                 <div className="module-card-top-row">
                   <span className="module-level">{mod.level}</span>
                   <div className="module-badges-row">
+                    {isLocked && (
+                      <span className="module-status-badge status-pro">
+                        ✦ Pro
+                      </span>
+                    )}
                     {isStory && (
                       <span className="module-status-badge status-story">
                         📖 Story
@@ -280,7 +288,7 @@ const ModuleSelector = ({
                     {mod.sentenceCount} {isPureTesting ? 'Prompts' : 'Sentences'}
                   </span>
                   <span className="btn-primary btn-sm module-card-action">
-                    {getButtonLabel(status)}
+                    {isLocked ? 'Unlock' : getButtonLabel(status)}
                   </span>
                 </div>
               </div>

@@ -54,6 +54,23 @@
   gap: 1.25rem;
 }
 
+.billing-card {
+  border-color: rgba(168, 85, 247, 0.24);
+  background: linear-gradient(120deg, rgba(168, 85, 247, 0.1), rgba(99, 102, 241, 0.04));
+}
+
+.billing-upgrade-btn,
+.billing-manage-btn {
+  color: var(--accent-glow);
+  border-color: rgba(168, 85, 247, 0.36);
+}
+
+.billing-error {
+  color: #fca5a5;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
 .setting-info {
   display: flex;
   align-items: flex-start;
@@ -184,4 +201,3 @@
 .reset-confirm-yes:hover {
   background: rgba(248, 113, 113, 0.35) !important;
 }
-

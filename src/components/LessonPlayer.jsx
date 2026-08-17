@@ -320,7 +320,12 @@ const getSerEstarFamily = (example) => {
   return null;
 };
 
-const pickCycled = (items, index) => items[index % items.length];
+const getSerEstarExampleText = (example) =>
+  `${example?.prompt || ''} ${example?.correct || ''} ${example?.continuation || ''}`
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const pickCycled = (items, index) => items.length ? items[index % items.length] : null;
 
 const buildSerEstarItems = (module) => {
   if (module.specialPractice !== 'ser-estar-rules' || !Array.isArray(module.rules)) {
@@ -337,32 +342,59 @@ const buildSerEstarItems = (module) => {
     return aIndex - bIndex;
   });
 
+  const ruleFamilyCounts = new Map(
+    orderedRules.map((rule) => [
+      rule.id,
+      new Set(rule.examples.map((example) => getSerEstarFamily(example)).filter(Boolean)).size,
+    ])
+  );
+
   const examplePool = orderedRules.flatMap((rule) =>
     rule.examples.map((example) => ({
       rule,
       example,
       family: getSerEstarFamily(example),
+      isMixedRule: ruleFamilyCounts.get(rule.id) > 1,
     }))
   );
 
   orderedRules.forEach((rule, ruleIndex) => {
-    const ruleFamily = getSerEstarFamily(rule.examples[0]);
     const currentRuleExamples = rule.examples.map((example) => ({
       rule,
       example,
       family: getSerEstarFamily(example),
     }));
-    const oppositeExamples = examplePool.filter((entry) => entry.family && entry.family !== ruleFamily);
-    const mixedExamples = [
-      ...currentRuleExamples.slice(0, 2),
-      ...Array.from({ length: 8 }, (_, offset) => {
-        const useOpposite = offset % 2 === 0;
-        if (useOpposite && oppositeExamples.length > 0) {
-          return pickCycled(oppositeExamples, ruleIndex * 4 + offset);
-        }
-        return pickCycled(currentRuleExamples.slice(2), offset);
-      }),
-    ];
+
+    const ruleFamilies = new Set(currentRuleExamples.map((entry) => entry.family).filter(Boolean));
+    let mixedExamples;
+
+    if (ruleFamilies.size > 1) {
+      mixedExamples = currentRuleExamples.slice(0, 10);
+    } else {
+      const ruleFamily = currentRuleExamples[0]?.family;
+      const oppositeExamples = examplePool.filter((entry) =>
+        !entry.isMixedRule && entry.family && entry.family !== ruleFamily
+      );
+      const remainingRuleExamples = currentRuleExamples.slice(2);
+      mixedExamples = [
+        ...currentRuleExamples.slice(0, 2),
+        ...Array.from({ length: 8 }, (_, offset) => {
+          const useOpposite = offset % 2 === 0;
+          if (useOpposite && oppositeExamples.length > 0) {
+            return pickCycled(oppositeExamples, ruleIndex * 4 + offset);
+          }
+          return pickCycled(remainingRuleExamples.length ? remainingRuleExamples : currentRuleExamples, offset);
+        }),
+      ].filter(Boolean);
+    }
+
+    const seenChoiceTexts = new Set();
+    mixedExamples = mixedExamples.filter(({ example }) => {
+      const text = getSerEstarExampleText(example);
+      if (!text || seenChoiceTexts.has(text)) return false;
+      seenChoiceTexts.add(text);
+      return true;
+    });
 
     mixedExamples.forEach(({ rule: sourceRule, example }, exampleIndex) => {
       items.push({

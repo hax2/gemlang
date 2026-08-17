@@ -16,8 +16,41 @@ const SPEECH_RATE_OPTIONS = [
   { value: 1.0, label: 'Fast' },
 ];
 
-const SettingsPanel = ({ settings, onUpdate, onReset, onResetProgress, onBack }) => {
+const formatBillingDate = (value) => {
+  if (!value) return null;
+  return new Intl.DateTimeFormat(undefined, {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  }).format(new Date(value));
+};
+
+const SettingsPanel = ({
+  settings,
+  onUpdate,
+  onReset,
+  onResetProgress,
+  onBack,
+  session,
+  subscription,
+  subscriptionError,
+  onManageBilling,
+  onUpgrade,
+}) => {
   const [showResetConfirm, setShowResetConfirm] = useState(false);
+  const [billingLoading, setBillingLoading] = useState(false);
+  const [billingError, setBillingError] = useState(null);
+
+  const manageBilling = async () => {
+    setBillingLoading(true);
+    setBillingError(null);
+    try {
+      await onManageBilling();
+    } catch (error) {
+      setBillingError(error instanceof Error ? error.message : 'Unable to open billing.');
+      setBillingLoading(false);
+    }
+  };
 
   return (
     <div className="settings-panel animate-fade-in">
@@ -32,6 +65,44 @@ const SettingsPanel = ({ settings, onUpdate, onReset, onResetProgress, onBack })
       </div>
 
       <div className="settings-list">
+        {session && (
+          <div className="setting-card glass-panel billing-card">
+            <div className="setting-info">
+              <div className="setting-icon" aria-hidden="true">✦</div>
+              <div>
+                <h3 className="setting-name">
+                  {subscription ? 'GemLang Pro' : 'GemLang Free'}
+                </h3>
+                <p className="setting-desc">
+                  {subscription?.status === 'cancelled'
+                    ? `Your Pro access continues until ${formatBillingDate(subscription.ends_at)}.`
+                    : subscription
+                      ? `Your plan is ${subscription.status.replaceAll('_', ' ')}${subscription.renews_at ? ` and renews ${formatBillingDate(subscription.renews_at)}` : ''}.`
+                      : 'Upgrade to unlock every lesson, story, review, and future module.'}
+                </p>
+                {(subscriptionError || billingError) && (
+                  <p className="billing-error" role="alert">{billingError || subscriptionError}</p>
+                )}
+              </div>
+            </div>
+            <div className="setting-options">
+              {subscription ? (
+                <button
+                  className="setting-option-btn billing-manage-btn"
+                  onClick={manageBilling}
+                  disabled={billingLoading}
+                >
+                  {billingLoading ? 'Opening…' : 'Manage billing'}
+                </button>
+              ) : (
+                <button className="setting-option-btn billing-upgrade-btn" onClick={onUpgrade}>
+                  View Pro plans
+                </button>
+              )}
+            </div>
+          </div>
+        )}
+
         {/* Challenge Frequency */}
         <div className="setting-card glass-panel">
           <div className="setting-info">

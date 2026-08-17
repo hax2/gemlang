@@ -52,7 +52,7 @@ export default function Auth({ onGuestMode }) {
         <div className="auth-heading">
           <span className="auth-eyebrow">Spanish practice, your pace</span>
           <h1>Welcome to GemLang</h1>
-          <p>Sign in to keep learning, or try everything as a guest.</p>
+          <p>Sign in to keep learning, or start the free course as a guest.</p>
         </div>
 
         {error && <div className="auth-error" role="alert">{error}</div>}

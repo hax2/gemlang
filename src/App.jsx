@@ -5,9 +5,13 @@ import LessonPlayer from './components/LessonPlayer';
 import SettingsPanel from './components/SettingsPanel';
 import Onboarding from './components/Onboarding';
 import Auth from './components/Auth';
+import PricingModal from './components/PricingModal';
+import LegalModal from './components/LegalModal';
 import { supabase } from './supabaseClient';
 import useSettings from './hooks/useSettings';
 import useProgress from './hooks/useProgress';
+import useSubscription from './hooks/useSubscription';
+import { isModuleFree } from './config/monetization';
 import modulesManifest from './data/modules-manifest.json';
 import './App.css';
 
@@ -27,6 +31,8 @@ function App() {
   const [guestMode, setGuestMode] = useState(loadGuestMode);
   const [isInitializing, setIsInitializing] = useState(true);
   const [showSignOutConfirm, setShowSignOutConfirm] = useState(false);
+  const [showPricing, setShowPricing] = useState(false);
+  const [legalDocument, setLegalDocument] = useState(null);
   const [view, setView] = useState('dashboard'); // 'dashboard' | 'modules' | 'settings' | 'lesson'
   const [previousView, setPreviousView] = useState('dashboard');
   const [lessonOriginView, setLessonOriginView] = useState('dashboard');
@@ -45,6 +51,14 @@ function App() {
   const dialogRef = useRef(null);
   const dialogCancelButtonRef = useRef(null);
   const { settings, updateSetting, resetSettings } = useSettings();
+  const {
+    subscription,
+    hasPremiumAccess,
+    isLoading: isSubscriptionLoading,
+    error: subscriptionError,
+    startCheckout,
+    openBillingPortal,
+  } = useSubscription(session);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -157,12 +171,17 @@ function App() {
   }, []);
 
   const handleSelectModule = useCallback((module) => {
+    if (!isModuleFree(module.id) && !hasPremiumAccess) {
+      setShowPricing(true);
+      return;
+    }
+
     const idx = modulesManifest.findIndex((item) => item.id === module.id);
     if (idx >= 0) {
       setLessonOriginView(view === 'modules' ? 'modules' : 'dashboard');
       void loadModuleAtIndex(idx);
     }
-  }, [loadModuleAtIndex, view]);
+  }, [hasPremiumAccess, loadModuleAtIndex, view]);
 
   const handleBackToDashboard = useCallback(() => {
     loadRequestRef.current += 1;
@@ -292,6 +311,27 @@ function App() {
               <span className="header-action-label">Settings</span>
             </button>
           )}
+          {(session || guestMode) && (
+            <button
+              type="button"
+              className={`header-action header-plan ${hasPremiumAccess ? 'is-pro' : ''}`}
+              onClick={() => {
+                if (hasPremiumAccess) {
+                  setPreviousView(view);
+                  setView('settings');
+                } else {
+                  setShowPricing(true);
+                }
+              }}
+              title={hasPremiumAccess ? 'GemLang Pro billing' : 'Upgrade to GemLang Pro'}
+              aria-label={hasPremiumAccess ? 'GemLang Pro billing' : 'Upgrade to GemLang Pro'}
+            >
+              <span aria-hidden="true">{hasPremiumAccess ? '✦' : '♦'}</span>
+              <span className="header-action-label">
+                {isSubscriptionLoading && session ? 'Checking…' : hasPremiumAccess ? 'Pro' : 'Upgrade'}
+              </span>
+            </button>
+          )}
         </div>
       </header>
 
@@ -307,8 +347,6 @@ function App() {
           <Onboarding 
             modules={modulesManifest} 
             onComplete={(levelType, moduleId) => {
-              setStartingLevel(levelType, moduleId);
-              
               let targetIndex = 0;
               if (levelType === 'granular' && moduleId) {
                 targetIndex = modulesManifest.findIndex(m => m.id === moduleId);
@@ -319,6 +357,12 @@ function App() {
               }
               
               const targetModule = targetIndex >= 0 ? modulesManifest[targetIndex] : modulesManifest[0];
+              if (targetModule && !isModuleFree(targetModule.id) && !hasPremiumAccess) {
+                setShowPricing(true);
+                return;
+              }
+
+              setStartingLevel(levelType, moduleId);
               if (targetModule) {
                 handleSelectModule(targetModule);
               }
@@ -331,6 +375,11 @@ function App() {
             onReset={resetSettings}
             onResetProgress={resetProgress}
             onBack={() => setView(previousView)}
+            session={session}
+            subscription={subscription}
+            subscriptionError={subscriptionError}
+            onManageBilling={openBillingPortal}
+            onUpgrade={() => setShowPricing(true)}
           />
         ) : view === 'dashboard' ? (
           <Dashboard
@@ -343,6 +392,9 @@ function App() {
             getRefreshModules={getRefreshModules}
             onSelectModule={handleSelectModule}
             onBrowseAll={() => setView('modules')}
+            hasPremiumAccess={hasPremiumAccess}
+            isModuleFree={isModuleFree}
+            onUpgrade={() => setShowPricing(true)}
           />
         ) : view === 'modules' ? (
           <ModuleSelector
@@ -353,6 +405,8 @@ function App() {
             getModuleStatus={getModuleStatus}
             getModuleProgress={getModuleProgress}
             onBack={() => setView('dashboard')}
+            hasPremiumAccess={hasPremiumAccess}
+            isModuleFree={isModuleFree}
           />
         ) : isModuleLoading ? (
           <div className="lesson-finished glass-panel" role="status" aria-live="polite">
@@ -409,6 +463,12 @@ function App() {
         )}
       </main>
 
+      <footer className="app-footer">
+        <span>© {new Date().getFullYear()} GemLang</span>
+        <button type="button" onClick={() => setLegalDocument('terms')}>Terms</button>
+        <button type="button" onClick={() => setLegalDocument('privacy')}>Privacy</button>
+      </footer>
+
       {showSignOutConfirm && (
         <div className="modal-overlay" onClick={closeSignOutConfirm}>
           <div
@@ -453,6 +513,18 @@ function App() {
           </div>
         </div>
       )}
+
+      <PricingModal
+        isOpen={showPricing}
+        isSignedIn={Boolean(session)}
+        onClose={() => setShowPricing(false)}
+        onSignIn={() => {
+          setShowPricing(false);
+          handleExitGuestMode();
+        }}
+        onCheckout={startCheckout}
+      />
+      <LegalModal document={legalDocument} onClose={() => setLegalDocument(null)} />
     </div>
   );
 }
