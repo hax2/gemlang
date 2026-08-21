@@ -17,13 +17,13 @@
     },
     {
       "id": "m31-s2",
-      "spanish": "¿Podría ver el menú de vinos, por favor?",
-      "english": "Could I see the wine menu, please?",
+      "spanish": "¿Podría ver la carta de vinos, por favor?",
+      "english": "Could I see the wine list, please?",
       "wordMeanings": {
         "podría": "could I",
         "ver": "see",
-        "menú": "menu",
-        "vinos": "wines"
+        "vinos": "wines",
+        "carta": "list / menu"
       }
     },
     {
@@ -39,8 +39,8 @@
     },
     {
       "id": "m31-s4",
-      "spanish": "Soy alérgico a los nueces, ¿este postre lleva frutos secos?",
-      "english": "I am allergic to nuts, does this dessert contain dried fruits/nuts?",
+      "spanish": "Soy alérgico a las nueces, ¿este postre lleva frutos secos?",
+      "english": "I am allergic to nuts, does this dessert contain nuts?",
       "wordMeanings": {
         "alérgico": "allergic",
         "nueces": "walnuts/nuts",
@@ -101,11 +101,11 @@
     },
     {
       "id": "m31-s10",
-      "spanish": "¡Buen provecho!",
+      "spanish": "¡Que aproveche!",
       "english": "Enjoy your meal!",
       "wordMeanings": {
-        "buen": "good",
-        "provecho": "benefit/profit (meal)"
+        "Que": "may it...",
+        "aproveche": "be useful/benefit (subjunctive)"
       }
     }
   ],

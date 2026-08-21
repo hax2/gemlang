@@ -56,11 +56,11 @@
     },
     {
       "id": "m5-s6",
-      "spanish": "Ustedes hablan español.",
-      "english": "You (plural) speak Spanish.",
+      "spanish": "Vosotros habláis español.",
+      "english": "You all speak Spanish.",
       "wordMeanings": {
-        "Ustedes": "you (plural)",
-        "hablan": "they speak",
+        "Vosotros": "you all",
+        "habláis": "you all speak",
         "español": "Spanish"
       }
     },
@@ -119,6 +119,15 @@
     },
     {
       "id": "m5-s12",
+      "spanish": "¿Dónde trabajas?",
+      "english": "Where do you work?",
+      "wordMeanings": {
+        "Dónde": "where",
+        "trabajas": "you work"
+      }
+    },
+    {
+      "id": "m5-s13",
       "spanish": "Yo estudio en casa.",
       "english": "I study at home.",
       "wordMeanings": {
@@ -129,7 +138,7 @@
       }
     },
     {
-      "id": "m5-s13",
+      "id": "m5-s14",
       "spanish": "Tú estudias en la escuela.",
       "english": "You study at school.",
       "wordMeanings": {
@@ -141,7 +150,7 @@
       }
     },
     {
-      "id": "m5-s14",
+      "id": "m5-s15",
       "spanish": "Él estudia español.",
       "english": "He studies Spanish.",
       "wordMeanings": {
@@ -151,7 +160,7 @@
       }
     },
     {
-      "id": "m5-s15",
+      "id": "m5-s16",
       "spanish": "Ella estudia mucho.",
       "english": "She studies a lot.",
       "wordMeanings": {
@@ -161,7 +170,7 @@
       }
     },
     {
-      "id": "m5-s16",
+      "id": "m5-s17",
       "spanish": "Nosotros estudiamos cada día.",
       "english": "We study every day.",
       "wordMeanings": {
@@ -172,7 +181,7 @@
       }
     },
     {
-      "id": "m5-s17",
+      "id": "m5-s18",
       "spanish": "Yo compro pan.",
       "english": "I buy bread.",
       "wordMeanings": {
@@ -182,7 +191,7 @@
       }
     },
     {
-      "id": "m5-s18",
+      "id": "m5-s19",
       "spanish": "Tú compras café.",
       "english": "You buy coffee.",
       "wordMeanings": {
@@ -192,7 +201,7 @@
       }
     },
     {
-      "id": "m5-s19",
+      "id": "m5-s20",
       "spanish": "Él compra un libro nuevo.",
       "english": "He buys a new book.",
       "wordMeanings": {
@@ -204,7 +213,7 @@
       }
     },
     {
-      "id": "m5-s20",
+      "id": "m5-s21",
       "spanish": "Ella busca algo nuevo.",
       "english": "She looks for something new.",
       "wordMeanings": {
@@ -215,7 +224,7 @@
       }
     },
     {
-      "id": "m5-s21",
+      "id": "m5-s22",
       "spanish": "Nosotros compramos comida.",
       "english": "We buy food.",
       "wordMeanings": {
@@ -225,7 +234,7 @@
       }
     },
     {
-      "id": "m5-s22",
+      "id": "m5-s23",
       "spanish": "Yo busco un café.",
       "english": "I look for a café.",
       "wordMeanings": {
@@ -236,7 +245,7 @@
       }
     },
     {
-      "id": "m5-s23",
+      "id": "m5-s24",
       "spanish": "¿Buscas algo?",
       "english": "Are you looking for something?",
       "wordMeanings": {
@@ -245,7 +254,7 @@
       }
     },
     {
-      "id": "m5-s24",
+      "id": "m5-s25",
       "spanish": "Él busca un trabajo.",
       "english": "He looks for a job.",
       "wordMeanings": {
@@ -256,7 +265,7 @@
       }
     },
     {
-      "id": "m5-s25",
+      "id": "m5-s26",
       "spanish": "Ella busca una casa.",
       "english": "She looks for a house.",
       "wordMeanings": {
@@ -267,7 +276,7 @@
       }
     },
     {
-      "id": "m5-s26",
+      "id": "m5-s27",
       "spanish": "Nosotros buscamos un libro.",
       "english": "We look for a book.",
       "wordMeanings": {
@@ -278,7 +287,7 @@
       }
     },
     {
-      "id": "m5-s27",
+      "id": "m5-s28",
       "spanish": "Yo espero aquí.",
       "english": "I wait here.",
       "wordMeanings": {
@@ -288,7 +297,7 @@
       }
     },
     {
-      "id": "m5-s28",
+      "id": "m5-s29",
       "spanish": "Tú esperas allí.",
       "english": "You wait there.",
       "wordMeanings": {
@@ -298,7 +307,7 @@
       }
     },
     {
-      "id": "m5-s29",
+      "id": "m5-s30",
       "spanish": "Él espera en el café.",
       "english": "He waits in the café.",
       "wordMeanings": {
@@ -310,7 +319,7 @@
       }
     },
     {
-      "id": "m5-s30",
+      "id": "m5-s31",
       "spanish": "Ella espera en casa.",
       "english": "She waits at home.",
       "wordMeanings": {
@@ -321,7 +330,7 @@
       }
     },
     {
-      "id": "m5-s31",
+      "id": "m5-s32",
       "spanish": "Nosotros esperamos en la calle.",
       "english": "We wait in the street.",
       "wordMeanings": {
@@ -333,7 +342,7 @@
       }
     },
     {
-      "id": "m5-s32",
+      "id": "m5-s33",
       "spanish": "Yo escucho música.",
       "english": "I listen to music.",
       "wordMeanings": {
@@ -343,7 +352,7 @@
       }
     },
     {
-      "id": "m5-s33",
+      "id": "m5-s34",
       "spanish": "Tú escuchas español.",
       "english": "You listen to Spanish.",
       "wordMeanings": {
@@ -353,7 +362,7 @@
       }
     },
     {
-      "id": "m5-s34",
+      "id": "m5-s35",
       "spanish": "Él escucha en silencio.",
       "english": "He listens in silence.",
       "wordMeanings": {
@@ -364,7 +373,7 @@
       }
     },
     {
-      "id": "m5-s35",
+      "id": "m5-s36",
       "spanish": "Ella escucha aquí.",
       "english": "She listens here.",
       "wordMeanings": {
@@ -374,7 +383,7 @@
       }
     },
     {
-      "id": "m5-s36",
+      "id": "m5-s37",
       "spanish": "Yo miro el teléfono.",
       "english": "I look at the phone.",
       "wordMeanings": {
@@ -385,7 +394,7 @@
       }
     },
     {
-      "id": "m5-s37",
+      "id": "m5-s38",
       "spanish": "Tú miras la foto.",
       "english": "You look at the photo.",
       "wordMeanings": {
@@ -396,7 +405,7 @@
       }
     },
     {
-      "id": "m5-s38",
+      "id": "m5-s39",
       "spanish": "Él mira el libro.",
       "english": "He looks at the book.",
       "wordMeanings": {
@@ -407,7 +416,7 @@
       }
     },
     {
-      "id": "m5-s39",
+      "id": "m5-s40",
       "spanish": "Ella mira la casa.",
       "english": "She looks at the house.",
       "wordMeanings": {
@@ -418,7 +427,7 @@
       }
     },
     {
-      "id": "m5-s40",
+      "id": "m5-s41",
       "spanish": "Hoy estudio y mañana trabajo.",
       "english": "Today I study and tomorrow I work.",
       "wordMeanings": {
@@ -430,7 +439,7 @@
       }
     },
     {
-      "id": "m5-s41",
+      "id": "m5-s42",
       "spanish": "Yo hablo y tú escuchas.",
       "english": "I speak and you listen.",
       "wordMeanings": {
@@ -442,7 +451,7 @@
       }
     },
     {
-      "id": "m5-s42",
+      "id": "m5-s43",
       "spanish": "Ella compra pan y café.",
       "english": "She buys bread and coffee.",
       "wordMeanings": {
@@ -454,25 +463,16 @@
       }
     },
     {
-      "id": "m5-s43",
+      "id": "m5-s44",
       "spanish": "¡Me encanta!",
       "english": "I love it!",
       "wordMeanings": {
         "Me": "to me",
         "encanta": "it enchants"
       }
-    },
-    {
-      "id": "m5-s44",
-      "spanish": "¿Dónde trabajas?",
-      "english": "Where do you work?",
-      "wordMeanings": {
-        "Dónde": "where",
-        "trabajas": "you work"
-      }
     }
   ],
-  "grammarExplanation": "Regular -AR verbs follow a predictable conjugation pattern. Remove '-ar' and add these endings:\n\n• -o (yo): hablo\n• -as (tú): hablas\n• -a (él/ella): habla\n• -amos (nosotros): hablamos\n• -an (ustedes/ellos): hablan\n\nThis same pattern works for hablar, trabajar, estudiar, comprar, buscar, esperar, escuchar, mirar, and many more.",
+  "grammarExplanation": "Regular -AR verbs follow a predictable conjugation pattern. Remove '-ar' and add these endings:\n\n• -o (yo): hablo\n• -as (tú): hablas\n• -a (él/ella): habla\n• -amos (nosotros): hablamos\n• -áis (vosotros): habláis\n• -an (ellos/ellas): hablan\n\nThis same pattern works for hablar, trabajar, estudiar, comprar, buscar, esperar, escuchar, mirar, and many more.",
   "vocabulary": {
     "hablo": {
       "mnemonic": "Think 'hobble along while speaking'.",

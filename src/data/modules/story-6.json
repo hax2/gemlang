@@ -108,10 +108,10 @@
     },
     {
       "id": "s6-s8",
-      "spanish": "Ana le dice: \"Llevo mucho tiempo pensando en esto.\"",
-      "english": "Ana tells her: \"I have been thinking about this for a long time.\"",
+      "spanish": "Marta le dice: \"Llevo mucho tiempo pensando en esto.\"",
+      "english": "Marta tells her: \"I have been thinking about this for a long time.\"",
       "wordMeanings": {
-        "Ana": "Ana",
+        "Marta": "Marta",
         "le dice": "tells her",
         "Llevo": "I have been (llevar + duration)",
         "mucho": "much / a lot",

@@ -331,11 +331,10 @@
     },
     {
       "id": "m1-s34",
-      "spanish": "¿Son ustedes estudiantes?",
-      "english": "Are you (plural) students?",
+      "spanish": "¿Sois estudiantes?",
+      "english": "Are you all students?",
       "wordMeanings": {
-        "Son": "are",
-        "ustedes": "you (plural)",
+        "Sois": "you all are",
         "estudiantes": "students"
       }
     },
@@ -578,7 +577,7 @@
     },
     "ustedes": {
       "mnemonic": "Think 'you-sted-es' — all of you!",
-      "explanation": "Formal/neutral 'you all' in Latin American Spanish."
+      "explanation": "In Spain this is formal only; everyday plural 'you all' is vosotros."
     },
     "y": {
       "mnemonic": "The letter 'Y' connects — like 'and' connects words.",

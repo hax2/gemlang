@@ -31,7 +31,7 @@
     {
       "id": "m35-s3",
       "spanish": "—Un poco cansada, pero bien. ¿Qué vas a pedir?",
-      "english": "—A little tired, but well. What are you going to order?",
+      "english": "—A little tired, but okay. What are you going to order?",
       "wordMeanings": {
         "Un": "a",
         "poco": "little",
@@ -87,22 +87,22 @@
     },
     {
       "id": "m35-s7",
-      "spanish": "—¡Mesero! Por favor, la cuenta cuando pueda.",
+      "spanish": "—Camarero, la cuenta cuando pueda, por favor.",
       "english": "—Waiter! The check when you can, please.",
       "wordMeanings": {
-        "Mesero": "waiter",
-        "Por": "by/for",
         "favor": "favor",
         "la": "the",
         "cuenta": "check/bill",
         "cuando": "when",
-        "pueda": "can (subjunctive)"
+        "pueda": "can (subjunctive)",
+        "Camarero": "waiter",
+        "por": "for"
       }
     },
     {
       "id": "m35-s8",
       "spanish": "—No te preocupes, yo invito hoy.",
-      "english": "—Don't worry, it's on me (I invite) today.",
+      "english": "—Don't worry, it's my treat today.",
       "wordMeanings": {
         "No": "no/not",
         "te": "yourself",

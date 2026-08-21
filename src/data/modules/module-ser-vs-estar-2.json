@@ -495,12 +495,12 @@
           "reason": "Sleeping right now uses estar."
         },
         {
-          "prompt": "Ustedes",
-          "correct": "están",
+          "prompt": "Vosotros",
+          "correct": "estáis",
           "continuation": "hablando rápido.",
           "options": [
-            "son",
-            "están"
+            "sois",
+            "estáis"
           ],
           "reason": "Talking right now uses estar."
         },

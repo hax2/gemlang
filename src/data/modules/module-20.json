@@ -118,7 +118,7 @@
     {
       "id": "m20-s10",
       "spanish": "Es importante que no llegues tarde.",
-      "english": "It's important that you not arrive late.",
+      "english": "It's important that you don't arrive late.",
       "wordMeanings": {
         "Es": "is",
         "importante": "important",
@@ -162,7 +162,7 @@
         "Es": "is",
         "importante": "important",
         "que": "that / than",
-        "abras": "open (subj/inf)",
+        "abras": "open (subj)",
         "la": "the / it (fem)",
         "puerta": "door"
       }
@@ -228,7 +228,7 @@
         "Es": "is",
         "importante": "important",
         "que": "that / than",
-        "se": "himself / herself / themselves",
+        "se": "to him/her",
         "lo": "it / him",
         "des": "give (subj)",
         "a": "to",
@@ -243,7 +243,7 @@
         "Es": "is",
         "importante": "important",
         "que": "that / than",
-        "se": "himself / herself / themselves",
+        "se": "to him/her",
         "la": "the / it (fem)",
         "des": "give (subj)",
         "a": "to",

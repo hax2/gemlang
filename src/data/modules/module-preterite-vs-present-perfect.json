@@ -66,16 +66,15 @@
     },
     {
       "id": "mpvspp-s6",
-      "spanish": "Fui a España en el año pasado.",
-      "english": "I went to Spain in the past year.",
+      "spanish": "El año pasado fui a España.",
+      "english": "Last year I went to Spain.",
       "wordMeanings": {
-        "Fui": "I went",
-        "a": "to",
-        "España": "Spain",
-        "en": "in",
-        "el": "the",
+        "El": "the",
         "año": "year",
-        "pasado": "past"
+        "pasado": "past/last",
+        "fui": "I went",
+        "a": "to",
+        "España": "Spain"
       }
     },
     {
@@ -132,7 +131,7 @@
     {
       "id": "mpvspp-s11",
       "spanish": "Esta mañana he bebido café.",
-      "english": "This morning I have drunk coffee.",
+      "english": "I have drunk coffee this morning.",
       "wordMeanings": {
         "Esta": "this",
         "mañana": "morning",
@@ -157,7 +156,7 @@
     {
       "id": "mpvspp-s13",
       "spanish": "¿Has comido ya?",
-      "english": "Have you eaten already?",
+      "english": "Have you eaten yet?",
       "wordMeanings": {
         "Has": "you have",
         "comido": "eaten",
@@ -216,14 +215,14 @@
     },
     {
       "id": "mpvspp-s18",
-      "spanish": "Escribió el correo ayer en la tarde.",
-      "english": "He wrote the email yesterday in the afternoon.",
+      "spanish": "Escribió el correo ayer por la tarde.",
+      "english": "He wrote the email yesterday afternoon.",
       "wordMeanings": {
         "Escribió": "he wrote",
         "el": "the",
         "correo": "email/mail",
         "ayer": "yesterday",
-        "en": "in",
+        "por": "in/through",
         "la": "the",
         "tarde": "afternoon"
       }
@@ -256,7 +255,7 @@
     {
       "id": "mpvspp-s21",
       "spanish": "Has vuelto muy pronto hoy.",
-      "english": "You have returned very soon today.",
+      "english": "You have returned very early today.",
       "wordMeanings": {
         "Has": "you have",
         "vuelto": "returned",
@@ -278,7 +277,7 @@
     {
       "id": "mpvspp-s23",
       "spanish": "Mi amigo ha vivido aquí siempre.",
-      "english": "My friend has lived here always.",
+      "english": "My friend has always lived here.",
       "wordMeanings": {
         "Mi": "my",
         "amigo": "friend",

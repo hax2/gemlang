@@ -137,14 +137,14 @@
     },
     {
       "id": "msaber-s13",
-      "spanish": "Ellos saben hacer pan amasado.",
-      "english": "They know how to make kneaded bread.",
+      "spanish": "Ellos saben hacer pan casero.",
+      "english": "They know how to make homemade bread.",
       "wordMeanings": {
         "Ellos": "they",
         "saben": "know",
         "hacer": "to make",
         "pan": "bread",
-        "amasado": "kneaded"
+        "casero": "homemade"
       }
     },
     {

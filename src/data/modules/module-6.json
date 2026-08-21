@@ -353,6 +353,16 @@
     },
     {
       "id": "m6-s34",
+      "spanish": "Aprendo cada día.",
+      "english": "I learn every day.",
+      "wordMeanings": {
+        "Aprendo": "I learn",
+        "cada": "each",
+        "día": "day"
+      }
+    },
+    {
+      "id": "m6-s35",
       "spanish": "Yo vendo un libro.",
       "english": "I sell a book.",
       "wordMeanings": {
@@ -363,7 +373,7 @@
       }
     },
     {
-      "id": "m6-s35",
+      "id": "m6-s36",
       "spanish": "Tú vendes el coche.",
       "english": "You sell the car.",
       "wordMeanings": {
@@ -374,7 +384,7 @@
       }
     },
     {
-      "id": "m6-s36",
+      "id": "m6-s37",
       "spanish": "Él vende pan.",
       "english": "He sells bread.",
       "wordMeanings": {
@@ -424,16 +434,6 @@
       }
     },
     {
-      "id": "m6-s42",
-      "spanish": "Aprendo cada día.",
-      "english": "I learn every day.",
-      "wordMeanings": {
-        "Aprendo": "I learn",
-        "cada": "each",
-        "día": "day"
-      }
-    },
-    {
       "spanish": "¡Mira, he recibido un mensaje!",
       "english": "Look, I received a message!",
       "wordMeanings": {
@@ -456,7 +456,7 @@
       "id": "m6-s-colloq2"
     }
   ],
-  "grammarExplanation": "Regular -ER and -IR verbs follow similar patterns. Remove the ending and add:\n\n-ER verbs (comer):\n• -o, -es, -e, -emos, -en\n• como, comes, come, comemos, comen\n\n-IR verbs (vivir):\n• -o, -es, -e, -imos, -en\n• vivo, vives, vive, vivimos, viven\n\nNotice: -ER and -IR only differ in the 'nosotros' form (-emos vs -imos).",
+  "grammarExplanation": "Regular -ER and -IR verbs follow similar patterns. Remove the ending and add:\n\n-ER verbs (comer):\n• -o, -es, -e, -emos, -éis, -en\n• como, comes, come, comemos, coméis, comen\n\n-IR verbs (vivir):\n• -o, -es, -e, -imos, -ís, -en\n• vivo, vives, vive, vivimos, vivís, viven\n\nNotice: -ER and -IR only differ in the 'nosotros' and 'vosotros' forms (-emos/-éis vs -imos/-ís). In Spain use the vosotros forms for informal plural 'you'.",
   "vocabulary": {
     "como": {
       "mnemonic": "Think 'consume' — I eat.",

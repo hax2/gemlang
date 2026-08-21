@@ -228,7 +228,7 @@
       "english": "I get dressed quickly.",
       "wordMeanings": {
         "Me": "me / to me",
-        "visto": "seen",
+        "visto": "I get dressed",
         "rápido": "fast / quickly"
       }
     },
@@ -384,7 +384,7 @@
         "la": "the / it (fem)",
         "mañana": "tomorrow / morning",
         "me": "me / to me",
-        "visto": "seen",
+        "visto": "I get dressed",
         "y": "and",
         "salgo": "I leave"
       }
@@ -453,7 +453,7 @@
       }
     },
     {
-      "id": "m7-s43",
+      "id": "m7-s42",
       "spanish": "¿Te duchas por la mañana?",
       "english": "Do you shower in the morning?",
       "wordMeanings": {
@@ -465,7 +465,7 @@
       }
     },
     {
-      "id": "m7-s44",
+      "id": "m7-s43",
       "spanish": "Sí, me ducho por la mañana.",
       "english": "Yes, I shower in the morning.",
       "wordMeanings": {
@@ -478,7 +478,7 @@
       }
     },
     {
-      "id": "m7-s45",
+      "id": "m7-s44",
       "spanish": "No, no me ducho por la mañana.",
       "english": "No, I don't shower in the morning.",
       "wordMeanings": {
@@ -493,7 +493,7 @@
     },
     {
       "spanish": "Me muero de sueño.",
-      "english": "I am dying of tiredness.",
+      "english": "I'm dying of sleepiness.",
       "wordMeanings": {
         "Me": "myself",
         "muero": "I die",
@@ -512,7 +512,7 @@
       "id": "m7-s-colloq2"
     }
   ],
-  "grammarExplanation": "Reflexive verbs describe actions done to oneself. They use a reflexive pronoun BEFORE the verb:\n\n• me (myself) → me levanto = I get up\n• te (yourself) → te levantas = you get up\n• se (him/herself) → se levanta = he/she gets up\n• nos (ourselves) → nos levantamos = we get up\n• se (themselves) → se levantan = they get up\n\nCommon reflexive verbs: llamarse, levantarse, acostarse, ducharse, lavarse, vestirse, sentarse, quedarse.",
+  "grammarExplanation": "Reflexive verbs describe actions done to oneself. They use a reflexive pronoun BEFORE the verb:\n\n• me (myself) → me levanto = I get up\n• te (yourself) → te levantas = you get up\n• se (him/herself) → se levanta = he/she gets up\n• nos (ourselves) → nos levantamos = we get up\n• os (yourselves, Spain) → os levantáis = you all get up\n• se (themselves) → se levantan = they get up\n\nCommon reflexive verbs: llamarse, levantarse, acostarse, ducharse, lavarse, vestirse, sentarse, quedarse.",
   "vocabulary": {
     "se": {
       "mnemonic": "Think 'self' — reflexive pronoun.",

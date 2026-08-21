@@ -50,7 +50,7 @@
         "Si": "if",
         "trabajas": "you work",
         "mucho": "much / a lot",
-        "ganas": "you win / desire",
+        "ganas": "you earn / win",
         "dinero": "money"
       }
     },
@@ -170,7 +170,7 @@
     {
       "id": "m21-s14",
       "spanish": "Si me dices la verdad, te ayudo.",
-      "english": "If you tell me the truth, I help you.",
+      "english": "If you tell me the truth, I'll help you.",
       "wordMeanings": {
         "Si": "if",
         "me": "me / to me",
@@ -310,7 +310,7 @@
     {
       "id": "m21-s25",
       "spanish": "Si quieres, abro la puerta.",
-      "english": "If you want, I open the door.",
+      "english": "If you want, I'll open the door.",
       "wordMeanings": {
         "Si": "if",
         "quieres": "you want",
@@ -369,14 +369,14 @@
     {
       "id": "m21-s30",
       "spanish": "Si hace sol, vamos al centro.",
-      "english": "If it's sunny, we go downtown.",
+      "english": "If it's sunny, we go to the city centre.",
       "wordMeanings": {
         "Si": "if",
         "hace": "makes / does",
         "sol": "sun",
         "vamos": "we go",
         "al": "to the",
-        "centro": "downtown"
+        "centro": "town centre"
       }
     }
   ],
@@ -551,8 +551,8 @@
       "explanation": "Means 'sun'."
     },
     "centro": {
-      "mnemonic": "Same as English 'center' — downtown!",
-      "explanation": "Also means 'center'. 'Centro' = downtown area."
+      "mnemonic": "Same as English 'centre' — the town centre!",
+      "explanation": "Also means 'centre'. 'El centro' = the town centre."
     }
   }
 }

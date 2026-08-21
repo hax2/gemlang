@@ -22,7 +22,7 @@
       "spanish": "Se lo doy.",
       "english": "I give it to her.",
       "wordMeanings": {
-        "Se": "himself / herself / themselves",
+        "Se": "to him / her / them",
         "lo": "it / him",
         "doy": "I give"
       }
@@ -45,7 +45,7 @@
       "spanish": "Se la doy.",
       "english": "I give it to him.",
       "wordMeanings": {
-        "Se": "himself / herself / themselves",
+        "Se": "to him / her / them",
         "la": "the / it (fem)",
         "doy": "I give"
       }
@@ -68,7 +68,7 @@
       "spanish": "Se los doy.",
       "english": "I give them to them.",
       "wordMeanings": {
-        "Se": "himself / herself / themselves",
+        "Se": "to him / her / them",
         "los": "the / them",
         "doy": "I give"
       }
@@ -91,7 +91,7 @@
       "spanish": "Se las doy.",
       "english": "I give them to you (pl.).",
       "wordMeanings": {
-        "Se": "himself / herself / themselves",
+        "Se": "to him / her / them",
         "las": "the / them (fem)",
         "doy": "I give"
       }
@@ -101,7 +101,7 @@
       "spanish": "¿Se lo das ahora?",
       "english": "Do you give it to him/her now?",
       "wordMeanings": {
-        "Se": "himself / herself / themselves",
+        "Se": "to him / her / them",
         "lo": "it / him",
         "das": "you give",
         "ahora": "now"
@@ -113,7 +113,7 @@
       "english": "Yes, I give it now.",
       "wordMeanings": {
         "Sí": "yes",
-        "se": "himself / herself / themselves",
+        "se": "to him / her / them",
         "lo": "it / him",
         "doy": "I give",
         "ahora": "now"
@@ -126,7 +126,7 @@
       "wordMeanings": {
         "No": "no / not",
         "no": "no / not",
-        "se": "himself / herself / themselves",
+        "se": "to him / her / them",
         "lo": "it / him",
         "doy": "I give",
         "ahora": "now"
@@ -137,7 +137,7 @@
       "spanish": "¿Se la das hoy?",
       "english": "Do you give it to him/her today?",
       "wordMeanings": {
-        "Se": "himself / herself / themselves",
+        "Se": "to him / her / them",
         "la": "the / it (fem)",
         "das": "you give",
         "hoy": "today"
@@ -149,7 +149,7 @@
       "english": "Yes, I give it today.",
       "wordMeanings": {
         "Sí": "yes",
-        "se": "himself / herself / themselves",
+        "se": "to him / her / them",
         "la": "the / it (fem)",
         "doy": "I give",
         "hoy": "today"
@@ -161,9 +161,9 @@
       "english": "Yesterday I gave it to him/her.",
       "wordMeanings": {
         "Ayer": "yesterday",
-        "se": "himself / herself / themselves",
+        "se": "to him / her / them",
         "lo": "it / him",
-        "di": "I gave / say (imp)"
+        "di": "I gave"
       }
     },
     {
@@ -172,9 +172,9 @@
       "english": "Yesterday I gave it to him/her.",
       "wordMeanings": {
         "Ayer": "yesterday",
-        "se": "himself / herself / themselves",
+        "se": "to him / her / them",
         "la": "the / it (fem)",
-        "di": "I gave / say (imp)"
+        "di": "I gave"
       }
     },
     {
@@ -183,7 +183,7 @@
       "english": "Today I’ve given it to him/her.",
       "wordMeanings": {
         "Hoy": "today",
-        "se": "himself / herself / themselves",
+        "se": "to him / her / them",
         "lo": "it / him",
         "he": "I have",
         "dado": "given"
@@ -195,7 +195,7 @@
       "english": "Today I’ve given it to him/her.",
       "wordMeanings": {
         "Hoy": "today",
-        "se": "himself / herself / themselves",
+        "se": "to him / her / them",
         "la": "the / it (fem)",
         "he": "I have",
         "dado": "given"
@@ -206,7 +206,7 @@
       "spanish": "Se lo quiero dar.",
       "english": "I want to give it to him/her.",
       "wordMeanings": {
-        "Se": "himself / herself / themselves",
+        "Se": "to him / her / them",
         "lo": "it / him",
         "quiero": "I want",
         "dar": "to give"
@@ -226,7 +226,7 @@
       "spanish": "Se la voy a dar.",
       "english": "I’m going to give it to him/her.",
       "wordMeanings": {
-        "Se": "himself / herself / themselves",
+        "Se": "to him / her / them",
         "la": "the / it (fem)",
         "voy": "I go",
         "a": "to",
@@ -248,7 +248,7 @@
       "spanish": "Se los estamos dando.",
       "english": "We’re giving them to them.",
       "wordMeanings": {
-        "Se": "himself / herself / themselves",
+        "Se": "to him / her / them",
         "los": "the / them",
         "estamos": "we are",
         "dando": "giving"
@@ -260,7 +260,7 @@
       "english": "We’re giving them to them.",
       "wordMeanings": {
         "Estamos": "we are",
-        "dándoselos": "giving them to him/her"
+        "dándoselos": "giving them to them"
       }
     },
     {
@@ -269,7 +269,7 @@
       "english": "Don’t tell it to him/her.",
       "wordMeanings": {
         "No": "no / not",
-        "se": "himself / herself / themselves",
+        "se": "to him / her / them",
         "lo": "it / him",
         "digas": "say (subj)"
       }
@@ -287,7 +287,7 @@
       "spanish": "Se lo explico.",
       "english": "I explain it to him/her.",
       "wordMeanings": {
-        "Se": "himself / herself / themselves",
+        "Se": "to him / her / them",
         "lo": "it / him",
         "explico": "I explain"
       }
@@ -297,7 +297,7 @@
       "spanish": "Se la explico.",
       "english": "I explain it to him/her.",
       "wordMeanings": {
-        "Se": "himself / herself / themselves",
+        "Se": "to him / her / them",
         "la": "the / it (fem)",
         "explico": "I explain"
       }
@@ -363,7 +363,7 @@
     },
     "ustedes": {
       "mnemonic": "Think 'you-sted-es' — all of you!",
-      "explanation": "Formal/neutral 'you all' in Latin American Spanish."
+      "explanation": "In Spain this is formal only; everyday plural 'you all' is vosotros."
     },
     "hoy": {
       "mnemonic": "'Hoy! today!' — an exclamation for today.",
@@ -374,8 +374,8 @@
       "explanation": "Means 'yesterday'."
     },
     "di": {
-      "mnemonic": "Think 'dictate' — Say/Tell!",
-      "explanation": "Irregular tú command of 'decir'."
+      "mnemonic": "Think 'did give' — di, I gave.",
+      "explanation": "Preterite first person of 'dar': I gave. (Also the tú command of 'decir'.)"
     },
     "he": {
       "mnemonic": "'He' is the 'have' helper verb.",

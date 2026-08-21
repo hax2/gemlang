@@ -33,6 +33,14 @@
     "file": "review-1-2-3.json"
   },
   {
+    "id": "module-hay-vs-esta",
+    "title": "Grammar: 'Hay' vs. 'Está'",
+    "description": "Master the difference between 'hay' (there is/are) and 'está' (is located).",
+    "level": "Beginner",
+    "sentenceCount": 26,
+    "file": "module-hay-vs-esta.json"
+  },
+  {
     "id": "module-ser-vs-estar",
     "title": "Grammar: Ser vs. Estar I",
     "description": "Core ser/estar practice: identity, location, origin, and conditions.",
@@ -99,6 +107,30 @@
     "file": "review-4-5-6.json"
   },
   {
+    "id": "module-verb-tener",
+    "title": "Grammar: The Verb 'Tener'",
+    "description": "Deep practice of 'tener': age, possessions, feelings, and the 'tener que' structure.",
+    "level": "Beginner",
+    "sentenceCount": 30,
+    "file": "module-verb-tener.json"
+  },
+  {
+    "id": "module-verb-hacer",
+    "title": "Grammar: The Verb 'Hacer'",
+    "description": "Deep practice of 'hacer': the weather, everyday activities, and saying how long things have been happening.",
+    "level": "Beginner",
+    "sentenceCount": 27,
+    "file": "module-verb-hacer.json"
+  },
+  {
+    "id": "module-stem-changing",
+    "title": "Grammar: Stem-Changing Verbs",
+    "description": "Querer, poder, dormir and friends: verbs that change their vowel in most forms.",
+    "level": "Beginner",
+    "sentenceCount": 28,
+    "file": "module-stem-changing.json"
+  },
+  {
     "id": "module-7",
     "title": "Chapter 7: Reflexive Verbs",
     "description": "Daily routines and actions done to oneself.",
@@ -147,6 +179,22 @@
     "level": "Beginner",
     "sentenceCount": 15,
     "file": "review-7-8-9.json"
+  },
+  {
+    "id": "module-gustar-family",
+    "title": "Grammar: Gustar-Family Verbs",
+    "description": "Go beyond 'gustar': encantar, apetecer, doler, molestar, interesar, faltar and more.",
+    "level": "Beginner",
+    "sentenceCount": 26,
+    "file": "module-gustar-family.json"
+  },
+  {
+    "id": "module-ir-y-venir",
+    "title": "Grammar: Verb Focus: Ir and Venir",
+    "description": "'To go' vs 'to come': irregular forms, al/a la contractions, and choosing between them.",
+    "level": "Beginner",
+    "sentenceCount": 26,
+    "file": "module-ir-y-venir.json"
   },
   {
     "id": "module-10",

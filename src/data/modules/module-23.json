@@ -29,7 +29,7 @@
       "spanish": "Acaba de llegar.",
       "english": "He/She just arrived.",
       "wordMeanings": {
-        "Acaba": "just finished",
+        "Acaba": "(he/she) just finished",
         "de": "of / from",
         "llegar": "to arrive"
       }
@@ -69,7 +69,7 @@
       "spanish": "Acaba de comer.",
       "english": "He/She just ate.",
       "wordMeanings": {
-        "Acaba": "just finished",
+        "Acaba": "(he/she) just finished",
         "de": "of / from",
         "comer": "to eat"
       }
@@ -112,7 +112,7 @@
       "spanish": "Acaba de cerrar la ventana.",
       "english": "He/She just closed the window.",
       "wordMeanings": {
-        "Acaba": "just finished",
+        "Acaba": "(he/she) just finished",
         "de": "of / from",
         "cerrar": "to close",
         "la": "the / it (fem)",
@@ -184,7 +184,7 @@
         "Acabo": "I just finished",
         "de": "of / from",
         "ver": "to see",
-        "a": "to",
+        "a": "(personal a)",
         "Ana": "Ana"
       }
     },
@@ -207,7 +207,7 @@
         "Acabo": "I just finished",
         "de": "of / from",
         "llamar": "to call",
-        "a": "to",
+        "a": "(personal a)",
         "Luis": "Luis"
       }
     },
@@ -241,7 +241,7 @@
       "spanish": "Se lo acabo de dar.",
       "english": "I just gave it to her.",
       "wordMeanings": {
-        "Se": "himself / herself / themselves",
+        "Se": "to him/her",
         "lo": "it / him",
         "acabo": "I just finished",
         "de": "of / from",
@@ -267,7 +267,7 @@
       "spanish": "Se la acabo de dar.",
       "english": "I just gave it to him.",
       "wordMeanings": {
-        "Se": "himself / herself / themselves",
+        "Se": "to him/her",
         "la": "the / it (fem)",
         "acabo": "I just finished",
         "de": "of / from",

@@ -136,7 +136,7 @@
     {
       "id": "mporpara-s12",
       "spanish": "Viajamos para España hoy mismo.",
-      "english": "We are traveling for Spain this very day.",
+      "english": "We are traveling to Spain this very day.",
       "wordMeanings": {
         "Viajamos": "we travel/travelled",
         "para": "for/to (destination)",
@@ -188,7 +188,7 @@
     {
       "id": "mporpara-s16",
       "spanish": "Corrí por el lago unos treinta minutos.",
-      "english": "I ran by the lake for some thirty minutes.",
+      "english": "I ran by the lake for about thirty minutes.",
       "wordMeanings": {
         "Corrí": "I ran",
         "por": "by/for",
@@ -214,13 +214,13 @@
     },
     {
       "id": "mporpara-s18",
-      "spanish": "Me pagó cien dólares por el proyecto.",
-      "english": "He paid me a hundred dollars for the project.",
+      "spanish": "Me pagó cien euros por el proyecto.",
+      "english": "He paid me a hundred euros for the project.",
       "wordMeanings": {
         "Me": "me",
         "pagó": "paid",
         "cien": "a hundred",
-        "dólares": "dollars",
+        "euros": "euros",
         "por": "for (exchange)",
         "el": "the",
         "proyecto": "project"
@@ -283,8 +283,8 @@
     },
     {
       "id": "mporpara-s23",
-      "spanish": "Fui a la farmacia por mis medicinas.",
-      "english": "I went to the pharmacy for my medicines.",
+      "spanish": "Fui a la farmacia por mis medicamentos.",
+      "english": "I went to the pharmacy for my medications.",
       "wordMeanings": {
         "Fui": "I went",
         "a": "to",
@@ -292,7 +292,7 @@
         "farmacia": "pharmacy",
         "por": "for (to fetch/get)",
         "mis": "my",
-        "medicinas": "medicines"
+        "medicamentos": "medications"
       }
     },
     {

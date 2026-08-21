@@ -68,13 +68,13 @@
     },
     {
       "id": "mpvsi-s6",
-      "spanish": "Conocí a mi esposa en Madrid.",
+      "spanish": "Conocí a mi mujer en Madrid.",
       "english": "I met my wife in Madrid.",
       "wordMeanings": {
         "Conocí": "I met",
         "a": "to (personal a)",
         "mi": "my",
-        "esposa": "wife",
+        "mujer": "wife / woman",
         "en": "in",
         "Madrid": "Madrid"
       }
@@ -196,7 +196,7 @@
     {
       "id": "mpvsi-s16",
       "spanish": "Siempre íbamos al cine los domingos.",
-      "english": "We always went to the movies on Sundays.",
+      "english": "We always went to the cinema on Sundays.",
       "wordMeanings": {
         "Siempre": "always",
         "íbamos": "we used to go",
@@ -237,15 +237,15 @@
     },
     {
       "id": "mpvsi-s19",
-      "spanish": "Ustedes querían viajar pero no tenían dinero.",
-      "english": "You all wanted to travel but didn't have money.",
+      "spanish": "Vosotros queríais viajar pero no teníais dinero.",
+      "english": "You (plural) wanted to travel but didn't have money.",
       "wordMeanings": {
-        "Ustedes": "you all",
-        "querían": "wanted",
+        "Vosotros": "you (plural)",
+        "queríais": "wanted",
         "viajar": "to travel",
         "pero": "but",
         "no": "not",
-        "tenían": "had/used to have",
+        "teníais": "had",
         "dinero": "money"
       }
     },

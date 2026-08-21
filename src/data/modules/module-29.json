@@ -6,17 +6,6 @@
   "sentences": [
     {
       "id": "m29-s1",
-      "spanish": "¿A qué hora sale el próximo vuelo para Madrid?",
-      "english": "What time does the next flight to Madrid leave?",
-      "wordMeanings": {
-        "hora": "hour/time",
-        "sale": "leaves",
-        "próximo": "next",
-        "vuelo": "flight"
-      }
-    },
-    {
-      "id": "m29-s2",
       "spanish": "Tengo que facturar la maleta antes de ir a la puerta de embarque.",
       "english": "I have to check my suitcase before going to the boarding gate.",
       "wordMeanings": {
@@ -30,7 +19,7 @@
       }
     },
     {
-      "id": "m29-s3",
+      "id": "m29-s2",
       "spanish": "¿Me puede poner un asiento de pasillo, por favor?",
       "english": "Can you assign me an aisle seat, please?",
       "wordMeanings": {
@@ -39,14 +28,27 @@
       }
     },
     {
-      "id": "m29-s4",
-      "spanish": "El vuelo lleva dos horas de retraso por el mal tiempo.",
-      "english": "The flight is two hours delayed because of the bad weather.",
+      "id": "m29-s3",
+      "spanish": "¿A qué hora sale el próximo vuelo para Madrid?",
+      "english": "What time does the next flight to Madrid leave?",
       "wordMeanings": {
-        "lleva": "has / carries",
-        "retraso": "delay",
-        "por": "because of / for",
-        "tiempo": "weather"
+        "hora": "hour/time",
+        "sale": "leaves",
+        "próximo": "next",
+        "vuelo": "flight"
+      }
+    },
+    {
+      "id": "m29-s4",
+      "spanish": "Hay mucha cola en el control de seguridad esta mañana.",
+      "english": "There is a long queue at security this morning.",
+      "wordMeanings": {
+        "hay": "there is / are",
+        "mucha": "a lot of",
+        "cola": "queue",
+        "control": "control/check",
+        "seguridad": "security",
+        "mañana": "morning"
       }
     },
     {
@@ -61,37 +63,29 @@
     },
     {
       "id": "m29-s6",
-      "spanish": "¿Dónde puedo recoger mi equipaje?",
-      "english": "Where can I pick up my luggage?",
+      "spanish": "Prefiero viajar en clase business para tener más espacio.",
+      "english": "I prefer to travel in business class to have more space.",
       "wordMeanings": {
-        "recoger": "pick up",
-        "equipaje": "luggage"
+        "prefiero": "I prefer",
+        "viajar": "travel",
+        "clase": "class",
+        "business": "business",
+        "espacio": "space"
       }
     },
     {
       "id": "m29-s7",
-      "spanish": "Hay mucha cola en el control de seguridad esta mañana.",
-      "english": "There is a long queue at security this morning.",
+      "spanish": "El vuelo lleva dos horas de retraso por el mal tiempo.",
+      "english": "The flight has been delayed by two hours because of bad weather.",
       "wordMeanings": {
-        "hay": "there is / are",
-        "mucha": "a lot of",
-        "cola": "queue",
-        "control": "control/check",
-        "seguridad": "security",
-        "mañana": "morning"
+        "lleva": "has / carries",
+        "retraso": "delay",
+        "por": "because of / for",
+        "tiempo": "weather"
       }
     },
     {
       "id": "m29-s8",
-      "spanish": "¿Tiene algo que declarar en la aduana?",
-      "english": "Do you have anything to declare at customs?",
-      "wordMeanings": {
-        "declarar": "declare",
-        "aduana": "customs"
-      }
-    },
-    {
-      "id": "m29-s9",
       "spanish": "El avión está a punto de aterrizar en Madrid.",
       "english": "The plane is about to land in Madrid.",
       "wordMeanings": {
@@ -101,15 +95,21 @@
       }
     },
     {
-      "id": "m29-s10",
-      "spanish": "Prefiero viajar en clase business para tener más espacio.",
-      "english": "I prefer to travel in business class to have more space.",
+      "id": "m29-s9",
+      "spanish": "¿Dónde puedo recoger mi equipaje?",
+      "english": "Where can I pick up my luggage?",
       "wordMeanings": {
-        "prefiero": "I prefer",
-        "viajar": "travel",
-        "clase": "class",
-        "business": "business",
-        "espacio": "space"
+        "recoger": "pick up",
+        "equipaje": "luggage"
+      }
+    },
+    {
+      "id": "m29-s10",
+      "spanish": "¿Tiene algo que declarar en la aduana?",
+      "english": "Do you have anything to declare at customs?",
+      "wordMeanings": {
+        "declarar": "declare",
+        "aduana": "customs"
       }
     }
   ],

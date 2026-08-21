@@ -108,7 +108,7 @@
         "Si": "if",
         "vinieras": "came (imp subj)",
         "mañana": "tomorrow / morning",
-        "iríamos": "would go",
+        "iríamos": "we would go",
         "a": "to",
         "tomar": "to have / take",
         "un": "a",
@@ -328,7 +328,7 @@
       "english": "If I wanted to, I would say it.",
       "wordMeanings": {
         "Si": "if",
-        "quisiera": "I would like",
+        "quisiera": "wanted (imp subj)",
         "lo": "it",
         "diría": "would say"
       }
@@ -339,7 +339,7 @@
       "english": "If you wanted, I would open the door for you.",
       "wordMeanings": {
         "Si": "if",
-        "quisieras": "you would like",
+        "quisieras": "wanted (imp subj)",
         "te": "you / for you",
         "abriría": "would open",
         "la": "the / it (fem)",
@@ -362,14 +362,14 @@
     {
       "id": "m22-s29",
       "spanish": "Si hiciera sol, iríamos al centro.",
-      "english": "If it were sunny, we would go downtown.",
+      "english": "If it were sunny, we would go to the city centre.",
       "wordMeanings": {
         "Si": "if",
         "hiciera": "did / made (imp subj)",
         "sol": "sun",
-        "iríamos": "would go",
+        "iríamos": "we would go",
         "al": "to the",
-        "centro": "downtown"
+        "centro": "town centre"
       }
     },
     {
@@ -488,8 +488,8 @@
       "explanation": "Means 'sun'."
     },
     "centro": {
-      "mnemonic": "Same as English 'center' — downtown!",
-      "explanation": "Also means 'center'. 'Centro' = downtown area."
+      "mnemonic": "Same as English 'centre' — the town centre!",
+      "explanation": "Also means 'centre'. 'El centro' = the town centre."
     }
   }
 }

@@ -131,12 +131,12 @@
     },
     {
       "id": "s4-s10",
-      "spanish": "Luis lo toma y le da las gracias a Marta.",
+      "spanish": "Luis lo coge y le da las gracias a Marta.",
       "english": "Luis takes it and thanks Marta.",
       "wordMeanings": {
         "Luis": "Luis",
         "lo": "it (direct object)",
-        "toma": "takes",
+        "coge": "takes",
         "y": "and",
         "le": "to her (indirect object)",
         "da": "gives",

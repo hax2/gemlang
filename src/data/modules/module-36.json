@@ -28,7 +28,7 @@
         "coronel": "colonel",
         "Aureliano": "Aureliano",
         "Buendía": "Buendía",
-        "había": "had",
+        "había": "had (\"había de\" + inf. = was to)",
         "de": "of/to",
         "recordar": "to remember",
         "aquella": "that",
@@ -72,7 +72,7 @@
     {
       "id": "m36-s5",
       "spanish": "...y cañabrava construidas a la orilla de un río de aguas diáfanas.",
-      "english": "...and wild cane built on the bank of a river of clear waters.",
+      "english": "...and wild cane, built on the bank of a river of clear waters.",
       "wordMeanings": {
         "y": "and",
         "cañabrava": "wild cane",

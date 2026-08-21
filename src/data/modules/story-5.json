@@ -104,7 +104,7 @@
     },
     {
       "id": "s5-s8",
-      "spanish": "\"Viste ropa formal. No te pongas jeans.\"",
+      "spanish": "\"Viste ropa formal. No te pongas vaqueros.\"",
       "english": "\"Wear formal clothes. Don't put on jeans.\"",
       "wordMeanings": {
         "Viste": "wear (affirmative command - vestir)",
@@ -112,7 +112,7 @@
         "formal": "formal",
         "No": "don't",
         "te pongas": "put on (negative command + reflexive)",
-        "jeans": "jeans"
+        "vaqueros": "jeans"
       }
     },
     {

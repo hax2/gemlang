@@ -66,7 +66,7 @@
     {
       "id": "m2-s7",
       "spanish": "Estoy en el centro.",
-      "english": "I am downtown/in the center.",
+      "english": "I am downtown.",
       "wordMeanings": {
         "Estoy": "I am",
         "en": "in / on",
@@ -370,12 +370,11 @@
     },
     {
       "id": "m2-s34",
-      "spanish": "¿Dónde están ustedes?",
-      "english": "Where are you (plural)?",
+      "spanish": "¿Dónde estáis?",
+      "english": "Where are you all?",
       "wordMeanings": {
         "Dónde": "where",
-        "están": "are",
-        "ustedes": "you (plural)"
+        "estáis": "you all are"
       }
     },
     {
@@ -526,7 +525,7 @@
       }
     }
   ],
-  "grammarExplanation": "In Spanish, 'estar' is used to express locations and states. Unlike 'ser' (characteristics/identity), 'estar' tells WHERE someone is or HOW they feel right now.\n\n• Estoy = I am (location/state)\n• Estás = You are\n• Está = He/She is\n• Estamos = We are\n• Están = They are\n\nExample: 'Estoy en casa' = I am at home, 'Estoy feliz' = I am happy.\n\nYou'll naturally figure out the difference between 'ser' and 'estar' over time as you pay attention to it!",
+  "grammarExplanation": "In Spanish, 'estar' is used to express locations and states. Unlike 'ser' (characteristics/identity), 'estar' tells WHERE someone is or HOW they feel right now.\n\n• Estoy = I am (location/state)\n• Estás = You are\n• Está = He/She is\n• Estamos = We are\n• Estáis = You all are (Spain)\n• Están = They are\n\nExample: 'Estoy en casa' = I am at home, 'Estoy feliz' = I am happy.\n\nYou'll naturally figure out the difference between 'ser' and 'estar' over time as you pay attention to it!",
   "vocabulary": {
     "dónde": {
       "mnemonic": "Think 'done-day' — where?",
@@ -614,7 +613,7 @@
     },
     "ustedes": {
       "mnemonic": "Think 'you-sted-es' — all of you!",
-      "explanation": "Formal/neutral 'you all' in Latin American Spanish."
+      "explanation": "In Spain this is formal only; everyday plural 'you all' is vosotros."
     }
   }
 }

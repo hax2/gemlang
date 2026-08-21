@@ -176,11 +176,10 @@
     },
     {
       "id": "m4-s17",
-      "spanish": "¿Tienen ustedes tiempo?",
-      "english": "Do you (plural) have time?",
+      "spanish": "¿Tenéis tiempo?",
+      "english": "Do you all have time?",
       "wordMeanings": {
-        "Tienen": "have",
-        "ustedes": "you (plural)",
+        "Tenéis": "you all have",
         "tiempo": "time"
       }
     },
@@ -304,26 +303,6 @@
     },
     {
       "id": "m4-s30",
-      "spanish": "Tengo dieciocho años.",
-      "english": "I am eighteen years old.",
-      "wordMeanings": {
-        "Tengo": "I have",
-        "dieciocho": "eighteen",
-        "años": "years"
-      }
-    },
-    {
-      "id": "m4-s31",
-      "spanish": "Tengo veinte años.",
-      "english": "I am twenty years old.",
-      "wordMeanings": {
-        "Tengo": "I have",
-        "veinte": "twenty",
-        "años": "years"
-      }
-    },
-    {
-      "id": "m4-s32",
       "spanish": "¿Cuántos años tienes?",
       "english": "How old are you?",
       "wordMeanings": {
@@ -333,12 +312,32 @@
       }
     },
     {
-      "id": "m4-s33",
+      "id": "m4-s31",
       "spanish": "Tengo dieciséis años.",
       "english": "I am sixteen years old.",
       "wordMeanings": {
         "Tengo": "I have",
         "dieciséis": "sixteen",
+        "años": "years"
+      }
+    },
+    {
+      "id": "m4-s32",
+      "spanish": "Tengo dieciocho años.",
+      "english": "I am eighteen years old.",
+      "wordMeanings": {
+        "Tengo": "I have",
+        "dieciocho": "eighteen",
+        "años": "years"
+      }
+    },
+    {
+      "id": "m4-s33",
+      "spanish": "Tengo veinte años.",
+      "english": "I am twenty years old.",
+      "wordMeanings": {
+        "Tengo": "I have",
+        "veinte": "twenty",
         "años": "years"
       }
     },
@@ -411,7 +410,7 @@
       "wordMeanings": {
         "Tengo": "I have",
         "que": "to",
-        "irme": "go myself",
+        "irme": "to go / to leave",
         "ahora": "now"
       }
     },
@@ -422,7 +421,7 @@
       "wordMeanings": {
         "No": "not",
         "tengo": "I have",
-        "ni": "nor / even",
+        "ni": "nor / not even",
         "idea": "idea"
       }
     },
@@ -500,7 +499,7 @@
       }
     }
   ],
-  "grammarExplanation": "The verb 'tener' means 'to have,' but in Spanish it also expresses age, hunger, thirst, and more.\n\n• Tengo = I have\n• Tienes = You have\n• Tiene = He/She has\n• Tenemos = We have\n• Tienen = They have\n\nSpecial expressions:\n• Tengo hambre = I am hungry (lit. 'I have hunger')\n• Tengo sed = I am thirsty\n• Tengo 20 años = I am 20 years old",
+  "grammarExplanation": "The verb 'tener' means 'to have,' but in Spanish it also expresses age, hunger, thirst, and more.\n\n• Tengo = I have\n• Tienes = You have\n• Tiene = He/She has\n• Tenemos = We have\n• Tenéis = You all have (Spain)\n• Tienen = They have\n\nSpecial expressions:\n• Tengo hambre = I am hungry (lit. 'I have hunger')\n• Tengo sed = I am thirsty\n• Tengo 20 años = I am 20 years old",
   "vocabulary": {
     "tengo": {
       "mnemonic": "Think 'tango' — I have a tango partner!",
@@ -544,7 +543,7 @@
     },
     "ustedes": {
       "mnemonic": "Think 'you-sted-es' — all of you!",
-      "explanation": "Formal/neutral 'you all' in Latin American Spanish."
+      "explanation": "In Spain this is formal only; everyday plural 'you all' is vosotros."
     },
     "tiempo": {
       "mnemonic": "Think 'tempo' — time and rhythm.",

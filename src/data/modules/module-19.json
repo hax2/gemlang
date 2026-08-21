@@ -66,7 +66,7 @@
       "wordMeanings": {
         "Espero": "I wait / hope",
         "que": "that / than",
-        "abras": "open (subj/inf)",
+        "abras": "open (subj)",
         "la": "the / it (fem)",
         "puerta": "door"
       }
@@ -271,7 +271,7 @@
         "Espero": "I wait / hope",
         "que": "that / than",
         "te": "you / to you",
-        "sientes": "you feel",
+        "sientes": "sit down (subj)",
         "aquí": "here"
       }
     },
@@ -325,7 +325,7 @@
         "Espero": "I hope",
         "que": "that / than",
         "todo": "all / everything",
-        "salga": "goes out (subj)",
+        "salga": "turn out (subj)",
         "bien": "well/good"
       }
     },

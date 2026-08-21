@@ -315,7 +315,7 @@
       }
     },
     {
-      "id": "m9-s28",
+      "id": "m9-s27",
       "spanish": "Voy a llamar a Ana.",
       "english": "I am going to call Ana.",
       "wordMeanings": {
@@ -326,7 +326,7 @@
       }
     },
     {
-      "id": "m9-s29",
+      "id": "m9-s28",
       "spanish": "Vas a llamar a Luis.",
       "english": "You are going to call Luis.",
       "wordMeanings": {
@@ -337,7 +337,7 @@
       }
     },
     {
-      "id": "m9-s30",
+      "id": "m9-s29",
       "spanish": "Va a llamar a Marta.",
       "english": "He/She is going to call Marta.",
       "wordMeanings": {
@@ -348,7 +348,7 @@
       }
     },
     {
-      "id": "m9-s31",
+      "id": "m9-s30",
       "spanish": "¿Vas a venir?",
       "english": "Are you going to come?",
       "wordMeanings": {
@@ -358,7 +358,7 @@
       }
     },
     {
-      "id": "m9-s32",
+      "id": "m9-s31",
       "spanish": "Sí, voy a venir.",
       "english": "Yes, I am going to come.",
       "wordMeanings": {
@@ -369,7 +369,7 @@
       }
     },
     {
-      "id": "m9-s33",
+      "id": "m9-s32",
       "spanish": "No, no voy a venir.",
       "english": "No, I am not going to come.",
       "wordMeanings": {
@@ -380,7 +380,7 @@
       }
     },
     {
-      "id": "m9-s34",
+      "id": "m9-s33",
       "spanish": "Voy a quedarme en casa.",
       "english": "I am going to stay at home.",
       "wordMeanings": {
@@ -392,7 +392,7 @@
       }
     },
     {
-      "id": "m9-s35",
+      "id": "m9-s34",
       "spanish": "No voy a quedarme en casa.",
       "english": "I am not going to stay at home.",
       "wordMeanings": {
@@ -405,7 +405,7 @@
       }
     },
     {
-      "id": "m9-s36",
+      "id": "m9-s35",
       "spanish": "¿Te gusta el café? Sí, me gusta.",
       "english": "Do you like coffee? Yes, I do.",
       "wordMeanings": {
@@ -441,7 +441,7 @@
       "id": "m9-s-colloq2"
     }
   ],
-  "grammarExplanation": "The near future is formed with 'ir + a + infinitive.' It translates to 'going to do something.'\n\nConjugate 'ir' (to go):\n• Voy = I go\n• Vas = You go\n• Va = He/She goes\n• Vamos = We go\n• Van = They go\n\nThen add 'a + infinitive':\n• Voy a estudiar = I'm going to study\n• Vas a comer = You're going to eat",
+  "grammarExplanation": "The near future is formed with 'ir + a + infinitive.' It translates to 'going to do something.'\n\nConjugate 'ir' (to go):\n• Voy = I go\n• Vas = You go\n• Va = He/She goes\n• Vamos = We go\n• Vais = You all go (Spain)\n• Van = They go\n\nThen add 'a + infinitive':\n• Voy a estudiar = I'm going to study\n• Vas a comer = You're going to eat",
   "vocabulary": {
     "voy": {
       "mnemonic": "Think 'voyage' — I go!",

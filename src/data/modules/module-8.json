@@ -189,14 +189,14 @@
     {
       "id": "m8-s17",
       "spanish": "A Luis le gusta el fútbol.",
-      "english": "Luis likes soccer.",
+      "english": "Luis likes football.",
       "wordMeanings": {
         "A": "to",
         "Luis": "Luis",
         "le": "to him / her",
         "gusta": "likes",
         "el": "the",
-        "fútbol": "soccer"
+        "fútbol": "football"
       }
     },
     {
@@ -295,7 +295,7 @@
       }
     },
     {
-      "id": "m8-s27",
+      "id": "m8-s26",
       "spanish": "¿A quién le gusta el café?",
       "english": "Who likes coffee?",
       "wordMeanings": {
@@ -308,7 +308,7 @@
       }
     },
     {
-      "id": "m8-s28",
+      "id": "m8-s27",
       "spanish": "A mí me gusta el café.",
       "english": "I like coffee.",
       "wordMeanings": {
@@ -321,7 +321,7 @@
       }
     },
     {
-      "id": "m8-s29",
+      "id": "m8-s28",
       "spanish": "A ti te gusta el café.",
       "english": "You like coffee.",
       "wordMeanings": {
@@ -334,7 +334,7 @@
       }
     },
     {
-      "id": "m8-s30",
+      "id": "m8-s29",
       "spanish": "Me gusta este libro.",
       "english": "I like this book.",
       "wordMeanings": {
@@ -345,7 +345,7 @@
       }
     },
     {
-      "id": "m8-s31",
+      "id": "m8-s30",
       "spanish": "No me gusta ese libro.",
       "english": "I don't like that book.",
       "wordMeanings": {
@@ -357,7 +357,7 @@
       }
     },
     {
-      "id": "m8-s32",
+      "id": "m8-s31",
       "spanish": "Me gusta vivir aquí.",
       "english": "I like living here.",
       "wordMeanings": {
@@ -368,7 +368,7 @@
       }
     },
     {
-      "id": "m8-s33",
+      "id": "m8-s32",
       "spanish": "Me gusta estar en casa.",
       "english": "I like being at home.",
       "wordMeanings": {
@@ -380,7 +380,7 @@
       }
     },
     {
-      "id": "m8-s34",
+      "id": "m8-s33",
       "spanish": "Me gusta estar en el café.",
       "english": "I like being in the café.",
       "wordMeanings": {
@@ -393,7 +393,7 @@
       }
     },
     {
-      "id": "m8-s35",
+      "id": "m8-s34",
       "spanish": "¿Te gusta trabajar en el centro?",
       "english": "Do you like working downtown?",
       "wordMeanings": {
@@ -406,7 +406,7 @@
       }
     },
     {
-      "id": "m8-s36",
+      "id": "m8-s35",
       "spanish": "Sí, me gusta trabajar en el centro.",
       "english": "Yes, I like working downtown.",
       "wordMeanings": {
@@ -420,7 +420,7 @@
       }
     },
     {
-      "id": "m8-s37",
+      "id": "m8-s36",
       "spanish": "No, no me gusta trabajar en el centro.",
       "english": "No, I don't like working downtown.",
       "wordMeanings": {
@@ -434,7 +434,7 @@
       }
     },
     {
-      "id": "m8-s38",
+      "id": "m8-s37",
       "spanish": "Me gustan los cafés pequeños.",
       "english": "I like small cafés.",
       "wordMeanings": {
@@ -446,7 +446,7 @@
       }
     },
     {
-      "id": "m8-s39",
+      "id": "m8-s38",
       "spanish": "Nos gustan las casas grandes.",
       "english": "We like big houses.",
       "wordMeanings": {
@@ -458,7 +458,7 @@
       }
     },
     {
-      "id": "m8-s40",
+      "id": "m8-s39",
       "spanish": "A Ana le gustan los libros.",
       "english": "Ana likes books.",
       "wordMeanings": {
@@ -471,7 +471,7 @@
       }
     },
     {
-      "id": "m8-s41",
+      "id": "m8-s40",
       "spanish": "A Luis le gustan las fotos.",
       "english": "Luis likes photos.",
       "wordMeanings": {
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "m8-s42",
+      "id": "m8-s41",
       "spanish": "A Marta le gusta el café.",
       "english": "Marta likes coffee.",
       "wordMeanings": {
@@ -497,7 +497,7 @@
       }
     },
     {
-      "id": "m8-s44",
+      "id": "m8-s42",
       "spanish": "Me gusta estudiar por la mañana.",
       "english": "I like studying in the morning.",
       "wordMeanings": {
@@ -510,7 +510,7 @@
       }
     },
     {
-      "id": "m8-s45",
+      "id": "m8-s43",
       "spanish": "Me gusta escuchar y repetir.",
       "english": "I like listening and repeating.",
       "wordMeanings": {
@@ -537,7 +537,7 @@
       "english": "I don't mind / I don't care.",
       "wordMeanings": {
         "A": "to",
-        "mí": "me",
+        "mí": "me (prep)",
         "me": "to me",
         "da": "gives",
         "igual": "equal/same"
@@ -545,7 +545,7 @@
       "id": "m8-s-colloq2"
     }
   ],
-  "grammarExplanation": "The verb 'gustar' works differently from English. It literally means 'to please,' so the thing you like is the SUBJECT:\n\n• Me gusta el café = Coffee pleases me (I like coffee)\n• Me gustan los libros = Books please me (I like books)\n\nUse 'gusta' with singular nouns or infinitives, 'gustan' with plural nouns.\n\nIndirect object pronouns: me, te, le, nos, les\n• 'A + name/pronoun' can clarify who: 'A Ana le gusta la música.'",
+  "grammarExplanation": "The verb 'gustar' works differently from English. It literally means 'to please,' so the thing you like is the SUBJECT:\n\n• Me gusta el café = Coffee pleases me (I like coffee)\n• Me gustan los libros = Books please me (I like books)\n\nUse 'gusta' with singular nouns or infinitives, 'gustan' with plural nouns.\n\nIndirect object pronouns: me, te, le, nos, os, les\n• 'A + name/pronoun' can clarify who: 'A Ana le gusta la música.'",
   "vocabulary": {
     "gusta": {
       "mnemonic": "Think 'gusto' — 'with gusto, I like it!'",
