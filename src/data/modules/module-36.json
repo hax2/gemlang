@@ -1,6 +1,6 @@
 {
   "id": "module-36",
-  "title": "Literature: Cien Años de Soledad",
+  "title": "📖 Reading: Cien Años de Soledad",
   "description": "The iconic opening of Gabriel García Márquez's masterpiece.",
   "level": "Advanced",
   "sentences": [
@@ -129,5 +129,22 @@
       "mnemonic": "'Rio Grande' — río = river!",
       "explanation": "Means 'river'."
     }
-  }
+  },
+  "type": "story",
+  "storyIntro": "Read for meaning first. This enrichment reading recycles familiar grammar while exposing you to literary Spanish; unfamiliar words are support vocabulary, not required mastery targets.",
+  "learningTargets": [
+    "muchos",
+    "años",
+    "después",
+    "había",
+    "tarde",
+    "conocer",
+    "de",
+    "el",
+    "a",
+    "era",
+    "veinte",
+    "padre"
+  ],
+  "cefr": "C1"
 }

@@ -2,7 +2,7 @@
   "id": "module-35",
   "title": "Dialogue: At the Café",
   "description": "A conversation between two friends ordering coffee.",
-  "level": "Intermediate",
+  "level": "Beginner",
   "sentences": [
     {
       "id": "m35-s1",
@@ -87,16 +87,13 @@
     },
     {
       "id": "m35-s7",
-      "spanish": "—Camarero, la cuenta cuando pueda, por favor.",
-      "english": "—Waiter! The check when you can, please.",
+      "spanish": "—Camarero, la cuenta, por favor.",
+      "english": "—Waiter, the bill, please.",
       "wordMeanings": {
-        "favor": "favor",
-        "la": "the",
-        "cuenta": "check/bill",
-        "cuando": "when",
-        "pueda": "can (subjunctive)",
         "Camarero": "waiter",
-        "por": "for"
+        "cuenta": "bill",
+        "por": "for",
+        "favor": "favor"
       }
     },
     {
@@ -197,5 +194,21 @@
       "mnemonic": "Think 'when-do' — when.",
       "explanation": "Question form: ¿cuándo?"
     }
-  }
+  },
+  "learningTargets": [
+    "poco",
+    "vas",
+    "pedir",
+    "creo",
+    "verde",
+    "hace",
+    "frío",
+    "invierno",
+    "favor",
+    "cuenta",
+    "preocupes"
+  ],
+  "type": "story",
+  "storyIntro": "Follow the café conversation from greeting to ordering and paying. Focus on understanding the exchange as a whole; the recap contains only the key phrases.",
+  "cefr": "A1"
 }

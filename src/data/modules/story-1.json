@@ -156,5 +156,21 @@
       "mnemonic": "Think 'sympathetic' — someone friendly and nice.",
       "explanation": "Means 'nice/friendly'. Used with ser (personality trait)."
     }
-  }
+  },
+  "learningTargets": [
+    "es",
+    "soy",
+    "escuela",
+    "estudiante",
+    "buenos",
+    "días",
+    "estoy",
+    "grande",
+    "hola",
+    "está",
+    "amigo",
+    "hasta",
+    "luego"
+  ],
+  "cefr": "A1"
 }

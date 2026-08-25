@@ -2,7 +2,7 @@
   "id": "module-17",
   "title": "Chapter 17: Negative Commands",
   "description": "Learn to say 'Don't do' something.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "m17-s1",
@@ -357,5 +357,23 @@
       "mnemonic": "Think 'tardy' — late!",
       "explanation": "Means 'late' or 'afternoon'."
     }
-  }
+  },
+  "learningTargets": [
+    "digas",
+    "hables",
+    "coma",
+    "vivas",
+    "venga",
+    "en",
+    "a",
+    "eso",
+    "des",
+    "tan",
+    "espere",
+    "abras",
+    "mires",
+    "mire",
+    "puerta"
+  ],
+  "cefr": "B1"
 }

@@ -2,7 +2,7 @@
   "id": "module-preterite-vs-present-perfect",
   "title": "Grammar: Preterite vs. Present Perfect",
   "description": "Learn when to use the simple past versus the 'have done' past, especially important in Spain.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "mpvspp-s1",
@@ -385,5 +385,23 @@
       "mnemonic": "City.",
       "explanation": "Means 'city'."
     }
-  }
+  },
+  "learningTargets": [
+    "he",
+    "ha",
+    "hemos",
+    "has",
+    "comido",
+    "comí",
+    "semana",
+    "hace",
+    "estado",
+    "pasado",
+    "mes",
+    "correo",
+    "visto",
+    "vi",
+    "tarde"
+  ],
+  "cefr": "A2"
 }

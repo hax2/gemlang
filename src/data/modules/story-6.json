@@ -3,7 +3,7 @@
   "type": "story",
   "title": "📖 Story: What Would You Do?",
   "description": "A story using conditionals, acabar de, and llevar + gerund.",
-  "level": "Beginner",
+  "level": "Advanced",
   "storyIntro": "You've learned real conditionals (si + present), hypothetical conditionals (si + imperfect subjunctive), 'acabar de' for just-finished actions, and 'llevar + gerund' for ongoing durations.\n\nNow Ana and Marta are discussing a big life decision. Watch how conditionals express different levels of certainty!",
   "sentences": [
     {
@@ -200,5 +200,22 @@
       "mnemonic": "Think 'adventure' — exact cognate!",
       "explanation": "Means 'adventure'."
     }
-  }
+  },
+  "learningTargets": [
+    "dinero",
+    "cambia",
+    "lleva",
+    "tres",
+    "años",
+    "trabajando",
+    "recibir",
+    "trabajo",
+    "ciudad",
+    "tuviera",
+    "oferta",
+    "empresa",
+    "acaba de",
+    "si"
+  ],
+  "cefr": "B2"
 }

@@ -613,5 +613,23 @@
       "mnemonic": "Think 'grand' — something grand is big!",
       "explanation": "Means 'big/large'. Same for masc/fem."
     }
-  }
+  },
+  "learningTargets": [
+    "tengo",
+    "tiene",
+    "tienes",
+    "tenemos",
+    "en",
+    "hambre",
+    "años",
+    "dos",
+    "tiempo",
+    "dinero",
+    "hermanos",
+    "libros",
+    "coche",
+    "problema",
+    "idea"
+  ],
+  "cefr": "A1"
 }

@@ -2,7 +2,7 @@
   "id": "module-12",
   "title": "Chapter 12: The Present Perfect",
   "description": "Talk about what you 'have done'.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "m12-s1",
@@ -685,5 +685,23 @@
       "mnemonic": "Think 'ante' (before in poker).",
       "explanation": "Means 'before'."
     }
-  }
+  },
+  "learningTargets": [
+    "he",
+    "has",
+    "ha",
+    "hemos",
+    "hablado",
+    "comido",
+    "ido",
+    "vivido",
+    "estudiado",
+    "trabajado",
+    "comprado",
+    "buscado",
+    "abierto",
+    "escrito",
+    "café"
+  ],
+  "cefr": "A2"
 }

@@ -1,13 +1,20 @@
 {
   "id": "review-7-8-9",
-  "title": "🔄 Review: Chapters 7, 8, 9",
-  "description": "Mixed practice from Reflexive Verbs, Expressing Likes, The Near Future.",
+  "title": "🔄 A1 Review: Routines & Everyday Life",
+  "description": "Spiral review of routines, likes, home, shopping, food, movement, and the near future.",
   "level": "Beginner",
   "type": "review",
   "reviewsModules": [
     "module-7",
     "module-8",
-    "module-9"
+    "module-9",
+    "module-42",
+    "module-41",
+    "module-40",
+    "module-31",
+    "module-35",
+    "module-ir-y-venir",
+    "module-ser-vs-estar-3"
   ],
   "sentences": [
     {
@@ -180,7 +187,92 @@
         "sienta": "sits / feels",
         "aquí": "here"
       }
+    },
+    {
+      "id": "review-7-8-9-spiral-16",
+      "spanish": "Mi amigo practica la guitarra en su tiempo libre.",
+      "english": "My friend practices the guitar in his free time.",
+      "wordMeanings": {
+        "amigo": "friend",
+        "guitarra": "guitar",
+        "tiempo libre": "free time",
+        "practica": "practices"
+      }
+    },
+    {
+      "id": "review-7-8-9-spiral-17",
+      "spanish": "Mi madre ordena la cocina para los invitados.",
+      "english": "My mother organizes the kitchen for the guests.",
+      "wordMeanings": {
+        "madre": "mother",
+        "ordena": "organizes",
+        "cocina": "kitchen",
+        "invitados": "guests"
+      }
+    },
+    {
+      "id": "review-7-8-9-spiral-18",
+      "spanish": "La mujer busca unos zapatos en el centro comercial.",
+      "english": "The woman looks for some shoes in the shopping centre.",
+      "wordMeanings": {
+        "mujer": "woman",
+        "busca": "looks for",
+        "zapatos": "shoes",
+        "centro comercial": "shopping centre"
+      }
+    },
+    {
+      "id": "review-7-8-9-spiral-19",
+      "spanish": "Quisiera reservar una mesa para dos personas para esta noche.",
+      "english": "I would like to reserve a table for two people for tonight.",
+      "wordMeanings": {
+        "quisiera": "I would like",
+        "reservar": "to reserve",
+        "mesa": "table",
+        "noche": "night"
+      }
+    },
+    {
+      "id": "review-7-8-9-spiral-20",
+      "spanish": "—¡Hola, Carlos! ¿Cómo estás?",
+      "english": "—Hello, Carlos! How are you?",
+      "wordMeanings": {
+        "Hola": "hello",
+        "Carlos": "Carlos",
+        "Cómo": "how",
+        "estás": "are you"
+      }
+    },
+    {
+      "id": "review-7-8-9-spiral-21",
+      "spanish": "Voy al gimnasio tres días por semana.",
+      "english": "I go to the gym three days a week.",
+      "wordMeanings": {
+        "Voy": "I go",
+        "al": "to the",
+        "gimnasio": "gym",
+        "días": "days",
+        "por": "per",
+        "semana": "week"
+      }
     }
   ],
-  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 7: Reflexive Verbs\n• Chapter 8: Expressing Likes\n• Chapter 9: The Near Future\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!"
+  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 7: Reflexive Verbs\n• Chapter 8: Expressing Likes\n• Chapter 9: The Near Future\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!",
+  "learningTargets": [
+    "tiempo libre",
+    "practica",
+    "guitarra",
+    "amigo",
+    "cocina",
+    "madre",
+    "invitados",
+    "zapatos",
+    "mujer",
+    "centro comercial",
+    "reservar",
+    "noche",
+    "vas",
+    "voy"
+  ],
+  "cefr": "A1"
 }

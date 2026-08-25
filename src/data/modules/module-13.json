@@ -2,7 +2,7 @@
   "id": "module-13",
   "title": "Chapter 13: Direct Object Pronouns",
   "description": "Replace nouns with 'lo, la, los, las'.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "m13-s1",
@@ -515,5 +515,23 @@
       "mnemonic": "Think 'tango' — I have a tango partner!",
       "explanation": "First person of 'tener' (to have). Irregular."
     }
-  }
+  },
+  "learningTargets": [
+    "veo",
+    "compro",
+    "quiero",
+    "compraste",
+    "tengo",
+    "llaves",
+    "mesa",
+    "busco",
+    "abrí",
+    "ves",
+    "leyendo",
+    "escribiendo",
+    "encuentro",
+    "libro",
+    "tienes"
+  ],
+  "cefr": "A2"
 }

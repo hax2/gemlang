@@ -327,7 +327,9 @@ def main() -> None:
     client_secret_path = Path(args.client_secret) if args.client_secret else None
     if client_secret_path and not client_secret_path.is_absolute():
         client_secret_path = ROOT / client_secret_path
-    if not client_secret_path:
+    # Prefer the configured API key over an auto-discovered OAuth client file.
+    # An explicit --client-secret still opts into OAuth.
+    if not client_secret_path and not os.environ.get(API_KEY_ENV):
         client_secrets = sorted(ROOT.glob("client_secret*.json"))
         client_secret_path = client_secrets[0] if client_secrets else None
 

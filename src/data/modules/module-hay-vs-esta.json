@@ -337,5 +337,23 @@
       "mnemonic": "Traffic jam on the way to traffic-oh.",
       "explanation": "Traffic."
     }
-  }
+  },
+  "learningTargets": [
+    "hay",
+    "está",
+    "están",
+    "libro",
+    "nevera",
+    "supermercado",
+    "había",
+    "pan",
+    "carta",
+    "buena",
+    "leche",
+    "muchos",
+    "mesa",
+    "mucho",
+    "antes"
+  ],
+  "cefr": "A1"
 }

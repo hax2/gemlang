@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './Onboarding.css';
 
 const LEVEL_OPTIONS = [
-  { name: 'Beginner', description: 'Start with core phrases and foundations' },
-  { name: 'Intermediate', description: 'Build fluency with richer grammar' },
-  { name: 'Advanced', description: 'Practice nuance and complex structures' },
+  { name: 'Beginner', description: 'A1 · Core phrases and everyday foundations' },
+  { name: 'Intermediate', description: 'A2–B1 · Narration and richer communication' },
+  { name: 'Advanced', description: 'B2–C1 · Complex structures and literature' },
 ];
 
 const Onboarding = ({ modules, onComplete }) => {
@@ -78,7 +78,9 @@ const Onboarding = ({ modules, onComplete }) => {
                     aria-pressed={selectedModule === m.id}
                   >
                     <span>{m.title}</span>
-                    <small>{m.level} · {m.sentenceCount} sentences</small>
+                    <small>
+                      {m.level}{m.cefr ? ` · ${m.cefr}` : ''} · {m.sentenceCount} sentences
+                    </small>
                   </button>
                 ))}
               </div>

@@ -195,5 +195,21 @@
       "mnemonic": "Think 'a-yoo-da' — I need your aid!",
       "explanation": "Means 'help'. From verb 'ayudar' (to help)."
     }
-  }
+  },
+  "learningTargets": [
+    "busca",
+    "sofá",
+    "gracias",
+    "casa",
+    "cocina",
+    "está",
+    "llama",
+    "estaba",
+    "ayuda",
+    "teléfono",
+    "lo",
+    "no",
+    "le"
+  ],
+  "cefr": "A2"
 }

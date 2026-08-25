@@ -2,7 +2,7 @@
   "id": "module-20",
   "title": "Chapter 20: Subjunctive: Importance",
   "description": "Use impersonal expressions like 'Es importante que'.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "m20-s1",
@@ -447,5 +447,23 @@
       "mnemonic": "'Las ladies' — them (feminine).",
       "explanation": "Direct object pronoun."
     }
-  }
+  },
+  "learningTargets": [
+    "es",
+    "importante",
+    "escuches",
+    "hables",
+    "estudies",
+    "lo",
+    "me",
+    "calma",
+    "amable",
+    "estés",
+    "tiempo",
+    "digas",
+    "des",
+    "llegues",
+    "tengas"
+  ],
+  "cefr": "B1"
 }

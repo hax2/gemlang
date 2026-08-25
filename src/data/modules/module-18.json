@@ -2,7 +2,7 @@
   "id": "module-18",
   "title": "Chapter 18: Subjunctive: Desires",
   "description": "Express what you want others to do using 'Quiero que'.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "m18-s1",
@@ -416,5 +416,23 @@
       "mnemonic": "'Los' = them (masculine plural).",
       "explanation": "Direct object pronoun."
     }
-  }
+  },
+  "learningTargets": [
+    "quiero",
+    "hables",
+    "quieres",
+    "comas",
+    "vivas",
+    "estudies",
+    "trabajes",
+    "hable",
+    "llegues",
+    "quedes",
+    "cierres",
+    "esperes",
+    "escuches",
+    "vengas",
+    "vayas"
+  ],
+  "cefr": "B1"
 }

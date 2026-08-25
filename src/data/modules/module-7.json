@@ -614,5 +614,23 @@
       "mnemonic": "Same as English 'café' — coffee!",
       "explanation": "Means 'coffee' or 'café'."
     }
-  }
+  },
+  "learningTargets": [
+    "nos",
+    "temprano",
+    "manos",
+    "ducho",
+    "levanto",
+    "acuesto",
+    "tarde",
+    "llamas",
+    "llama",
+    "rápido",
+    "viste",
+    "casa",
+    "llamo",
+    "lavo",
+    "visto"
+  ],
+  "cefr": "A1"
 }

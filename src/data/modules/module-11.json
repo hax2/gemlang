@@ -2,7 +2,7 @@
   "id": "module-11",
   "title": "Chapter 11: The Imperfect Tense",
   "description": "Describe ongoing past actions and habits.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "m11-s1",
@@ -611,5 +611,23 @@
       "mnemonic": "Think 'circa' — approximately near.",
       "explanation": "'Cerca de' = near/close to."
     }
-  }
+  },
+  "learningTargets": [
+    "trabajaba",
+    "estudiaba",
+    "era",
+    "vivía",
+    "comía",
+    "hablaba",
+    "estaba",
+    "trabajabas",
+    "siempre",
+    "escuchaba",
+    "tenía",
+    "mientras",
+    "bebía",
+    "estabas",
+    "esperaba"
+  ],
+  "cefr": "A2"
 }

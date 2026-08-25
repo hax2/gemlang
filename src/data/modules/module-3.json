@@ -704,5 +704,23 @@
       "mnemonic": "'Free-oh, it's freezing!'",
       "explanation": "'Tener frío' = to be cold."
     }
-  }
+  },
+  "learningTargets": [
+    "es",
+    "está",
+    "son",
+    "grande",
+    "están",
+    "estoy",
+    "pequeño",
+    "escuela",
+    "mesa",
+    "nuevo",
+    "nuevos",
+    "pequeña",
+    "nueva",
+    "nuevas",
+    "casa"
+  ],
+  "cefr": "A1"
 }

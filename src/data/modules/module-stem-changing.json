@@ -314,5 +314,23 @@
       "mnemonic": "In fashion = en moda.",
       "explanation": "Fashion. Estar de moda = to be trendy."
     }
-  }
+  },
+  "learningTargets": [
+    "quiero",
+    "quieres",
+    "quiere",
+    "puedo",
+    "puedes",
+    "prefiero",
+    "venir",
+    "cenar",
+    "esperar",
+    "aprender",
+    "francés",
+    "es",
+    "casa",
+    "está",
+    "café"
+  ],
+  "cefr": "A1"
 }

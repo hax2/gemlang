@@ -282,5 +282,23 @@
       "mnemonic": "Players juggle the ball.",
       "explanation": "Players (team sports)."
     }
-  }
+  },
+  "learningTargets": [
+    "encanta",
+    "apetece",
+    "gusta",
+    "gustan",
+    "duele",
+    "gustaría",
+    "solo",
+    "centro",
+    "tarde",
+    "libros",
+    "nos",
+    "llegar",
+    "poco",
+    "lunes",
+    "viajar"
+  ],
+  "cefr": "A1"
 }

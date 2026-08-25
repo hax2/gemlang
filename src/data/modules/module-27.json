@@ -1,6 +1,6 @@
 {
   "id": "module-27",
-  "title": "Poetry: Bécquer",
+  "title": "📖 Reading: Bécquer",
   "description": "Rimas by Gustavo Adolfo Bécquer.",
   "level": "Advanced",
   "sentences": [
@@ -146,5 +146,20 @@
       "mnemonic": "'Ogle with your ojos' — eyes.",
       "explanation": "Plural of 'ojo' (eye)."
     }
-  }
+  },
+  "type": "story",
+  "storyIntro": "Read for meaning first. This enrichment reading recycles familiar grammar while exposing you to literary Spanish; unfamiliar words are support vocabulary, not required mastery targets.",
+  "learningTargets": [
+    "dices",
+    "mientras",
+    "eres",
+    "vuelo",
+    "agua",
+    "dime",
+    "azul",
+    "mujer",
+    "aire",
+    "mar"
+  ],
+  "cefr": "C1"
 }

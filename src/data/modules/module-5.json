@@ -718,5 +718,23 @@
       "mnemonic": "Think 'done-day' — where?",
       "explanation": "Question word for location."
     }
-  }
+  },
+  "learningTargets": [
+    "trabajo",
+    "hablo",
+    "habla",
+    "trabajas",
+    "trabaja",
+    "estudio",
+    "estudia",
+    "hablas",
+    "español",
+    "busca",
+    "compra",
+    "espera",
+    "hablamos",
+    "trabajamos",
+    "estudias"
+  ],
+  "cefr": "A1"
 }

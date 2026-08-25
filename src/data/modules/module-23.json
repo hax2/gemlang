@@ -2,7 +2,7 @@
   "id": "module-23",
   "title": "Chapter 23: Done Actions (Acabar de)",
   "description": "Say what you just finished doing.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "m23-s1",
@@ -400,5 +400,23 @@
       "mnemonic": "'Hobble-ar' — to speak.",
       "explanation": "Infinitive. -AR verb."
     }
-  }
+  },
+  "learningTargets": [
+    "acabo",
+    "acabas",
+    "acaba",
+    "acabamos",
+    "a",
+    "llegar",
+    "darle",
+    "todavía",
+    "comer",
+    "comprar",
+    "libro",
+    "ver",
+    "llamar",
+    "dar",
+    "he"
+  ],
+  "cefr": "A2"
 }

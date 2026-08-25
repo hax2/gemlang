@@ -1,6 +1,6 @@
 {
   "id": "module-26",
-  "title": "Don Quijote de la Mancha - Excerpt",
+  "title": "📖 Reading: Don Quijote de la Mancha - Excerpt",
   "description": "A passage from the most famous work of Spanish literature.",
   "level": "Advanced",
   "sentences": [
@@ -143,5 +143,21 @@
       "mnemonic": "Think 'alma mater' — soul.",
       "explanation": "Fem but uses 'el alma'."
     }
-  }
+  },
+  "type": "story",
+  "storyIntro": "Read for meaning first. This enrichment reading recycles familiar grammar while exposing you to literary Spanish; unfamiliar words are support vocabulary, not required mastery targets.",
+  "learningTargets": [
+    "tiempo",
+    "vivía",
+    "noches",
+    "leyendo",
+    "libros",
+    "nombre",
+    "lugar",
+    "dormir",
+    "leer",
+    "visitar",
+    "decidió"
+  ],
+  "cefr": "C1"
 }

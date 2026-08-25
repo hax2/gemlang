@@ -2,7 +2,7 @@
   "id": "review-13-14-15",
   "title": "🔄 Review: Chapters 13, 14, 15",
   "description": "Mixed practice from Direct Object Pronouns, Indirect Object Pronouns, Double Object Pronouns.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "type": "review",
   "reviewsModules": [
     "module-13",
@@ -183,5 +183,23 @@
       }
     }
   ],
-  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 13: Direct Object Pronouns\n• Chapter 14: Indirect Object Pronouns\n• Chapter 15: Double Object Pronouns\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!"
+  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 13: Direct Object Pronouns\n• Chapter 14: Indirect Object Pronouns\n• Chapter 15: Double Object Pronouns\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!",
+  "learningTargets": [
+    "doy",
+    "carta",
+    "damos",
+    "ahora",
+    "das",
+    "tienes",
+    "abrí",
+    "quiero",
+    "sopa",
+    "tengo",
+    "he",
+    "dado",
+    "libro",
+    "compré",
+    "libros"
+  ],
+  "cefr": "A2"
 }

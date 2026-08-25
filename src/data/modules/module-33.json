@@ -107,6 +107,93 @@
         "seco": "dry",
         "poca": "little"
       }
+    },
+    {
+      "id": "m33-curated-11",
+      "spanish": "El bosque tiene muchos árboles y animales.",
+      "english": "The forest has many trees and animals.",
+      "wordMeanings": {
+        "El": "the",
+        "bosque": "forest",
+        "tiene": "has",
+        "muchos": "many",
+        "árboles": "trees",
+        "y": "and",
+        "animales": "animals / pets"
+      }
+    },
+    {
+      "id": "m33-curated-12",
+      "spanish": "Debemos usar menos plástico para proteger el mar.",
+      "english": "We should use less plastic to protect the sea.",
+      "wordMeanings": {
+        "Debemos": "we must",
+        "menos": "less",
+        "para": "for",
+        "proteger": "to protect",
+        "el": "the",
+        "mar": "sea",
+        "usar": "to use",
+        "plástico": "plastic"
+      }
+    },
+    {
+      "id": "m33-curated-13",
+      "spanish": "En verano hace calor y casi no llueve.",
+      "english": "In summer it is hot and it hardly rains.",
+      "wordMeanings": {
+        "En": "in / on",
+        "verano": "summer",
+        "hace": "makes / does",
+        "calor": "heat",
+        "y": "and",
+        "no": "no / not",
+        "llueve": "rains",
+        "casi": "almost / hardly"
+      }
+    },
+    {
+      "id": "m33-curated-14",
+      "spanish": "Reciclamos papel, vidrio y plástico en casa.",
+      "english": "We recycle paper, glass, and plastic at home.",
+      "wordMeanings": {
+        "vidrio": "glass",
+        "y": "and",
+        "en": "in / on",
+        "casa": "house",
+        "Reciclamos": "we recycle",
+        "papel": "paper",
+        "plástico": "plastic"
+      }
+    },
+    {
+      "id": "m33-curated-15",
+      "spanish": "La contaminación afecta al aire y al agua.",
+      "english": "Pollution affects the air and water.",
+      "wordMeanings": {
+        "La": "the / it (fem)",
+        "al": "to the",
+        "aire": "air",
+        "y": "and",
+        "agua": "water",
+        "contaminación": "pollution",
+        "afecta": "affects"
+      }
+    },
+    {
+      "id": "m33-curated-16",
+      "spanish": "Si cuidamos el planeta, tendremos un futuro mejor.",
+      "english": "If we care for the planet, we will have a better future.",
+      "wordMeanings": {
+        "Si": "if",
+        "el": "the",
+        "un": "a",
+        "mejor": "better",
+        "cuidamos": "we care for",
+        "planeta": "planet",
+        "tendremos": "we will have",
+        "futuro": "future"
+      }
     }
   ],
   "vocabulary": {
@@ -130,5 +217,23 @@
       "mnemonic": "Almost 'park' with an 'e' — easy cognate!",
       "explanation": "Masculine noun meaning park."
     }
-  }
+  },
+  "learningTargets": [
+    "lleno",
+    "árboles",
+    "proteger",
+    "playa",
+    "río",
+    "bosque",
+    "vidrio",
+    "debemos",
+    "plástico",
+    "casa",
+    "tiene",
+    "mejor",
+    "parque",
+    "agua",
+    "hace"
+  ],
+  "cefr": "B1"
 }

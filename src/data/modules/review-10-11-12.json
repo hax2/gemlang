@@ -2,7 +2,7 @@
   "id": "review-10-11-12",
   "title": "🔄 Review: Chapters 10, 11, 12",
   "description": "Mixed practice from The Preterite Tense, The Imperfect Tense, The Present Perfect.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "type": "review",
   "reviewsModules": [
     "module-10",
@@ -173,5 +173,23 @@
       }
     }
   ],
-  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 10: The Preterite Tense\n• Chapter 11: The Imperfect Tense\n• Chapter 12: The Present Perfect\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!"
+  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 10: The Preterite Tense\n• Chapter 11: The Imperfect Tense\n• Chapter 12: The Present Perfect\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!",
+  "learningTargets": [
+    "tenía",
+    "hambre",
+    "he",
+    "comprado",
+    "buscado",
+    "trabajo",
+    "antes",
+    "anoche",
+    "comí",
+    "sopa",
+    "has",
+    "café",
+    "ha",
+    "casa",
+    "hemos"
+  ],
+  "cefr": "A2"
 }

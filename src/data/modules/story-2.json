@@ -201,5 +201,21 @@
       "mnemonic": "Think 'temp-rain-o' — early morning temperature.",
       "explanation": "Means 'early'. Opposite of 'tarde'."
     }
-  }
+  },
+  "learningTargets": [
+    "tiene",
+    "rápido",
+    "café",
+    "leche",
+    "estudia",
+    "español",
+    "escuela",
+    "habla",
+    "amigos",
+    "come",
+    "le gusta",
+    "la",
+    "en"
+  ],
+  "cefr": "A1"
 }

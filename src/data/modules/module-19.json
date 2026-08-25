@@ -2,7 +2,7 @@
   "id": "module-19",
   "title": "Chapter 19: Subjunctive: Hope",
   "description": "Express hope and uncertainty with 'Espero que'.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "m19-s1",
@@ -411,5 +411,23 @@
       "mnemonic": "Hook phrase: 'Las cosas' (The things).",
       "explanation": "Direct object pronoun."
     }
-  }
+  },
+  "learningTargets": [
+    "espero",
+    "hables",
+    "estés",
+    "ojalá",
+    "vengas",
+    "hable",
+    "te",
+    "tengas",
+    "conmigo",
+    "seas",
+    "feliz",
+    "esperas",
+    "sientes",
+    "compres",
+    "digas"
+  ],
+  "cefr": "B1"
 }

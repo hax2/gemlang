@@ -111,6 +111,97 @@
         "declarar": "declare",
         "aduana": "customs"
       }
+    },
+    {
+      "id": "m29-curated-11",
+      "spanish": "El vuelo sale a las ocho y llega a Madrid a las diez.",
+      "english": "The flight leaves at eight and arrives in Madrid at ten.",
+      "wordMeanings": {
+        "El": "the",
+        "vuelo": "flight",
+        "sale": "leaves",
+        "a": "to",
+        "las": "the / them (fem)",
+        "ocho": "eight",
+        "y": "and",
+        "Madrid": "Madrid",
+        "diez": "ten",
+        "llega": "arrives"
+      }
+    },
+    {
+      "id": "m29-curated-12",
+      "spanish": "Necesito mostrar el pasaporte antes de subir al avión.",
+      "english": "I need to show my passport before boarding the plane.",
+      "wordMeanings": {
+        "Necesito": "I need",
+        "el": "the",
+        "pasaporte": "passport",
+        "antes": "before",
+        "de": "of / from",
+        "al": "to the",
+        "avión": "plane",
+        "mostrar": "to show",
+        "subir": "to board / go up"
+      }
+    },
+    {
+      "id": "m29-curated-13",
+      "spanish": "Mi maleta está en la puerta de embarque.",
+      "english": "My suitcase is at the boarding gate.",
+      "wordMeanings": {
+        "Mi": "my",
+        "maleta": "suitcase",
+        "está": "is",
+        "en": "in / on",
+        "la": "the / it (fem)",
+        "puerta": "door",
+        "de": "of / from",
+        "embarque": "boarding"
+      }
+    },
+    {
+      "id": "m29-curated-14",
+      "spanish": "¿Dónde puedo recoger el equipaje?",
+      "english": "Where can I collect the luggage?",
+      "wordMeanings": {
+        "Dónde": "where",
+        "puedo": "may I",
+        "recoger": "to pick up",
+        "el": "the",
+        "equipaje": "luggage"
+      }
+    },
+    {
+      "id": "m29-curated-15",
+      "spanish": "El próximo vuelo tiene veinte minutos de retraso.",
+      "english": "The next flight is delayed by twenty minutes.",
+      "wordMeanings": {
+        "El": "the",
+        "próximo": "next",
+        "vuelo": "flight",
+        "tiene": "has",
+        "veinte": "twenty",
+        "minutos": "minutes",
+        "de": "of / from",
+        "retraso": "delay"
+      }
+    },
+    {
+      "id": "m29-curated-16",
+      "spanish": "Vamos al aeropuerto en taxi para llegar a tiempo.",
+      "english": "We are going to the airport by taxi to arrive on time.",
+      "wordMeanings": {
+        "Vamos": "we go",
+        "al": "to the",
+        "en": "in / on",
+        "para": "for",
+        "llegar": "to arrive",
+        "a": "to",
+        "tiempo": "time",
+        "aeropuerto": "airport",
+        "taxi": "taxi"
+      }
     }
   ],
   "vocabulary": {
@@ -150,5 +241,23 @@
       "mnemonic": "'Aero + puerto' = air + port = airport!",
       "explanation": "Compound word."
     }
-  }
+  },
+  "learningTargets": [
+    "maleta",
+    "antes",
+    "embarque",
+    "pasillo",
+    "hora",
+    "sale",
+    "próximo",
+    "vuelo",
+    "mucha",
+    "cola",
+    "tiempo",
+    "puerta",
+    "recoger",
+    "pasaporte",
+    "retraso"
+  ],
+  "cefr": "A2"
 }

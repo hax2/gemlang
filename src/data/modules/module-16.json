@@ -2,7 +2,7 @@
   "id": "module-16",
   "title": "Chapter 16: Affirmative Commands",
   "description": "Give direct orders like 'Speak' or 'Eat'.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "m16-s1",
@@ -387,5 +387,23 @@
       "mnemonic": "'Venture here!' — Come!",
       "explanation": "Irregular tú command of 'venir'."
     }
-  }
+  },
+  "learningTargets": [
+    "dime",
+    "venga",
+    "habla",
+    "come",
+    "vive",
+    "comer",
+    "ven",
+    "hable",
+    "coma",
+    "abre",
+    "abra",
+    "abrid",
+    "abran",
+    "puerta",
+    "casa"
+  ],
+  "cefr": "A2"
 }

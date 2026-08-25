@@ -2,7 +2,7 @@
   "id": "module-21",
   "title": "Chapter 21: Real Conditionals",
   "description": "Talk about what happens if a condition is met.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "m21-s1",
@@ -554,5 +554,23 @@
       "mnemonic": "Same as English 'centre' — the town centre!",
       "explanation": "Also means 'centre'. 'El centro' = the town centre."
     }
-  }
+  },
+  "learningTargets": [
+    "tienes",
+    "es",
+    "puedes",
+    "estudias",
+    "aprendes",
+    "llueve",
+    "si",
+    "a",
+    "mejor",
+    "compras",
+    "llegas",
+    "cada",
+    "juntos",
+    "tomar",
+    "estás"
+  ],
+  "cefr": "A2"
 }

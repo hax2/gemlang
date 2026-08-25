@@ -298,5 +298,23 @@
       "mnemonic": "Running corriente-style fast.",
       "explanation": "Running."
     }
-  }
+  },
+  "learningTargets": [
+    "voy",
+    "van",
+    "vienes",
+    "vas",
+    "vamos",
+    "ir",
+    "gimnasio",
+    "semana",
+    "metro",
+    "cine",
+    "está",
+    "trabajo",
+    "tarde",
+    "tienes",
+    "coche"
+  ],
+  "cefr": "A1"
 }

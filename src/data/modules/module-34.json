@@ -1,6 +1,6 @@
 {
   "id": "module-34",
-  "title": "Poetry: Mariposa del Aire",
+  "title": "📖 Reading: Mariposa del Aire",
   "description": "A lovely poem by Federico García Lorca.",
   "level": "Advanced",
   "sentences": [
@@ -139,5 +139,24 @@
       "mnemonic": "Think 'you establish your position'.",
       "explanation": "Informal 'you are' (estar)."
     }
-  }
+  },
+  "type": "story",
+  "storyIntro": "Read for meaning first. This enrichment reading recycles familiar grammar while exposing you to literary Spanish; unfamiliar words are support vocabulary, not required mastery targets.",
+  "learningTargets": [
+    "verde",
+    "eres",
+    "quieres",
+    "estás",
+    "mariposa",
+    "aire",
+    "quédate",
+    "ahí",
+    "dorada",
+    "luz",
+    "candil",
+    "del",
+    "y",
+    "no"
+  ],
+  "cefr": "C1"
 }

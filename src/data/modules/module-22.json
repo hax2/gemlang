@@ -2,7 +2,7 @@
   "id": "module-22",
   "title": "Chapter 22: Hypothetical Conditionals",
   "description": "Talk about what would happen in hypothetical situations.",
-  "level": "Beginner",
+  "level": "Advanced",
   "sentences": [
     {
       "id": "m22-s1",
@@ -491,5 +491,23 @@
       "mnemonic": "Same as English 'centre' — the town centre!",
       "explanation": "Also means 'centre'. 'El centro' = the town centre."
     }
-  }
+  },
+  "learningTargets": [
+    "sería",
+    "fueras",
+    "tuviera",
+    "vinieras",
+    "iríamos",
+    "estaría",
+    "estuvieras",
+    "pudiera",
+    "iría",
+    "compraras",
+    "llegaras",
+    "dijeras",
+    "mejor",
+    "puerta",
+    "vería"
+  ],
+  "cefr": "B2"
 }

@@ -2,7 +2,7 @@
   "id": "module-saber-vs-conocer",
   "title": "Grammar: Saber vs. Conocer",
   "description": "Learn the difference between the two verbs for 'to know'.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "msaber-s1",
@@ -353,5 +353,23 @@
       "mnemonic": "Telephone.",
       "explanation": "Means 'phone'."
     }
-  }
+  },
+  "learningTargets": [
+    "conozco",
+    "sabe",
+    "sabemos",
+    "sé",
+    "conoces",
+    "sabes",
+    "saben",
+    "conoce",
+    "conocer",
+    "respuesta",
+    "nadar",
+    "canción",
+    "coche",
+    "mucha",
+    "está"
+  ],
+  "cefr": "A2"
 }

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { FREE_MODULE_IDS, PRICING_PLANS } from '../config/monetization';
+import modulesManifest from '../data/modules-manifest.json';
 import './PricingModal.css';
 
 const CheckIcon = () => <span className="pricing-check" aria-hidden="true">✓</span>;
@@ -110,7 +111,7 @@ export default function PricingModal({
             <span className="pricing-tier-label">Pro</span>
             <strong>Full course</strong>
             <ul>
-              <li><CheckIcon /> All 64 modules</li>
+              <li><CheckIcon /> All {modulesManifest.length} modules</li>
               <li><CheckIcon /> Beginner through advanced</li>
               <li><CheckIcon /> Every future module included</li>
             </ul>

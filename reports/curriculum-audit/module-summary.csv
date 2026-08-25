@@ -1,0 +1,71 @@
+sequence,module_id,title,type,level,cefr,items,tokens,unique_words,new_words,prior_token_coverage_pct,learning_targets,new_learning_targets,target_annotations,words_seen_once_in_module,exact_duplicate_items,cumulative_learning_targets
+1,module-1,Chapter 1: Greetings & Basics,lesson,Beginner,A1,48,145,44,44,0.0,15,15,62,19,2,15
+2,module-2,Chapter 2: Locations,lesson,Beginner,A1,47,191,33,25,16.2,15,15,89,6,0,30
+3,module-3,Chapter 3: Descriptions,lesson,Beginner,A1,52,211,74,48,57.3,15,9,81,39,0,39
+4,review-1-2-3,"🔄 Review: Chapters 1, 2, 3",review,Beginner,A1,15,53,32,0,100.0,13,0,25,19,0,39
+5,module-hay-vs-esta,Grammar: 'Hay' vs. 'Está',lesson,Beginner,A1,26,150,82,56,50.7,15,12,42,62,0,51
+6,module-ser-vs-estar,Grammar: Ser vs. Estar I,lesson,Beginner,A1,60,284,98,54,64.4,15,5,73,30,18,56
+7,story-1,📖 Story: Ana's New Friend,story,Beginner,A1,12,55,33,4,92.7,13,3,23,21,0,59
+8,module-4,Chapter 4: Possession,lesson,Beginner,A1,47,165,49,21,51.5,15,15,78,20,0,74
+9,module-verb-tener,Grammar: The Verb 'Tener',lesson,Beginner,A1,30,175,106,53,66.3,15,8,43,79,0,82
+10,module-38,Theme: Family and Relationships,lesson,Beginner,A1,30,258,70,39,52.7,15,15,85,41,0,97
+11,module-5,Chapter 5: Regular -AR Verbs,lesson,Beginner,A1,44,159,68,35,66.0,15,13,34,36,0,110
+12,module-6,Chapter 6: Regular -ER/-IR Verbs,lesson,Beginner,A1,42,158,70,37,63.9,15,14,32,35,0,124
+13,review-4-5-6,"🔄 A1 Review: Possession, Family & Actions",review,Beginner,A1,17,84,53,0,100.0,15,0,26,35,0,124
+14,module-ser-vs-estar-2,Grammar: Ser vs. Estar II,lesson,Beginner,A1,60,231,94,43,71.9,15,6,71,35,20,130
+15,module-stem-changing,Grammar: Stem-Changing Verbs,lesson,Beginner,A1,28,142,107,60,53.5,15,10,15,89,0,140
+16,module-7,Chapter 7: Reflexive Verbs,lesson,Beginner,A1,46,186,70,37,60.8,15,14,54,39,0,154
+17,module-8,Chapter 8: Expressing Likes,lesson,Beginner,A1,45,231,59,16,69.7,15,14,82,28,0,168
+18,module-gustar-family,Grammar: Gustar-Family Verbs,lesson,Beginner,A1,26,137,85,34,70.8,15,9,17,64,0,177
+19,story-2,📖 Story: A Day with Marta,story,Beginner,A1,14,99,65,10,88.9,13,2,21,50,0,179
+20,module-ser-vs-estar-3,Grammar: Ser vs. Estar III,lesson,Beginner,A1,30,158,44,11,87.3,15,9,56,10,10,188
+21,module-42,Theme: Hobbies and Free Time,lesson,Beginner,A1,30,245,57,24,67.8,15,13,83,27,0,201
+22,module-41,Theme: House and Furniture,lesson,Beginner,A1,30,224,74,31,69.6,15,14,71,43,0,215
+23,module-40,Theme: Shopping and Clothing,lesson,Beginner,A1,30,217,55,24,65.9,15,15,72,21,0,230
+24,module-31,Theme: Food and Dining,lesson,Beginner,A1,16,120,82,29,70.8,15,12,28,58,0,242
+25,module-ir-y-venir,Grammar: Verb Focus: Ir and Venir,lesson,Beginner,A1,26,160,96,29,77.5,15,9,20,70,0,251
+26,module-9,Chapter 9: The Near Future,lesson,Beginner,A1,37,185,58,9,91.4,15,8,64,32,0,259
+27,module-35,Dialogue: At the Café,story,Beginner,A1,9,54,46,8,85.2,11,7,11,39,0,266
+28,review-7-8-9,🔄 A1 Review: Routines & Everyday Life,review,Beginner,A1,21,113,75,0,100.0,14,0,15,58,0,266
+29,module-29,Theme: Travel and Airport,lesson,Intermediate,A2,16,144,79,31,70.1,15,12,27,48,0,278
+30,module-32,Theme: Health and Medicine,lesson,Intermediate,A2,16,121,86,38,66.1,15,9,20,69,0,287
+31,module-saber-vs-conocer,Grammar: Saber vs. Conocer,lesson,Intermediate,A2,25,115,81,30,62.6,15,12,31,60,0,299
+32,module-verb-hacer,Grammar: The Verb 'Hacer',lesson,Intermediate,A2,27,169,100,29,78.7,15,8,23,78,0,307
+33,module-10,Chapter 10: The Preterite Tense,lesson,Intermediate,A2,41,170,71,32,72.4,15,14,37,44,0,321
+34,module-11,Chapter 11: The Imperfect Tense,lesson,Intermediate,A2,40,176,82,26,73.3,15,15,42,51,0,336
+35,module-past-comparison,Grammar: Preterite vs. Imperfect,lesson,Intermediate,A2,25,150,106,33,76.7,15,5,39,81,0,341
+36,story-3,📖 Story: Carlos's Weekend Trip,story,Intermediate,A2,12,95,62,14,85.3,13,3,21,48,0,344
+37,module-12,Chapter 12: The Present Perfect,lesson,Intermediate,A2,50,200,65,20,68.0,15,14,92,26,0,358
+38,module-preterite-vs-present-perfect,Grammar: Preterite vs. Present Perfect,lesson,Intermediate,A2,25,131,82,21,82.4,15,5,35,49,0,363
+39,review-10-11-12,"🔄 Review: Chapters 10, 11, 12",review,Intermediate,A2,15,57,43,0,100.0,15,0,22,32,0,363
+40,module-13,Chapter 13: Direct Object Pronouns,lesson,Intermediate,A2,42,127,39,5,89.8,15,9,46,12,0,372
+41,module-14,Chapter 14: Indirect Object Pronouns,lesson,Intermediate,A2,32,143,49,10,83.9,15,14,57,17,0,386
+42,module-15,Chapter 15: Double Object Pronouns,lesson,Intermediate,A2,29,115,42,10,87.8,15,10,75,19,0,396
+43,review-13-14-15,"🔄 Review: Chapters 13, 14, 15",review,Intermediate,A2,15,67,35,0,100.0,15,0,24,19,0,396
+44,module-por-vs-para,Grammar: Por vs. Para,lesson,Intermediate,A2,25,144,97,25,82.6,15,10,44,83,0,406
+45,story-4,📖 Story: The Missing Phone,story,Intermediate,A2,12,91,53,12,86.8,13,1,33,36,0,407
+46,module-16,Chapter 16: Affirmative Commands,lesson,Intermediate,A2,36,68,45,24,61.8,15,9,22,33,0,416
+47,module-23,Chapter 23: Done Actions (Acabar de),lesson,Intermediate,A2,30,127,40,6,77.2,15,6,61,19,0,422
+48,module-24,Chapter 24: Duration (Llevar + Gerund),lesson,Intermediate,A2,31,144,43,10,86.8,15,14,68,18,0,436
+49,module-21,Chapter 21: Real Conditionals,lesson,Intermediate,A2,30,168,83,7,95.2,15,8,60,52,0,444
+50,module-17,Chapter 17: Negative Commands,lesson,Intermediate,B1,30,104,41,15,82.7,15,10,29,25,0,454
+51,module-18,Chapter 18: Subjunctive: Desires,lesson,Intermediate,B1,30,139,54,13,90.6,15,10,44,36,0,464
+52,review-16-17-18,"🔄 Review: Chapters 16, 17, 18",review,Intermediate,B1,15,58,33,0,100.0,15,0,30,22,0,464
+53,module-19,Chapter 19: Subjunctive: Hope,lesson,Intermediate,B1,30,126,48,6,93.7,15,9,48,32,0,473
+54,module-20,Chapter 20: Subjunctive: Importance,lesson,Intermediate,B1,29,169,59,10,94.1,15,3,83,40,0,476
+55,review-19-20-21,"🔄 Review: Chapters 19, 20, 21",review,Intermediate,B1,15,73,36,0,100.0,15,0,34,20,0,476
+56,story-5,📖 Story: Advice for a Friend,story,Intermediate,B1,12,91,67,15,83.5,15,3,29,53,0,479
+57,module-30,Theme: Business and Office,lesson,Intermediate,B1,16,133,87,29,75.9,15,6,22,65,0,485
+58,module-39,Theme: Work and Professions,lesson,Intermediate,B1,30,235,62,13,84.7,15,11,87,33,0,496
+59,module-37,Theme: Technology and Internet,lesson,Intermediate,B1,30,226,53,27,64.6,15,15,71,24,0,511
+60,module-33,Theme: Nature and Environment,lesson,Intermediate,B1,16,135,92,46,61.5,15,8,21,73,0,519
+61,module-43,Theme: Emotions and Feelings,lesson,Intermediate,B1,30,254,75,18,76.4,15,14,72,34,0,533
+62,module-25,📖 Reading: Caperucita Roja - Part 1,story,Intermediate,B1,10,89,60,23,68.5,12,2,12,44,0,535
+63,module-28,Grammar: The Past Subjunctive,lesson,Advanced,B2,22,148,96,34,74.3,15,9,26,73,0,544
+64,module-22,Chapter 22: Hypothetical Conditionals,lesson,Advanced,B2,30,174,89,36,70.1,15,12,39,63,0,556
+65,review-22-23-24,"🔄 Review: Chapters 22, 23, 24",review,Advanced,B2,15,74,52,0,100.0,15,0,24,41,0,556
+66,story-6,📖 Story: What Would You Do?,story,Advanced,B2,12,100,69,12,86.0,14,3,25,52,0,559
+67,module-26,📖 Reading: Don Quijote de la Mancha - Excerpt,story,Advanced,C1,10,110,80,41,60.0,11,6,12,65,0,565
+68,module-27,📖 Reading: Bécquer,story,Advanced,C1,10,113,73,30,67.3,10,3,10,47,0,568
+69,module-34,📖 Reading: Mariposa del Aire,story,Advanced,C1,9,50,19,7,70.0,14,8,37,7,3,576
+70,module-36,📖 Reading: Cien Años de Soledad,story,Advanced,C1,5,50,43,20,60.0,12,2,17,40,0,578

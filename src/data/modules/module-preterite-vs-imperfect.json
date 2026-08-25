@@ -2,7 +2,7 @@
   "id": "module-past-comparison",
   "title": "Grammar: Preterite vs. Imperfect",
   "description": "Understand when to use completed actions versus ongoing background actions.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "mpvsi-s1",
@@ -396,5 +396,23 @@
       "mnemonic": "Emperor started his reign.",
       "explanation": "Preterite of empezar (to start)."
     }
-  }
+  },
+  "learningTargets": [
+    "mientras",
+    "estaba",
+    "era",
+    "cuando",
+    "a",
+    "la",
+    "hacía",
+    "niño",
+    "horas",
+    "empezó",
+    "dos",
+    "tres",
+    "fui",
+    "anoche",
+    "tenía"
+  ],
+  "cefr": "A2"
 }

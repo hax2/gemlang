@@ -2,7 +2,7 @@
   "id": "review-22-23-24",
   "title": "🔄 Review: Chapters 22, 23, 24",
   "description": "Mixed practice from Hypothetical Conditionals, Done Actions (Acabar de), Duration (Llevar + Gerund).",
-  "level": "Beginner",
+  "level": "Advanced",
   "type": "review",
   "reviewsModules": [
     "module-22",
@@ -189,5 +189,23 @@
       }
     }
   ],
-  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 22: Hypothetical Conditionals\n• Chapter 23: Done Actions (Acabar de)\n• Chapter 24: Duration (Llevar + Gerund)\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!"
+  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 22: Hypothetical Conditionals\n• Chapter 23: Done Actions (Acabar de)\n• Chapter 24: Duration (Llevar + Gerund)\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!",
+  "learningTargets": [
+    "acabo",
+    "hora",
+    "casa",
+    "llevo",
+    "estudiando",
+    "llevas",
+    "lleva",
+    "semana",
+    "buscando",
+    "hablar",
+    "darle",
+    "libro",
+    "mucho",
+    "tiempo",
+    "viviendo"
+  ],
+  "cefr": "B2"
 }

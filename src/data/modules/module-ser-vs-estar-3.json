@@ -285,5 +285,23 @@
       "mnemonic": "Estar says where or how it stands now.",
       "explanation": "Location, position, current state, emotions, and actions in progress."
     }
-  }
+  },
+  "learningTargets": [
+    "es",
+    "está",
+    "profesora",
+    "son",
+    "viernes",
+    "lunes",
+    "tres",
+    "mesa",
+    "reunión",
+    "clase",
+    "sala",
+    "concierto",
+    "fiesta",
+    "parque",
+    "ocho"
+  ],
+  "cefr": "A1"
 }

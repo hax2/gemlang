@@ -3,7 +3,7 @@
   "type": "story",
   "title": "📖 Story: Advice for a Friend",
   "description": "A story about giving advice, using commands and the subjunctive mood.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "storyIntro": "You've now learned affirmative and negative commands, plus the subjunctive for expressing desires, hopes, and importance.\n\nLet's see how Ana gives advice to her friend Carlos, who is nervous about a job interview. Notice how commands and subjunctive work in real conversation!",
   "sentences": [
     {
@@ -194,5 +194,23 @@
       "mnemonic": "Think 'honest' — exact cognate!",
       "explanation": "Means 'honest'."
     }
-  }
+  },
+  "learningTargets": [
+    "está",
+    "espero",
+    "quiero",
+    "gracias",
+    "tengas",
+    "tiene",
+    "trabajo",
+    "sabe",
+    "noche",
+    "tarde",
+    "entrevista",
+    "nervioso",
+    "hacer",
+    "no",
+    "que"
+  ],
+  "cefr": "B1"
 }

@@ -1,6 +1,6 @@
 {
   "id": "module-25",
-  "title": "Caperucita Roja - Part 1",
+  "title": "📖 Reading: Caperucita Roja - Part 1",
   "description": "A classic fairy tale told in Spanish.",
   "level": "Intermediate",
   "sentences": [
@@ -147,5 +147,22 @@
       "mnemonic": "Think 'ante' (before in poker).",
       "explanation": "Means 'before'."
     }
-  }
+  },
+  "type": "story",
+  "storyIntro": "Read for meaning first. This enrichment reading recycles familiar grammar while exposing you to literary Spanish; unfamiliar words are support vocabulary, not required mastery targets.",
+  "learningTargets": [
+    "había",
+    "niña",
+    "vivía",
+    "bosque",
+    "madre",
+    "pidió",
+    "vez",
+    "abuela",
+    "casa",
+    "antes",
+    "llegar",
+    "recoger"
+  ],
+  "cefr": "B1"
 }

@@ -2,7 +2,7 @@
   "id": "review-16-17-18",
   "title": "🔄 Review: Chapters 16, 17, 18",
   "description": "Mixed practice from Affirmative Commands, Negative Commands, Subjunctive: Desires.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "type": "review",
   "reviewsModules": [
     "module-16",
@@ -174,5 +174,23 @@
       }
     }
   ],
-  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 16: Affirmative Commands\n• Chapter 17: Negative Commands\n• Chapter 18: Subjunctive: Desires\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!"
+  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 16: Affirmative Commands\n• Chapter 17: Negative Commands\n• Chapter 18: Subjunctive: Desires\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!",
+  "learningTargets": [
+    "quiero",
+    "des",
+    "puerta",
+    "digas",
+    "eso",
+    "espere",
+    "abrid",
+    "coma",
+    "tan",
+    "rápido",
+    "abras",
+    "fiesta",
+    "casa",
+    "no",
+    "que"
+  ],
+  "cefr": "B1"
 }

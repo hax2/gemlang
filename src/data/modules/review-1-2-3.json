@@ -169,5 +169,21 @@
       }
     }
   ],
-  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 1: Greetings & Basics\n• Chapter 2: Locations\n• Chapter 3: Descriptions\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!"
+  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 1: Greetings & Basics\n• Chapter 2: Locations\n• Chapter 3: Descriptions\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!",
+  "learningTargets": [
+    "es",
+    "soy",
+    "está",
+    "casa",
+    "estoy",
+    "escuela",
+    "grande",
+    "estás",
+    "trabajo",
+    "buenos",
+    "días",
+    "ahora",
+    "estudiante"
+  ],
+  "cefr": "A1"
 }

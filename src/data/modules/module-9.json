@@ -571,5 +571,23 @@
       "mnemonic": "Think 'studio' — I study in my studio.",
       "explanation": "First person of 'estudiar'."
     }
-  }
+  },
+  "learningTargets": [
+    "voy",
+    "vas",
+    "estudiar",
+    "va",
+    "comprar",
+    "vamos",
+    "ir",
+    "venir",
+    "llamar",
+    "quedarme",
+    "comer",
+    "beber",
+    "abrir",
+    "recibir",
+    "casa"
+  ],
+  "cefr": "A1"
 }

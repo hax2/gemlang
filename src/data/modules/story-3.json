@@ -3,7 +3,7 @@
   "type": "story",
   "title": "📖 Story: Carlos's Weekend Trip",
   "description": "A story about a weekend trip, told using the near future, preterite, and imperfect tenses.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "storyIntro": "You've learned the near future (ir + a), the preterite tense for completed past actions, and the imperfect tense for describing ongoing past situations.\n\nNow let's follow Carlos on a weekend trip and see how all three tenses work together to tell a story!",
   "sentences": [
     {
@@ -193,5 +193,21 @@
       "mnemonic": "Same as English 'pronto' — hurry up, soon!",
       "explanation": "Means 'soon' or 'quickly'."
     }
-  }
+  },
+  "learningTargets": [
+    "estaba",
+    "hacía",
+    "buen",
+    "tiempo",
+    "temprano",
+    "café",
+    "leche",
+    "pan",
+    "casa",
+    "vivía",
+    "abuela",
+    "pueblo",
+    "pronto"
+  ],
+  "cefr": "A2"
 }

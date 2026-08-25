@@ -103,6 +103,91 @@
         "mejórese": "get better (formal)",
         "pronto": "soon"
       }
+    },
+    {
+      "id": "m32-curated-11",
+      "spanish": "Me duele la garganta y tengo fiebre.",
+      "english": "My throat hurts and I have a fever.",
+      "wordMeanings": {
+        "Me": "myself",
+        "duele": "hurts",
+        "la": "the / it (fem)",
+        "y": "and",
+        "tengo": "I have",
+        "fiebre": "fever",
+        "garganta": "throat"
+      }
+    },
+    {
+      "id": "m32-curated-12",
+      "spanish": "La doctora escucha al paciente con atención.",
+      "english": "The doctor listens carefully to the patient.",
+      "wordMeanings": {
+        "La": "the / it (fem)",
+        "doctora": "doctor",
+        "escucha": "listens",
+        "al": "to the",
+        "paciente": "patient",
+        "con": "with",
+        "atención": "attention"
+      }
+    },
+    {
+      "id": "m32-curated-13",
+      "spanish": "Debes tomar esta medicina después de comer.",
+      "english": "You should take this medicine after eating.",
+      "wordMeanings": {
+        "tomar": "to have / take",
+        "esta": "this",
+        "después": "after",
+        "de": "of / from",
+        "comer": "to eat",
+        "Debes": "you should",
+        "medicina": "medicine"
+      }
+    },
+    {
+      "id": "m32-curated-14",
+      "spanish": "La farmacia está al lado del hospital.",
+      "english": "The pharmacy is next to the hospital.",
+      "wordMeanings": {
+        "La": "the / it (fem)",
+        "farmacia": "pharmacy",
+        "está": "is",
+        "al": "to the",
+        "lado": "side / nearby spot",
+        "del": "of the",
+        "hospital": "hospital"
+      }
+    },
+    {
+      "id": "m32-curated-15",
+      "spanish": "Hoy me siento mejor, pero todavía estoy cansado.",
+      "english": "Today I feel better, but I am still tired.",
+      "wordMeanings": {
+        "Hoy": "today",
+        "me": "myself",
+        "siento": "feel",
+        "mejor": "better",
+        "pero": "but",
+        "todavía": "still / yet",
+        "estoy": "I am",
+        "cansado": "tired"
+      }
+    },
+    {
+      "id": "m32-curated-16",
+      "spanish": "Si el dolor continúa, pide otra cita.",
+      "english": "If the pain continues, make another appointment.",
+      "wordMeanings": {
+        "Si": "if",
+        "el": "the",
+        "pide": "asks (requests)",
+        "otra": "another",
+        "cita": "appointment",
+        "dolor": "pain",
+        "continúa": "continues"
+      }
     }
   ],
   "vocabulary": {
@@ -134,5 +219,23 @@
       "mnemonic": "'A year ago? No, just yesterday!'",
       "explanation": "Means 'yesterday'."
     }
-  }
+  },
+  "learningTargets": [
+    "cita",
+    "cabeza",
+    "fiebre",
+    "farmacia",
+    "médico",
+    "importante",
+    "algún",
+    "duele",
+    "siento",
+    "está",
+    "tengo",
+    "estoy",
+    "tarde",
+    "ahora",
+    "mejor"
+  ],
+  "cefr": "A2"
 }

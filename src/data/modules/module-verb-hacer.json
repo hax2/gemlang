@@ -2,7 +2,7 @@
   "id": "module-verb-hacer",
   "title": "Grammar: The Verb 'Hacer'",
   "description": "Deep practice of 'hacer': the weather, everyday activities, and saying how long things have been happening.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "mhacer-s1",
@@ -324,5 +324,23 @@
       "mnemonic": "La compra fills the basket.",
       "explanation": "The shopping / grocery purchase."
     }
-  }
+  },
+  "learningTargets": [
+    "hace",
+    "hacemos",
+    "en",
+    "viaje",
+    "buen",
+    "sevilla",
+    "calor",
+    "costa",
+    "sol",
+    "tiempo",
+    "mucho",
+    "café",
+    "espero",
+    "dos",
+    "ventana"
+  ],
+  "cefr": "A2"
 }

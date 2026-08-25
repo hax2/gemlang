@@ -8,7 +8,7 @@ const cleanWord = (w) => w.replace(/[.,¿?¡!]/g, '');
 
 /** Collect every unique word->meaning pair from all sentences in a module,
  *  and merge in any mnemonic / explanation from the module-level vocabulary. */
-const buildVocabTable = (sentences, vocabulary = {}) => {
+const buildVocabTable = (sentences, vocabulary = {}, learningTargets = null) => {
   const map = new Map();
   sentences.forEach((s) => {
     const meanings = s.wordMeanings || {};
@@ -25,7 +25,12 @@ const buildVocabTable = (sentences, vocabulary = {}) => {
       }
     });
   });
-  return Array.from(map.values());
+  const targetSet = Array.isArray(learningTargets)
+    ? new Set(learningTargets.map((word) => word.toLocaleLowerCase()))
+    : null;
+  return Array.from(map.entries())
+    .filter(([key]) => !targetSet || targetSet.has(key))
+    .map(([, entry]) => entry);
 };
 
 /** Deterministic pseudo-random from a seed string */
@@ -181,6 +186,7 @@ const SER_ESTAR_WORD_MEANINGS = {
   está: 'is',
   estamos: 'are',
   están: 'are',
+  estáis: 'you all are',
   estás: 'are',
   estoy: 'am',
   eres: 'are',
@@ -288,6 +294,7 @@ const SER_ESTAR_WORD_MEANINGS = {
   simpáticos: 'nice',
   son: 'are',
   somos: 'are',
+  sois: 'you all are',
   soy: 'am',
   su: 'his / her',
   sillas: 'chairs',
@@ -881,10 +888,15 @@ const LessonPlayer = ({
         });
       }
 
-      return Array.from(map.values());
+      const targetSet = Array.isArray(module.learningTargets)
+        ? new Set(module.learningTargets.map((word) => word.toLocaleLowerCase()))
+        : null;
+      return Array.from(map.entries())
+        .filter(([key]) => !targetSet || targetSet.has(key))
+        .map(([, entry]) => entry);
     }
 
-    return buildVocabTable(module.sentences, vocabulary);
+    return buildVocabTable(module.sentences, vocabulary, module.learningTargets);
   }, [isFinished, module, vocabulary]);
 
   const totalSentences = isSerEstarSpecial ? mergedItems.length : module.sentences.length;
@@ -1573,7 +1585,7 @@ const LessonPlayer = ({
 
         {!isPureTestingMode && !showSelfAssessment && (
           <div className="vocab-section">
-            <h3 className="vocab-heading">Words You&apos;ve Learned</h3>
+            <h3 className="vocab-heading">Key Words to Keep</h3>
             <div className="vocab-table-wrapper">
               <table className="vocab-table">
                 <thead>

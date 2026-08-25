@@ -2,7 +2,7 @@
   "id": "module-28",
   "title": "Grammar: The Past Subjunctive",
   "description": "Practice the imperfect subjunctive for hypothetical situations.",
-  "level": "Intermediate",
+  "level": "Advanced",
   "sentences": [
     {
       "id": "m28-s1",
@@ -112,6 +112,157 @@
         "sol": "sun",
         "fin de semana": "weekend"
       }
+    },
+    {
+      "id": "m28-curated-11",
+      "spanish": "Quería que llegaras temprano.",
+      "english": "I wanted you to arrive early.",
+      "wordMeanings": {
+        "Quería": "I wanted",
+        "que": "that / than",
+        "llegaras": "arrived (imp subj)",
+        "temprano": "early"
+      }
+    },
+    {
+      "id": "m28-curated-12",
+      "spanish": "Era importante que estudiaras cada día.",
+      "english": "It was important that you study every day.",
+      "wordMeanings": {
+        "Era": "was / used to be",
+        "importante": "important",
+        "que": "that / than",
+        "estudiaras": "studied (imp subj)",
+        "cada": "each",
+        "día": "day"
+      }
+    },
+    {
+      "id": "m28-curated-13",
+      "spanish": "Ojalá tuviéramos más tiempo.",
+      "english": "I wish we had more time.",
+      "wordMeanings": {
+        "Ojalá": "hopefully",
+        "más": "more",
+        "tiempo": "time",
+        "tuviéramos": "we had (past subjunctive)"
+      }
+    },
+    {
+      "id": "m28-curated-14",
+      "spanish": "Me sorprendió que supieras la respuesta.",
+      "english": "I was surprised that you knew the answer.",
+      "wordMeanings": {
+        "Me": "myself",
+        "que": "that / than",
+        "supieras": "knew (subjunctive)",
+        "la": "the / it (fem)",
+        "respuesta": "answer",
+        "sorprendió": "surprised"
+      }
+    },
+    {
+      "id": "m28-curated-15",
+      "spanish": "No creía que fuera verdad.",
+      "english": "I did not believe it was true.",
+      "wordMeanings": {
+        "No": "no / not",
+        "que": "that / than",
+        "fuera": "were (subjunctive)",
+        "verdad": "truth",
+        "creía": "I believed"
+      }
+    },
+    {
+      "id": "m28-curated-16",
+      "spanish": "Buscábamos a alguien que hablara español.",
+      "english": "We were looking for someone who spoke Spanish.",
+      "wordMeanings": {
+        "a": "to",
+        "alguien": "anyone/someone",
+        "que": "that / than",
+        "hablara": "spoke (subjunctive)",
+        "español": "Spanish",
+        "Buscábamos": "we were looking for"
+      }
+    },
+    {
+      "id": "m28-curated-17",
+      "spanish": "Mi madre pidió que limpiáramos la casa.",
+      "english": "My mother asked us to clean the house.",
+      "wordMeanings": {
+        "Mi": "my",
+        "madre": "mother",
+        "pidió": "asked",
+        "que": "that / than",
+        "la": "the / it (fem)",
+        "casa": "house",
+        "limpiáramos": "we cleaned (past subjunctive)"
+      }
+    },
+    {
+      "id": "m28-curated-18",
+      "spanish": "Esperaba que el viaje saliera bien.",
+      "english": "I hoped the trip would go well.",
+      "wordMeanings": {
+        "Esperaba": "used to wait",
+        "que": "that / than",
+        "el": "the",
+        "viaje": "trip",
+        "bien": "well/good",
+        "saliera": "went / turned out (past subjunctive)"
+      }
+    },
+    {
+      "id": "m28-curated-19",
+      "spanish": "Fue mejor que vinieras en tren.",
+      "english": "It was better that you came by train.",
+      "wordMeanings": {
+        "Fue": "went / was",
+        "mejor": "better",
+        "que": "that / than",
+        "vinieras": "came (imp subj)",
+        "en": "in / on",
+        "tren": "train"
+      }
+    },
+    {
+      "id": "m28-curated-20",
+      "spanish": "El profesor recomendó que leyéramos el libro.",
+      "english": "The teacher recommended that we read the book.",
+      "wordMeanings": {
+        "El": "the",
+        "profesor": "teacher",
+        "que": "that / than",
+        "libro": "book",
+        "recomendó": "recommended",
+        "leyéramos": "we read (past subjunctive)"
+      }
+    },
+    {
+      "id": "m28-curated-21",
+      "spanish": "Me alegró que pudieras venir.",
+      "english": "I was glad that you could come.",
+      "wordMeanings": {
+        "Me": "myself",
+        "que": "that / than",
+        "pudieras": "could (subjunctive)",
+        "venir": "to come",
+        "alegró": "made happy"
+      }
+    },
+    {
+      "id": "m28-curated-22",
+      "spanish": "Dudaba que ellos conocieran la ciudad.",
+      "english": "I doubted that they knew the city.",
+      "wordMeanings": {
+        "Dudaba": "doubted",
+        "que": "that / than",
+        "ellos": "they / them",
+        "la": "the / it (fem)",
+        "ciudad": "city",
+        "conocieran": "they knew / met (past subjunctive)"
+      }
     }
   ],
   "vocabulary": {
@@ -147,5 +298,23 @@
       "mnemonic": "Same as English 'café' — coffee!",
       "explanation": "Means 'coffee' or 'café'."
     }
-  }
+  },
+  "learningTargets": [
+    "fuera",
+    "tuviera",
+    "pudieras",
+    "hiciera",
+    "rico",
+    "profesor",
+    "pidió",
+    "deberes",
+    "tiempo",
+    "verdad",
+    "venir",
+    "ojalá",
+    "supieras",
+    "dudaba",
+    "hablara"
+  ],
+  "cefr": "B2"
 }

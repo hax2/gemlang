@@ -2,7 +2,7 @@
   "id": "module-10",
   "title": "Chapter 10: The Preterite Tense",
   "description": "Talk about completed past actions.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "m10-s1",
@@ -584,5 +584,23 @@
       "mnemonic": "'Low him' — direct object him/it.",
       "explanation": "Masculine direct object pronoun."
     }
-  }
+  },
+  "learningTargets": [
+    "compré",
+    "fui",
+    "anoche",
+    "trabajé",
+    "estudié",
+    "fuiste",
+    "hablé",
+    "comí",
+    "busqué",
+    "esperé",
+    "comimos",
+    "después",
+    "bebí",
+    "fuimos",
+    "café"
+  ],
+  "cefr": "A2"
 }

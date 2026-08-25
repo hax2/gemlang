@@ -2,7 +2,7 @@
   "id": "review-19-20-21",
   "title": "🔄 Review: Chapters 19, 20, 21",
   "description": "Mixed practice from Subjunctive: Hope, Subjunctive: Importance, Real Conditionals.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "type": "review",
   "reviewsModules": [
     "module-19",
@@ -189,5 +189,23 @@
       }
     }
   ],
-  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 19: Subjunctive: Hope\n• Chapter 20: Subjunctive: Importance\n• Chapter 21: Real Conditionals\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!"
+  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 19: Subjunctive: Hope\n• Chapter 20: Subjunctive: Importance\n• Chapter 21: Real Conditionals\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!",
+  "learningTargets": [
+    "es",
+    "espero",
+    "importante",
+    "estés",
+    "tarde",
+    "llegas",
+    "tengas",
+    "dinero",
+    "compras",
+    "vengas",
+    "llegues",
+    "comemos",
+    "juntos",
+    "temprano",
+    "hablamos"
+  ],
+  "cefr": "B1"
 }

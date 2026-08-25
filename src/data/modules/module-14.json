@@ -2,7 +2,7 @@
   "id": "module-14",
   "title": "Chapter 14: Indirect Object Pronouns",
   "description": "Express 'to whom' or 'for whom' using 'le' and 'les'.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "m14-s1",
@@ -462,5 +462,23 @@
       "mnemonic": "Think 'hobble along while speaking'.",
       "explanation": "First person of 'hablar' (to speak)."
     }
-  }
+  },
+  "learningTargets": [
+    "doy",
+    "dices",
+    "le",
+    "no",
+    "les",
+    "ustedes",
+    "damos",
+    "escribo",
+    "llamo",
+    "das",
+    "regalo",
+    "digo",
+    "verdad",
+    "amiga",
+    "escribí"
+  ],
+  "cefr": "A2"
 }

@@ -615,5 +615,23 @@
       "mnemonic": "Think 'you-sted-es' — all of you!",
       "explanation": "In Spain this is formal only; everyday plural 'you all' is vosotros."
     }
-  }
+  },
+  "learningTargets": [
+    "está",
+    "estoy",
+    "cerca",
+    "lejos",
+    "estamos",
+    "estás",
+    "están",
+    "estáis",
+    "casa",
+    "escuela",
+    "trabajo",
+    "café",
+    "centro",
+    "ahora",
+    "calle"
+  ],
+  "cefr": "A1"
 }

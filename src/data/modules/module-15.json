@@ -2,7 +2,7 @@
   "id": "module-15",
   "title": "Chapter 15: Double Object Pronouns",
   "description": "Use both direct and indirect object pronouns together.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "m15-s1",
@@ -393,5 +393,23 @@
       "mnemonic": "'We establish ourselves' — we are.",
       "explanation": "First person plural of 'estar'."
     }
-  }
+  },
+  "learningTargets": [
+    "se",
+    "lo",
+    "la",
+    "a",
+    "los",
+    "las",
+    "el",
+    "te",
+    "di",
+    "dado",
+    "dar",
+    "explico",
+    "doy",
+    "ahora",
+    "quiero"
+  ],
+  "cefr": "A2"
 }

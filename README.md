@@ -1,6 +1,6 @@
 # GemLang
 
-GemLang is a focused Spanish listening and translation course with 64 lessons, stories, and reviews. It is a React 19/Vite app deployed to GitHub Pages, with Supabase authentication and Lemon Squeezy subscription billing.
+GemLang is a focused Spanish listening and translation course with 70 lessons, stories, and reviews. It is a React 19/Vite app deployed to GitHub Pages, with Supabase authentication and Lemon Squeezy subscription billing.
 
 ## Development
 
@@ -20,10 +20,10 @@ npm run validate:data
 
 ## Monetisation
 
-- **Free:** Chapters 1–3 plus the first review (195 practice sentences).
+- **Free:** Chapters 1–3 plus the first review (162 practice sentences).
 - **Pro monthly:** €8.99/month.
 - **Pro yearly:** €59.99/year (44% less than monthly).
-- **Pro includes:** all 64 current modules and future additions.
+- **Pro includes:** all 70 current modules and future additions.
 - **Billing:** Lemon Squeezy is merchant of record and handles checkout, VAT/sales tax, invoices, payment recovery, refunds, and the customer billing portal.
 - **Entitlements:** signed Lemon Squeezy webhooks update a Supabase table protected by row-level security.
 

@@ -2,7 +2,7 @@
   "id": "module-24",
   "title": "Chapter 24: Duration (Llevar + Gerund)",
   "description": "Express how long you've been doing something.",
-  "level": "Beginner",
+  "level": "Intermediate",
   "sentences": [
     {
       "id": "m24-s1",
@@ -427,5 +427,23 @@
       "mnemonic": "'Espagne/Spain' + '-ol' — the Spanish language.",
       "explanation": "Both the language and nationality."
     }
-  }
+  },
+  "learningTargets": [
+    "llevo",
+    "llevas",
+    "lleva",
+    "llevamos",
+    "trabajando",
+    "esperando",
+    "estudiando",
+    "media",
+    "viviendo",
+    "veinte",
+    "minutos",
+    "hablando",
+    "día",
+    "buscando",
+    "pensando"
+  ],
+  "cefr": "A2"
 }

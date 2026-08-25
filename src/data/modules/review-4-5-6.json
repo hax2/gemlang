@@ -1,13 +1,16 @@
 {
   "id": "review-4-5-6",
-  "title": "🔄 Review: Chapters 4, 5, 6",
-  "description": "Mixed practice from Possession, Regular -AR Verbs, Regular -ER/-IR Verbs.",
+  "title": "🔄 A1 Review: Possession, Family & Actions",
+  "description": "Spiral review of tener, family vocabulary, regular present-tense verbs, and ser/estar.",
   "level": "Beginner",
   "type": "review",
   "reviewsModules": [
     "module-4",
     "module-5",
-    "module-6"
+    "module-6",
+    "module-verb-tener",
+    "module-38",
+    "module-ser-vs-estar-2"
   ],
   "sentences": [
     {
@@ -181,7 +184,49 @@
         "Buscas": "you look for",
         "algo": "something"
       }
+    },
+    {
+      "id": "review-4-5-6-spiral-16",
+      "spanish": "Tenemos un piso pequeño en el centro.",
+      "english": "We have a small flat in the city centre.",
+      "wordMeanings": {
+        "Tenemos": "we have",
+        "un": "a",
+        "piso": "flat",
+        "pequeño": "small",
+        "en": "in",
+        "centro": "centre"
+      }
+    },
+    {
+      "id": "review-4-5-6-spiral-17",
+      "spanish": "Mi tía habla con la familia los fines de semana.",
+      "english": "My aunt talks with the family on weekends.",
+      "wordMeanings": {
+        "tía": "aunt",
+        "habla": "talks",
+        "familia": "family",
+        "fines de semana": "weekends"
+      }
     }
   ],
-  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 4: Possession\n• Chapter 5: Regular -AR Verbs\n• Chapter 6: Regular -ER/-IR Verbs\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!"
+  "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 4: Possession\n• Chapter 5: Regular -AR Verbs\n• Chapter 6: Regular -ER/-IR Verbs\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!",
+  "learningTargets": [
+    "tengo",
+    "tenemos",
+    "tiene",
+    "en",
+    "que",
+    "habla",
+    "familia",
+    "fines de semana",
+    "tía",
+    "está",
+    "libro",
+    "mensaje",
+    "casa",
+    "hermanos",
+    "café"
+  ],
+  "cefr": "A1"
 }

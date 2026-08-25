@@ -1,0 +1,12 @@
+{
+  "modules": 70,
+  "learnerItems": 1898,
+  "spanishWordTokens": 9963,
+  "uniqueSpanishWordForms": 1559,
+  "uniqueLearningTargets": 578,
+  "learningTargetsWithOneAnnotatedExposure": 0,
+  "learningTargetsUsedInOnlyOneModule": 123,
+  "learningTargetsWithAtLeastThreeExposures": 460,
+  "learningTargetsWithAtLeastFiveExposures": 289,
+  "learningTargetsUsedInMultipleModules": 455
+}

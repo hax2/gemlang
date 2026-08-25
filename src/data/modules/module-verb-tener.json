@@ -386,5 +386,23 @@
       "mnemonic": "Mobile on the move.",
       "explanation": "Mobile phone (Peninsular Spanish)."
     }
-  }
+  },
+  "learningTargets": [
+    "tengo",
+    "tienes",
+    "tenemos",
+    "tiene",
+    "tienen",
+    "en",
+    "que",
+    "hermana",
+    "tenéis",
+    "mucho",
+    "ganas",
+    "ir",
+    "diez",
+    "cuántos",
+    "años"
+  ],
+  "cefr": "A1"
 }

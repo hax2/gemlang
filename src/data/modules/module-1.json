@@ -599,5 +599,23 @@
       "mnemonic": "Feminine version of 'amigo' — your gal pal.",
       "explanation": "Female friend. Note the -a ending."
     }
-  }
+  },
+  "learningTargets": [
+    "soy",
+    "eres",
+    "es",
+    "hola",
+    "buenas",
+    "gracias",
+    "buenos",
+    "días",
+    "estudiante",
+    "somos",
+    "estudiantes",
+    "amigos",
+    "tardes",
+    "noches",
+    "adiós"
+  ],
+  "cefr": "A1"
 }

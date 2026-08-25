@@ -85,7 +85,7 @@ const ModuleSelector = ({
       const status = getModuleStatus ? getModuleStatus(module.id) : 'not-started';
       const type = module.type || 'lesson';
       const searchableText = normalizeSearchText(
-        `${module.title} ${module.description} ${module.level}`
+        `${module.title} ${module.description} ${module.level} ${module.cefr || ''}`
       );
 
       return (
@@ -236,7 +236,9 @@ const ModuleSelector = ({
             >
               <div className="module-card-content">
                 <div className="module-card-top-row">
-                  <span className="module-level">{mod.level}</span>
+                  <span className="module-level">
+                    {mod.level}{mod.cefr ? ` · ${mod.cefr}` : ''}
+                  </span>
                   <div className="module-badges-row">
                     {isLocked && (
                       <span className="module-status-badge status-pro">
@@ -287,6 +289,11 @@ const ModuleSelector = ({
                   <span className="sentence-count">
                     {mod.sentenceCount} {isPureTesting ? 'Prompts' : 'Sentences'}
                   </span>
+                  {mod.learningTargetCount > 0 && (
+                    <span className="sentence-count">
+                      {mod.learningTargetCount} key words
+                    </span>
+                  )}
                   <span className="btn-primary btn-sm module-card-action">
                     {isLocked ? 'Unlock' : getButtonLabel(status)}
                   </span>
