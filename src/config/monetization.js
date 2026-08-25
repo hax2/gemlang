@@ -1,3 +1,7 @@
+// Temporary switch: the entire course is free until the payment system is
+// fully set up. Flip to false to restore the free/pro split.
+export const FREE_ACCESS_MODE = true;
+
 export const FREE_MODULE_IDS = new Set([
   'module-1',
   'module-2',
@@ -36,4 +40,5 @@ const ACCESS_STATUSES = new Set([
 export const hasPaidAccess = (subscription) =>
   Boolean(subscription && ACCESS_STATUSES.has(subscription.status));
 
-export const isModuleFree = (moduleId) => FREE_MODULE_IDS.has(moduleId);
+export const isModuleFree = (moduleId) =>
+  FREE_ACCESS_MODE || FREE_MODULE_IDS.has(moduleId);

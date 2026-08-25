@@ -152,7 +152,7 @@ const ModuleSelector = ({
               onClick={() => onPracticeModeChange('testing')}
               aria-pressed={isPureTesting}
             >
-              Testing · Puente flips
+              Testing
             </button>
           </div>
         </div>
@@ -292,7 +292,7 @@ const ModuleSelector = ({
                   </span>
                   {isPureTesting && mod.puenteSentenceCount > 0 && (
                     <span className="sentence-count puente-count">
-                      +{mod.puenteSentenceCount} from Puente
+                      +{mod.puenteSentenceCount} bonus
                     </span>
                   )}
                   {mod.learningTargetCount > 0 && (

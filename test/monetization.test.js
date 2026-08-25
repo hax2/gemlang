@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
+  FREE_ACCESS_MODE,
   FREE_MODULE_IDS,
   hasPaidAccess,
   isModuleFree,
@@ -9,9 +10,15 @@ import {
 
 test('the free tier contains the promised starter course', () => {
   assert.equal(FREE_MODULE_IDS.size, 4);
+  assert.equal(FREE_MODULE_IDS.has('module-1'), true);
+  assert.equal(FREE_MODULE_IDS.has('review-1-2-3'), true);
+});
+
+test('free access mode unlocks every module while payments are offline', () => {
+  assert.equal(FREE_ACCESS_MODE, true);
   assert.equal(isModuleFree('module-1'), true);
-  assert.equal(isModuleFree('review-1-2-3'), true);
-  assert.equal(isModuleFree('module-4'), false);
+  assert.equal(isModuleFree('module-4'), true);
+  assert.equal(isModuleFree('module-43'), true);
 });
 
 test('all Lemon Squeezy subscription states retain access except expired', () => {

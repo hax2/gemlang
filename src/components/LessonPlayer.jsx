@@ -1883,7 +1883,7 @@ const LessonPlayer = ({
         <div className="lesson-content glass-panel challenge-panel" style={swipeStyle} {...swipeTouchProps}>
           <div className={`challenge-badge ${isPureTestingMode ? 'pure-testing' : ''}`}>
             <span className="challenge-icon">↔</span>
-            <span>{isPureTestingMode ? 'Testing · Puente flips' : 'Translation Challenge'}</span>
+              <span>{isPureTestingMode ? 'Testing mode' : 'Translation Challenge'}</span>
           </div>
 
           <div className="challenge-prompt">

@@ -11,7 +11,7 @@ import { supabase } from './supabaseClient';
 import useSettings from './hooks/useSettings';
 import useProgress from './hooks/useProgress';
 import useSubscription from './hooks/useSubscription';
-import { isModuleFree } from './config/monetization';
+import { FREE_ACCESS_MODE, isModuleFree } from './config/monetization';
 import modulesManifest from './data/modules-manifest.json';
 import { getPuenteSentenceCount, integratePuenteSentences } from './data/puenteIntegration';
 import './App.css';
@@ -362,7 +362,7 @@ function App() {
               <span className="header-action-label">Settings</span>
             </button>
           )}
-          {(session || guestMode) && (
+          {(session || guestMode) && (hasPremiumAccess || !FREE_ACCESS_MODE) && (
             <button
               type="button"
               className={`header-action header-plan ${hasPremiumAccess ? 'is-pro' : ''}`}

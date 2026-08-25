@@ -1,4 +1,5 @@
 import React from 'react';
+import { FREE_ACCESS_MODE } from '../config/monetization';
 import './Dashboard.css';
 
 const Dashboard = ({
@@ -93,7 +94,7 @@ const Dashboard = ({
         </div>
       </div>
 
-      {!hasPremiumAccess && (
+      {!hasPremiumAccess && !FREE_ACCESS_MODE && (
         <button type="button" className="dashboard-pro-banner glass-panel" onClick={onUpgrade}>
           <span className="dashboard-pro-icon" aria-hidden="true">✦</span>
           <span className="dashboard-pro-copy">
