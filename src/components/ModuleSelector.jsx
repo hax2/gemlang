@@ -132,7 +132,7 @@ const ModuleSelector = ({
         <h1 className="module-main-title">All Modules</h1>
         <p className="module-subtitle">
           {isPureTesting
-            ? 'Choose a module to run pure translation testing (English to Spanish only).'
+            ? 'Choose a module, then flip its English clues into Spanish one piece at a time.'
             : 'Choose a module to start guided listening and translation practice.'}
         </p>
         <div className="practice-mode-panel glass-panel">
@@ -152,7 +152,7 @@ const ModuleSelector = ({
               onClick={() => onPracticeModeChange('testing')}
               aria-pressed={isPureTesting}
             >
-              Pure Testing
+              Testing · Puente flips
             </button>
           </div>
         </div>
@@ -287,8 +287,14 @@ const ModuleSelector = ({
 
                 <div className="module-meta">
                   <span className="sentence-count">
-                    {mod.sentenceCount} {isPureTesting ? 'Prompts' : 'Sentences'}
+                    {isPureTesting ? (mod.testingSentenceCount ?? mod.sentenceCount) : mod.sentenceCount}{' '}
+                    {isPureTesting ? 'Prompts' : 'Sentences'}
                   </span>
+                  {isPureTesting && mod.puenteSentenceCount > 0 && (
+                    <span className="sentence-count puente-count">
+                      +{mod.puenteSentenceCount} from Puente
+                    </span>
+                  )}
                   {mod.learningTargetCount > 0 && (
                     <span className="sentence-count">
                       {mod.learningTargetCount} key words

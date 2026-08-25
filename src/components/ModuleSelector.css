@@ -383,6 +383,10 @@
   font-weight: 500;
 }
 
+.sentence-count.puente-count {
+  color: #5eead4;
+}
+
 /* Story cards */
 .story-card {
   border-left: 3px solid rgba(251, 191, 36, 0.6);

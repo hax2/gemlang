@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import Tutorial from './Tutorial';
 import { hasSeenTutorial, markTutorialSeen } from '../utils/tutorialStorage';
+import { buildChallengeChunks } from '../utils/challengeChunks';
 import './LessonPlayer.css';
 
 /* helpers */
@@ -95,6 +96,31 @@ const buildTestingItems = (sentences) =>
     batchStart: index,
     batchEnd: index,
   }));
+
+const getTestingSentences = (module) => {
+  const sentences = [...(module.sentences || [])];
+
+  if (Array.isArray(module.rules)) {
+    module.rules.forEach((rule) => {
+      (rule.translations || []).forEach((translation, index) => {
+        sentences.push({
+          id: `${module.id}-${rule.id}-test-${index + 1}`,
+          spanish: translation.spanish,
+          english: translation.english,
+          grammarNote: translation.reason,
+        });
+      });
+    });
+  }
+
+  const seen = new Set();
+  return sentences.filter((sentence) => {
+    const key = `${sentence.spanish || ''}\u0000${sentence.english || ''}`.toLocaleLowerCase();
+    if (!sentence.spanish || !sentence.english || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+};
 
 const SER_ESTAR_RULE_ORDER = [
   'identity-definition',
@@ -681,12 +707,14 @@ const LessonPlayer = ({
   // Build merged items once for initial index calculation
   const initialMergedItems = useMemo(() => {
     if (isSerEstarSpecial) return buildSerEstarItems(module) || [];
-    if (isPureTestingMode) return buildTestingItems(module.sentences);
+    if (isPureTestingMode) return buildTestingItems(getTestingSentences(module));
     return buildMergedItems(module.sentences, module.id, challengeInterval);
   }, [module, isPureTestingMode, isSerEstarSpecial, challengeInterval]);
 
   // Convert sentence-level progress to merged-items index
-  const savedSentenceCount = getSavedIndex ? getSavedIndex(module.id, practiceMode) : 0;
+  const savedSentenceCount = !isPureTestingMode && getSavedIndex
+    ? getSavedIndex(module.id, practiceMode)
+    : 0;
   const resumeIndex = useMemo(() => {
     if (savedSentenceCount <= 0) return 0;
     let sentencesSeen = 0;
@@ -707,6 +735,7 @@ const LessonPlayer = ({
   const [englishRevealed, setEnglishRevealed] = useState(false);
   const [activeWordIndex, setActiveWordIndex] = useState(null);
   const [challengeAnswerRevealed, setChallengeAnswerRevealed] = useState(false);
+  const [challengeFlippedChunks, setChallengeFlippedChunks] = useState(() => new Set());
   const [extraItems, setExtraItems] = useState([]);
   const [insertedPracticeItems, setInsertedPracticeItems] = useState([]);
   const [choiceSelection, setChoiceSelection] = useState(null);
@@ -758,6 +787,7 @@ const LessonPlayer = ({
     setEnglishRevealed(false);
     setActiveWordIndex(null);
     setChallengeAnswerRevealed(false);
+    setChallengeFlippedChunks(new Set());
     setChoiceSelection(null);
   }, [settings?.autoRevealSpanish]);
 
@@ -816,7 +846,7 @@ const LessonPlayer = ({
       return mergeInsertedPracticeItems(buildSerEstarItems(module) || [], insertedPracticeItems);
     }
     if (isPureTestingMode) {
-      return buildTestingItems(module.sentences);
+      return buildTestingItems(getTestingSentences(module));
     }
     const base = buildMergedItems(module.sentences, module.id, challengeInterval);
     return [...base, ...extraItems];
@@ -828,8 +858,15 @@ const LessonPlayer = ({
   const isSerEstarChoice = currentItem?.type === 'ser-estar-choice';
   const isSerEstarTranslation = currentItem?.type === 'ser-estar-translation';
   const sentence = (isChallenge || isSerEstarChoice || isSerEstarTranslation) ? null : currentItem?.data;
+  const challengeChunks = useMemo(
+    () => isChallenge ? buildChallengeChunks(currentItem?.data) : [],
+    [currentItem, isChallenge]
+  );
+  const allChallengeChunksFlipped = challengeAnswerRevealed || (
+    challengeChunks.length > 0 && challengeFlippedChunks.size === challengeChunks.length
+  );
   const isFinished = currentIndex >= mergedItems.length;
-  const showSelfAssessment = isFinished && !hasAssessed;
+  const showSelfAssessment = isFinished && !hasAssessed && !isPureTestingMode;
   const hasNextModule = moduleIndex < modules.length - 1;
   const vocabulary = useMemo(() => module.vocabulary || {}, [module.vocabulary]);
   const vocabTable = useMemo(() => {
@@ -899,7 +936,9 @@ const LessonPlayer = ({
     return buildVocabTable(module.sentences, vocabulary, module.learningTargets);
   }, [isFinished, module, vocabulary]);
 
-  const totalSentences = isSerEstarSpecial ? mergedItems.length : module.sentences.length;
+  const totalSentences = (isPureTestingMode || isSerEstarSpecial)
+    ? mergedItems.length
+    : module.sentences.length;
   const progressItemsSoFar = isFinished
     ? totalSentences
     : mergedItems.slice(0, currentIndex + 1).filter((item) => {
@@ -1003,6 +1042,32 @@ const LessonPlayer = ({
     if (sentence?.spanish) playSpanish(sentence.spanish);
   }, [choiceSelection, currentItem, isChallenge, isSerEstarChoice, isSerEstarTranslation, playSpanish, sentence]);
 
+  const revealChallengeChunk = useCallback((chunkIndex) => {
+    const chunk = challengeChunks[chunkIndex];
+    if (!chunk) return;
+
+    if (challengeAnswerRevealed || challengeFlippedChunks.has(chunkIndex)) {
+      playSpanish(chunk.spanish);
+      return;
+    }
+
+    playSpanish(chunk.spanish);
+    setChallengeFlippedChunks((previous) => {
+      const next = new Set(previous);
+      next.add(chunkIndex);
+      if (next.size === challengeChunks.length) {
+        setChallengeAnswerRevealed(true);
+      }
+      return next;
+    });
+  }, [challengeAnswerRevealed, challengeChunks, challengeFlippedChunks, playSpanish]);
+
+  const revealEntireChallenge = useCallback(() => {
+    setChallengeFlippedChunks(new Set(challengeChunks.map((_, index) => index)));
+    setChallengeAnswerRevealed(true);
+    if (currentItem?.data?.spanish) playSpanish(currentItem.data.spanish);
+  }, [challengeChunks, currentItem, playSpanish]);
+
   const handleNext = useCallback((swipeDir) => {
     stopSpanishAudio();
     resetRevealState();
@@ -1021,7 +1086,7 @@ const LessonPlayer = ({
     }
 
     // Save progress
-    if (saveModuleProgress) {
+    if (saveModuleProgress && !isPureTestingMode) {
       // Calculate the sentence-level progress for the new index
       const sentenceProgress = mergedItems.slice(0, newIndex).filter((item) => {
         if (isSerEstarSpecial) return item.type === 'ser-estar-choice' || item.type === 'ser-estar-translation';
@@ -1372,10 +1437,8 @@ const LessonPlayer = ({
       if (isChallenge) {
         if (key === ' ' || key === 's') {
           event.preventDefault();
-          if (!challengeAnswerRevealed) {
-            setChallengeAnswerRevealed(true);
-          }
-          playAudio();
+          if (!challengeAnswerRevealed) revealEntireChallenge();
+          else playAudio();
         }
         if (key === 'enter' || key === 'arrowright') handleNext();
         if (key === 'arrowleft') handlePrev();
@@ -1413,6 +1476,7 @@ const LessonPlayer = ({
     onBack,
     onNextModule,
     playAudio,
+    revealEntireChallenge,
     showGrammarIntro,
     showSelfAssessment,
     showTutorial,
@@ -1542,7 +1606,9 @@ const LessonPlayer = ({
         {/* Resume toast (shouldn't show here but just in case) */}
 
         <div className="finished-icon">🎉</div>
-        <h2 className="finished-title">Module Completed!</h2>
+        <h2 className="finished-title">
+          {isPureTestingMode ? 'Testing Complete!' : 'Module Completed!'}
+        </h2>
         <p className="finished-subtitle">
           {isPureTestingMode
             ? <>You&apos;ve completed all translation prompts in <strong>{module.title}</strong>.</>
@@ -1807,34 +1873,73 @@ const LessonPlayer = ({
           <button className="btn-help" onClick={() => setShowTutorial(true)} title="How to use">
             ?
           </button>
-          <LessonProgress current={progressItemsSoFar} total={totalSentences} label="Checkpoint" />
+          <LessonProgress
+            current={progressItemsSoFar}
+            total={totalSentences}
+            label={isPureTestingMode ? 'Testing' : 'Checkpoint'}
+          />
         </div>
 
         <div className="lesson-content glass-panel challenge-panel" style={swipeStyle} {...swipeTouchProps}>
           <div className={`challenge-badge ${isPureTestingMode ? 'pure-testing' : ''}`}>
-            <span className="challenge-icon">🗣️</span>
-            <span>{isPureTestingMode ? 'Pure Testing Mode' : 'Translation Challenge'}</span>
+            <span className="challenge-icon">↔</span>
+            <span>{isPureTestingMode ? 'Testing · Puente flips' : 'Translation Challenge'}</span>
           </div>
 
           <div className="challenge-prompt">
-            <p className="challenge-instruction">Translate this sentence into Spanish:</p>
+            <p className="challenge-instruction">
+              Say the sentence in Spanish, then flip any clue to check that part.
+            </p>
             <p className="challenge-english">{challengeSentence.english}</p>
           </div>
 
+          <div className="challenge-fusion" aria-label="Individually revealable translation clues">
+            {challengeChunks.map((chunk, chunkIndex) => {
+              const isFlipped = challengeAnswerRevealed || challengeFlippedChunks.has(chunkIndex);
+              return (
+                <button
+                  type="button"
+                  className={`challenge-flip-token ${isFlipped ? 'is-flipped' : ''}`}
+                  key={`${currentItem.data.id || currentIndex}-chunk-${chunkIndex}`}
+                  onClick={() => revealChallengeChunk(chunkIndex)}
+                  aria-pressed={isFlipped}
+                  aria-label={isFlipped
+                    ? `${chunk.spanish}. Play this Spanish part`
+                    : `${chunk.english}. Reveal this Spanish part`}
+                >
+                  <span className="challenge-flip-inner">
+                    <span className="challenge-flip-face challenge-flip-english" aria-hidden={isFlipped}>
+                      {chunk.english}
+                    </span>
+                    <span className="challenge-flip-face challenge-flip-spanish" aria-hidden={!isFlipped}>
+                      {chunk.spanish}
+                    </span>
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
           <div className="challenge-answer-area">
-            {!challengeAnswerRevealed ? (
+            {!allChallengeChunksFlipped ? (
               <button
                 className="btn-primary btn-reveal-answer pulse-primary"
-                onClick={() => {
-                  setChallengeAnswerRevealed(true);
-                  playSpanish(challengeSentence.spanish);
-                }}
+                onClick={revealEntireChallenge}
               >
-                Reveal Answer <KbdHint show={isDesktop}>Space</KbdHint>
+                Reveal Full Sentence <KbdHint show={isDesktop}>Space</KbdHint>
               </button>
             ) : (
               <div className="challenge-answer animate-fade-in">
                 <p className="challenge-spanish">{challengeSentence.spanish}</p>
+                {(challengeSentence.puente?.note || challengeSentence.grammarNote) && (
+                  <p className="challenge-grammar-note">
+                    <strong>{challengeSentence.puente?.note || 'Grammar note'}</strong>
+                    {challengeSentence.puente?.topic && ` · ${challengeSentence.puente.topic}`}
+                    {challengeSentence.grammarNote && !challengeSentence.puente?.note
+                      ? ` — ${challengeSentence.grammarNote}`
+                      : ''}
+                  </p>
+                )}
                 <button
                   className="btn-play-answer"
                   onClick={() => playSpanish(challengeSentence.spanish)}

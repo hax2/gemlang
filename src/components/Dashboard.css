@@ -306,9 +306,64 @@
 
 /* Browse All */
 .dashboard-browse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   text-align: center;
   padding-top: 0.5rem;
   padding-bottom: 2rem;
+}
+
+.dashboard-test-btn {
+  width: 100%;
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-color: rgba(45, 212, 191, 0.25);
+  background: linear-gradient(120deg, rgba(45, 212, 191, 0.1), rgba(168, 85, 247, 0.07));
+  text-align: left;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.dashboard-test-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(45, 212, 191, 0.5);
+}
+
+.dashboard-test-btn:focus-visible {
+  outline: 2px solid #5eead4;
+  outline-offset: 3px;
+}
+
+.dashboard-test-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(45, 212, 191, 0.14);
+  color: #5eead4;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.dashboard-test-copy {
+  min-width: 0;
+  flex: 1;
+  display: grid;
+  gap: 0.15rem;
+}
+
+.dashboard-test-copy strong {
+  color: var(--text-main);
+}
+
+.dashboard-test-copy span {
+  color: var(--text-muted);
+  font-size: 0.85rem;
 }
 
 .browse-all-btn {
@@ -359,6 +414,16 @@
   .cta-module-level,
   .refresh-level {
     display: none;
+  }
+
+  .dashboard-test-btn {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-test-btn .btn-primary {
+    width: 100%;
+    text-align: center;
   }
 }
 .dashboard-pro-banner {

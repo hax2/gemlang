@@ -13,10 +13,25 @@ import useProgress from './hooks/useProgress';
 import useSubscription from './hooks/useSubscription';
 import { isModuleFree } from './config/monetization';
 import modulesManifest from './data/modules-manifest.json';
+import { getPuenteSentenceCount, integratePuenteSentences } from './data/puenteIntegration';
 import './App.css';
 
 const moduleLoaders = import.meta.glob('./data/modules/*.json');
 const GUEST_MODE_KEY = 'gemlang-guest-mode';
+const SPECIAL_TESTING_PROMPT_COUNTS = {
+  'module-ser-vs-estar': 20,
+  'module-ser-vs-estar-2': 20,
+  'module-ser-vs-estar-3': 10,
+};
+const courseModules = modulesManifest.map((module) => {
+  const puenteSentenceCount = getPuenteSentenceCount(module.id);
+  return {
+    ...module,
+    puenteSentenceCount,
+    testingSentenceCount:
+      (SPECIAL_TESTING_PROMPT_COUNTS[module.id] ?? module.sentenceCount) + puenteSentenceCount,
+  };
+});
 
 const loadGuestMode = () => {
   try {
@@ -114,6 +129,10 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [showSignOutConfirm]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [activeModuleIndex, view]);
+
   const {
     progress,
     saveModuleProgress,
@@ -125,10 +144,10 @@ function App() {
     stats,
     resetProgress,
     setStartingLevel,
-  } = useProgress(modulesManifest);
+  } = useProgress(courseModules);
 
   const loadModuleAtIndex = useCallback(async (index) => {
-    const manifestModule = modulesManifest[index];
+    const manifestModule = courseModules[index];
     if (!manifestModule) return;
 
     const loader = moduleLoaders[`./data/modules/${manifestModule.file}`];
@@ -147,7 +166,7 @@ function App() {
       }
       const loadedModule = await loader();
       if (loadRequestRef.current !== requestId) return;
-      setActiveModule(loadedModule.default);
+      setActiveModule(integratePuenteSentences(loadedModule.default));
     } catch (error) {
       if (loadRequestRef.current !== requestId) return;
 
@@ -176,7 +195,7 @@ function App() {
       return;
     }
 
-    const idx = modulesManifest.findIndex((item) => item.id === module.id);
+    const idx = courseModules.findIndex((item) => item.id === module.id);
     if (idx >= 0) {
       setLessonOriginView(view === 'modules' ? 'modules' : 'dashboard');
       void loadModuleAtIndex(idx);
@@ -192,6 +211,21 @@ function App() {
     setView('dashboard');
   }, []);
 
+  const handleOpenTesting = useCallback(() => {
+    loadRequestRef.current += 1;
+    setActiveModuleIndex(null);
+    setActiveModule(null);
+    setModuleLoadError(null);
+    setIsModuleLoading(false);
+    setPracticeMode('testing');
+    setView('modules');
+  }, []);
+
+  const handleBrowseGuided = useCallback(() => {
+    setPracticeMode('guided');
+    setView('modules');
+  }, []);
+
   const handleBackFromLesson = useCallback(() => {
     loadRequestRef.current += 1;
     setActiveModuleIndex(null);
@@ -203,7 +237,7 @@ function App() {
 
   const handleNextModule = useCallback(() => {
     const nextIdx = activeModuleIndex + 1;
-    if (nextIdx < modulesManifest.length) {
+    if (nextIdx < courseModules.length) {
       void loadModuleAtIndex(nextIdx);
     } else {
       handleBackToDashboard();
@@ -291,6 +325,23 @@ function App() {
           {progress.hasChosenLevel && (
             <button
               type="button"
+              className={`header-action ${(practiceMode === 'testing' && (view === 'modules' || view === 'lesson')) ? 'is-active' : ''}`}
+              onClick={handleOpenTesting}
+              title="Open testing mode"
+              aria-label="Open testing mode"
+              aria-pressed={practiceMode === 'testing' && (view === 'modules' || view === 'lesson')}
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M4 19.5V5.8A1.8 1.8 0 0 1 5.8 4H10a2 2 0 0 1 2 2v13.5" />
+                <path d="M20 19.5V5.8A1.8 1.8 0 0 0 18.2 4H14a2 2 0 0 0-2 2" />
+                <path d="M4 19.5c2.7-1 5.3-.8 8 .5 2.7-1.3 5.3-1.5 8-.5" />
+              </svg>
+              <span className="header-action-label">Test</span>
+            </button>
+          )}
+          {progress.hasChosenLevel && (
+            <button
+              type="button"
               className={`header-action ${view === 'settings' ? 'is-active' : ''}`}
               onClick={() => {
                 if (view === 'settings') {
@@ -345,18 +396,18 @@ function App() {
           <Auth onGuestMode={handleEnterGuestMode} />
         ) : !progress.hasChosenLevel ? (
           <Onboarding 
-            modules={modulesManifest} 
+            modules={courseModules} 
             onComplete={(levelType, moduleId) => {
               let targetIndex = 0;
               if (levelType === 'granular' && moduleId) {
-                targetIndex = modulesManifest.findIndex(m => m.id === moduleId);
+                targetIndex = courseModules.findIndex(m => m.id === moduleId);
               } else if (levelType === 'Intermediate') {
-                targetIndex = modulesManifest.findIndex(m => m.level === 'Intermediate');
+                targetIndex = courseModules.findIndex(m => m.level === 'Intermediate');
               } else if (levelType === 'Advanced') {
-                targetIndex = modulesManifest.findIndex(m => m.level === 'Advanced');
+                targetIndex = courseModules.findIndex(m => m.level === 'Advanced');
               }
               
-              const targetModule = targetIndex >= 0 ? modulesManifest[targetIndex] : modulesManifest[0];
+              const targetModule = targetIndex >= 0 ? courseModules[targetIndex] : courseModules[0];
               if (targetModule && !isModuleFree(targetModule.id) && !hasPremiumAccess) {
                 setShowPricing(true);
                 return;
@@ -383,22 +434,26 @@ function App() {
           />
         ) : view === 'dashboard' ? (
           <Dashboard
-            modules={modulesManifest}
+            modules={courseModules}
             stats={stats}
             progress={progress}
             getModuleStatus={getModuleStatus}
             getModuleProgress={getModuleProgress}
             getNextSuggestedModule={getNextSuggestedModule}
             getRefreshModules={getRefreshModules}
-            onSelectModule={handleSelectModule}
-            onBrowseAll={() => setView('modules')}
+            onSelectModule={(module) => {
+              setPracticeMode('guided');
+              handleSelectModule(module);
+            }}
+            onBrowseAll={handleBrowseGuided}
+            onStartTesting={handleOpenTesting}
             hasPremiumAccess={hasPremiumAccess}
             isModuleFree={isModuleFree}
             onUpgrade={() => setShowPricing(true)}
           />
         ) : view === 'modules' ? (
           <ModuleSelector
-            modules={modulesManifest}
+            modules={courseModules}
             onSelect={handleSelectModule}
             practiceMode={practiceMode}
             onPracticeModeChange={setPracticeMode}
@@ -413,7 +468,7 @@ function App() {
             <span className="loading-spinner" aria-hidden="true" />
             <h2 className="finished-title">Loading lesson...</h2>
             <p className="finished-subtitle">
-              Preparing {modulesManifest[activeModuleIndex]?.title}.
+              Preparing {courseModules[activeModuleIndex]?.title}.
             </p>
           </div>
         ) : moduleLoadError ? (
@@ -449,7 +504,7 @@ function App() {
           <LessonPlayer
             key={`${activeModule.id}-${practiceMode}`}
             module={activeModule}
-            modules={modulesManifest}
+            modules={courseModules}
             moduleIndex={activeModuleIndex}
             practiceMode={practiceMode}
             settings={settings}

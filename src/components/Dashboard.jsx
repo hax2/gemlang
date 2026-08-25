@@ -11,6 +11,7 @@ const Dashboard = ({
   getRefreshModules,
   onSelectModule,
   onBrowseAll,
+  onStartTesting,
   hasPremiumAccess,
   isModuleFree,
   onUpgrade,
@@ -241,6 +242,14 @@ const Dashboard = ({
 
       {/* Browse All */}
       <div className="dashboard-browse">
+        <button className="dashboard-test-btn glass-panel" onClick={onStartTesting}>
+          <span className="dashboard-test-icon" aria-hidden="true">↔</span>
+          <span className="dashboard-test-copy">
+            <strong>Testing mode</strong>
+            <span>Flip English clues into Spanish, one piece at a time.</span>
+          </span>
+          <span className="btn-primary btn-sm">Choose a topic →</span>
+        </button>
         <button className="btn-secondary browse-all-btn" onClick={onBrowseAll}>
           Browse All Modules ({stats.total})
         </button>
