@@ -11,7 +11,13 @@
       "wordMeanings": {
         "Dónde": "where",
         "estás": "you are"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Dónde estás?",
+          "english": "Where are you?"
+        }
+      ]
     },
     {
       "id": "m2-s2",
@@ -20,7 +26,13 @@
       "wordMeanings": {
         "Estoy": "I am",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estoy aquí.",
+          "english": "I am here."
+        }
+      ]
     },
     {
       "id": "m2-s3",
@@ -29,7 +41,13 @@
       "wordMeanings": {
         "Estoy": "I am",
         "allí": "there"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estoy allí.",
+          "english": "I am there."
+        }
+      ]
     },
     {
       "id": "m2-s4",
@@ -39,7 +57,17 @@
         "Estoy": "I am",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estoy",
+          "english": "I am"
+        },
+        {
+          "spanish": "en casa.",
+          "english": "at home."
+        }
+      ]
     },
     {
       "id": "m2-s5",
@@ -72,7 +100,17 @@
         "en": "in / on",
         "el": "the",
         "centro": "downtown"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estoy",
+          "english": "I am"
+        },
+        {
+          "spanish": "en el centro.",
+          "english": "downtown."
+        }
+      ]
     },
     {
       "id": "m2-s8",
@@ -83,7 +121,17 @@
         "en": "in / on",
         "la": "the / it (fem)",
         "calle": "street"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estoy",
+          "english": "I am"
+        },
+        {
+          "spanish": "en la calle.",
+          "english": "in the street."
+        }
+      ]
     },
     {
       "id": "m2-s9",
@@ -137,7 +185,17 @@
         "en": "in / on",
         "la": "the / it (fem)",
         "escuela": "school"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Luis está",
+          "english": "Luis is"
+        },
+        {
+          "spanish": "en la escuela.",
+          "english": "at school."
+        }
+      ]
     },
     {
       "id": "m2-s14",
@@ -204,7 +262,21 @@
         "en": "in / on",
         "casa": "house",
         "ahora": "now"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "estoy en casa",
+          "english": "I am at home"
+        },
+        {
+          "spanish": "ahora.",
+          "english": "now."
+        }
+      ]
     },
     {
       "id": "m2-s20",
@@ -242,7 +314,21 @@
         "el": "the",
         "trabajo": "I work / job",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "estoy en el trabajo",
+          "english": "I am at work"
+        },
+        {
+          "spanish": "hoy.",
+          "english": "today."
+        }
+      ]
     },
     {
       "id": "m2-s23",
@@ -256,7 +342,17 @@
         "el": "the",
         "trabajo": "I work / job",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "no estoy en el trabajo hoy.",
+          "english": "I am not at work today."
+        }
+      ]
     },
     {
       "id": "m2-s24",
@@ -265,7 +361,13 @@
       "wordMeanings": {
         "Estoy": "I am",
         "cerca": "near"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estoy cerca.",
+          "english": "I am nearby."
+        }
+      ]
     },
     {
       "id": "m2-s25",
@@ -274,7 +376,13 @@
       "wordMeanings": {
         "Estoy": "I am",
         "lejos": "far"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estoy lejos.",
+          "english": "I am far away."
+        }
+      ]
     },
     {
       "id": "m2-s26",
@@ -296,7 +404,17 @@
         "escuela": "school",
         "está": "is",
         "lejos": "far"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La escuela",
+          "english": "The school"
+        },
+        {
+          "spanish": "está lejos.",
+          "english": "is far away."
+        }
+      ]
     },
     {
       "id": "m2-s28",
@@ -319,7 +437,17 @@
         "casa": "house",
         "está": "is",
         "cerca": "near"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "la casa está cerca.",
+          "english": "the house is nearby."
+        }
+      ]
     },
     {
       "id": "m2-s30",
@@ -330,7 +458,17 @@
         "escuela": "school",
         "está": "is",
         "lejos": "far"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿La escuela",
+          "english": "Is the school"
+        },
+        {
+          "spanish": "está lejos?",
+          "english": "far away?"
+        }
+      ]
     },
     {
       "id": "m2-s31",
@@ -366,7 +504,17 @@
         "centro": "downtown",
         "y": "and",
         "tú": "you"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estoy por el centro,",
+          "english": "I'm around downtown,"
+        },
+        {
+          "spanish": "¿y tú?",
+          "english": "and you?"
+        }
+      ]
     },
     {
       "id": "m2-s34",
@@ -375,7 +523,13 @@
       "wordMeanings": {
         "Dónde": "where",
         "estáis": "you all are"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Dónde estáis?",
+          "english": "Where are you all?"
+        }
+      ]
     },
     {
       "id": "m2-s35",
@@ -384,7 +538,13 @@
       "wordMeanings": {
         "Estamos": "we are",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estamos aquí.",
+          "english": "We are here."
+        }
+      ]
     },
     {
       "id": "m2-s36",
@@ -393,7 +553,13 @@
       "wordMeanings": {
         "Estamos": "we are",
         "allí": "there"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estamos allí.",
+          "english": "We are there."
+        }
+      ]
     },
     {
       "id": "m2-s37",
@@ -404,7 +570,17 @@
         "en": "in / on",
         "el": "the",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estamos",
+          "english": "We are"
+        },
+        {
+          "spanish": "en el café.",
+          "english": "in the café."
+        }
+      ]
     },
     {
       "id": "m2-s38",
@@ -415,7 +591,17 @@
         "estoy": "I am",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hoy",
+          "english": "Today"
+        },
+        {
+          "spanish": "estoy en casa.",
+          "english": "I am at home."
+        }
+      ]
     },
     {
       "id": "m2-s39",
@@ -440,7 +626,17 @@
         "en": "in / on",
         "la": "the / it (fem)",
         "escuela": "school"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hoy",
+          "english": "Today"
+        },
+        {
+          "spanish": "no estoy en la escuela.",
+          "english": "I am not at school."
+        }
+      ]
     },
     {
       "id": "m2-s41",
@@ -462,7 +658,17 @@
         "no": "no / not",
         "está": "is",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "Ana no está aquí.",
+          "english": "Ana is not here."
+        }
+      ]
     },
     {
       "id": "m2-s43",
@@ -497,7 +703,17 @@
         "en": "in / on",
         "el": "the",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "Luis está en el café.",
+          "english": "Luis is in the café."
+        }
+      ]
     },
     {
       "id": "m2-s46",
@@ -510,7 +726,21 @@
         "Carlos": "Carlos",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Están",
+          "english": "Are"
+        },
+        {
+          "spanish": "Marta y Carlos",
+          "english": "Marta and Carlos"
+        },
+        {
+          "spanish": "en casa?",
+          "english": "at home?"
+        }
+      ]
     },
     {
       "id": "m2-s47",

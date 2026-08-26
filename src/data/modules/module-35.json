@@ -13,7 +13,17 @@
         "Carlos": "Carlos",
         "Cómo": "how",
         "estás": "are you"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "—¡Hola, Carlos!",
+          "english": "—Hello, Carlos!"
+        },
+        {
+          "spanish": "¿Cómo estás?",
+          "english": "How are you?"
+        }
+      ]
     },
     {
       "id": "m35-s2",
@@ -26,7 +36,17 @@
         "María": "María",
         "Y": "and",
         "tú": "you"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "—Muy bien, gracias, María.",
+          "english": "—Very well, thanks, María."
+        },
+        {
+          "spanish": "¿Y tú?",
+          "english": "And you?"
+        }
+      ]
     },
     {
       "id": "m35-s3",
@@ -42,7 +62,17 @@
         "vas": "you go",
         "a": "to",
         "pedir": "to order"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "—Un poco cansada, pero bien.",
+          "english": "—A little tired, but okay."
+        },
+        {
+          "spanish": "¿Qué vas a pedir?",
+          "english": "What are you going to order?"
+        }
+      ]
     },
     {
       "id": "m35-s4",
@@ -56,7 +86,17 @@
         "café": "coffee",
         "con": "with",
         "leche": "milk"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "—Creo que quiero",
+          "english": "—I think I want"
+        },
+        {
+          "spanish": "un café con leche.",
+          "english": "a coffee with milk."
+        }
+      ]
     },
     {
       "id": "m35-s5",

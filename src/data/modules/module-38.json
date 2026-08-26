@@ -13,7 +13,17 @@
         "habla": "talks",
         "familia": "family",
         "fines de semana": "weekends"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi tía habla con la familia",
+          "english": "My aunt talks with the family"
+        },
+        {
+          "spanish": "los fines de semana.",
+          "english": "on weekends."
+        }
+      ]
     },
     {
       "id": "38-s22",
@@ -38,7 +48,17 @@
         "somos": "we are",
         "uña": "nail",
         "carne": "flesh / meat"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mis hermanos y yo",
+          "english": "My siblings and I"
+        },
+        {
+          "spanish": "somos uña y carne.",
+          "english": "are very close (like nail and flesh)."
+        }
+      ]
     },
     {
       "id": "38-s34",
@@ -49,7 +69,17 @@
         "abraza": "hugs",
         "sobrino": "nephew",
         "casa": "home"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi hermano abraza a su sobrino",
+          "english": "My brother hugs his/her nephew"
+        },
+        {
+          "spanish": "en casa.",
+          "english": "at home."
+        }
+      ]
     },
     {
       "id": "38-s16",
@@ -71,7 +101,17 @@
         "quiere": "loves",
         "gemelos": "twins",
         "casa": "home"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Su primo quiere a los gemelos",
+          "english": "Their cousin loves the twins"
+        },
+        {
+          "spanish": "en casa.",
+          "english": "at home."
+        }
+      ]
     },
     {
       "id": "38-s-colloq2",
@@ -106,7 +146,17 @@
         "habla": "talks",
         "nieto": "grandson",
         "fines de semana": "weekends"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nuestro abuelo habla con el nieto",
+          "english": "Our grandfather talks with the grandson"
+        },
+        {
+          "spanish": "los fines de semana.",
+          "english": "on weekends."
+        }
+      ]
     },
     {
       "id": "38-s4",
@@ -117,7 +167,17 @@
         "habla": "talks",
         "cuñado": "brother-in-law",
         "fines de semana": "weekends"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La suegra habla con mi cuñado",
+          "english": "The mother-in-law talks with my brother-in-law"
+        },
+        {
+          "spanish": "los fines de semana.",
+          "english": "on weekends."
+        }
+      ]
     },
     {
       "id": "38-s25",
@@ -139,7 +199,17 @@
         "abraza": "hugs",
         "sobrino": "nephew",
         "fines de semana": "weekends"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nuestro abuelo abraza a su sobrino",
+          "english": "Our grandfather hugs his/her nephew"
+        },
+        {
+          "spanish": "los fines de semana.",
+          "english": "on weekends."
+        }
+      ]
     },
     {
       "id": "38-s36",
@@ -150,7 +220,17 @@
         "quiere": "loves",
         "familia": "family",
         "fines de semana": "weekends"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Su primo quiere a la familia",
+          "english": "Their cousin loves the family"
+        },
+        {
+          "spanish": "los fines de semana.",
+          "english": "on weekends."
+        }
+      ]
     },
     {
       "id": "38-s38",
@@ -172,7 +252,17 @@
         "quiere": "loves",
         "familia": "family",
         "fines de semana": "weekends"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi tía quiere a la familia",
+          "english": "My aunt loves the family"
+        },
+        {
+          "spanish": "los fines de semana.",
+          "english": "on weekends."
+        }
+      ]
     },
     {
       "id": "38-s35",
@@ -183,7 +273,17 @@
         "abraza": "hugs",
         "sobrino": "nephew",
         "fines de semana": "weekends"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Su primo abraza a su sobrino",
+          "english": "Their cousin hugs their nephew"
+        },
+        {
+          "spanish": "los fines de semana.",
+          "english": "on weekends."
+        }
+      ]
     },
     {
       "id": "38-s26",
@@ -205,7 +305,17 @@
         "quiere": "loves",
         "familia": "family",
         "fines de semana": "weekends"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La suegra quiere a la familia",
+          "english": "The mother-in-law loves the family"
+        },
+        {
+          "spanish": "los fines de semana.",
+          "english": "on weekends."
+        }
+      ]
     },
     {
       "id": "38-s2",
@@ -216,7 +326,17 @@
         "habla": "talks",
         "sobrino": "nephew",
         "a menudo": "often"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nuestro abuelo habla con su sobrino",
+          "english": "Our grandfather talks with his/her nephew"
+        },
+        {
+          "spanish": "a menudo.",
+          "english": "often."
+        }
+      ]
     },
     {
       "id": "38-s3",
@@ -238,7 +358,17 @@
         "habla": "talks",
         "familia": "family",
         "a menudo": "often"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nuestro abuelo habla con la familia",
+          "english": "Our grandfather talks with the family"
+        },
+        {
+          "spanish": "a menudo.",
+          "english": "often."
+        }
+      ]
     },
     {
       "id": "38-s6",
@@ -249,7 +379,17 @@
         "habla": "talks",
         "familia": "family",
         "a menudo": "often"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi tía habla con la familia",
+          "english": "My aunt talks with the family"
+        },
+        {
+          "spanish": "a menudo.",
+          "english": "often."
+        }
+      ]
     },
     {
       "id": "38-s10",
@@ -271,7 +411,17 @@
         "habla": "talks",
         "cuñado": "brother-in-law",
         "días": "days"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi tía habla con mi cuñado",
+          "english": "My aunt talks with my brother-in-law"
+        },
+        {
+          "spanish": "todos los días.",
+          "english": "every day."
+        }
+      ]
     },
     {
       "id": "m38-context-1",
@@ -314,7 +464,17 @@
         "una": "a (fem)",
         "tener": "to have",
         "hija": "daughter"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi primo acaba de tener",
+          "english": "My cousin has just had"
+        },
+        {
+          "spanish": "una hija.",
+          "english": "a daughter."
+        }
+      ]
     },
     {
       "id": "m38-context-4",
@@ -357,7 +517,17 @@
         "a": "to",
         "Marta": "Marta",
         "conozca": "meets / knows (subjunctive)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero que mi familia conozca",
+          "english": "I want my family to meet"
+        },
+        {
+          "spanish": "a Marta.",
+          "english": "Marta."
+        }
+      ]
     }
   ],
   "vocabulary": {

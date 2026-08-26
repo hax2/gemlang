@@ -11,7 +11,13 @@
       "wordMeanings": {
         "No": "no / not",
         "hables": "speak (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No hables.",
+          "english": "Don't speak."
+        }
+      ]
     },
     {
       "id": "m17-s2",
@@ -20,7 +26,13 @@
       "wordMeanings": {
         "No": "no / not",
         "coma": "eat (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No coma.",
+          "english": "Don't eat. (formal)"
+        }
+      ]
     },
     {
       "id": "m17-s3",
@@ -30,7 +42,17 @@
         "No": "no / not",
         "vivas": "live (subj)",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No vivas",
+          "english": "Don't live"
+        },
+        {
+          "spanish": "aquí.",
+          "english": "here."
+        }
+      ]
     },
     {
       "id": "m17-s4",
@@ -51,7 +73,17 @@
         "abras": "open (subj/inf)",
         "la": "the / it (fem)",
         "puerta": "door"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No abras",
+          "english": "Don't open"
+        },
+        {
+          "spanish": "la puerta.",
+          "english": "the door."
+        }
+      ]
     },
     {
       "id": "m17-s6",
@@ -73,7 +105,17 @@
         "abran": "open (subj/form pl)",
         "la": "the / it (fem)",
         "puerta": "door"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No abran",
+          "english": "Don't open"
+        },
+        {
+          "spanish": "la puerta.",
+          "english": "the door. (plural)"
+        }
+      ]
     },
     {
       "id": "m17-s8",
@@ -83,7 +125,17 @@
         "No": "no / not",
         "mires": "look (subj)",
         "eso": "that"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No mires",
+          "english": "Don't look"
+        },
+        {
+          "spanish": "eso.",
+          "english": "at that."
+        }
+      ]
     },
     {
       "id": "m17-s9",
@@ -102,7 +154,13 @@
       "wordMeanings": {
         "No": "no / not",
         "escuchen": "listen (subj pl)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No escuchen.",
+          "english": "Don't listen. (plural)"
+        }
+      ]
     },
     {
       "id": "m17-s11",
@@ -155,7 +213,17 @@
         "se": "himself / herself / themselves",
         "lo": "it / him",
         "des": "give (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No",
+          "english": "Don't"
+        },
+        {
+          "spanish": "se lo des.",
+          "english": "give it to him/her."
+        }
+      ]
     },
     {
       "id": "m17-s16",
@@ -188,7 +256,17 @@
         "te": "you / to you",
         "sientes": "you feel",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No",
+          "english": "Don't"
+        },
+        {
+          "spanish": "te sientes aquí.",
+          "english": "sit here."
+        }
+      ]
     },
     {
       "id": "m17-s19",
@@ -211,7 +289,17 @@
         "quedes": "stay (subj)",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No te quedes",
+          "english": "Don't stay"
+        },
+        {
+          "spanish": "en casa.",
+          "english": "at home."
+        }
+      ]
     },
     {
       "id": "m17-s21",
@@ -221,7 +309,17 @@
         "No": "no / not",
         "vayas": "go (subj)",
         "ahora": "now"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No vayas",
+          "english": "Don't go"
+        },
+        {
+          "spanish": "ahora.",
+          "english": "now."
+        }
+      ]
     },
     {
       "id": "m17-s22",
@@ -251,7 +349,17 @@
         "No": "no / not",
         "lo": "it / him",
         "compres": "buy (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No",
+          "english": "Don't"
+        },
+        {
+          "spanish": "lo compres.",
+          "english": "buy it."
+        }
+      ]
     },
     {
       "id": "m17-s25",
@@ -264,7 +372,17 @@
         "a": "to / at",
         "la": "the / it (fem)",
         "vez": "time"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No habléis",
+          "english": "Don't"
+        },
+        {
+          "spanish": "todos a la vez.",
+          "english": "all speak at once. (you plural, Spain)"
+        }
+      ]
     },
     {
       "id": "m17-s26",
@@ -284,7 +402,13 @@
         "No": "no / not",
         "te": "you / to you",
         "preocupes": "worry (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No te preocupes.",
+          "english": "Don't worry."
+        }
+      ]
     },
     {
       "id": "m17-s28",
@@ -295,7 +419,17 @@
         "hables": "speak (subj)",
         "tan": "so / as",
         "rápido": "fast / quickly"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No hables",
+          "english": "Don't speak"
+        },
+        {
+          "spanish": "tan rápido.",
+          "english": "so fast."
+        }
+      ]
     },
     {
       "id": "m17-s29",
@@ -316,7 +450,17 @@
         "No": "no / not",
         "llegues": "arrive (subj)",
         "tarde": "late / afternoon"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No llegues",
+          "english": "Don't arrive"
+        },
+        {
+          "spanish": "tarde.",
+          "english": "late."
+        }
+      ]
     }
   ],
   "grammarExplanation": "Negative commands tell someone NOT TO DO something. ALL negative commands use the subjunctive form:\n\n• Tú: No + subjunctive → No hables (Don't speak)\n• Usted: No + subjunctive → No hable\n• Ustedes: No + subjunctive plural → No hablen\n\nWith pronouns, place them BEFORE the verb (not attached):\n• No lo compres (Don't buy it)\n• No me lo digas (Don't tell it to me)\n• No se lo des (Don't give it to him/her)",

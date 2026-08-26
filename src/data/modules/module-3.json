@@ -24,7 +24,17 @@
         "casa": "house",
         "es": "is",
         "nueva": "new (fem)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La casa",
+          "english": "The house"
+        },
+        {
+          "spanish": "es nueva.",
+          "english": "is new."
+        }
+      ]
     },
     {
       "id": "m3-s3",
@@ -57,7 +67,17 @@
         "libro": "book",
         "es": "is",
         "pequeño": "small (masc)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Un libro",
+          "english": "A book"
+        },
+        {
+          "spanish": "es pequeño.",
+          "english": "is small."
+        }
+      ]
     },
     {
       "id": "m3-s6",
@@ -90,7 +110,17 @@
         "escuela": "school",
         "es": "is",
         "grande": "big"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La escuela",
+          "english": "The school"
+        },
+        {
+          "spanish": "es grande.",
+          "english": "is big."
+        }
+      ]
     },
     {
       "id": "m3-s9",
@@ -123,7 +153,17 @@
         "mesa": "table",
         "es": "is",
         "pequeña": "small (fem)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La mesa",
+          "english": "The table"
+        },
+        {
+          "spanish": "es pequeña.",
+          "english": "is small."
+        }
+      ]
     },
     {
       "id": "m3-s12",
@@ -156,7 +196,17 @@
         "idea": "idea",
         "es": "is",
         "buena": "good (fem)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Una idea",
+          "english": "An idea"
+        },
+        {
+          "spanish": "es buena.",
+          "english": "is good."
+        }
+      ]
     },
     {
       "id": "m3-s15",
@@ -189,7 +239,17 @@
         "libros": "books",
         "están": "are",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Los libros",
+          "english": "The books"
+        },
+        {
+          "spanish": "están aquí.",
+          "english": "are here."
+        }
+      ]
     },
     {
       "id": "m3-s18",
@@ -222,7 +282,17 @@
         "en": "in / on",
         "la": "the / it (fem)",
         "escuela": "school"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estoy",
+          "english": "I am"
+        },
+        {
+          "spanish": "en la escuela.",
+          "english": "at the school."
+        }
+      ]
     },
     {
       "id": "m3-s21",
@@ -256,7 +326,17 @@
         "está": "is",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El libro",
+          "english": "The book"
+        },
+        {
+          "spanish": "está en casa.",
+          "english": "is at home."
+        }
+      ]
     },
     {
       "id": "m3-s24",
@@ -288,7 +368,17 @@
         "Ana": "Ana",
         "es": "is",
         "estudiante": "student"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ana",
+          "english": "Ana"
+        },
+        {
+          "spanish": "es estudiante.",
+          "english": "is a student."
+        }
+      ]
     },
     {
       "id": "m3-s27",
@@ -323,7 +413,17 @@
         "en": "in / on",
         "el": "the",
         "centro": "downtown"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Un café",
+          "english": "A café"
+        },
+        {
+          "spanish": "está en el centro.",
+          "english": "is downtown."
+        }
+      ]
     },
     {
       "id": "m3-s30",
@@ -356,7 +456,17 @@
         "idea": "idea",
         "es": "is",
         "importante": "important"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La idea",
+          "english": "The idea"
+        },
+        {
+          "spanish": "es importante.",
+          "english": "is important."
+        }
+      ]
     },
     {
       "id": "m3-s33",
@@ -389,7 +499,17 @@
         "café": "coffee",
         "está": "is",
         "frío": "cold"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El café",
+          "english": "The coffee"
+        },
+        {
+          "spanish": "está frío.",
+          "english": "is cold."
+        }
+      ]
     },
     {
       "id": "m3-s36",
@@ -422,7 +542,17 @@
         "sopas": "soups",
         "están": "are",
         "calientes": "hot (pl)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Las sopas",
+          "english": "The soups"
+        },
+        {
+          "spanish": "están calientes.",
+          "english": "are hot."
+        }
+      ]
     },
     {
       "id": "m3-s39",
@@ -433,7 +563,17 @@
         "grande": "big",
         "o": "or",
         "pequeño": "small"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Es grande",
+          "english": "Is it big"
+        },
+        {
+          "spanish": "o es pequeño?",
+          "english": "or is it small?"
+        }
+      ]
     },
     {
       "id": "m3-s40",
@@ -487,7 +627,17 @@
         "Es": "is",
         "verdad": "true",
         "preciosa": "beautiful"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es verdad,",
+          "english": "It's true,"
+        },
+        {
+          "spanish": "es preciosa.",
+          "english": "it's beautiful."
+        }
+      ]
     },
     {
       "id": "m3-s45",
@@ -520,7 +670,17 @@
         "libro": "book",
         "es": "is",
         "grande": "big"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El libro",
+          "english": "The book"
+        },
+        {
+          "spanish": "es grande.",
+          "english": "is big."
+        }
+      ]
     },
     {
       "id": "m3-s48",
@@ -553,7 +713,17 @@
         "casas": "houses",
         "son": "are",
         "grandes": "big (pl)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Las casas",
+          "english": "The houses"
+        },
+        {
+          "spanish": "son grandes.",
+          "english": "are big."
+        }
+      ]
     },
     {
       "id": "m3-s51",

@@ -32,7 +32,17 @@
         "Él": "he",
         "come": "eats",
         "pan": "bread"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Él come",
+          "english": "He eats"
+        },
+        {
+          "spanish": "pan.",
+          "english": "bread."
+        }
+      ]
     },
     {
       "id": "m6-s4",
@@ -63,7 +73,17 @@
         "Yo": "I",
         "bebo": "I drink",
         "agua": "water"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Yo bebo",
+          "english": "I drink"
+        },
+        {
+          "spanish": "agua.",
+          "english": "water."
+        }
+      ]
     },
     {
       "id": "m6-s7",
@@ -93,7 +113,17 @@
         "Ella": "she / her",
         "bebe": "drinks",
         "té": "tea"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ella bebe",
+          "english": "She drinks"
+        },
+        {
+          "spanish": "té.",
+          "english": "tea."
+        }
+      ]
     },
     {
       "id": "m6-s10",
@@ -123,7 +153,17 @@
         "Tú": "you",
         "vives": "you live",
         "allí": "there"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tú vives",
+          "english": "You live"
+        },
+        {
+          "spanish": "allí.",
+          "english": "there."
+        }
+      ]
     },
     {
       "id": "m6-s13",
@@ -157,7 +197,17 @@
         "en": "in / on",
         "la": "the / it (fem)",
         "ciudad": "city"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nosotros vivimos",
+          "english": "We live"
+        },
+        {
+          "spanish": "en la ciudad.",
+          "english": "in the city."
+        }
+      ]
     },
     {
       "id": "m6-s16",
@@ -190,7 +240,17 @@
         "abre": "opens",
         "la": "the / it (fem)",
         "puerta": "door"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Él abre",
+          "english": "He opens"
+        },
+        {
+          "spanish": "la puerta.",
+          "english": "the door."
+        }
+      ]
     },
     {
       "id": "m6-s19",
@@ -223,7 +283,17 @@
         "escribes": "you write",
         "una": "a (fem)",
         "carta": "letter"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tú escribes",
+          "english": "You write"
+        },
+        {
+          "spanish": "una carta.",
+          "english": "a letter."
+        }
+      ]
     },
     {
       "id": "m6-s22",
@@ -255,7 +325,17 @@
         "Nosotros": "we",
         "escribimos": "we write",
         "mensajes": "messages"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nosotros escribimos",
+          "english": "We write"
+        },
+        {
+          "spanish": "mensajes.",
+          "english": "messages."
+        }
+      ]
     },
     {
       "id": "m6-s25",
@@ -288,7 +368,17 @@
         "recibe": "receives",
         "un": "a",
         "libro": "book"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Él recibe",
+          "english": "He receives"
+        },
+        {
+          "spanish": "un libro.",
+          "english": "a book."
+        }
+      ]
     },
     {
       "id": "m6-s28",
@@ -319,7 +409,17 @@
         "Yo": "I",
         "aprendo": "I learn",
         "español": "Spanish"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Yo aprendo",
+          "english": "I learn"
+        },
+        {
+          "spanish": "español.",
+          "english": "Spanish."
+        }
+      ]
     },
     {
       "id": "m6-s31",
@@ -349,7 +449,17 @@
         "Ella": "she / her",
         "aprende": "learns",
         "despacio": "slowly"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ella aprende",
+          "english": "She learns"
+        },
+        {
+          "spanish": "despacio.",
+          "english": "slowly."
+        }
+      ]
     },
     {
       "id": "m6-s34",
@@ -381,7 +491,17 @@
         "vendes": "you sell",
         "el": "the",
         "coche": "car"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tú vendes",
+          "english": "You sell"
+        },
+        {
+          "spanish": "el coche.",
+          "english": "the car."
+        }
+      ]
     },
     {
       "id": "m6-s37",
@@ -417,7 +537,21 @@
         "trabajo": "I work / job",
         "el": "the",
         "centro": "downtown"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Vivo en la ciudad",
+          "english": "I live in the city"
+        },
+        {
+          "spanish": "y trabajo",
+          "english": "and work"
+        },
+        {
+          "spanish": "en el centro.",
+          "english": "downtown."
+        }
+      ]
     },
     {
       "id": "m6-s40",

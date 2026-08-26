@@ -12,7 +12,17 @@
         "Me": "to me",
         "gusta": "it pleases",
         "solo": "plain / black"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me gusta",
+          "english": "I like"
+        },
+        {
+          "spanish": "el café solo.",
+          "english": "black coffee."
+        }
+      ]
     },
     {
       "id": "mgustar-s2",
@@ -31,7 +41,17 @@
       "wordMeanings": {
         "Te": "to you",
         "fútbol": "football"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Te gusta",
+          "english": "Do you like"
+        },
+        {
+          "spanish": "el fútbol?",
+          "english": "football?"
+        }
+      ]
     },
     {
       "id": "mgustar-s4",
@@ -39,7 +59,17 @@
       "english": "I don't like getting up early on Mondays.",
       "wordMeanings": {
         "lunes": "Mondays"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No me gusta madrugar",
+          "english": "I don't like getting up early"
+        },
+        {
+          "spanish": "los lunes.",
+          "english": "on Mondays."
+        }
+      ]
     },
     {
       "id": "mgustar-s5",
@@ -61,7 +91,17 @@
         "salir": "going out",
         "por": "around",
         "centro": "centre"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nos gusta",
+          "english": "We like"
+        },
+        {
+          "spanish": "salir por el centro.",
+          "english": "going out around the city centre."
+        }
+      ]
     },
     {
       "id": "mgustar-s7",
@@ -70,7 +110,17 @@
       "wordMeanings": {
         "Os": "to you all",
         "flamenco": "flamenco"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Os gusta",
+          "english": "Do you all like"
+        },
+        {
+          "spanish": "el flamenco?",
+          "english": "flamenco?"
+        }
+      ]
     },
     {
       "id": "mgustar-s8",
@@ -90,7 +140,17 @@
       "wordMeanings": {
         "encanta": "it delights",
         "canción": "song"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me encanta",
+          "english": "I love"
+        },
+        {
+          "spanish": "esta canción.",
+          "english": "this song."
+        }
+      ]
     },
     {
       "id": "mgustar-s10",
@@ -100,7 +160,17 @@
         "encantan": "they delight",
         "libros": "books",
         "historia": "history"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me encantan",
+          "english": "I love"
+        },
+        {
+          "spanish": "los libros de historia.",
+          "english": "history books."
+        }
+      ]
     },
     {
       "id": "mgustar-s11",
@@ -120,7 +190,17 @@
         "caña": "small draught beer",
         "bien": "really",
         "fría": "cold (fem)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me apetece",
+          "english": "I fancy"
+        },
+        {
+          "spanish": "una caña bien fría.",
+          "english": "an ice-cold caña."
+        }
+      ]
     },
     {
       "id": "mgustar-s13",
@@ -128,7 +208,17 @@
       "english": "I don't feel like cooking today.",
       "wordMeanings": {
         "cocinar": "to cook"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No me apetece",
+          "english": "I don't feel like"
+        },
+        {
+          "spanish": "cocinar hoy.",
+          "english": "cooking today."
+        }
+      ]
     },
     {
       "id": "mgustar-s14",
@@ -146,7 +236,17 @@
       "wordMeanings": {
         "duelen": "they hurt",
         "pies": "feet"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Te duelen",
+          "english": "Do your"
+        },
+        {
+          "spanish": "los pies?",
+          "english": "feet hurt?"
+        }
+      ]
     },
     {
       "id": "mgustar-s16",
@@ -174,7 +274,17 @@
       "wordMeanings": {
         "interesa": "interests",
         "España": "Spain"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me interesa",
+          "english": "I'm interested in"
+        },
+        {
+          "spanish": "la historia de España.",
+          "english": "the history of Spain."
+        }
+      ]
     },
     {
       "id": "mgustar-s19",
@@ -202,7 +312,17 @@
       "wordMeanings": {
         "falta": "is lacking",
         "todo": "everything"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me falta",
+          "english": "I don't have enough"
+        },
+        {
+          "spanish": "tiempo para todo.",
+          "english": "time for everything."
+        }
+      ]
     },
     {
       "id": "mgustar-s22",
@@ -229,7 +349,17 @@
         "caen": "come across (plural)",
         "genial": "great",
         "primos": "cousins"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me caen genial",
+          "english": "Your cousins are"
+        },
+        {
+          "spanish": "tus primos.",
+          "english": "great fun."
+        }
+      ]
     },
     {
       "id": "mgustar-s25",
@@ -239,7 +369,17 @@
         "gustaría": "would please me",
         "visitar": "to visit",
         "Sevilla": "Seville"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me gustaría",
+          "english": "I'd like to"
+        },
+        {
+          "spanish": "visitar Sevilla.",
+          "english": "visit Seville."
+        }
+      ]
     },
     {
       "id": "mgustar-s26",

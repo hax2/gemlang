@@ -260,7 +260,13 @@
       "wordMeanings": {
         "Tengo": "I have",
         "hambre": "hunger"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tengo hambre.",
+          "english": "I am hungry."
+        }
+      ]
     },
     {
       "id": "m4-s26",
@@ -278,7 +284,13 @@
       "wordMeanings": {
         "Tienes": "you have",
         "hambre": "hunger"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Tienes hambre?",
+          "english": "Are you hungry?"
+        }
+      ]
     },
     {
       "id": "m4-s28",
@@ -379,7 +391,13 @@
       "wordMeanings": {
         "Tienes": "you have",
         "hermanos": "brothers / siblings"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Tienes hermanos?",
+          "english": "Do you have siblings?"
+        }
+      ]
     },
     {
       "id": "m4-s38",
@@ -437,7 +455,17 @@
         "y": "and",
         "tiene": "has",
         "hambre": "hunger"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ana está en casa",
+          "english": "Ana is at home"
+        },
+        {
+          "spanish": "y tiene hambre.",
+          "english": "and is hungry."
+        }
+      ]
     },
     {
       "id": "m4-s43",
@@ -452,7 +480,17 @@
         "y": "and",
         "tiene": "has",
         "sed": "thirst"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Luis está en el café",
+          "english": "Luis is in the café"
+        },
+        {
+          "spanish": "y tiene sed.",
+          "english": "and is thirsty."
+        }
+      ]
     },
     {
       "id": "m4-s44",

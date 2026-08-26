@@ -24,7 +24,25 @@
       "wordMeanings": {
         "preguntas": "ask",
         "eres": "you are"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Qué es poesía?",
+          "english": "What is poetry?"
+        },
+        {
+          "spanish": "¿Y tú me lo preguntas?",
+          "english": "And you ask me?"
+        },
+        {
+          "spanish": "Poesía...",
+          "english": "Poetry..."
+        },
+        {
+          "spanish": "eres tú.",
+          "english": "is you."
+        }
+      ]
     },
     {
       "id": "m27-s3",
@@ -36,7 +54,17 @@
         "golondrinas": "swallows",
         "nidos": "nests",
         "colgar": "to hang"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Volverán las oscuras golondrinas",
+          "english": "The dark swallows will return"
+        },
+        {
+          "spanish": "en tu balcón sus nidos a colgar.",
+          "english": "to hang their nests on your balcony."
+        }
+      ]
     },
     {
       "id": "m27-s4",
@@ -48,7 +76,17 @@
         "hermosura": "beauty",
         "dicha": "happiness",
         "contemplar": "to contemplate"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Pero aquellas que el vuelo refrenaban",
+          "english": "But those that slowed their flight"
+        },
+        {
+          "spanish": "tu hermosura y mi dicha a contemplar...",
+          "english": "to contemplate your beauty and my happiness..."
+        }
+      ]
     },
     {
       "id": "m27-s5",
@@ -68,7 +106,21 @@
         "cielo": "heaven",
         "beso": "kiss",
         "diera": "would give (subjunctive)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Por una mirada, un mundo;",
+          "english": "For a look, a world;"
+        },
+        {
+          "spanish": "por una sonrisa, un cielo;",
+          "english": "for a smile, a sky;"
+        },
+        {
+          "spanish": "por un beso... ¡yo no sé qué te diera por un beso!",
+          "english": "for a kiss... I don't know what I would give you for a kiss!"
+        }
+      ]
     },
     {
       "id": "m27-s7",
@@ -77,7 +129,17 @@
       "wordMeanings": {
         "suspiros": "sighs",
         "aire": "air"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Los suspiros son aire",
+          "english": "Sighs are air"
+        },
+        {
+          "spanish": "y van al aire.",
+          "english": "and go to the air."
+        }
+      ]
     },
     {
       "id": "m27-s8",
@@ -87,7 +149,17 @@
         "lágrimas": "tears",
         "agua": "water",
         "mar": "sea"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Las lágrimas son agua",
+          "english": "Tears are water"
+        },
+        {
+          "spanish": "y van al mar.",
+          "english": "and go to the sea."
+        }
+      ]
     },
     {
       "id": "m27-s9",
@@ -98,7 +170,21 @@
         "mujer": "woman",
         "amor": "love",
         "olvida": "forgotten"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Dime, mujer,",
+          "english": "Tell me, woman,"
+        },
+        {
+          "spanish": "cuando el amor se olvida",
+          "english": "when love is forgotten,"
+        },
+        {
+          "spanish": "¿sabes tú a dónde va?",
+          "english": "do you know where it goes?"
+        }
+      ]
     },
     {
       "id": "m27-s10",

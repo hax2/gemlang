@@ -17,7 +17,17 @@
         "pelotón": "squad/platoon",
         "de": "of",
         "fusilamiento": "firing/execution"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Muchos años después,",
+          "english": "Many years later,"
+        },
+        {
+          "spanish": "frente al pelotón de fusilamiento...",
+          "english": "facing the firing squad..."
+        }
+      ]
     },
     {
       "id": "m36-s2",
@@ -34,7 +44,17 @@
         "aquella": "that",
         "tarde": "afternoon",
         "remota": "remote/distant"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "...el coronel Aureliano Buendía",
+          "english": "...Colonel Aureliano Buendía"
+        },
+        {
+          "spanish": "había de recordar aquella tarde remota...",
+          "english": "was to remember that distant afternoon..."
+        }
+      ]
     },
     {
       "id": "m36-s3",
@@ -67,7 +87,17 @@
         "veinte": "twenty",
         "casas": "houses",
         "barro": "mud/clay"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Macondo era entonces",
+          "english": "Macondo was then"
+        },
+        {
+          "spanish": "una aldea de veinte casas de barro...",
+          "english": "a village of twenty houses of mud..."
+        }
+      ]
     },
     {
       "id": "m36-s5",
@@ -85,7 +115,17 @@
         "río": "river",
         "aguas": "waters",
         "diáfanas": "diaphanous/clear"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "...y cañabrava construidas a la orilla",
+          "english": "...and wild cane, built on the bank"
+        },
+        {
+          "spanish": "de un río de aguas diáfanas.",
+          "english": "of a river of clear waters."
+        }
+      ]
     }
   ],
   "vocabulary": {

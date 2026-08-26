@@ -15,7 +15,17 @@
         "días": "days / morning",
         "Soy": "I am",
         "Ana": "Ana"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Buenos días.",
+          "english": "Good morning."
+        },
+        {
+          "spanish": "Soy Ana.",
+          "english": "I am Ana."
+        }
+      ]
     },
     {
       "id": "s1-s2",
@@ -49,7 +59,17 @@
         "Quién": "who",
         "es": "is",
         "él": "he"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Quién es",
+          "english": "Who is"
+        },
+        {
+          "spanish": "él?",
+          "english": "he?"
+        }
+      ]
     },
     {
       "id": "s1-s5",
@@ -72,7 +92,21 @@
         "Soy": "I am",
         "Ana": "Ana",
         "estudiante": "student"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hola, Carlos.",
+          "english": "Hello, Carlos."
+        },
+        {
+          "spanish": "Soy Ana.",
+          "english": "I am Ana."
+        },
+        {
+          "spanish": "Soy estudiante.",
+          "english": "I am a student."
+        }
+      ]
     },
     {
       "id": "s1-s7",
@@ -84,7 +118,17 @@
         "alto": "tall",
         "y": "and",
         "simpático": "friendly"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Carlos es",
+          "english": "Carlos is"
+        },
+        {
+          "spanish": "alto y simpático.",
+          "english": "tall and friendly."
+        }
+      ]
     },
     {
       "id": "s1-s8",
@@ -117,7 +161,17 @@
         "amigo": "friend (male)",
         "Somos": "we are",
         "amigos": "friends"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí, soy tu amigo.",
+          "english": "Yes, I am your friend."
+        },
+        {
+          "spanish": "Somos amigos.",
+          "english": "We are friends."
+        }
+      ]
     },
     {
       "id": "s1-s11",
@@ -128,7 +182,17 @@
         "Carlos": "Carlos",
         "Hasta": "until",
         "luego": "later"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Adiós, Carlos.",
+          "english": "Goodbye, Carlos."
+        },
+        {
+          "spanish": "Hasta luego.",
+          "english": "See you later."
+        }
+      ]
     },
     {
       "id": "s1-s12",

@@ -122,12 +122,32 @@
         {
           "english": "These books are dictionaries.",
           "spanish": "Estos libros son diccionarios.",
-          "reason": "A category or definition uses ser."
+          "reason": "A category or definition uses ser.",
+          "translationChunks": [
+            {
+              "spanish": "Estos libros son",
+              "english": "These books are"
+            },
+            {
+              "spanish": "diccionarios.",
+              "english": "dictionaries."
+            }
+          ]
         },
         {
           "english": "I am Ana's sister.",
           "spanish": "Yo soy la hermana de Ana.",
-          "reason": "Family identity uses ser."
+          "reason": "Family identity uses ser.",
+          "translationChunks": [
+            {
+              "spanish": "Yo soy",
+              "english": "I am"
+            },
+            {
+              "spanish": "la hermana de Ana.",
+              "english": "Ana's sister."
+            }
+          ]
         },
         {
           "english": "The animal is a cat.",
@@ -137,7 +157,17 @@
         {
           "english": "We are students.",
           "spanish": "Nosotros somos estudiantes.",
-          "reason": "A role or identity uses ser."
+          "reason": "A role or identity uses ser.",
+          "translationChunks": [
+            {
+              "spanish": "Nosotros somos",
+              "english": "We are"
+            },
+            {
+              "spanish": "estudiantes.",
+              "english": "students."
+            }
+          ]
         }
       ]
     },
@@ -251,7 +281,17 @@
         {
           "english": "The phone is under the notebook.",
           "spanish": "El teléfono está debajo del cuaderno.",
-          "reason": "Position uses estar."
+          "reason": "Position uses estar.",
+          "translationChunks": [
+            {
+              "spanish": "El teléfono",
+              "english": "The phone"
+            },
+            {
+              "spanish": "está debajo del cuaderno.",
+              "english": "is under the notebook."
+            }
+          ]
         },
         {
           "english": "We are near the park.",
@@ -261,12 +301,32 @@
         {
           "english": "The chairs are in the garden.",
           "spanish": "Las sillas están en el jardín.",
-          "reason": "Object location uses estar."
+          "reason": "Object location uses estar.",
+          "translationChunks": [
+            {
+              "spanish": "Las sillas están",
+              "english": "The chairs are"
+            },
+            {
+              "spanish": "en el jardín.",
+              "english": "in the garden."
+            }
+          ]
         },
         {
           "english": "The store is next to the bank.",
           "spanish": "La tienda está al lado del banco.",
-          "reason": "Physical location uses estar."
+          "reason": "Physical location uses estar.",
+          "translationChunks": [
+            {
+              "spanish": "La tienda",
+              "english": "The store"
+            },
+            {
+              "spanish": "está al lado del banco.",
+              "english": "is next to the bank."
+            }
+          ]
         },
         {
           "english": "They are here.",
@@ -385,12 +445,32 @@
         {
           "english": "The jacket is made of leather.",
           "spanish": "La chaqueta es de cuero.",
-          "reason": "Material uses ser."
+          "reason": "Material uses ser.",
+          "translationChunks": [
+            {
+              "spanish": "La chaqueta es",
+              "english": "The jacket is"
+            },
+            {
+              "spanish": "de cuero.",
+              "english": "made of leather."
+            }
+          ]
         },
         {
           "english": "My friends are from Peru.",
           "spanish": "Mis amigos son de Perú.",
-          "reason": "Origin uses ser."
+          "reason": "Origin uses ser.",
+          "translationChunks": [
+            {
+              "spanish": "Mis amigos",
+              "english": "My friends"
+            },
+            {
+              "spanish": "son de Perú.",
+              "english": "are from Peru."
+            }
+          ]
         },
         {
           "english": "This glass is made of glass.",
@@ -400,12 +480,32 @@
         {
           "english": "We are from the same city.",
           "spanish": "Nosotros somos de la misma ciudad.",
-          "reason": "Origin uses ser."
+          "reason": "Origin uses ser.",
+          "translationChunks": [
+            {
+              "spanish": "Nosotros somos",
+              "english": "We are"
+            },
+            {
+              "spanish": "de la misma ciudad.",
+              "english": "from the same city."
+            }
+          ]
         },
         {
           "english": "The cake is chocolate.",
           "spanish": "El pastel es de chocolate.",
-          "reason": "Composition or flavor with de uses ser."
+          "reason": "Composition or flavor with de uses ser.",
+          "translationChunks": [
+            {
+              "spanish": "El pastel",
+              "english": "The cake"
+            },
+            {
+              "spanish": "es de chocolate.",
+              "english": "is chocolate."
+            }
+          ]
         }
       ]
     },
@@ -524,12 +624,32 @@
         {
           "english": "The plates are clean.",
           "spanish": "Los platos están limpios.",
-          "reason": "Clean is a condition."
+          "reason": "Clean is a condition.",
+          "translationChunks": [
+            {
+              "spanish": "Los platos están",
+              "english": "The plates are"
+            },
+            {
+              "spanish": "limpios.",
+              "english": "clean."
+            }
+          ]
         },
         {
           "english": "I am sick today.",
           "spanish": "Yo estoy enfermo hoy.",
-          "reason": "A health condition today uses estar."
+          "reason": "A health condition today uses estar.",
+          "translationChunks": [
+            {
+              "spanish": "Yo",
+              "english": "I"
+            },
+            {
+              "spanish": "estoy enfermo hoy.",
+              "english": "am sick today."
+            }
+          ]
         },
         {
           "english": "The room is dark.",
@@ -539,7 +659,17 @@
         {
           "english": "You are sick.",
           "spanish": "Tú estás enfermo.",
-          "reason": "A health condition uses estar."
+          "reason": "A health condition uses estar.",
+          "translationChunks": [
+            {
+              "spanish": "Tú estás",
+              "english": "You are"
+            },
+            {
+              "spanish": "enfermo.",
+              "english": "sick."
+            }
+          ]
         }
       ]
     }

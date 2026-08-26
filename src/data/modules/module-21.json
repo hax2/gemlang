@@ -14,7 +14,17 @@
         "tiempo": "time",
         "te": "yourself",
         "vienes": "you come"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si tienes tiempo,",
+          "english": "If you have time,"
+        },
+        {
+          "spanish": "te vienes.",
+          "english": "come along."
+        }
+      ]
     },
     {
       "id": "m21-s2",
@@ -40,7 +50,17 @@
         "cada": "each / every",
         "día": "day",
         "aprendes": "you learn"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si estudias un poco cada día,",
+          "english": "If you study a little every day,"
+        },
+        {
+          "spanish": "aprendes.",
+          "english": "you learn."
+        }
+      ]
     },
     {
       "id": "m21-s4",
@@ -63,7 +83,17 @@
         "comes": "you eat",
         "bien": "well/good",
         "duermes": "you sleep"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si comes bien,",
+          "english": "If you eat well,"
+        },
+        {
+          "spanish": "duermes bien.",
+          "english": "you sleep well."
+        }
+      ]
     },
     {
       "id": "m21-s6",
@@ -75,7 +105,17 @@
         "agua": "water",
         "estás": "you are",
         "mejor": "better"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si bebes agua,",
+          "english": "If you drink water,"
+        },
+        {
+          "spanish": "estás mejor.",
+          "english": "you feel better."
+        }
+      ]
     },
     {
       "id": "m21-s7",
@@ -114,7 +154,17 @@
         "tomar": "to have / take",
         "un": "a",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si vienes mañana,",
+          "english": "If you come tomorrow,"
+        },
+        {
+          "spanish": "vamos a tomar un café.",
+          "english": "we'll go for a coffee."
+        }
+      ]
     },
     {
       "id": "m21-s10",
@@ -127,7 +177,17 @@
         "compra": "buy (command)",
         "el": "the",
         "libro": "book"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si vas hoy,",
+          "english": "If you go today,"
+        },
+        {
+          "spanish": "compra el libro.",
+          "english": "buy the book."
+        }
+      ]
     },
     {
       "id": "m21-s11",
@@ -153,7 +213,17 @@
         "se": "one / people",
         "está": "is",
         "mejor": "better"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si cierras la ventana,",
+          "english": "If you close the window,"
+        },
+        {
+          "spanish": "se está mejor.",
+          "english": "it's more comfortable."
+        }
+      ]
     },
     {
       "id": "m21-s13",
@@ -179,7 +249,17 @@
         "verdad": "truth",
         "te": "you / to you",
         "ayudo": "I help"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si me dices la verdad,",
+          "english": "If you tell me the truth,"
+        },
+        {
+          "spanish": "te ayudo.",
+          "english": "I'll help you."
+        }
+      ]
     },
     {
       "id": "m21-s15",
@@ -191,7 +271,17 @@
         "lo": "it / him",
         "dices": "you say",
         "entiendo": "I understand"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si me lo dices,",
+          "english": "If you tell it to me,"
+        },
+        {
+          "spanish": "lo entiendo.",
+          "english": "I understand it."
+        }
+      ]
     },
     {
       "id": "m21-s16",
@@ -232,7 +322,17 @@
         "hoy": "today",
         "es": "is",
         "mejor": "better"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si los compras hoy,",
+          "english": "If you buy them today,"
+        },
+        {
+          "spanish": "es mejor.",
+          "english": "it's better."
+        }
+      ]
     },
     {
       "id": "m21-s19",
@@ -245,7 +345,17 @@
         "hoy": "today",
         "es": "is",
         "mejor": "better"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si las compras hoy,",
+          "english": "If you buy them today,"
+        },
+        {
+          "spanish": "es mejor.",
+          "english": "it's better."
+        }
+      ]
     },
     {
       "id": "m21-s20",
@@ -269,7 +379,17 @@
         "sed": "thirst",
         "bebe": "drink (command)",
         "agua": "water"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si tienes sed,",
+          "english": "If you're thirsty,"
+        },
+        {
+          "spanish": "bebe agua.",
+          "english": "drink water."
+        }
+      ]
     },
     {
       "id": "m21-s22",
@@ -294,7 +414,17 @@
         "aquí": "here",
         "te": "you / to you",
         "veo": "I see"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si no estás aquí,",
+          "english": "If you're not here,"
+        },
+        {
+          "spanish": "no te veo.",
+          "english": "I don't see you."
+        }
+      ]
     },
     {
       "id": "m21-s24",
@@ -305,7 +435,17 @@
         "quieres": "you want",
         "lo": "it",
         "hablamos": "we speak / discuss"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si quieres,",
+          "english": "If you want,"
+        },
+        {
+          "spanish": "lo hablamos.",
+          "english": "we'll talk about it."
+        }
+      ]
     },
     {
       "id": "m21-s25",
@@ -339,7 +479,17 @@
         "puedes": "you can",
         "ven": "come (command)",
         "ahora": "now"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si puedes,",
+          "english": "If you can,"
+        },
+        {
+          "spanish": "ven ahora.",
+          "english": "come now."
+        }
+      ]
     },
     {
       "id": "m21-s28",
@@ -351,7 +501,17 @@
         "puedes": "you can",
         "ven": "come (command)",
         "mañana": "tomorrow / morning"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si no puedes,",
+          "english": "If you can't,"
+        },
+        {
+          "spanish": "ven mañana.",
+          "english": "come tomorrow."
+        }
+      ]
     },
     {
       "id": "m21-s29",
@@ -377,7 +537,17 @@
         "vamos": "we go",
         "al": "to the",
         "centro": "town centre"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si hace sol,",
+          "english": "If it's sunny,"
+        },
+        {
+          "spanish": "vamos al centro.",
+          "english": "we go to the city centre."
+        }
+      ]
     }
   ],
   "grammarExplanation": "Real (open) conditionals describe things that CAN or DO happen when a condition is met. The 'si' clause uses the PRESENT INDICATIVE:\n\n'Si + present tense, present tense / command'\n\n• Si tienes tiempo, te vienes = If you have time, come along.\n• Si estudias, aprendes = If you study, you learn.\n• Si llueve, me quedo en casa = If it rains, I stay home.\n\nThe 'si' clause can go first or second: 'Te vienes si tienes tiempo.'",

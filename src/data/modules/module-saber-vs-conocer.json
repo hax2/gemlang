@@ -13,7 +13,17 @@
         "sé": "I know",
         "la": "the",
         "respuesta": "answer"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No sé",
+          "english": "I don't know"
+        },
+        {
+          "spanish": "la respuesta.",
+          "english": "the answer."
+        }
+      ]
     },
     {
       "id": "msaber-s2",
@@ -33,7 +43,17 @@
         "Ella": "she",
         "sabe": "knows",
         "nadar": "to swim"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ella sabe",
+          "english": "She knows"
+        },
+        {
+          "spanish": "nadar.",
+          "english": "how to swim."
+        }
+      ]
     },
     {
       "id": "msaber-s4",
@@ -65,7 +85,17 @@
         "conocen": "they know",
         "esta": "this",
         "canción": "song"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No conocen",
+          "english": "They are not familiar"
+        },
+        {
+          "spanish": "esta canción.",
+          "english": "with this song."
+        }
+      ]
     },
     {
       "id": "msaber-s7",
@@ -77,7 +107,17 @@
         "qué": "what",
         "hora": "time / hour",
         "empieza": "it starts"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Sabes",
+          "english": "Do you know"
+        },
+        {
+          "spanish": "a qué hora empieza?",
+          "english": "what time it starts?"
+        }
+      ]
     },
     {
       "id": "msaber-s8",
@@ -101,7 +141,17 @@
         "número": "number",
         "de": "of",
         "teléfono": "phone"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ella sabe",
+          "english": "She knows"
+        },
+        {
+          "spanish": "su número de teléfono.",
+          "english": "his phone number."
+        }
+      ]
     },
     {
       "id": "msaber-s10",
@@ -133,7 +183,17 @@
         "París": "Paris",
         "muy": "very",
         "bien": "well"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No conozco",
+          "english": "I don't know"
+        },
+        {
+          "spanish": "París muy bien.",
+          "english": "Paris very well."
+        }
+      ]
     },
     {
       "id": "msaber-s13",
@@ -145,7 +205,17 @@
         "hacer": "to make",
         "pan": "bread",
         "casero": "homemade"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ellos saben",
+          "english": "They know"
+        },
+        {
+          "spanish": "hacer pan casero.",
+          "english": "how to make homemade bread."
+        }
+      ]
     },
     {
       "id": "msaber-s14",
@@ -170,7 +240,17 @@
         "la": "the",
         "dirección": "address/direction",
         "correcta": "correct"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Alguien sabe",
+          "english": "Does anyone know"
+        },
+        {
+          "spanish": "la dirección correcta?",
+          "english": "the correct address?"
+        }
+      ]
     },
     {
       "id": "msaber-s16",
@@ -181,7 +261,17 @@
         "algún": "some/any",
         "restaurante": "restaurant",
         "mexicano": "Mexican"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Conoces",
+          "english": "Are you familiar with"
+        },
+        {
+          "spanish": "algún restaurante mexicano?",
+          "english": "any Mexican restaurant?"
+        }
+      ]
     },
     {
       "id": "msaber-s17",
@@ -206,7 +296,17 @@
         "lugar": "place",
         "muy": "very",
         "bonito": "pretty/beautiful"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Conozco",
+          "english": "I am familiar with"
+        },
+        {
+          "spanish": "un lugar muy bonito.",
+          "english": "a very pretty place."
+        }
+      ]
     },
     {
       "id": "msaber-s19",
@@ -218,7 +318,17 @@
         "sumar": "to add",
         "y": "and",
         "restar": "to subtract"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nosotros sabemos",
+          "english": "We know"
+        },
+        {
+          "spanish": "sumar y restar.",
+          "english": "how to add and subtract."
+        }
+      ]
     },
     {
       "id": "msaber-s20",
@@ -242,7 +352,17 @@
         "el": "the",
         "coche": "car",
         "viejo": "old"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sabemos",
+          "english": "We know how to"
+        },
+        {
+          "spanish": "reparar el coche viejo.",
+          "english": "repair the old car."
+        }
+      ]
     },
     {
       "id": "msaber-s22",
@@ -254,7 +374,17 @@
         "su": "his/her",
         "coche": "car",
         "nuevo": "new"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No conocemos",
+          "english": "We are not familiar with"
+        },
+        {
+          "spanish": "su coche nuevo.",
+          "english": "his new car."
+        }
+      ]
     },
     {
       "id": "msaber-s23",
@@ -280,7 +410,17 @@
         "de": "of",
         "esta": "this",
         "ciudad": "city"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Conozco",
+          "english": "I know"
+        },
+        {
+          "spanish": "la historia de esta ciudad.",
+          "english": "the history of this city."
+        }
+      ]
     },
     {
       "id": "msaber-s25",
@@ -292,7 +432,17 @@
         "tengo": "I have",
         "mucha": "a lot of",
         "hambre": "hunger"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Saben",
+          "english": "They know"
+        },
+        {
+          "spanish": "que tengo mucha hambre.",
+          "english": "that I am very hungry."
+        }
+      ]
     }
   ],
   "grammarExplanation": "Both 'saber' and 'conocer' mean 'to know', but they are not interchangeable. Use 'saber' for facts, pieces of information, and 'knowing how to' do something (saber + infinitive). Use 'conocer' to express familiarity or acquaintance with a person, place, or thing.",

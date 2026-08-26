@@ -287,7 +287,9 @@ const ModuleSelector = ({
 
                 <div className="module-meta">
                   <span className="sentence-count">
-                    {isPureTesting ? (mod.testingSentenceCount ?? mod.sentenceCount) : mod.sentenceCount}{' '}
+                    {isPureTesting
+                      ? (mod.testingSentenceCount ?? mod.sentenceCount)
+                      : (mod.guidedSentenceCount ?? mod.sentenceCount)}{' '}
                     {isPureTesting ? 'Prompts' : 'Sentences'}
                   </span>
                   {isPureTesting && mod.puenteSentenceCount > 0 && (

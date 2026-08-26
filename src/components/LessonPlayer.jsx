@@ -108,6 +108,7 @@ const getTestingSentences = (module) => {
           spanish: translation.spanish,
           english: translation.english,
           grammarNote: translation.reason,
+          translationChunks: translation.translationChunks,
         });
       });
     });

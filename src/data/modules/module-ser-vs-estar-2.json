@@ -122,7 +122,17 @@
         {
           "english": "The exercises are useful.",
           "spanish": "Los ejercicios son útiles.",
-          "reason": "General quality uses ser."
+          "reason": "General quality uses ser.",
+          "translationChunks": [
+            {
+              "spanish": "Los ejercicios son",
+              "english": "The exercises are"
+            },
+            {
+              "spanish": "útiles.",
+              "english": "useful."
+            }
+          ]
         },
         {
           "english": "I am curious.",
@@ -137,7 +147,17 @@
         {
           "english": "Our neighbors are nice.",
           "spanish": "Nuestros vecinos son simpáticos.",
-          "reason": "Personality uses ser."
+          "reason": "Personality uses ser.",
+          "translationChunks": [
+            {
+              "spanish": "Nuestros vecinos son",
+              "english": "Our neighbors are"
+            },
+            {
+              "spanish": "simpáticos.",
+              "english": "nice."
+            }
+          ]
         }
       ]
     },
@@ -251,7 +271,17 @@
         {
           "english": "The students are worried.",
           "spanish": "Los estudiantes están preocupados.",
-          "reason": "Emotions use estar."
+          "reason": "Emotions use estar.",
+          "translationChunks": [
+            {
+              "spanish": "Los estudiantes",
+              "english": "The students"
+            },
+            {
+              "spanish": "están preocupados.",
+              "english": "are worried."
+            }
+          ]
         },
         {
           "english": "I am nervous.",
@@ -261,12 +291,32 @@
         {
           "english": "My friends are excited.",
           "spanish": "Mis amigos están emocionados.",
-          "reason": "Excited is an emotion."
+          "reason": "Excited is an emotion.",
+          "translationChunks": [
+            {
+              "spanish": "Mis amigos están",
+              "english": "My friends are"
+            },
+            {
+              "spanish": "emocionados.",
+              "english": "excited."
+            }
+          ]
         },
         {
           "english": "My mother is proud.",
           "spanish": "Mi madre está orgullosa.",
-          "reason": "Proud is an emotional state, so use estar."
+          "reason": "Proud is an emotional state, so use estar.",
+          "translationChunks": [
+            {
+              "spanish": "Mi madre",
+              "english": "My mother"
+            },
+            {
+              "spanish": "está orgullosa.",
+              "english": "is proud."
+            }
+          ]
         },
         {
           "english": "You are calm today.",
@@ -385,7 +435,17 @@
         {
           "english": "The keys are Marta's.",
           "spanish": "Las llaves son de Marta.",
-          "reason": "Possession uses ser."
+          "reason": "Possession uses ser.",
+          "translationChunks": [
+            {
+              "spanish": "Las llaves son",
+              "english": "The keys are"
+            },
+            {
+              "spanish": "de Marta.",
+              "english": "Marta's."
+            }
+          ]
         },
         {
           "english": "I am an engineer.",
@@ -400,7 +460,17 @@
         {
           "english": "These shoes are mine.",
           "spanish": "Estos zapatos son míos.",
-          "reason": "Ownership uses ser."
+          "reason": "Ownership uses ser.",
+          "translationChunks": [
+            {
+              "spanish": "Estos zapatos son",
+              "english": "These shoes are"
+            },
+            {
+              "spanish": "míos.",
+              "english": "mine."
+            }
+          ]
         },
         {
           "english": "They are sisters.",
@@ -524,12 +594,32 @@
         {
           "english": "They are learning Spanish.",
           "spanish": "Ellas están aprendiendo español.",
-          "reason": "Estar + -iendo marks an ongoing action."
+          "reason": "Estar + -iendo marks an ongoing action.",
+          "translationChunks": [
+            {
+              "spanish": "Ellas están",
+              "english": "They are"
+            },
+            {
+              "spanish": "aprendiendo español.",
+              "english": "learning Spanish."
+            }
+          ]
         },
         {
           "english": "We are eating.",
           "spanish": "Nosotros estamos comiendo.",
-          "reason": "Current action uses estar."
+          "reason": "Current action uses estar.",
+          "translationChunks": [
+            {
+              "spanish": "Nosotros",
+              "english": "We"
+            },
+            {
+              "spanish": "estamos comiendo.",
+              "english": "are eating."
+            }
+          ]
         },
         {
           "english": "You are listening to music.",
@@ -539,7 +629,17 @@
         {
           "english": "The dog is sleeping.",
           "spanish": "El perro está durmiendo.",
-          "reason": "Action in progress uses estar."
+          "reason": "Action in progress uses estar.",
+          "translationChunks": [
+            {
+              "spanish": "El perro está",
+              "english": "The dog is"
+            },
+            {
+              "spanish": "durmiendo.",
+              "english": "sleeping."
+            }
+          ]
         }
       ]
     }

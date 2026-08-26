@@ -135,7 +135,17 @@
         "tiempo": "time",
         "viviendo": "living",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Llevo mucho tiempo",
+          "english": "I’ve been living here"
+        },
+        {
+          "spanish": "viviendo aquí.",
+          "english": "for a long time."
+        }
+      ]
     },
     {
       "id": "m24-s13",
@@ -170,7 +180,17 @@
         "veinte": "twenty",
         "minutos": "minutes",
         "hablando": "speaking"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Llevo veinte minutos",
+          "english": "I’ve been talking"
+        },
+        {
+          "spanish": "hablando.",
+          "english": "for twenty minutes."
+        }
+      ]
     },
     {
       "id": "m24-s16",
@@ -206,7 +226,17 @@
         "pensando": "thinking",
         "en": "in / on",
         "eso": "that"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Llevo todo el día",
+          "english": "I’ve been thinking about that"
+        },
+        {
+          "spanish": "pensando en eso.",
+          "english": "all day."
+        }
+      ]
     },
     {
       "id": "m24-s19",
@@ -244,7 +274,17 @@
         "semana": "week",
         "buscando": "looking for",
         "trabajo": "I work / job"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Llevo una semana",
+          "english": "I’ve been looking for work"
+        },
+        {
+          "spanish": "buscando trabajo.",
+          "english": "for one week."
+        }
+      ]
     },
     {
       "id": "m24-s22",
@@ -280,7 +320,17 @@
         "una": "a (fem)",
         "hora": "hour",
         "leyéndolo": "reading it"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Llevo una hora",
+          "english": "I’ve been reading it"
+        },
+        {
+          "spanish": "leyéndolo.",
+          "english": "for one hour."
+        }
+      ]
     },
     {
       "id": "m24-s25",
@@ -313,7 +363,17 @@
         "mucho": "much / a lot",
         "tiempo": "time",
         "esperando": "waiting"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Llevas mucho tiempo",
+          "english": "Have you been waiting"
+        },
+        {
+          "spanish": "esperando?",
+          "english": "a long time?"
+        }
+      ]
     },
     {
       "id": "m24-s28",
@@ -351,7 +411,21 @@
         "tiempo": "time",
         "trabajando": "working",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "no llevo mucho tiempo",
+          "english": "I haven’t been working here"
+        },
+        {
+          "spanish": "trabajando aquí.",
+          "english": "long."
+        }
+      ]
     },
     {
       "id": "m24-s31",

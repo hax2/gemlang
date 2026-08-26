@@ -15,7 +15,17 @@
         "qué": "how",
         "hermosa": "beautiful",
         "eres": "you are"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mariposa del aire,",
+          "english": "Butterfly of the air,"
+        },
+        {
+          "spanish": "qué hermosa eres.",
+          "english": "how beautiful you are."
+        }
+      ]
     },
     {
       "id": "m34-s2",
@@ -40,7 +50,17 @@
         "candil": "oil lamp",
         "mariposa": "butterfly",
         "aire": "air"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Luz del candil,",
+          "english": "Light of the lamp,"
+        },
+        {
+          "spanish": "mariposa del aire.",
+          "english": "butterfly of the air."
+        }
+      ]
     },
     {
       "id": "m34-s4",
@@ -75,7 +95,17 @@
         "dorada": "golden",
         "y": "and",
         "verde": "green"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mariposa del aire,",
+          "english": "Butterfly of the air,"
+        },
+        {
+          "spanish": "dorada y verde.",
+          "english": "golden and green."
+        }
+      ]
     },
     {
       "id": "m34-s7",
@@ -87,7 +117,17 @@
         "candil": "oil lamp",
         "mariposa": "butterfly",
         "aire": "air"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Luz del candil,",
+          "english": "Light of the lamp,"
+        },
+        {
+          "spanish": "mariposa del aire.",
+          "english": "butterfly of the air."
+        }
+      ]
     },
     {
       "id": "m34-s8",

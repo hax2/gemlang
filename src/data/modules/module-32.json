@@ -12,7 +12,17 @@
         "cita": "appointment",
         "doctor": "doctor",
         "tarde": "afternoon"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tengo una cita con el doctor",
+          "english": "I have an appointment with the doctor"
+        },
+        {
+          "spanish": "a las tres de la tarde.",
+          "english": "at three in the afternoon."
+        }
+      ]
     },
     {
       "id": "m32-s2",
@@ -22,7 +32,17 @@
         "duele": "hurts",
         "cabeza": "head",
         "fiebre": "fever"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me duele la cabeza",
+          "english": "My head hurts"
+        },
+        {
+          "spanish": "y tengo fiebre alta.",
+          "english": "and I have a high fever."
+        }
+      ]
     },
     {
       "id": "m32-s3",
@@ -32,7 +52,17 @@
         "jarabe": "syrup",
         "tos": "cough",
         "farmacia": "pharmacy"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Necesito comprar jarabe para la tos",
+          "english": "I need to buy cough syrup"
+        },
+        {
+          "spanish": "en la farmacia.",
+          "english": "at the pharmacy."
+        }
+      ]
     },
     {
       "id": "m32-s4",
@@ -52,7 +82,17 @@
         "importante": "important",
         "descansar": "to rest",
         "beber": "to drink"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante descansar",
+          "english": "It is important to rest"
+        },
+        {
+          "spanish": "y beber mucha agua.",
+          "english": "and drink plenty of water."
+        }
+      ]
     },
     {
       "id": "m32-s6",
@@ -62,7 +102,17 @@
         "torcí": "twisted",
         "tobillo": "ankle",
         "ayer": "yesterday"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me torcí el tobillo",
+          "english": "I twisted my ankle"
+        },
+        {
+          "spanish": "jugando al fútbol ayer.",
+          "english": "playing football yesterday."
+        }
+      ]
     },
     {
       "id": "m32-s7",
@@ -92,7 +142,17 @@
         "siento": "feel",
         "náuseas": "nausea",
         "mareos": "dizziness"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Siento náuseas y mareos",
+          "english": "I feel nausea and dizziness"
+        },
+        {
+          "spanish": "desde esta mañana.",
+          "english": "since this morning."
+        }
+      ]
     },
     {
       "id": "m32-s10",
@@ -102,7 +162,17 @@
         "cuídese": "take care (formal)",
         "mejórese": "get better (formal)",
         "pronto": "soon"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Cuídese mucho",
+          "english": "Take good care of yourself"
+        },
+        {
+          "spanish": "y mejórese pronto.",
+          "english": "and get better soon."
+        }
+      ]
     },
     {
       "id": "m32-curated-11",
@@ -116,7 +186,17 @@
         "tengo": "I have",
         "fiebre": "fever",
         "garganta": "throat"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me duele la garganta",
+          "english": "My throat hurts"
+        },
+        {
+          "spanish": "y tengo fiebre.",
+          "english": "and I have a fever."
+        }
+      ]
     },
     {
       "id": "m32-curated-12",
@@ -144,7 +224,17 @@
         "comer": "to eat",
         "Debes": "you should",
         "medicina": "medicine"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Debes tomar esta medicina",
+          "english": "You should take this medicine"
+        },
+        {
+          "spanish": "después de comer.",
+          "english": "after eating."
+        }
+      ]
     },
     {
       "id": "m32-curated-14",
@@ -173,7 +263,17 @@
         "todavía": "still / yet",
         "estoy": "I am",
         "cansado": "tired"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hoy me siento mejor,",
+          "english": "Today I feel better,"
+        },
+        {
+          "spanish": "pero todavía estoy cansado.",
+          "english": "but I am still tired."
+        }
+      ]
     },
     {
       "id": "m32-curated-16",

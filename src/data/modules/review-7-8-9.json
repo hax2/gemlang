@@ -197,7 +197,21 @@
         "guitarra": "guitar",
         "tiempo libre": "free time",
         "practica": "practices"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi amigo",
+          "english": "My friend"
+        },
+        {
+          "spanish": "practica la guitarra",
+          "english": "practices the guitar"
+        },
+        {
+          "spanish": "en su tiempo libre.",
+          "english": "in his free time."
+        }
+      ]
     },
     {
       "id": "review-7-8-9-spiral-17",
@@ -230,7 +244,21 @@
         "reservar": "to reserve",
         "mesa": "table",
         "noche": "night"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quisiera reservar una mesa",
+          "english": "I would like to reserve a table"
+        },
+        {
+          "spanish": "para dos personas",
+          "english": "for two people"
+        },
+        {
+          "spanish": "para esta noche.",
+          "english": "for tonight."
+        }
+      ]
     },
     {
       "id": "review-7-8-9-spiral-20",

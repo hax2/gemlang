@@ -24,7 +24,17 @@
         "a": "to",
         "trabajar": "to work",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Vas a trabajar",
+          "english": "You are going to work"
+        },
+        {
+          "spanish": "hoy.",
+          "english": "today."
+        }
+      ]
     },
     {
       "id": "m9-s3",
@@ -58,7 +68,17 @@
         "a": "to",
         "beber": "to drink",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Van a beber",
+          "english": "They are going to drink"
+        },
+        {
+          "spanish": "café.",
+          "english": "coffee."
+        }
+      ]
     },
     {
       "id": "m9-s6",
@@ -93,7 +113,17 @@
         "a": "to",
         "estudiar": "to study",
         "mañana": "tomorrow / morning"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No, no voy a estudiar",
+          "english": "No, I am not going to study"
+        },
+        {
+          "spanish": "mañana.",
+          "english": "tomorrow."
+        }
+      ]
     },
     {
       "id": "m9-s9",
@@ -129,7 +159,17 @@
         "ir": "to go",
         "al": "to the",
         "trabajo": "I work / job"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Va a ir",
+          "english": "He/She is going to go"
+        },
+        {
+          "spanish": "al trabajo.",
+          "english": "to work."
+        }
+      ]
     },
     {
       "id": "m9-s12",
@@ -153,7 +193,17 @@
         "a": "to",
         "estar": "to be",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Dónde",
+          "english": "Where"
+        },
+        {
+          "spanish": "vas a estar hoy?",
+          "english": "are you going to be today?"
+        }
+      ]
     },
     {
       "id": "m9-s14",
@@ -166,7 +216,21 @@
         "estar": "to be",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hoy",
+          "english": "Today"
+        },
+        {
+          "spanish": "voy a estar",
+          "english": "I'm going to be"
+        },
+        {
+          "spanish": "en casa.",
+          "english": "at home."
+        }
+      ]
     },
     {
       "id": "m9-s15",
@@ -192,7 +256,17 @@
         "buscar": "to look for",
         "un": "a",
         "libro": "book"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Voy a buscar",
+          "english": "I am going to look for"
+        },
+        {
+          "spanish": "un libro.",
+          "english": "a book."
+        }
+      ]
     },
     {
       "id": "m9-s17",
@@ -203,7 +277,17 @@
         "a": "to",
         "esperar": "to wait",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Vas a esperar",
+          "english": "You are going to wait"
+        },
+        {
+          "spanish": "aquí.",
+          "english": "here."
+        }
+      ]
     },
     {
       "id": "m9-s18",
@@ -225,7 +309,17 @@
         "a": "to",
         "hablar": "to speak",
         "español": "Spanish"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Vamos a hablar",
+          "english": "We are going to speak"
+        },
+        {
+          "spanish": "español.",
+          "english": "Spanish."
+        }
+      ]
     },
     {
       "id": "m9-s20",
@@ -237,7 +331,17 @@
         "abrir": "to open",
         "la": "the / it (fem)",
         "puerta": "door"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Voy a abrir",
+          "english": "I am going to open"
+        },
+        {
+          "spanish": "la puerta.",
+          "english": "the door."
+        }
+      ]
     },
     {
       "id": "m9-s21",
@@ -261,7 +365,17 @@
         "recibir": "to receive",
         "una": "a (fem)",
         "carta": "letter"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Va a recibir",
+          "english": "He/She is going to receive"
+        },
+        {
+          "spanish": "una carta.",
+          "english": "a letter."
+        }
+      ]
     },
     {
       "id": "m9-s23",
@@ -273,7 +387,17 @@
         "comprar": "to buy",
         "el": "the",
         "coche": "car"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Vas a comprar",
+          "english": "Are you going to buy"
+        },
+        {
+          "spanish": "el coche?",
+          "english": "the car?"
+        }
+      ]
     },
     {
       "id": "m9-s24",
@@ -299,7 +423,17 @@
         "comprar": "to buy",
         "el": "the",
         "coche": "car"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "no voy a comprar el coche.",
+          "english": "I'm not going to buy the car."
+        }
+      ]
     },
     {
       "id": "m9-s26",
@@ -312,7 +446,17 @@
         "en": "in / on",
         "el": "the",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Voy a estudiar",
+          "english": "I am going to study"
+        },
+        {
+          "spanish": "en el café.",
+          "english": "in the café."
+        }
+      ]
     },
     {
       "id": "m9-s27",
@@ -334,7 +478,17 @@
         "a": "to",
         "llamar": "to call",
         "Luis": "Luis"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Vas a llamar",
+          "english": "You are going to call"
+        },
+        {
+          "spanish": "a Luis.",
+          "english": "Luis."
+        }
+      ]
     },
     {
       "id": "m9-s29",
@@ -345,7 +499,17 @@
         "a": "to",
         "llamar": "to call",
         "Marta": "Marta"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Va a llamar",
+          "english": "He/She is going to call"
+        },
+        {
+          "spanish": "a Marta.",
+          "english": "Marta."
+        }
+      ]
     },
     {
       "id": "m9-s30",
@@ -366,7 +530,17 @@
         "voy": "I go",
         "a": "to",
         "venir": "to come"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "voy a venir.",
+          "english": "I am going to come."
+        }
+      ]
     },
     {
       "id": "m9-s32",
@@ -377,7 +551,17 @@
         "voy": "I go",
         "a": "to",
         "venir": "to come"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "no voy a venir.",
+          "english": "I am not going to come."
+        }
+      ]
     },
     {
       "id": "m9-s33",
@@ -402,7 +586,17 @@
         "quedarme": "to stay (myself)",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No voy a quedarme",
+          "english": "I am not going to stay"
+        },
+        {
+          "spanish": "en casa.",
+          "english": "at home."
+        }
+      ]
     },
     {
       "id": "m9-s35",
@@ -415,7 +609,17 @@
         "café": "coffee",
         "Sí": "yes",
         "me": "me / to me"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Te gusta el café?",
+          "english": "Do you like coffee?"
+        },
+        {
+          "spanish": "Sí, me gusta.",
+          "english": "Yes, I do."
+        }
+      ]
     },
     {
       "spanish": "¡Vamos a pasarlo genial!",
@@ -438,7 +642,17 @@
         "hacer": "do/make",
         "hoy": "today"
       },
-      "id": "m9-s-colloq2"
+      "id": "m9-s-colloq2",
+      "translationChunks": [
+        {
+          "spanish": "¿Qué",
+          "english": "What"
+        },
+        {
+          "spanish": "vas a hacer hoy?",
+          "english": "are you going to do today?"
+        }
+      ]
     }
   ],
   "grammarExplanation": "The near future is formed with 'ir + a + infinitive.' It translates to 'going to do something.'\n\nConjugate 'ir' (to go):\n• Voy = I go\n• Vas = You go\n• Va = He/She goes\n• Vamos = We go\n• Vais = You all go (Spain)\n• Van = They go\n\nThen add 'a + infinitive':\n• Voy a estudiar = I'm going to study\n• Vas a comer = You're going to eat",

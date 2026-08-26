@@ -31,7 +31,17 @@
         "hacía": "it was (imperfect - weather)",
         "buen": "good",
         "tiempo": "weather / time"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El sábado",
+          "english": "On Saturday"
+        },
+        {
+          "spanish": "hacía buen tiempo.",
+          "english": "the weather was nice."
+        }
+      ]
     },
     {
       "id": "s3-s3",
@@ -42,7 +52,17 @@
         "temprano": "early",
         "y": "and",
         "se duchó": "showered (preterite, reflexive)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Carlos se levantó temprano",
+          "english": "Carlos got up early"
+        },
+        {
+          "spanish": "y se duchó.",
+          "english": "and showered."
+        }
+      ]
     },
     {
       "id": "s3-s4",
@@ -70,7 +90,17 @@
         "a": "at",
         "las": "the",
         "nueve": "nine"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Salió de su casa",
+          "english": "He left his house"
+        },
+        {
+          "spanish": "a las nueve.",
+          "english": "at nine."
+        }
+      ]
     },
     {
       "id": "s3-s6",
@@ -99,7 +129,17 @@
         "en": "in",
         "el": "the",
         "jardín": "garden"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Cuando llegó,",
+          "english": "When he arrived,"
+        },
+        {
+          "spanish": "la abuela estaba en el jardín.",
+          "english": "the grandmother was in the garden."
+        }
+      ]
     },
     {
       "id": "s3-s8",
@@ -114,7 +154,17 @@
         "visita": "visit",
         "de": "of",
         "Carlos": "Carlos"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ella estaba contenta.",
+          "english": "She was happy."
+        },
+        {
+          "spanish": "Le gustaba mucho la visita de Carlos.",
+          "english": "She really liked Carlos's visit."
+        }
+      ]
     },
     {
       "id": "s3-s9",
@@ -154,7 +204,17 @@
         "Voy a": "I am going to (near future)",
         "volver": "to come back",
         "pronto": "soon"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Carlos le dijo:",
+          "english": "Carlos told her:"
+        },
+        {
+          "spanish": "\"Voy a volver pronto.\"",
+          "english": "\"I am going to come back soon.\""
+        }
+      ]
     },
     {
       "id": "s3-s12",
@@ -169,7 +229,21 @@
         "pronto": "soon",
         "mi": "my",
         "nieto": "grandson"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La abuela sonrió",
+          "english": "The grandmother smiled"
+        },
+        {
+          "spanish": "y le contestó:",
+          "english": "and answered:"
+        },
+        {
+          "spanish": "\"Hasta pronto, mi nieto.\"",
+          "english": "\"See you soon, my grandson.\""
+        }
+      ]
     }
   ],
   "vocabulary": {

@@ -81,7 +81,17 @@
         "quedaría": "would stay",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si lloviera,",
+          "english": "If it rained,"
+        },
+        {
+          "spanish": "me quedaría en casa.",
+          "english": "I would stay at home."
+        }
+      ]
     },
     {
       "id": "review-22-23-24-from-m24-s1",
@@ -116,7 +126,17 @@
         "aquí": "here",
         "te": "you / to you",
         "vería": "would see"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si no estuvieras aquí,",
+          "english": "If you weren't here,"
+        },
+        {
+          "spanish": "no te vería.",
+          "english": "I wouldn't see you."
+        }
+      ]
     },
     {
       "id": "review-22-23-24-from-m22-s5",
@@ -153,7 +173,17 @@
         "no": "no / not",
         "comeríamos": "we would eat",
         "juntos": "together"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si llegaras tarde,",
+          "english": "If you arrived late,"
+        },
+        {
+          "spanish": "no comeríamos juntos.",
+          "english": "we wouldn't eat together."
+        }
+      ]
     },
     {
       "id": "review-22-23-24-from-m24-s2",

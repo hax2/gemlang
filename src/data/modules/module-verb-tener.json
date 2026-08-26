@@ -71,7 +71,17 @@
         "pequeño": "small",
         "en": "in",
         "centro": "centre"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tenemos un piso pequeño",
+          "english": "We have a small flat"
+        },
+        {
+          "spanish": "en el centro.",
+          "english": "in the city centre."
+        }
+      ]
     },
     {
       "id": "mtener-s7",
@@ -108,7 +118,21 @@
         "talento": "talent",
         "para": "for",
         "música": "music"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ella",
+          "english": "She"
+        },
+        {
+          "spanish": "tiene mucho talento",
+          "english": "has a great talent"
+        },
+        {
+          "spanish": "para la música.",
+          "english": "for music."
+        }
+      ]
     },
     {
       "id": "mtener-s10",
@@ -142,7 +166,17 @@
         "bebé": "baby",
         "tiene": "has",
         "sueño": "sleepiness"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El bebé",
+          "english": "The baby"
+        },
+        {
+          "spanish": "tiene sueño.",
+          "english": "is sleepy."
+        }
+      ]
     },
     {
       "id": "mtener-s13",
@@ -178,7 +212,17 @@
         "miedo": "fear",
         "de": "of",
         "arañas": "spiders"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tengo miedo",
+          "english": "I'm afraid"
+        },
+        {
+          "spanish": "de las arañas.",
+          "english": "of spiders."
+        }
+      ]
     },
     {
       "id": "mtener-s16",
@@ -214,7 +258,17 @@
         "de": "to",
         "ir": "to go",
         "playa": "beach"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tengo muchas ganas",
+          "english": "I really feel like"
+        },
+        {
+          "spanish": "de ir a la playa.",
+          "english": "going to the beach."
+        }
+      ]
     },
     {
       "id": "mtener-s19",
@@ -246,7 +300,17 @@
       "wordMeanings": {
         "Mañana": "tomorrow",
         "madrugar": "to get up early"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mañana",
+          "english": "Tomorrow"
+        },
+        {
+          "spanish": "tengo que madrugar.",
+          "english": "I have to get up early."
+        }
+      ]
     },
     {
       "id": "mtener-s22",
@@ -277,7 +341,17 @@
         "niños": "children",
         "recoger": "to tidy up",
         "habitación": "room"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Los niños",
+          "english": "The children"
+        },
+        {
+          "spanish": "tienen que recoger la habitación.",
+          "english": "have to tidy their room."
+        }
+      ]
     },
     {
       "id": "mtener-s25",
@@ -312,7 +386,17 @@
         "móvil": "mobile phone",
         "en": "in",
         "bolsillo": "pocket"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tengo tu móvil",
+          "english": "I've got your mobile"
+        },
+        {
+          "spanish": "en mi bolsillo.",
+          "english": "in my pocket."
+        }
+      ]
     },
     {
       "id": "mtener-s28",
@@ -349,7 +433,17 @@
         "antes": "before",
         "del": "of the",
         "cine": "cinema"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tenemos tiempo",
+          "english": "We have time"
+        },
+        {
+          "spanish": "de tomar algo antes del cine.",
+          "english": "for a quick drink before the cinema."
+        }
+      ]
     }
   ],
   "grammarExplanation": "'Tener' means 'to have', but Spanish uses it where English uses 'to be':\n\n• Age → Tengo veinticinco años = I AM twenty-five\n• Feelings → tener hambre (hungry), sed (thirsty), frío (cold), calor (hot), sueño (sleepy), miedo (afraid), prisa (in a hurry)\n• Opinion → tener razón = to be right\n• Desire → tener ganas de + infinitive = to feel like doing something\n• Obligation → tener que + infinitive = to have to do something\n\nConjugation:\n• Tengo = I have\n• Tienes = you have\n• Tiene = he/she has\n• Tenemos = we have\n• Tenéis = you all have (Spain)\n• Tienen = they have",

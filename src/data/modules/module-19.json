@@ -12,7 +12,17 @@
         "Espero": "I wait / hope",
         "que": "that / than",
         "hables": "speak (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espero",
+          "english": "I hope"
+        },
+        {
+          "spanish": "que hables.",
+          "english": "you speak."
+        }
+      ]
     },
     {
       "id": "m19-s2",
@@ -46,7 +56,17 @@
         "que": "that / than",
         "estudies": "study (subj)",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espero",
+          "english": "I hope"
+        },
+        {
+          "spanish": "que estudies hoy.",
+          "english": "you study today."
+        }
+      ]
     },
     {
       "id": "m19-s5",
@@ -57,7 +77,17 @@
         "que": "that / than",
         "trabajes": "work (subj)",
         "mañana": "tomorrow / morning"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espero",
+          "english": "I hope"
+        },
+        {
+          "spanish": "que trabajes mañana.",
+          "english": "you work tomorrow."
+        }
+      ]
     },
     {
       "id": "m19-s6",
@@ -81,7 +111,17 @@
         "cierres": "close (subj)",
         "la": "the / it (fem)",
         "ventana": "window"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espero",
+          "english": "I hope"
+        },
+        {
+          "spanish": "que cierres la ventana.",
+          "english": "you close the window."
+        }
+      ]
     },
     {
       "id": "m19-s8",
@@ -103,7 +143,17 @@
         "que": "that / than",
         "me": "me / to me",
         "escuches": "listen (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espero",
+          "english": "I hope"
+        },
+        {
+          "spanish": "que me escuches.",
+          "english": "you listen to me."
+        }
+      ]
     },
     {
       "id": "m19-s10",
@@ -116,7 +166,17 @@
         "digas": "say (subj)",
         "la": "the / it (fem)",
         "verdad": "truth"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espero",
+          "english": "I hope"
+        },
+        {
+          "spanish": "que me digas la verdad.",
+          "english": "you tell me the truth."
+        }
+      ]
     },
     {
       "id": "m19-s11",
@@ -150,7 +210,17 @@
         "que": "that / than",
         "vayas": "go (subj)",
         "conmigo": "with me"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espero",
+          "english": "I hope"
+        },
+        {
+          "spanish": "que vayas conmigo.",
+          "english": "you go with me."
+        }
+      ]
     },
     {
       "id": "m19-s14",
@@ -161,7 +231,17 @@
         "que": "that / than",
         "tengas": "have (subj)",
         "tiempo": "time"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espero",
+          "english": "I hope"
+        },
+        {
+          "spanish": "que tengas tiempo.",
+          "english": "you have time."
+        }
+      ]
     },
     {
       "id": "m19-s15",
@@ -183,7 +263,17 @@
         "que": "that / than",
         "estés": "are (subj)",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espero",
+          "english": "I hope"
+        },
+        {
+          "spanish": "que estés aquí.",
+          "english": "you are here."
+        }
+      ]
     },
     {
       "id": "m19-s17",
@@ -205,7 +295,17 @@
         "que": "that / than",
         "seas": "you are (subj)",
         "feliz": "happy"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espero",
+          "english": "I hope"
+        },
+        {
+          "spanish": "que seas feliz.",
+          "english": "you are happy."
+        }
+      ]
     },
     {
       "id": "m19-s19",
@@ -215,7 +315,17 @@
         "Esperas": "you wait",
         "que": "that / than",
         "hable": "speak (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Esperas",
+          "english": "Do you hope"
+        },
+        {
+          "spanish": "que hable?",
+          "english": "that I speak?"
+        }
+      ]
     },
     {
       "id": "m19-s20",
@@ -249,7 +359,17 @@
         "que": "that / than",
         "llegues": "arrive (subj)",
         "temprano": "early"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espero",
+          "english": "I hope"
+        },
+        {
+          "spanish": "que llegues temprano.",
+          "english": "you arrive early."
+        }
+      ]
     },
     {
       "id": "m19-s23",
@@ -261,7 +381,17 @@
         "no": "no / not",
         "llegues": "arrive (subj)",
         "tarde": "late / afternoon"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espero",
+          "english": "I hope"
+        },
+        {
+          "spanish": "que no llegues tarde.",
+          "english": "you don't arrive late."
+        }
+      ]
     },
     {
       "id": "m19-s24",
@@ -284,7 +414,17 @@
         "que": "that / than",
         "te": "you / to you",
         "quedes": "stay (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espero",
+          "english": "I hope"
+        },
+        {
+          "spanish": "que te quedes.",
+          "english": "you stay."
+        }
+      ]
     },
     {
       "id": "m19-s26",
@@ -338,7 +478,17 @@
         "que": "that / than",
         "estéis": "are (subj pl)",
         "listos": "ready"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espero",
+          "english": "I hope"
+        },
+        {
+          "spanish": "que estéis listos.",
+          "english": "you are ready. (you plural, Spain)"
+        }
+      ]
     }
   ],
   "grammarExplanation": "The subjunctive is also triggered by expressions of hope and emotion:\n\n'Espero que + subjunctive'\n\n• Espero que hables = I hope you speak\n• Espero que vengas = I hope you come\n• Espero que estés bien = I hope you're well\n\nOther triggers: 'Ojalá que' (I wish that), 'Me alegra que' (I'm glad that), 'Temo que' (I fear that).\n\nRemember: same subject → infinitive. Different subjects → subjunctive.",

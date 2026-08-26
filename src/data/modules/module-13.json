@@ -12,7 +12,17 @@
         "Veo": "I see",
         "el": "the",
         "libro": "book"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Veo",
+          "english": "I see"
+        },
+        {
+          "spanish": "el libro.",
+          "english": "the book."
+        }
+      ]
     },
     {
       "id": "m13-s2",
@@ -21,7 +31,13 @@
       "wordMeanings": {
         "Lo": "it / him",
         "veo": "I see"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Lo veo.",
+          "english": "I see it."
+        }
+      ]
     },
     {
       "id": "m13-s3",
@@ -31,7 +47,17 @@
         "Veo": "I see",
         "la": "the / it (fem)",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Veo",
+          "english": "I see"
+        },
+        {
+          "spanish": "la casa.",
+          "english": "the house."
+        }
+      ]
     },
     {
       "id": "m13-s4",
@@ -40,7 +66,13 @@
       "wordMeanings": {
         "La": "the / it (fem)",
         "veo": "I see"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La veo.",
+          "english": "I see it."
+        }
+      ]
     },
     {
       "id": "m13-s5",
@@ -59,7 +91,13 @@
       "wordMeanings": {
         "Lo": "it / him",
         "compro": "I buy"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Lo compro.",
+          "english": "I buy it."
+        }
+      ]
     },
     {
       "id": "m13-s7",
@@ -69,7 +107,17 @@
         "Compro": "I buy",
         "la": "the / it (fem)",
         "sopa": "soup"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Compro",
+          "english": "I buy"
+        },
+        {
+          "spanish": "la sopa.",
+          "english": "the soup."
+        }
+      ]
     },
     {
       "id": "m13-s8",
@@ -78,7 +126,13 @@
       "wordMeanings": {
         "La": "the / it (fem)",
         "compro": "I buy"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La compro.",
+          "english": "I buy it."
+        }
+      ]
     },
     {
       "id": "m13-s9",
@@ -97,7 +151,13 @@
       "wordMeanings": {
         "Lo": "it / him",
         "tienes": "you have"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Lo tienes.",
+          "english": "You have it."
+        }
+      ]
     },
     {
       "id": "m13-s11",
@@ -107,7 +167,17 @@
         "Tienes": "you have",
         "la": "the / it (fem)",
         "carta": "letter"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tienes",
+          "english": "You have"
+        },
+        {
+          "spanish": "la carta.",
+          "english": "the letter."
+        }
+      ]
     },
     {
       "id": "m13-s12",
@@ -116,7 +186,13 @@
       "wordMeanings": {
         "La": "the / it (fem)",
         "tienes": "you have"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La tienes.",
+          "english": "You have it."
+        }
+      ]
     },
     {
       "id": "m13-s13",
@@ -126,7 +202,17 @@
         "Busco": "I look for",
         "los": "the / them",
         "libros": "books"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Busco",
+          "english": "I look for"
+        },
+        {
+          "spanish": "los libros.",
+          "english": "the books."
+        }
+      ]
     },
     {
       "id": "m13-s14",
@@ -135,7 +221,13 @@
       "wordMeanings": {
         "Los": "the / them",
         "busco": "I look for"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Los busco.",
+          "english": "I look for them."
+        }
+      ]
     },
     {
       "id": "m13-s15",
@@ -154,7 +246,13 @@
       "wordMeanings": {
         "Las": "the / them (fem)",
         "busco": "I look for"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Las busco.",
+          "english": "I look for them."
+        }
+      ]
     },
     {
       "id": "m13-s17",
@@ -164,7 +262,17 @@
         "Ves": "you see",
         "el": "the",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Ves",
+          "english": "Do you see"
+        },
+        {
+          "spanish": "el café?",
+          "english": "the coffee?"
+        }
+      ]
     },
     {
       "id": "m13-s18",
@@ -174,7 +282,17 @@
         "Sí": "yes",
         "lo": "it / him",
         "veo": "I see"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "lo veo.",
+          "english": "I see it."
+        }
+      ]
     },
     {
       "id": "m13-s19",
@@ -184,7 +302,17 @@
         "Ves": "you see",
         "la": "the / it (fem)",
         "mesa": "table"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Ves",
+          "english": "Do you see"
+        },
+        {
+          "spanish": "la mesa?",
+          "english": "the table?"
+        }
+      ]
     },
     {
       "id": "m13-s20",
@@ -194,7 +322,17 @@
         "Sí": "yes",
         "la": "the / it (fem)",
         "veo": "I see"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "la veo.",
+          "english": "I see it."
+        }
+      ]
     },
     {
       "id": "m13-s21",
@@ -204,7 +342,17 @@
         "Compraste": "you bought",
         "el": "the",
         "coche": "car"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Compraste",
+          "english": "Did you buy"
+        },
+        {
+          "spanish": "el coche?",
+          "english": "the car?"
+        }
+      ]
     },
     {
       "id": "m13-s22",
@@ -214,7 +362,17 @@
         "Sí": "yes",
         "lo": "it / him",
         "compré": "I bought"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "lo compré.",
+          "english": "I bought it."
+        }
+      ]
     },
     {
       "id": "m13-s23",
@@ -224,7 +382,17 @@
         "Compraste": "you bought",
         "la": "the / it (fem)",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Compraste",
+          "english": "Did you buy"
+        },
+        {
+          "spanish": "la casa?",
+          "english": "the house?"
+        }
+      ]
     },
     {
       "id": "m13-s24",
@@ -235,7 +403,17 @@
         "no": "no / not",
         "la": "the / it (fem)",
         "compré": "I bought"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "no la compré.",
+          "english": "I didn’t buy it."
+        }
+      ]
     },
     {
       "id": "m13-s25",
@@ -246,7 +424,17 @@
         "abrí": "I opened",
         "el": "the",
         "libro": "book"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "abrí el libro.",
+          "english": "I opened the book."
+        }
+      ]
     },
     {
       "id": "m13-s26",
@@ -256,7 +444,17 @@
         "Ayer": "yesterday",
         "lo": "it / him",
         "abrí": "I opened"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "lo abrí.",
+          "english": "I opened it."
+        }
+      ]
     },
     {
       "id": "m13-s27",
@@ -267,7 +465,17 @@
         "abrí": "I opened",
         "la": "the / it (fem)",
         "puerta": "door"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "abrí la puerta.",
+          "english": "I opened the door."
+        }
+      ]
     },
     {
       "id": "m13-s28",
@@ -277,7 +485,17 @@
         "Ayer": "yesterday",
         "la": "the / it (fem)",
         "abrí": "I opened"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "la abrí.",
+          "english": "I opened it."
+        }
+      ]
     },
     {
       "id": "m13-s29",
@@ -333,7 +551,17 @@
         "No": "no / not",
         "lo": "it / him",
         "veo": "I see"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Dónde está el libro?",
+          "english": "Where is the book?"
+        },
+        {
+          "spanish": "No lo veo.",
+          "english": "I don’t see it."
+        }
+      ]
     },
     {
       "id": "m13-s34",
@@ -346,7 +574,17 @@
         "llave": "key",
         "No": "no / not",
         "encuentro": "I find"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Dónde está la llave?",
+          "english": "Where is the key?"
+        },
+        {
+          "spanish": "No la encuentro.",
+          "english": "I can’t find it."
+        }
+      ]
     },
     {
       "id": "m13-s35",
@@ -355,7 +593,13 @@
       "wordMeanings": {
         "Lo": "it / him",
         "quiero": "I want"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Lo quiero.",
+          "english": "I want it."
+        }
+      ]
     },
     {
       "id": "m13-s36",
@@ -364,7 +608,13 @@
       "wordMeanings": {
         "La": "the / it (fem)",
         "quiero": "I want"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La quiero.",
+          "english": "I want it."
+        }
+      ]
     },
     {
       "id": "m13-s37",
@@ -373,7 +623,13 @@
       "wordMeanings": {
         "Los": "the / them",
         "quiero": "I want"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Los quiero.",
+          "english": "I want them."
+        }
+      ]
     },
     {
       "id": "m13-s38",
@@ -382,7 +638,13 @@
       "wordMeanings": {
         "Las": "the / them (fem)",
         "quiero": "I want"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Las quiero.",
+          "english": "I want them."
+        }
+      ]
     },
     {
       "id": "m13-s39",
@@ -392,7 +654,17 @@
         "Lo": "it / him",
         "tienes": "you have",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Lo tienes",
+          "english": "Do you have it"
+        },
+        {
+          "spanish": "aquí?",
+          "english": "here?"
+        }
+      ]
     },
     {
       "id": "m13-s40",
@@ -403,7 +675,17 @@
         "lo": "it / him",
         "tengo": "I have",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "lo tengo aquí.",
+          "english": "I have it here."
+        }
+      ]
     },
     {
       "spanish": "¡Ya lo tengo!",
@@ -422,7 +704,13 @@
         "Lo": "it",
         "pillas": "you catch/get"
       },
-      "id": "m13-s-colloq2"
+      "id": "m13-s-colloq2",
+      "translationChunks": [
+        {
+          "spanish": "¿Lo pillas?",
+          "english": "Do you get it? (slang)"
+        }
+      ]
     }
   ],
   "grammarExplanation": "Direct object pronouns replace the noun receiving the action:\n\n• lo = it/him (masculine)\n• la = it/her (feminine)\n• los = them (masculine)\n• las = them (feminine)\n\nThey go BEFORE the conjugated verb:\n• 'Veo el libro' → 'Lo veo' (I see it)\n• 'Compro la sopa' → 'La compro' (I buy it)\n\nWith infinitives/gerunds, they can attach to the end:\n• 'Lo estoy leyendo' or 'Estoy leyéndolo'",

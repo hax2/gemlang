@@ -13,7 +13,17 @@
         "por": "through / by",
         "el": "the",
         "parque": "park"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Caminamos",
+          "english": "We walked"
+        },
+        {
+          "spanish": "por el parque.",
+          "english": "through the park."
+        }
+      ]
     },
     {
       "id": "mporpara-s2",
@@ -36,7 +46,17 @@
         "para": "for (purpose/goal)",
         "el": "the",
         "examen": "exam"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estudiamos",
+          "english": "We studied"
+        },
+        {
+          "spanish": "para el examen.",
+          "english": "for the exam."
+        }
+      ]
     },
     {
       "id": "mporpara-s4",
@@ -48,7 +68,17 @@
         "coche": "car",
         "por": "for (exchange)",
         "este": "this one"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Cambié mi coche",
+          "english": "I exchanged my car"
+        },
+        {
+          "spanish": "por este.",
+          "english": "for this one."
+        }
+      ]
     },
     {
       "id": "mporpara-s5",
@@ -71,7 +101,17 @@
         "para": "for (destination)",
         "Madrid": "Madrid",
         "mañana": "tomorrow"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Salimos",
+          "english": "We leave"
+        },
+        {
+          "spanish": "para Madrid mañana.",
+          "english": "for Madrid tomorrow."
+        }
+      ]
     },
     {
       "id": "mporpara-s7",
@@ -82,7 +122,17 @@
         "por": "for (duration of time)",
         "tres": "three",
         "horas": "hours"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Trabajé",
+          "english": "I worked"
+        },
+        {
+          "spanish": "por tres horas.",
+          "english": "for three hours."
+        }
+      ]
     },
     {
       "id": "mporpara-s8",
@@ -106,7 +156,17 @@
         "por": "for (gratitude/exchange)",
         "la": "the",
         "ayuda": "help"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Gracias",
+          "english": "Thanks"
+        },
+        {
+          "spanish": "por la ayuda.",
+          "english": "for the help."
+        }
+      ]
     },
     {
       "id": "mporpara-s10",
@@ -118,7 +178,17 @@
         "esto": "this",
         "es": "is",
         "fácil": "easy"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Para mí,",
+          "english": "For me,"
+        },
+        {
+          "spanish": "esto es fácil.",
+          "english": "this is easy."
+        }
+      ]
     },
     {
       "id": "mporpara-s11",
@@ -143,7 +213,17 @@
         "España": "Spain",
         "hoy": "today",
         "mismo": "itself/very"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Viajamos",
+          "english": "We are traveling"
+        },
+        {
+          "spanish": "para España hoy mismo.",
+          "english": "to Spain this very day."
+        }
+      ]
     },
     {
       "id": "mporpara-s13",
@@ -156,7 +236,17 @@
         "con": "with",
         "su": "his",
         "amigo": "friend"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Habló por teléfono",
+          "english": "He spoke by phone"
+        },
+        {
+          "spanish": "con su amigo.",
+          "english": "with his friend."
+        }
+      ]
     },
     {
       "id": "mporpara-s14",
@@ -183,7 +273,17 @@
         "difícil": "difficult",
         "para": "for (opinion/effect)",
         "nosotros": "us/we"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Esta tarea es difícil",
+          "english": "This task is difficult"
+        },
+        {
+          "spanish": "para nosotros.",
+          "english": "for us."
+        }
+      ]
     },
     {
       "id": "mporpara-s16",
@@ -197,7 +297,17 @@
         "unos": "some/about",
         "treinta": "thirty",
         "minutos": "minutes"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Corrí por el lago",
+          "english": "I ran by the lake"
+        },
+        {
+          "spanish": "unos treinta minutos.",
+          "english": "for about thirty minutes."
+        }
+      ]
     },
     {
       "id": "mporpara-s17",
@@ -224,7 +334,17 @@
         "por": "for (exchange)",
         "el": "the",
         "proyecto": "project"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me pagó cien euros",
+          "english": "He paid me a hundred euros"
+        },
+        {
+          "spanish": "por el proyecto.",
+          "english": "for the project."
+        }
+      ]
     },
     {
       "id": "mporpara-s19",
@@ -238,7 +358,17 @@
         "escrito": "written",
         "por": "by (passive voice)",
         "Lorca": "Lorca"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Este poema famoso",
+          "english": "This famous poem"
+        },
+        {
+          "spanish": "fue escrito por Lorca.",
+          "english": "was written by Lorca."
+        }
+      ]
     },
     {
       "id": "mporpara-s20",
@@ -265,7 +395,17 @@
         "libro": "book",
         "para": "for/by (deadline)",
         "mañana": "tomorrow"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hay que leer este libro",
+          "english": "One must read this book"
+        },
+        {
+          "spanish": "para mañana.",
+          "english": "by tomorrow."
+        }
+      ]
     },
     {
       "id": "mporpara-s22",
@@ -279,7 +419,17 @@
         "solo": "only",
         "por": "for (sake of/because of)",
         "ti": "you"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me he sacrificado aquí",
+          "english": "I have sacrificed here"
+        },
+        {
+          "spanish": "solo por ti.",
+          "english": "only for you."
+        }
+      ]
     },
     {
       "id": "mporpara-s23",
@@ -307,7 +457,17 @@
         "pequeño": "small",
         "corre": "runs",
         "rápido": "fast"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Para ser un perro pequeño,",
+          "english": "For a small dog,"
+        },
+        {
+          "spanish": "corre rápido.",
+          "english": "it runs fast."
+        }
+      ]
     },
     {
       "id": "mporpara-s25",
@@ -321,7 +481,17 @@
         "y": "and",
         "vi": "I saw",
         "llover": "to rain"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Miré por la ventana",
+          "english": "I looked through the window"
+        },
+        {
+          "spanish": "y vi llover.",
+          "english": "and saw it rain."
+        }
+      ]
     }
   ],
   "grammarExplanation": "Both 'por' and 'para' translate to 'for', but they have different uses. Use 'para' for: Purpose, Recipient, Opinion, Destination, and Deadlines (PRODD). Use 'por' for everything else: moving through space, duration of time, exchange (including thanks), and 'because of/on behalf of'.",

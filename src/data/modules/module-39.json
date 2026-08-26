@@ -13,7 +13,17 @@
         "lee": "reads",
         "contrato": "contract",
         "almuerzo": "lunch"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La doctora lee el contrato",
+          "english": "The doctor reads the contract"
+        },
+        {
+          "spanish": "antes del almuerzo.",
+          "english": "before lunch."
+        }
+      ]
     },
     {
       "id": "39-s21",
@@ -35,7 +45,17 @@
         "organiza": "organizes",
         "informe": "report",
         "días": "days"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El ingeniero organiza el informe",
+          "english": "The engineer organizes the report"
+        },
+        {
+          "spanish": "todos los días.",
+          "english": "every day."
+        }
+      ]
     },
     {
       "id": "39-s27",
@@ -46,7 +66,17 @@
         "revisa": "reviews",
         "proyecto": "project",
         "cliente": "client"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La doctora revisa el proyecto",
+          "english": "The doctor reviews the project"
+        },
+        {
+          "spanish": "para el cliente.",
+          "english": "for the client."
+        }
+      ]
     },
     {
       "id": "39-s42",
@@ -68,7 +98,17 @@
         "termina": "finishes",
         "informe": "report",
         "cliente": "client"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La doctora termina el informe",
+          "english": "The doctor finishes the report"
+        },
+        {
+          "spanish": "para el cliente.",
+          "english": "for the client."
+        }
+      ]
     },
     {
       "id": "39-s22",
@@ -79,7 +119,17 @@
         "organiza": "organizes",
         "documentos": "documents",
         "cliente": "client"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El jefe organiza los documentos",
+          "english": "The boss organizes the documents"
+        },
+        {
+          "spanish": "para el cliente.",
+          "english": "for the client."
+        }
+      ]
     },
     {
       "id": "39-s6",
@@ -101,7 +151,17 @@
         "lee": "reads",
         "documentos": "documents",
         "oficina": "office"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El profesor lee los documentos",
+          "english": "The teacher reads the documents"
+        },
+        {
+          "spanish": "en la oficina.",
+          "english": "in the office."
+        }
+      ]
     },
     {
       "id": "39-s11",
@@ -112,7 +172,17 @@
         "escribe": "writes",
         "informe": "report",
         "cuidado": "carefully"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La doctora escribe el informe",
+          "english": "The doctor writes the report"
+        },
+        {
+          "spanish": "con mucho cuidado.",
+          "english": "very carefully."
+        }
+      ]
     },
     {
       "id": "39-s24",
@@ -134,7 +204,17 @@
         "revisa": "reviews",
         "proyecto": "project",
         "cuidado": "carefully"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La doctora revisa el proyecto",
+          "english": "The doctor reviews the project"
+        },
+        {
+          "spanish": "con mucho cuidado.",
+          "english": "very carefully."
+        }
+      ]
     },
     {
       "id": "39-s25",
@@ -145,7 +225,17 @@
         "lee": "reads",
         "documentos": "documents",
         "almuerzo": "lunch"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El profesor lee los documentos",
+          "english": "The teacher reads the documents"
+        },
+        {
+          "spanish": "antes del almuerzo.",
+          "english": "before lunch."
+        }
+      ]
     },
     {
       "id": "39-s29",
@@ -167,7 +257,17 @@
         "lee": "reads",
         "contrato": "contract",
         "días": "days"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El profesor lee el contrato",
+          "english": "The teacher reads the contract"
+        },
+        {
+          "spanish": "todos los días.",
+          "english": "every day."
+        }
+      ]
     },
     {
       "id": "39-s31",
@@ -178,7 +278,17 @@
         "lee": "reads",
         "proyecto": "project",
         "cliente": "client"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La doctora lee el proyecto",
+          "english": "The doctor reads the project"
+        },
+        {
+          "spanish": "para el cliente.",
+          "english": "for the client."
+        }
+      ]
     },
     {
       "id": "39-s2",
@@ -200,7 +310,17 @@
         "organiza": "organizes",
         "correo": "email",
         "oficina": "office"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La doctora organiza el correo",
+          "english": "The doctor organizes their email"
+        },
+        {
+          "spanish": "en la oficina.",
+          "english": "in the office."
+        }
+      ]
     },
     {
       "id": "39-s4",
@@ -211,7 +331,17 @@
         "lee": "reads",
         "contrato": "contract",
         "días": "days"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El abogado lee el contrato",
+          "english": "The lawyer reads the contract"
+        },
+        {
+          "spanish": "todos los días.",
+          "english": "every day."
+        }
+      ]
     },
     {
       "id": "39-s5",
@@ -233,7 +363,17 @@
         "organiza": "organizes",
         "contrato": "contract",
         "días": "days"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El ingeniero organiza el contrato",
+          "english": "The engineer organizes the contract"
+        },
+        {
+          "spanish": "todos los días.",
+          "english": "every day."
+        }
+      ]
     },
     {
       "id": "39-s8",
@@ -244,7 +384,17 @@
         "revisa": "reviews",
         "contrato": "contract",
         "almuerzo": "lunch"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El profesor revisa el contrato",
+          "english": "The teacher reviews the contract"
+        },
+        {
+          "spanish": "antes del almuerzo.",
+          "english": "before lunch."
+        }
+      ]
     },
     {
       "id": "39-s10",
@@ -266,7 +416,17 @@
         "lee": "reads",
         "informe": "report",
         "días": "days"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El ingeniero lee el informe",
+          "english": "The engineer reads the report"
+        },
+        {
+          "spanish": "todos los días.",
+          "english": "every day."
+        }
+      ]
     },
     {
       "id": "m39-context-1",
@@ -279,7 +439,17 @@
         "días": "days",
         "por": "for / by",
         "semana": "week"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Trabajo desde casa",
+          "english": "I work from home"
+        },
+        {
+          "spanish": "tres días por semana.",
+          "english": "three days a week."
+        }
+      ]
     },
     {
       "id": "m39-context-2",
@@ -307,7 +477,17 @@
         "empieza": "it starts",
         "la": "the / it (fem)",
         "reunión": "meeting"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿A qué hora empieza",
+          "english": "What time does"
+        },
+        {
+          "spanish": "la reunión?",
+          "english": "the meeting start?"
+        }
+      ]
     },
     {
       "id": "m39-context-4",
@@ -321,7 +501,17 @@
         "paciente": "patient",
         "calma": "calm",
         "médica": "doctor"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La médica habla con cada paciente",
+          "english": "The doctor speaks"
+        },
+        {
+          "spanish": "con calma.",
+          "english": "calmly with each patient."
+        }
+      ]
     },
     {
       "id": "m39-context-5",
@@ -349,7 +539,17 @@
         "mañana": "tomorrow / morning",
         "termino": "I finish",
         "descansaré": "I will rest"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si termino el informe hoy,",
+          "english": "If I finish the report today,"
+        },
+        {
+          "spanish": "descansaré mañana.",
+          "english": "I will rest tomorrow."
+        }
+      ]
     }
   ],
   "vocabulary": {

@@ -32,7 +32,17 @@
         "Se": "himself / herself / themselves",
         "llama": "calls",
         "Marta": "Marta"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Se llama",
+          "english": "Her name is"
+        },
+        {
+          "spanish": "Marta.",
+          "english": "Marta."
+        }
+      ]
     },
     {
       "id": "m7-s4",
@@ -62,7 +72,17 @@
         "Me": "me / to me",
         "levanto": "I get up",
         "temprano": "early"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me levanto",
+          "english": "I get up"
+        },
+        {
+          "spanish": "temprano.",
+          "english": "early."
+        }
+      ]
     },
     {
       "id": "m7-s7",
@@ -92,7 +112,17 @@
         "Nos": "us / to us",
         "levantamos": "we get up",
         "temprano": "early"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nos levantamos",
+          "english": "We get up"
+        },
+        {
+          "spanish": "temprano.",
+          "english": "early."
+        }
+      ]
     },
     {
       "id": "m7-s10",
@@ -122,7 +152,17 @@
         "Se": "himself / herself / themselves",
         "acuesta": "goes to bed",
         "temprano": "early"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Se acuesta",
+          "english": "He/She goes to bed"
+        },
+        {
+          "spanish": "temprano.",
+          "english": "early."
+        }
+      ]
     },
     {
       "id": "m7-s13",
@@ -154,7 +194,17 @@
         "duchas": "you shower",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Te duchas",
+          "english": "You shower"
+        },
+        {
+          "spanish": "en casa.",
+          "english": "at home."
+        }
+      ]
     },
     {
       "id": "m7-s16",
@@ -187,7 +237,17 @@
         "lavo": "I wash",
         "las": "the / them (fem)",
         "manos": "hands"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me lavo",
+          "english": "I wash"
+        },
+        {
+          "spanish": "las manos.",
+          "english": "my hands."
+        }
+      ]
     },
     {
       "id": "m7-s19",
@@ -220,7 +280,17 @@
         "lavamos": "we wash",
         "las": "the / them (fem)",
         "manos": "hands"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nos lavamos",
+          "english": "We wash"
+        },
+        {
+          "spanish": "las manos.",
+          "english": "our hands."
+        }
+      ]
     },
     {
       "id": "m7-s22",
@@ -250,7 +320,17 @@
         "Se": "himself / herself / themselves",
         "viste": "dresses",
         "despacio": "slowly"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Se viste",
+          "english": "He/She gets dressed"
+        },
+        {
+          "spanish": "despacio.",
+          "english": "slowly."
+        }
+      ]
     },
     {
       "id": "m7-s25",
@@ -280,7 +360,17 @@
         "Te": "you / to you",
         "sientas": "you sit",
         "allí": "there"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Te sientas",
+          "english": "You sit"
+        },
+        {
+          "spanish": "allí.",
+          "english": "there."
+        }
+      ]
     },
     {
       "id": "m7-s28",
@@ -311,7 +401,17 @@
         "quedo": "I stay",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me quedo",
+          "english": "I stay"
+        },
+        {
+          "spanish": "en casa.",
+          "english": "at home."
+        }
+      ]
     },
     {
       "id": "m7-s31",
@@ -345,7 +445,17 @@
         "quedamos": "we stay",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nos quedamos",
+          "english": "We stay"
+        },
+        {
+          "spanish": "en casa.",
+          "english": "at home."
+        }
+      ]
     },
     {
       "id": "m7-s34",
@@ -387,7 +497,21 @@
         "visto": "I get dressed",
         "y": "and",
         "salgo": "I leave"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Por la mañana",
+          "english": "In the morning"
+        },
+        {
+          "spanish": "me visto",
+          "english": "I get dressed"
+        },
+        {
+          "spanish": "y salgo.",
+          "english": "and leave."
+        }
+      ]
     },
     {
       "id": "m7-s37",
@@ -422,7 +546,17 @@
         "y": "and",
         "vivo": "I live",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me llamo Ana",
+          "english": "My name is Ana"
+        },
+        {
+          "spanish": "y vivo aquí.",
+          "english": "and I live here."
+        }
+      ]
     },
     {
       "id": "m7-s40",
@@ -462,7 +596,17 @@
         "por": "for / by",
         "la": "the / it (fem)",
         "mañana": "tomorrow / morning"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Te duchas",
+          "english": "Do you shower"
+        },
+        {
+          "spanish": "por la mañana?",
+          "english": "in the morning?"
+        }
+      ]
     },
     {
       "id": "m7-s43",

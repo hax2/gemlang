@@ -27,7 +27,17 @@
         "que": "that / than",
         "escuches": "listen (subj)",
         "bien": "well / carefully"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que escuches bien.",
+          "english": "that you listen carefully."
+        }
+      ]
     },
     {
       "id": "m20-s3",
@@ -38,7 +48,17 @@
         "importante": "important",
         "que": "that / than",
         "estudies": "study (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que estudies.",
+          "english": "that you study."
+        }
+      ]
     },
     {
       "id": "m20-s4",
@@ -63,7 +83,17 @@
         "que": "that / than",
         "comas": "eat (subj)",
         "bien": "well/good"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que comas bien.",
+          "english": "that you eat well."
+        }
+      ]
     },
     {
       "id": "m20-s6",
@@ -88,7 +118,17 @@
         "que": "that / than",
         "duermas": "sleep (subj)",
         "bien": "well/good"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que duermas bien.",
+          "english": "that you sleep well."
+        }
+      ]
     },
     {
       "id": "m20-s8",
@@ -101,7 +141,17 @@
         "descanses": "rest (subj)",
         "un": "a",
         "poco": "little / bit"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que descanses un poco.",
+          "english": "that you rest a bit."
+        }
+      ]
     },
     {
       "id": "m20-s9",
@@ -138,7 +188,17 @@
         "que": "that / than",
         "vengas": "come (subj)",
         "mañana": "tomorrow / morning"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que vengas mañana.",
+          "english": "that you come tomorrow."
+        }
+      ]
     },
     {
       "id": "m20-s12",
@@ -152,7 +212,17 @@
         "hoy": "today",
         "al": "to the",
         "médico": "doctor"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que vayas hoy al médico.",
+          "english": "that you go to the doctor today."
+        }
+      ]
     },
     {
       "id": "m20-s13",
@@ -179,7 +249,17 @@
         "bien": "well / properly",
         "la": "the / it (fem)",
         "ventana": "window"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que cierres bien la ventana.",
+          "english": "that you close the window properly."
+        }
+      ]
     },
     {
       "id": "m20-s15",
@@ -205,7 +285,17 @@
         "digas": "say (subj)",
         "la": "the / it (fem)",
         "verdad": "truth"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que me digas la verdad.",
+          "english": "that you tell me the truth."
+        }
+      ]
     },
     {
       "id": "m20-s17",
@@ -218,7 +308,17 @@
         "me": "me / to me",
         "lo": "it / him",
         "digas": "say (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que me lo digas.",
+          "english": "that you tell it to me."
+        }
+      ]
     },
     {
       "id": "m20-s18",
@@ -262,7 +362,17 @@
         "algo": "some / something",
         "de": "of",
         "tiempo": "time"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que tengas algo de tiempo.",
+          "english": "that you have some time."
+        }
+      ]
     },
     {
       "id": "m20-s21",
@@ -276,7 +386,17 @@
         "algo": "some / something",
         "de": "of",
         "dinero": "money"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que lleves algo de dinero.",
+          "english": "that you bring some money."
+        }
+      ]
     },
     {
       "id": "m20-s22",
@@ -302,7 +422,17 @@
         "que": "that / than",
         "estés": "are (subj)",
         "bien": "well/good"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que estés bien.",
+          "english": "that you are well."
+        }
+      ]
     },
     {
       "id": "m20-s24",
@@ -326,7 +456,17 @@
         "que": "that / than",
         "seas": "you are (subj)",
         "amable": "kind"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que seas amable.",
+          "english": "that you are kind."
+        }
+      ]
     },
     {
       "id": "m20-s26",
@@ -339,7 +479,17 @@
         "que": "that / than",
         "estés": "are (subj)",
         "bien": "well/good"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Lo importante",
+          "english": "The important thing"
+        },
+        {
+          "spanish": "es que estés bien.",
+          "english": "is that you're okay."
+        }
+      ]
     },
     {
       "id": "m20-s27",
@@ -374,7 +524,17 @@
         "importante": "important",
         "que": "that / than",
         "estudiéis": "study (subj pl)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que estudiéis.",
+          "english": "that you study. (you plural, Spain)"
+        }
+      ]
     }
   ],
   "grammarExplanation": "Impersonal expressions of judgment or importance also trigger the subjunctive:\n\n'Es importante que + subjunctive'\n'Es necesario que + subjunctive'\n\n• Es importante que estudies = It's important that you study\n• Es importante que seas paciente = It's important that you be patient\n\nOther triggers: 'Es bueno que', 'Es malo que', 'Es mejor que', 'Es necesario que.'",

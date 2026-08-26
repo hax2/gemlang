@@ -13,7 +13,17 @@
         "borra": "deletes",
         "software": "software",
         "teléfono": "phone"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi amigo borra el software",
+          "english": "My friend deletes the software"
+        },
+        {
+          "spanish": "en su teléfono.",
+          "english": "on their phone."
+        }
+      ]
     },
     {
       "id": "37-s18",
@@ -24,7 +34,17 @@
         "actualiza": "updates",
         "aplicación": "application",
         "rápido": "fast"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El usuario actualiza la aplicación",
+          "english": "The user updates the application"
+        },
+        {
+          "spanish": "muy rápido.",
+          "english": "very fast."
+        }
+      ]
     },
     {
       "id": "37-s23",
@@ -46,7 +66,17 @@
         "instala": "installs",
         "antivirus": "antivirus",
         "wifi": "wifi"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El programador instala el antivirus",
+          "english": "The programmer installs the antivirus"
+        },
+        {
+          "spanish": "con wifi.",
+          "english": "with wifi."
+        }
+      ]
     },
     {
       "id": "37-s14",
@@ -57,7 +87,17 @@
         "actualiza": "updates",
         "programa": "program",
         "ordenador": "computer"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi amigo actualiza el programa",
+          "english": "My friend updates the program"
+        },
+        {
+          "spanish": "en el ordenador.",
+          "english": "on the computer."
+        }
+      ]
     },
     {
       "id": "37-s31",
@@ -68,7 +108,17 @@
         "compra": "buys",
         "software": "software",
         "ordenador": "computer"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El técnico compra el software",
+          "english": "The technician buys the software"
+        },
+        {
+          "spanish": "en el ordenador.",
+          "english": "on the computer."
+        }
+      ]
     },
     {
       "id": "37-s12",
@@ -90,7 +140,17 @@
         "instala": "installs",
         "antivirus": "antivirus",
         "teléfono": "phone"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El usuario instala el antivirus",
+          "english": "The user installs the antivirus"
+        },
+        {
+          "spanish": "en su teléfono.",
+          "english": "on their phone."
+        }
+      ]
     },
     {
       "id": "37-s13",
@@ -101,7 +161,17 @@
         "actualiza": "updates",
         "software": "software",
         "rápido": "fast"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La chica actualiza el software",
+          "english": "The girl updates the software"
+        },
+        {
+          "spanish": "muy rápido.",
+          "english": "very fast."
+        }
+      ]
     },
     {
       "id": "37-s2",
@@ -112,7 +182,17 @@
         "instala": "installs",
         "software": "software",
         "teléfono": "phone"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El técnico instala el software",
+          "english": "The technician installs the software"
+        },
+        {
+          "spanish": "en su teléfono.",
+          "english": "on their phone."
+        }
+      ]
     },
     {
       "id": "37-s16",
@@ -134,7 +214,17 @@
         "instala": "installs",
         "aplicación": "application",
         "ordenador": "computer"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El programador instala la aplicación",
+          "english": "The programmer installs the application"
+        },
+        {
+          "spanish": "en el ordenador.",
+          "english": "on the computer."
+        }
+      ]
     },
     {
       "id": "37-s20",
@@ -145,7 +235,17 @@
         "descarga": "downloads",
         "antivirus": "antivirus",
         "rápido": "fast"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La chica descarga el antivirus",
+          "english": "The girl downloads the antivirus"
+        },
+        {
+          "spanish": "muy rápido.",
+          "english": "very fast."
+        }
+      ]
     },
     {
       "id": "37-s9",
@@ -167,7 +267,17 @@
         "compra": "buys",
         "aplicación": "application",
         "rápido": "fast"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi amigo compra la aplicación",
+          "english": "My friend buys the application"
+        },
+        {
+          "spanish": "muy rápido.",
+          "english": "very fast."
+        }
+      ]
     },
     {
       "id": "37-s28",
@@ -178,7 +288,17 @@
         "compra": "buys",
         "software": "software",
         "teléfono": "phone"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El usuario compra el software",
+          "english": "The user buys the software"
+        },
+        {
+          "spanish": "en su teléfono.",
+          "english": "on their phone."
+        }
+      ]
     },
     {
       "id": "37-s32",
@@ -200,7 +320,17 @@
         "compra": "buys",
         "aplicación": "application",
         "ordenador": "computer"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El programador compra la aplicación",
+          "english": "The programmer buys the application"
+        },
+        {
+          "spanish": "en el ordenador.",
+          "english": "on the computer."
+        }
+      ]
     },
     {
       "id": "37-s34",
@@ -211,7 +341,17 @@
         "compra": "buys",
         "software": "software",
         "rápido": "fast"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi amigo compra el software",
+          "english": "My friend buys the software"
+        },
+        {
+          "spanish": "muy rápido.",
+          "english": "very fast."
+        }
+      ]
     },
     {
       "id": "37-s37",
@@ -233,7 +373,17 @@
         "borra": "deletes",
         "software": "software",
         "rápido": "fast"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La chica borra el software",
+          "english": "The girl deletes the software"
+        },
+        {
+          "spanish": "muy rápido.",
+          "english": "very fast."
+        }
+      ]
     },
     {
       "id": "37-s43",
@@ -244,7 +394,17 @@
         "borra": "deletes",
         "archivo": "file",
         "ordenador": "computer"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi amigo borra el archivo",
+          "english": "My friend deletes the file"
+        },
+        {
+          "spanish": "en el ordenador.",
+          "english": "on the computer."
+        }
+      ]
     },
     {
       "id": "37-s44",
@@ -266,7 +426,17 @@
         "borra": "deletes",
         "antivirus": "antivirus",
         "wifi": "wifi"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi amigo borra el antivirus",
+          "english": "My friend deletes the antivirus"
+        },
+        {
+          "spanish": "con wifi.",
+          "english": "with wifi."
+        }
+      ]
     },
     {
       "id": "m37-context-1",
@@ -280,7 +450,17 @@
         "correo": "email",
         "enviarme": "to send me",
         "electrónico": "electronic"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Puedes enviarme el archivo",
+          "english": "Can you send me the file"
+        },
+        {
+          "spanish": "por correo electrónico?",
+          "english": "by email?"
+        }
+      ]
     },
     {
       "id": "m37-context-2",
@@ -308,7 +488,17 @@
         "hoy": "today",
         "conexión": "connection",
         "funciona": "works"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La conexión a internet",
+          "english": "The internet connection"
+        },
+        {
+          "spanish": "no funciona hoy.",
+          "english": "is not working today."
+        }
+      ]
     },
     {
       "id": "m37-context-4",
@@ -323,7 +513,17 @@
         "descargar": "to download",
         "comprueba": "check",
         "página": "page"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Antes de descargar el programa,",
+          "english": "Before downloading the program,"
+        },
+        {
+          "spanish": "comprueba la página.",
+          "english": "check the page."
+        }
+      ]
     },
     {
       "id": "m37-context-5",
@@ -352,7 +552,17 @@
         "software": "software",
         "reinició": "restarted",
         "actualizó": "updated"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El técnico reinició el ordenador",
+          "english": "The technician restarted the computer"
+        },
+        {
+          "spanish": "y actualizó el software.",
+          "english": "and updated the software."
+        }
+      ]
     }
   ],
   "vocabulary": {

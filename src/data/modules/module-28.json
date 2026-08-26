@@ -13,7 +13,17 @@
         "rico": "rich",
         "viajaría": "would travel",
         "mundo": "world"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si yo fuera rico,",
+          "english": "If I were rich,"
+        },
+        {
+          "spanish": "viajaría por todo el mundo.",
+          "english": "I would travel all over the world."
+        }
+      ]
     },
     {
       "id": "m28-s2",
@@ -23,7 +33,17 @@
         "gustaría": "would like",
         "vinieran": "came (subjunctive)",
         "fiesta": "party"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me gustaría",
+          "english": "I would like"
+        },
+        {
+          "spanish": "que vinieran a la fiesta.",
+          "english": "them to come to the party."
+        }
+      ]
     },
     {
       "id": "m28-s3",
@@ -45,7 +65,17 @@
         "tiempo": "time",
         "aprendería": "would learn",
         "idioma": "language"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si tuviera más tiempo,",
+          "english": "If I had more time,"
+        },
+        {
+          "spanish": "aprendería otro idioma.",
+          "english": "I would learn another language."
+        }
+      ]
     },
     {
       "id": "m28-s5",
@@ -56,7 +86,17 @@
         "pudieras": "could (subjunctive)",
         "venir": "to come",
         "boda": "wedding"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Fue una pena",
+          "english": "It was a shame"
+        },
+        {
+          "spanish": "que no pudieras venir a la boda.",
+          "english": "that you couldn't come to the wedding."
+        }
+      ]
     },
     {
       "id": "m28-s6",
@@ -67,7 +107,17 @@
         "coche": "car",
         "costara": "cost (subjunctive)",
         "dinero": "money"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Buscaba un coche",
+          "english": "I was looking for a car"
+        },
+        {
+          "spanish": "que no costara tanto dinero.",
+          "english": "that didn't cost so much money."
+        }
+      ]
     },
     {
       "id": "m28-s7",
@@ -88,7 +138,17 @@
         "hablara": "spoke (subjunctive)",
         "serio": "serious",
         "mudarse": "moving"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Dudaba",
+          "english": "I doubted"
+        },
+        {
+          "spanish": "que hablara en serio sobre mudarse.",
+          "english": "that he/she was serious about moving."
+        }
+      ]
     },
     {
       "id": "m28-s9",
@@ -100,7 +160,17 @@
         "dar": "to give / take",
         "paseo": "walk",
         "parque": "park"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sugerí que saliéramos a dar un paseo",
+          "english": "I suggested that we go out for a walk"
+        },
+        {
+          "spanish": "por el parque.",
+          "english": "in the park."
+        }
+      ]
     },
     {
       "id": "m28-s10",
@@ -111,7 +181,17 @@
         "hiciera": "made / did (subjunctive)",
         "sol": "sun",
         "fin de semana": "weekend"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ojalá hiciera sol",
+          "english": "I wish it were sunny"
+        },
+        {
+          "spanish": "este fin de semana.",
+          "english": "this weekend."
+        }
+      ]
     },
     {
       "id": "m28-curated-11",
@@ -135,7 +215,17 @@
         "estudiaras": "studied (imp subj)",
         "cada": "each",
         "día": "day"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Era importante que estudiaras",
+          "english": "It was important that you study"
+        },
+        {
+          "spanish": "cada día.",
+          "english": "every day."
+        }
+      ]
     },
     {
       "id": "m28-curated-13",
@@ -159,7 +249,17 @@
         "la": "the / it (fem)",
         "respuesta": "answer",
         "sorprendió": "surprised"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me sorprendió",
+          "english": "I was surprised"
+        },
+        {
+          "spanish": "que supieras la respuesta.",
+          "english": "that you knew the answer."
+        }
+      ]
     },
     {
       "id": "m28-curated-15",
@@ -184,7 +284,17 @@
         "hablara": "spoke (subjunctive)",
         "español": "Spanish",
         "Buscábamos": "we were looking for"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Buscábamos a alguien que hablara",
+          "english": "We were looking for someone who spoke"
+        },
+        {
+          "spanish": "español.",
+          "english": "Spanish."
+        }
+      ]
     },
     {
       "id": "m28-curated-17",
@@ -198,7 +308,17 @@
         "la": "the / it (fem)",
         "casa": "house",
         "limpiáramos": "we cleaned (past subjunctive)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi madre pidió",
+          "english": "My mother asked"
+        },
+        {
+          "spanish": "que limpiáramos la casa.",
+          "english": "us to clean the house."
+        }
+      ]
     },
     {
       "id": "m28-curated-18",
@@ -237,7 +357,17 @@
         "libro": "book",
         "recomendó": "recommended",
         "leyéramos": "we read (past subjunctive)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El profesor recomendó",
+          "english": "The teacher recommended"
+        },
+        {
+          "spanish": "que leyéramos el libro.",
+          "english": "that we read the book."
+        }
+      ]
     },
     {
       "id": "m28-curated-21",
@@ -249,7 +379,17 @@
         "pudieras": "could (subjunctive)",
         "venir": "to come",
         "alegró": "made happy"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me alegró que pudieras",
+          "english": "I was glad that you could"
+        },
+        {
+          "spanish": "venir.",
+          "english": "come."
+        }
+      ]
     },
     {
       "id": "m28-curated-22",

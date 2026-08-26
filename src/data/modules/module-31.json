@@ -15,7 +15,17 @@
         "dos": "two",
         "personas": "people",
         "noche": "night"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero reservar una mesa para dos personas",
+          "english": "I want to reserve a table for two people"
+        },
+        {
+          "spanish": "para esta noche.",
+          "english": "for tonight."
+        }
+      ]
     },
     {
       "id": "m31-s2",
@@ -28,7 +38,17 @@
         "vinos": "wines",
         "Por": "for",
         "favor": "favor"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Puedo ver la carta de vinos,",
+          "english": "Can I see the wine list,"
+        },
+        {
+          "spanish": "por favor?",
+          "english": "please?"
+        }
+      ]
     },
     {
       "id": "m31-s3",
@@ -39,7 +59,17 @@
         "pescado": "fish",
         "fresco": "fresh",
         "verduras": "vegetables"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El plato del día es pescado fresco",
+          "english": "The dish of the day is fresh fish"
+        },
+        {
+          "spanish": "con verduras al vapor.",
+          "english": "with steamed vegetables."
+        }
+      ]
     },
     {
       "id": "m31-s4",
@@ -50,7 +80,17 @@
         "nueces": "walnuts/nuts",
         "postre": "dessert",
         "lleva": "contains/carries"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Soy alérgico a las nueces,",
+          "english": "I am allergic to nuts,"
+        },
+        {
+          "spanish": "¿este postre lleva frutos secos?",
+          "english": "does this dessert contain nuts?"
+        }
+      ]
     },
     {
       "id": "m31-s5",
@@ -71,7 +111,17 @@
         "sopa": "soup",
         "salada": "salty",
         "gusto": "taste"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La sopa está un poco salada",
+          "english": "The soup is a little salty"
+        },
+        {
+          "spanish": "para mi gusto.",
+          "english": "for my taste."
+        }
+      ]
     },
     {
       "id": "m31-s7",
@@ -103,7 +153,17 @@
         "comprar": "to buy",
         "aceite": "oil",
         "ajo": "garlic"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Necesitamos comprar más aceite de oliva",
+          "english": "We need to buy more olive oil"
+        },
+        {
+          "spanish": "y ajo.",
+          "english": "and garlic."
+        }
+      ]
     },
     {
       "id": "m31-s10",
@@ -112,7 +172,13 @@
       "wordMeanings": {
         "Que": "may it...",
         "aproveche": "be useful/benefit (subjunctive)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¡Que aproveche!",
+          "english": "Enjoy your meal!"
+        }
+      ]
     },
     {
       "id": "m31-curated-11",
@@ -152,7 +218,17 @@
         "mesa": "table",
         "camarera": "server",
         "trae": "brings"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La camarera trae agua",
+          "english": "The server brings water"
+        },
+        {
+          "spanish": "para la mesa.",
+          "english": "to the table."
+        }
+      ]
     },
     {
       "id": "m31-curated-14",
@@ -166,7 +242,17 @@
         "y": "and",
         "muy": "very",
         "rico": "rich"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Este pescado está fresco",
+          "english": "This fish is fresh"
+        },
+        {
+          "spanish": "y muy rico.",
+          "english": "and very tasty."
+        }
+      ]
     },
     {
       "id": "m31-curated-15",
@@ -192,7 +278,17 @@
         "la": "the / it (fem)",
         "cuenta": "bill/check",
         "pedimos": "we ask for"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Después de cenar,",
+          "english": "After dinner,"
+        },
+        {
+          "spanish": "pedimos la cuenta.",
+          "english": "we ask for the bill."
+        }
+      ]
     }
   ],
   "vocabulary": {

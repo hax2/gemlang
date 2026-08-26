@@ -49,7 +49,17 @@
         "un": "a",
         "mensaje": "message"
       },
-      "id": "review-4-5-6-from-m6-s5"
+      "id": "review-4-5-6-from-m6-s5",
+      "translationChunks": [
+        {
+          "spanish": "¡Mira,",
+          "english": "Look,"
+        },
+        {
+          "spanish": "he recibido un mensaje!",
+          "english": "I received a message!"
+        }
+      ]
     },
     {
       "id": "review-4-5-6-from-m4-s5",
@@ -183,7 +193,13 @@
       "wordMeanings": {
         "Buscas": "you look for",
         "algo": "something"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Buscas algo?",
+          "english": "Are you looking for something?"
+        }
+      ]
     },
     {
       "id": "review-4-5-6-spiral-16",

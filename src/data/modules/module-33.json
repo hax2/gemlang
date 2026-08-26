@@ -13,7 +13,17 @@
         "lleno": "full",
         "árboles": "trees",
         "salvajes": "wild"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El bosque está lleno de árboles antiguos",
+          "english": "The forest is full of ancient trees"
+        },
+        {
+          "spanish": "y animales salvajes.",
+          "english": "and wild animals."
+        }
+      ]
     },
     {
       "id": "m33-s2",
@@ -23,7 +33,17 @@
         "crucial": "crucial",
         "proteger": "to protect",
         "medio ambiente": "environment"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es crucial proteger el medio ambiente",
+          "english": "It is crucial to protect the environment"
+        },
+        {
+          "spanish": "para las generaciones futuras.",
+          "english": "for future generations."
+        }
+      ]
     },
     {
       "id": "m33-s3",
@@ -33,7 +53,17 @@
         "soleado": "sunny",
         "perfecto": "perfect",
         "playa": "beach"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hoy hace un día soleado,",
+          "english": "Today is a sunny day,"
+        },
+        {
+          "spanish": "perfecto para ir a la playa.",
+          "english": "perfect for going to the beach."
+        }
+      ]
     },
     {
       "id": "m33-s4",
@@ -54,7 +84,17 @@
         "río": "river",
         "fluye": "flows",
         "lluvias": "rains"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El río fluye rápidamente",
+          "english": "The river flows quickly"
+        },
+        {
+          "spanish": "después de las lluvias.",
+          "english": "after the rains."
+        }
+      ]
     },
     {
       "id": "m33-s6",
@@ -75,7 +115,17 @@
         "cubiertas": "covered",
         "nieve": "snow",
         "invierno": "winter"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Las montañas están cubiertas de nieve",
+          "english": "The mountains are covered with snow"
+        },
+        {
+          "spanish": "en invierno.",
+          "english": "in winter."
+        }
+      ]
     },
     {
       "id": "m33-s8",
@@ -96,7 +146,17 @@
         "parque": "park",
         "escuchar": "to listen",
         "pájaros": "birds"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me gusta caminar por el parque",
+          "english": "I like walking through the park"
+        },
+        {
+          "spanish": "y escuchar los pájaros.",
+          "english": "and listening to the birds."
+        }
+      ]
     },
     {
       "id": "m33-s10",
@@ -106,7 +166,17 @@
         "desierto": "desert",
         "seco": "dry",
         "poca": "little"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El desierto es un lugar seco",
+          "english": "The desert is a dry place"
+        },
+        {
+          "spanish": "con poca vegetación.",
+          "english": "with little vegetation."
+        }
+      ]
     },
     {
       "id": "m33-curated-11",
@@ -135,7 +205,17 @@
         "mar": "sea",
         "usar": "to use",
         "plástico": "plastic"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Debemos usar menos plástico",
+          "english": "We should use less plastic"
+        },
+        {
+          "spanish": "para proteger el mar.",
+          "english": "to protect the sea."
+        }
+      ]
     },
     {
       "id": "m33-curated-13",
@@ -150,7 +230,17 @@
         "no": "no / not",
         "llueve": "rains",
         "casi": "almost / hardly"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "En verano hace calor",
+          "english": "In summer it is hot"
+        },
+        {
+          "spanish": "y casi no llueve.",
+          "english": "and it hardly rains."
+        }
+      ]
     },
     {
       "id": "m33-curated-14",
@@ -178,7 +268,17 @@
         "agua": "water",
         "contaminación": "pollution",
         "afecta": "affects"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La contaminación afecta al aire",
+          "english": "Pollution affects the air"
+        },
+        {
+          "spanish": "y al agua.",
+          "english": "and water."
+        }
+      ]
     },
     {
       "id": "m33-curated-16",
@@ -193,7 +293,17 @@
         "planeta": "planet",
         "tendremos": "we will have",
         "futuro": "future"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si cuidamos el planeta,",
+          "english": "If we care for the planet,"
+        },
+        {
+          "spanish": "tendremos un futuro mejor.",
+          "english": "we will have a better future."
+        }
+      ]
     }
   ],
   "vocabulary": {

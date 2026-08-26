@@ -14,24 +14,15 @@ import useSubscription from './hooks/useSubscription';
 import { FREE_ACCESS_MODE, isModuleFree } from './config/monetization';
 import modulesManifest from './data/modules-manifest.json';
 import { getPuenteSentenceCount, integratePuenteSentences } from './data/puenteIntegration';
+import { withPracticeCounts } from './utils/moduleCounts';
 import './App.css';
 
 const moduleLoaders = import.meta.glob('./data/modules/*.json');
 const GUEST_MODE_KEY = 'gemlang-guest-mode';
-const SPECIAL_TESTING_PROMPT_COUNTS = {
-  'module-ser-vs-estar': 20,
-  'module-ser-vs-estar-2': 20,
-  'module-ser-vs-estar-3': 10,
-};
-const courseModules = modulesManifest.map((module) => {
-  const puenteSentenceCount = getPuenteSentenceCount(module.id);
-  return {
-    ...module,
-    puenteSentenceCount,
-    testingSentenceCount:
-      (SPECIAL_TESTING_PROMPT_COUNTS[module.id] ?? module.sentenceCount) + puenteSentenceCount,
-  };
-});
+const courseModules = modulesManifest.map((module) => withPracticeCounts(
+  module,
+  getPuenteSentenceCount(module.id)
+));
 
 const loadGuestMode = () => {
   try {

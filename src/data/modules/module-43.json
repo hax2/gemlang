@@ -24,7 +24,21 @@
         "muestra": "shows",
         "nervioso": "nervous",
         "momento": "moment"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi amigo",
+          "english": "My friend"
+        },
+        {
+          "spanish": "se muestra algo nervioso",
+          "english": "comes across as somewhat nervous"
+        },
+        {
+          "spanish": "en este momento.",
+          "english": "at this moment."
+        }
+      ]
     },
     {
       "id": "43-s2",
@@ -58,7 +72,21 @@
         "está": "is",
         "asustado": "scared",
         "tiempo": "time"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El paciente",
+          "english": "The patient"
+        },
+        {
+          "spanish": "está un poco asustado",
+          "english": "is a little scared"
+        },
+        {
+          "spanish": "todo el tiempo.",
+          "english": "all the time."
+        }
+      ]
     },
     {
       "id": "43-s34",
@@ -91,7 +119,21 @@
         "muestra": "shows",
         "noticia": "news",
         "asustada": "scared"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La abuela",
+          "english": "The grandmother"
+        },
+        {
+          "spanish": "se muestra un poco asustada",
+          "english": "comes across as a little scared"
+        },
+        {
+          "spanish": "después de la noticia.",
+          "english": "after the news."
+        }
+      ]
     },
     {
       "id": "43-s29",
@@ -124,7 +166,17 @@
         "estoy": "I am",
         "de": "of",
         "bajón": "down / slump"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hoy",
+          "english": "Today"
+        },
+        {
+          "spanish": "estoy de bajón.",
+          "english": "I'm feeling down."
+        }
+      ]
     },
     {
       "id": "43-s26",
@@ -157,7 +209,21 @@
         "parece": "seems",
         "asustado": "scared",
         "momento": "moment"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi amigo",
+          "english": "My friend"
+        },
+        {
+          "spanish": "parece un poco asustado",
+          "english": "seems a little scared"
+        },
+        {
+          "spanish": "en este momento.",
+          "english": "at this moment."
+        }
+      ]
     },
     {
       "id": "43-s5",
@@ -190,7 +256,21 @@
         "muestra": "shows",
         "asustado": "scared",
         "momento": "moment"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El jugador",
+          "english": "The player"
+        },
+        {
+          "spanish": "se muestra un poco asustado",
+          "english": "comes across as a little scared"
+        },
+        {
+          "spanish": "en este momento.",
+          "english": "at this moment."
+        }
+      ]
     },
     {
       "id": "43-s18",
@@ -223,7 +303,21 @@
         "siente": "feels",
         "nervioso": "nervous",
         "momento": "moment"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi amigo",
+          "english": "My friend"
+        },
+        {
+          "spanish": "se siente algo nervioso",
+          "english": "feels somewhat nervous"
+        },
+        {
+          "spanish": "en este momento.",
+          "english": "at this moment."
+        }
+      ]
     },
     {
       "id": "43-s8",
@@ -256,7 +350,21 @@
         "muestra": "shows",
         "triste": "sad",
         "razón": "reason"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El paciente",
+          "english": "The patient"
+        },
+        {
+          "spanish": "se muestra bastante triste",
+          "english": "comes across as quite sad"
+        },
+        {
+          "spanish": "sin razón aparente.",
+          "english": "for no apparent reason."
+        }
+      ]
     },
     {
       "id": "43-s35",
@@ -293,7 +401,17 @@
         "estés": "are (subj)",
         "contenta": "happy",
         "alegra": "makes happy"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me alegra",
+          "english": "I am glad"
+        },
+        {
+          "spanish": "que estés contenta.",
+          "english": "that you are happy."
+        }
+      ]
     },
     {
       "id": "m43-context-3",
@@ -334,7 +452,17 @@
         "estoy": "I am",
         "aquí": "here",
         "contigo": "with you"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No tengas miedo;",
+          "english": "Do not be afraid;"
+        },
+        {
+          "spanish": "estoy aquí contigo.",
+          "english": "I am here with you."
+        }
+      ]
     },
     {
       "id": "m43-context-6",

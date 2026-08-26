@@ -13,7 +13,17 @@
         "cuyo": "whose",
         "nombre": "name",
         "acordarme": "remember"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "En un lugar de la Mancha,",
+          "english": "In a place in La Mancha,"
+        },
+        {
+          "spanish": "de cuyo nombre no quiero acordarme...",
+          "english": "whose name I do not want to remember..."
+        }
+      ]
     },
     {
       "id": "m26-s2",
@@ -24,7 +34,21 @@
         "vivía": "lived",
         "hidalgo": "nobleman",
         "lanza": "lance"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No ha mucho tiempo",
+          "english": "Not long ago"
+        },
+        {
+          "spanish": "que vivía un hidalgo",
+          "english": "there lived a nobleman"
+        },
+        {
+          "spanish": "de los de lanza en astillero.",
+          "english": "of the sort who kept a lance in a rack."
+        }
+      ]
     },
     {
       "id": "m26-s3",
@@ -46,7 +70,17 @@
         "leer": "reading",
         "secó": "dried",
         "cerebro": "brain"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Del poco dormir y del mucho leer,",
+          "english": "From little sleep and much reading,"
+        },
+        {
+          "spanish": "se le secó el cerebro.",
+          "english": "his brain dried up."
+        }
+      ]
     },
     {
       "id": "m26-s5",
@@ -67,7 +101,17 @@
         "limpió": "cleaned",
         "armas": "weapons",
         "bisabuelos": "great-grandparents"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Limpió unas armas",
+          "english": "He cleaned some weapons"
+        },
+        {
+          "spanish": "que habían sido de sus bisabuelos.",
+          "english": "that had belonged to his great-grandparents."
+        }
+      ]
     },
     {
       "id": "m26-s7",
@@ -77,7 +121,17 @@
         "visitar": "to visit",
         "rocín": "nag",
         "puso": "put/named"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Fue a visitar a su rocín,",
+          "english": "He went to visit his nag,"
+        },
+        {
+          "spanish": "al que puso el nombre de Rocinante.",
+          "english": "which he named Rocinante."
+        }
+      ]
     },
     {
       "id": "m26-s8",
@@ -98,7 +152,17 @@
         "eligió": "chose",
         "moza": "girl",
         "labradora": "farm girl"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Eligió a una moza labradora",
+          "english": "He chose a farm girl"
+        },
+        {
+          "spanish": "llamada Aldonza Lorenzo.",
+          "english": "named Aldonza Lorenzo."
+        }
+      ]
     },
     {
       "id": "m26-s10",
@@ -107,7 +171,17 @@
       "wordMeanings": {
         "dio": "gave",
         "nombre": "name"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "A ella le dio",
+          "english": "To her he gave"
+        },
+        {
+          "spanish": "el nombre de Dulcinea del Toboso.",
+          "english": "the name Dulcinea del Toboso."
+        }
+      ]
     }
   ],
   "vocabulary": {

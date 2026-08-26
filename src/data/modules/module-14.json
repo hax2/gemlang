@@ -14,7 +14,17 @@
         "libro": "book",
         "a": "to",
         "Ana": "Ana"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Doy el libro",
+          "english": "I give the book"
+        },
+        {
+          "spanish": "a Ana.",
+          "english": "to Ana."
+        }
+      ]
     },
     {
       "id": "m14-s2",
@@ -37,7 +47,17 @@
         "carta": "letter",
         "a": "to",
         "Luis": "Luis"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Doy la carta",
+          "english": "I give the letter"
+        },
+        {
+          "spanish": "a Luis.",
+          "english": "to Luis."
+        }
+      ]
     },
     {
       "id": "m14-s4",
@@ -58,7 +78,17 @@
         "Escribo": "I write",
         "a": "to",
         "Marta": "Marta"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Escribo",
+          "english": "I write"
+        },
+        {
+          "spanish": "a Marta.",
+          "english": "to Marta."
+        }
+      ]
     },
     {
       "id": "m14-s6",
@@ -67,7 +97,13 @@
       "wordMeanings": {
         "Le": "to him / her",
         "escribo": "I write"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Le escribo.",
+          "english": "I write to her."
+        }
+      ]
     },
     {
       "id": "m14-s7",
@@ -86,7 +122,13 @@
       "wordMeanings": {
         "Le": "to him / her",
         "llamo": "I call"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Le llamo.",
+          "english": "I call him."
+        }
+      ]
     },
     {
       "id": "m14-s9",
@@ -99,7 +141,21 @@
         "a": "to",
         "tu": "your",
         "hermano": "brother"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Le das",
+          "english": "Do you give"
+        },
+        {
+          "spanish": "dinero",
+          "english": "money"
+        },
+        {
+          "spanish": "a tu hermano?",
+          "english": "to your brother?"
+        }
+      ]
     },
     {
       "id": "m14-s10",
@@ -110,7 +166,17 @@
         "le": "to him / her",
         "doy": "I give",
         "dinero": "money"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "le doy dinero.",
+          "english": "I give him money."
+        }
+      ]
     },
     {
       "id": "m14-s11",
@@ -124,7 +190,21 @@
         "a": "to",
         "tu": "your",
         "amiga": "friend (female)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Le das",
+          "english": "Do you give"
+        },
+        {
+          "spanish": "el regalo",
+          "english": "the gift"
+        },
+        {
+          "spanish": "a tu amiga?",
+          "english": "to your friend?"
+        }
+      ]
     },
     {
       "id": "m14-s12",
@@ -137,7 +217,17 @@
         "doy": "I give",
         "el": "the",
         "regalo": "gift"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "no le doy el regalo.",
+          "english": "I don’t give her the gift."
+        }
+      ]
     },
     {
       "id": "m14-s13",
@@ -149,7 +239,17 @@
         "pan": "bread",
         "a": "to",
         "ellos": "they / them"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Damos el pan",
+          "english": "We give the bread"
+        },
+        {
+          "spanish": "a ellos.",
+          "english": "to them."
+        }
+      ]
     },
     {
       "id": "m14-s14",
@@ -172,7 +272,17 @@
         "sopa": "soup",
         "a": "to",
         "ustedes": "you (plural)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Damos la sopa",
+          "english": "We give the soup"
+        },
+        {
+          "spanish": "a ustedes.",
+          "english": "to you (pl.)."
+        }
+      ]
     },
     {
       "id": "m14-s16",
@@ -183,7 +293,17 @@
         "damos": "we give",
         "la": "the / it (fem)",
         "sopa": "soup"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Les damos",
+          "english": "We give you (pl.)"
+        },
+        {
+          "spanish": "la sopa.",
+          "english": "the soup."
+        }
+      ]
     },
     {
       "id": "m14-s17",
@@ -195,7 +315,17 @@
         "escribí": "I wrote",
         "a": "to",
         "Ana": "Ana"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "le escribí a Ana.",
+          "english": "I wrote to Ana."
+        }
+      ]
     },
     {
       "id": "m14-s18",
@@ -207,7 +337,17 @@
         "llamé": "I called",
         "a": "to",
         "Luis": "Luis"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "le llamé a Luis.",
+          "english": "I called Luis."
+        }
+      ]
     },
     {
       "id": "m14-s19",
@@ -220,7 +360,17 @@
         "escrito": "written",
         "a": "to",
         "Marta": "Marta"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hoy",
+          "english": "Today"
+        },
+        {
+          "spanish": "le he escrito a Marta.",
+          "english": "I’ve written to Marta."
+        }
+      ]
     },
     {
       "id": "m14-s20",
@@ -233,7 +383,17 @@
         "llamado": "called",
         "a": "to",
         "Carlos": "Carlos"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hoy",
+          "english": "Today"
+        },
+        {
+          "spanish": "le he llamado a Carlos.",
+          "english": "I’ve called Carlos."
+        }
+      ]
     },
     {
       "id": "m14-s21",
@@ -275,7 +435,17 @@
         "Le": "to him / her",
         "digo:": "I say:",
         "'Hola'": "hello"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Le digo:",
+          "english": "I tell him/her:"
+        },
+        {
+          "spanish": "'Hola'.",
+          "english": "'Hi'."
+        }
+      ]
     },
     {
       "id": "m14-s25",
@@ -313,7 +483,17 @@
         "el": "the",
         "libro": "book",
         "ahora": "now"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Le doy el libro",
+          "english": "I give him/her the book"
+        },
+        {
+          "spanish": "ahora.",
+          "english": "now."
+        }
+      ]
     },
     {
       "id": "m14-s28",
@@ -338,7 +518,17 @@
         "a": "to",
         "tu": "your",
         "amigo": "friend (male)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Le hablas",
+          "english": "Do you talk to"
+        },
+        {
+          "spanish": "a tu amigo?",
+          "english": "your friend?"
+        }
+      ]
     },
     {
       "id": "m14-s30",
@@ -348,7 +538,17 @@
         "Sí": "yes",
         "le": "to him / her",
         "hablo": "I speak"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "le hablo.",
+          "english": "I talk to him/her."
+        }
+      ]
     },
     {
       "spanish": "Le echo una mano.",

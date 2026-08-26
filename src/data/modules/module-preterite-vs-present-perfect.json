@@ -14,7 +14,17 @@
         "comido": "eaten",
         "muy": "very",
         "tarde": "late"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hoy",
+          "english": "Today"
+        },
+        {
+          "spanish": "he comido muy tarde.",
+          "english": "I have eaten very late."
+        }
+      ]
     },
     {
       "id": "mpvspp-s2",
@@ -25,7 +35,17 @@
         "comí": "I ate",
         "muy": "very",
         "pronto": "early / soon"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "comí muy pronto.",
+          "english": "I ate very early."
+        }
+      ]
     },
     {
       "id": "mpvspp-s3",
@@ -49,7 +69,17 @@
         "pasada": "past / last",
         "trabajamos": "we worked",
         "poco": "little"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La semana pasada",
+          "english": "Last week"
+        },
+        {
+          "spanish": "trabajamos poco.",
+          "english": "we worked a little."
+        }
+      ]
     },
     {
       "id": "mpvspp-s5",
@@ -87,7 +117,17 @@
         "probado": "tried / tasted",
         "este": "this (masc)",
         "plato": "dish / plate"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nunca",
+          "english": "I have never"
+        },
+        {
+          "spanish": "he probado este plato.",
+          "english": "tried this dish."
+        }
+      ]
     },
     {
       "id": "mpvspp-s8",
@@ -101,7 +141,17 @@
         "a": "to",
         "la": "the",
         "oficina": "office"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Él",
+          "english": "He"
+        },
+        {
+          "spanish": "ya ha llegado a la oficina.",
+          "english": "has already arrived at the office."
+        }
+      ]
     },
     {
       "id": "mpvspp-s9",
@@ -126,7 +176,17 @@
         "gustado": "pleased / liked",
         "esta": "this (fem)",
         "ciudad": "city"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Siempre",
+          "english": "I have always"
+        },
+        {
+          "spanish": "me ha gustado esta ciudad.",
+          "english": "liked this city."
+        }
+      ]
     },
     {
       "id": "mpvspp-s11",
@@ -161,7 +221,17 @@
         "Has": "you have",
         "comido": "eaten",
         "ya": "already"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Has",
+          "english": "Have you"
+        },
+        {
+          "spanish": "comido ya?",
+          "english": "eaten yet?"
+        }
+      ]
     },
     {
       "id": "mpvspp-s14",
@@ -172,7 +242,17 @@
         "hace": "ago",
         "media": "half",
         "hora": "hour"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Comí",
+          "english": "I ate"
+        },
+        {
+          "spanish": "hace media hora.",
+          "english": "half an hour ago."
+        }
+      ]
     },
     {
       "id": "mpvspp-s15",
@@ -197,7 +277,17 @@
         "pasado": "last/past",
         "gastamos": "we spent",
         "todo": "everything"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El mes pasado",
+          "english": "Last month"
+        },
+        {
+          "spanish": "gastamos todo.",
+          "english": "we spent everything."
+        }
+      ]
     },
     {
       "id": "mpvspp-s17",
@@ -211,7 +301,17 @@
         "a": "to",
         "su": "his/her",
         "jefa": "boss (female)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ha escrito",
+          "english": "He has written"
+        },
+        {
+          "spanish": "el correo a su jefa.",
+          "english": "the email to his boss."
+        }
+      ]
     },
     {
       "id": "mpvspp-s18",
@@ -238,7 +338,17 @@
         "visto": "seen",
         "esa": "that",
         "película": "movie/film"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Todavía no",
+          "english": "I still haven't"
+        },
+        {
+          "spanish": "he visto esa película.",
+          "english": "seen that movie."
+        }
+      ]
     },
     {
       "id": "mpvspp-s20",
@@ -250,7 +360,17 @@
         "película": "movie/film",
         "el": "the",
         "sábado": "Saturday"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Vi esa película",
+          "english": "I saw that movie"
+        },
+        {
+          "spanish": "el sábado.",
+          "english": "on Saturday."
+        }
+      ]
     },
     {
       "id": "mpvspp-s21",
@@ -272,7 +392,17 @@
         "Volviste": "you returned",
         "tarde": "late",
         "anoche": "last night"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Volviste",
+          "english": "You returned"
+        },
+        {
+          "spanish": "tarde anoche.",
+          "english": "late last night."
+        }
+      ]
     },
     {
       "id": "mpvspp-s23",
@@ -285,7 +415,17 @@
         "vivido": "lived",
         "aquí": "here",
         "siempre": "always"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi amigo",
+          "english": "My friend"
+        },
+        {
+          "spanish": "ha vivido aquí siempre.",
+          "english": "has always lived here."
+        }
+      ]
     },
     {
       "id": "mpvspp-s24",
@@ -308,7 +448,17 @@
         "casados": "married",
         "diez": "ten",
         "años": "years"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hemos estado",
+          "english": "We have been"
+        },
+        {
+          "spanish": "casados diez años.",
+          "english": "married for ten years."
+        }
+      ]
     }
   ],
   "grammarExplanation": "Use Present Perfect (he comido) for actions that happened in a time period that isn't finished yet (hoy, esta semana, este año) or for life experiences (alguna vez, nunca). Use Preterite (comí) for actions in a completely finished time period (ayer, la semana pasada, en 2018). *Note: In Latin America, the Preterite is often used for both cases.*",

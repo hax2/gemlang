@@ -24,7 +24,21 @@
         "estudia": "studies",
         "pintura": "painting",
         "pasión": "passion"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El artista",
+          "english": "The artist"
+        },
+        {
+          "spanish": "estudia la pintura",
+          "english": "studies painting"
+        },
+        {
+          "spanish": "con mucha pasión.",
+          "english": "with a lot of passion."
+        }
+      ]
     },
     {
       "id": "42-s27",
@@ -57,7 +71,21 @@
         "estudia": "studies",
         "ajedrez": "chess",
         "tiempo libre": "free time"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La niña",
+          "english": "The girl"
+        },
+        {
+          "spanish": "estudia el ajedrez",
+          "english": "studies chess"
+        },
+        {
+          "spanish": "en su tiempo libre.",
+          "english": "in her free time."
+        }
+      ]
     },
     {
       "id": "42-s33",
@@ -90,7 +118,21 @@
         "disfruta": "enjoys",
         "pintura": "painting",
         "tiempo libre": "free time"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El estudiante",
+          "english": "The student"
+        },
+        {
+          "spanish": "disfruta la pintura",
+          "english": "enjoys painting"
+        },
+        {
+          "spanish": "en su tiempo libre.",
+          "english": "in his free time."
+        }
+      ]
     },
     {
       "id": "42-s15",
@@ -123,7 +165,21 @@
         "aprende": "learns",
         "pintura": "painting",
         "tiempo libre": "free time"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi amigo",
+          "english": "My friend"
+        },
+        {
+          "spanish": "aprende la pintura",
+          "english": "learns painting"
+        },
+        {
+          "spanish": "en su tiempo libre.",
+          "english": "in his free time."
+        }
+      ]
     },
     {
       "id": "42-s43",
@@ -156,7 +212,21 @@
         "practica": "practices",
         "ajedrez": "chess",
         "tiempo libre": "free time"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La niña",
+          "english": "The girl"
+        },
+        {
+          "spanish": "practica el ajedrez",
+          "english": "practices chess"
+        },
+        {
+          "spanish": "en su tiempo libre.",
+          "english": "in her free time."
+        }
+      ]
     },
     {
       "id": "42-s32",
@@ -189,7 +259,21 @@
         "estudia": "studies",
         "ajedrez": "chess",
         "tiempo libre": "free time"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi amigo",
+          "english": "My friend"
+        },
+        {
+          "spanish": "estudia el ajedrez",
+          "english": "studies chess"
+        },
+        {
+          "spanish": "en su tiempo libre.",
+          "english": "in his free time."
+        }
+      ]
     },
     {
       "id": "42-s16",
@@ -222,7 +306,21 @@
         "practica": "practices",
         "fotografía": "photography",
         "trabajo": "work"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El artista",
+          "english": "The artist"
+        },
+        {
+          "spanish": "practica la fotografía",
+          "english": "practices photography"
+        },
+        {
+          "spanish": "después del trabajo.",
+          "english": "after work."
+        }
+      ]
     },
     {
       "id": "42-s6",
@@ -255,7 +353,21 @@
         "aprende": "learns",
         "guitarra": "guitar",
         "trabajo": "work"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi amigo",
+          "english": "My friend"
+        },
+        {
+          "spanish": "aprende la guitarra",
+          "english": "learns the guitar"
+        },
+        {
+          "spanish": "después del trabajo.",
+          "english": "after work."
+        }
+      ]
     },
     {
       "id": "42-s21",
@@ -295,7 +407,21 @@
         "un": "a",
         "amigo": "friend (male)",
         "juego": "I play"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Los sábados",
+          "english": "On Saturdays"
+        },
+        {
+          "spanish": "juego al ajedrez",
+          "english": "I play chess"
+        },
+        {
+          "spanish": "con un amigo.",
+          "english": "with a friend."
+        }
+      ]
     },
     {
       "id": "m42-context-3",
@@ -334,7 +460,21 @@
         "este": "this (masc)",
         "año": "year",
         "bailar": "to dance"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero aprender",
+          "english": "I want to learn"
+        },
+        {
+          "spanish": "a bailar",
+          "english": "to dance"
+        },
+        {
+          "spanish": "este año.",
+          "english": "this year."
+        }
+      ]
     },
     {
       "id": "m42-context-6",

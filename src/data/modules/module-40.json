@@ -13,7 +13,17 @@
         "busca": "looks for",
         "zapatos": "shoes",
         "centro comercial": "shopping centre"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La mujer busca unos zapatos",
+          "english": "The woman looks for some shoes"
+        },
+        {
+          "spanish": "en el centro comercial.",
+          "english": "in the shopping centre."
+        }
+      ]
     },
     {
       "id": "40-s25",
@@ -24,7 +34,17 @@
         "prueba": "tries on",
         "vestido": "dress",
         "descuento": "discount"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El joven se prueba un vestido",
+          "english": "The young man tries on a dress"
+        },
+        {
+          "spanish": "con descuento.",
+          "english": "with a discount."
+        }
+      ]
     },
     {
       "id": "40-s38",
@@ -46,7 +66,17 @@
         "compra": "buys",
         "pantalones": "trousers",
         "tienda": "store"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El cliente compra los pantalones",
+          "english": "The customer buys the trousers"
+        },
+        {
+          "spanish": "en la tienda.",
+          "english": "in the store."
+        }
+      ]
     },
     {
       "id": "40-s12",
@@ -90,7 +120,17 @@
         "prueba": "tries on",
         "zapatos": "shoes",
         "fiesta": "party"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El joven se prueba unos zapatos",
+          "english": "The young man tries on some shoes"
+        },
+        {
+          "spanish": "para la fiesta.",
+          "english": "for the party."
+        }
+      ]
     },
     {
       "id": "40-s32",
@@ -123,7 +163,25 @@
         "prueba": "tries on",
         "zapatos": "shoes",
         "descuento": "discount"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La mujer",
+          "english": "The woman"
+        },
+        {
+          "spanish": "se prueba",
+          "english": "tries on"
+        },
+        {
+          "spanish": "unos zapatos",
+          "english": "some shoes"
+        },
+        {
+          "spanish": "con descuento.",
+          "english": "with a discount."
+        }
+      ]
     },
     {
       "id": "40-s3",
@@ -156,7 +214,21 @@
         "busca": "looks for",
         "chaqueta": "jacket",
         "fiesta": "party"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El señor",
+          "english": "The gentleman"
+        },
+        {
+          "spanish": "busca",
+          "english": "looks for"
+        },
+        {
+          "spanish": "una chaqueta para la fiesta.",
+          "english": "a jacket for the party."
+        }
+      ]
     },
     {
       "id": "40-s10",
@@ -189,7 +261,21 @@
         "necesita": "needs",
         "vestido": "dress",
         "fiesta": "party"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La mujer",
+          "english": "The woman"
+        },
+        {
+          "spanish": "necesita",
+          "english": "needs"
+        },
+        {
+          "spanish": "un vestido para la fiesta.",
+          "english": "a dress for the party."
+        }
+      ]
     },
     {
       "id": "40-s11",
@@ -222,7 +308,21 @@
         "necesita": "needs",
         "zapatos": "shoes",
         "fiesta": "party"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El cliente",
+          "english": "The customer"
+        },
+        {
+          "spanish": "necesita",
+          "english": "needs"
+        },
+        {
+          "spanish": "unos zapatos para la fiesta.",
+          "english": "some shoes for the party."
+        }
+      ]
     },
     {
       "id": "40-s13",
@@ -255,7 +355,21 @@
         "cambia": "exchanges",
         "camisa": "shirt",
         "negra": "black"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi hermana",
+          "english": "My sister"
+        },
+        {
+          "spanish": "cambia",
+          "english": "exchanges"
+        },
+        {
+          "spanish": "una camisa negra.",
+          "english": "a black shirt."
+        }
+      ]
     },
     {
       "id": "40-s24",
@@ -287,7 +401,17 @@
         "Quisiera": "wanted (imp subj)",
         "pantalones": "trousers",
         "probarme": "to try on"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quisiera probarme",
+          "english": "I would like to try on"
+        },
+        {
+          "spanish": "esos pantalones.",
+          "english": "those trousers."
+        }
+      ]
     },
     {
       "id": "m40-context-3",
@@ -323,7 +447,17 @@
         "con": "with",
         "tarjeta": "card/pass",
         "pagar": "to pay"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Puedo pagar",
+          "english": "Can I pay"
+        },
+        {
+          "spanish": "con tarjeta?",
+          "english": "by card?"
+        }
+      ]
     },
     {
       "id": "m40-context-6",

@@ -28,7 +28,17 @@
         "por": "around / by",
         "ningún": "no / any",
         "lado": "side / place"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No lo encuentra",
+          "english": "He can't find it"
+        },
+        {
+          "spanish": "por ningún lado.",
+          "english": "anywhere."
+        }
+      ]
     },
     {
       "id": "s4-s3",
@@ -56,7 +66,17 @@
         "no": "not",
         "lo": "it (direct object)",
         "he visto": "I have seen (present perfect)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ana le contesta:",
+          "english": "Ana answers him:"
+        },
+        {
+          "spanish": "\"No, no lo he visto.\"",
+          "english": "\"No, I haven't seen it.\""
+        }
+      ]
     },
     {
       "id": "s4-s5",
@@ -70,7 +90,17 @@
         "toda": "all",
         "la": "the",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Luis lo busca",
+          "english": "Luis looks for it"
+        },
+        {
+          "spanish": "por toda la casa.",
+          "english": "all over the house."
+        }
+      ]
     },
     {
       "id": "s4-s6",
@@ -113,7 +143,17 @@
         "en": "on",
         "el": "the",
         "sofá": "sofa"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Marta lo llama.",
+          "english": "Marta calls it."
+        },
+        {
+          "spanish": "¡Suena en el sofá!",
+          "english": "It rings on the sofa!"
+        }
+      ]
     },
     {
       "id": "s4-s9",
@@ -127,7 +167,17 @@
         "encima": "on top",
         "del": "of the",
         "teléfono": "phone"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El gato estaba sentado",
+          "english": "The cat was sitting"
+        },
+        {
+          "spanish": "encima del teléfono.",
+          "english": "on top of the phone."
+        }
+      ]
     },
     {
       "id": "s4-s10",
@@ -175,7 +225,17 @@
         "en": "on",
         "el": "the",
         "sofá": "sofa"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "\"Para la próxima vez,",
+          "english": "\"For next time,"
+        },
+        {
+          "spanish": "no lo dejes en el sofá.\"",
+          "english": "don't leave it on the sofa.\""
+        }
+      ]
     }
   ],
   "vocabulary": {

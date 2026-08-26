@@ -32,7 +32,17 @@
         "Ha": "has",
         "bebido": "drunk",
         "agua": "water"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ha bebido",
+          "english": "He/She has drunk"
+        },
+        {
+          "spanish": "agua.",
+          "english": "water."
+        }
+      ]
     },
     {
       "id": "m12-s4",
@@ -42,7 +52,17 @@
         "Hemos": "we have",
         "bebido": "drunk",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hemos",
+          "english": "We have"
+        },
+        {
+          "spanish": "bebido café.",
+          "english": "drunk coffee."
+        }
+      ]
     },
     {
       "id": "m12-s5",
@@ -63,7 +83,17 @@
         "Has": "you have",
         "estudiado": "studied",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Has",
+          "english": "Have you"
+        },
+        {
+          "spanish": "estudiado hoy?",
+          "english": "studied today?"
+        }
+      ]
     },
     {
       "id": "m12-s7",
@@ -74,7 +104,17 @@
         "he": "I have",
         "estudiado": "studied",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "he estudiado hoy.",
+          "english": "I have studied today."
+        }
+      ]
     },
     {
       "id": "m12-s8",
@@ -86,7 +126,17 @@
         "he": "I have",
         "estudiado": "studied",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "no he estudiado hoy.",
+          "english": "I haven't studied today."
+        }
+      ]
     },
     {
       "id": "m12-s9",
@@ -107,7 +157,17 @@
         "trabajado": "worked",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Has trabajado",
+          "english": "You have worked"
+        },
+        {
+          "spanish": "en casa.",
+          "english": "at home."
+        }
+      ]
     },
     {
       "id": "m12-s11",
@@ -119,7 +179,17 @@
         "en": "in / on",
         "el": "the",
         "centro": "downtown"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ha trabajado",
+          "english": "He/She has worked"
+        },
+        {
+          "spanish": "en el centro.",
+          "english": "downtown."
+        }
+      ]
     },
     {
       "id": "m12-s12",
@@ -151,7 +221,17 @@
         "hablado": "spoken",
         "con": "with",
         "Luis": "Luis"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Has hablado",
+          "english": "You have spoken"
+        },
+        {
+          "spanish": "con Luis.",
+          "english": "with Luis."
+        }
+      ]
     },
     {
       "id": "m12-s15",
@@ -162,7 +242,17 @@
         "hablado": "spoken",
         "con": "with",
         "Marta": "Marta"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ha hablado",
+          "english": "He/She has spoken"
+        },
+        {
+          "spanish": "con Marta.",
+          "english": "with Marta."
+        }
+      ]
     },
     {
       "id": "m12-s16",
@@ -183,7 +273,17 @@
         "He": "I have",
         "comprado": "bought",
         "pan": "bread"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "He",
+          "english": "I have"
+        },
+        {
+          "spanish": "comprado pan.",
+          "english": "bought bread."
+        }
+      ]
     },
     {
       "id": "m12-s18",
@@ -204,7 +304,17 @@
         "comprado": "bought",
         "un": "a",
         "libro": "book"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ha comprado",
+          "english": "He/She has bought"
+        },
+        {
+          "spanish": "un libro.",
+          "english": "a book."
+        }
+      ]
     },
     {
       "id": "m12-s20",
@@ -214,7 +324,17 @@
         "Hemos": "we have",
         "comprado": "bought",
         "comida": "food"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hemos",
+          "english": "We have"
+        },
+        {
+          "spanish": "comprado comida.",
+          "english": "bought food."
+        }
+      ]
     },
     {
       "id": "m12-s21",
@@ -247,7 +367,17 @@
         "buscado": "looked for",
         "una": "a (fem)",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ha buscado",
+          "english": "He/She has looked for"
+        },
+        {
+          "spanish": "una casa.",
+          "english": "a house."
+        }
+      ]
     },
     {
       "id": "m12-s24",
@@ -258,7 +388,17 @@
         "abierto": "opened",
         "la": "the / it (fem)",
         "puerta": "door"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "He abierto",
+          "english": "I have opened"
+        },
+        {
+          "spanish": "la puerta.",
+          "english": "the door."
+        }
+      ]
     },
     {
       "id": "m12-s25",
@@ -280,7 +420,17 @@
         "abierto": "opened",
         "la": "the / it (fem)",
         "ventana": "window"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ha abierto",
+          "english": "He/She has opened"
+        },
+        {
+          "spanish": "la ventana.",
+          "english": "the window."
+        }
+      ]
     },
     {
       "id": "m12-s27",
@@ -302,7 +452,17 @@
         "escrito": "written",
         "una": "a (fem)",
         "carta": "letter"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Has escrito",
+          "english": "You have written"
+        },
+        {
+          "spanish": "una carta.",
+          "english": "a letter."
+        }
+      ]
     },
     {
       "id": "m12-s29",
@@ -313,7 +473,17 @@
         "escrito": "written",
         "un": "a",
         "mensaje": "message"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ha escrito",
+          "english": "He/She has written"
+        },
+        {
+          "spanish": "un mensaje.",
+          "english": "a message."
+        }
+      ]
     },
     {
       "id": "m12-s30",
@@ -346,7 +516,17 @@
         "recibido": "received",
         "un": "a",
         "libro": "book"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ha recibido",
+          "english": "He/She has received"
+        },
+        {
+          "spanish": "un libro.",
+          "english": "a book."
+        }
+      ]
     },
     {
       "id": "m12-s33",
@@ -357,7 +537,17 @@
         "he": "I have",
         "tenido": "had",
         "tiempo": "time"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hoy",
+          "english": "Today"
+        },
+        {
+          "spanish": "he tenido tiempo.",
+          "english": "I have had time."
+        }
+      ]
     },
     {
       "id": "m12-s34",
@@ -368,7 +558,17 @@
         "he": "I have",
         "tenido": "had",
         "hambre": "hunger"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hoy",
+          "english": "Today"
+        },
+        {
+          "spanish": "he tenido hambre.",
+          "english": "I have been hungry."
+        }
+      ]
     },
     {
       "id": "m12-s35",
@@ -379,7 +579,17 @@
         "he": "I have",
         "tenido": "had",
         "sed": "thirst"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hoy",
+          "english": "Today"
+        },
+        {
+          "spanish": "he tenido sed.",
+          "english": "I have been thirsty."
+        }
+      ]
     },
     {
       "id": "m12-s36",
@@ -391,7 +601,17 @@
         "he": "I have",
         "estudiado": "studied",
         "mucho": "much / a lot"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Esta semana",
+          "english": "This week"
+        },
+        {
+          "spanish": "he estudiado mucho.",
+          "english": "I have studied a lot."
+        }
+      ]
     },
     {
       "id": "m12-s37",
@@ -403,7 +623,17 @@
         "he": "I have",
         "trabajado": "worked",
         "mucho": "much / a lot"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Esta semana",
+          "english": "This week"
+        },
+        {
+          "spanish": "he trabajado mucho.",
+          "english": "I have worked a lot."
+        }
+      ]
     },
     {
       "id": "m12-s38",
@@ -415,7 +645,17 @@
         "al": "to the",
         "café": "coffee",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Has ido",
+          "english": "Have you gone"
+        },
+        {
+          "spanish": "al café hoy?",
+          "english": "to the café today?"
+        }
+      ]
     },
     {
       "id": "m12-s39",
@@ -428,7 +668,17 @@
         "al": "to the",
         "café": "coffee",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "he ido al café hoy.",
+          "english": "I have gone to the café today."
+        }
+      ]
     },
     {
       "id": "m12-s40",
@@ -442,7 +692,17 @@
         "al": "to the",
         "café": "coffee",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "no he ido al café hoy.",
+          "english": "I haven't gone to the café today."
+        }
+      ]
     },
     {
       "id": "m12-s41",
@@ -462,7 +722,17 @@
         "Has": "you have",
         "vivido": "lived",
         "allí": "there"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Has vivido",
+          "english": "You have lived"
+        },
+        {
+          "spanish": "allí.",
+          "english": "there."
+        }
+      ]
     },
     {
       "id": "m12-s43",
@@ -484,7 +754,17 @@
         "He": "I have",
         "aprendido": "learned",
         "español": "Spanish"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "He aprendido",
+          "english": "I have learned"
+        },
+        {
+          "spanish": "español.",
+          "english": "Spanish."
+        }
+      ]
     },
     {
       "id": "m12-s45",
@@ -494,7 +774,17 @@
         "Has": "you have",
         "aprendido": "learned",
         "mucho": "much / a lot"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Has aprendido",
+          "english": "You have learned"
+        },
+        {
+          "spanish": "mucho.",
+          "english": "a lot."
+        }
+      ]
     },
     {
       "id": "m12-s46",
@@ -517,7 +807,17 @@
         "hoy": "today",
         "he": "I have",
         "estudiado": "studied"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer estudié;",
+          "english": "Yesterday I studied;"
+        },
+        {
+          "spanish": "hoy he estudiado.",
+          "english": "today I have studied."
+        }
+      ]
     },
     {
       "id": "m12-s48",
@@ -529,7 +829,17 @@
         "hoy": "today",
         "he": "I have",
         "estudiado": "studied"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Antes estudiaba;",
+          "english": "Before I used to study;"
+        },
+        {
+          "spanish": "hoy he estudiado.",
+          "english": "today I have studied."
+        }
+      ]
     },
     {
       "spanish": "¡Hoy no he parado!",
@@ -552,7 +862,17 @@
         "muy": "very",
         "liado": "busy/tied up"
       },
-      "id": "m12-s-colloq2"
+      "id": "m12-s-colloq2",
+      "translationChunks": [
+        {
+          "spanish": "Últimamente",
+          "english": "Lately"
+        },
+        {
+          "spanish": "he estado muy liado.",
+          "english": "I've been very busy."
+        }
+      ]
     }
   ],
   "grammarExplanation": "The present perfect describes what has happened, formed with 'haber + past participle.'\n\nConjugate 'haber':\n• He, Has, Ha, Hemos, Han\n\nPast participles:\n• -AR → -ado: hablado, comprado, estudiado\n• -ER/-IR → -ido: comido, bebido, vivido\n\nIrregulars: abierto (abrir), escrito (escribir), dicho (decir), hecho (hacer), visto (ver)\n\nExample: 'He comido pan' = I have eaten bread.",

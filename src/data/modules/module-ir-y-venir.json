@@ -25,7 +25,17 @@
         "trabajo": "work",
         "en": "by",
         "metro": "underground"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Voy",
+          "english": "I go"
+        },
+        {
+          "spanish": "al trabajo en metro.",
+          "english": "to work by metro."
+        }
+      ]
     },
     {
       "id": "mirven-s3",
@@ -34,7 +44,17 @@
       "wordMeanings": {
         "Vas": "you go",
         "fiesta": "party"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Vas",
+          "english": "Are you going"
+        },
+        {
+          "spanish": "a la fiesta de Marta?",
+          "english": "to Marta's party?"
+        }
+      ]
     },
     {
       "id": "mirven-s4",
@@ -55,7 +75,17 @@
         "van": "they go",
         "colegio": "school",
         "bici": "bike"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Los niños van",
+          "english": "The kids go"
+        },
+        {
+          "spanish": "al colegio en bici.",
+          "english": "to school by bike."
+        }
+      ]
     },
     {
       "id": "mirven-s6",
@@ -66,7 +96,17 @@
         "playa": "beach",
         "fin": "end",
         "semana": "week"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Vais",
+          "english": "Are you all going"
+        },
+        {
+          "spanish": "a la playa este fin de semana?",
+          "english": "to the beach this weekend?"
+        }
+      ]
     },
     {
       "id": "mirven-s7",
@@ -86,7 +126,17 @@
       "english": "I'm going over to Ana's place to study.",
       "wordMeanings": {
         "estudiar": "to study"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Voy a casa de Ana",
+          "english": "I'm going over to Ana's place"
+        },
+        {
+          "spanish": "a estudiar.",
+          "english": "to study."
+        }
+      ]
     },
     {
       "id": "mirven-s9",
@@ -97,7 +147,21 @@
         "ir": "to go",
         "en": "by",
         "tren": "train"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mañana",
+          "english": "Tomorrow"
+        },
+        {
+          "spanish": "vamos a ir a Segovia",
+          "english": "we're going to go to Segovia"
+        },
+        {
+          "spanish": "en tren.",
+          "english": "by train."
+        }
+      ]
     },
     {
       "id": "mirven-s10",
@@ -116,7 +180,17 @@
         "Adónde": "where to",
         "tan": "so",
         "deprisa": "in a hurry"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Adónde",
+          "english": "Where are you off to"
+        },
+        {
+          "spanish": "vas tan deprisa?",
+          "english": "in such a hurry?"
+        }
+      ]
     },
     {
       "id": "mirven-s12",
@@ -125,7 +199,13 @@
       "wordMeanings": {
         "Vengo": "I come",
         "enseguida": "right away"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Vengo enseguida.",
+          "english": "I'll be right back."
+        }
+      ]
     },
     {
       "id": "mirven-s13",
@@ -143,7 +223,17 @@
       "english": "I'm coming from the office.",
       "wordMeanings": {
         "oficina": "office"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Vengo",
+          "english": "I'm coming"
+        },
+        {
+          "spanish": "de la oficina.",
+          "english": "from the office."
+        }
+      ]
     },
     {
       "id": "mirven-s15",
@@ -152,7 +242,17 @@
       "wordMeanings": {
         "viene": "she comes",
         "cenar": "to have dinner"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi hermana viene a cenar",
+          "english": "My sister is coming for dinner"
+        },
+        {
+          "spanish": "esta noche.",
+          "english": "tonight."
+        }
+      ]
     },
     {
       "id": "mirven-s16",
@@ -184,7 +284,17 @@
         "primos": "cousins",
         "vienen": "they come",
         "visita": "visit"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mis primos vienen de visita",
+          "english": "My cousins are coming to visit"
+        },
+        {
+          "spanish": "este fin de semana.",
+          "english": "this weekend."
+        }
+      ]
     },
     {
       "id": "mirven-s19",
@@ -204,7 +314,17 @@
       "wordMeanings": {
         "Puedo": "may I",
         "contigo": "with you"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Puedo",
+          "english": "Can I"
+        },
+        {
+          "spanish": "venir contigo?",
+          "english": "come with you?"
+        }
+      ]
     },
     {
       "id": "mirven-s21",
@@ -214,7 +334,17 @@
         "Cómo": "how",
         "coche": "car",
         "andando": "walking"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Cómo vais al trabajo,",
+          "english": "How do you all get to work,"
+        },
+        {
+          "spanish": "en coche o andando?",
+          "english": "by car or walking?"
+        }
+      ]
     },
     {
       "id": "mirven-s22",
@@ -236,7 +366,17 @@
         "veranos": "summers",
         "misma": "same",
         "cala": "cove"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Todos los veranos",
+          "english": "Every summer"
+        },
+        {
+          "spanish": "vamos a la misma cala.",
+          "english": "we go to the same cove."
+        }
+      ]
     },
     {
       "id": "mirven-s24",
@@ -245,7 +385,17 @@
       "wordMeanings": {
         "gimnasio": "gym",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Vienes",
+          "english": "Are you coming"
+        },
+        {
+          "spanish": "al gimnasio hoy?",
+          "english": "to the gym today?"
+        }
+      ]
     },
     {
       "id": "mirven-s25",
@@ -269,7 +419,17 @@
         "me": "myself",
         "voy": "I go",
         "corriendo": "running"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¡Hasta luego,",
+          "english": "See you later,"
+        },
+        {
+          "spanish": "me voy corriendo!",
+          "english": "I'm dashing off!"
+        }
+      ]
     }
   ],
   "grammarExplanation": "'Ir' = to go (movement AWAY from where the speaker is). 'Venir' = to come (movement TOWARD the speaker or listener).\n\nIr (irregular):\n• Voy = I go • Vas = you go • Va = he/she goes\n• Vamos = we go • Vais = you all go • Van = they go\n\nVenir (also irregular):\n• Vengo = I come • Vienes • Viene • Venimos • Venís • Vienen\n\nRemember:\n• a + el = al → Voy AL gimnasio\n• de + el = del → Vengo DEL mercado\n• ir + a + infinitive = going to do something → Mañana vamos a ir a Segovia.",

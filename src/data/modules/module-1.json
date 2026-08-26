@@ -10,7 +10,13 @@
       "english": "Hello.",
       "wordMeanings": {
         "Hola": "hello"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hola.",
+          "english": "Hello."
+        }
+      ]
     },
     {
       "id": "m1-s2",
@@ -20,7 +26,17 @@
         "Hola": "hello",
         "soy": "I am",
         "Ana": "Ana"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hola,",
+          "english": "Hello,"
+        },
+        {
+          "spanish": "soy Ana.",
+          "english": "I am Ana."
+        }
+      ]
     },
     {
       "id": "m1-s3",
@@ -30,7 +46,17 @@
         "Hola": "hello",
         "soy": "I am",
         "Luis": "Luis"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hola,",
+          "english": "Hello,"
+        },
+        {
+          "spanish": "soy Luis.",
+          "english": "I am Luis."
+        }
+      ]
     },
     {
       "id": "m1-s4",
@@ -39,7 +65,13 @@
       "wordMeanings": {
         "Soy": "I am",
         "Marta": "Marta"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Soy Marta.",
+          "english": "I am Marta."
+        }
+      ]
     },
     {
       "id": "m1-s5",
@@ -48,7 +80,13 @@
       "wordMeanings": {
         "Soy": "I am",
         "Carlos": "Carlos"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Soy Carlos.",
+          "english": "I am Carlos."
+        }
+      ]
     },
     {
       "id": "m1-s6",
@@ -57,7 +95,13 @@
       "wordMeanings": {
         "Soy": "I am",
         "estudiante": "student"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Soy estudiante.",
+          "english": "I am a student."
+        }
+      ]
     },
     {
       "id": "m1-s7",
@@ -68,7 +112,17 @@
         "no": "no / not",
         "soy": "I am",
         "Ana": "Ana"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "no soy Ana.",
+          "english": "I am not Ana."
+        }
+      ]
     },
     {
       "id": "m1-s8",
@@ -78,7 +132,17 @@
         "Sí": "yes",
         "soy": "I am",
         "Luis": "Luis"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "soy Luis.",
+          "english": "I am Luis."
+        }
+      ]
     },
     {
       "id": "m1-s9",
@@ -87,7 +151,13 @@
       "wordMeanings": {
         "Eres": "you are",
         "Luis": "Luis"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Eres Luis?",
+          "english": "Are you Luis?"
+        }
+      ]
     },
     {
       "id": "m1-s10",
@@ -96,7 +166,13 @@
       "wordMeanings": {
         "Quién": "who",
         "eres": "you are"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Quién eres?",
+          "english": "Who are you?"
+        }
+      ]
     },
     {
       "id": "m1-s11",
@@ -107,7 +183,17 @@
         "días": "days",
         "soy": "I am",
         "Ana": "Ana"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Buenos días,",
+          "english": "Good morning,"
+        },
+        {
+          "spanish": "soy Ana.",
+          "english": "I am Ana."
+        }
+      ]
     },
     {
       "id": "m1-s12",
@@ -118,7 +204,17 @@
         "tardes": "afternoons",
         "soy": "I am",
         "Luis": "Luis"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Buenas tardes,",
+          "english": "Good afternoon,"
+        },
+        {
+          "spanish": "soy Luis.",
+          "english": "I am Luis."
+        }
+      ]
     },
     {
       "id": "m1-s13",
@@ -129,7 +225,17 @@
         "noches": "nights",
         "soy": "I am",
         "Marta": "Marta"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Buenas noches,",
+          "english": "Good evening,"
+        },
+        {
+          "spanish": "soy Marta.",
+          "english": "I am Marta."
+        }
+      ]
     },
     {
       "id": "m1-s14",
@@ -138,7 +244,17 @@
       "wordMeanings": {
         "Adiós": "goodbye",
         "Carlos": "Carlos"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Adiós,",
+          "english": "Goodbye,"
+        },
+        {
+          "spanish": "Carlos.",
+          "english": "Carlos."
+        }
+      ]
     },
     {
       "id": "m1-s15",
@@ -148,7 +264,17 @@
         "Hasta": "until",
         "luego": "later",
         "Marta": "Marta"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hasta luego,",
+          "english": "See you later,"
+        },
+        {
+          "spanish": "Marta.",
+          "english": "Marta."
+        }
+      ]
     },
     {
       "id": "m1-s16",
@@ -159,7 +285,17 @@
         "favor": "favor",
         "eres": "you are",
         "Ana": "Ana"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Por favor,",
+          "english": "Please,"
+        },
+        {
+          "spanish": "¿eres Ana?",
+          "english": "are you Ana?"
+        }
+      ]
     },
     {
       "id": "m1-s17",
@@ -171,7 +307,17 @@
         "Me": "myself",
         "llamo": "I call",
         "Ana": "Ana"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Qué tal?",
+          "english": "What's up?"
+        },
+        {
+          "spanish": "Me llamo Ana.",
+          "english": "My name is Ana."
+        }
+      ]
     },
     {
       "id": "m1-s18",
@@ -182,7 +328,17 @@
         "gusto": "pleasure",
         "soy": "I am",
         "Luis": "Luis"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mucho gusto,",
+          "english": "Nice to meet you,"
+        },
+        {
+          "spanish": "soy Luis.",
+          "english": "I am Luis."
+        }
+      ]
     },
     {
       "id": "m1-s19",
@@ -192,7 +348,17 @@
         "Muchas": "many (fem)",
         "gracias": "thank you",
         "Luis": "Luis"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Muchas gracias,",
+          "english": "Thank you very much,"
+        },
+        {
+          "spanish": "Luis.",
+          "english": "Luis."
+        }
+      ]
     },
     {
       "id": "m1-s20",
@@ -201,7 +367,17 @@
       "wordMeanings": {
         "Gracias": "thank you",
         "Ana": "Ana"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Gracias,",
+          "english": "Thank you,"
+        },
+        {
+          "spanish": "Ana.",
+          "english": "Ana."
+        }
+      ]
     },
     {
       "id": "m1-s21",
@@ -211,7 +387,17 @@
         "De": "of / from",
         "nada": "nothing",
         "Luis": "Luis"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "De nada,",
+          "english": "You're welcome,"
+        },
+        {
+          "spanish": "Luis.",
+          "english": "Luis."
+        }
+      ]
     },
     {
       "id": "m1-s22",
@@ -222,7 +408,17 @@
         "no": "no / not",
         "soy": "I am",
         "Luis": "Luis"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "no soy Luis.",
+          "english": "I am not Luis."
+        }
+      ]
     },
     {
       "id": "m1-s23",
@@ -231,7 +427,13 @@
       "wordMeanings": {
         "Quién": "who",
         "eres": "you are"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Quién eres?",
+          "english": "Who are you?"
+        }
+      ]
     },
     {
       "id": "m1-s24",
@@ -240,7 +442,13 @@
       "wordMeanings": {
         "Soy": "I am",
         "estudiante": "student"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Soy estudiante.",
+          "english": "I am a student."
+        }
+      ]
     },
     {
       "id": "m1-s25",
@@ -249,7 +457,13 @@
       "wordMeanings": {
         "Eres": "you are",
         "estudiante": "student"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Eres estudiante.",
+          "english": "You are a student."
+        }
+      ]
     },
     {
       "id": "m1-s26",
@@ -259,7 +473,17 @@
         "Él": "he",
         "es": "is",
         "estudiante": "student"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Él es",
+          "english": "He is"
+        },
+        {
+          "spanish": "estudiante.",
+          "english": "a student."
+        }
+      ]
     },
     {
       "id": "m1-s27",
@@ -289,7 +513,17 @@
         "Él": "he",
         "es": "is",
         "Carlos": "Carlos"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Él es",
+          "english": "He is"
+        },
+        {
+          "spanish": "Carlos.",
+          "english": "Carlos."
+        }
+      ]
     },
     {
       "id": "m1-s30",
@@ -299,7 +533,17 @@
         "Quién": "who",
         "es": "is",
         "ella": "she / her"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Quién",
+          "english": "Who"
+        },
+        {
+          "spanish": "es ella?",
+          "english": "is she?"
+        }
+      ]
     },
     {
       "id": "m1-s31",
@@ -318,7 +562,13 @@
       "wordMeanings": {
         "Somos": "we are",
         "amigos": "friends"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Somos amigos.",
+          "english": "We are friends."
+        }
+      ]
     },
     {
       "id": "m1-s33",
@@ -327,7 +577,13 @@
       "wordMeanings": {
         "Somos": "we are",
         "estudiantes": "students"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Somos estudiantes.",
+          "english": "We are students."
+        }
+      ]
     },
     {
       "id": "m1-s34",
@@ -336,7 +592,13 @@
       "wordMeanings": {
         "Sois": "you all are",
         "estudiantes": "students"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Sois estudiantes?",
+          "english": "Are you all students?"
+        }
+      ]
     },
     {
       "id": "m1-s35",
@@ -346,7 +608,17 @@
         "Sí": "yes",
         "somos": "we are",
         "estudiantes": "students"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "somos estudiantes.",
+          "english": "we are students."
+        }
+      ]
     },
     {
       "id": "m1-s36",
@@ -357,7 +629,17 @@
         "no": "no / not",
         "somos": "we are",
         "estudiantes": "students"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "no somos estudiantes.",
+          "english": "we are not students."
+        }
+      ]
     },
     {
       "id": "m1-s37",
@@ -369,7 +651,17 @@
         "Luis": "Luis",
         "son": "are",
         "amigos": "friends"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ana y Luis",
+          "english": "Ana and Luis"
+        },
+        {
+          "spanish": "son amigos.",
+          "english": "are friends."
+        }
+      ]
     },
     {
       "id": "m1-s38",
@@ -381,7 +673,17 @@
         "Carlos": "Carlos",
         "son": "are",
         "amigos": "friends"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Marta y Carlos",
+          "english": "Marta and Carlos"
+        },
+        {
+          "spanish": "son amigos.",
+          "english": "are friends."
+        }
+      ]
     },
     {
       "id": "m1-s39",
@@ -391,7 +693,17 @@
         "Eres": "you are",
         "mi": "my",
         "amigo": "friend (male)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Eres",
+          "english": "Are you"
+        },
+        {
+          "spanish": "mi amigo?",
+          "english": "my friend?"
+        }
+      ]
     },
     {
       "id": "m1-s40",
@@ -402,7 +714,17 @@
         "soy": "I am",
         "tu": "your",
         "amigo": "friend (male)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "soy tu amigo.",
+          "english": "I am your friend."
+        }
+      ]
     },
     {
       "id": "m1-s41",
@@ -423,7 +745,17 @@
         "soy": "I am",
         "tu": "your",
         "amiga": "friend (female)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "soy tu amiga.",
+          "english": "I am your friend (female)."
+        }
+      ]
     },
     {
       "id": "m1-s43",
@@ -434,7 +766,17 @@
         "es": "is",
         "mi": "my",
         "amigo": "friend (male)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Carlos",
+          "english": "Carlos"
+        },
+        {
+          "spanish": "es mi amigo.",
+          "english": "is my friend."
+        }
+      ]
     },
     {
       "id": "m1-s44",
@@ -445,7 +787,17 @@
         "es": "is",
         "mi": "my",
         "amiga": "friend (female)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ana es",
+          "english": "Ana is"
+        },
+        {
+          "spanish": "mi amiga.",
+          "english": "my friend."
+        }
+      ]
     },
     {
       "id": "m1-s45",
@@ -454,7 +806,13 @@
       "wordMeanings": {
         "Eres": "you are",
         "Carlos": "Carlos"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Eres Carlos?",
+          "english": "Are you Carlos?"
+        }
+      ]
     },
     {
       "id": "m1-s46",
@@ -464,7 +822,17 @@
         "No": "no / not",
         "soy": "I am",
         "Luis": "Luis"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "soy Luis.",
+          "english": "I am Luis."
+        }
+      ]
     },
     {
       "id": "m1-s47",
@@ -473,7 +841,13 @@
       "wordMeanings": {
         "Eres": "you are",
         "Marta": "Marta"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Eres Marta?",
+          "english": "Are you Marta?"
+        }
+      ]
     },
     {
       "id": "m1-s48",
@@ -483,7 +857,17 @@
         "No": "no / not",
         "soy": "I am",
         "Ana": "Ana"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "soy Ana.",
+          "english": "I am Ana."
+        }
+      ]
     }
   ],
   "vocabulary": {

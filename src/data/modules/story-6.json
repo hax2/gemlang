@@ -34,7 +34,17 @@
         "de": "from",
         "otra": "another",
         "empresa": "company"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Acaba de recibir",
+          "english": "She has just received"
+        },
+        {
+          "spanish": "una oferta de otra empresa.",
+          "english": "an offer from another company."
+        }
+      ]
     },
     {
       "id": "s6-s3",
@@ -79,7 +89,17 @@
         "Qué": "what",
         "harías": "would you do (conditional)",
         "tú": "you"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ana le pregunta:",
+          "english": "Ana asks her:"
+        },
+        {
+          "spanish": "\"¿Qué harías tú?\"",
+          "english": "\"What would you do?\""
+        }
+      ]
     },
     {
       "id": "s6-s6",
@@ -92,7 +112,17 @@
         "dinero": "money",
         "podría": "I could (conditional)",
         "viajar": "to travel"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "\"Si tuviera más dinero,",
+          "english": "\"If I had more money,"
+        },
+        {
+          "spanish": "podría viajar más.\"",
+          "english": "I could travel more.\""
+        }
+      ]
     },
     {
       "id": "s6-s7",
@@ -119,7 +149,17 @@
         "pensando": "thinking (gerund)",
         "en": "about",
         "esto": "this"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Marta le dice:",
+          "english": "Marta tells her:"
+        },
+        {
+          "spanish": "\"Llevo mucho tiempo pensando en esto.\"",
+          "english": "\"I have been thinking about this for a long time.\""
+        }
+      ]
     },
     {
       "id": "s6-s9",
@@ -160,7 +200,17 @@
         "una": "a",
         "nueva": "new",
         "aventura": "adventure"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "\"Si acepto,",
+          "english": "\"If I accept,"
+        },
+        {
+          "spanish": "será una nueva aventura.\"",
+          "english": "it will be a new adventure.\""
+        }
+      ]
     },
     {
       "id": "s6-s12",

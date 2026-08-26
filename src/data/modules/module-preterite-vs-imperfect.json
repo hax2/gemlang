@@ -25,7 +25,17 @@
         "mientras": "while",
         "él": "he",
         "dormía": "was sleeping"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Yo leía",
+          "english": "I was reading"
+        },
+        {
+          "spanish": "mientras él dormía.",
+          "english": "while he was sleeping."
+        }
+      ]
     },
     {
       "id": "mpvsi-s3",
@@ -39,7 +49,17 @@
         "a": "to",
         "la": "the",
         "playa": "beach"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hacía sol",
+          "english": "It was sunny"
+        },
+        {
+          "spanish": "y fuimos a la playa.",
+          "english": "and we went to the beach."
+        }
+      ]
     },
     {
       "id": "mpvsi-s4",
@@ -64,7 +84,17 @@
         "que": "that",
         "me": "myself",
         "fui": "I went / I left"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estaba cansado,",
+          "english": "I was tired,"
+        },
+        {
+          "spanish": "así que me fui.",
+          "english": "so I left."
+        }
+      ]
     },
     {
       "id": "mpvsi-s6",
@@ -77,7 +107,17 @@
         "mujer": "wife / woman",
         "en": "in",
         "Madrid": "Madrid"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Conocí a mi mujer",
+          "english": "I met my wife"
+        },
+        {
+          "spanish": "en Madrid.",
+          "english": "in Madrid."
+        }
+      ]
     },
     {
       "id": "mpvsi-s7",
@@ -105,7 +145,17 @@
         "en": "in",
         "el": "the",
         "parque": "park"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "De niño,",
+          "english": "As a child,"
+        },
+        {
+          "spanish": "jugaba en el parque.",
+          "english": "I used to play in the park."
+        }
+      ]
     },
     {
       "id": "mpvsi-s9",
@@ -117,7 +167,17 @@
         "dos": "two",
         "horas": "hours",
         "anoche": "last night"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hablamos por dos horas",
+          "english": "We talked for two hours"
+        },
+        {
+          "spanish": "anoche.",
+          "english": "last night."
+        }
+      ]
     },
     {
       "id": "mpvsi-s10",
@@ -141,7 +201,17 @@
         "tarde": "late",
         "cuando": "when",
         "llegamos": "we arrived"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Era tarde",
+          "english": "It was late"
+        },
+        {
+          "spanish": "cuando llegamos.",
+          "english": "when we arrived."
+        }
+      ]
     },
     {
       "id": "mpvsi-s12",
@@ -154,7 +224,17 @@
         "empezó": "started",
         "a": "to",
         "nevar": "snow"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hacía frío",
+          "english": "It was cold"
+        },
+        {
+          "spanish": "y empezó a nevar.",
+          "english": "and started to snow."
+        }
+      ]
     },
     {
       "id": "mpvsi-s13",
@@ -179,7 +259,17 @@
         "una": "a",
         "pizza": "pizza",
         "entera": "whole"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Anoche",
+          "english": "Last night"
+        },
+        {
+          "spanish": "comí una pizza entera.",
+          "english": "I ate a whole pizza."
+        }
+      ]
     },
     {
       "id": "mpvsi-s15",
@@ -191,7 +281,17 @@
         "entró": "entered",
         "el": "the",
         "profesor": "teacher"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mientras cantaban,",
+          "english": "While they were singing,"
+        },
+        {
+          "spanish": "entró el profesor.",
+          "english": "the teacher entered."
+        }
+      ]
     },
     {
       "id": "mpvsi-s16",
@@ -218,7 +318,17 @@
         "tres": "three",
         "veces": "times",
         "ayer": "yesterday"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Fui a la tienda",
+          "english": "I went to the store"
+        },
+        {
+          "spanish": "tres veces ayer.",
+          "english": "three times yesterday."
+        }
+      ]
     },
     {
       "id": "mpvsi-s18",
@@ -233,7 +343,17 @@
         "el": "the",
         "año": "year",
         "pasado": "past/last"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nos conocimos en la fiesta",
+          "english": "We met at the party"
+        },
+        {
+          "spanish": "el año pasado.",
+          "english": "last year."
+        }
+      ]
     },
     {
       "id": "mpvsi-s19",
@@ -260,7 +380,17 @@
         "mientras": "while",
         "me": "myself",
         "duchaba": "was showering"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El teléfono sonó",
+          "english": "The phone rang"
+        },
+        {
+          "spanish": "mientras me duchaba.",
+          "english": "while I was showering."
+        }
+      ]
     },
     {
       "id": "mpvsi-s21",
@@ -273,7 +403,17 @@
         "en": "in",
         "dos": "two",
         "horas": "hours"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Leí el libro",
+          "english": "I read the book"
+        },
+        {
+          "spanish": "en dos horas.",
+          "english": "in two hours."
+        }
+      ]
     },
     {
       "id": "mpvsi-s22",
@@ -298,7 +438,17 @@
         "oímos": "we heard",
         "el": "the",
         "ruido": "noise"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Trabajábamos",
+          "english": "We were working"
+        },
+        {
+          "spanish": "cuando oímos el ruido.",
+          "english": "when we heard the noise."
+        }
+      ]
     },
     {
       "id": "mpvsi-s24",
@@ -313,7 +463,17 @@
         "mi": "my",
         "primer": "first",
         "perro": "dog"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tenía cinco años",
+          "english": "I was five years old"
+        },
+        {
+          "spanish": "cuando tuve mi primer perro.",
+          "english": "when I got my first dog."
+        }
+      ]
     },
     {
       "id": "mpvsi-s25",

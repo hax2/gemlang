@@ -24,7 +24,17 @@
         "Todo el mundo": "everyone",
         "llamaba": "called",
         "Roja": "red"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Todo el mundo la llamaba",
+          "english": "Everyone called her"
+        },
+        {
+          "spanish": "Caperucita Roja.",
+          "english": "Little Red Riding Hood."
+        }
+      ]
     },
     {
       "id": "m25-s3",
@@ -36,7 +46,21 @@
         "visitara": "to visit (subjunctive)",
         "abuela": "grandmother",
         "enferma": "sick"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Un día,",
+          "english": "One day,"
+        },
+        {
+          "spanish": "su madre le pidió",
+          "english": "her mother asked her"
+        },
+        {
+          "spanish": "que visitara a su abuela enferma.",
+          "english": "to visit her sick grandmother."
+        }
+      ]
     },
     {
       "id": "m25-s4",
@@ -56,7 +80,17 @@
         "prometió": "promised",
         "obediente": "obedient",
         "se fue": "left"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Caperucita prometió ser obediente",
+          "english": "Caperucita promised to be obedient"
+        },
+        {
+          "spanish": "y se fue.",
+          "english": "and left."
+        }
+      ]
     },
     {
       "id": "m25-s6",
@@ -76,7 +110,17 @@
         "preguntó": "asked",
         "iba": "was going",
         "prisa": "hurry"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El lobo le preguntó",
+          "english": "The wolf asked her"
+        },
+        {
+          "spanish": "a dónde iba con tanta prisa.",
+          "english": "where she was going in such a hurry."
+        }
+      ]
     },
     {
       "id": "m25-s8",
@@ -86,7 +130,17 @@
         "respondió": "replied",
         "casa": "house",
         "abuelita": "little grandmother"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ella respondió",
+          "english": "She replied"
+        },
+        {
+          "spanish": "que iba a casa de su abuelita.",
+          "english": "that she was going to her grandmother's house."
+        }
+      ]
     },
     {
       "id": "m25-s9",

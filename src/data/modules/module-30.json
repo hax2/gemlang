@@ -12,7 +12,17 @@
         "reunión": "meeting",
         "importante": "important",
         "mañana": "morning"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tenemos una reunión importante",
+          "english": "We have an important meeting"
+        },
+        {
+          "spanish": "a las diez de la mañana.",
+          "english": "at ten in the morning."
+        }
+      ]
     },
     {
       "id": "m30-s2",
@@ -23,7 +33,17 @@
         "informe": "report",
         "email": "email",
         "mediodía": "noon"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Por favor, mándame el informe por email",
+          "english": "Please send me the report by email"
+        },
+        {
+          "spanish": "antes del mediodía.",
+          "english": "before noon."
+        }
+      ]
     },
     {
       "id": "m30-s3",
@@ -34,7 +54,17 @@
         "presupuesto": "budget",
         "próximo": "next",
         "trimestre": "quarter"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estoy revisando el presupuesto",
+          "english": "I am reviewing the budget"
+        },
+        {
+          "spanish": "para el próximo trimestre.",
+          "english": "for the next quarter."
+        }
+      ]
     },
     {
       "id": "m30-s4",
@@ -58,7 +88,17 @@
         "entrar": "to enter",
         "mercado": "market",
         "europeo": "European"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La empresa quiere entrar",
+          "english": "The company wants to enter"
+        },
+        {
+          "spanish": "en el mercado europeo.",
+          "english": "the European market."
+        }
+      ]
     },
     {
       "id": "m30-s6",
@@ -69,7 +109,17 @@
         "proyecto": "project",
         "fuera": "out",
         "oficina": "office"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El responsable del proyecto",
+          "english": "The project lead"
+        },
+        {
+          "spanish": "está fuera de la oficina esta semana.",
+          "english": "is out of the office this week."
+        }
+      ]
     },
     {
       "id": "m30-s7",
@@ -80,7 +130,17 @@
         "videollamada": "video call",
         "comentar": "discuss / go over",
         "detalles": "details"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Podemos organizar una videollamada",
+          "english": "Can we schedule a video call"
+        },
+        {
+          "spanish": "para comentar los detalles?",
+          "english": "to go over the details?"
+        }
+      ]
     },
     {
       "id": "m30-s8",
@@ -103,7 +163,17 @@
         "mucho": "a lot",
         "llegar": "to arrive / make it",
         "a tiempo": "on time"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estamos trabajando mucho",
+          "english": "We are working hard"
+        },
+        {
+          "spanish": "para llegar a tiempo.",
+          "english": "to meet the deadline."
+        }
+      ]
     },
     {
       "id": "m30-s10",
@@ -128,7 +198,17 @@
         "en": "in / on",
         "oficina": "office",
         "principal": "main"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La reunión empieza a las diez",
+          "english": "The meeting starts at ten"
+        },
+        {
+          "spanish": "en la oficina principal.",
+          "english": "in the main office."
+        }
+      ]
     },
     {
       "id": "m30-curated-12",
@@ -155,7 +235,17 @@
         "presupuesto": "budget",
         "conmigo": "with me",
         "compañera": "colleague"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi compañera revisa el presupuesto",
+          "english": "My colleague reviews the budget"
+        },
+        {
+          "spanish": "conmigo.",
+          "english": "with me."
+        }
+      ]
     },
     {
       "id": "m30-curated-14",
@@ -170,7 +260,17 @@
         "esta": "this",
         "mañana": "tomorrow / morning",
         "enviado": "sent"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El cliente ha enviado un correo",
+          "english": "The client sent an email"
+        },
+        {
+          "spanish": "esta mañana.",
+          "english": "this morning."
+        }
+      ]
     },
     {
       "id": "m30-curated-15",
@@ -183,7 +283,17 @@
         "lunes": "Mondays",
         "aprobamos": "we approve",
         "empezaremos": "we will start"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si aprobamos el proyecto,",
+          "english": "If we approve the project,"
+        },
+        {
+          "spanish": "empezaremos el lunes.",
+          "english": "we will start on Monday."
+        }
+      ]
     },
     {
       "id": "m30-curated-16",

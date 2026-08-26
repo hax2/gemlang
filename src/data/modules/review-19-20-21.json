@@ -43,7 +43,17 @@
         "no": "no / not",
         "llegues": "arrive (subj)",
         "tarde": "late / afternoon"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espero que",
+          "english": "I hope"
+        },
+        {
+          "spanish": "no llegues tarde.",
+          "english": "you don't arrive late."
+        }
+      ]
     },
     {
       "id": "review-19-20-21-from-m21-s5",
@@ -79,7 +89,17 @@
         "que": "that / than",
         "tengas": "have (subj)",
         "tiempo": "time"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Es importante",
+          "english": "It's important"
+        },
+        {
+          "spanish": "que tengas tiempo.",
+          "english": "that you have time."
+        }
+      ]
     },
     {
       "id": "review-19-20-21-from-m21-s4",
@@ -114,7 +134,17 @@
         "dinero": "money",
         "compras": "you buy",
         "pan": "bread"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si tienes dinero,",
+          "english": "If you have money,"
+        },
+        {
+          "spanish": "compras pan.",
+          "english": "you buy bread."
+        }
+      ]
     },
     {
       "id": "review-19-20-21-from-m20-s4",
@@ -186,7 +216,17 @@
         "es": "is",
         "más": "more",
         "barata": "cheap (fem)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si la compras hoy,",
+          "english": "If you buy it today,"
+        },
+        {
+          "spanish": "es más barata.",
+          "english": "it's cheaper."
+        }
+      ]
     }
   ],
   "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 19: Subjunctive: Hope\n• Chapter 20: Subjunctive: Importance\n• Chapter 21: Real Conditionals\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!",

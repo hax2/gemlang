@@ -24,7 +24,17 @@
         "gusta": "likes",
         "el": "the",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Te gusta",
+          "english": "You like"
+        },
+        {
+          "spanish": "el café.",
+          "english": "coffee."
+        }
+      ]
     },
     {
       "id": "m8-s3",
@@ -57,7 +67,17 @@
         "gusta": "likes",
         "el": "the",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Les gusta",
+          "english": "They/You (plural) like"
+        },
+        {
+          "spanish": "el café.",
+          "english": "coffee."
+        }
+      ]
     },
     {
       "id": "m8-s6",
@@ -92,7 +112,17 @@
         "gusta": "likes",
         "el": "the",
         "té": "tea"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No, no me gusta",
+          "english": "No, I don't like"
+        },
+        {
+          "spanish": "el té.",
+          "english": "tea."
+        }
+      ]
     },
     {
       "id": "m8-s9",
@@ -125,7 +155,17 @@
         "gustan": "like (pl)",
         "los": "the / them",
         "libros": "books"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me gustan",
+          "english": "I like"
+        },
+        {
+          "spanish": "los libros.",
+          "english": "books."
+        }
+      ]
     },
     {
       "id": "m8-s12",
@@ -159,7 +199,17 @@
         "gustan": "like (pl)",
         "los": "the / them",
         "libros": "books"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí, me gustan",
+          "english": "Yes, I like"
+        },
+        {
+          "spanish": "los libros.",
+          "english": "books."
+        }
+      ]
     },
     {
       "id": "m8-s15",
@@ -197,7 +247,21 @@
         "gusta": "likes",
         "el": "the",
         "fútbol": "football"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "A Luis",
+          "english": "Luis"
+        },
+        {
+          "spanish": "le gusta",
+          "english": "likes"
+        },
+        {
+          "spanish": "el fútbol.",
+          "english": "football."
+        }
+      ]
     },
     {
       "id": "m8-s18",
@@ -232,7 +296,17 @@
         "gusta": "likes",
         "aprender": "to learn",
         "español": "Spanish"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nos gusta",
+          "english": "We like"
+        },
+        {
+          "spanish": "aprender español.",
+          "english": "learning Spanish."
+        }
+      ]
     },
     {
       "id": "m8-s21",
@@ -264,7 +338,17 @@
         "Qué": "what",
         "te": "you / to you",
         "gusta": "likes"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Qué",
+          "english": "What"
+        },
+        {
+          "spanish": "te gusta?",
+          "english": "do you like?"
+        }
+      ]
     },
     {
       "id": "m8-s24",
@@ -305,7 +389,21 @@
         "gusta": "likes",
         "el": "the",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿A quién",
+          "english": "Who"
+        },
+        {
+          "spanish": "le gusta",
+          "english": "likes"
+        },
+        {
+          "spanish": "el café?",
+          "english": "coffee?"
+        }
+      ]
     },
     {
       "id": "m8-s27",
@@ -342,7 +440,17 @@
         "gusta": "likes",
         "este": "this (masc)",
         "libro": "book"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me gusta",
+          "english": "I like"
+        },
+        {
+          "spanish": "este libro.",
+          "english": "this book."
+        }
+      ]
     },
     {
       "id": "m8-s30",
@@ -377,7 +485,17 @@
         "estar": "to be",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Me gusta",
+          "english": "I like"
+        },
+        {
+          "spanish": "estar en casa.",
+          "english": "being at home."
+        }
+      ]
     },
     {
       "id": "m8-s33",
@@ -417,7 +535,17 @@
         "en": "in / on",
         "el": "the",
         "centro": "downtown"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí, me gusta",
+          "english": "Yes, I like"
+        },
+        {
+          "spanish": "trabajar en el centro.",
+          "english": "working downtown."
+        }
+      ]
     },
     {
       "id": "m8-s36",
@@ -455,7 +583,17 @@
         "las": "the / them (fem)",
         "casas": "houses",
         "grandes": "big (pl)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nos gustan",
+          "english": "We like"
+        },
+        {
+          "spanish": "las casas grandes.",
+          "english": "big houses."
+        }
+      ]
     },
     {
       "id": "m8-s39",
@@ -494,7 +632,21 @@
         "gusta": "likes",
         "el": "the",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "A Marta",
+          "english": "Marta"
+        },
+        {
+          "spanish": "le gusta",
+          "english": "likes"
+        },
+        {
+          "spanish": "el café.",
+          "english": "coffee."
+        }
+      ]
     },
     {
       "id": "m8-s42",
@@ -530,7 +682,17 @@
         "esta": "this",
         "canción": "song"
       },
-      "id": "m8-s-colloq1"
+      "id": "m8-s-colloq1",
+      "translationChunks": [
+        {
+          "spanish": "¡Me flipa",
+          "english": "I'm crazy about"
+        },
+        {
+          "spanish": "esta canción!",
+          "english": "this song!"
+        }
+      ]
     },
     {
       "spanish": "A mí me da igual.",

@@ -25,7 +25,17 @@
         "mucho": "a lot of",
         "frío": "cold",
         "Burgos": "Burgos"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "En invierno",
+          "english": "In winter"
+        },
+        {
+          "spanish": "hace mucho frío en Burgos.",
+          "english": "it's very cold in Burgos."
+        }
+      ]
     },
     {
       "id": "mhacer-s3",
@@ -57,7 +67,17 @@
         "hace": "is it (weather)",
         "tu": "your",
         "ciudad": "city"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Qué tiempo",
+          "english": "What's the weather like"
+        },
+        {
+          "spanish": "hace en tu ciudad?",
+          "english": "in your city?"
+        }
+      ]
     },
     {
       "id": "mhacer-s6",
@@ -67,7 +87,17 @@
         "sol": "sun",
         "vamos": "let's go",
         "terraza": "terrace / pavement café"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hace sol,",
+          "english": "It's sunny,"
+        },
+        {
+          "spanish": "vamos a la terraza.",
+          "english": "let's go out to the terrace."
+        }
+      ]
     },
     {
       "id": "mhacer-s7",
@@ -88,7 +118,17 @@
         "haces": "you do",
         "fines": "ends",
         "semana": "week"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Qué",
+          "english": "What"
+        },
+        {
+          "spanish": "haces los fines de semana?",
+          "english": "do you do at weekends?"
+        }
+      ]
     },
     {
       "id": "mhacer-s9",
@@ -100,7 +140,17 @@
         "tres": "three",
         "veces": "times",
         "por": "per"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hago deporte",
+          "english": "I do sport"
+        },
+        {
+          "spanish": "tres veces por semana.",
+          "english": "three times a week."
+        }
+      ]
     },
     {
       "id": "mhacer-s10",
@@ -120,7 +170,17 @@
       "wordMeanings": {
         "compra": "shopping",
         "sábados": "Saturdays"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hago",
+          "english": "I do"
+        },
+        {
+          "spanish": "la compra los sábados.",
+          "english": "the shopping on Saturdays."
+        }
+      ]
     },
     {
       "id": "mhacer-s12",
@@ -130,7 +190,17 @@
         "Hacemos": "shall we make",
         "paella": "paella",
         "domingo": "Sunday"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Hacemos una paella",
+          "english": "Shall we make a paella"
+        },
+        {
+          "spanish": "el domingo?",
+          "english": "on Sunday?"
+        }
+      ]
     },
     {
       "id": "mhacer-s13",
@@ -152,7 +222,17 @@
         "fotos": "photos",
         "todo": "whole",
         "viaje": "trip"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hago",
+          "english": "I take"
+        },
+        {
+          "spanish": "fotos de todo el viaje.",
+          "english": "photos of the whole trip."
+        }
+      ]
     },
     {
       "id": "mhacer-s15",
@@ -187,7 +267,17 @@
         "minutos": "minutes",
         "espero": "I wait",
         "autobús": "bus"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hace diez minutos que",
+          "english": "I've been waiting for the bus"
+        },
+        {
+          "spanish": "espero el autobús.",
+          "english": "for ten minutes."
+        }
+      ]
     },
     {
       "id": "mhacer-s18",
@@ -224,7 +314,17 @@
       "english": "At weekends I go hiking.",
       "wordMeanings": {
         "senderismo": "hiking"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Los fines de semana",
+          "english": "At weekends"
+        },
+        {
+          "spanish": "hago senderismo.",
+          "english": "I go hiking."
+        }
+      ]
     },
     {
       "id": "mhacer-s22",
@@ -257,7 +357,17 @@
         "hacemos": "we make",
         "viaje": "trip",
         "norte": "north"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Este verano",
+          "english": "This summer"
+        },
+        {
+          "spanish": "hacemos un viaje al norte.",
+          "english": "we're taking a trip up north."
+        }
+      ]
     },
     {
       "id": "mhacer-s25",
@@ -287,7 +397,21 @@
         "madre": "mother",
         "bizcocho": "sponge cake",
         "domingos": "Sundays"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mi madre",
+          "english": "My mum"
+        },
+        {
+          "spanish": "hace bizcocho",
+          "english": "bakes a cake"
+        },
+        {
+          "spanish": "los domingos.",
+          "english": "on Sundays."
+        }
+      ]
     }
   ],
   "grammarExplanation": "'Hacer' means 'to do' or 'to make', but it also covers things English splits across other verbs:\n\n• Weather → hace sol / frío / calor / viento / buen tiempo = it's sunny / cold / hot / windy / nice\n• Time elapsed → Hace + time + que + present = how long something has been happening: Hace dos años que vivo aquí.\n\nEveryday expressions:\n• hacer la compra = to do the shopping\n• hacer fotos = to take photos\n• hacer deporte = to do sport\n• hacer cola = to queue\n\nConjugation:\n• Hago = I do (IRREGULAR!)\n• Haces = you do\n• Hace = he/she does\n• Hacemos = we do\n• Hacéis = you all do\n• Hacen = they do",

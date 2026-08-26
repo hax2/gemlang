@@ -10,7 +10,13 @@
       "english": "Speak.",
       "wordMeanings": {
         "Habla": "speaks"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Habla.",
+          "english": "Speak."
+        }
+      ]
     },
     {
       "id": "m16-s2",
@@ -18,7 +24,13 @@
       "english": "Eat.",
       "wordMeanings": {
         "Come": "eats"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Come.",
+          "english": "Eat."
+        }
+      ]
     },
     {
       "id": "m16-s3",
@@ -27,7 +39,13 @@
       "wordMeanings": {
         "Vive": "lives",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Vive aquí.",
+          "english": "Live here."
+        }
+      ]
     },
     {
       "id": "m16-s4",
@@ -36,7 +54,13 @@
       "wordMeanings": {
         "Espera": "waits",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Espera aquí.",
+          "english": "Wait here."
+        }
+      ]
     },
     {
       "id": "m16-s5",
@@ -56,7 +80,17 @@
         "Coma": "eat (subj)",
         "por": "for / by",
         "favor": "favor"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Coma,",
+          "english": "Eat,"
+        },
+        {
+          "spanish": "por favor.",
+          "english": "please. (formal)"
+        }
+      ]
     },
     {
       "id": "m16-s7",
@@ -64,7 +98,13 @@
       "english": "Speak. (you plural, Spain)",
       "wordMeanings": {
         "Hablad": "speak (imp pl)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hablad.",
+          "english": "Speak. (you plural, Spain)"
+        }
+      ]
     },
     {
       "id": "m16-s8",
@@ -74,7 +114,17 @@
         "Hablen": "speak (subj pl)",
         "por": "for / by",
         "favor": "favor"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hablen,",
+          "english": "Speak,"
+        },
+        {
+          "spanish": "por favor.",
+          "english": "please. (you plural)"
+        }
+      ]
     },
     {
       "id": "m16-s9",
@@ -82,7 +132,13 @@
       "english": "Let’s go.",
       "wordMeanings": {
         "Vamos": "we go"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Vamos.",
+          "english": "Let’s go."
+        }
+      ]
     },
     {
       "id": "m16-s10",
@@ -102,7 +158,13 @@
         "Vamos": "we go",
         "a": "to",
         "comer": "to eat"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Vamos a comer.",
+          "english": "Let’s eat."
+        }
+      ]
     },
     {
       "id": "m16-s12",
@@ -112,7 +174,17 @@
         "Abre": "opens",
         "la": "the / it (fem)",
         "puerta": "door"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Abre",
+          "english": "Open"
+        },
+        {
+          "spanish": "la puerta.",
+          "english": "the door."
+        }
+      ]
     },
     {
       "id": "m16-s13",
@@ -142,7 +214,17 @@
         "Abran": "open (subj/form pl)",
         "la": "the / it (fem)",
         "puerta": "door"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Abran",
+          "english": "Open"
+        },
+        {
+          "spanish": "la puerta.",
+          "english": "the door. (you plural)"
+        }
+      ]
     },
     {
       "id": "m16-s16",
@@ -151,7 +233,13 @@
       "wordMeanings": {
         "Mira": "looks",
         "esto": "this"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mira esto.",
+          "english": "Look at this."
+        }
+      ]
     },
     {
       "id": "m16-s17",
@@ -160,7 +248,13 @@
       "wordMeanings": {
         "Mire": "look (subj)",
         "esto": "this"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mire esto.",
+          "english": "Look at this. (formal)"
+        }
+      ]
     },
     {
       "id": "m16-s18",
@@ -168,7 +262,13 @@
       "english": "Listen.",
       "wordMeanings": {
         "Escucha": "listens"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Escucha.",
+          "english": "Listen."
+        }
+      ]
     },
     {
       "id": "m16-s19",
@@ -176,7 +276,13 @@
       "english": "Listen. (formal)",
       "wordMeanings": {
         "Escuche": "listen (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Escuche.",
+          "english": "Listen. (formal)"
+        }
+      ]
     },
     {
       "id": "m16-s20",
@@ -184,7 +290,13 @@
       "english": "Tell me.",
       "wordMeanings": {
         "Dime": "tell me"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Dime.",
+          "english": "Tell me."
+        }
+      ]
     },
     {
       "id": "m16-s21",
@@ -192,7 +304,13 @@
       "english": "Tell me. (formal)",
       "wordMeanings": {
         "Dígame": "tell me (form)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Dígame.",
+          "english": "Tell me. (formal)"
+        }
+      ]
     },
     {
       "id": "m16-s22",
@@ -210,7 +328,13 @@
       "english": "Give it to him/her.",
       "wordMeanings": {
         "Dáselo": "give it to him/her"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Dáselo.",
+          "english": "Give it to him/her."
+        }
+      ]
     },
     {
       "id": "m16-s24",
@@ -218,7 +342,13 @@
       "english": "Pass it to me.",
       "wordMeanings": {
         "Pásamelo": "pass it to me"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Pásamelo.",
+          "english": "Pass it to me."
+        }
+      ]
     },
     {
       "id": "m16-s25",
@@ -227,7 +357,13 @@
       "wordMeanings": {
         "Date": "give yourself",
         "prisa": "hurry"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Date prisa.",
+          "english": "Hurry up."
+        }
+      ]
     },
     {
       "id": "m16-s26",
@@ -236,7 +372,17 @@
       "wordMeanings": {
         "Venga": "come on",
         "vámonos": "let's go"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Venga,",
+          "english": "Come on,"
+        },
+        {
+          "spanish": "vámonos.",
+          "english": "let's go."
+        }
+      ]
     },
     {
       "id": "m16-s27",
@@ -244,7 +390,13 @@
       "english": "Explain it to him/her.",
       "wordMeanings": {
         "Explícaselo": "explain it to him/her"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Explícaselo.",
+          "english": "Explain it to him/her."
+        }
+      ]
     },
     {
       "id": "m16-s28",
@@ -252,7 +404,13 @@
       "english": "Show it to him/her.",
       "wordMeanings": {
         "Enséñaselo": "show it to him/her"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Enséñaselo.",
+          "english": "Show it to him/her."
+        }
+      ]
     },
     {
       "id": "m16-s29",
@@ -261,7 +419,13 @@
       "wordMeanings": {
         "Siéntate": "sit down",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Siéntate aquí.",
+          "english": "Sit here."
+        }
+      ]
     },
     {
       "id": "m16-s30",
@@ -270,7 +434,13 @@
       "wordMeanings": {
         "Siéntese": "sit down (form)",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Siéntese aquí.",
+          "english": "Sit here. (formal)"
+        }
+      ]
     },
     {
       "id": "m16-s31",
@@ -290,7 +460,17 @@
         "Quédese": "stay (form)",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quédese",
+          "english": "Stay"
+        },
+        {
+          "spanish": "en casa.",
+          "english": "at home. (formal)"
+        }
+      ]
     },
     {
       "id": "m16-s33",
@@ -298,7 +478,13 @@
       "english": "Come.",
       "wordMeanings": {
         "Ven": "come"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ven.",
+          "english": "Come."
+        }
+      ]
     },
     {
       "id": "m16-s34",
@@ -306,7 +492,13 @@
       "english": "Come. (formal)",
       "wordMeanings": {
         "Venga": "come (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Venga.",
+          "english": "Come. (formal)"
+        }
+      ]
     },
     {
       "id": "m16-s35",
@@ -314,7 +506,13 @@
       "english": "Go. (you plural, Spain)",
       "wordMeanings": {
         "Id": "go (imp pl)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Id.",
+          "english": "Go. (you plural, Spain)"
+        }
+      ]
     },
     {
       "id": "m16-s36",
@@ -322,7 +520,13 @@
       "english": "Go. (you plural)",
       "wordMeanings": {
         "Vayan": "go (subj pl)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Vayan.",
+          "english": "Go. (you plural)"
+        }
+      ]
     }
   ],
   "grammarExplanation": "Affirmative commands tell someone TO DO something.\n\nInformal 'tú' commands (use the él/ella present form):\n• Habla (Speak), Come (Eat), Abre (Open)\n\nFormal 'usted' commands (use subjunctive):\n• Hable, Coma, Abra\n\nPlural 'ustedes' commands (subjunctive plural):\n• Hablen, Coman, Abran\n\nWith reflexive/object pronouns, ATTACH them to the end:\n• Siéntate (Sit down), Dime (Tell me), Dáselo (Give it to him/her)",

@@ -22,7 +22,17 @@
         "Tú": "you",
         "hablas": "you speak",
         "español": "Spanish"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tú hablas",
+          "english": "You speak"
+        },
+        {
+          "spanish": "español.",
+          "english": "Spanish."
+        }
+      ]
     },
     {
       "id": "m5-s3",
@@ -52,7 +62,17 @@
         "Nosotros": "we",
         "hablamos": "we speak",
         "español": "Spanish"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nosotros hablamos",
+          "english": "We speak"
+        },
+        {
+          "spanish": "español.",
+          "english": "Spanish."
+        }
+      ]
     },
     {
       "id": "m5-s6",
@@ -82,7 +102,17 @@
         "Tú": "you",
         "trabajas": "you work",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tú trabajas",
+          "english": "You work"
+        },
+        {
+          "spanish": "hoy.",
+          "english": "today."
+        }
+      ]
     },
     {
       "id": "m5-s9",
@@ -115,7 +145,17 @@
         "Nosotros": "we",
         "trabajamos": "we work",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nosotros trabajamos",
+          "english": "We work"
+        },
+        {
+          "spanish": "aquí.",
+          "english": "here."
+        }
+      ]
     },
     {
       "id": "m5-s12",
@@ -147,7 +187,17 @@
         "en": "in / on",
         "la": "the / it (fem)",
         "escuela": "school"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tú estudias",
+          "english": "You study"
+        },
+        {
+          "spanish": "en la escuela.",
+          "english": "at school."
+        }
+      ]
     },
     {
       "id": "m5-s15",
@@ -178,7 +228,17 @@
         "estudiamos": "we study",
         "cada": "each",
         "día": "day"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nosotros estudiamos",
+          "english": "We study"
+        },
+        {
+          "spanish": "cada día.",
+          "english": "every day."
+        }
+      ]
     },
     {
       "id": "m5-s18",
@@ -210,7 +270,17 @@
         "un": "a",
         "libro": "book",
         "nuevo": "new (masc)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Él compra",
+          "english": "He buys"
+        },
+        {
+          "spanish": "un libro nuevo.",
+          "english": "a new book."
+        }
+      ]
     },
     {
       "id": "m5-s21",
@@ -242,7 +312,17 @@
         "busco": "I look for",
         "un": "a",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Yo busco",
+          "english": "I look for"
+        },
+        {
+          "spanish": "un café.",
+          "english": "a café."
+        }
+      ]
     },
     {
       "id": "m5-s24",
@@ -273,7 +353,17 @@
         "busca": "looks for",
         "una": "a (fem)",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ella busca",
+          "english": "She looks for"
+        },
+        {
+          "spanish": "una casa.",
+          "english": "a house."
+        }
+      ]
     },
     {
       "id": "m5-s27",
@@ -304,7 +394,17 @@
         "Tú": "you",
         "esperas": "you wait",
         "allí": "there"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tú esperas",
+          "english": "You wait"
+        },
+        {
+          "spanish": "allí.",
+          "english": "there."
+        }
+      ]
     },
     {
       "id": "m5-s30",
@@ -339,7 +439,17 @@
         "en": "in / on",
         "la": "the / it (fem)",
         "calle": "street"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Nosotros esperamos",
+          "english": "We wait"
+        },
+        {
+          "spanish": "en la calle.",
+          "english": "in the street."
+        }
+      ]
     },
     {
       "id": "m5-s33",
@@ -370,7 +480,17 @@
         "escucha": "listens",
         "en": "in / on",
         "silencio": "silence"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Él escucha",
+          "english": "He listens"
+        },
+        {
+          "spanish": "en silencio.",
+          "english": "in silence."
+        }
+      ]
     },
     {
       "id": "m5-s36",
@@ -402,7 +522,17 @@
         "miras": "you look",
         "la": "the / it (fem)",
         "foto": "photo"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tú miras",
+          "english": "You look at"
+        },
+        {
+          "spanish": "la foto.",
+          "english": "the photo."
+        }
+      ]
     },
     {
       "id": "m5-s39",
@@ -436,7 +566,17 @@
         "y": "and",
         "mañana": "tomorrow / morning",
         "trabajo": "I work / job"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hoy estudio",
+          "english": "Today I study"
+        },
+        {
+          "spanish": "y mañana trabajo.",
+          "english": "and tomorrow I work."
+        }
+      ]
     },
     {
       "id": "m5-s42",
@@ -469,7 +609,13 @@
       "wordMeanings": {
         "Me": "to me",
         "encanta": "it enchants"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¡Me encanta!",
+          "english": "I love it!"
+        }
+      ]
     }
   ],
   "grammarExplanation": "Regular -AR verbs follow a predictable conjugation pattern. Remove '-ar' and add these endings:\n\n• -o (yo): hablo\n• -as (tú): hablas\n• -a (él/ella): habla\n• -amos (nosotros): hablamos\n• -áis (vosotros): habláis\n• -an (ellos/ellas): hablan\n\nThis same pattern works for hablar, trabajar, estudiar, comprar, buscar, esperar, escuchar, mirar, and many more.",

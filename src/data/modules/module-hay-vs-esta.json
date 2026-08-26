@@ -15,7 +15,17 @@
         "en": "in / on",
         "la": "the (fem)",
         "mesa": "table"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hay",
+          "english": "There is"
+        },
+        {
+          "spanish": "un libro en la mesa.",
+          "english": "a book on the table."
+        }
+      ]
     },
     {
       "id": "mhayesta-s2",
@@ -30,7 +40,17 @@
         "panadería": "bakery",
         "muy": "very",
         "buena": "good (fem)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "En mi calle",
+          "english": "On my street"
+        },
+        {
+          "spanish": "hay una panadería muy buena.",
+          "english": "there's a very good bakery."
+        }
+      ]
     },
     {
       "id": "mhayesta-s3",
@@ -54,7 +74,17 @@
         "supermercado": "supermarket",
         "por": "around / through",
         "aquí": "here"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Hay",
+          "english": "Is there"
+        },
+        {
+          "spanish": "un supermercado por aquí?",
+          "english": "a supermarket around here?"
+        }
+      ]
     },
     {
       "id": "mhayesta-s5",
@@ -65,7 +95,21 @@
         "hay": "there is",
         "uno": "one",
         "esquina": "corner"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "hay uno",
+          "english": "there's one"
+        },
+        {
+          "spanish": "en la esquina.",
+          "english": "on the corner."
+        }
+      ]
     },
     {
       "id": "mhayesta-s6",
@@ -85,7 +129,17 @@
         "con": "with",
         "el": "the (masc)",
         "ordenador": "computer"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hay",
+          "english": "There's"
+        },
+        {
+          "spanish": "un problema con el ordenador.",
+          "english": "a problem with the computer."
+        }
+      ]
     },
     {
       "id": "mhayesta-s8",
@@ -96,7 +150,17 @@
         "estudiantes": "students",
         "hay": "there are",
         "clase": "class"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Cuántos estudiantes hay",
+          "english": "How many students are there"
+        },
+        {
+          "spanish": "en clase?",
+          "english": "in class?"
+        }
+      ]
     },
     {
       "id": "mhayesta-s9",
@@ -120,7 +184,17 @@
         "tantas": "so many (fem)",
         "tiendas": "shops",
         "por": "around"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Antes no había",
+          "english": "There didn't use to be"
+        },
+        {
+          "spanish": "tantas tiendas por aquí.",
+          "english": "so many shops around here."
+        }
+      ]
     },
     {
       "id": "mhayesta-s11",
@@ -132,7 +206,21 @@
         "mucha": "a lot of (fem)",
         "gente": "people",
         "plaza": "square"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "había mucha gente",
+          "english": "there were lots of people"
+        },
+        {
+          "spanish": "en la plaza.",
+          "english": "in the square."
+        }
+      ]
     },
     {
       "id": "mhayesta-s12",
@@ -155,7 +243,17 @@
         "está": "is (location)",
         "en": "on",
         "mesa": "table"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El libro está",
+          "english": "The book is"
+        },
+        {
+          "spanish": "en la mesa.",
+          "english": "on the table."
+        }
+      ]
     },
     {
       "id": "mhayesta-s14",
@@ -166,7 +264,17 @@
         "nevera": "fridge",
         "está": "is",
         "vacía": "empty"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "La nevera",
+          "english": "The fridge"
+        },
+        {
+          "spanish": "está vacía.",
+          "english": "is empty."
+        }
+      ]
     },
     {
       "id": "mhayesta-s15",
@@ -187,7 +295,17 @@
         "Dónde": "where",
         "está": "is",
         "baño": "bathroom"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Dónde está",
+          "english": "Where is"
+        },
+        {
+          "spanish": "el baño?",
+          "english": "the bathroom?"
+        }
+      ]
     },
     {
       "id": "mhayesta-s17",
@@ -199,7 +317,17 @@
         "final": "end",
         "del": "of the",
         "pasillo": "corridor"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Está",
+          "english": "It's"
+        },
+        {
+          "spanish": "al final del pasillo.",
+          "english": "at the end of the corridor."
+        }
+      ]
     },
     {
       "id": "mhayesta-s18",
@@ -222,7 +350,17 @@
         "están": "they are",
         "de": "of / from",
         "vacaciones": "holidays"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Mis padres están",
+          "english": "My parents are"
+        },
+        {
+          "spanish": "de vacaciones.",
+          "english": "on holiday."
+        }
+      ]
     },
     {
       "id": "mhayesta-s20",
@@ -233,7 +371,17 @@
         "está": "is",
         "cerrado": "closed",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El supermercado",
+          "english": "The supermarket"
+        },
+        {
+          "spanish": "está cerrado hoy.",
+          "english": "is closed today."
+        }
+      ]
     },
     {
       "id": "mhayesta-s21",
@@ -252,7 +400,17 @@
         "pan": "bread",
         "está": "is",
         "bolsa": "bag"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El pan está",
+          "english": "The bread is"
+        },
+        {
+          "spanish": "en la bolsa.",
+          "english": "in the bag."
+        }
+      ]
     },
     {
       "id": "mhayesta-s23",
@@ -264,7 +422,17 @@
         "carta": "letter",
         "para": "for",
         "ti": "you"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hay una carta",
+          "english": "There's a letter"
+        },
+        {
+          "spanish": "para ti.",
+          "english": "for you."
+        }
+      ]
     },
     {
       "id": "mhayesta-s24",
@@ -286,7 +454,17 @@
         "hay": "there is",
         "mucho": "a lot of",
         "tráfico": "traffic"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "En esta zona",
+          "english": "There's a lot of traffic"
+        },
+        {
+          "spanish": "hay mucho tráfico.",
+          "english": "in this area."
+        }
+      ]
     },
     {
       "id": "mhayesta-s26",
@@ -300,7 +478,17 @@
         "está": "it is",
         "lleno": "full",
         "niños": "children"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "En mi barrio hay un parque",
+          "english": "In my neighbourhood there's a park,"
+        },
+        {
+          "spanish": "y siempre está lleno de niños.",
+          "english": "and it's always full of children."
+        }
+      ]
     }
   ],
   "grammarExplanation": "'Hay' (from 'haber') expresses the EXISTENCE of something indefinite: Hay un problema = There is a problem. It has only one form for singular and plural. Use it when the thing isn't specific or known yet. 'Estar' tells you WHERE a specific thing or person is: El libro está en la mesa = The book is on the table (we know which book). A good trick: if you can name or point at it, it's probably 'está'. Also learn these two extras:\n\n• Había = there was / there were (past existence)\n• Hay que + infinitive = one has to do something (obligation): Hay que madrugar.\n\nConjugation of estar for location:\n• Está = he/she/it is • Están = they are",

@@ -16,7 +16,17 @@
         "a": "at",
         "las": "the",
         "siete": "seven"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Marta se despierta",
+          "english": "Marta wakes up"
+        },
+        {
+          "spanish": "a las siete.",
+          "english": "at seven."
+        }
+      ]
     },
     {
       "id": "s2-s2",
@@ -41,7 +51,17 @@
         "El": "the",
         "se llama": "is called (reflexive)",
         "Luna": "Luna (Moon)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Marta tiene un gato.",
+          "english": "Marta has a cat."
+        },
+        {
+          "spanish": "El gato se llama Luna.",
+          "english": "The cat is called Luna."
+        }
+      ]
     },
     {
       "id": "s2-s4",
@@ -55,7 +75,17 @@
         "café": "coffee",
         "con": "with",
         "leche": "milk"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "A Marta le gusta",
+          "english": "Marta likes"
+        },
+        {
+          "spanish": "el café con leche.",
+          "english": "coffee with milk."
+        }
+      ]
     },
     {
       "id": "s2-s5",
@@ -90,7 +120,17 @@
         "les gusta": "they like",
         "comer": "to eat",
         "juntos": "together"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "A ellos les gusta",
+          "english": "They like"
+        },
+        {
+          "spanish": "comer juntos.",
+          "english": "to eat together."
+        }
+      ]
     },
     {
       "id": "s2-s8",
@@ -103,7 +143,17 @@
         "y": "and",
         "bebe": "drinks",
         "agua": "water"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Marta come una ensalada",
+          "english": "Marta eats a salad"
+        },
+        {
+          "spanish": "y bebe agua.",
+          "english": "and drinks water."
+        }
+      ]
     },
     {
       "id": "s2-s9",
@@ -129,7 +179,17 @@
         "tarea": "homework",
         "Es": "it is",
         "aburrida": "boring"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No le gusta la tarea.",
+          "english": "She doesn't like the homework."
+        },
+        {
+          "spanish": "Es aburrida.",
+          "english": "It's boring."
+        }
+      ]
     },
     {
       "id": "s2-s11",
@@ -157,7 +217,17 @@
         "noche": "night",
         "se acuesta": "goes to bed (reflexive)",
         "temprano": "early"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Por la noche,",
+          "english": "At night,"
+        },
+        {
+          "spanish": "Marta se acuesta temprano.",
+          "english": "Marta goes to bed early."
+        }
+      ]
     },
     {
       "id": "s2-s13",
@@ -169,7 +239,17 @@
         "leer": "to read",
         "antes de": "before",
         "dormir": "to sleep"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "A ella le gusta",
+          "english": "She likes"
+        },
+        {
+          "spanish": "leer antes de dormir.",
+          "english": "to read before sleeping."
+        }
+      ]
     },
     {
       "id": "s2-s14",

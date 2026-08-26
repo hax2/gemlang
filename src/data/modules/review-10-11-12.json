@@ -136,7 +136,17 @@
         "en": "in / on",
         "el": "the",
         "trabajo": "I work / job"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "estabas en el trabajo.",
+          "english": "you were at work."
+        }
+      ]
     },
     {
       "id": "review-10-11-12-from-m10-s2",
@@ -170,7 +180,17 @@
         "y": "and",
         "después": "after",
         "comimos": "we ate"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer hablamos",
+          "english": "Yesterday we talked"
+        },
+        {
+          "spanish": "y después comimos.",
+          "english": "and then we ate."
+        }
+      ]
     }
   ],
   "grammarExplanation": "Time to review! This module mixes sentences from the last 3 chapters you studied:\n\n• Chapter 10: The Preterite Tense\n• Chapter 11: The Imperfect Tense\n• Chapter 12: The Present Perfect\n\nThe sentences are shuffled so you can't rely on context — you'll need to recall the vocabulary and grammar from each chapter on your own. Take your time and listen carefully!",

@@ -13,7 +13,17 @@
         "café": "coffee",
         "con": "with",
         "leche": "milk"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero",
+          "english": "I'd like"
+        },
+        {
+          "spanish": "un café con leche.",
+          "english": "a coffee with milk."
+        }
+      ]
     },
     {
       "id": "mstem-s2",
@@ -32,7 +42,17 @@
       "wordMeanings": {
         "esperar": "to wait",
         "más": "more / any longer"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No quiero",
+          "english": "I don't want"
+        },
+        {
+          "spanish": "esperar más.",
+          "english": "to wait any longer."
+        }
+      ]
     },
     {
       "id": "mstem-s4",
@@ -42,7 +62,17 @@
         "quiere": "she wants",
         "aprender": "to learn",
         "francés": "French"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ella quiere",
+          "english": "She wants"
+        },
+        {
+          "spanish": "aprender francés.",
+          "english": "to learn French."
+        }
+      ]
     },
     {
       "id": "mstem-s5",
@@ -64,7 +94,17 @@
         "tomar": "to have",
         "antes": "before",
         "salir": "to go out"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Queréis",
+          "english": "Do you all want"
+        },
+        {
+          "spanish": "tomar algo antes de salir?",
+          "english": "to get something before going out?"
+        }
+      ]
     },
     {
       "id": "mstem-s7",
@@ -74,7 +114,17 @@
         "quieren": "they want",
         "jugar": "to play",
         "parque": "park"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Los niños quieren",
+          "english": "The kids want"
+        },
+        {
+          "spanish": "jugar en el parque.",
+          "english": "to play in the park."
+        }
+      ]
     },
     {
       "id": "mstem-s8",
@@ -104,7 +154,17 @@
         "lo": "it",
         "siento": "I feel (lo siento = sorry)",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No puedo venir hoy,",
+          "english": "I can't come today,"
+        },
+        {
+          "spanish": "lo siento.",
+          "english": "I'm sorry."
+        }
+      ]
     },
     {
       "id": "mstem-s11",
@@ -124,7 +184,17 @@
         "Podemos": "we can",
         "quedar": "to meet up",
         "ocho": "eight"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Podemos",
+          "english": "We can"
+        },
+        {
+          "spanish": "quedar a las ocho.",
+          "english": "meet at eight."
+        }
+      ]
     },
     {
       "id": "mstem-s13",
@@ -161,7 +231,17 @@
       "wordMeanings": {
         "prefiero": "I prefer",
         "solo": "plain / black"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Yo prefiero",
+          "english": "I prefer"
+        },
+        {
+          "spanish": "el café solo.",
+          "english": "black coffee."
+        }
+      ]
     },
     {
       "id": "mstem-s17",
@@ -181,7 +261,17 @@
       "wordMeanings": {
         "entiendo": "I understand",
         "palabra": "word"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No entiendo",
+          "english": "I don't understand"
+        },
+        {
+          "spanish": "esta palabra.",
+          "english": "this word."
+        }
+      ]
     },
     {
       "id": "mstem-s19",
@@ -191,7 +281,17 @@
         "Entiendes": "do you understand",
         "acento": "accent",
         "andaluz": "Andalusian"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Entiendes",
+          "english": "Do you understand"
+        },
+        {
+          "spanish": "el acento andaluz?",
+          "english": "the Andalusian accent?"
+        }
+      ]
     },
     {
       "id": "mstem-s20",
@@ -211,7 +311,17 @@
         "Cuando": "when",
         "cocino": "I cook",
         "amigos": "friends"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Cuando puedo,",
+          "english": "When I can,"
+        },
+        {
+          "spanish": "cocino para mis amigos.",
+          "english": "I cook for my friends."
+        }
+      ]
     },
     {
       "id": "mstem-s22",
@@ -220,7 +330,17 @@
       "wordMeanings": {
         "cuarenta": "forty",
         "euros": "euros"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Este jersey",
+          "english": "This jumper"
+        },
+        {
+          "spanish": "cuesta cuarenta euros.",
+          "english": "costs forty euros."
+        }
+      ]
     },
     {
       "id": "mstem-s23",
@@ -240,7 +360,17 @@
         "encuentro": "I find",
         "gafas": "glasses",
         "sol": "sun"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No encuentro",
+          "english": "I can't find"
+        },
+        {
+          "spanish": "mis gafas de sol.",
+          "english": "my sunglasses."
+        }
+      ]
     },
     {
       "id": "mstem-s25",
@@ -251,7 +381,17 @@
         "aparcamiento": "parking",
         "es": "is",
         "imposible": "impossible"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Encontrar aparcamiento en el centro",
+          "english": "Finding parking in the centre"
+        },
+        {
+          "spanish": "es imposible.",
+          "english": "is impossible."
+        }
+      ]
     },
     {
       "id": "mstem-s26",
@@ -272,7 +412,17 @@
         "Jugamos": "we play",
         "fútbol": "football",
         "domingos": "Sundays"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Jugamos",
+          "english": "We play"
+        },
+        {
+          "spanish": "al fútbol los domingos.",
+          "english": "football on Sundays."
+        }
+      ]
     },
     {
       "id": "mstem-s28",
@@ -281,7 +431,17 @@
       "wordMeanings": {
         "necesito": "I need",
         "vacaciones": "holiday"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No puedo más,",
+          "english": "I can't take it any more,"
+        },
+        {
+          "spanish": "necesito vacaciones.",
+          "english": "I need a holiday."
+        }
+      ]
     }
   ],
   "grammarExplanation": "Some verbs change their stem vowel when stressed — in every form EXCEPT nosotros and vosotros, which keep the original vowel:\n\n• e → ie: querer (quiero, quieres, quiere… pero queremos, queréis), empezar, entender, preferir\n• o → ue: poder (puedo, puedes, puede… pero podemos, podéis), dormir, volver, contar, encontrar, costar\n• u → ue: jugar (juego, juegas, juega, jugamos, jugáis, juegan) — the only one!\n\nKey patterns:\n• querer + infinitive = to want to do something\n• poder + infinitive = to be able to / can do something\n• quedar = to meet up\n• café solo = black coffee",

@@ -117,7 +117,17 @@
         {
           "english": "The concert is in the park.",
           "spanish": "El concierto es en el parque.",
-          "reason": "Event location uses ser."
+          "reason": "Event location uses ser.",
+          "translationChunks": [
+            {
+              "spanish": "El concierto",
+              "english": "The concert"
+            },
+            {
+              "spanish": "es en el parque.",
+              "english": "is in the park."
+            }
+          ]
         },
         {
           "english": "The exam is on Friday.",
@@ -127,12 +137,32 @@
         {
           "english": "Today is Monday.",
           "spanish": "Hoy es lunes.",
-          "reason": "Days use ser."
+          "reason": "Days use ser.",
+          "translationChunks": [
+            {
+              "spanish": "Hoy",
+              "english": "Today"
+            },
+            {
+              "spanish": "es lunes.",
+              "english": "is Monday."
+            }
+          ]
         },
         {
           "english": "The meeting is at three.",
           "spanish": "La reunión es a las tres.",
-          "reason": "Event time uses ser."
+          "reason": "Event time uses ser.",
+          "translationChunks": [
+            {
+              "spanish": "La reunión",
+              "english": "The meeting"
+            },
+            {
+              "spanish": "es a las tres.",
+              "english": "is at three."
+            }
+          ]
         },
         {
           "english": "The class is in room ten.",
@@ -251,12 +281,32 @@
         {
           "english": "The book is Ana's.",
           "spanish": "El libro es de Ana.",
-          "reason": "Ownership uses ser."
+          "reason": "Ownership uses ser.",
+          "translationChunks": [
+            {
+              "spanish": "El libro es",
+              "english": "The book is"
+            },
+            {
+              "spanish": "de Ana.",
+              "english": "Ana's."
+            }
+          ]
         },
         {
           "english": "The book is on the table.",
           "spanish": "El libro está en la mesa.",
-          "reason": "Location uses estar."
+          "reason": "Location uses estar.",
+          "translationChunks": [
+            {
+              "spanish": "El libro",
+              "english": "The book"
+            },
+            {
+              "spanish": "está en la mesa.",
+              "english": "is on the table."
+            }
+          ]
         },
         {
           "english": "My friends are from Madrid.",
@@ -266,12 +316,32 @@
         {
           "english": "My friends are in Madrid.",
           "spanish": "Mis amigos están en Madrid.",
-          "reason": "Location uses estar."
+          "reason": "Location uses estar.",
+          "translationChunks": [
+            {
+              "spanish": "Mis amigos están",
+              "english": "My friends are"
+            },
+            {
+              "spanish": "en Madrid.",
+              "english": "in Madrid."
+            }
+          ]
         },
         {
           "english": "The teacher is teaching Spanish.",
           "spanish": "La profesora está enseñando español.",
-          "reason": "Action in progress uses estar."
+          "reason": "Action in progress uses estar.",
+          "translationChunks": [
+            {
+              "spanish": "La profesora",
+              "english": "The teacher"
+            },
+            {
+              "spanish": "está enseñando español.",
+              "english": "is teaching Spanish."
+            }
+          ]
         }
       ]
     }

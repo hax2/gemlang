@@ -12,7 +12,17 @@
         "Quiero": "I want",
         "que": "that / than",
         "hables": "speak (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero",
+          "english": "I want"
+        },
+        {
+          "spanish": "que hables.",
+          "english": "you to speak."
+        }
+      ]
     },
     {
       "id": "m18-s2",
@@ -44,7 +54,17 @@
         "que": "that / than",
         "estudies": "study (subj)",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero",
+          "english": "I want"
+        },
+        {
+          "spanish": "que estudies hoy.",
+          "english": "you to study today."
+        }
+      ]
     },
     {
       "id": "m18-s5",
@@ -55,7 +75,17 @@
         "que": "that / than",
         "trabajes": "work (subj)",
         "mañana": "tomorrow / morning"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero",
+          "english": "I want"
+        },
+        {
+          "spanish": "que trabajes mañana.",
+          "english": "you to work tomorrow."
+        }
+      ]
     },
     {
       "id": "m18-s6",
@@ -79,7 +109,17 @@
         "cierres": "close (subj)",
         "la": "the / it (fem)",
         "ventana": "window"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero",
+          "english": "I want"
+        },
+        {
+          "spanish": "que cierres la ventana.",
+          "english": "you to close the window."
+        }
+      ]
     },
     {
       "id": "m18-s8",
@@ -101,7 +141,17 @@
         "que": "that / than",
         "me": "me / to me",
         "escuches": "listen (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero",
+          "english": "I want"
+        },
+        {
+          "spanish": "que me escuches.",
+          "english": "you to listen to me."
+        }
+      ]
     },
     {
       "id": "m18-s10",
@@ -112,7 +162,17 @@
         "que": "that / than",
         "me": "me / to me",
         "mires": "look (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero",
+          "english": "I want"
+        },
+        {
+          "spanish": "que me mires.",
+          "english": "you to look at me."
+        }
+      ]
     },
     {
       "id": "m18-s11",
@@ -151,7 +211,17 @@
         "des": "give (subj)",
         "a": "to",
         "Ana": "Ana"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero",
+          "english": "I want"
+        },
+        {
+          "spanish": "que se lo des a Ana.",
+          "english": "you to give it to Ana."
+        }
+      ]
     },
     {
       "id": "m18-s14",
@@ -165,7 +235,17 @@
         "des": "give (subj)",
         "a": "to",
         "Luis": "Luis"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero",
+          "english": "I want"
+        },
+        {
+          "spanish": "que se la des a Luis.",
+          "english": "you to give it to Luis."
+        }
+      ]
     },
     {
       "id": "m18-s15",
@@ -187,7 +267,17 @@
         "que": "that / than",
         "vayas": "go (subj)",
         "conmigo": "with me"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero",
+          "english": "I want"
+        },
+        {
+          "spanish": "que vayas conmigo.",
+          "english": "you to go with me."
+        }
+      ]
     },
     {
       "id": "m18-s17",
@@ -208,7 +298,17 @@
         "quiero": "I want",
         "que": "that / than",
         "hables": "speak (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "quiero que hables.",
+          "english": "I want you to speak."
+        }
+      ]
     },
     {
       "id": "m18-s19",
@@ -220,7 +320,17 @@
         "quiero": "I want",
         "que": "that / than",
         "hables": "speak (subj)"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "no quiero que hables.",
+          "english": "I don't want you to speak."
+        }
+      ]
     },
     {
       "id": "m18-s20",
@@ -232,7 +342,17 @@
         "abra": "open (subj/form)",
         "la": "the / it (fem)",
         "puerta": "door"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Quieres",
+          "english": "Do you want"
+        },
+        {
+          "spanish": "que abra la puerta?",
+          "english": "me to open the door?"
+        }
+      ]
     },
     {
       "id": "m18-s21",
@@ -245,7 +365,17 @@
         "abras": "open (subj/inf)",
         "la": "the / it (fem)",
         "puerta": "door"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "quiero que abras la puerta.",
+          "english": "I want you to open the door."
+        }
+      ]
     },
     {
       "id": "m18-s22",
@@ -256,7 +386,17 @@
         "que": "that / than",
         "llegues": "arrive (subj)",
         "temprano": "early"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero",
+          "english": "I want"
+        },
+        {
+          "spanish": "que llegues temprano.",
+          "english": "you to arrive early."
+        }
+      ]
     },
     {
       "id": "m18-s23",
@@ -293,7 +433,17 @@
         "quedes": "stay (subj)",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero",
+          "english": "I want"
+        },
+        {
+          "spanish": "que te quedes en casa.",
+          "english": "you to stay at home."
+        }
+      ]
     },
     {
       "id": "m18-s26",
@@ -304,7 +454,17 @@
         "que": "that / than",
         "compres": "buy (subj)",
         "pan": "bread"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero",
+          "english": "I want"
+        },
+        {
+          "spanish": "que compres pan.",
+          "english": "you to buy bread."
+        }
+      ]
     },
     {
       "id": "m18-s27",
@@ -327,7 +487,17 @@
         "lo": "it",
         "pases": "spend / pass (subj)",
         "bien": "well/good"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero",
+          "english": "I want"
+        },
+        {
+          "spanish": "que te lo pases bien.",
+          "english": "you to have a good time."
+        }
+      ]
     },
     {
       "id": "m18-s29",

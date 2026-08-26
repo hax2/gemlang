@@ -16,7 +16,17 @@
         "antes": "before",
         "puerta": "gate/door",
         "embarque": "boarding"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Tengo que facturar la maleta",
+          "english": "I have to check my suitcase"
+        },
+        {
+          "spanish": "antes de ir a la puerta de embarque.",
+          "english": "before going to the boarding gate."
+        }
+      ]
     },
     {
       "id": "m29-s2",
@@ -36,7 +46,17 @@
         "sale": "leaves",
         "próximo": "next",
         "vuelo": "flight"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿A qué hora sale",
+          "english": "What time does"
+        },
+        {
+          "spanish": "el próximo vuelo para Madrid?",
+          "english": "the next flight to Madrid leave?"
+        }
+      ]
     },
     {
       "id": "m29-s4",
@@ -49,7 +69,17 @@
         "control": "control/check",
         "seguridad": "security",
         "mañana": "morning"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hay mucha cola en el control de seguridad",
+          "english": "There is a long queue at security"
+        },
+        {
+          "spanish": "esta mañana.",
+          "english": "this morning."
+        }
+      ]
     },
     {
       "id": "m29-s5",
@@ -59,7 +89,17 @@
         "enseñe": "show (imperative)",
         "pasaporte": "passport",
         "tarjeta": "card/pass"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Por favor,",
+          "english": "Please"
+        },
+        {
+          "spanish": "enseñe el pasaporte y la tarjeta de embarque.",
+          "english": "show your passport and boarding pass."
+        }
+      ]
     },
     {
       "id": "m29-s6",
@@ -82,7 +122,17 @@
         "retraso": "delay",
         "por": "because of / for",
         "tiempo": "weather"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El vuelo lleva dos horas de retraso",
+          "english": "The flight has been delayed by two hours"
+        },
+        {
+          "spanish": "por el mal tiempo.",
+          "english": "because of bad weather."
+        }
+      ]
     },
     {
       "id": "m29-s8",
@@ -92,7 +142,17 @@
         "avión": "plane",
         "aterrizar": "land",
         "Madrid": "Madrid"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El avión está a punto de aterrizar",
+          "english": "The plane is about to land"
+        },
+        {
+          "spanish": "en Madrid.",
+          "english": "in Madrid."
+        }
+      ]
     },
     {
       "id": "m29-s9",
@@ -127,7 +187,17 @@
         "Madrid": "Madrid",
         "diez": "ten",
         "llega": "arrives"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El vuelo sale a las ocho",
+          "english": "The flight leaves at eight"
+        },
+        {
+          "spanish": "y llega a Madrid a las diez.",
+          "english": "and arrives in Madrid at ten."
+        }
+      ]
     },
     {
       "id": "m29-curated-12",
@@ -143,7 +213,17 @@
         "avión": "plane",
         "mostrar": "to show",
         "subir": "to board / go up"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Necesito mostrar el pasaporte",
+          "english": "I need to show my passport"
+        },
+        {
+          "spanish": "antes de subir al avión.",
+          "english": "before boarding the plane."
+        }
+      ]
     },
     {
       "id": "m29-curated-13",
@@ -170,7 +250,17 @@
         "recoger": "to pick up",
         "el": "the",
         "equipaje": "luggage"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Dónde puedo recoger",
+          "english": "Where can I collect"
+        },
+        {
+          "spanish": "el equipaje?",
+          "english": "the luggage?"
+        }
+      ]
     },
     {
       "id": "m29-curated-15",
@@ -185,7 +275,17 @@
         "minutos": "minutes",
         "de": "of / from",
         "retraso": "delay"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "El próximo vuelo",
+          "english": "The next flight"
+        },
+        {
+          "spanish": "tiene veinte minutos de retraso.",
+          "english": "is delayed by twenty minutes."
+        }
+      ]
     },
     {
       "id": "m29-curated-16",
@@ -201,7 +301,17 @@
         "tiempo": "time",
         "aeropuerto": "airport",
         "taxi": "taxi"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Vamos al aeropuerto en taxi",
+          "english": "We are going to the airport by taxi"
+        },
+        {
+          "spanish": "para llegar a tiempo.",
+          "english": "to arrive on time."
+        }
+      ]
     }
   ],
   "vocabulary": {

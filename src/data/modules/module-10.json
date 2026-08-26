@@ -12,7 +12,17 @@
         "Ayer": "yesterday",
         "hablé": "I spoke",
         "español": "Spanish"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "hablé español.",
+          "english": "I spoke Spanish."
+        }
+      ]
     },
     {
       "id": "m10-s2",
@@ -23,7 +33,17 @@
         "trabajé": "I worked",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "trabajé en casa.",
+          "english": "I worked at home."
+        }
+      ]
     },
     {
       "id": "m10-s3",
@@ -35,7 +55,17 @@
         "en": "in / on",
         "el": "the",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "estudié en el café.",
+          "english": "I studied in the café."
+        }
+      ]
     },
     {
       "id": "m10-s4",
@@ -45,7 +75,17 @@
         "Ayer": "yesterday",
         "compré": "I bought",
         "pan": "bread"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "compré pan.",
+          "english": "I bought bread."
+        }
+      ]
     },
     {
       "id": "m10-s5",
@@ -55,7 +95,17 @@
         "Ayer": "yesterday",
         "compré": "I bought",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "compré café.",
+          "english": "I bought coffee."
+        }
+      ]
     },
     {
       "id": "m10-s6",
@@ -66,7 +116,17 @@
         "busqué": "I looked for",
         "un": "a",
         "libro": "book"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "busqué un libro.",
+          "english": "I looked for a book."
+        }
+      ]
     },
     {
       "id": "m10-s7",
@@ -78,7 +138,17 @@
         "en": "in / on",
         "la": "the / it (fem)",
         "calle": "street"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "esperé en la calle.",
+          "english": "I waited in the street."
+        }
+      ]
     },
     {
       "id": "m10-s8",
@@ -88,7 +158,17 @@
         "Ayer": "yesterday",
         "escuché": "I listened",
         "música": "music"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "escuché música.",
+          "english": "I listened to music."
+        }
+      ]
     },
     {
       "id": "m10-s9",
@@ -99,7 +179,17 @@
         "miré": "I looked",
         "una": "a (fem)",
         "foto": "photo"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "miré una foto.",
+          "english": "I looked at a photo."
+        }
+      ]
     },
     {
       "id": "m10-s10",
@@ -109,7 +199,17 @@
         "Anoche": "last night",
         "comí": "I ate",
         "sopa": "soup"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Anoche",
+          "english": "Last night"
+        },
+        {
+          "spanish": "comí sopa.",
+          "english": "I ate soup."
+        }
+      ]
     },
     {
       "id": "m10-s11",
@@ -119,7 +219,17 @@
         "Anoche": "last night",
         "bebí": "I drank",
         "té": "tea"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Anoche",
+          "english": "Last night"
+        },
+        {
+          "spanish": "bebí té.",
+          "english": "I drank tea."
+        }
+      ]
     },
     {
       "id": "m10-s12",
@@ -130,7 +240,17 @@
         "comimos": "we ate",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Anoche",
+          "english": "Last night"
+        },
+        {
+          "spanish": "comimos en casa.",
+          "english": "we ate at home."
+        }
+      ]
     },
     {
       "id": "m10-s13",
@@ -142,7 +262,17 @@
         "en": "in / on",
         "el": "the",
         "centro": "downtown"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "viví en el centro.",
+          "english": "I lived downtown."
+        }
+      ]
     },
     {
       "id": "m10-s14",
@@ -153,7 +283,17 @@
         "abrí": "I opened",
         "la": "the / it (fem)",
         "puerta": "door"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "abrí la puerta.",
+          "english": "I opened the door."
+        }
+      ]
     },
     {
       "id": "m10-s15",
@@ -164,7 +304,17 @@
         "escribí": "I wrote",
         "un": "a",
         "mensaje": "message"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "escribí un mensaje.",
+          "english": "I wrote a message."
+        }
+      ]
     },
     {
       "id": "m10-s16",
@@ -175,7 +325,17 @@
         "recibí": "I received",
         "una": "a (fem)",
         "carta": "letter"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "recibí una carta.",
+          "english": "I received a letter."
+        }
+      ]
     },
     {
       "id": "m10-s17",
@@ -186,7 +346,17 @@
         "fui": "I went / I was",
         "al": "to the",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "fui al café.",
+          "english": "I went to the café."
+        }
+      ]
     },
     {
       "id": "m10-s18",
@@ -198,7 +368,17 @@
         "a": "to",
         "la": "the / it (fem)",
         "escuela": "school"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "fuiste a la escuela.",
+          "english": "you went to school."
+        }
+      ]
     },
     {
       "id": "m10-s19",
@@ -209,7 +389,17 @@
         "fue": "went / was",
         "al": "to the",
         "trabajo": "I work / job"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "fue al trabajo.",
+          "english": "he/she went to work."
+        }
+      ]
     },
     {
       "id": "m10-s20",
@@ -220,7 +410,17 @@
         "fuimos": "we went",
         "al": "to the",
         "centro": "downtown"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "fuimos al centro.",
+          "english": "we went downtown."
+        }
+      ]
     },
     {
       "id": "m10-s21",
@@ -231,7 +431,17 @@
         "al": "to the",
         "café": "coffee",
         "ayer": "yesterday"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Fuiste al café",
+          "english": "Did you go to the café"
+        },
+        {
+          "spanish": "ayer?",
+          "english": "yesterday?"
+        }
+      ]
     },
     {
       "id": "m10-s22",
@@ -243,7 +453,21 @@
         "al": "to the",
         "café": "coffee",
         "ayer": "yesterday"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "fui al café",
+          "english": "I went to the café"
+        },
+        {
+          "spanish": "ayer.",
+          "english": "yesterday."
+        }
+      ]
     },
     {
       "id": "m10-s23",
@@ -256,7 +480,21 @@
         "al": "to the",
         "café": "coffee",
         "ayer": "yesterday"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "no fui al café",
+          "english": "I didn't go to the café"
+        },
+        {
+          "spanish": "ayer.",
+          "english": "yesterday."
+        }
+      ]
     },
     {
       "id": "m10-s24",
@@ -266,7 +504,17 @@
         "Compraste": "you bought",
         "pan": "bread",
         "ayer": "yesterday"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Compraste pan",
+          "english": "Did you buy bread"
+        },
+        {
+          "spanish": "ayer?",
+          "english": "yesterday?"
+        }
+      ]
     },
     {
       "id": "m10-s25",
@@ -277,7 +525,21 @@
         "compré": "I bought",
         "pan": "bread",
         "ayer": "yesterday"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "compré pan",
+          "english": "I bought bread"
+        },
+        {
+          "spanish": "ayer.",
+          "english": "yesterday."
+        }
+      ]
     },
     {
       "id": "m10-s26",
@@ -289,7 +551,21 @@
         "compré": "I bought",
         "pan": "bread",
         "ayer": "yesterday"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "no compré pan",
+          "english": "I didn't buy bread"
+        },
+        {
+          "spanish": "ayer.",
+          "english": "yesterday."
+        }
+      ]
     },
     {
       "id": "m10-s27",
@@ -299,7 +575,17 @@
         "Ayer": "yesterday",
         "tuve": "I had",
         "tiempo": "time"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "tuve tiempo.",
+          "english": "I had time."
+        }
+      ]
     },
     {
       "id": "m10-s28",
@@ -310,7 +596,17 @@
         "tuviste": "you had",
         "un": "a",
         "problema": "problem"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "tuviste un problema.",
+          "english": "you had a problem."
+        }
+      ]
     },
     {
       "id": "m10-s29",
@@ -320,7 +616,17 @@
         "Ayer": "yesterday",
         "tuvo": "he/she had",
         "hambre": "hunger"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "tuvo hambre.",
+          "english": "he/she was hungry."
+        }
+      ]
     },
     {
       "id": "m10-s30",
@@ -330,7 +636,17 @@
         "Ayer": "yesterday",
         "tuvimos": "we had",
         "sed": "thirst"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "tuvimos sed.",
+          "english": "we were thirsty."
+        }
+      ]
     },
     {
       "id": "m10-s31",
@@ -341,7 +657,17 @@
         "me": "me / to me",
         "levanté": "I got up",
         "temprano": "early"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "me levanté temprano.",
+          "english": "I got up early."
+        }
+      ]
     },
     {
       "id": "m10-s32",
@@ -352,7 +678,17 @@
         "me": "me / to me",
         "acosté": "I went to bed",
         "tarde": "late / afternoon"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "me acosté tarde.",
+          "english": "I went to bed late."
+        }
+      ]
     },
     {
       "id": "m10-s33",
@@ -364,7 +700,17 @@
         "duché": "I showered",
         "en": "in / on",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "me duché en casa.",
+          "english": "I showered at home."
+        }
+      ]
     },
     {
       "id": "m10-s34",
@@ -374,7 +720,17 @@
         "Ayer": "yesterday",
         "no": "no / not",
         "trabajé": "I worked"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "no trabajé.",
+          "english": "I didn't work."
+        }
+      ]
     },
     {
       "id": "m10-s35",
@@ -384,7 +740,17 @@
         "Ayer": "yesterday",
         "no": "no / not",
         "estudié": "I studied"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "no estudié.",
+          "english": "I didn't study."
+        }
+      ]
     },
     {
       "id": "m10-s36",
@@ -396,7 +762,17 @@
         "compré": "I bought",
         "el": "the",
         "coche": "car"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "no compré el coche.",
+          "english": "I didn't buy the car."
+        }
+      ]
     },
     {
       "id": "m10-s37",
@@ -408,7 +784,21 @@
         "y": "and",
         "después": "after",
         "comimos": "we ate"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer hablamos",
+          "english": "Yesterday we talked"
+        },
+        {
+          "spanish": "y después",
+          "english": "and then"
+        },
+        {
+          "spanish": "comimos.",
+          "english": "we ate."
+        }
+      ]
     },
     {
       "id": "m10-s38",
@@ -422,7 +812,21 @@
         "y": "and",
         "lo": "it / him",
         "encontré": "I found"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer busqué un café",
+          "english": "Yesterday I looked for a café"
+        },
+        {
+          "spanish": "y",
+          "english": "and"
+        },
+        {
+          "spanish": "lo encontré.",
+          "english": "found it."
+        }
+      ]
     },
     {
       "id": "m10-s39",
@@ -436,7 +840,21 @@
         "fui": "I went / I was",
         "a": "to",
         "casa": "house"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer esperé",
+          "english": "Yesterday I waited"
+        },
+        {
+          "spanish": "y después",
+          "english": "and then"
+        },
+        {
+          "spanish": "fui a casa.",
+          "english": "I went home."
+        }
+      ]
     },
     {
       "spanish": "Ayer me lo pasé pipa.",
@@ -448,7 +866,17 @@
         "pasé": "I passed",
         "pipa": "blast (slang)"
       },
-      "id": "m10-s-colloq1"
+      "id": "m10-s-colloq1",
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "me lo pasé pipa.",
+          "english": "I had a blast."
+        }
+      ]
     },
     {
       "spanish": "Ayer no hice nada.",
@@ -459,7 +887,17 @@
         "hice": "I did",
         "nada": "nothing"
       },
-      "id": "m10-s-colloq2"
+      "id": "m10-s-colloq2",
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "no hice nada.",
+          "english": "I did nothing."
+        }
+      ]
     }
   ],
   "grammarExplanation": "The preterite tense describes completed actions in the past.\n\nRegular -AR endings: -é, -aste, -ó, -amos, -aron\n• hablé, hablaste, habló, hablamos, hablaron\n\nRegular -ER/-IR endings: -í, -iste, -ió, -imos, -ieron\n• comí, comiste, comió, comimos, comieron\n\nIrregular: ir/ser → fui, fuiste, fue, fuimos, fueron\ntener → tuve, tuviste, tuvo, tuvimos, tuvieron",

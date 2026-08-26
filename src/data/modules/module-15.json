@@ -15,7 +15,21 @@
         "libro": "book",
         "a": "to",
         "Ana": "Ana"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Le doy",
+          "english": "I give"
+        },
+        {
+          "spanish": "el libro",
+          "english": "Ana"
+        },
+        {
+          "spanish": "a Ana.",
+          "english": "the book."
+        }
+      ]
     },
     {
       "id": "m15-s2",
@@ -105,7 +119,17 @@
         "lo": "it / him",
         "das": "you give",
         "ahora": "now"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Se lo das",
+          "english": "Do you give it to him/her"
+        },
+        {
+          "spanish": "ahora?",
+          "english": "now?"
+        }
+      ]
     },
     {
       "id": "m15-s10",
@@ -117,7 +141,17 @@
         "lo": "it / him",
         "doy": "I give",
         "ahora": "now"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "se lo doy ahora.",
+          "english": "I give it now."
+        }
+      ]
     },
     {
       "id": "m15-s11",
@@ -130,7 +164,17 @@
         "lo": "it / him",
         "doy": "I give",
         "ahora": "now"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "No,",
+          "english": "No,"
+        },
+        {
+          "spanish": "no se lo doy ahora.",
+          "english": "I don’t give it now."
+        }
+      ]
     },
     {
       "id": "m15-s12",
@@ -141,7 +185,17 @@
         "la": "the / it (fem)",
         "das": "you give",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "¿Se la das",
+          "english": "Do you give it to him/her"
+        },
+        {
+          "spanish": "hoy?",
+          "english": "today?"
+        }
+      ]
     },
     {
       "id": "m15-s13",
@@ -153,7 +207,17 @@
         "la": "the / it (fem)",
         "doy": "I give",
         "hoy": "today"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Sí,",
+          "english": "Yes,"
+        },
+        {
+          "spanish": "se la doy hoy.",
+          "english": "I give it today."
+        }
+      ]
     },
     {
       "id": "m15-s14",
@@ -164,7 +228,17 @@
         "se": "to him / her / them",
         "lo": "it / him",
         "di": "I gave"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "se lo di.",
+          "english": "I gave it to him/her."
+        }
+      ]
     },
     {
       "id": "m15-s15",
@@ -175,7 +249,17 @@
         "se": "to him / her / them",
         "la": "the / it (fem)",
         "di": "I gave"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Ayer",
+          "english": "Yesterday"
+        },
+        {
+          "spanish": "se la di.",
+          "english": "I gave it to him/her."
+        }
+      ]
     },
     {
       "id": "m15-s16",
@@ -187,7 +271,17 @@
         "lo": "it / him",
         "he": "I have",
         "dado": "given"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hoy",
+          "english": "Today"
+        },
+        {
+          "spanish": "se lo he dado.",
+          "english": "I’ve given it to him/her."
+        }
+      ]
     },
     {
       "id": "m15-s17",
@@ -199,7 +293,17 @@
         "la": "the / it (fem)",
         "he": "I have",
         "dado": "given"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Hoy",
+          "english": "Today"
+        },
+        {
+          "spanish": "se la he dado.",
+          "english": "I’ve given it to him/her."
+        }
+      ]
     },
     {
       "id": "m15-s18",
@@ -219,7 +323,13 @@
       "wordMeanings": {
         "Quiero": "I want",
         "dárselo": "to give it to him/her"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Quiero dárselo.",
+          "english": "I want to give it to him/her."
+        }
+      ]
     },
     {
       "id": "m15-s20",
@@ -261,7 +371,13 @@
       "wordMeanings": {
         "Estamos": "we are",
         "dándoselos": "giving them to them"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Estamos dándoselos.",
+          "english": "We’re giving them to them."
+        }
+      ]
     },
     {
       "id": "m15-s24",
@@ -280,7 +396,13 @@
       "english": "Tell it to him/her.",
       "wordMeanings": {
         "Díselo": "tell it to him/her"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Díselo.",
+          "english": "Tell it to him/her."
+        }
+      ]
     },
     {
       "id": "m15-s26",

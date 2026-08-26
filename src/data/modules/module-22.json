@@ -26,7 +26,17 @@
         "compraría": "would buy",
         "las": "the",
         "entradas": "tickets"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si tuviera dinero,",
+          "english": "If I had money,"
+        },
+        {
+          "spanish": "compraría las entradas.",
+          "english": "I would buy the tickets."
+        }
+      ]
     },
     {
       "id": "m22-s3",
@@ -37,7 +47,17 @@
         "estudiaras": "studied (imp subj)",
         "más": "more",
         "aprenderías": "would learn"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si estudiaras más,",
+          "english": "If you studied more,"
+        },
+        {
+          "spanish": "aprenderías más.",
+          "english": "you would learn more."
+        }
+      ]
     },
     {
       "id": "m22-s4",
@@ -73,7 +93,17 @@
         "agua": "water",
         "estarías": "would be",
         "mejor": "better"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si bebieras más agua,",
+          "english": "If you drank more water,"
+        },
+        {
+          "spanish": "estarías mejor.",
+          "english": "you would feel better."
+        }
+      ]
     },
     {
       "id": "m22-s7",
@@ -85,7 +115,17 @@
         "pronto": "soon / early",
         "hablaríamos": "we would speak",
         "más": "more"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si llegaras pronto,",
+          "english": "If you arrived soon,"
+        },
+        {
+          "spanish": "hablaríamos más.",
+          "english": "we would talk more."
+        }
+      ]
     },
     {
       "id": "m22-s8",
@@ -113,7 +153,17 @@
         "tomar": "to have / take",
         "un": "a",
         "café": "coffee"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si vinieras mañana,",
+          "english": "If you came tomorrow,"
+        },
+        {
+          "spanish": "iríamos a tomar un café.",
+          "english": "we would go for a coffee."
+        }
+      ]
     },
     {
       "id": "m22-s10",
@@ -139,7 +189,17 @@
         "la": "the / it (fem)",
         "puerta": "door",
         "entraría": "would enter"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si abrieras la puerta,",
+          "english": "If you opened the door,"
+        },
+        {
+          "spanish": "entraría.",
+          "english": "he/she would come in."
+        }
+      ]
     },
     {
       "id": "m22-s12",
@@ -153,7 +213,17 @@
         "se": "one / people",
         "estaría": "would be",
         "mejor": "better"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si cerraras la ventana,",
+          "english": "If you closed the window,"
+        },
+        {
+          "spanish": "se estaría mejor.",
+          "english": "it would be more comfortable."
+        }
+      ]
     },
     {
       "id": "m22-s13",
@@ -191,7 +261,17 @@
         "lo": "it / him",
         "dijeras": "said (imp subj)",
         "entendería": "would understand"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si me lo dijeras,",
+          "english": "If you told it to me,"
+        },
+        {
+          "spanish": "lo entendería.",
+          "english": "I would understand it."
+        }
+      ]
     },
     {
       "id": "m22-s16",
@@ -205,7 +285,17 @@
         "sería": "would be",
         "más": "more",
         "barato": "cheap"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si lo compraras hoy,",
+          "english": "If you bought it today,"
+        },
+        {
+          "spanish": "sería más barato.",
+          "english": "it would be cheaper."
+        }
+      ]
     },
     {
       "id": "m22-s17",
@@ -232,7 +322,17 @@
         "hoy": "today",
         "sería": "would be",
         "mejor": "better"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si los compraras hoy,",
+          "english": "If you bought them today,"
+        },
+        {
+          "spanish": "sería mejor.",
+          "english": "it would be better."
+        }
+      ]
     },
     {
       "id": "m22-s19",
@@ -257,7 +357,17 @@
         "aquí": "here",
         "te": "you / to you",
         "vería": "would see"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si estuvieras aquí,",
+          "english": "If you were here,"
+        },
+        {
+          "spanish": "te vería.",
+          "english": "I would see you."
+        }
+      ]
     },
     {
       "id": "m22-s21",
@@ -270,7 +380,17 @@
         "aquí": "here",
         "te": "you / to you",
         "vería": "would see"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si no estuvieras aquí,",
+          "english": "If you weren't here,"
+        },
+        {
+          "spanish": "no te vería.",
+          "english": "I wouldn't see you."
+        }
+      ]
     },
     {
       "id": "m22-s22",
@@ -308,7 +428,17 @@
         "iría": "would go",
         "ahora": "now",
         "mismo": "same / right"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si pudiera,",
+          "english": "If I could,"
+        },
+        {
+          "spanish": "iría ahora mismo.",
+          "english": "I would go right now."
+        }
+      ]
     },
     {
       "id": "m22-s25",
@@ -320,7 +450,17 @@
         "pudiera": "could (imp subj)",
         "iría": "would go",
         "mañana": "tomorrow / morning"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si no pudiera,",
+          "english": "If I couldn't,"
+        },
+        {
+          "spanish": "iría mañana.",
+          "english": "I would go tomorrow."
+        }
+      ]
     },
     {
       "id": "m22-s26",
@@ -344,7 +484,17 @@
         "abriría": "would open",
         "la": "the / it (fem)",
         "puerta": "door"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si quisieras,",
+          "english": "If you wanted,"
+        },
+        {
+          "spanish": "te abriría la puerta.",
+          "english": "I would open the door for you."
+        }
+      ]
     },
     {
       "id": "m22-s28",
@@ -370,7 +520,17 @@
         "iríamos": "we would go",
         "al": "to the",
         "centro": "town centre"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si hiciera sol,",
+          "english": "If it were sunny,"
+        },
+        {
+          "spanish": "iríamos al centro.",
+          "english": "we would go to the city centre."
+        }
+      ]
     },
     {
       "id": "m22-s30",
@@ -382,7 +542,17 @@
         "conmigo": "with me",
         "estaría": "would be",
         "contento": "happy"
-      }
+      },
+      "translationChunks": [
+        {
+          "spanish": "Si vinieras conmigo,",
+          "english": "If you came with me,"
+        },
+        {
+          "spanish": "estaría contento.",
+          "english": "I would be happy."
+        }
+      ]
     }
   ],
   "grammarExplanation": "Hypothetical (unreal) conditionals describe imaginary situations. They use the imperfect subjunctive + conditional:\n\n'Si + imperfect subjunctive, conditional'\n\nImperfect subjunctive (-ra form):\n• -AR: hablara, hablaras, hablara, habláramos, hablaran\n• -ER/-IR: comiera, comieras, comiera, comiéramos, comieran\n\nConditional:\n• -ía, -ías, -ía, -íamos, -ían\n\n• Si tuviera tiempo, vendría = If I had time, I would come.",
