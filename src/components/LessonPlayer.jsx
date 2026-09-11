@@ -1,3 +1,4 @@
+import { getResumeIndex, isProgressItem } from '../utils/lessonProgress';
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import Tutorial from './Tutorial';
 import { hasSeenTutorial, markTutorialSeen } from '../utils/tutorialStorage';
@@ -716,20 +717,10 @@ const LessonPlayer = ({
   const savedSentenceCount = !isPureTestingMode && getSavedIndex
     ? getSavedIndex(module.id, practiceMode)
     : 0;
-  const resumeIndex = useMemo(() => {
-    if (savedSentenceCount <= 0) return 0;
-    let sentencesSeen = 0;
-    for (let i = 0; i < initialMergedItems.length; i++) {
-      const item = initialMergedItems[i];
-      if (isPureTestingMode ? item.type === 'challenge' : item.type === 'sentence') {
-        sentencesSeen++;
-      }
-      if (sentencesSeen >= savedSentenceCount) {
-        return Math.min(i + 1, initialMergedItems.length - 1);
-      }
-    }
-    return 0;
-  }, [savedSentenceCount, initialMergedItems, isPureTestingMode]);
+  const resumeIndex = useMemo(
+    () => getResumeIndex(initialMergedItems, savedSentenceCount, isSerEstarSpecial),
+    [savedSentenceCount, initialMergedItems, isSerEstarSpecial]
+  );
 
   const [currentIndex, setCurrentIndex] = useState(resumeIndex);
   const [spanishRevealed, setSpanishRevealed] = useState(() => !!settings?.autoRevealSpanish);
@@ -1073,7 +1064,7 @@ const LessonPlayer = ({
     stopSpanishAudio();
     resetRevealState();
     const newIndex = currentIndex + 1;
-    if (swipeDir) {
+    if (typeof swipeDir === 'string') {
       setSwipeAnimating('left');
       setTimeout(() => {
         setCurrentIndex(newIndex);
@@ -1089,11 +1080,8 @@ const LessonPlayer = ({
     // Save progress
     if (saveModuleProgress && !isPureTestingMode) {
       // Calculate the sentence-level progress for the new index
-      const sentenceProgress = mergedItems.slice(0, newIndex).filter((item) => {
-        if (isSerEstarSpecial) return item.type === 'ser-estar-choice' || item.type === 'ser-estar-translation';
-        if (isPureTestingMode) return item.type === 'challenge';
-        return item.type === 'sentence';
-      }).length;
+      const sentenceProgress = mergedItems.slice(0, newIndex)
+        .filter((item) => isProgressItem(item, isSerEstarSpecial)).length;
       saveModuleProgress(module.id, sentenceProgress, practiceMode, totalSentences);
     }
   }, [currentIndex, isPureTestingMode, isSerEstarSpecial, mergedItems, module.id, practiceMode, resetRevealState, saveModuleProgress, totalSentences]);
@@ -1102,7 +1090,7 @@ const LessonPlayer = ({
     if (currentIndex === 0) return;
     stopSpanishAudio();
     resetRevealState();
-    if (swipeDir) {
+    if (typeof swipeDir === 'string') {
       setSwipeAnimating('right');
       setTimeout(() => {
         setCurrentIndex((p) => Math.max(0, p - 1));
@@ -1370,8 +1358,12 @@ const LessonPlayer = ({
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      const targetTag = event.target?.tagName;
-      if (targetTag === 'INPUT' || targetTag === 'TEXTAREA') return;
+      const target = event.target;
+      if (event.defaultPrevented || event.ctrlKey || event.metaKey || event.altKey || event.repeat) return;
+      if (target?.closest('input, textarea, select, [contenteditable="true"]')) return;
+      // Let controls keep native keyboard activation and leave modal shortcuts to the modal.
+      if (target?.closest('[role="dialog"], [role="alertdialog"]') || document.querySelector('[aria-modal="true"]')) return;
+      if ((event.key === 'Enter' || event.key === ' ') && target?.closest('button, a')) return;
 
       const key = event.key.toLowerCase();
 
@@ -1531,6 +1523,16 @@ const LessonPlayer = ({
       return (
         <div key={key} className="word-container">
           <span
+            role={meaning ? 'button' : undefined}
+            tabIndex={meaning ? 0 : undefined}
+            aria-expanded={meaning ? isActive : undefined}
+            onKeyDown={(event) => {
+              if (meaning && (event.key === 'Enter' || event.key === ' ')) {
+                event.preventDefault();
+                event.stopPropagation();
+                event.currentTarget.click();
+              }
+            }}
             className={`spanish-word ${extraClassName} ${meaning ? 'has-meaning' : ''} ${isActive ? 'active' : ''}`}
             onClick={(e) => {
               if (shouldSuppressWordClick()) {
@@ -2028,6 +2030,16 @@ const LessonPlayer = ({
                 return (
                   <div key={idx} className="word-container">
                     <span
+                      role={meaning ? 'button' : undefined}
+                      tabIndex={meaning ? 0 : undefined}
+                      aria-expanded={meaning ? isActive : undefined}
+                      onKeyDown={(event) => {
+                        if (meaning && (event.key === 'Enter' || event.key === ' ')) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                          event.currentTarget.click();
+                        }
+                      }}
                       className={`spanish-word ${meaning ? 'has-meaning' : ''} ${isActive ? 'active' : ''}`}
                       onClick={(e) => {
                         if (shouldSuppressWordClick()) {

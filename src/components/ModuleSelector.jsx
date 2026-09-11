@@ -5,7 +5,9 @@ const DISCOVERY_STORAGE_KEY = 'gemlang-module-discovery';
 
 const loadDiscoveryState = () => {
   try {
-    return JSON.parse(sessionStorage.getItem(DISCOVERY_STORAGE_KEY) || '{}');
+    const parsed = JSON.parse(sessionStorage.getItem(DISCOVERY_STORAGE_KEY) || '{}');
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {};
+    return Object.fromEntries(Object.entries(parsed).filter(([, value]) => typeof value === 'string'));
   } catch {
     return {};
   }
@@ -232,7 +234,7 @@ const ModuleSelector = ({
               key={mod.id} 
               className={`module-card glass-panel ${status !== 'not-started' ? 'has-progress' : ''} ${isStory ? 'story-card' : ''} ${isReview ? 'review-card' : ''} ${isLocked ? 'is-locked' : ''}`}
               onClick={() => onSelect(mod)}
-              style={{ animationDelay: `${index * 0.05}s` }}
+              style={{ animationDelay: `${Math.min(index, 5) * 0.04}s` }}
             >
               <div className="module-card-content">
                 <div className="module-card-top-row">

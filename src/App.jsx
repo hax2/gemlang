@@ -134,6 +134,7 @@ function App() {
     getRefreshModules,
     stats,
     resetProgress,
+    restoreProgress,
     setStartingLevel,
   } = useProgress(courseModules);
 
@@ -161,18 +162,8 @@ function App() {
     } catch (error) {
       if (loadRequestRef.current !== requestId) return;
 
-      const errorMsg = error instanceof Error ? error.message : '';
-      if (
-        errorMsg.includes('Failed to fetch dynamically imported module') ||
-        errorMsg.includes('Importing a module script failed') ||
-        errorMsg.includes('error loading dynamically imported module')
-      ) {
-        console.warn('Dynamic import chunk load failure. Reloading to get latest assets...', error);
-        window.location.reload();
-        return;
-      }
-
-      setModuleLoadError(error instanceof Error ? error.message : 'Unable to load this module.');
+      console.warn('Unable to load lesson', error);
+      setModuleLoadError('We could not download this lesson. Check your connection and retry. If the app was recently updated, reload to get the latest version.');
     } finally {
       if (loadRequestRef.current === requestId) {
         setIsModuleLoading(false);
@@ -229,11 +220,15 @@ function App() {
   const handleNextModule = useCallback(() => {
     const nextIdx = activeModuleIndex + 1;
     if (nextIdx < courseModules.length) {
+      if (!isModuleFree(courseModules[nextIdx].id) && !hasPremiumAccess) {
+        setShowPricing(true);
+        return;
+      }
       void loadModuleAtIndex(nextIdx);
     } else {
       handleBackToDashboard();
     }
-  }, [activeModuleIndex, handleBackToDashboard, loadModuleAtIndex]);
+  }, [activeModuleIndex, handleBackToDashboard, hasPremiumAccess, loadModuleAtIndex]);
 
   /** Get the saved merged-items index for a module to support resume */
   const getSavedIndex = useCallback((moduleId) => {
@@ -313,7 +308,7 @@ function App() {
               <span className="header-action-label">{session ? 'Sign out' : 'Sign in'}</span>
             </button>
           )}
-          {progress.hasChosenLevel && (
+          {(session || guestMode) && progress.hasChosenLevel && (
             <button
               type="button"
               className={`header-action ${(practiceMode === 'testing' && (view === 'modules' || view === 'lesson')) ? 'is-active' : ''}`}
@@ -330,7 +325,7 @@ function App() {
               <span className="header-action-label">Test</span>
             </button>
           )}
-          {progress.hasChosenLevel && (
+          {(session || guestMode) && progress.hasChosenLevel && (
             <button
               type="button"
               className={`header-action ${view === 'settings' ? 'is-active' : ''}`}
@@ -412,6 +407,8 @@ function App() {
           />
         ) : view === 'settings' ? (
           <SettingsPanel
+            progress={progress}
+            onRestoreProgress={restoreProgress}
             settings={settings}
             onUpdate={updateSetting}
             onReset={resetSettings}
@@ -472,6 +469,7 @@ function App() {
               <button className="btn-secondary" onClick={handleBackFromLesson}>
                 ← {lessonOriginView === 'modules' ? 'All Modules' : 'Dashboard'}
               </button>
+              <button className="btn-secondary" onClick={() => window.location.reload()}>Reload app</button>
               {activeModuleIndex !== null && (
                 <button className="btn-primary" onClick={() => loadModuleAtIndex(activeModuleIndex)}>
                   Retry

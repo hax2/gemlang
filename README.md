@@ -18,6 +18,14 @@ npm run lint
 npm run validate:data
 ```
 
+## Learning progress
+
+Progress is stored in the current browser, including for signed-in users. In Settings,
+use **Download backup** to save a versioned JSON file and **Restore backup** to move
+it to another browser. Restore merges progress, preserving completed lessons and
+further unfinished positions. Choosing a starting level changes lesson suggestions
+without marking earlier lessons complete.
+
 ## Monetisation
 
 - **Free:** Chapters 1–3 plus the first review (162 practice sentences).

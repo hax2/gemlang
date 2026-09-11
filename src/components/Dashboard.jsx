@@ -154,7 +154,7 @@ const Dashboard = ({
                 const prog = getModuleProgress(heroAction.id);
                 return (
                   <span className="cta-resume-hint">
-                    Sentence {prog.current} of {prog.total}
+                    {prog.current} of {prog.total} sentences practiced
                   </span>
                 );
               })()}

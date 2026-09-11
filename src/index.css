@@ -1,4 +1,5 @@
 :root {
+  color-scheme: dark;
   --bg-dark: #09090b;
   --bg-gradient: radial-gradient(ellipse at top right, #2e1065 0%, #09090b 60%);
   --glass-bg: rgba(255, 255, 255, 0.03);
@@ -181,3 +182,10 @@ a {
     transition-duration: 0.01ms !important;
   }
 }
+
+button:focus-visible, [role="button"]:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--accent-glow);
+  outline-offset: 3px;
+}
+
+button, input, select { font-size: inherit; }

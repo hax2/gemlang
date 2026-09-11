@@ -201,3 +201,7 @@
 .reset-confirm-yes:hover {
   background: rgba(248, 113, 113, 0.35) !important;
 }
+
+.settings-header { flex-wrap: wrap; }
+.setting-option-btn { min-height: 44px; font-size: 0.9rem; }
+.setting-info > div:last-child { min-width: 0; }

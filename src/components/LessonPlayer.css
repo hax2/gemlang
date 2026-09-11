@@ -1648,10 +1648,9 @@
   .swipe-hint {
     display: block;
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.875rem;
     font-weight: 500;
     color: var(--text-muted);
-    opacity: 0.3;
     padding: 0.5rem 0;
     letter-spacing: 0.04em;
     flex-shrink: 0;
@@ -1673,19 +1672,6 @@
     z-index: 300;
     box-shadow: 0 6px 24px rgba(168, 85, 247, 0.4);
     pointer-events: none;
-  }
-
-  /* Swipe mode: hide the nav bar — everything is gesture-driven */
-  .lesson-nav-bar.swipe-mode {
-    display: none;
-  }
-
-  /* Fixed envelope: keep the card filling available space but reduce
-     padding-bottom since there's no sticky nav bar.
-     The card stays the same height whether content is revealed or not —
-     no CLS, content just fills/centers within the fixed region. */
-  .lesson-player:has(.lesson-nav-bar.swipe-mode) {
-    padding-bottom: 1rem;
   }
 
   /* Touch-action: pan-y to allow vertical scrolling while we handle horizontal */

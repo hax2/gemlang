@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { DEFAULT_SETTINGS } from '../hooks/useSettings';
+import React, { useRef, useState } from 'react';
+import { parseProgressBackup } from '../utils/progressStorage';
+import { FREE_ACCESS_MODE } from '../config/monetization';
 import './SettingsPanel.css';
 
 const CHALLENGE_OPTIONS = [
@@ -26,6 +27,8 @@ const formatBillingDate = (value) => {
 };
 
 const SettingsPanel = ({
+  progress,
+  onRestoreProgress,
   settings,
   onUpdate,
   onReset,
@@ -37,6 +40,38 @@ const SettingsPanel = ({
   onManageBilling,
   onUpgrade,
 }) => {
+  const importRef = useRef(null);
+  const [backupMessage, setBackupMessage] = useState('');
+  const [backupError, setBackupError] = useState('');
+  const [pendingBackup, setPendingBackup] = useState(null);
+
+  const exportProgress = () => {
+    const blob = new Blob([JSON.stringify({ app: 'gemlang', version: 1, exportedAt: new Date().toISOString(), progress }, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `gemlang-progress-${new Date().toISOString().slice(0, 10)}.json`;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    setBackupError('');
+    setBackupMessage('Backup downloaded. Keep it somewhere safe.');
+  };
+
+  const readBackup = async (event) => {
+    const file = event.target.files?.[0];
+    event.target.value = '';
+    if (!file) return;
+    setBackupError('');
+    setBackupMessage('');
+    setPendingBackup(null);
+    try {
+      if (file.size > 1024 * 1024) throw new Error('This file is too large. Choose a GemLang progress backup under 1 MB.');
+      setPendingBackup(parseProgressBackup(await file.text()));
+    } catch (error) {
+      setBackupError(error instanceof SyntaxError ? 'This file is not valid JSON. Choose a GemLang progress backup.' : error.message);
+    }
+  };
+
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [billingLoading, setBillingLoading] = useState(false);
   const [billingError, setBillingError] = useState(null);
@@ -48,6 +83,7 @@ const SettingsPanel = ({
       await onManageBilling();
     } catch (error) {
       setBillingError(error instanceof Error ? error.message : 'Unable to open billing.');
+    } finally {
       setBillingLoading(false);
     }
   };
@@ -60,12 +96,12 @@ const SettingsPanel = ({
         </button>
         <h1 className="settings-title">Settings</h1>
         <button className="btn-reset" onClick={onReset}>
-          Reset
+          Reset settings
         </button>
       </div>
 
       <div className="settings-list">
-        {session && (
+        {session && (!FREE_ACCESS_MODE || subscription) && (
           <div className="setting-card glass-panel billing-card">
             <div className="setting-info">
               <div className="setting-icon" aria-hidden="true">✦</div>
@@ -121,6 +157,7 @@ const SettingsPanel = ({
                 className={`setting-option-btn ${
                   settings.challengeInterval === opt.value ? 'active' : ''
                 }`}
+                aria-pressed={settings.challengeInterval === opt.value}
                 onClick={() => onUpdate('challengeInterval', opt.value)}
               >
                 {opt.label}
@@ -147,6 +184,7 @@ const SettingsPanel = ({
                 className={`setting-option-btn ${
                   settings.speechRate === opt.value ? 'active' : ''
                 }`}
+                aria-pressed={settings.speechRate === opt.value}
                 onClick={() => onUpdate('speechRate', opt.value)}
               >
                 {opt.label}
@@ -169,12 +207,14 @@ const SettingsPanel = ({
           <div className="setting-options">
             <button
               className={`setting-option-btn ${settings.autoPlayAudio ? 'active' : ''}`}
+              aria-pressed={settings.autoPlayAudio}
               onClick={() => onUpdate('autoPlayAudio', true)}
             >
               On
             </button>
             <button
               className={`setting-option-btn ${!settings.autoPlayAudio ? 'active' : ''}`}
+              aria-pressed={!settings.autoPlayAudio}
               onClick={() => onUpdate('autoPlayAudio', false)}
             >
               Off
@@ -196,12 +236,14 @@ const SettingsPanel = ({
           <div className="setting-options">
             <button
               className={`setting-option-btn ${settings.autoRevealSpanish ? 'active' : ''}`}
+              aria-pressed={settings.autoRevealSpanish}
               onClick={() => onUpdate('autoRevealSpanish', true)}
             >
               On
             </button>
             <button
               className={`setting-option-btn ${!settings.autoRevealSpanish ? 'active' : ''}`}
+              aria-pressed={!settings.autoRevealSpanish}
               onClick={() => onUpdate('autoRevealSpanish', false)}
             >
               Off
@@ -223,18 +265,50 @@ const SettingsPanel = ({
           <div className="setting-options">
             <button
               className={`setting-option-btn ${settings.swipeToNext ? 'active' : ''}`}
+              aria-pressed={settings.swipeToNext}
               onClick={() => onUpdate('swipeToNext', true)}
             >
               On
             </button>
             <button
               className={`setting-option-btn ${!settings.swipeToNext ? 'active' : ''}`}
+              aria-pressed={!settings.swipeToNext}
               onClick={() => onUpdate('swipeToNext', false)}
             >
               Off
             </button>
           </div>
         </div>
+
+        <section className="setting-card glass-panel" aria-labelledby="backup-title">
+          <div className="setting-info">
+            <div className="setting-icon" aria-hidden="true">↓</div>
+            <div>
+              <h3 className="setting-name" id="backup-title">Progress backup</h3>
+              <p className="setting-desc">Your progress is saved in this browser, including when signed in. Download a backup to keep it or move it to another device.</p>
+            </div>
+          </div>
+          <div className="setting-options">
+            <button className="setting-option-btn" onClick={exportProgress}>Download backup</button>
+            <button className="setting-option-btn" onClick={() => importRef.current?.click()}>Restore backup</button>
+            <input ref={importRef} type="file" accept=".json,application/json" onChange={readBackup} hidden aria-label="Choose progress backup" />
+          </div>
+          {pendingBackup && (
+            <div className="reset-confirm">
+              <p>Restore progress for {Object.keys(pendingBackup.modules).length} modules? Your completed lessons and further progress will be kept.</p>
+              <div className="setting-options">
+                <button className="setting-option-btn active" onClick={() => {
+                  onRestoreProgress(pendingBackup);
+                  setPendingBackup(null);
+                  setBackupMessage('Progress restored. Your existing progress has been kept.');
+                }}>Restore progress</button>
+                <button className="setting-option-btn" onClick={() => setPendingBackup(null)}>Cancel</button>
+              </div>
+            </div>
+          )}
+          {backupMessage && <p role="status" className="setting-desc">{backupMessage}</p>}
+          {backupError && <p role="alert" className="billing-error">{backupError}</p>}
+        </section>
 
         {/* Reset Progress */}
         {onResetProgress && (

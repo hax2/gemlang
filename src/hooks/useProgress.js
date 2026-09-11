@@ -1,28 +1,14 @@
 import { useState, useCallback, useMemo } from 'react';
+import { emptyProgress, normalizeProgress, mergeProgress } from '../utils/progressStorage';
 
 const STORAGE_KEY = 'gemlang-progress';
 
-const EMPTY_PROGRESS = {
-  modules: {},
-  lastModuleId: null,
-  lastPracticeMode: 'guided',
-  hasChosenLevel: false,
-};
-
 const loadProgress = () => {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) {
-      const parsed = JSON.parse(raw);
-      if (parsed.modules && Object.keys(parsed.modules).length > 0 && parsed.hasChosenLevel === undefined) {
-         parsed.hasChosenLevel = true;
-      }
-      return { ...EMPTY_PROGRESS, ...parsed };
-    }
+    return normalizeProgress(JSON.parse(localStorage.getItem(STORAGE_KEY)));
   } catch {
-    /* corrupted data – fall back to empty */
+    return emptyProgress();
   }
-  return { ...EMPTY_PROGRESS };
 };
 
 const persistProgress = (progress) => {
@@ -125,7 +111,11 @@ export default function useProgress(modulesManifest) {
     }
 
     // Second priority: first not-started module (in manifest order)
-    const notStarted = modulesManifest.find((m) => getModuleStatus(m.id) === 'not-started');
+    const startingIndex = Math.max(0, modulesManifest.findIndex((m) => m.id === progress.startingModuleId));
+    const orderedModules = [...modulesManifest.slice(startingIndex), ...modulesManifest.slice(0, startingIndex)];
+    const unfinished = orderedModules.find((m) => getModuleStatus(m.id) === 'in-progress');
+    if (unfinished) return unfinished;
+    const notStarted = orderedModules.find((m) => getModuleStatus(m.id) === 'not-started');
     if (notStarted) return notStarted;
 
     // Third priority: oldest needs-refresh module
@@ -184,7 +174,7 @@ export default function useProgress(modulesManifest) {
 
   /** Reset all progress */
   const resetProgress = useCallback(() => {
-    const empty = { ...EMPTY_PROGRESS };
+    const empty = emptyProgress();
     setProgress(empty);
     persistProgress(empty);
     try {
@@ -197,7 +187,6 @@ export default function useProgress(modulesManifest) {
   /** Set starting level for new users */
   const setStartingLevel = useCallback((levelType, specificModuleId = null) => {
     update((prev) => {
-      const updatedModules = { ...prev.modules };
       let targetIndex = 0;
       
       if (levelType === 'granular' && specificModuleId) {
@@ -208,31 +197,20 @@ export default function useProgress(modulesManifest) {
         targetIndex = modulesManifest.findIndex(m => m.level === 'Advanced');
       }
       
-      if (targetIndex > 0) {
-        for (let i = 0; i < targetIndex; i++) {
-          const m = modulesManifest[i];
-          if (!updatedModules[m.id]) {
-            updatedModules[m.id] = {
-              currentIndex: m.sentenceCount || 10,
-              totalSentences: m.sentenceCount || 10,
-              completedAt: new Date().toISOString(),
-              confidence: 'confident',
-              lastAccessedAt: new Date().toISOString(),
-              timesCompleted: 1,
-            };
-          }
-        }
-      }
-
       return {
         ...prev,
         hasChosenLevel: true,
-        modules: updatedModules,
+        startingModuleId: modulesManifest[Math.max(0, targetIndex)]?.id || null,
       };
     });
   }, [update, modulesManifest]);
 
+  const restoreProgress = useCallback((backup) => {
+    update((prev) => mergeProgress(prev, backup));
+  }, [update]);
+
   return {
+    restoreProgress,
     progress,
     saveModuleProgress,
     completeModule,
