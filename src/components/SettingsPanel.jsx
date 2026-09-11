@@ -3,6 +3,18 @@ import { parseProgressBackup } from '../utils/progressStorage';
 import { FREE_ACCESS_MODE } from '../config/monetization';
 import './SettingsPanel.css';
 
+const SettingIcon = ({ kind }) => {
+  const paths = {
+    challenge: 'M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3M8 15h8',
+    speed: 'M12 3a9 9 0 1 0 9 9M12 7v5l3 2M16 3h5v5',
+    audio: 'M11 5 6 9H3v6h3l5 4ZM15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14',
+    reveal: 'M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6',
+    swipe: 'M4 12h16M8 8l-4 4 4 4M16 8l4 4-4 4',
+    reset: 'M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7',
+  };
+  return <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={paths[kind]} /></svg>;
+};
+
 const CHALLENGE_OPTIONS = [
   { value: 3, label: 'Every 3' },
   { value: 5, label: 'Every 5' },
@@ -142,7 +154,7 @@ const SettingsPanel = ({
         {/* Challenge Frequency */}
         <div className="setting-card glass-panel">
           <div className="setting-info">
-            <div className="setting-icon">🧪</div>
+            <div className="setting-icon"><SettingIcon kind="challenge" /></div>
             <div>
               <h3 className="setting-name">Challenge Frequency</h3>
               <p className="setting-desc">
@@ -169,7 +181,7 @@ const SettingsPanel = ({
         {/* Speech Rate */}
         <div className="setting-card glass-panel">
           <div className="setting-info">
-            <div className="setting-icon">🗣️</div>
+            <div className="setting-icon"><SettingIcon kind="speed" /></div>
             <div>
               <h3 className="setting-name">Speech Rate</h3>
               <p className="setting-desc">
@@ -196,7 +208,7 @@ const SettingsPanel = ({
         {/* Auto-Play Audio */}
         <div className="setting-card glass-panel">
           <div className="setting-info">
-            <div className="setting-icon">🔊</div>
+            <div className="setting-icon"><SettingIcon kind="audio" /></div>
             <div>
               <h3 className="setting-name">Auto-Play Audio</h3>
               <p className="setting-desc">
@@ -225,7 +237,7 @@ const SettingsPanel = ({
         {/* Auto-Reveal Spanish */}
         <div className="setting-card glass-panel">
           <div className="setting-info">
-            <div className="setting-icon">👁️</div>
+            <div className="setting-icon"><SettingIcon kind="reveal" /></div>
             <div>
               <h3 className="setting-name">Auto-Reveal Spanish</h3>
               <p className="setting-desc">
@@ -254,7 +266,7 @@ const SettingsPanel = ({
         {/* Swipe to Navigate */}
         <div className="setting-card glass-panel">
           <div className="setting-info">
-            <div className="setting-icon">👆</div>
+            <div className="setting-icon"><SettingIcon kind="swipe" /></div>
             <div>
               <h3 className="setting-name">Swipe to Navigate</h3>
               <p className="setting-desc">
@@ -314,7 +326,7 @@ const SettingsPanel = ({
         {onResetProgress && (
           <div className="setting-card glass-panel reset-progress-card">
             <div className="setting-info">
-              <div className="setting-icon">🗑️</div>
+              <div className="setting-icon"><SettingIcon kind="reset" /></div>
               <div>
                 <h3 className="setting-name">Reset All Progress</h3>
                 <p className="setting-desc">

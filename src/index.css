@@ -1,18 +1,18 @@
 :root {
   color-scheme: dark;
-  --bg-dark: #09090b;
-  --bg-gradient: radial-gradient(ellipse at top right, #2e1065 0%, #09090b 60%);
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-highlight: rgba(255, 255, 255, 0.15);
-  --text-main: #fafafa;
-  --text-muted: #a1a1aa;
-  --accent-base: #a855f7;
-  --accent-glow: #d8b4fe;
+  --bg-dark: #101419;
+  --bg-gradient: none;
+  --glass-bg: #181e26;
+  --glass-border: #303945;
+  --glass-highlight: #3c4857;
+  --text-main: #edf1f7;
+  --text-muted: #a2afbf;
+  --accent-base: #94bcff;
+  --accent-glow: #b3d0ff;
   --success: #34d399;
   --failure: #f87171;
-  --surface-1: #18181b;
-  --surface-2: #27272a;
+  --surface-1: #181e26;
+  --surface-2: #222b36;
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
@@ -22,11 +22,11 @@
   --radius-sm: 0.5rem;
   --radius-md: 1rem;
   --radius-lg: 1.5rem;
-  --radius-full: 9999px;
+  --radius-full: 0.7rem;
   --transition-fast: 0.15s ease-out;
   --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  --font-family: Inter, ui-rounded, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 *, *::before, *::after {
@@ -83,10 +83,10 @@ a {
 /* Base Utility Classes for Glassmorphism & Animations */
 .glass-panel {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 1px solid var(--glass-border);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: none;
   border-radius: var(--radius-md);
   transition: border-color var(--transition-normal), transform var(--transition-normal);
 }
@@ -96,13 +96,13 @@ a {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #a855f7 0%, #8b5cf6 100%);
-  color: white;
+  background: var(--accent-base);
+  color: #101b2b;
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius-full);
   font-weight: 600;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+  letter-spacing: 0;
+  box-shadow: none;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   display: inline-flex;
   align-items: center;
@@ -111,8 +111,8 @@ a {
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6);
+  background: #b3d0ff;
+  box-shadow: none;
 }
 
 .btn-primary:active {
@@ -161,7 +161,7 @@ a {
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.5s ease-out forwards;
+  animation: fadeIn 0.18s ease-out;
 }
 
 @keyframes pulse-glow {
@@ -171,7 +171,7 @@ a {
 }
 
 .pulse-primary {
-  animation: pulse-glow 2s infinite;
+  animation: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
