@@ -1,7 +1,7 @@
 export function isProgressItem(item, specialPractice = false) {
   return specialPractice
     ? item.type === 'ser-estar-choice' || item.type === 'ser-estar-translation'
-    : item.type === 'sentence';
+    : item.type === 'sentence' && !item.isRepeat;
 }
 
 export function getResumeIndex(items, savedCount, specialPractice = false) {

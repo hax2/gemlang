@@ -1764,3 +1764,78 @@
     opacity: 0.55;
   }
 }
+
+/* Keep the mobile lesson and its actions inside the browser's visible viewport.
+   Only the reading card scrolls; reveals never move navigation off screen. */
+@media (max-width: 600px) {
+  .app-container:has(.lesson-player) {
+    height: 100dvh;
+    min-height: 0;
+    padding: 0.5rem;
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+    overflow: hidden;
+    animation: none;
+    transform: none;
+  }
+
+  .app-container:has(.lesson-player) .app-header {
+    flex: 0 0 auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .app-container:has(.lesson-player) .main-content {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .app-container:has(.lesson-player) .app-footer { display: none; }
+
+  .lesson-player,
+  .lesson-player.ser-estar-choice-player {
+    height: 100%;
+    min-height: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    animation: none;
+    overflow: hidden;
+  }
+
+  .lesson-player .lesson-header { margin-bottom: 0; }
+
+  .lesson-player .lesson-content {
+    flex: 1 1 0;
+    min-height: 0;
+    max-height: none;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    padding: 1rem;
+    gap: 1rem;
+    scrollbar-width: thin;
+  }
+
+  .lesson-content > * { flex-shrink: 0; }
+
+  .lesson-player .lesson-nav-bar {
+    position: static;
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0.4rem 0 0;
+    width: 100%;
+  }
+
+  .lesson-player .swipe-hint { display: none; }
+  .lesson-player .challenge-panel { gap: 0.75rem; }
+  .challenge-badge, .grammar-intro-badge {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+  }
+  .challenge-instruction { font-size: 0.875rem; }
+  .challenge-english { padding: 0; }
+  .challenge-answer-area { min-height: 48px; }
+  .challenge-answer { gap: 0.5rem; }
+  .btn-reveal-answer { padding: 0.65rem 1rem; font-size: 1rem; }
+  .btn-nav-secondary, .btn-nav-mark { min-height: 40px; font-size: 0.875rem; }
+}

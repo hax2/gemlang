@@ -1,3 +1,4 @@
+import { mergeReviewCards, scheduleReview } from '../utils/reviewQueue';
 import { getResumeIndex, isProgressItem } from '../utils/lessonProgress';
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import Tutorial from './Tutorial';
@@ -476,7 +477,6 @@ const mergeInsertedPracticeItems = (baseItems, insertedItems) => {
   return merged;
 };
 
-let speakTimeoutId = null;
 let currentAudio = null;
 const audioCache = new Map();
 const MAX_AUDIO_CACHE_SIZE = 40;
@@ -490,27 +490,21 @@ const resolvePublicAsset = (assetPath) => {
 };
 
 const stopSpanishAudio = () => {
-  if (speakTimeoutId) {
-    clearTimeout(speakTimeoutId);
-    speakTimeoutId = null;
-  }
-
   if (currentAudio) {
     currentAudio.pause();
     currentAudio = null;
   }
 
-  window.speechSynthesis.cancel();
+  window.speechSynthesis?.cancel();
 };
 
 const speakWithBrowserTts = (text, rate) => {
-  speakTimeoutId = setTimeout(() => {
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'es-ES';
-    u.rate = rate;
-    window.speechSynthesis.speak(u);
-    speakTimeoutId = null;
-  }, 0);
+  if (!window.speechSynthesis) return;
+  // Speak within the tap handler so mobile browsers retain user activation.
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'es-ES';
+  utterance.rate = rate;
+  window.speechSynthesis.speak(utterance);
 };
 
 const pruneAudioCache = () => {
@@ -756,7 +750,7 @@ const LessonPlayer = ({
   const suppressWordClickUntilRef = useRef(0);
   const selectedAudioSrcRef = useRef(new Map());
   const SWIPE_THRESHOLD = 60; // px to trigger navigation
-  const SWIPE_DOWN_THRESHOLD = 80; // px to trigger mark-for-later
+  const SWIPE_DOWN_THRESHOLD = 80; // px to trigger see-again-soon
   const SWIPE_VELOCITY_THRESHOLD = 0.3; // px/ms for fast flick
 
   // Dismiss resume toast after a moment
@@ -841,11 +835,15 @@ const LessonPlayer = ({
       return buildTestingItems(getTestingSentences(module));
     }
     const base = buildMergedItems(module.sentences, module.id, challengeInterval);
-    return [...base, ...extraItems];
+    return mergeReviewCards(base, extraItems);
   }, [module, insertedPracticeItems, extraItems, isPureTestingMode, isSerEstarSpecial, challengeInterval]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    document.querySelector('.lesson-content')?.scrollTo({ top: 0, behavior: 'instant' });
+  }, [currentIndex, showGrammarIntro]);
+
   const currentItem = mergedItems[currentIndex];
-  const currentOriginalIndex = currentItem?.originalIndex;
   const isChallenge = currentItem?.type === 'challenge';
   const isSerEstarChoice = currentItem?.type === 'ser-estar-choice';
   const isSerEstarTranslation = currentItem?.type === 'ser-estar-translation';
@@ -934,6 +932,7 @@ const LessonPlayer = ({
   const progressItemsSoFar = isFinished
     ? totalSentences
     : mergedItems.slice(0, currentIndex + 1).filter((item) => {
+      if (item.isRepeat && !isSerEstarSpecial) return false;
       if (isSerEstarSpecial) return item.type === 'ser-estar-choice' || item.type === 'ser-estar-translation';
       if (isPureTestingMode) return item.type === 'challenge';
       return item.type === 'sentence';
@@ -1038,21 +1037,15 @@ const LessonPlayer = ({
     const chunk = challengeChunks[chunkIndex];
     if (!chunk) return;
 
-    if (challengeAnswerRevealed || challengeFlippedChunks.has(chunkIndex)) {
-      playSpanish(chunk.spanish);
-      return;
-    }
+    if (chunk.spanish.trim().split(/\s+/).length === 1) playSpanishWord(chunk.spanish);
+    else playSpanish(chunk.spanish);
+    if (challengeAnswerRevealed || challengeFlippedChunks.has(chunkIndex)) return;
 
-    playSpanish(chunk.spanish);
-    setChallengeFlippedChunks((previous) => {
-      const next = new Set(previous);
-      next.add(chunkIndex);
-      if (next.size === challengeChunks.length) {
-        setChallengeAnswerRevealed(true);
-      }
-      return next;
-    });
-  }, [challengeAnswerRevealed, challengeChunks, challengeFlippedChunks, playSpanish]);
+    setChallengeFlippedChunks((previous) => new Set([...previous, chunkIndex]));
+    if (challengeFlippedChunks.size + 1 === challengeChunks.length) {
+      setChallengeAnswerRevealed(true);
+    }
+  }, [challengeAnswerRevealed, challengeChunks, challengeFlippedChunks, playSpanish, playSpanishWord]);
 
   const revealEntireChallenge = useCallback(() => {
     setChallengeFlippedChunks(new Set(challengeChunks.map((_, index) => index)));
@@ -1104,13 +1097,11 @@ const LessonPlayer = ({
     }
   }, [currentIndex, resetRevealState]);
 
-  const handleMarkForLater = useCallback(() => {
-    if (!sentence) return;
-    setExtraItems((prev) => [
-      ...prev,
-      { type: 'sentence', data: sentence, originalIndex: currentOriginalIndex, isRepeat: true },
-    ]);
-  }, [currentOriginalIndex, sentence]);
+  const reviewPending = Boolean(sentence && mergedItems.slice(currentIndex + 1)
+    .some((item) => item.isRepeat && item.data.id === sentence.id));
+  const handleSeeAgainSoon = useCallback(() => {
+    setExtraItems((previous) => scheduleReview(mergedItems, previous, currentIndex));
+  }, [currentIndex, mergedItems]);
 
   const handleSerEstarChoice = useCallback((option) => {
     if (!isSerEstarChoice || !currentItem?.data) return;
@@ -1140,6 +1131,8 @@ const LessonPlayer = ({
   }, [answeredChoiceIds, currentItem, isSerEstarChoice, mergedItems.length, playSpanish]);
 
   const handleDismissIntro = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    document.querySelector('.lesson-content')?.scrollTo({ top: 0, behavior: 'instant' });
     setShowGrammarIntro(false);
     if (needsTutorial && !hasSeenTutorial()) {
       setShowTutorial(true);
@@ -1195,7 +1188,7 @@ const LessonPlayer = ({
         s.swiping = true;
         suppressWordClickUntilRef.current = Date.now() + 1200;
         s.swipeDir = 'horizontal';
-      } else if (dy > 0 && !isChallenge) {
+      } else if (dy > 0 && !isChallenge && e.currentTarget.scrollHeight <= e.currentTarget.clientHeight) {
         // Swipe down (only on sentence cards, not challenges)
         s.swiping = true;
         suppressWordClickUntilRef.current = Date.now() + 1200;
@@ -1235,10 +1228,10 @@ const LessonPlayer = ({
     const elapsed = Date.now() - s.time;
 
     if (s.swipeDir === 'down') {
-      // Swipe down → mark for later
+      // Swipe down → see again soon
       if (swipeOffsetY > SWIPE_DOWN_THRESHOLD && sentence) {
         suppressWordClickUntilRef.current = Date.now() + 1200;
-        handleMarkForLater();
+        handleSeeAgainSoon();
         setSwipeAnimating('down');
         setTimeout(() => {
           handleNext('swipe-silent');
@@ -1275,7 +1268,7 @@ const LessonPlayer = ({
     }
 
     s.swiping = false;
-  }, [canNavigateBySwipe, swipeOffset, swipeOffsetY, sentence, handleNext, handlePrev, handleMarkForLater, currentIndex]);
+  }, [canNavigateBySwipe, swipeOffset, swipeOffsetY, sentence, handleNext, handlePrev, handleSeeAgainSoon, currentIndex]);
 
   const swipeStyle = useMemo(() => {
     if (swipeAnimating === 'left') {
@@ -1444,7 +1437,7 @@ const LessonPlayer = ({
       }
       if (key === 's') setSpanishRevealed(true);
       if (key === 'e' || key === 't') setEnglishRevealed(true);
-      if (key === 'm' || key === 'l') handleMarkForLater();
+      if (key === 'm' || key === 'l') handleSeeAgainSoon();
       if (key === 'enter' || key === 'arrowright') handleNext();
       if (key === 'arrowleft') handlePrev();
     };
@@ -1455,7 +1448,7 @@ const LessonPlayer = ({
     challengeAnswerRevealed,
     choiceSelection,
     currentItem,
-    handleMarkForLater,
+    handleSeeAgainSoon,
     handleDismissIntro,
     handleNext,
     handlePrev,
@@ -1891,7 +1884,7 @@ const LessonPlayer = ({
 
           <div className="challenge-prompt">
             <p className="challenge-instruction">
-              Say the sentence in Spanish, then flip any clue to check that part.
+              Say it in Spanish. Tap a clue to reveal and hear it.
             </p>
             <p className="challenge-english">{challengeSentence.english}</p>
           </div>
@@ -1933,7 +1926,7 @@ const LessonPlayer = ({
               </button>
             ) : (
               <div className="challenge-answer animate-fade-in">
-                <p className="challenge-spanish">{challengeSentence.spanish}</p>
+
                 {(challengeSentence.puente?.note || challengeSentence.grammarNote) && (
                   <p className="challenge-grammar-note">
                     <strong>{challengeSentence.puente?.note || 'Grammar note'}</strong>
@@ -2096,7 +2089,7 @@ const LessonPlayer = ({
       )}
 
       {canSwipe && swipeOffsetY > SWIPE_DOWN_THRESHOLD && (
-        <div className="swipe-bookmark-indicator">🔖 Saved for later</div>
+        <div className="swipe-bookmark-indicator">Queued to see again soon</div>
       )}
 
       <div className={`lesson-nav-bar ${canSwipe ? 'swipe-mode' : ''}`}>
@@ -2109,10 +2102,11 @@ const LessonPlayer = ({
         </button>
         <button
           className="btn-mark-later btn-nav-mark"
-          onClick={handleMarkForLater}
-          title="See this sentence again at the end"
+          onClick={handleSeeAgainSoon}
+          title="Repeat this sentence after three more cards, or at the end if fewer remain"
+          disabled={reviewPending}
         >
-          🔖 Later <KbdHint show={isDesktop}>M</KbdHint>
+          {reviewPending ? 'Queued ✓' : 'See again soon'} <KbdHint show={isDesktop}>M</KbdHint>
         </button>
         <button className="btn-primary btn-nav-next" onClick={handleNext}>
           Next → <KbdHint show={isDesktop}>Enter</KbdHint>
